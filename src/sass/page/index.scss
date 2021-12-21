@@ -1,6 +1,4 @@
 @import '../base/var';
-@import '../layout/header';
-@import '../layout/footer';
 @import '../mixin/mixin';
 *{
     margin: 0;
@@ -187,7 +185,7 @@ article.sec_block{
         width: 40%;
         margin-right: 150px;
         box-shadow: $shadow;
-        z-index: 100;
+        z-index: 40;
         position: absolute;
         top:65%;
         left: 40%;
@@ -203,19 +201,20 @@ article.sec_block{
         background-repeat: no-repeat;
         height: 64px;
         width: 42px;
-        z-index: 1000;
+        z-index: 40;
         position: absolute;
         top: 120px;
         left: -80px;
     }
     .button-prev{
+        // border: 1px solid red;
         background-repeat: no-repeat;
         height: 64px;
         width: 42px;
-        z-index: 1000;
+        z-index: 40;
         position: absolute;
         top: 120px;
-        left: 100%;
+        right: -80px;
     }
     .swiper{
         margin: 0 auto;

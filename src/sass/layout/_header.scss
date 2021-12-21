@@ -22,7 +22,9 @@ img{
   max-height: 100%;
 }
 a{
-  text-decoration: none;
+  text-decoration: none !important;
+  // border: 1px solid red;
+  display: inline-block;
 }
 
 header {
@@ -108,10 +110,7 @@ header div.header_icon_shopping_cart{
   
 }
 
-div.header_second_nav{
-  border: 1px solid black;
-  // width: 100vw;
-}
+
 ul.header_second_ul{
   // border: 1px solid red;
   height: 50px;
@@ -138,7 +137,7 @@ ul.header_second_ul{
       font: $font_20;
     }
     a:hover{
-      text-decoration: underline;
+      text-decoration: underline !important;
     }
   }
   li.header_li_food{
@@ -189,9 +188,15 @@ div.header_main_nav{
         // border: 1px solid maroon; 
         
         position: relative;
-        text-align: center;     
+        text-align: center; 
+        a{
+          display: block;
+          width: fit-content;
+          margin: 0 auto;
+          height: fit-content;
+        }  
         div.header_nav_icon{
-          // border: 1px solid purple;
+          // border: 1px solid darkblue;
           width: 40px;
           height: 40px;
           height: fit-content;
