@@ -10,12 +10,8 @@
     "開發": "gulp",
     "html搬家": "gulp template",
     "圖片搬家": "gulp movepic",
-<<<<<<< HEAD
-    "js搬家": "gulp js"
-=======
     "js搬家": "gulp js",
     "清除舊檔案": "gulp c"
->>>>>>> dev2
   },
   "keywords": [],
   "author": "",
