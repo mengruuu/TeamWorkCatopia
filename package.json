@@ -10,7 +10,7 @@
     "開發": "gulp",
     "html搬家": "gulp template",
     "圖片搬家": "gulp movepic",
-    "js搬家":"gulp js"
+    "js搬家": "gulp js"
   },
   "keywords": [],
   "author": "",
