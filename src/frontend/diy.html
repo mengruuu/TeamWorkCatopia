@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    @@include('./layout/meta.html', { "title" : "客製鮮食" })
+    <link href="./css/diy.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    @@include('./layout/header.html')
+    <div class="background"></div>
+    <main>
+      <article class="first_block">
+        <div class="text_conter">
+          <p class="title">
+            客製貓貓鮮食餐
+            <span></span>
+          </p>
+        </div>
+      </article>
+      <article class="sec_block">
+        <div class="sec_block_content_1">
+          <div class="sec_block_content_text">
+            <p>
+              客製專屬於貓貓的美味肉泥蛋糕吧！<br>
+              食材皆為新鮮製作，營養滿分，<br>
+              送給給你家貓貓最好的禮物～
+            </p>
+            <div class="sec_block_contnent_img">
+              <img src="./images/diy_page/images/div_sec_block_cake.png" alt="">
+              <button class="reset">全部重選</button>
+            </div>
+          </div>
+        </div>
+        <div class="sec_block_content_2">
+          <div class="content_part_1">
+            <p>step1</p>
+            <p>選擇美味蛋糕體</p>
+            <p>（三擇一）</p>
+          </div>
+          <div class="content_part_2">
+            <p>挪威進口鮭魚</p>
+            <p>加拿大鮪魚</p>
+            <p>台灣優質雞胸肉</p>
+          </div>
+          <div class="btn_block">
+            <div class="btn_block_flex">
+              <div class="button_1">
+                <div class="button_flex">
+                  <p id="back">上一步</p>
+                  <img src="./images/diy_page/icon/diy_left.png" alt="">
+                </div>
+              </div>
+              <div class="button_2">
+                <div class="button_flex">
+                  <img src="./images/diy_page/icon/diy_right.png" alt="">
+                  <p id="next" >下一步</p>
+                </div>
+              </div>
+            </div>
+            <button class="btn_pop" onclick="show()">推薦套餐</button>
+          </div>
+        </div>
+        <div class="content_2">
+            <!-- 彈窗開始 -->
+            <div class="btn_block">
+            </div>
+        </div>
+      </article>
+      <div class="background_pop">
+        <img class="decorate_1" src="./images/diy_page/icon/diy_popblock_back_foot.png" alt="">
+        <img class="decorate_2" src="./images/diy_page/icon/diy_popblock_back_tail.png" alt="">
+        <div id="div_pop">
+          <div class="div_top">
+              <span id="close_btn"><img class="close" src="./images/diy_page/icon/diy_popblock_back_btn.png" /></span>
+              <div class="color"><p>推薦貓貓鮮食餐</p></div>
+          </div>
+          <div class="div_content">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="product">
+                    <img src="./images/diy_page/images/diy_popblock_back_food_p1.png" alt="">
+                    <div class="text_aera_1">
+                      <div class="price">
+                        <p>白帶魚捲捲</p><p>NT:280/5pic</p>
+                      </div>
+                      <div class="content">
+                        <p>Catopia時空凍乾系列產品，快速冷凍真空，然後按食物原樣冷凍乾燥而製成的，因此保留了鮮美的肉汁（香氣）和營養成分，香氣與咀嚼咬感更深受90%以上犬貓毛孩喜愛。</p>
+                      </div>
+                    </div>
+                    <div class="button">
+                     <button class="add">加入購物車</button>
+                   </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product">
+                    <img src="./images/diy_page/images/diy_popblock_back_food_p2.png" alt="">
+                    <div class="text_aera_1">
+                      <div class="price">
+                        <p>櫻花蝦骨肉餅</p><p>NT:250/3pic</p>
+                      </div>
+                      <div class="content">
+                        <p>嚴選天然食材製作的Catopia櫻花蝦骨肉餅系列產品，添加多種保健食材，讓貓貓的味道更加香甜，皮毛變得更光亮厚實，骨肉餅本身可以加熱，但不建議加到全熟，這樣會流失原有的蔬果酵素與益生箘喔！</p>
+                      </div>
+                    </div>
+                    <div class="button">
+                      <button class="add">加入購物車</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product">
+                    <img src="./images/diy_page/images/diy_popblock_back_food_p3.png" alt="">
+                    <div class="text_aera_1">
+                      <div class="price">
+                        <p>牛肉凍糕</p><p>NT:290/3pic</p>
+                      </div>
+                      <div class="content">
+                        <p>Catopia特製以手工切丁的紐澳牛肉仍保留著肉塊的口感，使用牛骨、牛筋熬煮出濃稠狀的膠狀湯汁，讓犬貓毛小孩一口品嚐濃濃法式風味！</p>
+                      </div>
+                    </div>
+                    <div class="button">
+                      <button class="add">加入購物車</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-next"><img src="./images/diy_page/icon/Vector.png" alt=""></div>
+              <div class="button-prev"><img src="./images/diy_page/icon/Vector_2.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/frontend/diy.js"></script>
+    @@include('./layout/footer.html')
+  </body>
+</html>
