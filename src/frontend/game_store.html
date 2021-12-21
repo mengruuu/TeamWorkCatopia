@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    @@include('./layout/meta.html', {
+      "title" : "虛擬商城"
+    })
+    <link rel="stylesheet" href="./css/game_store.css">
+</head>
+<body>
+    @@include('./layout/header.html',{
+        "title": ""
+    })
+    <div class="game_store_content">
+        <div class="game_store_first_content">
+            <div class="first_content_option">
+                <nav>
+                    <ul>
+                        <li><p>個性化商品</p></li>
+                        <li>
+                            <div class="options">
+                                <p>
+                                    主子類型
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="options">
+                                <p>
+                                    頭套
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="options">
+                                <p>
+                                    項圈
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="options">
+                                <p>
+                                    衣服
+                                </p>
+                            </div>
+                        </li>
+                     
+                    </ul>
+                </nav>
+            </div>
+            <div class="first_content_cat">
+                <div class="try_on">
+                    <p>試衣間</p>
+                </div>
+                <div class="cat">
+                    <img src="./images/game_store/devil_catman.png" alt="">
+                </div>
+                <div class="take_off">
+                    <button type="button" class="take_off_btn">
+                        脫掉
+                    </button>
+                </div>
+            </div>
+            <div class="first_content_text">
+                <div class="product_text">
+                    <p>商品介紹</p>
+                </div>
+                <div class="text">
+                    <p>名稱:惡魔貓男</p>
+                    <p>敘述:唉唷~懂選哦</p>
+                    <p>奴幣:300點</p>
+                </div>
+            </div>
+        </div>
+        <div class="game_store_second_content">
+            <div class="all_product">
+
+                <div class="product -on">
+                    <img src="./images/game_store/product_cat1.png" >
+                </div>
+                <div class="product">
+                    <img src="./images/game_store/product_cat2.png" >
+                </div>
+                <div class="product">
+                    <img src="./images/game_store/product_cat3.png" >
+                </div>
+                <div class="product">
+                    <img src="./images/game_store/product_cat4.png" >
+                </div>
+
+            </div>
+            <button type="button">
+                加入購物車
+            </button>
+        </div>
+        <div class="game_store_last_content">
+            <div class="shopping_chart">
+                <img src="./images/game_store/shopping_chart.png" alt="">
+                <p>選擇的商品</p>
+            </div>
+            <div class="chart_all_product">
+                <div class="shopping_product">
+                    <img src="./images/game_store/product_cat1.png">
+                </div>
+                <div class="shopping_product">
+                    <img src="./images/game_store/product_bell.png">
+                </div>
+                <div class="shopping_product">
+                    <img src="./images/game_store/product_devil_wing.png">
+                </div>
+                <div class="shopping_product">
+                    <img src="./images/game_store/product_lion.png">
+                </div>
+            </div>
+            <div class="pay">
+                <div class="point">
+                    <p>您的點數共有:8000點</p>
+                    <p>商品所需點數:800點</p>
+                </div>
+                <button>
+                    使用點數兌換
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    @@include('./layout/footer.html')
+</body>
+</html>

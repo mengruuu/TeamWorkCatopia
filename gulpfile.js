@@ -128,8 +128,9 @@ function browser(done) {
         },
         port: 3000
     });
-     watch(['src/frontend/*.html' , 'src/layout/*.html'] , html).on('change' , reload);
-     watch(['src/backend/*.html','src/layout/*.html'] , Bhtml).on('change' , reload);
+     watch(['src/frontend/*.html' , 'src/frontend/**/*.html'] , html).on('change' , reload);
+   //   watch(['src/fronted/layout/*.html'] , html).on('change' , reload);
+     watch(['src/backend/*.html','src/backend/**/*.html'] , Bhtml).on('change' , reload);
      watch(['src/sass/page/*.scss' , 'src/sass/layout/*.scss'] , sassstyle).on('change' , reload);
      watch(['src/sass/backend/*.scss','src/sass/layout/*.scss'] , Bsassstyle).on('change' , reload);
      watch(['src/js/*/*.*', 'src/js/**/*.*'], jsmini).on('change' , reload);
@@ -138,4 +139,23 @@ function browser(done) {
 
 exports.default = series(browser , img_copy) ;
 
+//刪除舊檔案
+const clean = require('gulp-clean');
 
+function clear() {
+  return src('dist' ,{ read: false ,allowEmpty: true })//不去讀檔案結構，增加刪除效率  / allowEmpty : 允許刪除空的檔案
+  .pipe(clean({force: true})); //強制刪除檔案 
+}
+
+exports.c = clear;
+
+//整合檔案
+// var concat = require('gulp-concat');
+
+// function concatcss(){
+//     return src('./dist/css/*.css')
+//     .pipe(concat('all.css'))
+//     .pipe(dest('./dist/css/all/'))
+// }
+
+// exports.all  = concatcss;

@@ -10,7 +10,12 @@
     "開發": "gulp",
     "html搬家": "gulp template",
     "圖片搬家": "gulp movepic",
+<<<<<<< HEAD
     "js搬家": "gulp js"
+=======
+    "js搬家": "gulp js",
+    "清除舊檔案": "gulp c"
+>>>>>>> dev2
   },
   "keywords": [],
   "author": "",
@@ -18,6 +23,8 @@
   "devDependencies": {
     "browser-sync": "^2.27.7",
     "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.3.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.0.0",
