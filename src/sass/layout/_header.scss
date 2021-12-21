@@ -1,0 +1,185 @@
+@import'../mixin/mixin';
+@import'../base/var';
+body{
+  font-size: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img{
+  max-width: 100%;
+  max-height: 100%;
+}
+a{
+  text-decoration: none;
+}
+header {
+  // border: 1px solid black;
+  height: 230px;
+  width: 100%;
+  background-color: $second_color3;
+  text-align: center;
+}
+header div.header_logo{
+  // border: 1px solid red;
+  width: 280px;
+  display: inline-block;
+  position: relative;
+  left: 100px;
+}
+header div.header_logo div.header_logo_text{
+  // border: 1px solid green;
+  display: inline-block;
+  width: 180px;
+  height: 90px;
+}
+header div.header_logo div.header_logo_cat{
+  // border: 1px solid purple;
+  display: inline-block;
+  position: relative;
+  bottom:8px;
+  width: 77px;
+  height: 77px;
+}
+
+header div.header_icon{
+  // border: 1px solid black;
+  display: inline-block;
+  position: relative;
+  left: 220px;
+}
+
+
+header div.header_icon_member{
+  // border: 1px solid red;
+  display: inline-block;
+  margin-left: px;
+}
+header div.header_icon_member img:first-child{
+  z-index: 1;
+}
+header div.header_icon_member img:last-child{
+  z-index: 2;
+  position: relative;
+  right:55px;
+  bottom:40px;
+}
+
+header div.header_icon_shopping_cart{
+  // border: 1px solid blue;
+  display: inline-block;
+  margin-left: 20px;
+  
+}
+
+
+ul.header_second_ul{
+  // border: 1px solid red;
+  height: 50px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  background-color: $second_color1;
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  position: absolute;
+  left: 0;
+  display: none;
+  
+  li.header_second_li{
+    // border: 1px solid red;
+    font-size: $font_20;
+    // margin-right: 40px;
+    padding-top: 10px;
+    // width: 100px;
+    padding-left: 70px;
+    a{
+      color:$font_color;
+      font: $font_20;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+  }
+
+  li.header_game{
+    position: relative;
+    left: 445px;
+  }
+}
+
+
+
+div.header_main_nav{
+  // border: 1px solid red;
+  margin-top: 22px;
+  nav{
+    // border: 1px solid green;
+    ul.header_main_ul{
+      // border: 1px solid blue;
+      list-style: none;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      justify-content: space-evenly;
+
+      li{
+        // border: 1px solid maroon;
+        text-align: center;     
+        div.header_nav_icon{
+          // border: 1px solid purple;
+          width: 40px;
+          height: 40px;
+          height: fit-content;
+          display: inline-block;
+          vertical-align: bottom;
+          cursor: pointer;
+        }
+        div.header_nav_icon:first-child{
+          width: 45px;
+          height: 45px;
+        }
+        div.header_nav_text {
+          // border: 1px solid red;
+          width: 150px;
+          height: 43px;
+          text-align: center;
+          background-color: $important_color;
+          margin-top: 8px;
+          border-radius: 5px;
+          box-shadow: $shadow;
+          cursor: pointer;
+          p{
+            font-size: $font_24;
+            margin: 0;
+            color:$font_color;
+            padding-top: 5px;
+          }
+        }
+
+        div.header_nav_text:hover{
+          background-color: darken($important_color, 10%);
+        }
+        div.header_product:hover ~ ul.header_second_ul{
+         display: flex;
+        }
+        div.header_second_hover{
+          // border: 1px solid red;
+          height: 20px;
+        }
+        div.header_second_hover:hover ~ ul.header_second_ul{
+          display: flex;
+         }
+        ul.header_second_ul:hover{
+          display: flex;
+        }
+        div.header_nav_icon:hover +  div.header_nav_text{
+          background-color: darken($important_color, 10%);
+        }
+        div.header_game:hover ~ ul.header_second_ul{
+          display: flex;
+        }
+      }
+    }
+  }
+}

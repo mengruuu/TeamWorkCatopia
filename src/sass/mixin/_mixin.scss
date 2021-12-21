@@ -1,0 +1,12 @@
+//按鈕陰影+圓角
+@mixin button() {
+    box-shadow: $shadow;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: $font_24;
+    background-color: $important_color;
+    color: $font_color;
+    border: 0px;
+}
+

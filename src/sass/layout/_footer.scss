@@ -1,0 +1,50 @@
+div.footer_container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+div.footer_container > div.footer_up {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $second_color3;
+    height: 279px;
+    color: $font_color;
+}
+
+div.footer_container > div.footer_up > div.footer_up_item {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.footer_container > div.footer_up > div.footer_up_item > button {
+    width: 54%;
+    font-size: 24px;
+    line-height: 3;
+    border-radius: 15px;
+    outline: none;
+    color: $font_color;
+    background-color: $important_color;
+    border: 1px solid $font_color;
+}
+
+div.footer_container > div.footer_up > div.footer_up_item > button:hover {
+    cursor: pointer;
+}
+
+div.footer_container > div.footer_up > div.footer_up_item > div.footer_up_item_icon > a > img {
+    margin: 0 8px;
+}
+
+div.footer_container > div.footer_up > div.footer_up_item > div.footer_up_item_icon > a:hover {
+    cursor: pointer;
+}
+
+div.footer_container > div.footer_down {
+    color: $second_color3;
+    background-color: $font_color;
+    padding: 20px;
+}
