@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layout/meta.html', {
+      "title" : "遊戲選擇"
+    })
+    <link rel="stylesheet" href="./css/game_choose.css">
+</head>
+<body>
+    @@include('./layout/header.html')
+
+    <div class="content">
+        <div class="black_cat_right">
+            <img src="./images/game_choose/black_cat_right.png" alt="">
+        </div>
+        <div class="black_cat_bottom">
+            <img src="./images/game_choose/black_cat_bottom.png" alt="">
+        </div>
+        <div class="black_cat_left">
+            <img src="./images/game_choose/black_cat_left.png" alt="">
+        </div>
+        <div class="game_choose_content">
+            <div class="stage">
+                <p>關卡</p>
+                <img src="./images/game_choose/stage.png" alt="">
+            </div>
+            <div class="cat">
+                <p>您的主子</p>
+                <div class="cat_pic">
+                    <img src="./images/game_choose/devil_catman.png" alt="">
+                </div>
+            </div>
+            <div class="level">
+                <p>關卡難易度</p>
+                <div class="star_text">
+                    <div class="star_pic">
+                        <img src="./images/game_choose/star_on.png" alt="">
+                        <img src="./images/game_choose/star_on.png" alt="">
+                        <img src="./images/game_choose/star_on.png" alt="">
+                        <img src="./images/game_choose/star.png" alt="">
+                        <img src="./images/game_choose/star.png" alt="">
+                    </div>
+                    <p class="introduce">難易度說明</p>
+                    <p>您的奴性:不夠奴</p>
+                </div>
+            </div>
+            <div class="item">
+                <p>輔助道具選擇</p>
+                <div class="item_all_pic">
+                    <div class="item_pic">
+                        <img src="./images/game_choose/game_item1.png" alt="">
+                    </div>
+                    <div class="item_pic">
+                        <img src="./images/game_choose/game_item2.png" alt="">
+                    </div>
+                    <div class="item_pic">
+                        <img src="./images/game_choose/game_item3.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <button>
+                START
+            </button>
+        </div>
+    </div>
+
+
+    @@include('./layout/footer.html')
+</body>
+</html>
