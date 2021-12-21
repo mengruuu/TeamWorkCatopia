@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layout/meta.html', {
+      "title" : "盲抽399專區"
+    })
+    <link rel="stylesheet" href="./css/gacha_399.css">
+    <script src="./js/frontend/gacha_399.js" async></script>
+</head>
+<body>
+    @@include('./layout/header.html')
+
+    <main class="main">
+        <div class="title">
+            <div class="title_left">
+                <img src="./images/gacha_399/gacha_399_leftcat_icon.png" alt="">
+                <div class="left_context">
+                    <div class="btn_pop" onclick="show()">
+                        <img src="./images/gacha_399/gacha_399_ball_icon.png" alt="">
+                        查看抽選清單
+                    </div>
+                </div>
+                <div class="pillar_left"></div>
+            </div>
+            <div class="title_image">
+                <img src="./images/gacha_399/gacha_399_titleicon.png" alt="" class="title_icon">
+                <div class="title_text">399專區</div>
+            </div>
+            <div class="title_right">
+                <img src="./images/gacha_399/gacha_399_rightcat_icon.png" alt="">
+                <a href="gacha_299.html">
+                    <div class="right_context">
+                        <img src="./images/gacha_399/gacha_399_ball_icon.png" alt="">
+                        查看其他盲盒
+                    </div>
+                </a>
+                <div class="pillar_right"></div>
+            </div>>
+        </div>
+
+        <div class="box">
+            <div class="dark_box">
+                <div class="left">
+                    <div class="left_text">
+                        &lt;
+                    </div>
+                </div>
+                <div class="gacha">
+                    <div class="choose_box flex-1"><img class="color_image" src="./images/gacha_399/gacha_399_box_green.png" width= 100>1</div>
+                    <div class="choose_box flex-2"><img class="color_image" src="./images/gacha_399/gacha_399_box_yellow.png" width= 100>2</div>
+                    <div class="choose_box flex-3"><img class="color_image" src="./images/gacha_399/gacha_399_box_green.png" width= 100>3</div>
+                    <div class="choose_box flex-4"><img class="color_image" src="./images/gacha_399/gacha_399_box_yellow.png" width= 100>4</div>
+                    <div class="choose_box flex-5"><img class="color_image" src="./images/gacha_399/gacha_399_box_green.png" width= 100>5</div>
+                    <div class="choose_box flex-6"><img class="color_image" src="./images/gacha_399/gacha_399_box_yellow.png" width= 100>6</div>
+                    <div class="choose_box flex-7"><img class="color_image" src="./images/gacha_399/gacha_399_box_green.png" width= 100>7</div>
+                    <div class="choose_box flex-8"><img class="color_image" src="./images/gacha_399/gacha_399_box_yellow.png" width= 100>8</div>
+                    <div class="choose_box flex-9"><img class="color_image" src="./images/gacha_399/gacha_399_box_green.png" width= 100>9</div>
+                </div>
+                <div class="right">
+                    <div class="right_text">
+                        &gt;
+                    </div>
+                </div>
+            </div>
+            <div class="right_box">
+                <div class="buy">
+                    <a href="gacha_cart_step1.html">
+                        <p class="buy_text">
+                            購買抽盒次數
+                        </p>
+                    </a>
+                </div>
+                <div class="store">
+                    <a href="cloth.html">
+                        <div class="store_text">
+                            <div class="store_text_top">直接購買</div>
+                            <div class="store_text_down">指定款式</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 彈窗 -->
+        <div id="background_pop">
+            <div id="div_pop">
+                <div class="div_top">
+                    <div class="div_title">
+                        399角色一覽
+                        <span id="close_btn"><img src="./images/gacha_399/gacha_399_cancel1.png"></span>
+                    </div>
+                </div>
+                <div class="div_content">
+                    <div class="big_content">
+                        <div class="cat_399">
+                            <img class="dec_image" src="./images/gacha_399/gacha_399_a.png">
+                            <div class="cat_text">芝麻街-Elmo</div>                            
+                        </div>
+                        <div class="cat_399">
+                            <img class="dec_image" src="./images/gacha_399/gacha_399_b.png">
+                            <div class="cat_text">芝麻街-Cookie Monster</div>                        
+                        </div>
+                        <div class="cat_399">
+                            <img class="dec_image" src="./images/gacha_399/gacha_399_c.png">
+                            <div class="cat_text">芝麻街-Big Bird</div>                            
+                        </div>
+                        <div class="cat_399">
+                            <img class="dec_image" src="./images/gacha_399/gacha_399_d.png">
+                            <div class="cat_text">芝麻街-Bert</div>                            
+                        </div>
+                        <div class="cat_399">
+                            <img class="dec_image" src="./images/gacha_399/gacha_399_e.png">
+                            <div class="cat_text">芝麻街-Ernie</div>                            
+                        </div>
+                        <div class="cat_399">
+                            <img class="dec_image" src="./images/gacha_399/gacha_399_f.png">
+                            <div class="cat_text">芝麻街-Oscar</div>                            
+                        </div>
+                        <div class="cat_399">
+                            <img class="dec_image" src="./images/gacha_399/gacha_399_g.png">
+                            <div class="cat_text">狐狸浣熊-狐狸</div>                            
+                        </div>
+                        <div class="cat_399">
+                            <img class="dec_image" src="./images/gacha_399/gacha_399_h.png">
+                            <div class="cat_text">狐狸浣熊-浣熊</div>                            
+                        </div>
+                        <div class="cat_399">
+                            <img class="dec_image" src="./images/gacha_399/gacha_399_i.png">
+                            <div class="cat_text">寶可夢-胖丁</div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+  </main>
+
+
+    @@include('./layout/footer.html')
+</body>
+</html>

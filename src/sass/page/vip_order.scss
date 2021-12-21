@@ -1,0 +1,73 @@
+@import '../base/var';
+@import '../layout/header';
+@import '../layout/footer';
+@import '../mixin/mixin';
+
+.main{
+    border: 1px solid blue;
+    font-size: $font_24;
+    color: $font_color;
+    text-align: center;
+    .title{
+        // border: 1px solid black;
+        background-color: $second_color1;
+        max-width: 1200px;
+        width: 100%;
+        margin: 20px auto;
+        margin-top: 80px;
+        // padding: 20px auto;
+        .title_text{
+            // border: 1px solid maroon;
+            display: inline-block; 
+            padding: 10px;
+        }
+    }
+    .second_title{
+        // border: 1px solid black;
+        .second_title_text{
+            font-size: $font_22;
+            // border: 1px solid maroon;
+            display: inline-block; 
+            padding: 5px 50px;
+            background-color: $main_color;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+    }
+
+    table{
+        border:1px solid $font_color;
+        text-align: center;
+        margin: 50px auto;
+        font-size: $font_20;
+        border-collapse: collapse;
+        tr{
+            border:1px solid $font_color;
+            height: 160px;
+            td{
+                border:1px solid $font_color;
+                width: 200px;
+                border-collapse: collapse;
+                a{
+                    text-decoration: underline;
+                }
+            }
+        }
+        tr:nth-child(1) {
+            background-color: $main_color;
+            height: 50px;
+        }
+    }
+
+    .bottom{
+        // border: 1px solid maroon;
+        margin: 50px auto;
+        button{
+            @include button(); 
+            margin: 20px 50px;
+            cursor: pointer;
+            width: 200px;
+        }
+    }
+
+}

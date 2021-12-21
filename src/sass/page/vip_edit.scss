@@ -1,0 +1,210 @@
+@import '../base/var';
+@import '../layout/header';
+@import '../layout/footer';
+@import '../mixin/mixin';
+
+.main{
+    border: 1px solid blue;
+    font-size: $font_24;
+    color: $font_color;
+    text-align: center;
+    .title{
+        // border: 1px solid black;
+        background-color: $second_color1;
+        max-width: 1200px;
+        width: 100%;
+        margin: 20px auto;
+        margin-top: 80px;
+        // padding: 20px auto;
+        .title_text{
+            // border: 1px solid maroon;
+            display: inline-block; 
+            padding: 10px;
+        }
+    }
+    .second_title{
+        // border: 1px solid black;
+        .second_title_text{
+            font-size: $font_22;
+            // border: 1px solid maroon;
+            display: inline-block; 
+            padding: 5px 50px;
+            background-color: $main_color;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+    }
+    .pwd{
+        // border: 1px solid black;
+        width: 100%;
+        max-width: 1200px;
+        margin: 50px auto;
+        text-align: left;
+        .pwd_title{
+            // border: 1px solid maroon;
+            display: inline-block;
+            font-size: $font_20;
+            vertical-align: middle;
+            padding: 5px 10px;
+            margin: 5px 20px;
+            img{
+                vertical-align: middle;
+            }
+        }
+        .pwd_block{
+            border: 1px solid $font_color;
+            font-size: 16px;
+            vertical-align: top;
+            display: flex;
+            .pwd_block_left{
+                border-right: 1px solid $font_color;
+                display: inline-block;
+                vertical-align: top;
+                background-color: $second_color1;
+                max-width: 387px;
+                width: 30%;
+                max-height: 359px;
+                height: 100%;
+                padding: 20px;
+                margin-right: 40px;
+                line-height: 250px;
+            }
+            .pwd_block_right{
+                // border: 1px solid purple;
+                display: inline-block;
+                width: 60%;
+                padding-top: 5px;
+                padding-left: 20px;
+                margin: 6px auto;
+                .pwd_text{
+                    // border: 1px solid blue;
+                    .name{
+                        // border: 1px solid maroon;
+                        margin: 20px auto;
+                    }
+                    .old_pwd{
+                        // border: 1px solid maroon;
+                        margin: 20px auto;
+                        input{
+                            border-color: $font_color;
+                            width: 80%;
+                        }
+                    }
+                    .new_pwd{
+                        // border: 1px solid maroon;
+                        margin: 20px auto;
+                        input{
+                            border-color: $font_color;
+                            width: 80%;
+                        }
+                    }
+                    .new_pwd_again{
+                        // border: 1px solid maroon;
+                        margin: 20px auto;
+                        input{
+                            border-color: $font_color;
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .per{
+        // border: 1px solid black;
+        width: 100%;
+        max-width: 1200px;
+        margin: 50px auto;
+        text-align: left;
+        .per_title{
+            // border: 1px solid maroon;
+            display: inline-block;
+            font-size: $font_20;
+            vertical-align: middle;
+            padding: 5px 10px;
+            margin: 5px 20px;
+            img{
+                vertical-align: middle;
+            }
+        }
+        .per_block{
+            border: 1px solid $font_color;
+            font-size: 16px;
+            vertical-align: top;
+            display: flex;
+            .per_block_left{
+                border-right: 1px solid $font_color;
+                display: inline-block;
+                vertical-align: top;
+                background-color: $second_color1;
+                max-width: 387px;
+                width: 30%;
+                max-height: 359px;
+                height: 100%;
+                padding: 20px;
+                margin-right: 40px;
+                line-height: 250px;
+            }
+            .per_block_right{
+                // border: 1px solid purple;
+                display: inline-block;
+                width: 60%;
+                padding-top: 5px;
+                padding-left: 20px;
+                margin: 6px auto;
+                .per_text{
+                    // border: 1px solid blue;
+                    .name{
+                        // border: 1px solid maroon;
+                        margin: 20px auto;
+                        input{
+                            border-color: $font_color;
+                            width: 80%;
+                        }
+                    }
+                    .birthday{
+                        // border: 1px solid maroon;
+                        margin: 20px auto;
+                    }
+                    .phone{
+                        // border: 1px solid maroon;
+                        margin: 20px auto;
+                        input{
+                            border-color: $font_color;
+                            width: 80%;
+                        }
+                    }
+                    .address{
+                        // border: 1px solid maroon;
+                        margin: 20px auto;
+                        input{
+                            border-color: $font_color;
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .check{
+        // border: 1px solid maroon;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: left;
+        font-size: 16px;
+    }
+
+    .bottom{
+        // border: 1px solid maroon;
+        margin: 50px auto;
+        button{
+            @include button(); 
+            margin: 20px 50px;
+            cursor: pointer;
+            width: 200px;
+        }
+    }
+}
