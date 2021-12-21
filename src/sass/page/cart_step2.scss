@@ -1,0 +1,166 @@
+@import '../base/var';
+@import '../mixin/mixin';
+
+body{
+    overflow-x: hidden;
+    font-family: $font_family;
+}
+.cart_step2_step_block {
+    color: $font_color;
+    font-size: $font_22;
+    // border: 1px solid red;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.cart_step2_step {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+}
+.cart_step2_step p{
+    // border: 1px solid green;
+    width: 180px;
+    height: 180px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background-color: $main_color;
+    box-shadow: $shadow;
+}
+p.cart_step2_this_step {
+    background-color: $important_color;
+}
+
+.cart_step2_container{
+    // border: 1px solid $font_color;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: $font_22;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: $font_color;
+}
+
+.cart_step2_check_step {
+    // border: 1px solid green;
+    max-width: 1200px;
+    display: flex;
+    font-weight: bold;
+}
+
+.cart_step2_circle {
+    width: 25px;
+    height: 25px;
+    background-color: $important_color;
+    border-radius: 25px;
+}
+
+.cart_step2_check_step p {
+    margin: 20px 10px;
+}
+
+.cart_step2_order_check {
+    border: 1px solid $font_color;
+    display: flex;
+}
+
+.cart_step2_order_check_final {
+    border-top: none;
+}
+
+.cart_step2_orderer {
+    // border: 1px solid $font_color;
+    border-right: 1px solid $font_color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $second_color1;
+    font-weight: bold;
+}
+
+.cart_step2_information {
+    font-size: $font_20;
+}
+
+.cart_step2_information p{
+    margin: 10px 20px;
+}
+
+.cart_step2_orderer,
+.cart_step2_information {
+    flex: 1;
+}
+
+.cart_step2_information {
+    flex: 2;
+}
+
+.cart_step2_information_title{
+    font-weight: bold;
+}
+
+.cart_step2_pay {
+    margin: 10px 20px;
+}
+
+.cart_step2_pay input{
+    border: 1px solid $font_color;
+    max-width: 80px;
+    font-size: $font_22;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.cart_step2_deliver label {
+    margin-right: 30px;
+    font-weight: normal;
+}
+
+
+.cart_step2_information input.receiver {
+    border: 1px solid $font_color;
+    margin: 10px 20px;
+    font-size: $font_22;
+    border-radius: 5px;
+}
+
+.cart_step2_information input.receiver_address {
+    // border: 1px solid red;
+    max-width: 600px;
+}
+
+.cart_step2_next_step {
+    // border: 1px solid red;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.cart_step2_next_step button {
+    font-size: $font_24;
+    background-color: $important_color;
+    border: none;
+    color: $font_color;
+    padding: 20px 60px;
+    border-radius: 15px;
+    box-shadow: $shadow;
+    cursor: pointer;
+}
+
+.bottom_img {
+    // border: 1px solid green;
+    display: flex;
+    justify-content: right;
+    margin: 0 auto;
+}
+
+.bottom_img img {
+    max-width: 300px;
+    // border: 1px solid red;
+}

@@ -1,0 +1,73 @@
+@import '../base/var';
+@import '../mixin/mixin';
+@import '../layout/back_header';
+
+body{
+    max-height: 90vh;
+    background-color: $main_color;
+}
+
+.manager_center_title {
+    // border: 1px solid red;
+    text-align: center;
+    font-size: $font_24;
+    font-weight: bold;
+}
+
+.manager_center_title p {
+    // border: 1px solid blue;
+    display: inline-flex;
+    margin: 20px;
+    padding: 10px 60px;
+    background-color: $second_color3;
+    border-radius: 15px;
+}
+
+.manager_center_container {
+    max-width: 1200px;
+    // border: 1px solid red;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.management {
+    // border: 1px solid green;
+    font-size: $font_20;
+    padding: 10px;
+    margin: 10px;
+    background-color: $second_color5;
+    border-radius: 20px;
+    width: 250px;
+    height: 200px;
+}
+
+.management_none{
+    background-color: $main_color;
+}
+
+.manager_center_container p,
+.manager_center_container a {
+    // border: 1px solid black;
+    display: block;
+    margin: 10px;
+}
+
+.manager_center_container p {
+    font-weight: bold;
+}
+
+.manager_center_container a{
+    text-decoration: none;
+}
+
+.manager_center_container a:visited{
+    color: $font_color;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: $font_color;
+}

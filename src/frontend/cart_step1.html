@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物車Step1</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cart_step.css">
+</head>
+
+<body>
+    <header>
+        @@include('./layout/header.html')
+    </header>
+
+    <div class="cart_step1_step_block">
+        <div class="cart_step1_step">
+            <p class="cart_step1_this_step">
+                １<br>
+                <br>
+                商品・金額確認
+            </p>
+            <p>
+                ２<br>
+                <br>
+                付款・配送方式
+            </p>
+            <p>
+                ３<br>
+                <br>
+                最終確認
+            </p>
+            <p>
+                ４<br>
+                <br>
+                訂購完成
+            </p>
+        </div>
+    </div>
+
+    <div class="cart_step1_container">
+        <div class="cart_step1_title">
+            <div class="cart_step1_item">
+                <p>商品</p>
+            </div>
+            <div class="cart_step1_type">
+                <p>規格</p>
+            </div>
+            <div class="cart_step1_number">
+                <p>數量</p>
+            </div>
+            <div class="cart_step1_price">
+                <p>單價</p>
+            </div>
+        </div>
+
+        <div class="cart_step1_buy_item1">
+            <div class="cart_step1_item">
+                <img src="https://via.placeholder.com/185x185">
+                <p>這是商品名稱</p>
+            </div>
+            <div class="cart_step1_type">
+                <p>Type1</p>
+            </div>
+            <div class="cart_step1_number">
+                <p>
+                    <input type="number" value="1">
+                </p>
+            </div>
+            <div class="cart_step1_price">
+                <p>300　元</p>
+            </div>
+        </div>
+
+        <div class="cart_step1_buy_item1 cart_step1_buy_item2">
+            <div class="cart_step1_item">
+                <img src="https://via.placeholder.com/185x185">
+                <p>這是商品名稱</p>
+            </div>
+            <div class="cart_step1_type">
+                <p>Type1</p>
+            </div>
+            <div class="cart_step1_number">
+                <p>
+                    <input type="number" value="1">
+                </p>
+            </div>
+            <div class="cart_step1_price">
+                <p>300　元</p>
+            </div>
+        </div>
+
+        <div class="cart_step1_total_price">
+            <div class="cart_step1_item_total_price">
+                <p>商品總額</p>
+                <p>600　元</p>
+            </div>
+            <div class="cart_step1_fee">
+                <p>運費</p>
+                <p>0　元</p>
+            </div>
+        </div>
+
+        <div class="cart_step1_total_price">
+            <div class="cart_step1_point">
+                <p>您的點數</p>
+                <p>500　點</p>
+            </div>
+            <div class="cart_step1_point">
+                <p>點數折抵</p>
+                <p><input type="text" value="0">　點</p>
+            </div>
+        </div>
+
+        <div class="cart_step1_total_price">
+            <div class="cart_step1_order_price">
+                <p>訂單總額</p>
+                <p>600　元</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart_step1_next_step">
+        <button type="submit">STEP2　聯絡人資料</button>
+    </div>
+
+    <div class="cart_step1_next_step bottom_img">
+        <img src="../dist/images/shopping_cart/paper_bag.jpg">
+    </div>
+
+    <footer>
+        @@include('./layout/footer.html')
+    </footer>
+</body>
+
+</html>

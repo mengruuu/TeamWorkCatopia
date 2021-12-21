@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./layout/meta.html', {
+    "title" : "Catopia B1-1-1會員資料編輯"
+    })
+    <link rel="stylesheet" href="../css/backend/b1_vip_edit.css">
+</head>
+
+<body>
+    @@include('./layout/backend_header.html')
+
+    <div class="vip_edit_block">
+        <div class="vip_edit_title">
+            <p>B1-1-1會員資料編輯</p>
+        </div>
+        <div class="edit_top_button">
+            <button>加入黑名單</button>
+        </div>
+    </div>
+
+    <div class="vip_edit_container">
+        <div class="vip_edit_block">
+            <p class="vip_edit_block_title">會員編號:</p>
+            <p class="vip_edit_block_text">MB0001</p>
+        </div>
+
+        <div class="vip_edit_block">
+            <p class="vip_edit_block_title">會員信箱:</p>
+            <p class="vip_edit_block_text">qqq123@gmail.com</p>
+        </div>
+
+        <div class="vip_edit_block">
+            <p class="vip_edit_block_title">姓名:</p>
+            <p class="vip_edit_block_text">陳OO</p>
+        </div>
+
+        <div class="vip_edit_block">
+            <p class="vip_edit_block_title">生日:</p>
+            <p class="vip_edit_block_text">2000/1/1</p>
+        </div>
+
+        <div class="vip_edit_block">
+            <p class="vip_edit_block_title">電話:</p>
+            <p class="vip_edit_block_text">0912000111</p>
+        </div>
+
+        <div class="vip_edit_block">
+            <p class="vip_edit_block_title">地址:</p>
+            <p class="vip_edit_block_text">台北市大安區XX路XXX號5樓</p>
+        </div>
+
+        <div class="vip_edit_block">
+            <p class="vip_edit_block_title">帳號狀態:</p>
+            <p class="vip_edit_block_text">正常</p>
+        </div>
+
+        <div class="vip_edit_block">
+            <p class="vip_edit_block_title">註冊時間:</p>
+            <p class="vip_edit_block_text">2021/10/1</p>
+        </div>
+
+        <div class="vip_edit_block 
+                    text_area">
+            <p class="vip_edit_block_title">備註:</p>
+            <div class="vip_edit_block_text  
+                        vip_edit_block_remark">
+                <textarea cols="60" rows = "10"></textarea>
+            </div>
+        </div>
+
+        <div>
+            <button type="submit">取消</button>
+            <button type="submit">確認修改</button>
+        </div>
+    </div>
+</body>
+
+</html>
