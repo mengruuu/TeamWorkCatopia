@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    @@include('./layout/meta.html', {
+        "title" : "登入頁面"
+    })
+    <link rel = "stylesheet" href = "./css/login.css">
+    <link href="http://libs.baidu.com/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+</head>
+<body>
+    @@include('./layout/header.html')
+    <div class = "login_container">
+        <div class = "login_item">
+            <form method = "post" action = "">
+                <div class = "login_input_and_icon">
+                    <i class="fa fa-user"></i>
+                    <input type = "text" placeholder = "Username">
+                </div>
+                <div class = "login_input_and_icon">
+                    <i class="fa fa-lock"></i>
+                    <input type = "password" placeholder = "Password">
+                </div>
+                <button type = "submit">Login</button>
+            </form>
+            <div class = "login_register_button_and_icon">
+                <a href = "#">還沒有帳號？註冊</a>
+                <div class = "login_hr_and_icon">
+                    <div class = "login_hr">
+                        <div class = "login_hr_line"></div>
+                        <span>OR</span>
+                        <div class = "login_hr_line"></div>
+                        <br>
+                    </div>
+                    <a href = "#">
+                        <img src = "./images/login/Group 4.svg">
+                    </a>
+                    <a href = "#">
+                        <img src = "./images/login/Group 5.svg">
+                    </a>
+                    <a href = "#">
+                        <img src = "./images/login/Vector.svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr style = "color: #774F40;">
+        <div class = "login_item">
+            <img class = "login_item_img" src = "./images/login/人與貓 1.png">
+        </div>
+    </div>
+    @@include('./layout/footer.html')
+</body>
+</html>

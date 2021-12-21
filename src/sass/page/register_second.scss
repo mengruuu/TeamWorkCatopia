@@ -1,0 +1,149 @@
+@import '../base/var';
+@import '../layout/header';
+@import '../layout/footer';
+@import '../mixin/mixin';
+
+div.register_second_container {
+    width: 80vw;
+    margin: 50px auto;
+}
+
+div.register_second_container > div.register_second_title {
+    width: 100%;
+    text-align: center;
+    line-height: 3;
+    background-color: $second_color1;
+    color: $font_color;
+    border: 1px solid $font_color;
+    font-weight: bold;
+    font-size: $font_24;
+}
+
+div.register_second_container > div.register_second_process {
+    display: flex;
+    justify-content: space-around;
+    margin: 32px 0;
+} 
+
+div.register_second_container > div.register_second_process > div.register_second_process_item {
+    width: 285px;
+    text-align: center;
+    background-color: $main_color;
+    border-radius: 10px;
+}
+
+div.register_second_container > div.register_second_process > div.register_second_process_item_current {
+    background-color: $important_color;
+}
+
+div.register_second_container > div.register_second_process > div.register_second_process_item > p {
+    color: $font_color;
+    font-size: $font_24;
+}
+
+div.register_second_container > form {
+    width: 100%;
+    font-size: $font_24;
+}
+
+div.register_second_container > form > div.register_second_circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $important_color;
+    display: inline-block;
+}
+
+div.register_second_container > form > label {
+    color: $font_color;
+    font-weight: bold;   
+}
+
+div.register_second_container > form > div.register_second_confirm {
+    display: flex;
+    margin: 20px 0;
+}
+
+div.register_second_container > form > div.register_second_confirm > div:first-child {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $second_color1;
+    color: $font_color;
+    border: 1px solid $font_color;
+    font-weight: bold;
+}
+
+div.register_second_container > form > div.register_second_confirm > div:last-child {
+    flex: 2;
+    border: 1px solid $font_color;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+div.register_second_container > form > div.register_second_confirm > div:last-child > label {
+    margin-top: 32px;
+    color: $font_color;
+    font-weight: bold;
+}
+
+div.register_second_container > form > div.register_second_confirm > div:last-child > label:first-child {
+    margin-top: 0;
+}
+
+div.register_second_container > form > div.register_second_confirm > div:last-child > p {
+    font-size: 16px;
+    color: $font_color;
+}
+
+div.register_second_container > form > div.register_second_confirm > div:last-child > div {
+    margin-top: 32px;
+    color: $font_color;
+    font-weight: bold;
+} 
+
+div.register_second_container > form > div.register_second_confirm > div:last-child > div > i {
+    cursor: pointer;
+}
+
+div.register_second_container > form > div.register_second_confirm > div:last-child > div > i.register_second_icon_hide {
+    display: none;
+}
+
+// div.register_second_container > form > div.register_second_confirm > div:last-child > input {
+//     width: 80%;
+//     line-height: 2;
+//     outline: none;
+//     border: 1px solid $font_color;
+// }
+
+div.register_second_container > form > input[type = 'checkbox'] {
+    margin-top: 32px;
+}
+
+div.register_second_container > form > input[type = 'checkbox']:hover {
+    cursor: pointer;
+}
+
+div.register_second_container > form > label:hover {
+    cursor: pointer;
+}
+
+div.register_second_container > form > div.register_second_button_collection {
+    display: flex;
+    justify-content: space-evenly
+}
+
+div.register_second_container > form > div.register_second_button_collection > button[type = 'button'] {
+    @include button();
+    display: block;
+    margin: 100px auto;
+    width: 386px;
+    height: 90px;
+}
+
+div.register_second_container > form > div.register_second_button_collection > button[type = 'button']:hover {
+    cursor: pointer;
+}

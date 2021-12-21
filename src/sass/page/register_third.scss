@@ -1,0 +1,68 @@
+@import '../base/var';
+@import '../layout/header';
+@import '../layout/footer';
+@import '../mixin/mixin';
+
+div.register_third_container {
+    width: 80vw;
+    margin: 50px auto;
+}
+
+div.register_third_container > div.register_third_title {
+    width: 100%;
+    text-align: center;
+    line-height: 3;
+    background-color: $second_color1;
+    color: $font_color;
+    border: 1px solid $font_color;
+    font-weight: bold;
+    font-size: $font_24;
+}
+
+div.register_third_container > div.register_third_process {
+    display: flex;
+    justify-content: space-around;
+    margin: 32px 0;
+} 
+
+div.register_third_container > div.register_third_process > div.register_third_process_item {
+    width: 285px;
+    text-align: center;
+    background-color: $main_color;
+    border-radius: 10px;
+}
+
+div.register_third_container > div.register_third_process > div.register_third_process_item_current {
+    background-color: $important_color;
+}
+
+div.register_third_container > div.register_third_process > div.register_third_process_item > p {
+    color: $font_color;
+    font-size: $font_24;
+}
+
+div.register_third_container > div.register_third_icon_and_continue_shop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.register_third_container > div.register_third_icon_and_continue_shop > div {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 50px
+}
+
+div.register_third_container > div.register_third_icon_and_continue_shop > div > p {
+    font-size: $font_32;
+    margin-left: 16px;
+    color: $font_color;
+}
+
+div.register_third_container > div.register_third_icon_and_continue_shop > button {
+    @include button();
+    width: 386px;
+    height: 90px;
+    cursor: pointer;
+}

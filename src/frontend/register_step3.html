@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layout/meta.html', {
+      "title" : "註冊第三頁"
+    })
+    <link rel="stylesheet" href="./css/register_third.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    @@include('./layout/header.html')
+    <div class = "register_third_container">
+        <div class = "register_third_title">會員註冊</div>
+        <div class = "register_third_process">
+            <div class = "register_third_process_item">
+                <p>輸入個人資料</p>
+            </div>
+            <div class = "register_third_process_item register_third_process_item_current">
+                <p>確認輸入內容</p>
+            </div>
+            <div class = "register_third_process_item">
+                <p>註冊完成</p>
+            </div>
+        </div>
+        <div class = "register_third_icon_and_continue_shop">
+            <div>
+                <img src = "./images/register/001-cat 2.svg">
+                <p>註冊成功！！</p>
+            </div>
+            <button>繼續購物</button>
+        </div>
+    </div>
+    @@include('./layout/footer.html')
+</body>
+</html>

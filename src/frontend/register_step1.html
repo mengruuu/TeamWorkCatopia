@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layout/meta.html', {
+      "title" : "註冊第一頁"
+    })
+    <link rel="stylesheet" href="./css/register_first.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    @@include('./layout/header.html')
+    <div class = "register_first_container">
+        <div class = "register_first_title">會員註冊</div>
+        <div class = "register_first_process">
+            <div class = "register_first_process_item register_first_process_item_current">
+                <p>輸入個人資料</p>
+            </div>
+            <div class = "register_first_process_item">
+                <p>確認輸入內容</p>
+            </div>
+            <div class = "register_first_process_item">
+                <p>註冊完成</p>
+            </div>
+        </div>
+        <form method = "post" action = "">
+            <div class = "register_first_circle"></div>
+            <label>請輸入帳號 / 密碼</label>
+            <div class = "register_first_input">
+                <div>
+                    <p>註冊帳號</p>
+                </div>
+                <div>
+                    <label>請輸入Email</label>
+                    <input type = "text">
+                    <label>重新輸入Email</label>
+                    <input type = "text">
+                    <label>請輸入密碼</label>
+                    <input type = "password">
+                    <div>
+                        <label>重新輸入密碼</label>
+                        <i class="far fa-eye-slash"></i>
+                        <i class="far fa-eye register_first_icon_hide"></i>
+                    </div>
+                    <input type = "password">
+                </div>
+            </div>
+            <div class = "register_first_circle"></div>
+            <label>請輸入個人資料</label>
+            <div class = "register_first_input">
+                <div>
+                    <p>個人資料</p>
+                </div>
+                <div>
+                    <label>請輸入姓名</label>
+                    <input type = "text">
+                    <label>請輸入生日</label>
+                    <input type = "date">
+                    <label>請輸入電話</label>
+                    <input type = "tel">
+                    <label>請輸入地址</label>
+                    <input type = "text">
+                </div>
+            </div>
+            <input type = "checkbox" name = "subscription" id = "subscription" required>
+            <label for = "subscription" style = "font-size: 16px;">訂閱我們，通知您最新優惠消息！</label>
+            <br>
+            <input type = "checkbox" name = "Agree to terms" id = "Agree to terms" required>
+            <label for = "Agree to terms" style = "font-size: 16px;">我同意會員條款</label>
+            <br>
+            <button type = "button">下一步　確認資料</button>
+        </form>
+    </div>
+    @@include('./layout/footer.html')
+</body>
+</html>

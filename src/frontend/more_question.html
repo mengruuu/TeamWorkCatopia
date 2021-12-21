@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layout/meta.html', {
+      "title" : "更多問題"
+    })
+    <link rel="stylesheet" href="./css/more_question.css">
+</head>
+<body>
+    @@include('./layout/header.html')
+    <div class = "more_question_question_container">
+        <p>常見問題</p>
+        <div class = "more_question_question_and_answer_container">
+            <div class = "more_question_question_and_answer">
+                <div class = "more_question_question_and_answer_title">
+                    <p>Q1 只要在10天鑑賞期內就都可以退貨嗎？</p>
+                </div>
+                <div class = "more_question_question_and_answer_content">
+                    <p>A1 依《消費者保護法》第19條第二項規定所訂定的『通訊交易解除權合理例 外情事適用準則』
+                        ，若您購買的為下方所列商品一經拆封，非因無內容或無法使用之狀況即無法退換貨。
+                        請務必詳閱商品說明並再次確認確有購買該項商品之需求及意願時始下單購買，有任何疑問並請先聯繫博客來客服詢問：
+                        1.易於腐敗、保存期限較短、新鮮冷凍食材或解約時即將逾期。2.客製化之商品。
+                    </p>
+                </div>
+                <div class = "more_question_question_and_answer_title">
+                    <p>Q1 只要在10天鑑賞期內就都可以退貨嗎？</p>
+                </div>
+                <div class = "more_question_question_and_answer_content">
+                    <p>A1 依《消費者保護法》第19條第二項規定所訂定的『通訊交易解除權合理例 外情事適用準則』
+                        ，若您購買的為下方所列商品一經拆封，非因無內容或無法使用之狀況即無法退換貨。
+                        請務必詳閱商品說明並再次確認確有購買該項商品之需求及意願時始下單購買，有任何疑問並請先聯繫博客來客服詢問：
+                        1.易於腐敗、保存期限較短、新鮮冷凍食材或解約時即將逾期。2.客製化之商品。
+                    </p>
+                </div>
+                <div class = "more_question_question_and_answer_title">
+                    <p>Q1 只要在10天鑑賞期內就都可以退貨嗎？</p>
+                </div>
+                <div class = "more_question_question_and_answer_content">
+                    <p>A1 依《消費者保護法》第19條第二項規定所訂定的『通訊交易解除權合理例 外情事適用準則』
+                        ，若您購買的為下方所列商品一經拆封，非因無內容或無法使用之狀況即無法退換貨。
+                        請務必詳閱商品說明並再次確認確有購買該項商品之需求及意願時始下單購買，有任何疑問並請先聯繫博客來客服詢問：
+                        1.易於腐敗、保存期限較短、新鮮冷凍食材或解約時即將逾期。2.客製化之商品。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "more_question_contact_container">
+        <p>沒得到解答嗎？也可以直接與我們聯繫！</p>
+        <button>聯絡我們</button>
+    </div>
+    <div class = "ai_container" style = "background-image: url('./images/question/cat02\ 2\ 1.svg');">
+        <div class = "ai_answer">
+            <p>您有什麼問題呢？</p>
+            <input type = "text" placeholder = "輸入您的問題..">
+        </div>
+    </div>
+    @@include('./layout/footer.html')
+
+    <script>
+        ;(function() {
+            const title = document.querySelectorAll("div.more_question_question_and_answer_title");
+            const content = document.querySelector("div.more_question_question_and_answer_content > p");
+            const ai_container = document.querySelector("div.ai_container");
+            const ai_answer = document.querySelector("div.ai_answer");
+
+
+
+
+            for(let i = 0; i < title.length; i = i + 1) {
+                const height = title[i].nextElementSibling.children[0].offsetHeight; console.log(height);
+                title[i].addEventListener("click", function() {
+                    this.classList.toggle("more_question_question_and_answer_title_open");
+
+                    this.nextElementSibling.classList.toggle("more_question_question_and_answer_content_open");
+                    if(this.nextElementSibling.classList.contains("more_question_question_and_answer_content_open")) {
+                        this.nextElementSibling.style.height = `${height}px`;
+                    }else{
+                        this.nextElementSibling.style.height = `0px`;
+                    }
+                });
+            }
+
+            ai_container.addEventListener("click", function() {
+                ai_answer.classList.toggle("ai_answer_open");
+            });
+
+            ai_answer.addEventListener("click", function(event) {
+                event.stopImmediatePropagation();
+            });
+        })()
+    </script>
+</body>
+</html>

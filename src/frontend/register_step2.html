@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layout/meta.html', {
+      "title" : "註冊第二頁"
+    })
+    <link rel="stylesheet" href="./css/register_second.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    @@include('./layout/header.html')
+    <div class = "register_second_container">
+        <div class = "register_second_title">會員註冊</div>
+        <div class = "register_second_process">
+            <div class = "register_second_process_item">
+                <p>輸入個人資料</p>
+            </div>
+            <div class = "register_second_process_item register_second_process_item_current">
+                <p>確認輸入內容</p>
+            </div>
+            <div class = "register_second_process_item">
+                <p>註冊完成</p>
+            </div>
+        </div>
+        <form method = "post" action = "">
+            <div class = "register_second_circle"></div>
+            <label>帳號 / 密碼</label>
+            <div class = "register_second_confirm">
+                <div>
+                    <p>帳號確認</p>
+                </div>
+                <div>
+                    <label>帳號 / Email</label>
+                    <p class = "register_second_confirm_account">123@gmail.com</p>
+                    <div>
+                        <label>重新輸入密碼</label>
+                        <i class="far fa-eye-slash"></i>
+                        <i class="far fa-eye register_second_icon_hide"></i>
+                    </div>
+                    <p class = "register_second_confirm_password">*************************</p>
+                </div>
+            </div>
+            <div class = "register_second_circle"></div>
+            <label>請輸入個人資料</label>
+            <div class = "register_second_confirm">
+                <div>
+                    <p>個人資料確認</p>
+                </div>
+                <div>
+                    <label>姓名</label>
+                    <p>陳陳陳</p>
+                    <label>生日</label>
+                    <p>2000 年 1 月 1 日</p>
+                    <label>聯絡電話</label>
+                    <p>0932000000</p>
+                    <label>聯絡地址</label>
+                    <p>台北市中山區南京東路三段219號5樓</p>
+                </div>
+            </div>
+            <input type = "checkbox" name = "subscription" id = "subscription" required checked>
+            <label for = "subscription" style = "font-size: 16px;">訂閱我們，通知您最新優惠消息！</label>
+            <br>
+            <input type = "checkbox" name = "Agree to terms" id = "Agree to terms" required checked>
+            <label for = "Agree to terms" style = "font-size: 16px;">我同意會員條款</label>
+            <br>
+            <div class = "register_second_button_collection">
+                <button type = "button">上一步　修改資料</button>
+                <button type = "button">下一步　完成註冊</button>
+            </div>
+        </form>
+    </div>
+    @@include('./layout/footer.html')
+</body>
+</html>

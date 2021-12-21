@@ -1,0 +1,88 @@
+@import '../base/var';
+@import '../layout/header';
+@import '../layout/footer';
+@import '../mixin/mixin';
+
+div.login_container {
+    display: flex;
+    padding: 50px 0;
+}
+
+div.login_container > div.login_item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.login_container > div.login_item > form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 66%;
+}
+
+div.login_container > div.login_item > form > div.login_input_and_icon {
+    position: relative;
+    display: flex;
+}
+
+div.login_container > div.login_item > form > div.login_input_and_icon > i {
+    position: absolute;
+    bottom: 0;
+}
+
+div.login_container > div.login_item > form > div.login_input_and_icon > input {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid $font_color;
+    outline: none;
+    padding: 30px 20px 0;
+}
+
+div.login_container > div.login_item > form > div.login_input_and_icon > input::placeholder {
+    color: $font_color;
+}
+
+div.login_container > div.login_item > form > button {
+    height: 54px;
+    margin: 32px 0 46px;
+    @include button();
+}
+
+div.login_container > div.login_item > form > button:hover {
+    cursor: pointer;
+}
+
+div.login_container > div.login_item > div.login_register_button_and_icon {
+    text-align: center;
+}
+
+div.login_container > div.login_item > div.login_register_button_and_icon > a {
+    color: $font_color;
+    text-decoration: none;
+}
+
+div.login_container > div.login_item > div.login_register_button_and_icon > div.login_hr_and_icon > div.login_hr {
+    margin: 16px 0;
+}
+
+div.login_container > div.login_item > div.login_register_button_and_icon > div.login_hr_and_icon > div.login_hr > div.login_hr_line {
+    display: inline-block;
+    width: calc(50% - 35px);
+    border-top: 1px solid $font_color;
+    vertical-align: middle;
+}
+
+div.login_container > div.login_item > div.login_register_button_and_icon > div.login_hr_and_icon > div.login_hr > span {
+    color: $font_color;
+}
+
+div.login_container > div.login_item > div.login_register_button_and_icon > div.login_hr_and_icon > a {
+    text-decoration: none;
+}
+
+div.login_container > div.login_item > div.login_register_button_and_icon > div.login_hr_and_icon > a > img {
+    margin: 0 20px;
+}
