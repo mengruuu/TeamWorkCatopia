@@ -36,9 +36,12 @@
     table{
         border:1px solid $font_color;
         text-align: center;
-        margin: 50px auto;
+        margin: 0 auto;
+        margin-top: 50px;
         font-size: $font_20;
         border-collapse: collapse;
+        max-width: 1200px;
+        width: 100%;
         tr{
             border:1px solid $font_color;
             height: 160px;
@@ -90,6 +93,9 @@
             line-height: 30px;
             td:first-child{
                 border-right: 1px solid transparent;
+            }
+            td:last-child{
+                padding-right: 4%;
             }
             td{
                 border: 1px solid green;
