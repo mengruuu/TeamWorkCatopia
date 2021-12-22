@@ -1,8 +1,8 @@
 //輪播套件
 var swiper = new Swiper(".mySwiper", {
   navigation: {
-    nextEl: ".button-next",
-    prevEl: ".button-prev",
+    nextEl: ".button-prev",
+    prevEl: ".button-next",
   },
 });
 var popupBtn = document.getElementsByClassName("background_pop")[0];
