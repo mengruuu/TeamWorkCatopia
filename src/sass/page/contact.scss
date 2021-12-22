@@ -1,0 +1,125 @@
+@import '../base/var';
+@import '../mixin/mixin';
+
+.main{
+    // border: 1px solid blue;
+    font-size: $font_24;
+    color: $font_color;
+    text-align: center;
+    background-image: url("../images/contact/contact_background.png");
+    .title{
+        // border: 1px solid black;
+        // background-color: $second_color1;
+        max-width: 1200px;
+        width: 100%;
+        margin: 20px auto;
+        margin-top: 40px;
+        // padding: 20px auto;
+        .title_text{
+            // border: 1px solid maroon;
+            text-align: center;
+            display: inline-block; 
+            padding: 10px;
+        }
+    }
+    .info{
+        // border: 1px solid maroon;
+        // display: flex;
+        display: inline-block;
+        font-size: $font_20;
+        margin: 50px;
+        // text-align: right;
+        padding: 0 50px;
+        margin-left: 20%;
+        .left_outer{
+            // border: 1px solid green;
+            background-color: $font_color;
+            border-radius: 15px;
+            padding: 10px;
+            vertical-align: middle;
+            position: absolute;
+            margin: 70px auto;
+            margin-left: -250px;
+            .info_left{
+                // border: 1px solid blue;
+                background-color: $second_color3;
+                border-radius: 15px;
+                padding: 10px 20px;
+                .info_bottom{
+                    // border: 1px solid maroon;
+                    background-color: $main_color;
+                    border-radius: 15px;
+                    padding: 20px;
+                    margin-top: 10px;
+                    .left_text{
+                        // border: 1px solid black;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        .right_outer{
+            // border: 1px solid green;
+            background-color: $font_color;
+            border-radius: 15px;
+            padding: 10px;
+            display: flex;
+            vertical-align: middle;
+            .info_right{
+                // border: 1px solid blue;
+                background-color: $second_color3;
+                border-radius: 15px;
+                padding: 50px 50px;
+                // padding-top: 20px;
+                .right_title{
+                    // border: 1px solid blue;
+                    padding: 0 50px;
+                    // width: 400px;
+                    .title_text{
+                        // border: 1px solid red;
+                        // border: 1px solid $font_color;
+                        background-color: $main_color;
+                        // width: 200px;
+                        border-radius: 10px;
+                        margin: 10px auto;
+                        padding: 5px 20px;
+                    }
+                }
+                .cus_info{
+                    // border: 1px solid green;
+                    text-align: center;
+                    padding: 30px 50px;
+                    // overflow: hidden;
+                    color: $font_color;
+                    text-align: left;
+                    input{
+                        color: $font_color;
+                        border-radius: 5px;
+                        border: 0;
+                        padding: 2px 10px;
+                        // padding-right: 150px;
+                        width: inherit;
+                        width: 100%;
+                    }
+                    textarea{
+                        color: $font_color;
+                        border-radius: 5px;
+                        border: 0;
+                        padding: 2px 10px;
+                        width: 100%;
+                    }
+                    
+                }
+                .info_btn{
+                    // border: 1px solid green;
+                    padding: 0 120px;
+                    .btn_text{
+                        @include button(); 
+                        cursor: pointer;
+                        // border: 1px solid blue; 
+                    }
+                }
+            }
+        }
+    }
+}
