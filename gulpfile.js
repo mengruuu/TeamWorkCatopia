@@ -12,7 +12,7 @@ function tasks(cb){
   cb();
 }
 
-exports.do = tasks;
+exports.do = tasks; 
 
 //第二個任務 搬家
 function move(){
