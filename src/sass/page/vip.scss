@@ -12,18 +12,19 @@
     color: $font_color;
     // padding: 10px;
     .title{
-        // border: 1px solid brown;
+        // border: 1px solid yellow;
         display: flex;
         align-items: center;
         justify-content: space-between;
         text-align: center;
-        padding: 50px;
+        padding-top: 20px;
         .titletext{
             // border: 1px solid green;
             // display: inline-block;
             height: auto;
-            font-size: 32px;
+            font-size: $font_32;
             margin: 30px auto;
+            margin-bottom: 10px;
             background-color: $second_color3;
             border-radius: 15px;
             padding: 5px 30px;
@@ -35,8 +36,7 @@
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        padding-bottom: 150px;
-        margin-top: 50px;
+        padding-bottom: 100px;
         text-align: center;
         .leftgalaxy{
             // border: 1px solid blue;
@@ -67,8 +67,10 @@
             transform:scale(1.2,1.2)
         }
 
-        .logo_white{
-            margin: 150px 50px;
+        .middlelogo{
+            // border: 1px solid maroon;
+            margin: 80px 50px;
+            padding: 30px 0;
         }
 
         .rightgalaxy{
