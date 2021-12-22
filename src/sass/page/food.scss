@@ -150,3 +150,26 @@ ul.food_product_page_chose_container {
         border: 1px solid $font_color;
     }
 }
+div.food_product_history {
+    width: calc(100% - 154px);
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background-color: $second_color1;
+    div {
+        font-size: $font_24;
+        color: $font_color;
+        background-color: $main_color;
+        padding: 0 16px;
+        margin: 30px 0;
+        border-radius: 15px;
+    }
+    ul.food_product_history_content_container {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin-bottom: 50px;
+    }
+}

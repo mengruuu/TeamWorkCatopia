@@ -27,9 +27,19 @@
                 <img src = "./images/register/001-cat 2.svg">
                 <p>註冊成功！！</p>
             </div>
-            <button>繼續購物</button>
+            <button class = "register_step3_continue_shop_button">繼續購物</button>
         </div>
     </div>
+    <script>;(function() {
+        const register_step3_continue_shop_button = document.querySelector("button.register_step3_continue_shop_button");
+
+
+
+
+        register_step3_continue_shop_button.addEventListener("click", function() {
+            window.location.href = "/dist/food.html";
+        });
+    })()</script>
     @@include('./layout/footer.html')
 </body>
 </html>
