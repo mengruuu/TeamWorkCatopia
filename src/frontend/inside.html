@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    @@include('./layout/meta.html', { "title" : "商品詳細資訊" })
+    <link href="./css/inside.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+<body>
+    <div class="inside_content">
+    @@include('./layout/header.html')
+    <main>
+      <article class="inside_first_block_commodity">
+        <div class="inside_first_block_img">
+          <div class="inside_first_block_img_big">
+            <img id="big_img" src="./images/inside_page/images/inside_first_block_p1.png" alt="">
+          </div>
+          <div class="inside_first_block_img_small">
+            <img id="small_1" src="./images/inside_page/images/inside_first_block_p2.png" alt="">
+            <img id="small_2" src="./images/inside_page/images/inside_first_block_p3.png" alt="">
+            <img id="small_3" src="./images/inside_page/images/inside_first_block_p4.png" alt="">
+            <img id="small_4" src="./images/inside_page/images/inside_first_block_p5.png" alt="">
+          </div>
+        </div>
+        <div class="inside_first_block_text">
+          <div class="inside_first_block_text_content">
+            <p class="inside_first_block_text_content_title">花朵深層睡眠窩 貓窩</p>
+            <div class="inside_first_block_text_content_text">
+              <p>【開一朵貓咪小花】</p>
+              <p>給主子一朵暖暖的花朵貓窩吧，特殊饋頭設計讓貓貓從此愛上，再也不用擔心紙箱搶了風采</p>
+            </div>
+          </div>
+          <div class="inside_first_block_choose">
+            <form action="post">
+              <div class="inside_first_block_choose_1">
+                <p>規格</p>
+                <select name="color">
+                  <option value="1" selected>藍色</option>
+                  <option value="2">白色</option>
+                  <option value="3">黃色</option>
+                </select>
+              </div>
+              <div class="inside_first_block_choose_2">
+                <p>數量</p>
+                <input type="number" value="1" min="1" max="50">
+              </div>
+              <div class="inside_first_block_total">
+                <p>總價</p>
+                <p id="ntd">2420<span>元</span></p>
+              </div>
+              <div class="inside_first_block_button">
+                <button type="button">直接購買</button>
+                <button type="button">加入購物車</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="inside_sec_block">
+        <img src="./images/inside_page/images/inside_sec_block_p1_product.png" alt="">
+        <img src="./images/inside_page/images/inside_sec_block_p2_foot.png" alt="">
+      </article>
+      <article class="inside_three_block">
+        <div class="inside_three_block_text">
+          <p>猜你主子也喜歡</p>
+        </div>
+        <div class="inside_three_block_product">
+          <img src="./images/inside_page/images/inside_three_block_p1.png" alt="">
+          <img src="./images/inside_page/images/inside_three_block_p2.png" alt="">
+          <img src="./images/inside_page/images/inside_three_block_p3.png" alt="">
+          <img src="./images/inside_page/images/inside_three_block_p4.png" alt="">
+        </div>
+      </article>
+    </main>
+    @@include('./layout/footer.html')
+    </div>
+</body>
+</html>

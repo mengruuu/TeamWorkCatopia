@@ -1,6 +1,9 @@
 @import '../base/var';
 @import '../mixin/mixin';
 
+*{
+    box-sizing: border-box;
+}
 article.first_block{
     font-size: $font_32;
     margin-top: 120px;
@@ -27,7 +30,6 @@ article.first_block{
 
 article.sec_block{
     background-color: $second_color5;
-    border: 1px solid red;
     max-width: 1200px;
     border-radius: 15px;
     margin: 0 auto;
@@ -38,7 +40,6 @@ article.sec_block{
     display: flex;
     justify-content: space-between;
     .sec_block_content_1{
-        border: 1px solid red;
         .sec_block_content_text{
             margin-left: 65px;
             p{
@@ -62,7 +63,7 @@ article.sec_block{
             min-width: 541px;
             border-radius: 15px;
             position: relative;
-            height: 514px;
+            height: 500px;
             img{
                 margin: 0 auto;
                 display: block;
@@ -119,10 +120,10 @@ article.sec_block{
             margin-top: 20px;
             box-shadow: $shadow_box;
             color: $font_color;
+            cursor: pointer;
         }
     }
     .btn_block{
-        border: 1px solid red;
         width: 420px;
         margin: 0 auto;
         margin-top: 25px;
@@ -130,11 +131,11 @@ article.sec_block{
             display: flex;
             justify-content: space-between;
             .button_1{
-                border: 1px solid;
                 width: 176px;
                 height: 49px;
                 border-radius: 15px;
                 background-color: $important_color;
+                cursor: pointer;
                 .button_flex{
                     height: fit-content;
                     display: flex;
@@ -157,11 +158,11 @@ article.sec_block{
                 }
             }
             .button_2{
-                border: 1px solid;
                 width: 176px;
                 height: 49px;
                 border-radius: 15px;
                 background-color: $important_color;
+                cursor: pointer;
                 .button_flex{
                     height: fit-content;
                     display: flex;
@@ -184,6 +185,14 @@ article.sec_block{
                 }
             }
         }
+    }
+}
+.diy_pop_btn{
+    margin-top: 20px;
+    .diy_btn_pop{
+        @include button();
+        width: 100%;
+        margin: 0 auto;
     }
 }
 //彈窗開始
