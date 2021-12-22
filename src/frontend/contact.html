@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layout/meta.html', {
+      "title" : "聯絡我們"
+    })
+    <link rel="stylesheet" href="./css/contact.css">
+</head>
+<body>
+    @@include('./layout/header.html')
+
+    <main class="main">
+        <div class="title">
+            <div class="title_text">聯絡我們</div>
+        </div>
+
+        <div class="info">
+            <div class="left_outer">
+                <div class="info_left">
+                    <img src="./images/contact/contact_logo.png" alt="" srcset="">
+                    <div class="info_bottom">
+                        <div class="left_text">
+                            <img src="./images/contact/contact_address.png" alt="" srcset="">
+                            新北市石門區
+                        </div>
+                        <div class="left_text">
+                            <img src="./images/contact/contact_mail.png" alt="" srcset="">
+                            123456@gmail.com
+                        </div>
+                        <div class="left_text">
+                            <img src="./images/contact/contact_phone.png" alt="" srcset="">
+                            02-123456789
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_outer">
+                <div class="info_right">
+                    <div class="right_title">
+                        <div class="title_text">
+                            請輸入您的資訊
+                        </div>
+                    </div>
+
+                    <div class="cus_info">
+                        <!-- 請輸入姓名... -->
+                        <input type="text" value="請輸入姓名...">
+                        <br><br>
+                        <!-- 請輸入Email... -->
+                        <input type="email" value="請輸入Email...">
+                        <br><br>
+                        <!-- 請輸入訊息... -->
+                        <textarea rows="5" value="請輸入訊息..."></textarea>
+                    </div>
+
+                    <div class="info_btn">
+                        <div class="btn_text">
+                            送出
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    @@include('./layout/footer.html')
+</body>
+</html>
