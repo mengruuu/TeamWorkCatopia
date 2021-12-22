@@ -67,9 +67,21 @@
             <input type = "checkbox" name = "Agree to terms" id = "Agree to terms" required>
             <label for = "Agree to terms" style = "font-size: 16px;">我同意會員條款</label>
             <br>
-            <button type = "button">下一步　確認資料</button>
+            <button type = "button" class = "register_step1_next_step_button">下一步　確認資料</button>
         </form>
     </div>
+    <script>
+        ;(function() {
+            const register_step1_next_step_button = document.querySelector("button.register_step1_next_step_button");
+
+
+
+
+            register_step1_next_step_button.addEventListener("click", function() {
+                window.location.href = "/dist/register_step2.html";
+            });
+        })()
+    </script>
     @@include('./layout/footer.html')
 </body>
 </html>

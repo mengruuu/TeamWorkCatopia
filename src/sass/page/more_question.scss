@@ -29,6 +29,7 @@ div.more_question_question_container {
                 p{
                     display: inline-block;
                     font-size: $font_24;
+                    margin: 16px 0;
                     color: $font_color;
                 }
             }
@@ -78,28 +79,36 @@ div.more_question_contact_container {
     }
     button {
         @include button();
+        cursor: pointer;
         width: 184px;
         height: 65px;
     }
 }
 
 div.ai_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
     right: 50px;
     border-radius: 50%;
     background-color: $important_color;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     cursor: pointer;
     background-repeat: no-repeat;
     background-position: center;
+    img {
+        width: 70%;
+        height: 70%;
+    }
     div.ai_answer {
         position: absolute;
         bottom: 0;
         transform: translateX(calc(-100% - 30px));
-        background-color: $main_color;
+        background-color: $second_color5;
         width: 250px;
         border-radius: 5px;
         padding: 0 20px 20px;
@@ -111,11 +120,14 @@ div.ai_container {
             font-size: $font_24;
         }
         input {
-            background-color: $important_color;
+            background-color: $second_color6;
             padding: 8px 16px;
             outline: none;
             border-radius: 5px;
             border: none;
+            color: $font_color;
+        }
+        input::placeholder {
             color: $font_color;
         }
     }
@@ -125,7 +137,7 @@ div.ai_container {
         right: 0;
         top: 30px;
         transform: translateX(100%);
-        border-left: 20px solid $main_color;
+        border-left: 20px solid $second_color5;
         border-top: 10px solid rgba(255, 0, 0, 0);
         border-bottom: 10px solid rgba(255, 0, 0, 0);
         border-right: none;

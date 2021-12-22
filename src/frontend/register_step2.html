@@ -64,11 +64,27 @@
             <label for = "Agree to terms" style = "font-size: 16px;">我同意會員條款</label>
             <br>
             <div class = "register_second_button_collection">
-                <button type = "button">上一步　修改資料</button>
-                <button type = "button">下一步　完成註冊</button>
+                <button type = "button" class = "register_step2_pre_step_button">上一步　修改資料</button>
+                <button type = "button" class = "register_step2_next_step_button">下一步　完成註冊</button>
             </div>
         </form>
     </div>
+    <script>
+        ;(function() {
+            const register_step2_pre_step_button = document.querySelector("button.register_step2_pre_step_button");
+
+
+
+
+            register_step2_pre_step_button.addEventListener("click", function() {
+                window.location.href = "/dist/register_step1.html";
+            });
+
+            register_step2_pre_step_button.nextElementSibling.addEventListener("click", function() {
+                window.location.href = "/dist/register_step3.html";
+            });
+        })()
+    </script>
     @@include('./layout/footer.html')
 </body>
 </html>
