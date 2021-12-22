@@ -26,7 +26,7 @@ div.login_container > div.login_item > form > div.login_input_and_icon {
     display: flex;
 }
 
-div.login_container > div.login_item > form > div.login_input_and_icon > i {
+div.login_container > div.login_item > form > div.login_input_and_icon > img {
     position: absolute;
     bottom: 0;
 }
@@ -36,7 +36,7 @@ div.login_container > div.login_item > form > div.login_input_and_icon > input {
     border: none;
     border-bottom: 1px solid $font_color;
     outline: none;
-    padding: 30px 20px 0;
+    padding: 30px 20px 0 30px;
 }
 
 div.login_container > div.login_item > form > div.login_input_and_icon > input::placeholder {
@@ -59,11 +59,19 @@ div.login_container > div.login_item > div.login_register_button_and_icon {
 
 div.login_container > div.login_item > div.login_register_button_and_icon > a {
     color: $font_color;
+    font-size: $font_20;
     text-decoration: none;
 }
 
 div.login_container > div.login_item > div.login_register_button_and_icon > div.login_hr_and_icon > div.login_hr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 16px 0;
+}
+
+div.login_container > div.login_item > div.login_register_button_and_icon > div.login_hr_and_icon > div.login_hr > span {
+    font-size: $font_20;
 }
 
 div.login_container > div.login_item > div.login_register_button_and_icon > div.login_hr_and_icon > div.login_hr > div.login_hr_line {

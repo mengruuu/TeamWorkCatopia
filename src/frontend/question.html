@@ -47,9 +47,10 @@
     </div>
     <div class = "more_question_contact_container">
         <p>沒得到解答嗎？也可以直接與我們聯繫！</p>
-        <button>聯絡我們</button>
+        <button class = "more_question_contact_button">聯絡我們</button>
     </div>
-    <div class = "ai_container" style = "background-image: url('./images/question/cat02\ 2\ 1.svg');">
+    <div class = "ai_container">
+        <img src = "./images/question/question_ai.png">
         <div class = "ai_answer">
             <p>您有什麼問題呢？</p>
             <input type = "text" placeholder = "輸入您的問題..">
@@ -63,6 +64,7 @@
             const content = document.querySelector("div.more_question_question_and_answer_content > p");
             const ai_container = document.querySelector("div.ai_container");
             const ai_answer = document.querySelector("div.ai_answer");
+            const more_question_contact_button = document.querySelector("button.more_question_contact_button");
 
 
 
@@ -87,6 +89,11 @@
 
             ai_answer.addEventListener("click", function(event) {
                 event.stopImmediatePropagation();
+            });
+
+            // 點擊more_question_contact_button前往聯絡頁面
+            more_question_contact_button.addEventListener("click", function() {
+                window.location.href = "/dist/contact.html";
             });
         })()
     </script>
