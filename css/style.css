@@ -23,7 +23,8 @@ img {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
+  display: inline-block;
 }
 
 header {
@@ -113,10 +114,6 @@ header div.header_icon_shopping_cart {
   cursor: pointer;
 }
 
-div.header_second_nav {
-  border: 1px solid black;
-}
-
 ul.header_second_ul {
   height: 50px;
   list-style: none;
@@ -145,7 +142,7 @@ ul.header_second_ul li.header_second_li a {
 }
 
 ul.header_second_ul li.header_second_li a:hover {
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 ul.header_second_ul li.header_li_food {
@@ -197,6 +194,17 @@ div.header_main_nav nav ul.header_main_ul {
 div.header_main_nav nav ul.header_main_ul li {
   position: relative;
   text-align: center;
+}
+
+div.header_main_nav nav ul.header_main_ul li a {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 div.header_main_nav nav ul.header_main_ul li div.header_nav_icon {
