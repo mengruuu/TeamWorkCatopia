@@ -1,12 +1,10 @@
-
-
 div.hamburger_-on,div.hamburger_-off{
     position: fixed;
     right: 0;
     // float: right;
     overflow:hidden;
     overflow-y: scroll;
-    height: 82%;
+    height: 100vh;
     transition: all 1s;
     z-index: 50;
     img{
@@ -50,7 +48,7 @@ div.hamburger_-on,div.hamburger_-off{
         width: 35%;
         border-radius: 5px;
         // border: 1px solid red;
-        font-size: $font_20;
+        font-size: $font_20;    
         display: inline-block;
         cursor: pointer;
     
@@ -65,7 +63,7 @@ div.hamburger_-on,div.hamburger_-off{
         display: flex;
         flex-direction: column;
         text-align: center;
-        width: 40%;
+        width: 35%;
         margin: 0 auto;
         display: none;
         li{
@@ -75,7 +73,7 @@ div.hamburger_-on,div.hamburger_-off{
             margin: 0 auto;
             padding: 5px 0;
             a{
-                font-size: $font_20;
+                font-size: $font_20 ;
                 color: $font_color;
             }
             a:hover{
