@@ -2,7 +2,7 @@
     <div class = "footer_container">
         <div class = "footer_up">
             <div class = "footer_up_item">
-                <button>常見問題</button>
+                <button class = "footer_question_button">常見問題</button>
             </div>
             <div class = "footer_up_item footer_up_center">
                 <div class = "footer_up_item_title">
@@ -35,3 +35,15 @@
         </div>
     </div>
 </footer>
+<script>
+    ;(function() {
+        const footer_question_button = document.querySelector("button.footer_question_button");
+
+
+
+
+        footer_question_button.addEventListener("click", function() {
+            window.location.href = "/dist/question.html"
+        });
+    })()
+</script>
