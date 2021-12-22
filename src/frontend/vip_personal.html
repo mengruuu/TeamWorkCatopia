@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layout/meta.html', {
+      "title" : "個人資料"
+    })
+    <link rel="stylesheet" href="./css/vip_personal.css">
+    <script src="./js/frontend/vip_personal.js" async></script>
+</head>
+<body>
+    @@include('./layout/header.html')
+
+    <main class="main">
+        <div class="title">
+            DEVIL_CATMAN 的個人頁面
+        </div>
+
+        <div class="personal">
+            <div class="left">
+                <div class="block_left">
+                    <img src="./images/vip_personal/vip_personal_catman.png">
+                </div>
+                <div class="left_button">
+                    <button class="btn_pop" onclick="show()">頭像設定</button>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="block_right">
+                    <div class="top">
+                        <div class="top_text">遊戲最高得分</div>
+                        <span>180分</span>
+                    </div>
+                    <div class="bottom">
+                        <div class="bottom_text">
+                            <div class="adjast">
+                                <din class="line">姓名：</din>                                
+                                <span>DEVIL_CATMAN</span>
+                                <br>
+                                <din class="line">Email：</din>
+                                <span>tonight_nightmare@gmail.com</span>
+                                <br>
+                                <din class="line">會員ID：</din>
+                                <span>001</span>
+                            </div>
+                            <a href="vip_edit.html">
+                                <button>編輯個人資料</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="last">
+                        <a href="game_store.html">
+                            <div class="btn">前往虛擬商城</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 彈窗 -->
+        <div id="background_pop">
+            <div id="div_pop">
+                <div class="div_top">
+                    <div class="div_title">
+                        <!-- 可放標題內容 -->
+                        <span id="close_btn"><img src="./images/vip_personal/vip_personal_cancel1.png"></span>
+                    </div>
+                </div>
+                <div class="div_content">
+                    <div class="big_content">
+                        <!-- 彈窗主要內容 -->
+                        <div class="portrait">
+                            <div class="portrait_left">
+                                <div class="portrait_left_top">
+                                    <img src="./images/vip_personal/vip_personal_devil_catman.png" alt="" srcset="">
+                                </div>
+                                <div class="portrait_left_bottom">
+                                    裝備中
+                                    <div class="wearon">
+                                        <div class="wearon_block">
+                                            <img src="./images/vip_personal/vip_personal_cat.png" alt="" srcset="">
+                                        </div>
+                                        <div class="wearon_block">
+                                            <img src="./images/vip_personal/vip_personal_head.png" alt="" srcset="">
+                                        </div>
+                                        <div class="wearon_block">
+                                            <img src="./images/vip_personal/vip_personal_collar.png" alt="" srcset="">
+                                        </div>
+                                        <div class="wearon_block">
+                                            <img src="./images/vip_personal/vip_personal_wings.png" alt="" srcset="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portrait_right">
+                                <div class="right_btn">
+                                    <div class="right_btn_category">貓咪</div>
+                                    <div class="right_btn_category">頭套</div>
+                                    <div class="right_btn_category">項圈</div>
+                                    <div class="right_btn_category">衣服</div>
+                                </div>
+                                <div class="page">
+                                    <div class="page_category"></div>
+                                    <div class="page_category"></div>
+                                    <div class="page_category"></div>
+                                    <div class="page_category"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="back_button">
+                        <a href="vip_personal.html" class="btn_next">取消</a>
+                        <a href="javascript: return false" class="btn_next">確定修改</a>
+                    </div>              
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    @@include('./layout/footer.html')
+</body>
+</html>

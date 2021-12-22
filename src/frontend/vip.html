@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layout/meta.html', {
+      "title" : "會員中心"
+    })
+    <link rel="stylesheet" href="./css/vip.css">
+</head>
+<body>
+    @@include('./layout/header.html')
+
+    <main class="main">
+		<div class="title">
+            <div class="titletext">
+                會員中心
+            </div>
+        </div>
+
+        <div class="galaxy">
+            <div class="leftgalaxy">
+                <a href="vip_personal.html">
+                    <img src="./images/vip/vip_galaxy_left.png" alt="">
+                    <div class="leftgalaxy_text">個人資料</div>
+                </a>
+            </div>
+            <div class="middlelogo">
+                <img src="./images/vip/vip_logo_white.png" alt="">
+            </div>
+            <div class="rightgalaxy">
+                <a href="vip_order.html">
+                    <img src="./images/vip/vip_galaxy_right.png" alt="">
+                    <div class="rightgalaxy_text">訂單查詢</div>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+
+    @@include('./layout/footer.html')
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layout/meta.html', {
+      "title" : "訂單查詢"
+    })
+    <link rel="stylesheet" href="./css/vip_order.css">
+</head>
+<body>
+    @@include('./layout/header.html')
+
+    <main class="main">
+        <div class="title">
+            <div class="title_text">會員中心</div>
+        </div>
+        <div class="second_title">
+            <div class="second_title_text">訂單查詢</div>
+        </div>
+
+        <table>
+            <tr>
+                <td>訂單編號</td>
+                <td>訂購時間</td>
+                <td>訂單狀態</td>
+                <td>總消費金額</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="vip_order_detail.html">O0001</a></td>
+                <td>2021/12/4</td>
+                <td>備貨中</td>
+                <td>$1298</td>
+                <td><a href="vip_order_detail.html">訂單明細</a></td>
+            </tr>
+            <tr>
+                <td><a href="vip_order_detail.html">O0002</a></td>
+                <td>2021/12/4</td>
+                <td>備貨中</td>
+                <td>$1298</td>
+                <td><a href="vip_order_detail.html">訂單明細</a></td>
+            </tr>
+            <tr>
+                <td><a href="vip_order_detail.html">O0003</a></td>
+                <td>2021/12/4</td>
+                <td>備貨中</td>
+                <td>$1298</td>
+                <td><a href="vip_order_detail.html">訂單明細</a></td>
+            </tr>
+            <tr>
+                <td><a href="vip_order_detail.html">O0004</a></td>
+                <td>2021/12/4</td>
+                <td>備貨中</td>
+                <td>$1298</td>
+                <td><a href="vip_order_detail.html">訂單明細</a></td>
+            </tr>
+            <tr>
+                <td><a href="vip_order_detail.html">O0005</a></td>
+                <td>2021/12/4</td>
+                <td>備貨中</td>
+                <td>$1298</td>
+                <td><a href="vip_order_detail.html">訂單明細</a></td>
+            </tr>
+        </table>
+
+        <div class="bottom">
+            <a href="vip.html"><button>離開頁面</button></a>
+        </div>
+
+
+    </main>
+
+
+
+    @@include('./layout/footer.html')
+</body>
+</html>
