@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layout/meta.html', {
+      "title" : "商品頁_食品"
+    })
+    <link rel="stylesheet" href="./css/food.css">
+</head>
+<body>
+    @@include('./layout/header.html')
+    <div class = "food_banner_container">
+        <img src = "./images/food/food_banner.png">
+    </div>
+    <div class = "food_search_container">
+        <div class = "food_search_and_index_container">
+            <div class = "food_index">
+                <p>首頁/主子用品/用品專區</p>
+            </div>
+            <div class = "food_search_and_search_button">
+                <input type = "text" placeholder = "請輸入搜尋商品...">
+                <ul class = "food_search_content">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+                <div class = "food_search_button" style = "background-image: url(./images/food/food_search_button.png);"></div>
+            </div>
+        </div>
+    </div>
+    <div class = "food_filter_container_and_food_product_overview">
+        <ul class = "food_filter_container">
+            <li>
+                <p>用品專區</p>
+            </li>
+            <li>
+                <p>居家用品</p>
+                <hr>
+                <ul>
+                    <li>貓砂盆與貓砂</li>
+                    <li>抓抓板</li>
+                    <li>造型小窩</li>
+                    <li>食器相關</li>
+                </ul>
+            </li>
+            <li>
+                <p>外出用品</p>
+                <hr>
+                <ul>
+                    <li>外出籠與包包</li>
+                    <li>外出食盆</li>
+                </ul>
+            </li>
+        </ul>
+        <div class = "food_product_overview">
+            <div class = "food_product_overview_item">
+                <img class = "food_product_overview_item_img" src = "./images/food/food_overview_RAINCOAST_1.png">
+                <div class = "food_product_title_and_price_and_button">
+                    <div class = "food_product_title_and_price">
+                        <p>商品名稱</p>
+                        <p>$300</p>
+                    </div>
+                    <div class = "food_product_content_button" style = "background-image: url(./images/food/food_go_to_products_content_button.png);"></div>
+                </div>
+            </div>
+            <div class = "food_product_overview_item">
+                <img class = "food_product_overview_item_img" src = "./images/food/food_overview_RAINCOAST_1.png">
+                <div class = "food_product_title_and_price_and_button">
+                    <div class = "food_product_title_and_price">
+                        <p>商品名稱</p>
+                        <p>$300</p>
+                    </div>
+                    <div class = "food_product_content_button" style = "background-image: url(./images/food/food_go_to_products_content_button.png);"></div>
+                </div>
+            </div>
+            <div class = "food_product_overview_item">
+                <img class = "food_product_overview_item_img" src = "./images/food/food_overview_RAINCOAST_1.png">
+                <div class = "food_product_title_and_price_and_button">
+                    <div class = "food_product_title_and_price">
+                        <p>商品名稱</p>
+                        <p>$300</p>
+                    </div>
+                    <div class = "food_product_content_button" style = "background-image: url(./images/food/food_go_to_products_content_button.png);"></div>
+                </div>
+            </div>
+            <div class = "food_product_overview_item">
+                <img class = "food_product_overview_item_img" src = "./images/food/food_overview_RAINCOAST_1.png">
+                <div class = "food_product_title_and_price_and_button">
+                    <div class = "food_product_title_and_price">
+                        <p>商品名稱</p>
+                        <p>$300</p>
+                    </div>
+                    <div class = "food_product_content_button" style = "background-image: url(./images/food/food_go_to_products_content_button.png);"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class = "food_product_page_chose_container">
+        <li class = "food_product_pre_page_button"></li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>...</li>
+        <li>9</li>
+        <li>10</li>
+        <li class = "food_product_next_page"></li>
+    </ul>
+    <div class = "food_product_history"></div>
+    <!-- @@include('./layout/hamburger.html') -->
+    @@include('./layout/footer.html')
+</body>
+</html>
