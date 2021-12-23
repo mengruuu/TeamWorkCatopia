@@ -8,6 +8,7 @@
 </head>
 <body>
     @@include('./layout/header.html')
+    <div class = "more_question_background"></div>
     <div class = "more_question_question_container">
         <p>常見問題</p>
         <div class = "more_question_question_and_answer_container">
@@ -65,12 +66,13 @@
             const ai_container = document.querySelector("div.ai_container");
             const ai_answer = document.querySelector("div.ai_answer");
             const more_question_contact_button = document.querySelector("button.more_question_contact_button");
+            const more_question_background =document.querySelector("div.more_question_background");
 
 
 
 
             for(let i = 0; i < title.length; i = i + 1) {
-                const height = title[i].nextElementSibling.children[0].offsetHeight; console.log(height);
+                const height = title[i].nextElementSibling.children[0].offsetHeight;
                 title[i].addEventListener("click", function() {
                     this.classList.toggle("more_question_question_and_answer_title_open");
 
@@ -85,6 +87,7 @@
 
             ai_container.addEventListener("click", function() {
                 ai_answer.classList.toggle("ai_answer_open");
+                more_question_background.classList.toggle("more_question_background_open");
             });
 
             ai_answer.addEventListener("click", function(event) {
@@ -95,6 +98,14 @@
             more_question_contact_button.addEventListener("click", function() {
                 window.location.href = "/dist/contact.html";
             });
+
+            // 點擊空白處來關閉ai_answer對話框
+            document.querySelector("body").addEventListener("click", function(event){
+                if(ai_answer.classList.contains("ai_answer_open") && event.target === more_question_background) {
+                    ai_answer.classList.remove("ai_answer_open");
+                    more_question_background.classList.remove("more_question_background_open");
+                }
+            }, true);
         })()
     </script>
 </body>
