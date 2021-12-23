@@ -11,13 +11,15 @@ div.content{
         width: 200px;
         right: 0%;
         top:50%;
+        opacity: 0.8;
     }
     div.black_cat_bottom{
         display: inline-block;
         position: absolute;
         right: 35%;
         bottom:-.5%;
-  
+        opacity: 0.8;
+        z-index: -1;
     }
     div.black_cat_left{
         display: inline-block;
@@ -25,6 +27,7 @@ div.content{
         position: absolute;
         left: 0;
         top:50%;
+        opacity: 0.8;
     }
 }
 div.game_choose_content{
