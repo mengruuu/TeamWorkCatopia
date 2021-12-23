@@ -1,11 +1,11 @@
-.main {
+.vip_order_main {
   border: 1px solid blue;
   font-size: 22px;
   color: #774F40;
   text-align: center;
 }
 
-.main .title {
+.vip_order_main .title {
   background-color: #EAE4D2;
   max-width: 1200px;
   width: 100%;
@@ -13,12 +13,12 @@
   margin-top: 80px;
 }
 
-.main .title .title_text {
+.vip_order_main .title .title_text {
   display: inline-block;
   padding: 10px;
 }
 
-.main .second_title .second_title_text {
+.vip_order_main .second_title .second_title_text {
   font-size: 20px;
   display: inline-block;
   padding: 5px 50px;
@@ -27,7 +27,7 @@
   border-radius: 10px;
 }
 
-.main table {
+.vip_order_main table {
   border: 1px solid #774F40;
   text-align: center;
   margin: 50px auto;
@@ -35,31 +35,31 @@
   border-collapse: collapse;
 }
 
-.main table tr {
+.vip_order_main table tr {
   border: 1px solid #774F40;
   height: 100px;
 }
 
-.main table tr td {
+.vip_order_main table tr td {
   border: 1px solid #774F40;
   width: 200px;
   border-collapse: collapse;
 }
 
-.main table tr td a {
+.vip_order_main table tr td a {
   text-decoration: underline;
 }
 
-.main table tr:nth-child(1) {
+.vip_order_main table tr:nth-child(1) {
   background-color: #FFF2CC;
   height: 50px;
 }
 
-.main .bottom {
+.vip_order_main .bottom {
   margin: 50px auto;
 }
 
-.main .bottom button {
+.vip_order_main .bottom button {
   -webkit-box-shadow: 1px 1px 1px lightgray;
           box-shadow: 1px 1px 1px lightgray;
   padding: 5px 10px;

@@ -167,7 +167,7 @@ div.message_write_message_container_open {
 }
 
 div.message_input_container {
-  padding: 30px 0;
+  padding: 10px 0;
   background-color: #EAE4D2;
   width: 100vw;
 }
@@ -199,7 +199,7 @@ div.message_input_container div div.input_and_laber_for_files {
 
 div.message_input_container div div.input_and_laber_for_files input {
   cursor: pointer;
-  height: 80px;
+  height: 50px;
   width: 100%;
   border-radius: 20px;
   outline: none;
@@ -228,7 +228,7 @@ div.message_input_container div div.input_and_laber_for_files input::placeholder
 }
 
 div.message_input_container div div.input_and_laber_for_files label.message_img_file_container {
-  width: 20%;
+  width: 15%;
   position: absolute;
   right: 0;
   border-radius: 0 20px 20px 0;
@@ -237,6 +237,7 @@ div.message_input_container div div.input_and_laber_for_files label.message_img_
 
 div.message_input_container div div.input_and_laber_for_files label.message_img_file_container img {
   width: 100%;
+  height: 50px;
   display: block;
 }
 
@@ -253,7 +254,7 @@ div.message_and_comment_container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 70vw;
+  width: 850px;
   margin: 50px auto;
 }
 
@@ -268,7 +269,7 @@ div.message_and_comment_container div.message_container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 850px;
   background-repeat: no-repeat;
   border-radius: 15px;
 }
@@ -281,7 +282,7 @@ div.message_and_comment_container div.message_container div.message_setting_cont
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 90%;
-  margin-top: 30px;
+  margin-top: 16px;
 }
 
 div.message_and_comment_container div.message_container div.message_setting_container img {
@@ -298,7 +299,7 @@ div.message_and_comment_container div.message_container div.message_user_and_tim
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  width: calc(62% + 80px);
+  width: 615px;
   margin-bottom: 16px;
 }
 
@@ -314,6 +315,11 @@ div.message_and_comment_container div.message_container div.message_user_and_tim
           align-items: flex-end;
   width: 100%;
   height: 5%;
+}
+
+div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_img_and_user_and_time img {
+  width: 100px;
+  height: 60.5px;
 }
 
 div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_user_and_time {
@@ -337,11 +343,19 @@ div.message_and_comment_container div.message_container div.message_user_and_tim
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 0;
   background-color: #F4E6CD;
   color: #774F40;
   padding: 0 16px;
   border-radius: 15px;
+}
+
+div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_like_container img {
+  width: 30px;
+  height: 30px;
 }
 
 div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_like_container p {
@@ -357,7 +371,7 @@ div.message_and_comment_container div.message_content_and_comment {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 62%;
+  width: 535px;
   border-radius: 15px;
   background-color: #F4E6CD;
   padding: 20px 40px;
@@ -371,12 +385,12 @@ div.message_and_comment_container div.message_content_and_comment div.message_co
 
 div.message_and_comment_container div.message_content_and_comment img.message_content_img {
   width: 100%;
-  height: 498px;
+  height: 250px;
   margin-bottom: 30px;
 }
 
 div.message_and_comment_container div.message_content_and_comment input {
-  padding: 20px;
+  padding: 8px 16px;
   font-size: 18px;
   color: #774F40;
   border-radius: 20px;

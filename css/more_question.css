@@ -2,6 +2,20 @@ body {
   overflow-x: hidden;
 }
 
+div.more_question_background {
+  position: fixed;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 99;
+}
+
+div.more_question_background_open {
+  display: block;
+}
+
 div.more_question_question_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,18 +155,19 @@ div.ai_container {
   cursor: pointer;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 100;
 }
 
 div.ai_container img {
-  width: 70%;
-  height: 70%;
+  width: 80%;
+  height: 64%;
 }
 
 div.ai_container div.ai_answer {
   position: absolute;
   bottom: 0;
-  -webkit-transform: translateX(calc(-100% - 30px));
-          transform: translateX(calc(-100% - 30px));
+  -webkit-transform: translateX(calc(-100%));
+          transform: translateX(calc(-100%));
   background-color: #E6EECE;
   width: 250px;
   border-radius: 5px;

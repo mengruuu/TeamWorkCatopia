@@ -1,24 +1,24 @@
-.main {
+.contact_main {
   font-size: 22px;
   color: #774F40;
   text-align: center;
   background-image: url("../images/contact/contact_background.png");
 }
 
-.main .title {
+.contact_main .title {
   max-width: 1200px;
   width: 100%;
   margin: 20px auto;
   margin-top: 40px;
 }
 
-.main .title .title_text {
+.contact_main .title .title_text {
   text-align: center;
   display: inline-block;
   padding: 10px;
 }
 
-.main .info {
+.contact_main .info {
   display: inline-block;
   font-size: 18px;
   margin: 50px;
@@ -26,7 +26,7 @@
   margin-left: 20%;
 }
 
-.main .info .left_outer {
+.contact_main .info .left_outer {
   background-color: #774F40;
   border-radius: 15px;
   padding: 10px;
@@ -36,24 +36,24 @@
   margin-left: -250px;
 }
 
-.main .info .left_outer .info_left {
+.contact_main .info .left_outer .info_left {
   background-color: #EDDAB8;
   border-radius: 15px;
   padding: 10px 20px;
 }
 
-.main .info .left_outer .info_left .info_bottom {
+.contact_main .info .left_outer .info_left .info_bottom {
   background-color: #FFF2CC;
   border-radius: 15px;
   padding: 20px;
   margin-top: 10px;
 }
 
-.main .info .left_outer .info_left .info_bottom .left_text {
+.contact_main .info .left_outer .info_left .info_bottom .left_text {
   text-align: left;
 }
 
-.main .info .right_outer {
+.contact_main .info .right_outer {
   background-color: #774F40;
   border-radius: 15px;
   padding: 10px;
@@ -63,31 +63,31 @@
   vertical-align: middle;
 }
 
-.main .info .right_outer .info_right {
+.contact_main .info .right_outer .info_right {
   background-color: #EDDAB8;
   border-radius: 15px;
   padding: 50px 50px;
 }
 
-.main .info .right_outer .info_right .right_title {
+.contact_main .info .right_outer .info_right .right_title {
   padding: 0 50px;
 }
 
-.main .info .right_outer .info_right .right_title .title_text {
+.contact_main .info .right_outer .info_right .right_title .title_text {
   background-color: #FFF2CC;
   border-radius: 10px;
   margin: 10px auto;
   padding: 5px 20px;
 }
 
-.main .info .right_outer .info_right .cus_info {
+.contact_main .info .right_outer .info_right .cus_info {
   text-align: center;
   padding: 30px 50px;
   color: #774F40;
   text-align: left;
 }
 
-.main .info .right_outer .info_right .cus_info input {
+.contact_main .info .right_outer .info_right .cus_info input {
   color: #774F40;
   border-radius: 5px;
   border: 0;
@@ -96,7 +96,7 @@
   width: 100%;
 }
 
-.main .info .right_outer .info_right .cus_info textarea {
+.contact_main .info .right_outer .info_right .cus_info textarea {
   color: #774F40;
   border-radius: 5px;
   border: 0;
@@ -104,11 +104,11 @@
   width: 100%;
 }
 
-.main .info .right_outer .info_right .info_btn {
+.contact_main .info .right_outer .info_right .info_btn {
   padding: 0 120px;
 }
 
-.main .info .right_outer .info_right .info_btn .btn_text {
+.contact_main .info .right_outer .info_right .info_btn .btn_text {
   -webkit-box-shadow: 1px 1px 1px lightgray;
           box-shadow: 1px 1px 1px lightgray;
   padding: 5px 10px;
