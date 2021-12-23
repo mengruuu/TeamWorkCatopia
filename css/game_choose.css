@@ -9,6 +9,7 @@ div.content div.black_cat_right {
   width: 200px;
   right: 0%;
   top: 50%;
+  opacity: 0.8;
 }
 
 div.content div.black_cat_bottom {
@@ -16,6 +17,8 @@ div.content div.black_cat_bottom {
   position: absolute;
   right: 35%;
   bottom: -.5%;
+  opacity: 0.8;
+  z-index: -1;
 }
 
 div.content div.black_cat_left {
@@ -24,6 +27,7 @@ div.content div.black_cat_left {
   position: absolute;
   left: 0;
   top: 50%;
+  opacity: 0.8;
 }
 
 div.game_choose_content {
