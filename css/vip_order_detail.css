@@ -1,0 +1,225 @@
+.main {
+  border: 1px solid blue;
+  font-size: 22px;
+  color: #774F40;
+  text-align: center;
+}
+
+.main .title {
+  background-color: #EAE4D2;
+  max-width: 1200px;
+  width: 100%;
+  margin: 20px auto;
+  margin-top: 80px;
+}
+
+.main .title .title_text {
+  display: inline-block;
+  padding: 10px;
+}
+
+.main .second_title .second_title_text {
+  font-size: 20px;
+  display: inline-block;
+  padding: 5px 50px;
+  background-color: #FFF2CC;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.main table {
+  border: 1px solid #774F40;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 18px;
+  border-collapse: collapse;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.main table tr {
+  border: 1px solid #774F40;
+  height: 160px;
+}
+
+.main table tr td {
+  border: 1px solid #774F40;
+  width: 200px;
+  border-collapse: collapse;
+}
+
+.main table tr td img {
+  margin-right: 20px;
+}
+
+.main table tr td .total {
+  margin: 10px 50px;
+}
+
+.main table tr td hr {
+  border: 0.5px solid #774F40;
+  padding: 0;
+  width: 100%;
+  opacity: .5;
+}
+
+.main table tr td:nth-child(1) {
+  width: 350px;
+  padding: 20px;
+}
+
+.main table tr td:nth-child(1) img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main table tr:nth-child(odd) {
+  background-color: #FFF2CC;
+  height: 50px;
+}
+
+.main table tr:nth-child(even) {
+  background-color: #EDDAB8;
+  height: 50px;
+}
+
+.main table tr:nth-child(1) {
+  height: 30px;
+}
+
+.main table tr:last-child {
+  height: 100px;
+  background-color: #FFF2CC;
+  text-align: right;
+  line-height: 30px;
+}
+
+.main table tr:last-child td:first-child {
+  border-right: 1px solid transparent;
+}
+
+.main table tr:last-child td:last-child {
+  padding-right: 4%;
+}
+
+.main table tr:last-child td {
+  border: 1px solid green;
+}
+
+.main .con {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+  text-align: left;
+}
+
+.main .con .con_title {
+  display: inline-block;
+  font-size: 18px;
+  vertical-align: middle;
+  padding: 5px 10px;
+  margin: 5px 20px;
+}
+
+.main .con .con_title img {
+  vertical-align: middle;
+}
+
+.main .con .con_block {
+  border: 1px solid #774F40;
+  font-size: 16px;
+  vertical-align: top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .con .con_block .con_block_left {
+  border-right: 1px solid #774F40;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #EAE4D2;
+  max-width: 387px;
+  width: 30%;
+  max-height: 100%;
+  height: 83vh;
+  padding: 20px;
+  margin-right: 40px;
+}
+
+.main .con .con_block .con_block_right {
+  display: inline-block;
+  width: 60%;
+  padding-top: 5px;
+  padding-left: 20px;
+  margin: 6px auto;
+}
+
+.main .con .con_block .con_block_right .con_text .order_person {
+  margin: 20px auto;
+}
+
+.main .con .con_block .con_block_right .con_text .order_person span {
+  font-weight: bold;
+}
+
+.main .con .con_block .con_block_right .con_text .order_ph {
+  margin: 20px auto;
+}
+
+.main .con .con_block .con_block_right .con_text .order_ph span {
+  font-weight: bold;
+}
+
+.main .con .con_block .con_block_right .con_text .get_person {
+  margin: 20px auto;
+}
+
+.main .con .con_block .con_block_right .con_text .get_person span {
+  font-weight: bold;
+}
+
+.main .con .con_block .con_block_right .con_text .get_ph {
+  margin: 20px auto;
+}
+
+.main .con .con_block .con_block_right .con_text .get_ph span {
+  font-weight: bold;
+}
+
+.main .con .con_block .con_block_right .con_text .pay {
+  margin: 20px auto;
+}
+
+.main .con .con_block .con_block_right .con_text .pay span {
+  font-weight: bold;
+}
+
+.main .con .con_block .con_block_right .con_text .transport {
+  margin: 20px auto;
+}
+
+.main .con .con_block .con_block_right .con_text .transport span {
+  font-weight: bold;
+}
+
+.main .bottom {
+  margin: 50px auto;
+}
+
+.main .bottom button {
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+  background-color: #FED67E;
+  color: #774F40;
+  border: 0px;
+  margin: 20px 50px;
+  cursor: pointer;
+  width: 200px;
+}
+/*# sourceMappingURL=vip_order_detail.css.map */
