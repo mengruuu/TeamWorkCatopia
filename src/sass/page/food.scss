@@ -1,6 +1,12 @@
 @import '../base/var';
 @import '../mixin/mixin';
 
+div.food_banner_container {
+    width: 100vw;
+    img {
+        width: 100%;
+    }
+}
 div.food_search_container {
     width: 100%;
     height: 75px;
@@ -76,7 +82,7 @@ div.food_filter_container_and_food_product_overview {
         border: 1px solid;
         overflow: hidden;
         padding: 0;
-        margin: 32px 0 32px 77px;
+        margin: 32px 0 32px 32px;
         color: $font_color;
         li {
             font-size: $font_24;
@@ -106,10 +112,11 @@ div.food_filter_container_and_food_product_overview {
     div.food_product_overview {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         width: calc(100% - 332px);
-        margin: 32px 77px 32px 32px;
+        margin: 32px 32px 32px 32px;
         div.food_product_overview_item {
-            width: 40%;
+            width: 250px;
             margin: 0 16px;
             img.food_product_overview_item_img {
                 width: 100%;
@@ -133,7 +140,7 @@ div.food_filter_container_and_food_product_overview {
     }
 }
 ul.food_product_page_chose_container {
-    margin-left: 386px;
+    margin-left: 373px;
     display: flex;
     font-size: $font_20;
     padding: 0;
@@ -148,10 +155,11 @@ ul.food_product_page_chose_container {
         border-radius: 20px;
         background-color: $main_color;
         border: 1px solid $font_color;
+        background-repeat: no-repeat;
     }
 }
 div.food_product_history {
-    width: calc(100% - 154px);
+    width: calc(100% - 64px);
     margin: 50px auto;
     display: flex;
     flex-direction: column;
