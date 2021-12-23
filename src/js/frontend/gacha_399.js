@@ -7,35 +7,44 @@
 //     (灰色盲盒表示已被其他用戶抽走)
 // `);
 
-//點箱子移除彩色圖片 增加灰色圖片
-let color_image = document.getElementsByClassName('color_image');
-// console.log(gacha_box_c);
-for(let i = 0; i < color_image.length; i++){
-    color_image[i].addEventListener("click", function(e){
+function doFirst(){
 
-        e.target.remove();
-
-        //跳出彈窗
-        
-        let gacha_box_c = document.getElementsByClassName('choose_box')[i];
-        let gray_image = "<img src='./images/gacha_399/gacha_399_box_gray.png' width= 180>";
-        gacha_box_c.insertAdjacentHTML("afterbegin", gray_image);
-
-
+    //點箱子移除彩色圖片 增加灰色圖片
+    let color_image = document.getElementsByClassName('color_image');
+    // console.log(gacha_box_c);
+    for(let i = 0; i < color_image.length; i++){
+        color_image[i].addEventListener("click", function(e){
+    
+            e.target.remove();
+    
+            //跳出彈窗
+            
+            let gacha_box_c = document.getElementsByClassName('choose_box')[i];
+            let gray_image = "<img src='./images/gacha_399/gacha_399_box_gray.png' width= 150>";
+            gacha_box_c.insertAdjacentHTML("afterbegin", gray_image);
+    
+    
+        })
+    }
+    
+    //查看抽選清單 彈窗
+    var popupBtn = document.getElementById('background_pop');
+    var popupClick = document.getElementById('popup_click');
+    var close = document.getElementById('close_btn');
+    popupClick.addEventListener('click', function(){
+        popupBtn.style.display = "block";
+        // console.log('test');
     })
-}
-
-//查看抽選清單 彈窗
-var popupBtn = document.getElementById('background_pop');
-var close = document.getElementById('close_btn');
-function show(){
-    popupBtn.style.display = "block";
-}
-close.onclick = function close() {
-    popupBtn.style.display = "none";
-}
-window.onclick = function close(e) {
-    if (e.target == popupBtn) {
+    close.onclick = function close() {
         popupBtn.style.display = "none";
     }
+    window.onclick = function close(e) {
+        if (e.target == popupBtn) {
+            popupBtn.style.display = "none";
+        }
+    }
+    
 }
+
+
+window.addEventListener('load',doFirst);

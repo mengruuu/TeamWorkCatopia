@@ -1,7 +1,7 @@
 @import '../base/var';
 @import '../mixin/mixin';
 
-.main{
+.gacha_299_main{
     // border: 1px solid blue;
     padding-bottom: 10px;
     .title{
@@ -106,26 +106,29 @@
         margin: 0 auto;
         background-color: $second_color3;
         width: 95vw;
-        height: 578px;
+        height: 470px;
         border-radius: 10px;
         margin-bottom: 10px;
         display: flex;
         justify-content: space-around;
         .dark_box{
+            // border: 1px solid yellow;
             background-color: $font_color;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 33px;
+            margin: 15px;
             margin-left: 5%;
             width: 70vw;
-            // height: 512px;
+            height: 440px;
             border-radius: 10px;
             .left{
                 // border: 1px solid yellow;
                 display: inline-block;
                 margin-left: 20px;
                 margin-right: 5px;
+                cursor: pointer;
+                color: $font_color;
                 .left_text{
                     font-size: $font_32;
                     background-color: $second_color5;
@@ -143,7 +146,7 @@
                     margin: 5px auto;
                     // border: 1px solid yellow;
                     .color_image{
-                        width: 180px;
+                        width: 150px;
                         cursor: pointer;
                     }
                 }
@@ -153,6 +156,8 @@
                 display: inline-block;
                 margin-right: 20px;
                 margin-left: 5px;
+                cursor: pointer;
+                color: $font_color;
                 .right_text{
                     font-size: $font_32;
                     background-color: $second_color5;
@@ -171,6 +176,7 @@
             // vertical-align: middle;
             .buy{
                 // border: 1px solid black;
+                border-radius: 20px;
                 display: inline-block;
                 background-color: $important_color;
                 box-shadow: $shadow;
@@ -181,11 +187,11 @@
                 font-size: $font_20;
                 text-align: center;
                 margin: 60px auto;
-                a:hover{
-                    background-color: $font_color;
-                    color: $main_color;
-                    transform:scale(1.2,1.2);
-                }
+                // a:hover{
+                //     // background-color: $font_color;
+                //     // color: $main_color;
+                //     transform:scale(1.2,1.2);
+                // }
                 .buy_text{
                     // border: 1px solid maroon;
                     // margin: 60px auto;
@@ -193,8 +199,18 @@
                     color: $font_color;
                 }
             }
+            .buy:hover{
+                    // border: 1px solid maroon;
+                    background-color: $main_color;
+                    // color: $main_color;
+                    transform:scale(1.2,1.2);
+                    // .buy_text{
+                    //     // color: $important_color;
+                    // }
+                }
             .store{
                 // border: 1px solid black;
+                border-radius: 20px;
                 display: inline-block;
                 background-color: $important_color;
                 box-shadow: $shadow;
@@ -204,7 +220,7 @@
                 font-size: $font_20;
                 color: $font_color;
                 text-align: center;
-                margin: 50px auto;
+                margin: 10px auto;
                 a
                 .store_text{
                     display: block;
