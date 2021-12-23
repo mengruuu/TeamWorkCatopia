@@ -9,4 +9,86 @@
     color: $font_color;
     border: 0px;
 }
+//網頁標題
+@mixin title(){
+    margin-top: 50px;
+    margin-bottom: 25px;
+    p{
+        font-size: $font_32;
+        width: fit-content;
+        border-radius: 15px;
+        margin: 0;
+        margin-left: 3%;
+        z-index: 1;
+        color: $font_color;
+        span{
+            position: relative;
+            bottom:23px;
+            z-index: -1;
+            background-color: $second_color3;
+            display: block;
+            height: 25px;
+            width: 105%;
+            border-radius: 10px;
+        }
+    }
+}
+@mixin content_width(){
+    width: 80%;
+    @media all and (min-width:1201px){
+        width: 1200px;
+    }
+}
 
+//RWD
+@mixin w1200up() {
+    @media all and (min-width:1201) {
+        @content;
+    }
+}
+
+@mixin w1200() {
+    @media all and (max-width:1200px) {
+        @content;
+    }
+}
+@mixin w1100() {
+    @media all and (max-width:1100px) {
+        @content;
+    }
+}
+@mixin w1000() {
+    @media all and (max-width:1000px) {
+        @content;
+    }
+}
+@mixin w900() {
+    @media all and (max-width:900px) {
+        @content;
+    }
+}
+@mixin w800() {
+    @media all and (max-width:800px) {
+        @content;
+    }
+}
+@mixin w700() {
+    @media all and (max-width:700px) {
+        @content;
+    }
+}
+@mixin w600() {
+    @media all and (max-width:600px) {
+        @content;
+    }
+}
+@mixin w500() {
+    @media all and (max-width:500px) {
+        @content;
+    }
+}
+@mixin w400() {
+    @media all and (max-width:400px) {
+        @content;
+    }
+}
