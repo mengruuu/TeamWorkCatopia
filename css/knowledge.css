@@ -1,0 +1,45 @@
+main {
+  font-size: 20px;
+  color: #774F40;
+}
+
+.knowledge_banner_block {
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.knowledge_first_block_title {
+  border: 1px solid red;
+}
+
+.knowledge_first_block_title .knowledge_first_block_title_block {
+  background-color: #FFF2CC;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 15px;
+  margin-left: 140px;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  margin-top: 100px;
+  margin-bottom: 80px;
+}
+
+.knowledge_first_block_title p {
+  font-size: 30px;
+  -webkit-transform: translateX(-20px) translateY(-10px);
+          transform: translateX(-20px) translateY(-10px);
+}
+
+.knowledge_first_block .knowledge_first_block_background {
+  background-size: cover;
+  border: 1ps solid red;
+  height: 1000px;
+  position: relative;
+}
+
+.knowledge_first_block .knowledge_first_block_background img {
+  border: 1px solid red;
+}
+/*# sourceMappingURL=knowledge.css.map */

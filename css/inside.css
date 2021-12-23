@@ -2,11 +2,14 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: #774F40;
 }
 
 body {
   position: relative;
+}
+
+main {
+  color: #774F40;
 }
 
 .inside_first_block_commodity {

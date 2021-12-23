@@ -1,12 +1,16 @@
 @import '../base/var';
 @import '../mixin/mixin';
-
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: $font_color;
+}
 video{
     width: 100%;
     height: 80%;
 }
 main{
-    color: $font_color;
     margin: 0 auto;
 }
 .first_block{
