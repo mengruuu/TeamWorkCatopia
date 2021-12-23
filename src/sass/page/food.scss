@@ -111,13 +111,13 @@ div.food_filter_container_and_food_product_overview {
     }
     div.food_product_overview {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        flex-wrap: wrap-reverse;
+        justify-content: flex-end;
         width: calc(100% - 332px);
         margin: 32px 32px 32px 32px;
         div.food_product_overview_item {
             width: 250px;
-            margin: 0 16px;
+            margin: 0 0 0 16px;
             img.food_product_overview_item_img {
                 width: 100%;
                 height: 278px;
