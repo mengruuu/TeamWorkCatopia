@@ -1,0 +1,132 @@
+@import '../base/var';
+@import '../mixin/mixin';
+@import '../layout/back_header';
+
+.back_management_container {
+    // border: 1px solid gray;
+    display: flex;
+
+    aside{
+        width: 20%;
+        background-color: $main_color;
+    }
+}
+
+.back_management_list ul {
+    margin: 0;
+    list-style: none;
+    // border: 1px solid green;
+}
+
+.back_management_list div {
+    margin: 15px 0;
+}
+
+.back_management_list p {
+    // border: 1px solid black;
+    margin: 0;
+    padding: 5px;
+}
+
+.back_management_list a{
+    text-decoration: none;
+    color: $font_color;
+}
+
+.back_management_list a:visited {
+    color: $font_color;
+}
+
+.back_management_list li {
+    // border: 1px solid #aaa;
+    padding: 5px;
+    // display: block;
+}
+
+.back_management_list {
+    border: 1px solid $main_color;
+    padding: 0 10px;
+    position: sticky;
+    top: 0;
+}
+
+main {
+    // border: 1px solid red;
+    width: calc( 100% - 20% );
+}
+
+.back_product_management .b3_title {
+    background-color: $second_color1;
+}
+
+.back_product_management div p {
+    margin: 0;
+    padding: 15px;
+    font-size: $font_20;
+    font-weight: bold;
+}
+
+.back_product_management .b3_title ul{
+    list-style: none;
+    // border: 1px solid green;
+    padding: 0;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    li {
+        margin: 10px 15px;
+        font-size: 0;
+        
+        button {
+            background-color: $important_color;
+            @include button();
+            font-size: $font_20;
+            cursor: pointer;
+        }
+
+        input {
+            max-width: 180px;
+            border-radius: 20px;
+            border: none;
+            padding: 5px 10px;
+            color: $font_color;
+            font-size: 16px;
+            // border: 1px solid red;
+        }
+    }
+}
+
+.back_product_management .b3_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td {
+    border: 1px solid $font_color;
+    padding: 10px;
+}
+
+.backend_table {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.table_title {
+    font-weight: bold;
+}
+
+.backend_table img {
+    width: 50px;
+    margin: 0;
+}
+
+img.vip_icon {
+    transform: translateY(5px);
+}
