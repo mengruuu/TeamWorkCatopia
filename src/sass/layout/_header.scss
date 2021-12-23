@@ -14,8 +14,8 @@ body{
   font-size: 0;
   margin: 0;
   box-sizing: border-box;
-  overflow:hidden;
-  overflow-y: scroll;
+  overflow-x:hidden !important;
+  // overflow-y: scroll !important;
 }
 img{
   max-width: 100%;
@@ -280,5 +280,6 @@ div.header_scrolled{
 }
 div.hamburger_icon-on{
   opacity: 0 !important;
+  display: none;
 }
 
