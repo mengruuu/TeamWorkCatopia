@@ -92,9 +92,10 @@ div.food_filter_container_and_food_product_overview {
                 width: 80%;
             }
             ul {
-                padding: 0;
+                padding-left: 80px;
                 text-align: center;
                 li {
+                    text-align: left;
                     margin: 8px 0;
                     font-size: $font_20;
                 }
