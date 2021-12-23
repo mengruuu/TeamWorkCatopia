@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./layout/meta.html', {
+    "title" : "Catopia B3-1-1上架商品"
+    })
+    <link rel="stylesheet" href="../css/backend/b3_product_push.css">
+</head>
+
+<body>
+    @@include('./layout/backend_header.html')
+
+    <div class="product_push_page_title
+                product_push_block">
+        <div class="product_push_title">
+            <p>B3-1-1上架商品</p>
+        </div>
+    </div>
+
+    <div class="product_push_container">
+        <div class="product_push_block">
+            <p class="product_push_block_title">商品編號:</p>
+            <p class="product_push_block_text">PD0001</p>
+        </div>
+
+        <div class="product_push_block">
+            <p class="product_push_block_title">商品名稱:</p>
+            <p class="product_push_block_text">
+                <input type="text" placeholder="商品名稱">
+            </p>
+        </div>
+
+        <div class="product_push_block">
+            <p class="product_push_block_title">商品種類:</p>
+            <p class="product_push_block_text">
+                <select name="" id="">
+                    <option value="1">食品</option>
+                    <option value="2">生活用品</option>
+                    <option value="3">玩具</option>
+                    <option value="4">裝飾品</option>
+                </select>
+            </p>
+        </div>
+
+        <div class="product_push_block">
+            <p class="product_push_block_title">商品單價:</p>
+            <p class="product_push_block_text">
+                <input type="text" placeholder="0">
+            </p>
+        </div>
+
+        <div class="product_push_block">
+            <p class="product_push_block_title">商品圖片:</p>
+            <div class="product_push_block_text">
+                <button>上傳圖片</button>
+                <!-- <ul>
+                    <li><img src="" alt=""></li>
+                </ul> -->
+            </div>
+        </div>
+
+        <div class="product_push_block 
+                    text_area">
+            <p class="product_push_block_title">商品介紹:</p>
+            <div class="product_push_block_text  
+                        vip_edit_block_remark">
+                <textarea cols="60" rows="10"></textarea>
+            </div>
+        </div>
+
+        <div class="back_edit_button">
+            <a href="./b3_product.html"><button type="submit">取消</button></a>
+            <a href="./b3_product.html"><button type="submit">上架</button></a>
+        </div>
+    </div>
+</body>
+
+</html>
