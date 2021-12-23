@@ -164,13 +164,13 @@ div.message_input_container {
 div.message_and_comment_container {
     display: flex;
     flex-direction: column;
-    width: 70vw;
+    width: 850px;
     margin: 50px auto;
     div.message_container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        width: 850px;
         background-repeat: no-repeat;
         border-radius: 15px;
         div.message_setting_container {
@@ -186,7 +186,7 @@ div.message_and_comment_container {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            width: calc(62% + 80px);
+            width: 635px;
             margin-bottom: 16px;
             div.message_img_and_user_and_time {
                 display: flex;
@@ -228,7 +228,7 @@ div.message_and_comment_container {
         div.message_content_and_comment {
             display: flex;
             flex-direction: column;
-            width: 62%;
+            width: 635px;
             border-radius: 15px;
             background-color: $second_color2;
             padding: 20px 40px;
@@ -240,9 +240,10 @@ div.message_and_comment_container {
                 }
             }
             img.message_content_img {
-                width: 100%;
+                width: 635px;
                 height: 498px;
                 margin-bottom: 30px;
+                // object-fit: cover;
             }
             input {
                 padding: 20px;
