@@ -71,17 +71,28 @@ main {
     // border: 1px solid green;
     padding: 0;
     margin: 15px;
+    text-align: right;
     li {
-        margin: 0 15px;
+        margin: 10px 15px;
         font-size: 0;
         select{
-            // font-size: ;
+            font-size: 16px;
+            border-radius: 20px;
+            border: none;
+            padding: 5px;
+            width: 192px;
+            color: $font_color;
+            margin-left: 10px;
+            // border: 1px solid blue;
+        }
+        input {
             max-width: 180px;
             border-radius: 20px;
             border: none;
             padding: 5px;
-            width: 200px;
             color: $font_color;
+            font-size: 16px;
+            // border: 1px solid red;
         }
     }
 }
