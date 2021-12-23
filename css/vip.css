@@ -1,4 +1,4 @@
-.main {
+.vip_main {
   overflow-x: hidden;
   height: auto;
   background-image: url("../images/vip/vip_starrysky.png");
@@ -7,7 +7,7 @@
   color: #774F40;
 }
 
-.main .title {
+.vip_main .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,7 +21,7 @@
   padding-top: 20px;
 }
 
-.main .title .titletext {
+.vip_main .title .titletext {
   height: auto;
   font-size: 30px;
   margin: 30px auto;
@@ -33,7 +33,7 @@
           box-shadow: 1px 1px 1px lightgray;
 }
 
-.main .galaxy {
+.vip_main .galaxy {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,16 +47,16 @@
   text-align: center;
 }
 
-.main .galaxy .leftgalaxy {
+.vip_main .galaxy .leftgalaxy {
   position: relative;
   padding: 25px 10px;
 }
 
-.main .galaxy .leftgalaxy .leftgalaxy img {
+.vip_main .galaxy .leftgalaxy .leftgalaxy img {
   padding: 21px 0;
 }
 
-.main .galaxy .leftgalaxy .leftgalaxy_text {
+.vip_main .galaxy .leftgalaxy .leftgalaxy_text {
   -webkit-box-shadow: 1px 1px 1px lightgray;
           box-shadow: 1px 1px 1px lightgray;
   position: absolute;
@@ -73,25 +73,25 @@
   opacity: .8;
 }
 
-.main .galaxy .leftgalaxy:hover {
+.vip_main .galaxy .leftgalaxy:hover {
   -webkit-transform: scale(1.2, 1.2);
           transform: scale(1.2, 1.2);
 }
 
-.main .galaxy .middlelogo {
+.vip_main .galaxy .middlelogo {
   margin: 80px 50px;
   padding: 30px 0;
 }
 
-.main .galaxy .rightgalaxy {
+.vip_main .galaxy .rightgalaxy {
   position: relative;
 }
 
-.main .galaxy .rightgalaxy .rightgalaxy img {
+.vip_main .galaxy .rightgalaxy .rightgalaxy img {
   padding: 21px 0;
 }
 
-.main .galaxy .rightgalaxy .rightgalaxy_text {
+.vip_main .galaxy .rightgalaxy .rightgalaxy_text {
   -webkit-box-shadow: 1px 1px 1px lightgray;
           box-shadow: 1px 1px 1px lightgray;
   position: absolute;
@@ -108,7 +108,7 @@
   opacity: .8;
 }
 
-.main .galaxy .rightgalaxy:hover {
+.vip_main .galaxy .rightgalaxy:hover {
   -webkit-transform: scale(1.2, 1.2);
           transform: scale(1.2, 1.2);
 }

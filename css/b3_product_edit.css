@@ -32,15 +32,15 @@ header {
   margin: 5px;
 }
 
-.vip_edit_page_title {
+.product_edit_page_title {
   background-color: #EAE4D2;
 }
 
-.vip_edit_container {
+.product_edit_container {
   background-color: #FFF2CC;
 }
 
-.vip_edit_block {
+.product_edit_block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,60 +49,24 @@ header {
           align-items: center;
 }
 
-.vip_edit_block.text_area {
+.product_edit_block.text_area {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
 }
 
-.vip_edit_title {
+.product_edit_title {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.edit_top_button {
-  margin: 20px;
-}
-
-.vip_edit_title {
+.product_edit_title {
   font-size: 18px;
   font-weight: bold;
-}
-
-.vip_edit_title,
-.edit_top_button {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.vip_edit_title {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  text-align: right;
-}
-
-.edit_top_button {
-  text-align: right;
-}
-
-.edit_top_button button {
-  -webkit-box-shadow: 1px 1px 1px lightgray;
-          box-shadow: 1px 1px 1px lightgray;
-  padding: 5px 10px;
-  border-radius: 10px;
   text-align: center;
-  font-size: 22px;
-  background-color: #FED67E;
-  color: #774F40;
-  border: 0px;
-  font-size: 16px;
-  background-color: #D86430;
-  padding: 5px 20px;
 }
 
-.vip_edit_container {
+.product_edit_container {
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 50px;
@@ -110,31 +74,54 @@ header {
   border-radius: 30px;
 }
 
-.vip_edit_container .vip_edit_block_title, .vip_edit_container .vip_edit_block_text {
+.product_edit_container .product_edit_block_title, .product_edit_container .product_edit_block_text {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   padding: 10px;
 }
 
-.vip_edit_container .vip_edit_block_title.vip_edit_block_remark, .vip_edit_container .vip_edit_block_text.vip_edit_block_remark {
+.product_edit_container .product_edit_block_title.vip_edit_block_remark, .product_edit_container .product_edit_block_text.vip_edit_block_remark {
   padding: 20px 10px;
 }
 
-.vip_edit_container .vip_edit_block_title.vip_edit_block_remark textarea, .vip_edit_container .vip_edit_block_text.vip_edit_block_remark textarea {
+.product_edit_container .product_edit_block_title.vip_edit_block_remark textarea, .product_edit_container .product_edit_block_text.vip_edit_block_remark textarea {
   background-color: #EAE4D2;
   border: 1px solid #FFF2CC;
   color: #774F40;
   font-size: 16px;
 }
 
-.vip_edit_container .vip_edit_block_text {
+.product_edit_container .product_edit_block_title input, .product_edit_container .product_edit_block_text input {
+  border: 1px solid #774F40;
+  font-size: 16px;
+  padding: 5px 10px;
+  color: #774F40;
+}
+
+.product_edit_container .product_edit_block_title select, .product_edit_container .product_edit_block_text select {
+  border: 1px solid #774F40;
+  font-size: 16px;
+  padding: 5px 10px;
+  color: #774F40;
+}
+
+.product_edit_container .product_edit_block_title button, .product_edit_container .product_edit_block_text button {
+  border: none;
+  background-color: #EAE4D2;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: #774F40;
+  cursor: pointer;
+}
+
+.product_edit_container .product_edit_block_text {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
 }
 
-.vip_edit_container .vip_edit_block_title {
+.product_edit_container .product_edit_block_title {
   text-align: right;
 }
 
@@ -158,4 +145,4 @@ header {
   font-size: 18px;
   cursor: pointer;
 }
-/*# sourceMappingURL=b1_vip_edit.css.map */
+/*# sourceMappingURL=b3_product_edit.css.map */

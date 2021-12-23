@@ -32,13 +32,13 @@ header {
   margin: 5px;
 }
 
-.back_vip_container {
+.back_management_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.back_vip_container aside {
+.back_management_container aside {
   width: 20%;
   background-color: #FFF2CC;
 }
@@ -82,37 +82,49 @@ main {
   width: calc( 100% - 20%);
 }
 
-.back_vip_management .b1_title {
+.back_black_list_management .b1_title {
   background-color: #EAE4D2;
 }
 
-.back_vip_management div p {
+.back_black_list_management div p {
   margin: 0;
   padding: 15px;
   font-size: 18px;
   font-weight: bold;
 }
 
-.back_vip_management .b1_title ul {
+.back_black_list_management .b1_title ul {
   list-style: none;
   padding: 0;
   margin: 15px;
+  text-align: right;
 }
 
-.back_vip_management .b1_title ul li {
-  margin: 0 15px;
+.back_black_list_management .b1_title ul li {
+  margin: 10px 15px;
   font-size: 0;
 }
 
-.back_vip_management .b1_title ul li input {
-  font-size: 18px;
+.back_black_list_management .b1_title ul li select {
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  padding: 5px;
+  width: 192px;
+  color: #774F40;
+  margin-left: 10px;
+}
+
+.back_black_list_management .b1_title ul li input {
   max-width: 180px;
   border-radius: 20px;
   border: none;
   padding: 5px;
+  color: #774F40;
+  font-size: 16px;
 }
 
-.back_vip_management .b1_title {
+.back_black_list_management .b1_title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,4 +169,4 @@ img.vip_icon {
   -webkit-transform: translateY(5px);
           transform: translateY(5px);
 }
-/*# sourceMappingURL=b1_vip.css.map */
+/*# sourceMappingURL=b1_black_list.css.map */
