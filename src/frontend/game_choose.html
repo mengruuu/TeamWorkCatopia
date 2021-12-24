@@ -8,8 +8,11 @@
 </head>
 <body>
     @@include('./layout/header.html')
-
-    <div class="content">
+    @@include('./layout/title.html',{
+        "title" : "遊戲選擇"
+    })
+    
+    <div class="game_choose_backgroung_content">
         <div class="black_cat_right">
             <img src="./images/game_choose/black_cat_right.png" alt="">
         </div>

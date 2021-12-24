@@ -293,6 +293,7 @@ div.back{
     }
 }
 .fifth_block_background{
+    box-sizing: border-box;
     background-color: $main_color;
     border: 15px solid $font_color;
     // border: 1px solid green;
@@ -300,10 +301,15 @@ div.back{
     padding-bottom: 20px;
     margin: 0 auto;
     .fifth_block_text_first{
+        text-align: center;
         // border: 1px solid red;
         margin-top: 20px;
+        position: relative;
         div.fifth_block_item{
+            margin-left: 30px;
             border-radius: 20px;
+            margin-right: 80%;
+
             width: 40%;
             display: inline-block;
             background-image: url('../images/index_page/images/index_fifth_block_backimg.png');
@@ -318,7 +324,9 @@ div.back{
 
         >img{
             // border: 1px solid red;
-            margin-left: 150px;
+            position: absolute;
+            top: 0;
+            right: 0;
             // width: 20%;
             height: 250px;
             vertical-align: top;
@@ -345,6 +353,7 @@ div.back{
         // border: 1px solid red;
         margin-top: 20px;
         text-align: right;
+        position: relative;
         div.fifth_block_item{
             border-radius: 20px;
             margin-right: 120px;
@@ -353,6 +362,7 @@ div.back{
             background-image: url('../images/index_page/images/index_fifth_block_backimg.png');
             background-size: cover;
             img{
+                // border: 1px solid red;
                 position: relative;
                 left: 30px;
                 top:30px;
@@ -366,7 +376,7 @@ div.back{
             height: 250px;
             position: absolute;
             left: 0;
-            transform: translateX(50%);
+            // transform: translateX(50%);
         }
         a.gogo{
             display: inline-block;
@@ -392,11 +402,15 @@ div.back{
         margin-top: 20px;
         text-align: center;
         div.fifth_block_item{
+            // border: 1px solid blue;
             border-radius: 20px;
             width: 40%;
             display: inline-block;
+            margin-right: 80%;
+            margin-left: 30px;
             background-image: url('../images/index_page/images/index_fifth_block_backimg.png');
             background-size: cover;
+            
             img{
                 position: relative;
                 left: 30px;
@@ -405,19 +419,12 @@ div.back{
             }
         }
 
-        >div.fifth_block_text_first_gacha_blank{
-            // border: 1px solid red;
-            margin-left: 150px;
-            width: 20%;
-            height: 250px;
-            vertical-align: top;
-            display: inline-block;
-        }
+        
         a.gogo{
             display: inline-block;
             // border: 1px solid red;
             text-align: center;
-            margin-left: 40px;
+            // margin-left: 40px;
             z-index: 5;
             
             p{  

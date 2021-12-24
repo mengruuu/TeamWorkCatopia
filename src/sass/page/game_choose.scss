@@ -1,7 +1,7 @@
 @import '../base/var';
 @import '../mixin/mixin';
 
-div.content{
+div.game_choose_backgroung_content{
     border-bottom: 1px solid white;
     position: relative;
     
@@ -34,7 +34,6 @@ div.game_choose_content{
     // border:1px solid green;
     width: 70%;
     margin: 0 auto;
-    margin-top: 80px;
     background-color: $main_color;
     border-radius: 15px;
     display: flex;
