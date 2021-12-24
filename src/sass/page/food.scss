@@ -82,7 +82,7 @@ div.food_filter_container_and_food_product_overview {
         top: 172px;
         flex-direction: column;
         width: 300px;
-        height: 360px;
+        height: 180px;
         border-radius: 15px;
         border: 1px solid;
         overflow: hidden;
@@ -91,6 +91,8 @@ div.food_filter_container_and_food_product_overview {
         margin: 0 0 32px 32px;
         color: $font_color;
         background-color: #fff;
+        opacity: 1;
+        transition: all 1s ease-in-out;
         li {
             font-size: $font_20;
             list-style: none;
@@ -104,9 +106,14 @@ div.food_filter_container_and_food_product_overview {
             ul {
                 padding: 0;
                 text-align: center;
-                li {
+                li.food_filter_condition_item {
                     margin: 8px 0;
                     font-size: 16px;
+                    cursor: pointer;
+                }
+                li.food_filter_condition_item_clicked {
+                    font-size: $font_22;
+                    font-weight: bold;
                 }
             }
         }
@@ -118,6 +125,14 @@ div.food_filter_container_and_food_product_overview {
                 margin: 0;
             }
         }
+    }
+    ul.food_filter_container_hide {
+        width: 0;
+        height: 0;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
     }
     div.food_product_overview {
         display: flex;
@@ -162,8 +177,8 @@ ul.food_product_page_chose_container {
         justify-content: center;
         align-items: center;
         list-style: none;
-        width: 61px;
-        height: 61px;
+        width: 51px;
+        height: 51px;
         margin-left: 16px;
         border-radius: 20px;
         background-color: $main_color;
