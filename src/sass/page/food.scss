@@ -33,7 +33,8 @@ div.food_search_container {
         }
         div.food_search_and_search_button {
             position: relative;
-            input {
+            width: 178px;
+            input.input_search_product {
                 border-radius: 15px;
                 outline: none;
                 border: none;
@@ -42,17 +43,49 @@ div.food_search_container {
             input::placeholder {
                 color: $font_color;
             }
+            input.input_search_product_open {
+                border-radius: 15px 15px 0 0;
+            }
             ul.food_search_content {
                 position: absolute;
-                width: calc(100% - 16px);
                 margin: 0;
+                width: 100%;
                 font-size: $font_20;
-                border: 1px solid;
                 border-radius: 0 0 15px 15px;
-                padding: 16px 8px;
+                padding: 0;
+                background-color: #fff;
                 display: none;
+                overflow: hidden;
                 li {
                     list-style: none;
+                    width: calc(100% - 16px);
+                    padding: 8px;
+                    background-color: #fff;
+                    a {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        text-decoration: none;
+                        p {
+                            font-size: 16px;
+                            color: $font_color;
+                        }
+                        span {
+                            font-size: $font_20;
+                            font-weight: bold;
+                        }
+                        img {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 10px;
+                            overflow: hidden;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                li:hover {
+                    cursor: pointer;
+                    background-color: $important_color;
                 }
             }
             ul.food_search_content_open {
@@ -63,12 +96,15 @@ div.food_search_container {
                 cursor: pointer;
                 right: 0;
                 top: 0;
-                width: 20%;
+                width: 36px;
                 height: 100%;
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
                 border-radius: 0 15px 15px 0;
+            }
+            div.food_search_button_open {
+                border-radius: 0 15px 0 0;
             }
         }
     }
