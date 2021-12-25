@@ -1,1 +1,0 @@
-var popupBtn=document.getElementById("background_pop"),close=document.getElementById("close_btn");function show(){popupBtn.style.display="block"}close.onclick=function(){popupBtn.style.display="none"},window.onclick=function(n){n.target==popupBtn&&(popupBtn.style.display="none")};
