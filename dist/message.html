@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/title_icon.ico" type="image/x-icon">
+    <title>留言版</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="./css/message.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <div class = "message_write_background"></div>
+    <!-- <div class="header_hamburger"> -->
+
+
+    <header>
+        <div class="header">
+            <div class="header_logo">
+                    <div class="header_logo_text">
+                        <a href="./index.html">
+
+                            <img src="./images/header/header_logo_text.png" alt="">
+                        </a>
+                    </div>
+                <div class="header_logo_cat">
+                    <img src="./images/header/header_logo_cat.png" alt="">
+                </div>
+            </div>
+
+            <div class="header_icon">
+                    <div class="header_icon_member">
+                        <a href="./vip.html">
+
+                            <img src="./images/header/header_icon_member.png" alt="">
+                            <!-- <a href="./vip.html"><img src="./images/header/header_icon_member.png" alt=""></a> -->
+                        </a>
+                    </div>
+                    <div class="header_icon_shopping_cart">
+                        <img src="./images/header/header_icon_shopping_chart.png" alt="">
+                    </div>
+                
+            </div>
+            <div class="header_main_nav">
+                <nav class="header_main_nav">
+                    <ul class="header_main_ul">
+                        <li class="header_product_li">
+                                <div class="header_nav_icon header_product">
+                                    <img src="./images/header/header_icon_product.png" alt="">
+                                </div>
+                                <div class="header_nav_text header_product">
+                                    <p>主子用品</p>
+                                </div>
+                                <div class="header_second_hover"></div>
+                                    <ul class="header_second_ul header_use">
+                                        <li class="header_second_li header_li_food">
+                                            <a href="./food.html">食品</a>
+                                        </li>
+                                        <li class="header_second_li">
+                                            <a href="./use.html">用品專區</a>
+                                        </li>
+                                        <li class="header_second_li">
+                                            <a href="./toy.html">玩具</a>
+                                        </li>
+                                        <li class="header_second_li">
+                                            <a href="./cloth.html">裝飾品</a>
+                                        </li>
+                                    </ul>
+                                
+                        </li>
+                        <li class="header_gacha_li">
+                            <a>
+                                <a href="./gacha.html">
+                                    <div class="header_nav_icon">
+                                        <img src="./images/header/header_icon_gacha.png" alt="">
+                                    </div>
+                                </a>
+                                <a class="header_nav" href="./gacha.html">
+                                    <div class="header_nav_text">
+                                        <p>盒玩盲抽</p>
+                                    </div>
+                                </a>
+                            </a>
+                            
+                        </li>
+                        <li class="header_game_li">
+                                <div class="header_nav_icon header_game">
+                                    <img src="./images/header/header_icon_game.png" alt="">
+                                </div>
+                                <div class="header_nav_text header_game">
+                                    <p>虛擬世界</p>
+                                </div>
+                                <div class="header_second_hover"></div>
+                                    <ul class="header_second_ul header_game">
+                                        <li class="header_second_li header_game">
+                                            <a href="./game_store.html">虛擬商城</a>
+                                        </li>
+                                        <li class="header_second_li header_game">
+                                            <a href="./game_choose.html">虛擬遊戲</a>
+                                        </li>
+                                    </ul>     
+                        </li>
+                        <li class="header_message_li">
+                            <a href="./message.html">
+                                <div class="header_nav_icon">
+                                    <img src="./images/header/header_icon_message.png" alt="">
+                                </div>
+                            </a>
+                            <a class="header_nav" href="./message.html">
+                                <div class="header_nav_text">
+                                    <p>奴才留言板</p>
+                                </div>
+                            </a>
+                                
+                        </li>
+                        <li class="header_knowledge_li">
+                            <a href="./knowledge.html">
+                                <div class="header_nav_icon">
+                                    <img src="./images/header/header_icon_knowledge.png" alt="">
+                                </div>
+                            </a>
+                            <a class="header_nav" href="./knowledge.html">
+                                <div class="header_nav_text">
+                                    <p>豆知識專欄</p>
+                                </div>
+                            </a>
+                                
+                        </li>
+                        <li class="header_question_li">
+                            <a href="./question.html">
+                                <div class="header_nav_icon">
+                                    <img src="./images/header/header_icon_question.png" alt="">
+                                </div>
+                            </a>      
+                            <a class="header_nav" href="./question.html">
+                                <div class="header_nav_text">
+                                    <p>常見問題</p>
+                                </div>
+                            </a>      
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+        <div class="hamburger_icon-on hamburger_icon">
+            <img class="hamburger_icon_img" src="./images/hamburger/hamburger_icon.png" alt="">
+        </div>
+        <!-- <div class="page_title">@@title</div> -->
+    </header>
+    <div class="hamburger_-off">
+        <!-- <div class="hamburger_close">
+            <img src="./images/hamburger/hamburger_close.png" alt="">
+        </div>
+     -->
+        <div class="hamburger_product hamburger">
+            主子用品
+        </div>
+        <ul>
+            <li><a href="./food.html">食品</a></li>
+            <li><a href="./use.html">用品專區</a></li>
+            <li><a href="./toy.html">玩具</a></li>
+            <li><a href="./cloth.html">裝飾品</a></li>
+        </ul>
+    
+    <div class="paw_product">
+        <img class="paw_left" src="./images/hamburger/paw1.png" alt="">
+        <img class="scratch" src="./images/hamburger/scratch1.png" alt="">
+    </div>
+    
+
+    <a href="./gacha.html">
+    <div class="hamburger_gacha">
+        盒玩盲抽
+    </div>
+    </a> 
+    <div class="paw">
+        <img class="scratch" src="./images/hamburger/scratch2.png" alt="">
+        <img class="paw_right" src="./images/hamburger/paw2.png" alt="">
+    </div>
+
+    <div class="hamburger_game hamburger">
+        虛擬世界
+    </div>
+    <ul>
+        <li><a href="./game_store.html">虛擬商城</a></li>
+        <li><a href="./game_choose.html">虛擬遊戲</a></li>
+    </ul>
+    <div class="paw_game">
+        <img class="paw_left" src="./images/hamburger/paw3.png" alt="">
+        <img class="scratch" src="./images/hamburger/scratch1.png" alt="">
+    </div>
+
+    <a href="./message.html">
+    <div class="hamburger_message">
+        奴才留言板
+    </div>
+    </a>
+    <div class="paw">
+        <img class="scratch" src="./images/hamburger/scratch2.png" alt="">
+        <img class="paw_right" src="./images/hamburger/paw4.png" alt="">
+
+    </div>
+
+
+    <a href="./knowledge.html">
+    <div class="hamburger_knowledge">
+        豆知識專欄
+    </div>
+    </a>
+    <div class="paw">
+        <img class="paw_left" src="./images/hamburger/paw5.png" alt="">
+        <img class="scratch" src="./images/hamburger/scratch1.png" alt="">
+    </div>
+
+
+    <a href="./question.html">
+    <div class="hamburger_question">
+        常見問題
+    </div>
+    </a>
+
+    <div class="paw">
+        <img class="scratch" src="./images/hamburger/scratch2.png" alt="">
+        <img class="paw_right" src="./images/hamburger/paw6.png" alt="">
+    </div>
+    <!-- <div class="hamburger_buy">
+        <img src="./images/hamburger/buy.png" alt="">
+    </div> -->
+</div>
+
+<script>
+    var hamburger = document.getElementsByClassName('hamburger_-off')[0];
+    var hamburger_close = document.getElementsByClassName('hamburger_close')[0];
+    // hamburger_close.addEventListener('click',function(){
+    //     hamburger.classList.remove('hamburger_-on');
+    // });
+</script>
+    
+
+<!-- </div> -->
+<script>
+    let header = document.getElementsByClassName('header')[0];
+    // console.log(header);
+
+    //控制漢堡
+    let hamburger_icon = document.getElementsByClassName('hamburger_icon')[0];
+    let hamburger_icon_img = document.getElementsByClassName('hamburger_icon_img')[0];
+
+    hamburger_icon.addEventListener('click',function(){
+        hamburger.classList.toggle('hamburger_-on');
+
+        if(hamburger.classList.contains('hamburger_-on')){
+            hamburger_icon_img.src = './images/hamburger/hamburger_close.png';
+            hamburger_icon_img.style.width = '40px';
+
+        }else{
+            hamburger_icon_img.src = './images/hamburger/hamburger_icon.png';
+            hamburger_icon_img.style.width = '50px';
+        }
+    })
+
+
+    
+    // 控制header的scroll
+    
+    window.addEventListener('load',function(){
+        header.classList.remove('header_scrolled');
+        window.addEventListener('scroll',function(){
+            header.classList.add('header_scrolled');
+            hamburger_icon.classList.remove('hamburger_icon-on');
+        });
+    })
+</script>
+
+    <div class = "message_write_message_container">
+        <div class = "message_write_message_title">
+            <p>建立貼文</p>
+            <div class = "message_write_message_close">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <textarea class = "message_write_message_content" placeholder = "請輸入訊息..."></textarea>
+        <div class = "message_write_img_container">
+            <img class = "message_write_img_content">
+        </div>
+        <div class = "message_write_message_img_file_and_button">
+            <label class = "message_write_message_img_file_container" for = "file_upload">
+                <img src = "./images/message/Group 304.png">
+            </label>
+            <button>確定送出</button>
+        </div>
+    </div>
+    <div class = "message_input_container">
+        <div>
+            <img src = "./images/message/cat02 2.svg">
+            <div class = "input_and_laber_for_files">
+                <input placeholder = "發一則貼文..." class = "click_to_message_input_container">
+                <label class = "message_img_file_container" for = "">
+                    <img src = "./images/message/Group 303.png">
+                </label>
+            </div>
+            <input type = "file" id = "file_upload">
+        </div>
+    </div>
+    <div class = "message_and_comment_container">
+        <div class = "message_container" style = "background-image: url(./images/message/Group\ 300.png);">
+            <div class = "message_setting_container">
+                <img src = "./images/message/gear 1.svg">
+            </div>
+            <div class = "message_user_and_time_and_like">
+                <div class = "message_img_and_user_and_time">
+                    <img class = "message_user_img" src = "./images/message/惡魔貓男 2.png">
+                    <div class = "message_user_and_time">
+                        <p>ID:DEVIL_CATMAN</p>
+                        <p>2021/ 11/27</p>
+                    </div>
+                </div>
+                <div class = "message_like_container">
+                    <img src = "./images/message/heart.svg">
+                    <p>+58</p>
+                </div>
+            </div>
+            <div class = "message_content_and_comment">
+                <div class = "message_content_text">
+                    <p>Canon拍貓第三彈，相機好真的拍甚麼都好看，貓咪們都好上相</p>
+                </div>
+                <img class = "message_content_img" src = "./images/message/1638541270957 1.png">
+                <input class = "comment_input" placeholder = "回應貼文...">
+                <div class = "message_comment_container">
+                    <img class = "message_comment_user_img" src = "./images/message/如果我是一朵花 3.svg">
+                    <p class = "message_comment_item">Devil catman, your tonight’s nightmare</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class = "footer_container">
+        <div class = "footer_up">
+            <div class = "footer_up_item">
+                <button class = "footer_question_button">常見問題</button>
+            </div>
+            <div class = "footer_up_item footer_up_center">
+                <div class = "footer_up_item_title">
+                    <p>FOLLOW US</p>
+                </div>
+                <div class = "footer_up_item_icon">
+                    <a><img class = "footer_up_item_icon_item" src = "./images/footer/facebook.svg"></img></a>
+                    <a><img class = "footer_up_item_icon_item" src = "./images/footer/instagram.svg"></img></a>
+                    <a><img class = "footer_up_item_icon_item" src = "./images/footer/line.svg"></img></a>
+                    <a><img class = "footer_up_item_icon_item" src = "./images/footer/twitter.svg"></img></a>
+                </div>
+            </div>
+            <div class = "footer_up_item footer_up_right">
+                <div class = "footer_up_item_title">
+                    <p>PAY</p>
+                </div>
+                <div class = "footer_up_item_icon">
+                    <a><img class = "footer_up_item_icon_item" src = "./images/footer/cach.svg"></img></a>
+                    <a><img class = "footer_up_item_icon_item" src = "./images/footer/creditcard.svg"></img></a>
+                    <a><img class = "footer_up_item_icon_item" src = "./images/footer/visa.svg"></img></a>
+                    <a><img class = "footer_up_item_icon_item" src = "./images/footer/linepay.svg"></img></a>
+                </div>
+            </div>
+        </div>
+        <div class = "footer_down">
+            <p>本網站為緯育TibaMe前端設計工程師班第72期學員專題作品，本平台僅供學習、展示之用。</p>
+            <p>參考資源：naturaglacé｜ETVOS｜&WOLF｜to/one｜HANA ORGANIC｜amritara｜do organic｜THE PUBLIC ORGANIC｜icon-icons｜81web｜Pinterest｜photoAC｜PARCO｜LINE。</p>
+            <p>若有侵權疑慮，您可以私訊[TibaMe-前端設計工程師養成班]，後續會由專人協助處理。</p>
+            <p>※ [TibaMe-前端設計工程師養成班]請超連結https://www.facebook.com/webindex/</p>
+        </div>
+    </div>
+</footer>
+<script>
+    ;(function() {
+        const footer_question_button = document.querySelector("button.footer_question_button");
+
+
+
+
+        footer_question_button.addEventListener("click", function() {
+            window.location.href = "/dist/question.html"
+        });
+    })()
+</script>
+
+    <script>
+        ;(function() {
+            const message_write_message_img_file_container = document.querySelector("label.message_write_message_img_file_container");
+            const message_write_img_container = document.querySelector("div.message_write_img_container");
+            const click_to_message_input_container = document.querySelector("input.click_to_message_input_container");
+            const message_write_message_container = document.querySelector("div.message_write_message_container");
+            const message_write_message_close = document.querySelector("div.message_write_message_close");
+            const message_write_background = document.querySelector("div.message_write_background");
+            const inputFile = document.querySelector("input[type = 'file");
+
+            function upLoadImg(srcEl, distEl) {
+                srcEl.addEventListener("change", function() {
+                    const file = document.querySelector("input[type = 'file").files[0];
+                    const readFile = new FileReader();
+
+
+
+
+                    distEl.classList.add("message_write_img_container_overflowY");
+                    readFile.readAsDataURL(file);
+                    readFile.addEventListener("load", function() {
+                        distEl.children[0].src = `${readFile.result}`;
+                    });
+                });
+            };
+
+            function dragOverImg(el, newClass) {
+                el.addEventListener("dragover", function(event) {
+                    event.preventDefault();
+                    el.classList.add(newClass);
+                });
+            }
+            
+            function droppedImg(srcEl, targetEl) {
+                srcEl.addEventListener("drop", function(event) {
+                    event.preventDefault();
+                    const file = event.dataTransfer.files[0];
+                    const readFile = new FileReader();
+
+
+
+
+                    readFile.readAsDataURL(file);
+                    readFile.addEventListener("load", function() {
+                        targetEl.src = `${readFile.result}`;
+                    });
+                });
+            }
+
+
+
+            // 上傳圖片
+            upLoadImg(inputFile, message_write_img_container);
+            dragOverImg(message_write_img_container, "message_write_img_container_open");
+            droppedImg(message_write_img_container, message_write_img_container.children[0]);
+
+            // 點擊上傳圖片按鈕後，顯示圖片上傳區
+            message_write_message_img_file_container.addEventListener("click", function() { 
+                message_write_img_container.classList.add("message_write_img_container_open");
+            });
+
+            // 點擊發一則貼文後的效果
+            click_to_message_input_container.addEventListener("click", function() {
+                message_write_message_container.classList.add("message_write_message_container_open");
+                message_write_background.style.display = "block";
+            });
+
+            // 點擊貼文關閉按鈕後的效果
+            message_write_message_close.addEventListener("click", function() {
+                message_write_message_container.classList.remove("message_write_message_container_open");
+                message_write_background.style.display = "none";
+            });
+
+            // 點擊外面其他元素來關閉發文區
+            document.querySelector("body").addEventListener("click", function(event) {
+                if(message_write_message_container.classList.contains("message_write_message_container_open") && event.target === message_write_background) {
+                    message_write_message_container.classList.remove("message_write_message_container_open");
+                    message_write_background.style.display = "none";
+                }
+            }, true);
+        })()
+    </script>
+</body>
+</html>

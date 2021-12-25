@@ -1,0 +1,165 @@
+main {
+  font-size: 20px;
+  color: #774F40;
+}
+
+.knowledge_banner_block {
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.knowledge_first_block_title .knowledge_first_block_title_block {
+  background-color: #FFF2CC;
+  width: fit-content;
+  border-radius: 15px;
+  margin-left: 140px;
+  box-shadow: 1px 1px 1px lightgray;
+  margin-top: 100px;
+  margin-bottom: 80px;
+}
+.knowledge_first_block_title p {
+  font-size: 30px;
+  transform: translateX(-20px) translateY(-10px);
+}
+
+.knowledge_first_block {
+  position: relative;
+}
+.knowledge_first_block :nth-child(5) {
+  margin-bottom: 200px;
+}
+.knowledge_first_block .knowledge_first_block_background {
+  background-size: cover;
+  height: 2713px;
+  position: absolute;
+  left: 0;
+  top: -120px;
+  width: 100%;
+  z-index: -1;
+}
+.knowledge_first_block .knowledge_first_block_background img {
+  position: absolute;
+  top: -90px;
+  right: 8%;
+}
+
+p.knowledge_first_block_title_text {
+  margin-left: 150px;
+  margin-top: 167px;
+  line-height: 40px;
+}
+
+.knowledge_content {
+  position: relative;
+}
+
+.knowledge_first_block_contentbhox {
+  margin: 0 auto;
+  width: fit-content;
+  margin-top: 85px;
+}
+.knowledge_first_block_contentbhox .knowledge_first_block_contentbhox_in {
+  transform: translateX(-10%);
+}
+.knowledge_first_block_contentbhox .knowledge_first_block_contentbhox_in .knowledge_first_block_contentbhox_in_text {
+  background-color: #EAE4D2;
+  width: 570px;
+  position: relative;
+  top: -120px;
+  left: 400px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px lightgray;
+}
+.knowledge_first_block_contentbhox .knowledge_first_block_contentbhox_in .knowledge_first_block_contentbhox_in_text :nth-child(1) {
+  font-size: 20px;
+}
+.knowledge_first_block_contentbhox .knowledge_first_block_contentbhox_in .knowledge_first_block_contentbhox_in_text :nth-child(2) {
+  font-size: 18px;
+}
+
+.knowledge_sec_block_title .knowledge_sec_block_title_block {
+  background-color: #FFF2CC;
+  width: fit-content;
+  border-radius: 15px;
+  margin-left: 140px;
+  box-shadow: 1px 1px 1px lightgray;
+  margin-top: 0px;
+  margin-bottom: 80px;
+}
+.knowledge_sec_block_title p {
+  font-size: 30px;
+  transform: translateX(-20px) translateY(-10px);
+}
+
+.knowledge_sec_block_title .knowledge_sec_block_title_block {
+  background-color: #E6EECE;
+  width: fit-content;
+  border-radius: 15px;
+  margin-left: 140px;
+  box-shadow: 1px 1px 1px lightgray;
+  margin-top: 100px;
+  margin-bottom: 80px;
+}
+.knowledge_sec_block_title p {
+  font-size: 30px;
+  transform: translateX(-20px) translateY(-10px);
+}
+
+.knowledge_sec_block {
+  position: relative;
+}
+.knowledge_sec_block :nth-child(5) {
+  margin-bottom: 250px;
+}
+.knowledge_sec_block .knowledge_sec_block_background {
+  background-size: cover;
+  height: 2713px;
+  position: absolute;
+  left: 0;
+  top: -90px;
+  width: 100%;
+  z-index: -1;
+}
+.knowledge_sec_block .knowledge_sec_block_background img {
+  position: absolute;
+  top: -80px;
+  right: 5%;
+  z-index: -5;
+}
+
+p.knowledge_sec_block_title_text {
+  margin-left: 150px;
+  margin-top: 167px;
+  line-height: 40px;
+}
+
+.knowledge_content {
+  position: relative;
+}
+
+.knowledge_sec_block_contentbhox {
+  margin: 0 auto;
+  width: fit-content;
+  margin-top: 85px;
+}
+.knowledge_sec_block_contentbhox .knowledge_sec_block_contentbhox_in {
+  transform: translateX(-10%);
+}
+.knowledge_sec_block_contentbhox .knowledge_sec_block_contentbhox_in .knowledge_sec_block_contentbhox_in_text {
+  background-color: #EAE4D2;
+  width: 570px;
+  position: relative;
+  top: -120px;
+  left: 400px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px lightgray;
+}
+.knowledge_sec_block_contentbhox .knowledge_sec_block_contentbhox_in .knowledge_sec_block_contentbhox_in_text :nth-child(1) {
+  font-size: 20px;
+}
+.knowledge_sec_block_contentbhox .knowledge_sec_block_contentbhox_in .knowledge_sec_block_contentbhox_in_text :nth-child(2) {
+  font-size: 18px;
+}

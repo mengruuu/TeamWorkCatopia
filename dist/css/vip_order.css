@@ -1,0 +1,64 @@
+.vip_order_main {
+  border: 1px solid blue;
+  font-size: 22px;
+  color: #774F40;
+  text-align: center;
+}
+.vip_order_main .title {
+  background-color: #EAE4D2;
+  max-width: 1200px;
+  width: 100%;
+  margin: 20px auto;
+  margin-top: 80px;
+}
+.vip_order_main .title .title_text {
+  display: inline-block;
+  padding: 10px;
+}
+.vip_order_main .second_title .second_title_text {
+  font-size: 20px;
+  display: inline-block;
+  padding: 5px 50px;
+  background-color: #FFF2CC;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+.vip_order_main table {
+  border: 1px solid #774F40;
+  text-align: center;
+  margin: 50px auto;
+  font-size: 18px;
+  border-collapse: collapse;
+}
+.vip_order_main table tr {
+  border: 1px solid #774F40;
+  height: 100px;
+}
+.vip_order_main table tr td {
+  border: 1px solid #774F40;
+  width: 200px;
+  border-collapse: collapse;
+}
+.vip_order_main table tr td a {
+  text-decoration: underline;
+}
+.vip_order_main table tr:nth-child(1) {
+  background-color: #FFF2CC;
+  height: 50px;
+}
+.vip_order_main .bottom {
+  margin: 50px auto;
+}
+.vip_order_main .bottom button {
+  box-shadow: 1px 1px 1px lightgray;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+  background-color: #FED67E;
+  color: #774F40;
+  border: 0px;
+  margin: 20px 50px;
+  cursor: pointer;
+  width: 200px;
+}

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catopia B2訂單管理</title>
+    <link rel="stylesheet" href="../css/backend/backend_style.css">
+
+    <link rel="stylesheet" href="../css/backend/b2_order.css">
+
+</head>
+
+<body>
+    <header>
+    <div>
+        <img src="../images/backend/back_logo.png">
+    </div>
+    <div class="backend_header">
+        <p>管理員:</p>
+        <p>Ru</p>
+    </div>
+</header>
+    
+    <div class="back_management_container">
+        <aside class="back_management_list">
+            <div>
+                <p>B1　會員管理</p>
+                <ul>
+                    <li><a href="./b1_vip.html">B1-1　會員資料總覽</a></li>
+                    <li><a href="./b1_black_list.html">B1-2　黑名單管理</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p>B2　訂單管理</p>
+                <ul>
+                    <li><a href="./b2_order.html">B2-1　訂單總覽</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p>B3　商品管理</p>
+                <ul>
+                    <li><a href="./b3_product.html">B3-1　商品總覽</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p>B4　留言板管理</p>
+                <ul>
+                    <li><a href="#">B4-1　留言板總覽</a></li>
+                    <li><a href="#">B4-2　檢舉管理</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p>B5　專欄管理</p>
+                <ul>
+                    <li><a href="#">B5-1　專欄推播管理</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p>B6　虛擬商城消費管理</p>
+                <ul>
+                    <li><a href="#">B6-1　虛擬商城消費管理</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p>B7　智能機器人管理</p>
+                <ul>
+                    <li><a href="#">B7-1　智能問題集管理</a></li>
+                </ul>
+            </div>
+        </aside>
+
+
+        <main class="back_order_management">
+            <div class="b2_title">
+                <p>B2-1　訂單總覽</p>
+                <ul>
+                    <li><input type="text">訂單編號</li>
+                    <li>
+                        <select name="order" id="order">
+                            <option>訂單狀態</option>
+                            <option value="1">備貨中</option>
+                            <option value="2">已出貨</option>
+                            <option value="3">已完成</option>
+                        </select>
+
+                        <select name="pay" id="pay">
+                            <option>付款狀態</option>
+                            <option value="1">未付款</option>
+                            <option value="2">已付款</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="backend_table">
+                <table>
+                    <tr class="table_title">
+                        <td><a href="#"></a> 訂單編號</td>
+                        <td>會員編號</td>
+                        <td>會員信箱</td>
+                        <td>下單時間</td>
+                        <td>訂單狀態</td>
+                        <td>付款方式</td>
+                        <td>付款狀態</td>
+                        <td>訂單金額</td>
+                        <td>奴幣回饋</td>
+                        <td>奴幣折抵</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">OD0001</a></td>
+                        <td>MB0001</td>
+                        <td>qqq123@gmail.com</td>
+                        <td>2021/10/1</td>
+                        <td>備貨中</td>
+                        <td>信用卡</td>
+                        <td>已付款</td>
+                        <td>1200</td>
+                        <td>1200</td>
+                        <td>200</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">OD0001</a></td>
+                        <td>MB0001</td>
+                        <td>qqq123@gmail.com</td>
+                        <td>2021/10/1</td>
+                        <td>備貨中</td>
+                        <td>信用卡</td>
+                        <td>已付款</td>
+                        <td>1200</td>
+                        <td>1200</td>
+                        <td>200</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">OD0001</a></td>
+                        <td>MB0001</td>
+                        <td>qqq123@gmail.com</td>
+                        <td>2021/10/1</td>
+                        <td>備貨中</td>
+                        <td>信用卡</td>
+                        <td>已付款</td>
+                        <td>1200</td>
+                        <td>1200</td>
+                        <td>200</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">OD0001</a></td>
+                        <td>MB0001</td>
+                        <td>qqq123@gmail.com</td>
+                        <td>2021/10/1</td>
+                        <td>備貨中</td>
+                        <td>信用卡</td>
+                        <td>已付款</td>
+                        <td>1200</td>
+                        <td>1200</td>
+                        <td>200</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">OD0001</a></td>
+                        <td>MB0001</td>
+                        <td>qqq123@gmail.com</td>
+                        <td>2021/10/1</td>
+                        <td>備貨中</td>
+                        <td>信用卡</td>
+                        <td>已付款</td>
+                        <td>1200</td>
+                        <td>1200</td>
+                        <td>200</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">OD0001</a></td>
+                        <td>MB0001</td>
+                        <td>qqq123@gmail.com</td>
+                        <td>2021/10/1</td>
+                        <td>備貨中</td>
+                        <td>信用卡</td>
+                        <td>已付款</td>
+                        <td>1200</td>
+                        <td>1200</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">OD0001</a></td>
+                        <td>MB0001</td>
+                        <td>qqq123@gmail.com</td>
+                        <td>2021/10/1</td>
+                        <td>備貨中</td>
+                        <td>信用卡</td>
+                        <td>已付款</td>
+                        <td>1200</td>
+                        <td>1200</td>
+                        <td>200</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">OD0001</a></td>
+                        <td>MB0001</td>
+                        <td>qqq123@gmail.com</td>
+                        <td>2021/10/1</td>
+                        <td>備貨中</td>
+                        <td>信用卡</td>
+                        <td>已付款</td>
+                        <td>1200</td>
+                        <td>1200</td>
+                        <td>200</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">OD0001</a></td>
+                        <td>MB0001</td>
+                        <td>qqq123@gmail.com</td>
+                        <td>2021/10/1</td>
+                        <td>備貨中</td>
+                        <td>信用卡</td>
+                        <td>已付款</td>
+                        <td>1200</td>
+                        <td>1200</td>
+                        <td>200</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">OD0001</a></td>
+                        <td>MB0001</td>
+                        <td>qqq123@gmail.com</td>
+                        <td>2021/10/1</td>
+                        <td>備貨中</td>
+                        <td>信用卡</td>
+                        <td>已付款</td>
+                        <td>1200</td>
+                        <td>1200</td>
+                        <td>200</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">OD0001</a></td>
+                        <td>MB0001</td>
+                        <td>qqq123@gmail.com</td>
+                        <td>2021/10/1</td>
+                        <td>備貨中</td>
+                        <td>信用卡</td>
+                        <td>已付款</td>
+                        <td>1200</td>
+                        <td>1200</td>
+                        <td>200</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">OD0001</a></td>
+                        <td>MB0001</td>
+                        <td>qqq123@gmail.com</td>
+                        <td>2021/10/1</td>
+                        <td>備貨中</td>
+                        <td>信用卡</td>
+                        <td>已付款</td>
+                        <td>1200</td>
+                        <td>1200</td>
+                        <td>200</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">OD0001</a></td>
+                        <td>MB0001</td>
+                        <td>qqq123@gmail.com</td>
+                        <td>2021/10/1</td>
+                        <td>備貨中</td>
+                        <td>信用卡</td>
+                        <td>已付款</td>
+                        <td>1200</td>
+                        <td>1200</td>
+                        <td>200</td>
+                    </tr>
+
+
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

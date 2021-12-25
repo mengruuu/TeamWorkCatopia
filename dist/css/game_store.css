@@ -1,0 +1,196 @@
+div.game_store_content {
+  width: 80%;
+  margin: 0 auto;
+}
+div.game_store_content div.game_store_first_content {
+  display: flex;
+  justify-content: space-between;
+}
+div.game_store_content div.game_store_first_content div.first_content_option {
+  width: 22%;
+  background-color: #FFF2CC;
+  box-shadow: 1px 1px 1px lightgray;
+  border-radius: 15px;
+  cursor: pointer;
+}
+div.game_store_content div.game_store_first_content div.first_content_option nav ul {
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+div.game_store_content div.game_store_first_content div.first_content_option nav ul li p {
+  font-size: 22px;
+  color: #774F40;
+}
+div.game_store_content div.game_store_first_content div.first_content_option nav ul li div {
+  width: 56%;
+  height: 52px;
+  margin: 0 auto;
+  background-color: #EAE4D2;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px lightgray;
+  margin-bottom: 20px;
+}
+div.game_store_content div.game_store_first_content div.first_content_option nav ul li div p {
+  font-size: 20px;
+  color: #774F40;
+  display: inline-block;
+  margin: 0;
+  margin-top: 10px;
+}
+div.game_store_content div.game_store_first_content div.first_content_option nav ul li div:hover {
+  background-color: #E6EECE;
+}
+div.game_store_content div.game_store_first_content div.first_content_cat {
+  width: 50%;
+  background-color: #FFF2CC;
+  box-shadow: 1px 1px 1px lightgray;
+  border-radius: 15px;
+}
+div.game_store_content div.game_store_first_content div.first_content_cat div.try_on p {
+  font-size: 22px;
+  color: #774F40;
+  text-align: center;
+}
+div.game_store_content div.game_store_first_content div.first_content_cat div.cat {
+  text-align: center;
+  margin-top: 35px;
+}
+div.game_store_content div.game_store_first_content div.first_content_cat div.take_off {
+  text-align: right;
+}
+div.game_store_content div.game_store_first_content div.first_content_cat div.take_off button.take_off_btn {
+  box-shadow: 1px 1px 1px lightgray;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+  background-color: #FED67E;
+  color: #774F40;
+  border: 0px;
+  margin-right: 55px;
+  margin-top: 15px;
+  box-shadow: 1px 1px 1px lightgray;
+  cursor: pointer;
+}
+div.game_store_content div.game_store_first_content div.first_content_text {
+  height: 400px;
+  width: 22%;
+  background-color: #FFF2CC;
+  box-shadow: 1px 1px 1px lightgray;
+  border-radius: 15px;
+}
+div.game_store_content div.game_store_first_content div.first_content_text div.product_text p {
+  font-size: 22px;
+  color: #774F40;
+  text-align: center;
+}
+div.game_store_content div.game_store_first_content div.first_content_text div.text {
+  padding-left: 20px;
+  margin-top: 35px;
+}
+div.game_store_content div.game_store_first_content div.first_content_text div.text p {
+  font-size: 22px;
+  color: #774F40;
+}
+div.game_store_content div.game_store_second_content {
+  width: 100%;
+  background-color: #FFF2CC;
+  box-shadow: 1px 1px 1px lightgray;
+  border-radius: 15px;
+  margin-top: 50px;
+  text-align: center;
+}
+div.game_store_content div.game_store_second_content div.all_product {
+  display: flex;
+  justify-content: center;
+}
+div.game_store_content div.game_store_second_content div.all_product div.product {
+  background-color: #EAE4D2;
+  height: 140px;
+  width: 140px;
+  text-align: center;
+  padding-left: 10px;
+  padding-top: 20px;
+  border-radius: 15px;
+  margin: 50px 20px;
+  cursor: pointer;
+}
+div.game_store_content div.game_store_second_content div.all_product div.product img {
+  width: 80%;
+}
+div.game_store_content div.game_store_second_content div.all_product div.-on {
+  border: 3px solid #774F40;
+}
+div.game_store_content div.game_store_second_content button {
+  cursor: pointer;
+  box-shadow: 1px 1px 1px lightgray;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+  background-color: #FED67E;
+  color: #774F40;
+  border: 0px;
+  margin-bottom: 20px;
+}
+div.game_store_content div.game_store_last_content {
+  width: 100%;
+  background-color: #FFF2CC;
+  box-shadow: 1px 1px 1px lightgray;
+  border-radius: 15px;
+  margin-top: 70px;
+  margin-bottom: 150px;
+}
+div.game_store_content div.game_store_last_content div.shopping_chart {
+  text-align: center;
+}
+div.game_store_content div.game_store_last_content div.shopping_chart img {
+  position: relative;
+  top: 5px;
+}
+div.game_store_content div.game_store_last_content div.shopping_chart p {
+  font-size: 22px;
+  color: #774F40;
+  display: inline-block;
+  margin-left: 10px;
+}
+div.game_store_content div.game_store_last_content div.chart_all_product {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+div.game_store_content div.game_store_last_content div.chart_all_product div.shopping_product {
+  background-color: #EAE4D2;
+  text-align: center;
+  margin: 40px 20px;
+  border-radius: 15px;
+  padding-top: 20px;
+  width: 140px;
+  height: 140px;
+}
+div.game_store_content div.game_store_last_content div.chart_all_product div.shopping_product img {
+  width: 80%;
+}
+div.game_store_content div.game_store_last_content div.pay div.point {
+  display: inline-block;
+  margin-left: 20%;
+  margin-right: 50px;
+}
+div.game_store_content div.game_store_last_content div.pay div.point p {
+  font-size: 18px;
+  color: #774F40;
+}
+div.game_store_content div.game_store_last_content div.pay button {
+  cursor: pointer;
+  box-shadow: 1px 1px 1px lightgray;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+  background-color: #FED67E;
+  color: #774F40;
+  border: 0px;
+}

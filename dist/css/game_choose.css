@@ -1,0 +1,129 @@
+div.game_choose_backgroung_content {
+  border-bottom: 1px solid white;
+  position: relative;
+}
+div.game_choose_backgroung_content div.black_cat_right {
+  display: inline-block;
+  position: absolute;
+  width: 200px;
+  right: 0%;
+  top: 50%;
+  opacity: 0.8;
+}
+div.game_choose_backgroung_content div.black_cat_bottom {
+  display: inline-block;
+  position: absolute;
+  right: 35%;
+  bottom: -0.5%;
+  opacity: 0.8;
+  z-index: -1;
+}
+div.game_choose_backgroung_content div.black_cat_left {
+  display: inline-block;
+  width: 200px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  opacity: 0.8;
+}
+
+div.game_choose_content {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #FFF2CC;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 160px;
+}
+div.game_choose_content div.stage {
+  width: 40%;
+  margin-right: 50px;
+}
+div.game_choose_content div.stage p {
+  font-size: 22px;
+  color: #774F40;
+}
+div.game_choose_content div.stage img {
+  width: 65%;
+  aspect-ratio: 1/1;
+}
+div.game_choose_content div.cat {
+  width: 40%;
+}
+div.game_choose_content div.cat p {
+  font-size: 22px;
+  color: #774F40;
+}
+div.game_choose_content div.cat div.cat_pic {
+  border: 1px solid #774F40;
+  background-color: #EAE4D2;
+  border-radius: 15px;
+  width: 65%;
+  aspect-ratio: 1/1;
+}
+div.game_choose_content div.cat div.cat_pic img {
+  padding-top: 12%;
+}
+div.game_choose_content div.level {
+  width: 40%;
+  margin-right: 50px;
+}
+div.game_choose_content div.level p {
+  font-size: 22px;
+  color: #774F40;
+}
+div.game_choose_content div.level div.star_text {
+  border: 1px solid #774F40;
+  width: 60%;
+  border-radius: 5px;
+  background-color: #EAE4D2;
+  padding: 15px;
+  padding-right: 30px;
+}
+div.game_choose_content div.level div.star_text p {
+  font-size: 18px;
+  margin: 0;
+}
+div.game_choose_content div.level div.star_text p.introduce {
+  margin-top: 20px;
+}
+div.game_choose_content div.item {
+  width: 40%;
+}
+div.game_choose_content div.item p {
+  font-size: 22px;
+  color: #774F40;
+}
+div.game_choose_content div.item div.item_all_pic {
+  display: flex;
+  justify-content: left;
+}
+div.game_choose_content div.item div.item_all_pic div.item_pic {
+  border: 1px solid #774F40;
+  width: 25%;
+  background-color: #EAE4D2;
+  border-radius: 15px;
+  text-align: center;
+  padding-top: 10px;
+  margin-right: 20px;
+}
+div.game_choose_content div.item div.item_all_pic div.item_pic:first-child {
+  padding-top: 0px;
+}
+div.game_choose_content button {
+  border: 1px solid blue;
+  width: 25%;
+  box-shadow: 1px 1px 1px lightgray;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+  background-color: #FED67E;
+  color: #774F40;
+  border: 0px;
+  height: 80px;
+  margin-top: 40px;
+  cursor: pointer;
+}
