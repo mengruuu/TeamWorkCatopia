@@ -1,12 +1,6 @@
 @import '../base/var';
 @import '../mixin/mixin';
 
-div.food_banner_container {
-    width: 100vw;
-    img {
-        width: 100%;
-    }
-}
 // div.food_search_container {
 //     width: 100%;
 //     height: 75px;
@@ -22,7 +16,7 @@ div.food_search_container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 1199px;
+        width: 80%;
         height: 100%;
         margin: auto;
         div.food_index {
@@ -111,20 +105,22 @@ div.food_search_container {
 }
 div.food_filter_container_and_food_product_overview {
     display: flex;
-    margin-top: 50px;
+    justify-content: space-between;
+    margin: 50px auto;
+    width: 80%;
     ul.food_filter_container {
         display: flex;
         position: fixed;
         top: 172px;
         flex-direction: column;
-        width: 300px;
+        width: 250px;
         height: 180px;
         border-radius: 15px;
         border: 1px solid;
         overflow: hidden;
         // overflow-y: scroll;
         padding: 0 0 16px;
-        margin: 0 0 32px 32px;
+        margin: 0 0 32px 0;
         color: $font_color;
         background-color: #fff;
         opacity: 1;
@@ -174,15 +170,15 @@ div.food_filter_container_and_food_product_overview {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
-        width: calc(100% - 332px);
-        margin: 32px 32px 32px 332px;
+        width: calc(100% - 252px);
+        margin: 32px 0 0 250px;
         div.food_product_overview_item {
-            width: 250px;
-            min-width: 250px;
+            width: 220px;
             margin: 0 0 0 16px;
             img.food_product_overview_item_img {
                 width: 100%;
-                height: 278px;
+                height: 220px;
+                object-fit: cover;
             }
             div.food_product_title_and_price_and_button {
                 font-size: $font_24;
@@ -203,12 +199,12 @@ div.food_filter_container_and_food_product_overview {
 }
 ul.food_product_page_chose_container {
     position: absolute;
-    right: 32px;
+    right: 10%;
     // margin-left: 373px;
     display: flex;
     font-size: $font_20;
     padding: 0;
-    li {
+    li.food_page_item {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -220,6 +216,13 @@ ul.food_product_page_chose_container {
         background-color: $main_color;
         border: 1px solid $font_color;
         background-repeat: no-repeat;
+    }
+    li.food_page_item:hover {
+        cursor: pointer;
+        background-color: $important_color;
+    }
+    li.food_page_item_clicked {
+        background-color: $important_color;
     }
 }
 div.food_product_history {
@@ -240,13 +243,26 @@ div.food_product_history {
     }
     ul.food_product_history_content_container {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         padding: 0;
         margin-bottom: 50px;
+        width: 80vw;
         li {
             margin: 0 8px;
-            width: 250px;
+            width: 220px;
+            height: 220px;
+        }
+    }
+}
+
+@include w1200() {
+    div.food_product_overview_item {
+        width: 250px;
+        margin: 0 0 0 16px;
+        img.food_product_overview_item_img {
+            width: 100%;
             height: 250px;
+            object-fit: cover;
         }
     }
 }
