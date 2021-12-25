@@ -1,0 +1,109 @@
+@import '../base/var';
+@import '../mixin/mixin';
+@import '../layout/back_header';
+
+// .container {
+//     border: 1px solid red;
+// }
+
+.game_store_push_title {
+    background-color: $second_color1;
+}
+
+.game_store_push_container{
+    background-color: $main_color;
+}
+
+.game_store_push_block {
+    // border: 1px solid green;
+    display: flex;
+    align-items: center;
+    
+    &.text_area{
+        align-items: start;
+    }
+}
+
+
+.product_push_title {
+    // border: 1px solid black;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product_push_title {
+    // border: 1px solid #aaa;
+    font-size: $font_20;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.game_store_push_container {
+    // border: 1px solid red;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+    
+    .game_store_push_block_title, .game_store_push_block_text{
+        // border: 1px solid blue;
+        flex: 1;
+        padding: 10px;
+    
+        &.vip_edit_block_remark{
+            padding: 20px 10px;
+
+            textarea {
+                background-color: $second_color1;
+                border: 1px solid $main_color;
+                color: $font_color;
+                font-size: 16px;
+            }
+        }
+        input {
+            border: 1px solid $font_color;
+            font-size: 16px;
+            padding: 5px 10px;
+            color: $font_color;
+        }
+        select {
+            border: 1px solid $font_color;
+            font-size: 16px;
+            padding: 5px 10px;
+            color: $font_color;
+        }
+
+        button {
+            border: none;
+            background-color: $second_color1;
+            padding: 5px 10px;
+            font-size: 16px;
+            color: $font_color;
+            cursor: pointer;
+        }
+    }
+
+    .game_store_push_block_text{
+        flex:2;
+    }
+
+    .game_store_push_block_title {
+        text-align: right;
+    }
+}
+
+.back_edit_button {
+    // border: 1px solid blue;
+    text-align: center;
+    padding: 30px;
+    
+    button {
+        @include button();
+        margin: 0 30px;
+        width: 150px;
+        font-size: $font_20;
+        cursor: pointer;
+    }
+}

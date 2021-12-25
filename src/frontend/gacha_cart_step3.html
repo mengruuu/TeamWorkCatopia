@@ -12,32 +12,21 @@
 </head>
 
 <body>
-    <header>
-        @@include('./layout/header.html')
-    </header>
+    
+    @@include('./layout/header.html')
+
+    @@include('./layout/title.html', {
+        "title" : "盲抽盒購物車"
+    })
 
     <div class="cart_step1_step_block">
         <div class="cart_step1_step">
-            <p>
-                １<br>
-                <br>
-                商品・金額確認
-            </p>
-            <p>
-                ２<br>
-                <br>
-                付款・配送方式
-            </p>
+            <p>１商品・金額確認</p>
+            <p>２付款・配送方式</p>
             <p class="cart_step1_this_step">
-                ３<br>
-                <br>
-                最終確認
+                ３最終確認
             </p>
-            <p>
-                ４<br>
-                <br>
-                訂購完成
-            </p>
+            <p>４訂購完成</p>
         </div>
     </div>
 
@@ -166,8 +155,8 @@
 
     <div class="cart_step1_next_step
                 cart_step3_next_step">
-        <button type="submit">上一步　修改資料</button>
-        <button type="submit">下一步　完成訂購</button>
+        <a href="./gacha_cart_step2.html"><button type="submit">上一步　修改資料</button></a>
+        <a href="./gacha_cart_step4.html"><button type="submit">下一步　完成訂購</button></a>
 
     </div>
 

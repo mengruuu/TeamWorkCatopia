@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./layout/meta.html', {
+    "title" : "Catopia B5-1-1專欄文章編輯"
+    })
+    <link rel="stylesheet" href="../css/backend/b5_knowledge_edit.css">
+</head>
+
+<body>
+    @@include('./layout/backend_header.html')
+
+    <div class="knowledge_edit_page_title
+                knowledge_edit_block">
+        <div class="product_push_title">
+            <p>B5-1-1專欄文章編輯</p>
+        </div>
+    </div>
+
+    <div class="product_push_container">
+        <div class="knowledge_edit_block">
+            <p class="knowledge_edit_block_title">文章序號:</p>
+            <p class="knowledge_edit_block_text">1</p>
+        </div>
+
+        <div class="knowledge_edit_block">
+            <p class="knowledge_edit_block_title">文章編號:</p>
+            <p class="knowledge_edit_block_text">PU0001</p>
+        </div>
+
+        <div class="knowledge_edit_block">
+            <p class="knowledge_edit_block_title">文章圖片:</p>
+            <div class="knowledge_edit_block_text">
+                <button>上傳圖片</button>
+                <!-- <ul>
+                    <li><img src="" alt=""></li>
+                </ul> -->
+            </div>
+        </div>
+
+        <div class="knowledge_edit_block 
+                    text_area">
+            <p class="knowledge_edit_block_title">文章內容:</p>
+            <div class="knowledge_edit_block_text  
+                        vip_edit_block_remark">
+                <textarea cols="60" rows="10"></textarea>
+            </div>
+        </div>
+
+        <div class="back_edit_button">
+            <a href="./b5_knowledge.html"><button type="submit">取消</button></a>
+            <a href="./b5_knowledge.html"><button type="submit">修改</button></a>
+        </div>
+    </div>
+</body>
+
+</html>

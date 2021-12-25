@@ -7,39 +7,43 @@ body{
 }
 .cart_step1_step_block {
     color: $font_color;
-    font-size: $font_22;
+    font-size: $font_20;
     // border: 1px solid red;
     display: flex;
-    max-width: 1200px;
+    width: 80%;
     margin: 0 auto;
-    margin-top: 50px;
+    // margin-top: 50px;
 }
+
+
 .cart_step1_step {
     // border: 1px solid blue;
-    max-width: 1200px;
+    max-width: 80%;
     margin: 0 auto;
     display: flex;
     text-align: center;
 }
 .cart_step1_step p{
     // border: 1px solid green;
-    width: 180px;
-    height: 180px;
-    margin: 20px;
+    width: 220px;
+    padding: 30px 30px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 100px;
-    background-color: $main_color;
-    box-shadow: $shadow;
+    background-image: url('../images/shopping_cart/other_step.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 p.cart_step1_this_step {
-    background-color: $important_color;
+    background-image: url('../images/shopping_cart/this_step.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .cart_step1_container{
     border: 1px solid $font_color;
-    max-width: 1200px;
+    width: 80%;
     margin: 0 auto;
     font-size: $font_22;
     margin-top: 50px;
@@ -137,7 +141,7 @@ div.cart_step1_item:first-child{
     // border: 1px solid green;
     width: 400px;
     text-align: right;
-    margin: 5px 10px;
+    margin: 5px 65px;
 }
 
 .cart_step1_total_price input {
@@ -150,7 +154,7 @@ div.cart_step1_item:first-child{
 
 .cart_step1_next_step {
     // border: 1px solid red;
-    max-width: 1200px;
+    max-width: 80%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
