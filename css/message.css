@@ -227,6 +227,7 @@ div.message_input_container div div.input_and_laber_for_files input::placeholder
   color: #774F40;
 }
 
+<<<<<<< HEAD
 div.message_input_container div div.input_and_laber_for_files label.message_img_file_container {
   width: 15%;
   position: absolute;
@@ -241,6 +242,8 @@ div.message_input_container div div.input_and_laber_for_files label.message_img_
   display: block;
 }
 
+=======
+>>>>>>> a1e143bba82b9fd48ff164e2c3119f819d313767
 div.message_input_container div input[type='file'] {
   position: absolute;
   right: 200%;
