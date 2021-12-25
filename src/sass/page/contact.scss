@@ -7,21 +7,7 @@
     color: $font_color;
     text-align: center;
     background-image: url("../images/contact/contact_background.png");
-    .title{
-        // border: 1px solid black;
-        // background-color: $second_color1;
-        max-width: 1200px;
-        width: 100%;
-        margin: 20px auto;
-        margin-top: 40px;
-        // padding: 20px auto;
-        .title_text{
-            // border: 1px solid maroon;
-            text-align: center;
-            display: inline-block; 
-            padding: 10px;
-        }
-    }
+    background-repeat: no-repeat;
     .info{
         // border: 1px solid maroon;
         // display: flex;
