@@ -1,0 +1,88 @@
+div.register_third_container {
+  width: 80vw;
+  margin: 50px auto;
+}
+
+div.register_third_container > div.register_third_title {
+  width: 100%;
+  text-align: center;
+  line-height: 3;
+  background-color: #EAE4D2;
+  color: #774F40;
+  border: 1px solid #774F40;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+div.register_third_container > div.register_third_process {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 32px 0;
+}
+
+div.register_third_container > div.register_third_process > div.register_third_process_item {
+  width: 285px;
+  text-align: center;
+  background-color: #FFF2CC;
+  border-radius: 10px;
+}
+
+div.register_third_container > div.register_third_process > div.register_third_process_item_current {
+  background-color: #FED67E;
+}
+
+div.register_third_container > div.register_third_process > div.register_third_process_item > p {
+  color: #774F40;
+  font-size: 22px;
+}
+
+div.register_third_container > div.register_third_icon_and_continue_shop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.register_third_container > div.register_third_icon_and_continue_shop > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 50px;
+}
+
+div.register_third_container > div.register_third_icon_and_continue_shop > div > p {
+  font-size: 30px;
+  margin-left: 16px;
+  color: #774F40;
+}
+
+div.register_third_container > div.register_third_icon_and_continue_shop > button {
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+  background-color: #FED67E;
+  color: #774F40;
+  border: 0px;
+  width: 386px;
+  height: 90px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=register_third.css.map */
