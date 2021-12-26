@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./layout/meta.html', {
+    "title" : "Catopia B7問題集管理"
+    })
+    <link rel="stylesheet" href="../css/backend/b7_question_push.css">
+</head>
+
+<body>
+    @@include('./layout/backend_header.html')
+
+    <div class="question_push_title
+                question_push_block">
+        <div class="product_push_title">
+            <p>B7-1-1新增問題集</p>
+        </div>
+    </div>
+
+    <div class="question_push_container">
+        <div class="question_push_block">
+            <p class="question_push_block_title">問題序號:</p>
+            <p class="question_push_block_text">Q0001</p>
+        </div>
+
+
+        <div class="question_push_block 
+                    text_area">
+            <p class="question_push_block_title">問題:</p>
+            <div class="question_push_block_text  
+                        vip_edit_block_remark">
+                <textarea cols="60" rows="10"></textarea>
+            </div>
+        </div>
+
+        <div class="question_push_block 
+                    text_area">
+            <p class="question_push_block_title">回答:</p>
+            <div class="question_push_block_text  
+                        vip_edit_block_remark">
+                <textarea cols="60" rows="10"></textarea>
+            </div>
+        </div>
+
+        <div class="back_edit_button">
+            <a href="./b7_question.html"><button type="submit">取消</button></a>
+            <a href="./b7_question.html"><button type="submit">上架</button></a>
+        </div>
+    </div>
+</body>
+
+</html>

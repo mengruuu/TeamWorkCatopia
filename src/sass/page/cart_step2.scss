@@ -7,33 +7,34 @@ body{
 }
 .cart_step2_step_block {
     color: $font_color;
-    font-size: $font_22;
+    font-size: $font_20;
     // border: 1px solid red;
     display: flex;
-    max-width: 1200px;
+    max-width: 80%;
     margin: 0 auto;
     margin-top: 50px;
 }
 .cart_step2_step {
-    max-width: 1200px;
+    max-width: 80%;
     margin: 0 auto;
     display: flex;
     text-align: center;
 }
 .cart_step2_step p{
-    // border: 1px solid green;
-    width: 180px;
-    height: 180px;
-    margin: 20px;
+    width: 220px;
+    padding: 30px 30px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 100px;
-    background-color: $main_color;
-    box-shadow: $shadow;
+    background-image: url('../images/shopping_cart/other_step.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 p.cart_step2_this_step {
-    background-color: $important_color;
+    background-image: url('../images/shopping_cart/this_step.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .cart_step2_container{
