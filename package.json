@@ -13,7 +13,9 @@
     "後台html打包":"gulp Btemplate",
     "後台sass打包": "gulp Bstyle",
     "清除舊檔案": "gulp c",
-    "壓圖": "gulp img"
+    "壓圖": "gulp img",
+    "函式庫搬家": "gulp libarymove"
+
   },
   "keywords": [],
   "author": "",
