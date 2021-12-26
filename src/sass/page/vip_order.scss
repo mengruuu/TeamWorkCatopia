@@ -10,17 +10,27 @@
     text-align: center;
     table{
         border:1px solid $font_color;
+        // border: 1px solid maroon;
         text-align: center;
         margin: 0 auto;
         font-size: $font_20;
         border-collapse: collapse;
+        @include w600() {
+            font-size: 14px;
+        }
         tr{
             border:1px solid $font_color;
             height: 100px;
+            @include w600() {
+                height: 60px;
+            }
             td{
                 border:1px solid $font_color;
                 width: 200px;
-                border-collapse: collapse;
+                // border-collapse: collapse;
+                @include w600() {
+                    width: 80px;
+                }
                 a{
                     text-decoration: underline;
                 }
@@ -29,6 +39,9 @@
         tr:nth-child(1) {
             background-color: $main_color;
             height: 50px;
+            @include w600() {
+                height: 40px;
+            }
         }
     }
 
