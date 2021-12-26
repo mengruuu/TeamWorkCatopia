@@ -11,110 +11,146 @@
     background-size: cover;
     color: $font_color;
     // padding: 10px;
-    .title{
-        // border: 1px solid yellow;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        text-align: center;
-        padding-top: 20px;
-        .titletext{
-            // border: 1px solid green;
-            // display: inline-block;
-            height: auto;
-            font-size: $font_32;
-            margin: 30px auto;
-            margin-bottom: 10px;
-            background-color: $second_color3;
-            border-radius: 15px;
-            padding: 5px 30px;
-            box-shadow: $shadow;
-        }
-      }
-    .galaxy{
-        // border: 1px solid maroon;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        padding-bottom: 100px;
-        text-align: center;
-        .leftgalaxy{
-            // border: 1px solid blue;
-            position: relative;
-            padding: 25px 10px;
-            .leftgalaxy img{
-                // border: 1px solid black;
-                padding: 21px 0;
-            }
-            
-            .leftgalaxy_text{
-                // border: 1px solid maroon;
-                box-shadow: $shadow;
-                position: absolute;
-                top: 45%;
-                left: 50%;
-                transform: translate(-55%);
-                font-size: 24px;
+    .except_bkgimg{
+        // border: 1px solid blue;
+        width: 80%;
+        margin: 0 auto;
+        .title{
+            // border: 1px solid yellow;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            .titletext{
+                // border: 1px solid green;
+                // display: inline-block;
+                height: auto;
+                font-size: $font_32;
+                margin: 30px auto;
+                margin-top: 50px;
                 background-color: $second_color3;
-                color: $font_color;
-                border-radius: 5px;
-                padding: 5px 10px;
-                text-align: center;
-                opacity: .8;
+                border-radius: 15px;
+                padding: 5px 20px;
+                box-shadow: $shadow;
+                @include w600() {
+                    font-size: $font_24;
+                }
+                @include w500() {
+                    font-size: $font_20;
+                    margin-bottom: 10px;
+                }
             }
-        }
-        .leftgalaxy:hover{
-            transform:scale(1.2,1.2)
-        }
-
-        .middlelogo{
+          }
+        .galaxy{
             // border: 1px solid maroon;
-            margin: 80px 50px;
-            padding: 30px 0;
-        }
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-bottom: 100px;
+            text-align: center;
+            .leftgalaxy{
+                // border: 1px solid blue;
+                position: relative;
+                img{
+                    // border: 1px solid black;
+                    @include w600() {
+                        width: 400px;
+                    }
+                }
 
-        .rightgalaxy{
-            // border: 1px solid blue;
-            position: relative;
-            .rightgalaxy img{
-                // border: 1px solid black;
-                padding: 21px 0;
+                .leftgalaxy_text{
+                    // border: 1px solid maroon;
+                    box-shadow: $shadow;
+                    position: absolute;
+                    top: 45%;
+                    left: 50%;
+                    transform: translate(-55%);
+                    font-size: 24px;
+                    background-color: $second_color3;
+                    color: $font_color;
+                    border-radius: 5px;
+                    padding: 5px 10px;
+                    text-align: center;
+                    opacity: .8;
+                    @include w900() {
+                        font-size: $font_20;
+                    }
+                    @include w600() {
+                        font-size: 16px;
+                        top: 40%;
+                        left: 40%;
+                        transform: translate(-40%);
+                    }
+                    @include w500() {
+                        top: 80%;
+                        left: 25%;
+                        transform: translate(-15%);
+                    }
+                    @include w400() {
+                        top: 80%;
+                        left: 15%;
+                        transform: translate(-5%);
+                        padding: 2px 2px;
+                    }
+                }
             }
-            .rightgalaxy_text{
+            .leftgalaxy:hover{
+                transform:scale(1.2,1.2)
+            }
+    
+            .middlelogo{
                 // border: 1px solid maroon;
-                box-shadow: $shadow;
-                position: absolute;
-                top: 45%;
-                left: 50%;
-                transform: translate(-55%);
-                font-size: 24px;
-                background-color: $second_color3;
-                color: $font_color;
-                border-radius: 5px;
-                padding: 5px 10px;
-                text-align: center;
-                opacity: .8;
+                margin-top: 10%;
             }
+    
+            .rightgalaxy{
+                // border: 1px solid blue;
+                position: relative;
+                img{
+                    // border: 1px solid black;
+                    @include w600() {
+                        width: 400px;
+                    }
+                }
+                .rightgalaxy_text{
+                    // border: 1px solid maroon;
+                    box-shadow: $shadow;
+                    position: absolute;
+                    top: 45%;
+                    left: 50%;
+                    transform: translate(-55%);
+                    font-size: 24px;
+                    background-color: $second_color3;
+                    color: $font_color;
+                    border-radius: 5px;
+                    padding: 5px 10px;
+                    text-align: center;
+                    opacity: .8;
+                    @include w900() {
+                        font-size: $font_20;
+                    }
+                    @include w600() {
+                        font-size: 16px;
+                        top: 40%;
+                        left: 40%;
+                        transform: translate(-40%);
+                    }
+                    @include w500() {
+                        top: 80%;
+                        left: 25%;
+                        transform: translate(-15%);
+                    }
+                    @include w400() {
+                        top: 80%;
+                        left: 15%;
+                        transform: translate(5%);
+                        padding: 2px 2px;
+                    }
+                }
+            }
+            .rightgalaxy:hover{
+                transform: scale(1.2,1.2);
+            }   
         }
-        .rightgalaxy:hover{
-            transform: scale(1.2,1.2);
-        }
-
-        // .rightgalaxy img:hover{
-        //     transform:scale(1.2,1.2)
-        //   }
-        
-        // .rightgalaxy_text{
-        //     font-size: 24px;
-        //     margin-top: 30px;
-        //     margin-bottom: 10px;
-        //     background-color: $second_color3;
-        //     color: $font_color;
-        //     border-radius: 5px;
-        //     padding: 5px 10px;
-        //     text-align: center;
-        //     opacity: .9;
-        // }
-
     }
 }
