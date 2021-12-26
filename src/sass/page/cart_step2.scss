@@ -19,7 +19,13 @@ body{
     margin: 0 auto;
     display: flex;
     text-align: center;
+
+    @include w700(){
+        // border: 1px solid red;
+        display: block;
+    }
 }
+
 .cart_step2_step p{
     width: 220px;
     padding: 30px 30px;
@@ -30,16 +36,52 @@ body{
     background-image: url('../images/shopping_cart/other_step.png');
     background-repeat: no-repeat;
     background-size: 100%;
+
+    @media (max-width:1440px) {
+        // border: 1px solid blue;
+        padding: 25px 20px;
+        margin: 0px;
+        max-width: 100%;
+    }
+
+    @include w1200(){
+        // border: 1px solid green;
+        padding: 25px 0px;
+        background-size: 100%;
+        font-size: 16px;
+    }
+
+    @include w1000(){
+        // border: 1px solid black;
+        background-size: 100%;
+        padding: 20px 5px;
+    }
+
+    @include w900(){
+        display: none;
+        margin: 0;
+        padding: 30px 35px;
+        padding-left: 5px;
+    }
 }
+
+
 p.cart_step2_this_step {
     background-image: url('../images/shopping_cart/this_step.png');
     background-repeat: no-repeat;
     background-size: 100%;
+
+    @include w900(){
+        // border: 1px solid green;
+        display: block;
+        margin: 0 auto;
+        background-size: 85%;
+    }
 }
 
 .cart_step2_container{
     // border: 1px solid $font_color;
-    max-width: 1200px;
+    max-width: 80%;
     margin: 0 auto;
     font-size: $font_22;
     margin-top: 50px;
@@ -49,9 +91,10 @@ p.cart_step2_this_step {
 
 .cart_step2_check_step {
     // border: 1px solid green;
-    max-width: 1200px;
+    max-width: 80%;
     display: flex;
     font-weight: bold;
+    margin-top: 30px;
 }
 
 .cart_step2_circle {
@@ -63,11 +106,18 @@ p.cart_step2_this_step {
 
 .cart_step2_check_step p {
     margin: 20px 10px;
+    
 }
 
 .cart_step2_order_check {
     border: 1px solid $font_color;
     display: flex;
+
+    @include w900(){
+        flex-direction: column;
+        flex-wrap: wrap;
+        font-size: 16px;
+    }
 }
 
 .cart_step2_order_check_final {
@@ -113,7 +163,7 @@ p.cart_step2_this_step {
     border: 1px solid $font_color;
     max-width: 80px;
     font-size: $font_22;
-    margin: 0 10px;
+    margin: 10px 3px;
     border-radius: 5px;
 }
 
@@ -137,7 +187,7 @@ p.cart_step2_this_step {
 
 .cart_step2_next_step {
     // border: 1px solid red;
-    max-width: 1200px;
+    max-width: 80%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -152,6 +202,11 @@ p.cart_step2_this_step {
     border-radius: 15px;
     box-shadow: $shadow;
     cursor: pointer;
+    margin-top: 50px;
+
+    @include w900(){
+        font-size: $font_20;
+    }
 }
 
 .bottom_img {
@@ -164,4 +219,8 @@ p.cart_step2_this_step {
 .bottom_img img {
     max-width: 300px;
     // border: 1px solid red;
+
+    @include w900(){
+        width: 200px;
+    }
 }
