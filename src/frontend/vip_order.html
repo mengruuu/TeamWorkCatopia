@@ -8,15 +8,11 @@
 </head>
 <body>
     @@include('./layout/header.html')
+    @@include('./layout/title.html',{
+        "title" : "會員中心-訂單查詢"
+    })
 
-    <main class="vip_order_main">
-        <div class="title">
-            <div class="title_text">會員中心</div>
-        </div>
-        <div class="second_title">
-            <div class="second_title_text">訂單查詢</div>
-        </div>
-
+    <main class="vip_order_main"> 
         <table>
             <tr>
                 <td>訂單編號</td>

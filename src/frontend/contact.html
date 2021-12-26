@@ -8,16 +8,15 @@
 </head>
 <body>
     @@include('./layout/header.html')
+    @@include('./layout/title.html',{
+        "title" : "聯絡我們"
+    })
 
     <main class="contact_main">
-        <div class="title">
-            <div class="title_text">聯絡我們</div>
-        </div>
-
         <div class="info">
             <div class="left_outer">
                 <div class="info_left">
-                    <img src="./images/contact/contact_logo.png" alt="" srcset="">
+                    <img class="logo" src="./images/contact/contact_logo.png" alt="" srcset="">
                     <div class="info_bottom">
                         <div class="left_text">
                             <img src="./images/contact/contact_address.png" alt="" srcset="">
@@ -25,7 +24,7 @@
                         </div>
                         <div class="left_text">
                             <img src="./images/contact/contact_mail.png" alt="" srcset="">
-                            123456@gmail.com
+                            123@gmail.com
                         </div>
                         <div class="left_text">
                             <img src="./images/contact/contact_phone.png" alt="" srcset="">
