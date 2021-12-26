@@ -12,31 +12,21 @@
 </head>
 
 <body>
-    <header>
-        @@include('./layout/header.html')
-    </header>
+    
+    @@include('./layout/header.html')
+
+
+    @@include('./layout/title.html', {
+        "title" : "購物車"
+    })
 
     <div class="cart_step1_step_block">
         <div class="cart_step1_step">
-            <p>
-                １<br>
-                <br>
-                商品・金額確認
-            </p>
-            <p>
-                ２<br>
-                <br>
-                付款・配送方式
-            </p>
-            <p>
-                ３<br>
-                <br>
-                最終確認
-            </p>
+            <p>１商品・金額確認</p>
+            <p>２付款・配送方式</p>
+            <p>３最終確認</p>
             <p class="cart_step1_this_step">
-                ４<br>
-                <br>
-                訂購完成
+                ４訂購完成
             </p>
         </div>
     </div>
@@ -46,7 +36,7 @@
         <p>訂單編號：O0001</p>
         <div class="cart_step1_next_step
                     cart_step4_next_step">
-            <button type="submit">繼續逛逛</button>
+            <a href="./index.html"><button type="submit">繼續逛逛</button></a>
         </div>
     </div>
 

@@ -4,6 +4,23 @@
 .cart_step3_next_step button{
     // border: 1px solid red;
     margin: 0 20px;
+
+    @include w900(){
+        // border: 1px solid red;
+        font-size: $font_20;
+        margin-bottom: 20px;
+    }
+
+}
+
+.cart_step3_next_step {
+    // border: 1px solid blue;
+
+    @include w900(){
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .cart_step3_container {

@@ -55,38 +55,48 @@ main {
     width: calc( 100% - 20% );
 }
 
-.back_black_list_management .b1_title {
+.back_message_management .b4_title {
     background-color: $second_color1;
 }
 
-.back_black_list_management div p {
+.back_message_management div p {
     margin: 0;
     padding: 15px;
     font-size: $font_20;
     font-weight: bold;
 }
 
-.back_black_list_management .b1_title ul{
+.back_message_management .b4_title ul{
     list-style: none;
     // border: 1px solid green;
     padding: 0;
     margin: 15px;
+    display: flex;
+    align-items: center;
     li {
-        margin: 0 15px;
+        margin: 10px 15px;
         font-size: 0;
-        select{
-            font-size: 16px;
-            max-width: 200px;
+        
+        button {
+            background-color: $important_color;
+            @include button();
+            font-size: $font_20;
+            cursor: pointer;
+        }
+
+        input {
+            max-width: 180px;
             border-radius: 20px;
             border: none;
-            padding: 5px;
-            width: 200px;
+            padding: 5px 10px;
             color: $font_color;
+            font-size: 16px;
+            // border: 1px solid red;
         }
     }
 }
 
-.back_black_list_management .b1_title {
+.back_message_management .b4_title {
     display: flex;
     justify-content: space-between;
     align-items: center;
