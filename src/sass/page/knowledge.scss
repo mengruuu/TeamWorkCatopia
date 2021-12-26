@@ -1,17 +1,19 @@
 @import '../base/var';
 @import '../mixin/mixin';
 
-main{
+main {
     font-size: $font_22;
     color: $font_color;
 }
-.knowledge_banner_block{
-    height: 500px;
+
+.knowledge_banner_block {
+    height: 400px;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.knowledge_first_block_title{
-    .knowledge_first_block_title_block{
+
+.knowledge_first_block_title {
+    .knowledge_first_block_title_block {
         background-color: $main_color;
         width: fit-content;
         border-radius: 15px;
@@ -20,17 +22,21 @@ main{
         margin-top: 100px;
         margin-bottom: 80px;
     }
-    p{
+
+    p {
         font-size: $font_32;
         transform: translateX(-20px) translateY(-10px);
     }
 }
-.knowledge_first_block{
+
+.knowledge_first_block {
     position: relative;
-    :nth-child(5){
+
+    :nth-child(5) {
         margin-bottom: 200px;
     }
-    .knowledge_first_block_background{
+
+    .knowledge_first_block_background {
         background-size: cover;
         height: 2713px;
         position: absolute;
@@ -38,29 +44,34 @@ main{
         top: -120px;
         width: 100%;
         z-index: -1;
-        img{
+
+        img {
             position: absolute;
             top: -90px;
             right: 8%;
         }
     }
 }
-p.knowledge_first_block_title_text{
+
+p.knowledge_first_block_title_text {
     margin-left: 150px;
     margin-top: 167px;
     line-height: 40px;
 }
-.knowledge_content{
+
+.knowledge_content {
     position: relative;
 }
 
-.knowledge_first_block_contentbhox{
+.knowledge_first_block_contentbhox {
     margin: 0 auto;
     width: fit-content;
     margin-top: 85px;
-    .knowledge_first_block_contentbhox_in{
+
+    .knowledge_first_block_contentbhox_in {
         transform: translateX(-10%);
-        .knowledge_first_block_contentbhox_in_text{
+
+        .knowledge_first_block_contentbhox_in_text {
             background-color: $second_color1;
             width: 570px;
             position: relative;
@@ -69,18 +80,21 @@ p.knowledge_first_block_title_text{
             padding: 10px 20px 10px 20px;
             border-radius: 15px;
             box-shadow: $shadow_box;
-            :nth-child(1){
+
+            :nth-child(1) {
                 font-size: $font_22;
             }
-            :nth-child(2){
+
+            :nth-child(2) {
                 font-size: $font_20;
             }
         }
     }
 }
+
 //第二區開始
-.knowledge_sec_block_title{
-    .knowledge_sec_block_title_block{
+.knowledge_sec_block_title {
+    .knowledge_sec_block_title_block {
         background-color: $main_color;
         width: fit-content;
         border-radius: 15px;
@@ -89,13 +103,15 @@ p.knowledge_first_block_title_text{
         margin-top: 0px;
         margin-bottom: 80px;
     }
-    p{
+
+    p {
         font-size: $font_32;
         transform: translateX(-20px) translateY(-10px);
     }
 }
-.knowledge_sec_block_title{
-    .knowledge_sec_block_title_block{
+
+.knowledge_sec_block_title {
+    .knowledge_sec_block_title_block {
         background-color: $second_color5;
         width: fit-content;
         border-radius: 15px;
@@ -104,17 +120,21 @@ p.knowledge_first_block_title_text{
         margin-top: 100px;
         margin-bottom: 80px;
     }
-    p{
+
+    p {
         font-size: $font_32;
         transform: translateX(-20px) translateY(-10px);
     }
 }
-.knowledge_sec_block{
+
+.knowledge_sec_block {
     position: relative;
-    :nth-child(5){
+
+    :nth-child(5) {
         margin-bottom: 250px;
     }
-    .knowledge_sec_block_background{
+
+    .knowledge_sec_block_background {
         background-size: cover;
         height: 2713px;
         position: absolute;
@@ -122,7 +142,8 @@ p.knowledge_first_block_title_text{
         top: -90px;
         width: 100%;
         z-index: -1;
-        img{
+
+        img {
             position: absolute;
             top: -80px;
             right: 5%;
@@ -130,22 +151,26 @@ p.knowledge_first_block_title_text{
         }
     }
 }
-p.knowledge_sec_block_title_text{
+
+p.knowledge_sec_block_title_text {
     margin-left: 150px;
     margin-top: 167px;
     line-height: 40px;
 }
-.knowledge_content{
+
+.knowledge_content {
     position: relative;
 }
 
-.knowledge_sec_block_contentbhox{
+.knowledge_sec_block_contentbhox {
     margin: 0 auto;
     width: fit-content;
     margin-top: 85px;
-    .knowledge_sec_block_contentbhox_in{
+
+    .knowledge_sec_block_contentbhox_in {
         transform: translateX(-10%);
-        .knowledge_sec_block_contentbhox_in_text{
+
+        .knowledge_sec_block_contentbhox_in_text {
             background-color: $second_color1;
             width: 570px;
             position: relative;
@@ -154,10 +179,12 @@ p.knowledge_sec_block_title_text{
             padding: 10px 20px 10px 20px;
             border-radius: 15px;
             box-shadow: $shadow_box;
-            :nth-child(1){
+
+            :nth-child(1) {
                 font-size: $font_22;
             }
-            :nth-child(2){
+
+            :nth-child(2) {
                 font-size: $font_20;
             }
         }
