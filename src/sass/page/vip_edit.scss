@@ -3,6 +3,8 @@
 
 .vip_edit_main{
     // border: 1px solid blue;
+    width: 80%;
+    margin: 0 auto;
     font-size: $font_24;
     color: $font_color;
     text-align: center;
@@ -36,10 +38,16 @@
                 max-width: 387px;
                 width: 30%;
                 max-height: 359px;
-                height: 100%;
                 padding: 20px;
                 margin-right: 40px;
-                line-height: 250px;
+                line-height: inherit;
+                @include w600() {
+                    margin-right: 10px;
+                }
+                @include w500() {
+                    margin-right: 0;
+                    padding: 10px;
+                }
             }
             .pwd_block_right{
                 // border: 1px solid purple;
@@ -47,7 +55,11 @@
                 width: 60%;
                 padding-top: 5px;
                 padding-left: 20px;
-                margin: 6px auto;
+                margin: 0px auto;
+                margin-right: 0;
+                @include w500() {
+                    padding-left: 0;
+                }
                 .pwd_text{
                     // border: 1px solid blue;
                     .name{
@@ -113,10 +125,9 @@
                 max-width: 387px;
                 width: 30%;
                 max-height: 359px;
-                height: 100%;
                 padding: 20px;
                 margin-right: 40px;
-                line-height: 250px;
+                line-height: inherit;
             }
             .per_block_right{
                 // border: 1px solid purple;
@@ -130,10 +141,7 @@
                     .name{
                         // border: 1px solid maroon;
                         margin: 20px auto;
-                        input{
-                            border-color: $font_color;
-                            width: 80%;
-                        }
+                        word-break: break-all;
                     }
                     .birthday{
                         // border: 1px solid maroon;
