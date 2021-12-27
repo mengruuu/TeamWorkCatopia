@@ -15,10 +15,11 @@
 }
 
 .cart_step4_next_step button {
-    margin: 50px;
+    margin: 50px 0;
 
     @include w900(){
         font-size: $font_20;
+        padding: 10px 70px;
     }
 }
 
