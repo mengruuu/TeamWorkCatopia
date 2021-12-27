@@ -2,33 +2,31 @@
 <html lang="zh-tw">
     @@include('./layout/meta.html', { "title" : "豆知識專欄" })
     <link href="./css/knowledge.css" rel="stylesheet" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="./library/bootstrap.css" rel="stylesheet">
   </head>
 <body>
     <div class="knowledge_content">
     @@include('./layout/header.html')
     <main>
-        <article class="knowledge_banner_block " style="background-image: url(./images/knowledge/knowledge_banner.png);">
+        <article class="knowledge_banner_block" style="">
         </article>
         <div class="knowledge_first_block_title" >
             <div class="knowledge_first_block_title_block">
-                <p>貓咪尾巴的訊號</p>
+                <p class="knowledge_first_block_title">貓咪尾巴的訊號</p>
             </div>
         </div>
-        <article class="knowledge_first_block ">
+        <article class="knowledge_first_block">
             <div class="knowledge_first_block_background" style="background-image: url(./images/knowledge/knowledge_first_block_img.png);">
                 <img src="./images/knowledge/knowledge_first_block_decorations.png">
             </div>
-            <p class="knowledge_first_block_title_text container">
+            <p class="knowledge_first_block_title_text">
                 大家都知道貓咪的心情不好觀察，但你知道尾巴的不同晃動，其實是貓咪無意間透漏出來的秘密喔！
                 <br>
                 就跟著Catopia一探究竟吧！
             </p>
-            <div class="knowledge_first_block_contentbhox container">
-                <div class="knowledge_first_block_contentbhox_in row">
-                    <img src="./images/knowledge/knowledge_first_block_p1.png" class="col-sm-7" alt="">
-                    <div class="knowledge_first_block_contentbhox_in_text col-sm-5">
+            <div class="knowledge_first_block_contentbhox">
+                <div class="knowledge_first_block_contentbhox_in">
+                    <img src="./images/knowledge/knowledge_first_block_p1.png" alt="">
+                    <div class="knowledge_first_block_contentbhox_in_text">
                         <p>大幅左右搖擺——焦慮</p>
                         <p>與狗狗不同，當喵咪感覺焦慮的時候就會大幅度的搖擺尾巴，它們也許正在視機攻擊或者反抗，這時應該找出喵咪焦慮的原因並努力排除，否者它們很可能會做出一些不尋常的事情喲。</p>
                     </div>
@@ -63,7 +61,7 @@
                 <img src="./images/knowledge/knowledge_sec_block_decorations.png">
             </div>
             <p class="knowledge_sec_block_title_text">
-                貓跟人類不一樣，它的耳朵擁有很好的表達能力。貓耳朵不僅在聽到不同來源的聲響時<br>
+                貓跟人類不一樣，它的耳朵擁有很好的表達能力。貓耳朵不僅在聽到不同來源的聲響時
                 會改變方向，也會擺出特殊姿勢來反映情緒。
             </p>
             <div class="knowledge_sec_block_contentbhox">
@@ -98,6 +96,5 @@
     </main>
     @@include('./layout/footer.html')
     </div>
-    <script src="./library/bootstrap.bundle.js"></script>
 </body>
 </html>
