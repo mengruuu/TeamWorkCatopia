@@ -118,7 +118,11 @@ window.addEventListener("load", function () {
                 this.classList.add("food_page_item_clicked");
 
                 // 最後將畫面移動到最上方
-                window.scrollTo(0, 0);
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                  });
             });
         }
     };
