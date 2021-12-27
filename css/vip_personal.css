@@ -1,15 +1,13 @@
 .vip_personal_main {
+  width: 80%;
+  margin: 0 auto;
   font-size: 18px;
   color: #774F40;
   text-align: center;
 }
 
-.vip_personal_main .title {
-  display: inline-block;
-  margin: 20px auto;
-}
-
 .vip_personal_main .personal {
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,7 +24,8 @@
   background-color: #FFF2CC;
   padding: 15px;
   text-align: center;
-  margin: 10px;
+  margin-right: 20px;
+  border-radius: 20px;
 }
 
 .vip_personal_main .personal .left .block_left {
@@ -63,7 +62,7 @@
   background-color: #FFF2CC;
   height: inherit;
   padding: 10px;
-  margin: 10px;
+  border-radius: 20px;
 }
 
 .vip_personal_main .personal .right .block_right {

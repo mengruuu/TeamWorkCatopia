@@ -1,36 +1,13 @@
 .vip_edit_main {
-  border: 1px solid blue;
   font-size: 22px;
   color: #774F40;
   text-align: center;
 }
 
-.vip_edit_main .title {
-  background-color: #EAE4D2;
-  max-width: 1200px;
-  width: 100%;
-  margin: 20px auto;
-  margin-top: 80px;
-}
-
-.vip_edit_main .title .title_text {
-  display: inline-block;
-  padding: 10px;
-}
-
-.vip_edit_main .second_title .second_title_text {
-  font-size: 20px;
-  display: inline-block;
-  padding: 5px 50px;
-  background-color: #FFF2CC;
-  margin: 20px auto;
-  border-radius: 10px;
-}
-
 .vip_edit_main .pwd {
   width: 100%;
   max-width: 1200px;
-  margin: 50px auto;
+  margin: 0 auto;
   text-align: left;
 }
 
