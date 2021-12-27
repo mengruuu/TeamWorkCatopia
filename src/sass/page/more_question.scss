@@ -38,11 +38,31 @@ div.more_question_question_container {
                 border-bottom: 1px solid $font_color;
                 padding: 0 20px;
                 background-color: $main_color;
+                @include w700() {
+                    padding: 0 8px;
+                }
+                @include w500() {
+                    display: flex;
+                    align-items: center;
+                }
                 p{
                     display: inline-block;
                     font-size: $font_24;
                     margin: 16px 0;
                     color: $font_color;
+                    @include w900() {
+                        font-size: $font_22;
+                    }
+                    @include w700() {
+                        font-size: 18px;
+                        margin-right: 8px;
+                    }
+                    @include w600() {
+                        font-size: 16px;
+                    }
+                    @include w500() {
+                        width: 70%;
+                    }
                 }
             }
             div.more_question_question_and_answer_title::before {
@@ -51,6 +71,16 @@ div.more_question_question_container {
                 color: $font_color;
                 margin-right: 20px;
                 font-weight: bold;
+                @include w900() {
+                    font-size: $font_22;
+                }
+                @include w700() {
+                    font-size: 18px;
+                    margin-right: 8px;
+                }
+                @include w600() {
+                    font-size: 16px;
+                }
             }
             div.more_question_question_and_answer_title:hover {
                 background-color: $second_color3;
@@ -59,6 +89,16 @@ div.more_question_question_container {
             div.more_question_question_and_answer_title_open::before {
                 content: "-";
                 font-size: 40px;
+                @include w900() {
+                    font-size: 36px;
+                }
+                @include w700() {
+                    font-size: 32px;
+                    margin-right: 8px;
+                }
+                @include w600() {
+                    font-size: 28px;
+                }
             }
             div.more_question_question_and_answer_content {
                 font-size: 16px;
@@ -70,11 +110,23 @@ div.more_question_question_container {
                 p {
                     font-size: 18px;
                     margin: 0;
+                    @include w900() {
+                        font-size: 16px;
+                    }
+                    @include w700() {
+                        font-size: 14px;
+                    }
+                    @include w600() {
+                        font-size: 12px;
+                    }
                 }
             }
             div.more_question_question_and_answer_content_open {
                 display: block;
                 padding: 20px;
+                @include w700() {
+                    padding: 8px;
+                }
             }
         }
     }
@@ -88,6 +140,12 @@ div.more_question_contact_container {
     p {
         font-size: $font_24;
         color: $font_color;
+        @include w700() {
+            font-size: $font_22;
+        }
+        @include w500() {
+            font-size: 18px;
+        }
     }
     button {
         @include button();
