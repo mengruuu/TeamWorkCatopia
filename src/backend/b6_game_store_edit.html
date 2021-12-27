@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./layout/meta.html', {
+    "title" : "Catopia B5虛擬商城消費管理"
+    })
+    <link rel="stylesheet" href="../css/backend/b6_game_store_edit.css">
+</head>
+
+<body>
+    @@include('./layout/backend_header.html')
+
+    <div class="game_store_edit_title
+                game_store_edit_block">
+        <div class="game_store_edit_title">
+            <p>B6-1-2虛擬遊戲商品資料編輯</p>
+        </div>
+    </div>
+
+    <div class="game_store_edit_container">
+        <div class="game_store_edit_block">
+            <p class="game_store_edit_block_title">商品編號:</p>
+            <p class="game_store_edit_block_text">PD0001</p>
+        </div>
+
+        <div class="game_store_edit_block">
+            <p class="game_store_edit_block_title">商品名稱:</p>
+            <p class="game_store_edit_block_text">
+                <input type="text" placeholder="商品名稱">
+            </p>
+        </div>
+
+        <div class="game_store_edit_block">
+            <p class="game_store_edit_block_title">商品種類:</p>
+            <p class="game_store_edit_block_text">
+                <select name="" id="">
+                    <option value="1">裝飾品</option>
+                    <option value="2">道具</option>
+                    <option value="3">其他</option>
+                </select>
+            </p>
+        </div>
+
+        <div class="game_store_edit_block">
+            <p class="game_store_edit_block_title">商品單價:</p>
+            <p class="game_store_edit_block_text">
+                <input type="text" placeholder="0">
+            </p>
+        </div>
+
+        <div class="game_store_edit_block">
+            <p class="game_store_edit_block_title">商品圖片:</p>
+            <div class="game_store_edit_block_text">
+                <button>上傳圖片</button>
+                <!-- <ul>
+                    <li><img src="" alt=""></li>
+                </ul> -->
+            </div>
+        </div>
+
+        <div class="game_store_edit_block 
+                    text_area">
+            <p class="game_store_edit_block_title">商品介紹:</p>
+            <div class="game_store_edit_block_text  
+                        vip_edit_block_remark">
+                <textarea cols="60" rows="10"></textarea>
+            </div>
+        </div>
+
+        <div class="back_edit_button">
+            <a href="./b6_game.html"><button type="submit">取消</button></a>
+            <a href="./b6_game.html"><button type="submit">修改</button></a>
+        </div>
+    </div>
+</body>
+
+</html>
