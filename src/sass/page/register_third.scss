@@ -15,6 +15,12 @@ div.register_third_container > div.register_third_title {
     border: 1px solid $font_color;
     font-weight: bold;
     font-size: $font_24;
+    @include w900() {
+        font-size: $font_22;
+    }
+    @include w700() {
+        font-size: $font_20;
+    }
 }
 
 div.register_third_container > div.register_third_process {

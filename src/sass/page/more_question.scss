@@ -177,18 +177,27 @@ div.ai_container {
     }
     div.ai_answer {
         position: absolute;
-        bottom: 0;
-        transform: translateX(calc(-100%));
+        top: 50%;
+        transform: translate(calc(-100%), -50%);
         background-color: $second_color5;
         width: 250px;
         border-radius: 5px;
         padding: 0 20px 20px;
         display: none;
         cursor: default;
+        @include w700() {
+            width: 220px;
+            transform: translate(-40%, calc(100% + 16px));
+            padding: 16px;
+        }
         p {
             float: right;
             color: $font_color;
             font-size: $font_24;
+            @include w700() {
+                float: none;
+                font-size: 14px;
+            }
         }
         input {
             background-color: $second_color6;
@@ -197,6 +206,9 @@ div.ai_container {
             border-radius: 5px;
             border: none;
             color: $font_color;
+            @include w700() {
+                width: 85%;
+            }
         }
         input::placeholder {
             color: $font_color;
@@ -206,12 +218,15 @@ div.ai_container {
         content: "";
         position: absolute;
         right: 0;
-        top: 30px;
-        transform: translateX(100%);
+        top: 50%;
+        transform: translate(100%, -50%);
         border-left: 20px solid $second_color5;
         border-top: 10px solid rgba(255, 0, 0, 0);
         border-bottom: 10px solid rgba(255, 0, 0, 0);
         border-right: none;
+        @include w700() {
+            display: none;
+        }
     }
 
     div.ai_answer_open {
