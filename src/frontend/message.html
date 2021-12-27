@@ -18,9 +18,16 @@
                 <div></div>
             </div>
         </div>
-        <textarea class = "message_write_message_content" placeholder = "請輸入訊息..."></textarea>
-        <div class = "message_write_img_container">
-            <img class = "message_write_img_content">
+        <div class = "message_write_message_content_container">
+            <textarea class = "message_write_message_content" placeholder = "請輸入訊息..."></textarea>
+            <div class = "message_write_img_container">
+                <div class = "message_write_img_container_content">
+                    <div class = "message_write_img_container_closed">
+                        <img src = "./images/message/message_message_write_img_container_closed.png">
+                    </div>
+                    <img class = "message_write_img_content">
+                </div>
+            </div>
         </div>
         <div class = "message_write_message_img_file_and_button">
             <label class = "message_write_message_img_file_container" for = "file_upload">
@@ -92,7 +99,7 @@
                     distEl.classList.add("message_write_img_container_overflowY");
                     readFile.readAsDataURL(file);
                     readFile.addEventListener("load", function() {
-                        distEl.children[0].src = `${readFile.result}`;
+                        distEl.children[0].children[1].src = `${readFile.result}`;
                     });
                 });
             };
@@ -124,8 +131,8 @@
 
             // 上傳圖片
             upLoadImg(inputFile, message_write_img_container);
-            dragOverImg(message_write_img_container, "message_write_img_container_open");
-            droppedImg(message_write_img_container, message_write_img_container.children[0]);
+            dragOverImg(message_write_img_container.children[0], "message_write_img_container_open");
+            droppedImg(message_write_img_container.children[0], message_write_img_container.children[0].children[1]);
 
             // 點擊上傳圖片按鈕後，顯示圖片上傳區
             message_write_message_img_file_container.addEventListener("click", function() { 

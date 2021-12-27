@@ -14,22 +14,24 @@ div.message_write_message_container {
     position: fixed;
     display: none;
     flex-direction: column;
-    top: 0;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%);
     background-size: cover;
-    width: 50%;
-    // height: 80%;
+    width: 500px;
+    height: 428px;
     // border: 1px solid;
     border-radius: 15px;
     padding: 0 20px 20px;
     background-color: #fff;
     z-index: 999;
     box-shadow: 5px 5px 5px lightgray;
+    overflow-x: hidden;
     div.message_write_message_title {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-bottom: 1px solid $font_color;
         p {
             font-size: $font_24;
             color: $font_color;
@@ -56,51 +58,130 @@ div.message_write_message_container {
             }
         }
     }
-    textarea {
-        resize: none;
-        width: calc(100% - 40px);
-        height: calc(25vh - 40px);
-        outline: none;
-        border: none;
-        color: $font_color;
-    }
-    textarea::placeholder {
-        color: $font_color;
-    }
-    div.message_write_img_container {
-        width: 100%;
-        height: 20vh;
-        border: 1px dashed;
-        text-align: center;
-    }
-    div.message_write_img_container_overflowY {
+    div.message_write_message_content_container {
+        height: 300px;
+        overflow: hidden;
         // overflow-y: scroll;
-        border: none;
-        // img.message_write_img_content {
-        // }
+        // overflow-x: hidden;
+        textarea {
+            resize: none;
+            width: calc(100% - 40px);
+            height: 200px;
+            outline: none;
+            border: none;
+            color: $font_color;
+            margin-top: 16px;
+        }
+        textarea::placeholder {
+            color: $font_color;
+        }
+        div.message_write_img_container {
+            position: relative;
+            width: calc(100% - 2px);
+            padding: 10px 0 0;
+            border-radius: 20px;
+            height: 0;
+            border: none;
+            text-align: center;
+            transition: all 0.5s ease-in-out;
+            margin-top: 10px;
+            div.message_write_img_container_content {
+                position: relative;
+                height: 100%;
+                border: none;
+                border-radius: 10px;
+                overflow: hidden;
+                text-align: center;
+                margin: 0 10px;
+                transition: all 0.5s ease-in-out;
+                div.message_write_img_container_closed {
+                    position: absolute;
+                    top: 8px;
+                    right: 8px;
+                    width: 30px;
+                    height: 0;
+                    object-fit: cover;
+                    transition: all 0.5s;
+                }
+            }
+        }
+        div.message_write_img_container_overflowY {
+            // overflow-y: scroll;
+            border: none;
+            div.message_write_img_container_content {
+                img.message_write_img_content {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        div.message_write_img_container_open {
+            height: 300px;
+            border: 1px solid $font_color;
+            background-color: #fff;
+            div.message_write_img_container_content {
+                height: 290px;
+                background-color: lightgray;
+                border: 1px dashed $font_color;
+                text-align: center;
+                transition: all 0.5s ease-in-out;
+                div.message_write_img_container_closed {
+                    cursor: pointer;
+                    height: 30px;
+                    transition: all 0.5s;
+                }
+            }
+        }
     }
-    div.message_write_img_container_open {
-        height: 30vh;
+    div.message_write_message_content_container:hover {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    div.message_write_message_content_container:hover::-webkit-scrollbar {
+        width: 16px;
+    }
+    div.message_write_message_content_container:hover::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    }
+    div.message_write_message_content_container:hover::-webkit-scrollbar-thumb {
+        background-color: $font_color;
+        // background-color: $important_color;
+        border-radius: 10px;
+    }
+    div.message_write_message_content_container:hover::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        // background-color: $main_color;
     }
     div.message_write_message_img_file_and_button {
         display: flex;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
         width: 100%;
-        margin: 20px 0;
         label.message_write_message_img_file_container {
-            @include button();
-            flex: 1;
+            background-color: $important_color;
+            width: 30px;
             padding: 0;
-            text-align: center;
-            border-radius: 10px;
             color: $font_color;
             font-size: $font_20;
+            border-radius: 10px;
+            overflow: hidden;
             cursor: pointer;
+            margin-left: 40px;
+            img {
+                width: 100%;
+                height: 30px;
+                border-radius: 50%;
+                object-fit: cover
+            }
         }
         button {
             @include button();
             flex: 4;
             margin-left: 20px;
             padding: 0;
+            border-radius: 10px;
             cursor: pointer;
         }
     }
@@ -109,27 +190,27 @@ div.message_write_message_container_open {
     display: flex;
 }
 div.message_input_container {
-    padding: 10px 0;
+    padding: 5px 0;
     background-color: $second_color1;
     width: 100vw;
     div {
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
-        width: 90%;
+        width: 850px;
         margin: auto;
         img{
-            width: 10%;
-            height: 80px;
+            width: 60px;
+            height: 50px;
+            object-fit: cover;
         }
         div.input_and_laber_for_files {
             position: relative;
             margin-left: 20px;
-            width: 40%;
             input {
                 cursor: pointer;
-                height: 50px;
-                width: 100%;
+                height: 32px;
+                width: 250px;
                 border-radius: 20px;
                 outline: none;
                 border: none;
@@ -140,6 +221,7 @@ div.message_input_container {
             }
             input::placeholder {
                 color: $font_color;
+                font-size: 16px;
             }
             // label.message_img_file_container {
             //     width: 15%;
@@ -180,13 +262,16 @@ div.message_and_comment_container {
             margin-top: 16px;
             img {
                 cursor: pointer;
+                width: 35px;
+                height: 35px;
+                object-fit: cover;
             }
         }
         div.message_user_and_time_and_like {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            width: 615px;
+            width: 515px;
             margin-bottom: 16px;
             div.message_img_and_user_and_time {
                 display: flex;
@@ -195,8 +280,9 @@ div.message_and_comment_container {
                 width: 100%;
                 height: 5%;
                 img {
-                    width: 100px;
-                    height: 60.5px;
+                    width: 90px;
+                    height: 54px;
+                    object-fit: cover;
                 }
             }
             
@@ -205,7 +291,7 @@ div.message_and_comment_container {
                 flex-direction: column;
                 margin-left: 16px;
                 p {
-                    font-size: $font_24;
+                    font-size: $font_20;
                     color: $font_color;
                     margin: 0;
                 }
@@ -216,23 +302,23 @@ div.message_and_comment_container {
                 margin-right: 0;
                 background-color: $second_color2;
                 color: $font_color;
-                padding: 0 16px;
+                padding: 0 8px;
                 border-radius: 15px;
                 img {
-                    width: 30px;
-                    height: 30px;
+                    width: 20px;
+                    height: 20px;
+                    // object-fit: cover;
                 }
                 p {
                     font-size: $font_20;
-                    margin-left: 8px;
+                    margin: 10px 8px;
                 }
             }
         }
-    }
         div.message_content_and_comment {
             display: flex;
             flex-direction: column;
-            width: 535px;
+            width: 435px;
             border-radius: 15px;
             background-color: $second_color2;
             padding: 20px 40px;
@@ -240,7 +326,7 @@ div.message_and_comment_container {
             div.message_content_text {
                 p {
                     color: $font_color;
-                    font-size: $font_20;
+                    font-size: 16px;
                 }
             }
             img.message_content_img {
@@ -251,7 +337,7 @@ div.message_and_comment_container {
             }
             input {
                 padding: 8px 16px;
-                font-size: $font_20;
+                font-size: 16px;
                 color: $font_color;
                 border-radius: 20px;
                 outline: none;
@@ -279,3 +365,4 @@ div.message_and_comment_container {
             }
         }
     }
+}
