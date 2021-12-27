@@ -14,29 +14,119 @@
     <video autoplay muted loop>
       <source src="./images/index_page/video/catopia.mp4" type="video/mp4" />
     </video>
+    <div class="index_block1">
+      <p>歡迎來到Catopia,我們致力提供每位貓奴良善的購物平台, 在這裡,您可以買到貓主子的食品/用品/玩具/裝飾品</p>
+    </div>
     <main>
-      <article class="first_block container">
-        <div class="content_1 row">
-          <img class="col-12 col-md-6 col-sm-12"
-            src="./images/index_page/images/index_first_block_p1.png"
-            alt=""
-          />
-          <img class="col-12 col-md-6 col-sm-6"
-            src="./images/index_page/images/index_first_block_p3.png"
-            alt=""
-          />
-        </div>
-        <div class="content_2 row">
-          <img class="col-12 col-md-6 col-sm-12"
-            src="./images/index_page/images/index_first_block_p2.png"
-            alt=""
-          />
-          <img class="col-12 col-md-4 col-sm-6"
-            src="./images/index_page/images/index_first_block_p4.png"
-            alt=""
-          />
+      @@include('./layout/title.html',{
+        'title': "推薦商品"
+      })
+      <article class="four_block">
+        <div class="button-next" style="background-image: url(./images/index_page/icon/Vector.png);"></div>
+        <div class="button-prev" style="background-image: url(./images/index_page/icon/Vector_2.png);"></div>
+        <div class="swiper mySwiper"> 
+          <div class="swiper-wrapper" id="wrapper">
+            <div class="swiper-slide">
+              <a href="./inside.html">
+                <div class="index_swiper_block">
+                  <div class="swiper_content">
+                    <img src="./images/index_page/images/index_four_block_p1.png" alt="">
+                    <div class="swiper_text">舒適沙發</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./inside.html">
+                <div class="index_swiper_block">
+                  <div class="swiper_content">
+                    <img src="./images/index_page/images/index_four_block_p2.png" alt="">
+                    <div class="swiper_text">帥氣外套</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./inside.html">
+                <div class="index_swiper_block">
+                  <div class="swiper_content">
+                    <img src="./images/index_page/images/index_four_block_p3.png" alt="">
+                    <div class="swiper_text">神木貓窩</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./inside.html">
+                <div class="index_swiper_block">
+                  <div class="swiper_content">
+                    <img src="./images/index_page/images/index_four_block_p4.png" alt="">
+                    <div class="swiper_text">舒適沙發</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./inside.html">
+                <div class="index_swiper_block">
+                  <div class="swiper_content">
+                    <img src="./images/index_page/images/index_four_block_p5.png" alt="">
+                    <div class="swiper_text">舒適沙發</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./inside.html">
+                <div class="index_swiper_block">
+                  <div class="swiper_content">
+                    <img src="./images/index_page/images/index_four_block_p6.png" alt="">
+                    <div class="swiper_text">舒適沙發</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./inside.html">
+                <div class="index_swiper_block">
+                  <div class="swiper_content">
+                    <img src="./images/index_page/images/index_four_block_p7.png" alt="">
+                    <div class="swiper_text">舒適沙發</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./inside.html">
+                <div class="index_swiper_block">
+                  <div class="swiper_content">
+                    <img src="./images/index_page/images/index_four_block_p8.png" alt="">
+                    <div class="swiper_text">舒適沙發</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="./inside.html">
+                <div class="index_swiper_block">
+                  <div class="swiper_content">
+                    <img src="./images/index_page/images/index_four_block_p9.png" alt="">
+                    <div class="swiper_text">舒適沙發</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </article>
+    </main>
+    <div class="index_block2">
+      <p>還能替貓主子打造一個獨一無二的鮮食蛋糕哦~</p>
+    </div>
+    <main>
+      @@include('./layout/title.html',{
+        'title': "客製貓貓鮮食"
+      })
       <article class="sec_block">
         <p class="sec_title">客製鮮食</p>
         <div class="content">
@@ -76,59 +166,29 @@
           </div>
         </div>
       </article>
-      <article class="thrid_block">
-        <div class="back" >
-          <div class="frame">
-            <div class="thrid_block_content col-8">
-              <img  class="col-5" src="./images/index_page/icon/Group 296.png" alt="">
-              <p>每日新知</p>
-              <img class="col-fluid" src="./images/index_page/images/index_third_block_p1.png" alt="">
-            </div>
-            <div class="know">
-              <p>大幅左右搖擺——焦慮
-                <br>
-                <br>
-                與狗狗不同，當喵咪感覺焦慮的時候就會大幅度的搖擺尾巴，它們也許正在視機攻擊或者反抗，這時應該找出喵咪焦慮的原因並努力排除，否者它們很可能會做出一些不尋常的事情喲。</p>
-            </div>
-            <div class="thrid_block_cat">
-              <img class="thrid_block_cat" src="./images/index_page/images/index_third_block_p2.png" class="col-3">
-            </div>
-          </div>
-        </div>
-      </article>
-      <article class="four_block">
-      <div class="button-next" style="background-image: url(./images/index_page/icon/Vector.png);"></div>
-      <div class="button-prev" style="background-image: url(./images/index_page/icon/Vector_2.png);"></div>
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper" id="wrapper">
-          <div class="swiper-slide"><a href="./inside.html"><img src="./images/index_page/images/index_four_block_p1.png" alt=""></a></div>
-          <div class="swiper-slide"><a href="./inside.html"><img src="./images/index_page/images/index_four_block_p2.png" alt=""></a></div>
-          <div class="swiper-slide"><a href="./inside.html"><img src="./images/index_page/images/index_four_block_p3.png" alt=""></a></div>
-          <div class="swiper-slide"><a href="./inside.html"><img src="./images/index_page/images/index_four_block_p4.png" alt=""></a></div>
-          <div class="swiper-slide"><a href="./inside.html"><img src="./images/index_page/images/index_four_block_p5.png" alt=""></a></div>
-          <div class="swiper-slide"><a href="./inside.html"><img src="./images/index_page/images/index_four_block_p6.png" alt=""></a></div>
-          <div class="swiper-slide"><a href="./inside.html"><img src="./images/index_page/images/index_four_block_p7.png" alt=""></a></div>
-          <div class="swiper-slide"><a href="./inside.html"><img src="./images/index_page/images/index_four_block_p8.png" alt=""></a></div>
-          <div class="swiper-slide"><a href="./inside.html"><img src="./images/index_page/images/index_four_block_p9.png" alt=""></a></div>
-        </div>
-      </div>
-    </article>
   </main>
-  <div class="index_background" style="background-image: url(./images/index_page/images/index_bammer.png);"></div>
+
+  <div class="index_block2">
+    <p>有趣好玩的都在這!</p>
+  </div>
   <main>
     <article class="fifth_block container">
       <div class="cat sm-12">
         <img class="frame" src="./images/index_page/images/index_frame.png" alt="">
         <img class="cat" src="./images/index_page/images/index_fifth_block_p1.png" alt="">
         
-        <div class="fifth_block_background col-10">
+        <div class="fifth_block_background">
           <div class="fifth_block_text_first">
 
             <div class="fifth_block_text_first_cat fifth_block_item">
               <img src="./images/index_page/images/index_fifth_block_p2.png" alt="">
             </div>
 
-            <img src="./images/index_page/images/index_fifth_foot.png" alt="">
+            <div class="index_post_text">
+              <p>
+              快來留言板跟其他貓奴交流, 也向朋友炫耀專屬的頭像配備吧!
+              </p>
+            </div>
             <a class="gogo" href="./message.html"><p>留言板GOGO--></p></a>
           </div>
 
