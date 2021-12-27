@@ -293,11 +293,7 @@ article.sec_block .sec_block_content_1 .sec_block_contnent_img .reset {
 
 div.background_pop {
   border-radius: 15px;
-<<<<<<< HEAD
   background-color: #D6DDC0;
-=======
-  background-color: #EDDAB8;
->>>>>>> a1e143bba82b9fd48ff164e2c3119f819d313767
   position: fixed;
   left: 50%;
   -webkit-transform: translateX(-50%);

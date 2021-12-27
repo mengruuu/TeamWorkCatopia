@@ -54,8 +54,8 @@ main {
 }
 
 p.knowledge_first_block_title_text {
-    margin-left: 150px;
-    margin-top: 167px;
+    // margin-left: 150px;
+    // margin-top: 167px;
     line-height: 40px;
 }
 
@@ -64,22 +64,28 @@ p.knowledge_first_block_title_text {
 }
 
 .knowledge_first_block_contentbhox {
+    border: 1px solid red;
     margin: 0 auto;
     width: fit-content;
     margin-top: 85px;
 
     .knowledge_first_block_contentbhox_in {
-        transform: translateX(-10%);
+        border: 1px solid black;
+        width: fit-content;
+        margin: 0 auto;
+        // transform: translateX(-10%);
 
         .knowledge_first_block_contentbhox_in_text {
             background-color: $second_color1;
-            width: 570px;
+            // width: 570px;
             position: relative;
-            top: -120px;
-            left: 400px;
+            height: fit-content;
             padding: 10px 20px 10px 20px;
             border-radius: 15px;
             box-shadow: $shadow_box;
+            position: relative;
+            top: -80px;
+            left: 300px;
 
             :nth-child(1) {
                 font-size: $font_22;
@@ -91,6 +97,8 @@ p.knowledge_first_block_title_text {
         }
     }
 }
+
+
 
 //第二區開始
 .knowledge_sec_block_title {
