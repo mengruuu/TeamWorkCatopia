@@ -5,7 +5,12 @@
   color: #774F40;
 }
 
-.gacha_main .title {
+.gacha_main .except_bkgimg {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.gacha_main .except_bkgimg .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,20 +22,64 @@
           justify-content: space-between;
 }
 
-.gacha_main .title img {
-  margin: 0 20px;
+@media all and (max-width: 900px) {
+  .gacha_main .except_bkgimg .title img {
+    width: 150px;
+  }
 }
 
-.gacha_main .title .titletext {
+@media all and (max-width: 700px) {
+  .gacha_main .except_bkgimg .title img {
+    width: 120px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .gacha_main .except_bkgimg .title img {
+    width: 100px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .gacha_main .except_bkgimg .title img {
+    width: 80px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .gacha_main .except_bkgimg .title img {
+    width: 60px;
+  }
+}
+
+.gacha_main .except_bkgimg .title .titletext {
   height: auto;
   font-size: 30px;
-  margin: 30px;
+  margin: 30px 0;
   background-color: #EDDAB8;
   border-radius: 15px;
   padding: 5px 10px;
 }
 
-.gacha_main .box {
+@media all and (max-width: 600px) {
+  .gacha_main .except_bkgimg .title .titletext {
+    font-size: 22px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .gacha_main .except_bkgimg .title .titletext {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .gacha_main .except_bkgimg .title .titletext {
+    margin-bottom: 10px;
+  }
+}
+
+.gacha_main .except_bkgimg .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,16 +92,12 @@
   padding-bottom: 10px;
 }
 
-.gacha_main .box img {
-  width: 250px;
-}
-
-.gacha_main .box .leftbox img:hover {
+.gacha_main .except_bkgimg .box .leftbox img:hover {
   -webkit-transform: scale(1.2, 1.2);
           transform: scale(1.2, 1.2);
 }
 
-.gacha_main .box .leftbox_text {
+.gacha_main .except_bkgimg .box .leftbox_text {
   font-size: 24px;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -63,17 +108,71 @@
   opacity: .9;
 }
 
-.gacha_main .box .question {
+@media all and (max-width: 600px) {
+  .gacha_main .except_bkgimg .box .leftbox_text {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .gacha_main .except_bkgimg .box .leftbox_text {
+    font-size: 16px;
+    padding: 5px 5px;
+  }
+}
+
+.gacha_main .except_bkgimg .box .question {
   margin: 0 100px;
-  width: 200px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
-.gacha_main .box .rightbox img:hover {
+@media all and (max-width: 900px) {
+  .gacha_main .except_bkgimg .box .question {
+    margin: 0 90px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .gacha_main .except_bkgimg .box .question {
+    width: 120px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .gacha_main .except_bkgimg .box .question {
+    margin: 0 70px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .gacha_main .except_bkgimg .box .question {
+    width: 100px;
+    margin: 0 50px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .gacha_main .except_bkgimg .box .question {
+    width: 80px;
+    margin: 0 40px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .gacha_main .except_bkgimg .box .question {
+    width: 60px;
+    margin: 0 20px;
+  }
+}
+
+.gacha_main .except_bkgimg .box .rightbox img:hover {
   -webkit-transform: scale(1.2, 1.2);
           transform: scale(1.2, 1.2);
 }
 
-.gacha_main .box .rightbox_text {
+.gacha_main .except_bkgimg .box .rightbox_text {
   font-size: 24px;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -82,5 +181,18 @@
   padding: 5px 10px;
   text-align: center;
   opacity: .9;
+}
+
+@media all and (max-width: 600px) {
+  .gacha_main .except_bkgimg .box .rightbox_text {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .gacha_main .except_bkgimg .box .rightbox_text {
+    font-size: 16px;
+    padding: 5px 5px;
+  }
 }
 /*# sourceMappingURL=gacha.css.map */
