@@ -14,8 +14,20 @@
   margin: 50px;
 }
 
+@media all and (max-width: 900px) {
+  .cart_step4_next_step button {
+    font-size: 18px;
+  }
+}
+
 .cart_step4_container p {
   font-size: 30px;
   font-weight: bold;
+}
+
+@media all and (max-width: 900px) {
+  .cart_step4_container p {
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=cart_step4.css.map */

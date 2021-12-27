@@ -7,7 +7,12 @@
   color: #774F40;
 }
 
-.vip_main .title {
+.vip_main .except_bkgimg {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.vip_main .except_bkgimg .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,22 +23,34 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: center;
-  padding-top: 20px;
 }
 
-.vip_main .title .titletext {
+.vip_main .except_bkgimg .title .titletext {
   height: auto;
   font-size: 30px;
   margin: 30px auto;
-  margin-bottom: 10px;
+  margin-top: 50px;
   background-color: #EDDAB8;
   border-radius: 15px;
-  padding: 5px 30px;
+  padding: 5px 20px;
   -webkit-box-shadow: 1px 1px 1px lightgray;
           box-shadow: 1px 1px 1px lightgray;
 }
 
-.vip_main .galaxy {
+@media all and (max-width: 600px) {
+  .vip_main .except_bkgimg .title .titletext {
+    font-size: 22px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .vip_main .except_bkgimg .title .titletext {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+.vip_main .except_bkgimg .galaxy {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,16 +64,17 @@
   text-align: center;
 }
 
-.vip_main .galaxy .leftgalaxy {
+.vip_main .except_bkgimg .galaxy .leftgalaxy {
   position: relative;
-  padding: 25px 10px;
 }
 
-.vip_main .galaxy .leftgalaxy .leftgalaxy img {
-  padding: 21px 0;
+@media all and (max-width: 600px) {
+  .vip_main .except_bkgimg .galaxy .leftgalaxy img {
+    width: 400px;
+  }
 }
 
-.vip_main .galaxy .leftgalaxy .leftgalaxy_text {
+.vip_main .except_bkgimg .galaxy .leftgalaxy .leftgalaxy_text {
   -webkit-box-shadow: 1px 1px 1px lightgray;
           box-shadow: 1px 1px 1px lightgray;
   position: absolute;
@@ -73,25 +91,61 @@
   opacity: .8;
 }
 
-.vip_main .galaxy .leftgalaxy:hover {
+@media all and (max-width: 900px) {
+  .vip_main .except_bkgimg .galaxy .leftgalaxy .leftgalaxy_text {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .vip_main .except_bkgimg .galaxy .leftgalaxy .leftgalaxy_text {
+    font-size: 16px;
+    top: 40%;
+    left: 40%;
+    -webkit-transform: translate(-40%);
+            transform: translate(-40%);
+  }
+}
+
+@media all and (max-width: 500px) {
+  .vip_main .except_bkgimg .galaxy .leftgalaxy .leftgalaxy_text {
+    top: 80%;
+    left: 25%;
+    -webkit-transform: translate(-15%);
+            transform: translate(-15%);
+  }
+}
+
+@media all and (max-width: 400px) {
+  .vip_main .except_bkgimg .galaxy .leftgalaxy .leftgalaxy_text {
+    top: 80%;
+    left: 15%;
+    -webkit-transform: translate(-5%);
+            transform: translate(-5%);
+    padding: 2px 2px;
+  }
+}
+
+.vip_main .except_bkgimg .galaxy .leftgalaxy:hover {
   -webkit-transform: scale(1.2, 1.2);
           transform: scale(1.2, 1.2);
 }
 
-.vip_main .galaxy .middlelogo {
-  margin: 80px 50px;
-  padding: 30px 0;
+.vip_main .except_bkgimg .galaxy .middlelogo {
+  margin-top: 10%;
 }
 
-.vip_main .galaxy .rightgalaxy {
+.vip_main .except_bkgimg .galaxy .rightgalaxy {
   position: relative;
 }
 
-.vip_main .galaxy .rightgalaxy .rightgalaxy img {
-  padding: 21px 0;
+@media all and (max-width: 600px) {
+  .vip_main .except_bkgimg .galaxy .rightgalaxy img {
+    width: 400px;
+  }
 }
 
-.vip_main .galaxy .rightgalaxy .rightgalaxy_text {
+.vip_main .except_bkgimg .galaxy .rightgalaxy .rightgalaxy_text {
   -webkit-box-shadow: 1px 1px 1px lightgray;
           box-shadow: 1px 1px 1px lightgray;
   position: absolute;
@@ -108,7 +162,42 @@
   opacity: .8;
 }
 
-.vip_main .galaxy .rightgalaxy:hover {
+@media all and (max-width: 900px) {
+  .vip_main .except_bkgimg .galaxy .rightgalaxy .rightgalaxy_text {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .vip_main .except_bkgimg .galaxy .rightgalaxy .rightgalaxy_text {
+    font-size: 16px;
+    top: 40%;
+    left: 40%;
+    -webkit-transform: translate(-40%);
+            transform: translate(-40%);
+  }
+}
+
+@media all and (max-width: 500px) {
+  .vip_main .except_bkgimg .galaxy .rightgalaxy .rightgalaxy_text {
+    top: 80%;
+    left: 25%;
+    -webkit-transform: translate(-15%);
+            transform: translate(-15%);
+  }
+}
+
+@media all and (max-width: 400px) {
+  .vip_main .except_bkgimg .galaxy .rightgalaxy .rightgalaxy_text {
+    top: 80%;
+    left: 15%;
+    -webkit-transform: translate(5%);
+            transform: translate(5%);
+    padding: 2px 2px;
+  }
+}
+
+.vip_main .except_bkgimg .galaxy .rightgalaxy:hover {
   -webkit-transform: scale(1.2, 1.2);
           transform: scale(1.2, 1.2);
 }
