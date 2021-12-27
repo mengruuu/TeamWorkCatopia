@@ -2,18 +2,16 @@
 <html lang="zh-tw">
     @@include('./layout/meta.html', { "title" : "豆知識專欄" })
     <link href="./css/knowledge.css" rel="stylesheet" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="../sass/page/bootstrap.css" rel="stylesheet">
   </head>
 <body>
     <div class="knowledge_content">
     @@include('./layout/header.html')
     <main>
-        <article class="knowledge_banner_block" style="background-image: url(./images/knowledge/knowledge_banner.png);">
+        <article class="knowledge_banner_block" style="">
         </article>
         <div class="knowledge_first_block_title" >
             <div class="knowledge_first_block_title_block">
-                <p>貓咪尾巴的訊號</p>
+                <p class="knowledge_first_block_title">貓咪尾巴的訊號</p>
             </div>
         </div>
         <article class="knowledge_first_block">
@@ -63,7 +61,7 @@
                 <img src="./images/knowledge/knowledge_sec_block_decorations.png">
             </div>
             <p class="knowledge_sec_block_title_text">
-                貓跟人類不一樣，它的耳朵擁有很好的表達能力。貓耳朵不僅在聽到不同來源的聲響時<br>
+                貓跟人類不一樣，它的耳朵擁有很好的表達能力。貓耳朵不僅在聽到不同來源的聲響時
                 會改變方向，也會擺出特殊姿勢來反映情緒。
             </p>
             <div class="knowledge_sec_block_contentbhox">
@@ -98,31 +96,5 @@
     </main>
     @@include('./layout/footer.html')
     </div>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-
-// Global settings:
-
-disable: false,
-startEvent: 'DOMContentLoaded',
-initClassName: 'aos-init',
-animatedClassName: 'aos-animate',
-useClassNames: false,
-disableMutationObserver: false,
-debounceDelay: 50,
-throttleDelay: 99,
-
-// 透過 data-aos 來設定相關元素
-
-offset: 120,        // 移動距離 (單位為像素)
-delay: 0,            // 延遲時間，範圍從 0-3000
-duration: 400,   // 完成動畫所需的時間，範圍從 0-3000
-easing: 'ease',   // 動畫曲線
-once: false,       // 動畫是否只跑一次
-mirror: false,
-anchorPlacement: 'top',  // 動畫觸發的位置
-});
-      </script>
 </body>
 </html>
