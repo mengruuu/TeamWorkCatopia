@@ -13,24 +13,54 @@ video{
     // height: 500px;
 }
 main{
-    // border: 1px solid blue;
+    border: 1px solid blue;
     width: 80%;
     text-align: center;
     margin: 0 auto;
+    
+}
+div.index_block1{
+    border: 1px solid red;
+    background-image: url('../images/index_page/block/index_block1.png');
+    height: 160px;
+    background-repeat: no-repeat;
+    padding: 50px 20%;
+    p{
+        font-size: $font_32;
+        color: $font_color;
+        text-align: center;
+    }
+    
+}
+div.index_block2{
+    border: 1px solid red;
+    background-image: url('../images/index_page/block/index_block2.png');
+    height: 160px;
+    background-repeat: no-repeat;
+    padding: 40px 20%;
+    padding-top: 80px;
+    p{
+        font-size: $font_32;
+        color: $font_color;
+        text-align: center;
+    }
+    
 }
 .first_block{
-    // border: 1px solid red;
+    border: 1px solid red;
     width: 100%;
     margin-top: 50px;
     padding: 0%;
     .content_1{
-        // border: 1px solid black;
+        border: 1px solid black;
         font-size: 0;
         img:nth-child(1){
+            border: 1px solid orange;
             padding: 0;
             height: 100%;
         }
         img:nth-child(2){
+            border: 1px solid rebeccapurple;
             padding: 0;
             height: 100%;
             position: relative;
@@ -39,13 +69,16 @@ main{
         }
     }
     .content_2{
+        border: 1px solid green;
         flex-direction: row-reverse;
         padding: 0;
         img:nth-child(1){
+            border: 1px solid orange;
             padding: 0;
             height: 100%;
         }
         img:nth-child(2){
+            border: 1px solid purple;
             padding: 0;
             height: 100%;
             position: relative;
@@ -56,14 +89,13 @@ main{
 }
 article.sec_block{
     background-color: $second_color5;
-    // border: 1px solid red;
+    border: 1px solid red;
     width: 90%;
     border-radius: 15px;
     padding-bottom: 10px;
     padding-top: 10px;
     margin: 0 auto;
-    margin-top: 80px;
-    margin-bottom: 150px;
+    margin-bottom: 20px;
     box-shadow: $shadow_box;
     p.sec_title{
         // border: 1px solid orange;
@@ -241,12 +273,38 @@ div.back{
     }
 }
 .four_block{
-    // border: 1px solid red;
-    width: 80%;
+    border: 1px solid red;
+    width: 90%;
     position: relative;
     margin: 0 auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
+    div.index_swiper_block{
+        border: 1px solid orange;
+        background-color: $second_color3;
+        // transform: scale(1.1);
+        border-radius: 20px;
+        padding: 20px 10px;
+        div.swiper_content{
+            position: relative;
+            margin: 0 auto;
+            // border:1px solid blue;
+            width: 100%;
+            div.swiper_text{
+                // border:1px solid black;
+                height: 30px;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                background-color: #DBDAD799;
+                text-align: center;
+                padding: 10px 0;
+                color: $font_color;
+                font-size: $font_22;
+                font-weight: bolder;
+            }
+        }
+        
+    }
     .button-next{
         background-repeat: no-repeat;
         height: 64px;
@@ -293,6 +351,7 @@ div.back{
     }
 }
 .fifth_block_background{
+    width: 90%;
     box-sizing: border-box;
     background-color: $main_color;
     border: 15px solid $font_color;
@@ -302,14 +361,14 @@ div.back{
     margin: 0 auto;
     .fifth_block_text_first{
         text-align: center;
-        // border: 1px solid red;
+        border: 1px solid red;
         margin-top: 20px;
         position: relative;
         div.fifth_block_item{
+            border:1px solid black;
             margin-left: 30px;
             border-radius: 20px;
-            margin-right: 80%;
-
+            margin-top: 50px;
             width: 40%;
             display: inline-block;
             background-image: url('../images/index_page/images/index_fifth_block_backimg.png');
@@ -322,18 +381,27 @@ div.back{
             }
         }
 
-        >img{
-            // border: 1px solid red;
-            position: absolute;
-            top: 0;
-            right: 0;
-            // width: 20%;
-            height: 250px;
+        >div.index_post_text{
+            border: 1px solid red;
+            display: inline-block;
+            width: 40%;
+            margin-left: 100px;
+            height: 300px;
             vertical-align: top;
+            background-image: url('../images/index_page/block/index_sticker.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            p{
+                margin: 0 65px;
+                margin-top: 80px;
+                border:1px solid black;
+                font-size: $font_24;
+                color: $font_color;
+            }
         }
         a.gogo{
             display: inline-block;
-            // border: 1px solid red;
+            border: 1px solid red;
             text-align: center;
             z-index: 5;
             
