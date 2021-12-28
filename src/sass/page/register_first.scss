@@ -126,6 +126,14 @@ div.register_first_container > form > div.register_first_input > div:last-child 
     display: none;
 }
 
+div.register_first_container > form > div.register_first_input > div:last-child > div > i.hide_close {
+    display: none;
+}
+
+div.register_first_container > form > div.register_first_input > div:last-child > div > i.show_open {
+    display: inline-block;
+}
+
 div.register_first_container > form > div.register_first_input > div:last-child > input {
     width: 80%;
     line-height: 2;
