@@ -51,9 +51,9 @@ window.addEventListener("load", function () {
         // 總共有幾頁
         let pages = Math.ceil(foodProducts.length / 6);
 
-        // 將商品每6筆放入一個陣列裡並且推進totalPage同時將頁簽加上去
+        // 將商品每8筆放入一個陣列裡並且推進totalPage同時將頁簽加上去
         for (let i = 1; i <= pages; i = i + 1) {
-            totalPage.push(foodProducts.slice((i - 1) * 6, i * 6));
+            totalPage.push(foodProducts.slice((i - 1) * 8, i * 8));
             food_product_page_chose_container.insertAdjacentHTML("beforeend", `<li class = "food_page_item" data-page = ${i}>${i}</li>`);
         }
 
