@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layout/meta.html', {
+      "title" : "商品頁_用品專區"
+    })
+    <link rel="stylesheet" href="./css/use.css">
+    <script src="./js/frontend/use.js" async></script>
+</head>
+<body>
+    @@include('./layout/header.html')
+    <!-- <div class = "use_banner_container">
+        <img src = "./images/use/use_banner.png">
+    </div> -->
+    <div class = "use_search_container">
+        <div class = "use_search_and_index_container">
+            <div class = "use_index">
+                <p>首頁/主子用品/用品專區</p>
+            </div>
+            <div class = "use_search_and_search_button">
+                <input type = "text" placeholder = "請輸入搜尋商品..." class = "input_search_product">
+                <ul class = "use_search_content">
+                </ul>
+                <div class = "use_search_button" style = "background-image: url(./images/food/food_search_button.png);"></div>
+            </div>
+        </div>
+    </div>
+    <div class = "use_filter_container_and_use_product_overview">
+        <ul class = "use_filter_container">
+            <li>
+                <p>用品專區</p>
+            </li>
+            <li>
+                <p>居家用品</p>
+                <hr>
+                <ul>
+                    <li class = "use_filter_condition_item" data-useCondition = "use_filter_condition_six">貓砂盆與貓砂</li>
+                    <li class = "use_filter_condition_item" data-useCondition = "use_filter_condition_eighteen">抓抓板</li>
+                    <li class = "use_filter_condition_item" data-useCondition = "use_filter_condition_eighteen">造型小窩</li>
+                    <li class = "use_filter_condition_item" data-useCondition = "use_filter_condition_eighteen">食器相關</li>
+                </ul>
+                <p>外出用品</p>
+                <hr>
+                <ul>
+                    <li class = "use_filter_condition_item" data-useCondition = "use_filter_condition_six">外出籠與包包</li>
+                    <li class = "use_filter_condition_item" data-useCondition = "use_filter_condition_eighteen">外出食盆</li>
+                </ul>
+            </li>
+        </ul>
+        <div class = "use_product_overview">
+            <!-- <div class = "use_product_overview_item">
+                <img class = "use_product_overview_item_img" src = "./images/use/use_overview_RAINCOAST_1.png">
+                <div class = "use_product_title_and_price_and_button">
+                    <div class = "use_product_title_and_price">
+                        <p>商品名稱</p>
+                        <p>$300</p>
+                    </div>
+                    <div class = "use_product_content_button" style = "background-image: url(./images/use/use_go_to_products_content_button.png);"></div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <ul class = "use_product_page_chose_container">
+        <!-- <li class = "use_product_pre_page_button">&lt;</li>
+            <li class = "use_product_next_page">&gt;</li> -->
+    </ul>
+    <!-- 下面是假資料 -->
+    <article class=" use_product_history">
+        <div class=" use_product_history_text">
+            <p>你剛剛看過的</p>
+        </div>
+        <div class=" use_product_history_product">
+            <img src="./images/inside_page/images/inside_three_block_p1.png" alt="">
+            <img src="./images/inside_page/images/inside_three_block_p2.png" alt="">
+            <img src="./images/inside_page/images/inside_three_block_p3.png" alt="">
+            <img src="./images/inside_page/images/inside_three_block_p4.png" alt="">
+        </div>
+    </article>
+    @@include('./layout/hamburger.html')
+    @@include('./layout/footer.html')
+</body>
+</html>

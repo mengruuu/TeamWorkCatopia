@@ -11,9 +11,93 @@
     @@include('./layout/title.html',{
         "title" : "訂單明細-訂單編號：O0001"
     })
+    <!-- @@include('./layout/title.html',{
+        "title" : "訂單編號：O0001"
+    }) -->
 
     <main class="vip_order_detail_main">
-        <table>
+        <div class="vip_order_detail_container">
+            <div class="vip_order_detail_title">
+                <div class="vip_order_detail_item">
+                    <p>商品</p>
+                </div>
+                <div class="vip_order_detail_type">
+                </div>
+                <div class="vip_order_detail_number">
+                    <p>數量</p>
+                </div>
+                <div class="vip_order_detail_price">
+                    <p>單價</p>
+                </div>
+            </div>
+    
+            <div class="vip_order_detail_buy_item1">
+                <div class="vip_order_detail_item">
+                    <img src="https://via.placeholder.com/185x185">
+                    <p>這是商品名稱</p>
+                </div>
+                <div class="vip_order_detail_type">
+                    <p>Type1</p>
+                </div>
+                <div class="vip_order_detail_number">
+                    <p>
+                        <input type="number" value="1">
+                    </p>
+                </div>
+                <div class="vip_order_detail_price">
+                    <p>300　元</p>
+                </div>
+            </div>
+    
+            <div class="vip_order_detail_buy_item1 vip_order_detail_buy_item2">
+                <div class="vip_order_detail_item">
+                    <img src="https://via.placeholder.com/185x185">
+                    <p>這是商品名稱</p>
+                </div>
+                <div class="vip_order_detail_type">
+                    <p>Type1</p>
+                </div>
+                <div class="vip_order_detail_number">
+                    <p>
+                        <input type="number" value="1">
+                    </p>
+                </div>
+                <div class="vip_order_detail_price">
+                    <p>300　元</p>
+                </div>
+            </div>
+    
+            <div class="vip_order_detail_total_price">
+                <div class="vip_order_detail_item_total_price">
+                    <p>商品總額</p>
+                    <p>600　元</p>
+                </div>
+                <div class="vip_order_detail_fee">
+                    <p>運費</p>
+                    <p>0　元</p>
+                </div>
+            </div>
+    
+            <!-- <div class="vip_order_detail_total_price">
+                <div class="vip_order_detail_point">
+                    <p>您的點數</p>
+                    <p>500　點</p>
+                </div>
+                <div class="vip_order_detail_point">
+                    <p>點數折抵</p>
+                    <p>500　點</p>
+                    <p><input type="text" value="0">　點</p>
+                </div>
+            </div> -->
+    
+            <div class="vip_order_detail_total_price">
+                <div class="vip_order_detail_order_price">
+                    <p>訂單總額</p>
+                    <p>600　元</p>
+                </div>
+            </div>
+        </div>
+        <!-- <table>
             <tr>
                 <td>商品</td>
                 <td>規格</td>
@@ -52,7 +136,7 @@
                     <div class="total">1298元</div>
                 </td>
             </tr>
-        </table>
+        </table> -->
         <!-- <div class="total_pay">
             <div class="total_pay_left">
                 商品總額

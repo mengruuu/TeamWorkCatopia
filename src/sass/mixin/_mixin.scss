@@ -47,6 +47,22 @@
     }
 }
 
+
+@mixin w1580() {
+    @media all and (max-width:1580px) {
+        @content;
+    }
+}
+@mixin w1480() {
+    @media all and (max-width:1480px) {
+        @content;
+    }
+}
+@mixin w1380() {
+    @media all and (max-width:1380px) {
+        @content;
+    }
+}
 @mixin w1200() {
     @media all and (max-width:1200px) {
         @content;

@@ -94,6 +94,14 @@ p.cart_step1_this_step {
     background-color: $main_color;
 }
 
+.cart_step1_container img{
+    width: 50%;
+
+    @include w900(){
+        width: 30%;
+    }
+}
+
 .cart_step1_title {
     width: 100%;
     display: flex;
@@ -249,6 +257,7 @@ div.cart_step1_item:first-child{
 
     @include w900(){
         font-size: $font_20;
+        padding: 10px 70px;
     }
 }
 

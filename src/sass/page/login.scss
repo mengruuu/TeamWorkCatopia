@@ -4,6 +4,9 @@
 div.login_container {
     display: flex;
     padding: 50px 0;
+    @include w900() {
+        flex-direction: column;
+    }
 }
 
 div.login_container > div.login_item {
@@ -14,11 +17,49 @@ div.login_container > div.login_item {
     align-items: center;
 }
 
+div.login_container > div.login_item > img {
+    width: 471px;
+    object-fit: cover;
+    @include w1100() {
+        width: 450px;
+    }
+    @include w1000() {
+        width: 420px;
+    }
+    @include w700() {
+        width: 380px;
+    }
+    @include w600() {
+        width: 340px;
+    }
+    @include w500() {
+        width: 300px;
+    }
+    @include w400() {
+        width: 280px;
+    }
+}
+
 div.login_container > div.login_item > form {
     position: relative;
     display: flex;
     flex-direction: column;
     width: 66%;
+    @include w900() {
+        width: 420px;
+    }
+    @include w700() {
+        width: 380px;
+    }
+    @include w600() {
+        width: 340px;
+    }
+    @include w500() {
+        width: 300px;
+    }
+    @include w400() {
+        width: 280px;
+    }
 }
 
 div.login_container > div.login_item > form > div.login_input_and_icon {
@@ -55,6 +96,9 @@ div.login_container > div.login_item > form > button:hover {
 
 div.login_container > div.login_item > div.login_register_button_and_icon {
     text-align: center;
+    @include w900() {
+        margin-bottom: 50px;
+    }
 }
 
 div.login_container > div.login_item > div.login_register_button_and_icon > a {
@@ -68,10 +112,31 @@ div.login_container > div.login_item > div.login_register_button_and_icon > div.
     align-items: center;
     justify-content: center;
     margin: 16px 0;
+    @include w600() {
+        width: 240px;
+        margin: 16px auto;
+        justify-content: space-between;
+    }
+    @include w500() {
+        width: 200px;
+        margin: 16px auto;
+    }
+    @include w400() {
+        width: 280px;
+        margin: 16px auto;
+    }
 }
 
 div.login_container > div.login_item > div.login_register_button_and_icon > div.login_hr_and_icon > div.login_hr > span {
     font-size: $font_20;
+    @include w900() {
+        flex: 1;
+        font-size: 16px;
+    }
+    @include w700() {
+        flex: 1;
+        font-size: 14px;
+    }
 }
 
 div.login_container > div.login_item > div.login_register_button_and_icon > div.login_hr_and_icon > div.login_hr > div.login_hr_line {
@@ -79,6 +144,9 @@ div.login_container > div.login_item > div.login_register_button_and_icon > div.
     width: calc(50% - 35px);
     border-top: 1px solid $font_color;
     vertical-align: middle;
+    @include w600() {
+        flex: 1;
+    }
 }
 
 div.login_container > div.login_item > div.login_register_button_and_icon > div.login_hr_and_icon > div.login_hr > span {
@@ -87,8 +155,20 @@ div.login_container > div.login_item > div.login_register_button_and_icon > div.
 
 div.login_container > div.login_item > div.login_register_button_and_icon > div.login_hr_and_icon > a {
     text-decoration: none;
+    @include w900() {
+        font-size: 14px;
+    }
+    @include w700() {
+        font-size: 12px;
+    }
 }
 
 div.login_container > div.login_item > div.login_register_button_and_icon > div.login_hr_and_icon > a > img {
     margin: 0 20px;
+    @include w900() {
+        margin: 0 18px;
+    }
+    @include w700() {
+        margin: 0 16px;
+    }
 }

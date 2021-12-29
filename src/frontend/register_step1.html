@@ -6,6 +6,7 @@
     })
     <link rel="stylesheet" href="./css/register_first.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
 </head>
 <body>
     @@include('./layout/header.html')
@@ -36,12 +37,7 @@
                     <input type = "text">
                     <label>請輸入密碼</label>
                     <input type = "password">
-                    <div>
-                        <label>重新輸入密碼</label>
-                        <i class="far fa-eye-slash"></i>
-                        <i class="far fa-eye register_first_icon_hide"></i>
-                    </div>
-                    <input type = "password">
+                    <div id = "register_step1_app"></div>
                 </div>
             </div>
             <div class = "register_first_circle"></div>
@@ -70,18 +66,7 @@
             <button type = "button" class = "register_step1_next_step_button">下一步　確認資料</button>
         </form>
     </div>
-    <script>
-        ;(function() {
-            const register_step1_next_step_button = document.querySelector("button.register_step1_next_step_button");
-
-
-
-
-            register_step1_next_step_button.addEventListener("click", function() {
-                window.location.href = "/dist/register_step2.html";
-            });
-        })()
-    </script>
     @@include('./layout/footer.html')
+    <script src = "./js/frontend/register_step1.js"></script>
 </body>
 </html>

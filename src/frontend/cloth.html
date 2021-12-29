@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layout/meta.html', {
+      "title" : "商品頁_裝飾品"
+    })
+    <link rel="stylesheet" href="./css/cloth.css">
+    <script src="./js/frontend/cloth.js" async></script>
+</head>
+<body>
+    @@include('./layout/header.html')
+    <!-- <div class = "cloth_banner_container">
+        <img src = "./images/cloth/cloth_banner.png">
+    </div> -->
+    <div class = "cloth_search_container">
+        <div class = "cloth_search_and_index_container">
+            <div class = "cloth_index">
+                <p>首頁/主子用品/裝飾品</p>
+            </div>
+            <div class = "cloth_search_and_search_button">
+                <input type = "text" placeholder = "請輸入搜尋商品..." class = "input_search_product">
+                <ul class = "cloth_search_content">
+                </ul>
+                <div class = "cloth_search_button" style = "background-image: url(./images/food/food_search_button.png);"></div>
+            </div>
+        </div>
+    </div>
+    <div class = "cloth_filter_container_and_cloth_product_overview">
+        <ul class = "cloth_filter_container">
+            <li>
+                <p>裝飾品</p>
+                <ul>
+                    <li class = "cloth_filter_condition_item" data-clothCondition = "cloth_filter_condition_six">頭套</li>
+                    <li class = "cloth_filter_condition_item" data-clothCondition = "cloth_filter_condition_eighteen">衣服</li>
+                    <li class = "cloth_filter_condition_item" data-clothCondition = "cloth_filter_condition_eighteen">配件</li>
+                </ul>
+            </li>
+        </ul>
+        <div class = "cloth_product_overview">
+            <!-- <div class = "cloth_product_overview_item">
+                <img class = "cloth_product_overview_item_img" src = "./images/cloth/cloth_overview_RAINCOAST_1.png">
+                <div class = "cloth_product_title_and_price_and_button">
+                    <div class = "cloth_product_title_and_price">
+                        <p>商品名稱</p>
+                        <p>$300</p>
+                    </div>
+                    <div class = "cloth_product_content_button" style = "background-image: url(./images/cloth/cloth_go_to_products_content_button.png);"></div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <ul class = "cloth_product_page_chose_container">
+        <!-- <li class = "cloth_product_pre_page_button">&lt;</li>
+            <li class = "cloth_product_next_page">&gt;</li> -->
+    </ul>
+    <!-- 下面是假資料 -->
+    <article class=" cloth_product_history">
+        <div class=" cloth_product_history_text">
+            <p>你剛剛看過的</p>
+        </div>
+        <div class=" cloth_product_history_product">
+            <img src="./images/inside_page/images/inside_three_block_p1.png" alt="">
+            <img src="./images/inside_page/images/inside_three_block_p2.png" alt="">
+            <img src="./images/inside_page/images/inside_three_block_p3.png" alt="">
+            <img src="./images/inside_page/images/inside_three_block_p4.png" alt="">
+        </div>
+    </article>
+    @@include('./layout/hamburger.html')
+    @@include('./layout/footer.html')
+</body>
+</html>
