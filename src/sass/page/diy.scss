@@ -17,7 +17,6 @@ article.first_block {
         margin: 0;
         margin-left: 3%;
         z-index: 1;
-
         span {
             position: relative;
             bottom: 23px;
@@ -61,6 +60,7 @@ article.sec_block {
                 align-items: center;
                 font-size: $font_22;
                 margin-top: 50px;
+                padding-left: 8px;
             }
         }
 
@@ -246,7 +246,7 @@ div.background_pop {
     top: 3%;
     z-index: 100;
     width: 95%;
-    height: 85%;
+    height: 70vh;
     box-shadow: $shadow_box;
     display: none;
     overflow-y: scroll;
@@ -268,7 +268,6 @@ div.background_pop {
     font-size: $font_22;
     width: 100%;
     height: 70%;
-    overflow-y: scroll;
 }
 
 .div_top {
@@ -381,7 +380,7 @@ div.background_pop {
     opacity: 0.5;
     width: 100vw;
     height: 100vh;
-    z-index: 0;
+    z-index: 1;
 }
 @media (min-width:992px) and (max-width: 1180.98px){
 
@@ -747,7 +746,7 @@ div.background_pop {
     top: 3%;
     z-index: 100;
     width: 95%;
-    height: 85%;
+    height: 70vh;
     box-shadow: $shadow_box;
     display: none;
     overflow-y: scroll;
@@ -765,7 +764,6 @@ div.background_pop {
     font-size: $font_22;
     width: 100%;
     height: 70%;
-    overflow-y: scroll;
 }
 
 .div_top {
@@ -1082,7 +1080,7 @@ div.background_pop {
     top: 3%;
     z-index: 100;
     width: 95%;
-    height: 85%;
+    height: 70vh;
     box-shadow: $shadow_box;
     display: none;
     overflow-y: scroll;
@@ -1100,7 +1098,6 @@ div.background_pop {
     font-size: $font_22;
     width: 100%;
     height: 70%;
-    overflow-y: scroll;
 }
 
 .div_top {
@@ -1422,7 +1419,7 @@ div.background_pop {
     top: 3%;
     z-index: 100;
     width: 95%;
-    height: 85%;
+    height: 80vh;
     box-shadow: $shadow_box;
     display: none;
     overflow-y: scroll;
@@ -1440,7 +1437,6 @@ div.background_pop {
     font-size: $font_22;
     width: 100%;
     height: 70%;
-    overflow-y: scroll;
 }
 
 .div_top {
