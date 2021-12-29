@@ -49,7 +49,7 @@ window.addEventListener("load", function () {
         // ----------------------------------------------------------串接資料後要修改掉~
 
         // 總共有幾頁
-        let pages = Math.ceil(foodProducts.length / 6);
+        let pages = Math.ceil(foodProducts.length / 8);
 
         // 將商品每8筆放入一個陣列裡並且推進totalPage同時將頁簽加上去
         for (let i = 1; i <= pages; i = i + 1) {
