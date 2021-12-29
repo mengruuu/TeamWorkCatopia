@@ -8,75 +8,226 @@
     font-size: $font_24;
     color: $font_color;
     text-align: center;
-    table{
-        border:1px solid $font_color;
-        text-align: center;
-        margin: 0 auto;
-        font-size: $font_20;
-        border-collapse: collapse;
-        max-width: 1200px;
-        width: 100%;
-        tr{
-            border:1px solid $font_color;
-            height: 160px;
-            td{
-                border:1px solid $font_color;
-                width: 200px;
-                border-collapse: collapse;
-                img{
-                    margin-right: 20px;
-                }
-                .total{
-                    // border: 1px solid blue;
-                    margin: 10px 50px;
-                }
-                hr{
-                    border: 0.5px solid $font_color;
-                    // border: 1px solid maroon;
-                    padding: 0;
-                    width: 100%;
-                    opacity: .5;
-                }
-            }
-            td:nth-child(1) {
-                // border: 1px solid maroon;
-                width: 350px;
-                padding: 20px;
-                img{
-                    display: inline-block;
-                    vertical-align: middle;
-                }
-            }
-        }
-        tr:nth-child(odd) {
-            background-color: $main_color;
-            height: 50px;
-        } //奇數行（從標題行起算）$main_color
-        tr:nth-child(even) {
-            background-color: $second_color3;
-            height: 50px;
-        } //偶數行設為$second_color3
-        tr:nth-child(1) {
-            height: 30px;
-            // width: 500px;
-        }
-        tr:last-child{
-            height: 100px;
-            background-color: $main_color;
-            text-align: right;
-            line-height: 30px;
-            td:first-child{
-                border-right: 1px solid transparent;
-            }
-            td:last-child{
-                padding-right: 4%;
-            }
-            // td{
-            //     // border: 1px solid green;
-            //     // padding: 20px;
-            // }
+    .vip_order_detail_container{
+        border: 1px solid $font_color;
+        font-size: $font_22;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        color: $font_color;
+        background-color: $main_color;
+    }
+    
+    .vip_order_detail_container img{
+        width: 50%;
+    
+        @include w900(){
+            width: 30%;
         }
     }
+    
+    .vip_order_detail_title {
+        width: 100%;
+        display: flex;
+        text-align: center;
+    }
+    
+    .vip_order_detail_title p {
+        border: 1px solid $font_color;
+        margin: 0;
+        padding: 10px;
+        border-top: none;
+        border-left: none;
+        border-bottom: none;
+    }
+    
+    .vip_order_detail_title .vip_order_detail_price p {
+        border-right: none;
+    }
+    
+    div.vip_order_detail_item, 
+    div.vip_order_detail_type, 
+    div.vip_order_detail_number, 
+    div.vip_order_detail_price{
+        flex: 1;
+    
+        @include w900(){
+            display: none;
+        }
+    }
+    
+    div.vip_order_detail_item:first-child{
+        flex: 3;
+    }
+    
+    .vip_order_detail_buy_item1 {
+        // border: 1px solid green;
+        display: flex;
+        text-align: center;
+        background-color: $second_color1;
+        border-top: 1px solid $font_color;
+    
+        @include w900(){
+            // border: 2px solid red;
+            flex-direction: column;
+            border: none;
+        }
+    }
+    
+    .vip_order_detail_buy_item1 .vip_order_detail_item,
+    .vip_order_detail_buy_item1 .vip_order_detail_type,
+    .vip_order_detail_buy_item1 .vip_order_detail_number,
+    .vip_order_detail_buy_item1 .vip_order_detail_price {
+        // display: flex;
+        text-align: left;
+        padding: 0;
+        // border: 1px solid blue;
+        display: flex;
+        align-items: center;
+    
+        @include w1200(){
+            font-size: 16px;
+        }
+    }
+    
+    .vip_order_detail_buy_item1 .vip_order_detail_type,
+    .vip_order_detail_buy_item1 .vip_order_detail_number,
+    .vip_order_detail_buy_item1 .vip_order_detail_price {
+        justify-content: center;
+    
+        @include w900(){
+            justify-content: right;
+            padding: 0 3%;
+        }
+    }
+    
+    .vip_order_detail_buy_item1 .vip_order_detail_item img {
+        border-radius: 20px;
+        margin: 20px;   
+    }
+    
+    .vip_order_detail_buy_item1 .vip_order_detail_number input {
+        background-color: $main_color;
+        width: 100px;
+        font-size: $font_20;
+        text-align: center;
+        color: $font_color;
+        border: 1px solid $font_color;
+    }
+    
+    .vip_order_detail_buy_item2 {
+        background-color: $second_color2;
+    }
+    
+    .vip_order_detail_total_price {
+        border-top: 1px solid $font_color;
+    }
+    
+    .vip_order_detail_total_price div {
+        // border: 1px solid blue;
+        display: flex;
+        justify-content: right;
+    }
+    
+    .vip_order_detail_total_price p {
+        // border: 1px solid green;
+        width: 400px;
+        text-align: right;
+        margin: 1% 5%;
+    
+        @include w1200(){
+            // border: 1px solid blue;
+            font-size: 16px;
+            margin: 1% 4%;
+    
+        }
+    
+        @include w1000(){
+            // border: 1px solid black;
+            margin: 1% 3%;
+        }
+    }
+    
+    .vip_order_detail_total_price input {
+        border: none ;
+        font-size: $font_20;
+        text-align: right;
+        background-color: $second_color2;
+        color: $font_color;
+    
+        @include w900(){
+            width: 100px;
+        }
+    }
+    
+    // table{
+    //     border:1px solid $font_color;
+    //     text-align: center;
+    //     margin: 0 auto;
+    //     font-size: $font_20;
+    //     border-collapse: collapse;
+    //     max-width: 1200px;
+    //     width: 100%;
+    //     tr{
+    //         border:1px solid $font_color;
+    //         height: 160px;
+    //         td{
+    //             border:1px solid $font_color;
+    //             width: 200px;
+    //             border-collapse: collapse;
+    //             img{
+    //                 margin-right: 20px;
+    //             }
+    //             .total{
+    //                 // border: 1px solid blue;
+    //                 margin: 10px 50px;
+    //             }
+    //             hr{
+    //                 border: 0.5px solid $font_color;
+    //                 // border: 1px solid maroon;
+    //                 padding: 0;
+    //                 width: 100%;
+    //                 opacity: .5;
+    //             }
+    //         }
+    //         td:nth-child(1) {
+    //             // border: 1px solid maroon;
+    //             width: 350px;
+    //             padding: 20px;
+    //             img{
+    //                 display: inline-block;
+    //                 vertical-align: middle;
+    //             }
+    //         }
+    //     }
+    //     tr:nth-child(odd) {
+    //         background-color: $main_color;
+    //         height: 50px;
+    //     } //奇數行（從標題行起算）$main_color
+    //     tr:nth-child(even) {
+    //         background-color: $second_color3;
+    //         height: 50px;
+    //     } //偶數行設為$second_color3
+    //     tr:nth-child(1) {
+    //         height: 30px;
+    //         // width: 500px;
+    //     }
+    //     tr:last-child{
+    //         height: 100px;
+    //         background-color: $main_color;
+    //         text-align: right;
+    //         line-height: 30px;
+    //         td:first-child{
+    //             border-right: 1px solid transparent;
+    //         }
+    //         td:last-child{
+    //             padding-right: 4%;
+    //         }
+    //         // td{
+    //         //     // border: 1px solid green;
+    //         //     // padding: 20px;
+    //         // }
+    //     }
+    // }
 
     .con{
         // border: 1px solid black;
