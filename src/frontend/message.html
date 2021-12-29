@@ -18,9 +18,15 @@
                 <div></div>
             </div>
         </div>
-        <textarea class = "message_write_message_content" placeholder = "請輸入訊息..."></textarea>
-        <div class = "message_write_img_container">
-            <img class = "message_write_img_content">
+        <div class = "message_write_message_content_container">
+            <textarea class = "message_write_message_content" placeholder = "請輸入訊息..."></textarea>
+            <div class = "message_write_img_container">
+                <div class = "message_write_img_container_content">
+                    <div class = "message_write_img_container_closed">
+                        <img src = "./images/message/message_message_write_img_container_closed.png">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class = "message_write_message_img_file_and_button">
             <label class = "message_write_message_img_file_container" for = "file_upload">
@@ -37,6 +43,12 @@
             </div>
             <input type = "file" id = "file_upload">
         </div>
+    </div>
+    <div class="pages_title">
+        <p>
+            留言版
+            <span></span>
+        </p>
     </div>
     <div class = "message_and_comment_container">
         <div class = "message_container" style = "background-image: url(./images/message/Group\ 300.png);">
@@ -80,6 +92,7 @@
             const message_write_message_close = document.querySelector("div.message_write_message_close");
             const message_write_background = document.querySelector("div.message_write_background");
             const inputFile = document.querySelector("input[type = 'file");
+            const message_write_img_container_content = document.querySelector("div.message_write_img_container_content");
 
             function upLoadImg(srcEl, distEl) {
                 srcEl.addEventListener("change", function() {
@@ -92,19 +105,32 @@
                     distEl.classList.add("message_write_img_container_overflowY");
                     readFile.readAsDataURL(file);
                     readFile.addEventListener("load", function() {
-                        distEl.children[0].src = `${readFile.result}`;
+                        if(distEl.children[0].children[1]) {
+                            distEl.children[0].children[1].remove();
+                        }
+                        distEl.children[0].insertAdjacentHTML("beforeend", `
+                            <img class = "message_write_img_content" src = ${readFile.result}>
+                        `);
                     });
                 });
             };
 
-            function dragOverImg(el, newClass) {
+            function dragOverImg(message_write_message_content_container, el, newClass) {
                 el.addEventListener("dragover", function(event) {
                     event.preventDefault();
                     el.classList.add(newClass);
                 });
+
+                // 拖曳檔案到內容區的時候，圖片上傳區就會顯示出來
+                message_write_message_content_container.addEventListener("dragover", function(event) {
+                event.preventDefault();
+                message_write_img_container.classList.add("message_write_img_container_open");
+                });
+
             }
             
-            function droppedImg(srcEl, targetEl) {
+            function droppedImg(srcEl, message_write_img_container) {
+                // 拖曳檔案到圖片上傳區的時候，圖片就能上傳
                 srcEl.addEventListener("drop", function(event) {
                     event.preventDefault();
                     const file = event.dataTransfer.files[0];
@@ -113,19 +139,26 @@
 
 
 
+                    message_write_img_container.classList.add("message_write_img_container_overflowY");
                     readFile.readAsDataURL(file);
                     readFile.addEventListener("load", function() {
-                        targetEl.src = `${readFile.result}`;
+                        if(srcEl.children[1]) {
+                            srcEl.children[1].remove();
+                        }
+                        srcEl.insertAdjacentHTML("beforeend", `
+                            <img class = "message_write_img_content" src = ${readFile.result}>
+                        `);
                     });
                 });
             }
 
 
 
+
             // 上傳圖片
             upLoadImg(inputFile, message_write_img_container);
-            dragOverImg(message_write_img_container, "message_write_img_container_open");
-            droppedImg(message_write_img_container, message_write_img_container.children[0]);
+            dragOverImg(message_write_img_container.parentElement, message_write_img_container.children[0], "message_write_img_container_open");
+            droppedImg(message_write_img_container.children[0], message_write_img_container);
 
             // 點擊上傳圖片按鈕後，顯示圖片上傳區
             message_write_message_img_file_container.addEventListener("click", function() { 
@@ -151,6 +184,20 @@
                     message_write_background.style.display = "none";
                 }
             }, true);
+
+            // 點擊圖片右上方的X會做的事情
+            message_write_img_container.children[0].addEventListener("click", function() {
+                if(!(message_write_img_container.children[0].children[1])) {
+                    window.alert("目前沒有選擇圖片！");
+                }else {
+                    if(window.confirm("確定要刪除圖片？")) {
+                        message_write_img_container.classList.remove("message_write_img_container_open");
+                        message_write_img_container.children[0].children[1].remove();
+                    }else {
+                        return ;
+                    }
+                }
+            });
         })()
     </script>
 </body>

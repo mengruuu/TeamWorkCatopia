@@ -1,3 +1,4 @@
+
 div.footer_container {
     // width: 100vw;
     display: flex;
@@ -8,8 +9,13 @@ div.footer_container > div.footer_up {
     display: flex;
     justify-content: space-evenly;
     background-color: $second_color3;
-    height: 279px;
+    height: 120px;
     color: $font_color;
+    @include w900() {
+        height: auto;
+        padding: 32px 0;
+        flex-direction: column;
+    }
 }
 
 div.footer_container > div.footer_up > div.footer_up_item {
@@ -23,12 +29,22 @@ div.footer_container > div.footer_up > div.footer_up_item {
 div.footer_container > div.footer_up > div.footer_up_item > button {
     width: 54%;
     font-size: 24px;
-    line-height: 3;
     border-radius: 15px;
     outline: none;
     color: $font_color;
     background-color: $important_color;
     border: 1px solid $font_color;
+    @include w900() {
+        width: 280px;
+    }
+}
+
+div.footer_container > div.footer_up > div.footer_up_item > div.footer_up_item_title > p {
+    font-size: $font_20;
+    margin-top: 0;
+    @include w900() {
+        margin: 36px 0 9px;
+    }
 }
 
 div.footer_container > div.footer_up > div.footer_up_item > button:hover {
@@ -36,7 +52,10 @@ div.footer_container > div.footer_up > div.footer_up_item > button:hover {
 }
 
 div.footer_container > div.footer_up > div.footer_up_item > div.footer_up_item_icon > a > img {
+    width: 40px;
+    height: 40px;
     margin: 0 8px;
+    object-fit: cover;
 }
 
 div.footer_container > div.footer_up > div.footer_up_item > div.footer_up_item_icon > a:hover {
@@ -48,4 +67,7 @@ div.footer_container > div.footer_down {
     font-size: 12px;
     background-color: $font_color;
     padding: 20px;
+    @include w900() {
+        text-align: center;
+    }
 }

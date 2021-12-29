@@ -6,74 +6,119 @@
     "title" : "Catopia B1-1-1會員資料編輯"
     })
     <link rel="stylesheet" href="../css/backend/b1_vip_edit.css">
+    <script src="../js/tools/vue.js"></script>
+    <script src="../js/backend/b1_black_list_add_pop.js" async></script>
 </head>
 
 <body>
     @@include('./layout/backend_header.html')
+    <div id="app">
 
-    <div class="vip_edit_block
-                vip_edit_page_title">
-        <div class="vip_edit_title">
-            <p>B1-1-1會員資料編輯</p>
-        </div>
-        <div class="edit_top_button">
-            <button>加入黑名單</button>
-        </div>
-    </div>
-
-    <div class="vip_edit_container">
-        <div class="vip_edit_block">
-            <p class="vip_edit_block_title">會員編號:</p>
-            <p class="vip_edit_block_text">MB0001</p>
-        </div>
-
-        <div class="vip_edit_block">
-            <p class="vip_edit_block_title">會員信箱:</p>
-            <p class="vip_edit_block_text">qqq123@gmail.com</p>
-        </div>
-
-        <div class="vip_edit_block">
-            <p class="vip_edit_block_title">姓名:</p>
-            <p class="vip_edit_block_text">陳OO</p>
-        </div>
-
-        <div class="vip_edit_block">
-            <p class="vip_edit_block_title">生日:</p>
-            <p class="vip_edit_block_text">2000/1/1</p>
-        </div>
-
-        <div class="vip_edit_block">
-            <p class="vip_edit_block_title">電話:</p>
-            <p class="vip_edit_block_text">0912000111</p>
-        </div>
-
-        <div class="vip_edit_block">
-            <p class="vip_edit_block_title">地址:</p>
-            <p class="vip_edit_block_text">台北市大安區XX路XXX號5樓</p>
-        </div>
-
-        <div class="vip_edit_block">
-            <p class="vip_edit_block_title">帳號狀態:</p>
-            <p class="vip_edit_block_text">正常</p>
-        </div>
-
-        <div class="vip_edit_block">
-            <p class="vip_edit_block_title">註冊時間:</p>
-            <p class="vip_edit_block_text">2021/10/1</p>
-        </div>
-
-        <div class="vip_edit_block 
-                    text_area">
-            <p class="vip_edit_block_title">備註:</p>
-            <div class="vip_edit_block_text  
-                        vip_edit_block_remark">
-                <textarea cols="60" rows = "10"></textarea>
+        <div class="vip_edit_block
+                    vip_edit_page_title">
+            <div class="vip_edit_title">
+                <p>B1-1-1會員資料編輯</p>
+            </div>
+            <div class="edit_top_button">
+                <button @click="blackListAdd">加入黑名單</button>
             </div>
         </div>
 
-        <div class="back_edit_button">
-            <a href="./b1_vip.html"><button type="submit">取消</button></a>
-            <a href="./b1_vip.html"><button type="submit">確認修改</button></a>
+
+        <div class="vip_edit_container">
+
+            <div class="blacklist_popup" :class="{'-active':isBlackListPopup === true}">
+                <div>
+                    <div class="blacklist_popup_button">
+                        <button @click="blackListRemove">關閉</button>
+                    </div>
+                    <h3>加入黑名單</h3>
+                    <div class="vip_edit_block">
+                        <p class="vip_edit_block_title">會員編號:</p>
+                        <p class="vip_edit_block_text">MB0001</p>
+                    </div>
+                    <div class="vip_edit_block">
+                        <p class="vip_edit_block_title">會員信箱:</p>
+                        <p class="vip_edit_block_text">qqq123@gmail.com</p>
+                    </div>
+                    <div class="vip_edit_block">
+                        <p class="vip_edit_block_title">姓名:</p>
+                        <p class="vip_edit_block_text">陳OO</p>
+                    </div>
+                    <div class="vip_edit_block">
+                        <p class="vip_edit_block_title">黑名單原因:</p>
+                        <select class="vip_edit_block_text">
+                            <option value="1">惡意棄單</option>
+                            <option value="2">其他</option>
+                        </select>
+                    </div>
+                    <div class="vip_edit_block 
+                        text_area">
+                        <p class="vip_edit_block_title">備註:</p>
+                        <div class="vip_edit_block_text  
+                            black_list_textarea">
+                            <textarea cols="10" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="popup_bottom">
+                        <button>加入黑名單</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vip_edit_block">
+                <p class="vip_edit_block_title">會員編號:</p>
+                <p class="vip_edit_block_text">MB0001</p>
+            </div>
+
+            <div class="vip_edit_block">
+                <p class="vip_edit_block_title">會員信箱:</p>
+                <p class="vip_edit_block_text">qqq123@gmail.com</p>
+            </div>
+
+            <div class="vip_edit_block">
+                <p class="vip_edit_block_title">姓名:</p>
+                <p class="vip_edit_block_text">陳OO</p>
+            </div>
+
+            <div class="vip_edit_block">
+                <p class="vip_edit_block_title">生日:</p>
+                <p class="vip_edit_block_text">2000/1/1</p>
+            </div>
+
+            <div class="vip_edit_block">
+                <p class="vip_edit_block_title">電話:</p>
+                <p class="vip_edit_block_text">0912000111</p>
+            </div>
+
+            <div class="vip_edit_block">
+                <p class="vip_edit_block_title">地址:</p>
+                <p class="vip_edit_block_text">台北市大安區XX路XXX號5樓</p>
+            </div>
+
+            <div class="vip_edit_block">
+                <p class="vip_edit_block_title">帳號狀態:</p>
+                <p class="vip_edit_block_text">正常</p>
+            </div>
+
+            <div class="vip_edit_block">
+                <p class="vip_edit_block_title">註冊時間:</p>
+                <p class="vip_edit_block_text">2021/10/1</p>
+            </div>
+
+            <div class="vip_edit_block 
+                        text_area">
+                <p class="vip_edit_block_title">備註:</p>
+                <div class="vip_edit_block_text  
+                            vip_edit_block_remark">
+                    <textarea cols="60" rows="10"></textarea>
+                </div>
+            </div>
+
+            <div class="back_edit_button">
+                <a href="./b1_vip.html"><button type="submit">取消</button></a>
+                <a href="./b1_vip.html"><button type="submit">確認修改</button></a>
+            </div>
         </div>
     </div>
 </body>
