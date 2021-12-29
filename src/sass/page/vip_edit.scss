@@ -65,6 +65,8 @@
                     .name{
                         // border: 1px solid maroon;
                         margin: 20px auto;
+                        width: 100%;
+                        overflow-wrap: break-word;
                     }
                     .old_pwd{
                         // border: 1px solid maroon;
@@ -128,6 +130,13 @@
                 padding: 20px;
                 margin-right: 40px;
                 line-height: inherit;
+                @include w600() {
+                    margin-right: 10px;
+                }
+                @include w500() {
+                    margin-right: 0;
+                    padding: 10px;
+                }
             }
             .per_block_right{
                 // border: 1px solid purple;
@@ -136,12 +145,19 @@
                 padding-top: 5px;
                 padding-left: 20px;
                 margin: 6px auto;
+                @include w500() {
+                    padding-left: 0;
+                }
                 .per_text{
                     // border: 1px solid blue;
                     .name{
                         // border: 1px solid maroon;
                         margin: 20px auto;
                         word-break: break-all;
+                        input{
+                            border-color: $font_color;
+                            width: 80%;
+                        }
                     }
                     .birthday{
                         // border: 1px solid maroon;
@@ -180,11 +196,13 @@
     .bottom{
         // border: 1px solid maroon;
         margin: 50px auto;
-        button{
+        .bottom_btn{
             @include button(); 
             margin: 20px 50px;
             cursor: pointer;
-            width: 200px;
+            @include w500() {
+                margin: 10px;
+            }
         }
     }
 }

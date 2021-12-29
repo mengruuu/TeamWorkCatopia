@@ -30,8 +30,13 @@ function doFirst(){
     //查看抽選清單 彈窗
     var popupBtn = document.getElementById('background_pop');
     var popupClick = document.getElementById('popup_click');
+    var popupClickRWD = document.getElementById('popup_click_rwd');
     var close = document.getElementById('close_btn');
     popupClick.addEventListener('click', function(){
+        popupBtn.style.display = "block";
+        // console.log('test');
+    })
+    popupClickRWD.addEventListener('click', function(){
         popupBtn.style.display = "block";
         // console.log('test');
     })
