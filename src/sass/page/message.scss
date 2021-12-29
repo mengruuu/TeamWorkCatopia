@@ -18,7 +18,8 @@ div.message_write_message_container {
     left: 50%;
     transform: translate(-50%, -50%);
     background-size: cover;
-    width: 500px;
+    width: 85%;
+    max-width: 500px;
     height: 428px;
     // border: 1px solid;
     border-radius: 15px;
@@ -41,21 +42,21 @@ div.message_write_message_container {
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background-color: lightgray;
+            //background-color: lightgray;
             position: relative;
-            div {
-                position: absolute;
-                top: 50%;
-                left: 10%;
-                width: 80%;
-                border-top: 3px solid $font_color;
-            }
-            div:first-child{
-                transform: rotate(45deg);
-            }
-            div:last-child{
-                transform: rotate(-45deg);
-            }
+            // div {
+            //     position: absolute;
+            //     top: 50%;
+            //     left: 10%;
+            //     width: 80%;
+            //     border-top: 3px solid $font_color;
+            // }
+            // div:first-child{
+            //     transform: rotate(45deg);
+            // }
+            // div:last-child{
+            //     transform: rotate(-45deg);
+            // }
         }
     }
     div.message_write_message_content_container {
@@ -166,7 +167,7 @@ div.message_write_message_container {
         width: 100%;
         label.message_write_message_img_file_container {
             background-color: $important_color;
-            width: 30px;
+            width: 40px;
             padding: 0;
             color: $font_color;
             font-size: $font_20;
@@ -177,8 +178,9 @@ div.message_write_message_container {
             img {
                 width: 100%;
                 height: 30px;
-                border-radius: 50%;
-                object-fit: cover
+                // border-radius: 50%;
+                object-fit: cover;
+                margin-top: 5px;
             }
         }
         button {
@@ -202,8 +204,8 @@ div.message_input_container {
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
-        width: 850px;
-        margin: auto;
+        width: fit-content;
+        margin-left: 10%;
         img{
             width: 60px;
             height: 50px;
@@ -212,6 +214,7 @@ div.message_input_container {
         div.input_and_laber_for_files {
             position: relative;
             margin-left: 20px;
+            margin-bottom: 10px ;
             input {
                 cursor: pointer;
                 height: 32px;
@@ -251,14 +254,15 @@ div.message_input_container {
 div.message_and_comment_container {
     display: flex;
     flex-direction: column;
-    width: 850px;
+    width: 75%;
     margin: 50px auto;
     div.message_container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 850px;
+        width: 100%;
         background-repeat: no-repeat;
+        background-size: cover;
         border-radius: 15px;
         div.message_setting_container {
             display: flex;
@@ -354,12 +358,15 @@ div.message_and_comment_container {
             div.message_comment_container {
                 display: flex;
                 align-items: center;
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
                 margin: 16px 0;
                 background-color: #fff;
                 border-radius: 15px;
                 padding: 5px 20px;
+                border: 1px solid;
+                justify-content: space-between;
                 img {
+                    
                     width: 63px;
                     height: 57px;
                 }
@@ -369,5 +376,389 @@ div.message_and_comment_container {
                 }
             }
         }
+    }
+}
+@media (min-width:576px) and (max-width: 800px){
+    div.message_input_container {
+        padding: 5px 0;
+        background-color: $second_color1;
+        width: 100vw;
+        div {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            width: fit-content;
+            margin-left: 0;
+            img{
+                width: 60px;
+                height: 50px;
+                object-fit: cover;
+            }
+            div.input_and_laber_for_files {
+                position: relative;
+                margin-left: 20px;
+                input {
+                    cursor: pointer;
+                    height: 32px;
+                    width: 250px;
+                    border-radius: 20px;
+                    outline: none;
+                    border: none;
+                    font-size: $font_20;
+                    padding: 0 16px;
+                    color: $font_color;
+                    box-shadow: 5px 5px 5px lightgrey;
+                }
+                input::placeholder {
+                    color: $font_color;
+                    font-size: 16px;
+                }
+                // label.message_img_file_container {
+                //     width: 15%;
+                //     position: absolute;
+                //     right: 0;
+                //     border-radius: 0 20px 20px 0;
+                //     cursor: pointer;
+                //     img {
+                //         width: 100%;
+                //         height: 50px;
+                //         display: block;
+                //     }
+                // }
+            }
+            input[type = 'file'] {
+                position: absolute;
+                right: 200%;
+            }
+        }
+    }
+    div.message_and_comment_container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 50px auto;
+   
+        div.message_container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 15px;
+            div.message_setting_container {
+                display: flex;
+                justify-content: flex-end;
+                width: 90%;
+                margin-top: 16px;
+                img {
+                    cursor: pointer;
+                    width: 30px;
+                    height: 30px;
+                    object-fit: cover;
+                }
+            }
+            div.message_user_and_time_and_like {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                width: 83%;
+                margin-bottom: 16px;
+                margin-top: 16px;
+                div.message_img_and_user_and_time {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    width: 100%;
+                    height: 5%;
+                    img {
+                        width: 90px;
+                        height: 54px;
+                        object-fit: cover;
+                    }
+                }
+                
+                div.message_user_and_time {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 16px;
+                    p {
+                        font-size: 16px;
+                        color: $font_color;
+                        margin: 0;
+                    }
+                }
+                div.message_like_container {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 0;
+                    background-color: $second_color2;
+                    color: $font_color;
+                    padding: 0 8px;
+                    border-radius: 15px;
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        // object-fit: cover;
+                    }
+                    p {
+                        font-size: 16px;
+                        margin: 10px 8px;
+                    }
+                }
+            }
+            div.message_content_and_comment {
+                display: flex;
+                flex-direction: column;
+                width: 70%;
+                border-radius: 15px;
+                background-color: $second_color2;
+                // padding: 20px 40px;
+                margin-bottom: 30px;   
+                div.message_content_text {
+                    p {
+                        color: $font_color;
+                        font-size: 16px;
+                    }
+                }
+                img.message_content_img {
+                    width: 100%;
+                    height: 100%;
+
+                    margin-bottom: 30px;
+                    // object-fit: cover;
+                }
+                input {
+                    padding: 8px 16px;
+                    font-size: 16px;
+                    color: $font_color;
+                    border-radius: 20px;
+                    outline: none;
+                    border: none;
+                }
+                input::placeholder {
+                    color: $font_color;
+                }
+  
+            }
+        }
+    }
+    div.message_comment_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 16px 0;
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 5px 20px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        p {
+            font-size: 16px;
+            color: $font_color;
+        }
+        
+        
+    }
+}
+// @media (min-width:320px) and (max-width: 800px){
+//     div.message_comment_container {
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         flex-wrap: wrap;
+//         margin: 16px 0;
+//         background-color: #fff;
+//         border-radius: 15px;
+//         padding: 5px 20px;
+//         img {
+//             width: 100%;
+//             height: 100%;
+//         }
+//         p {
+//             font-size: 16px;
+//             color: $font_color;
+//         }
+        
+        
+//     }
+// }
+@media (max-width: 575.98px) {
+    div.message_input_container {
+        padding: 5px 0;
+        background-color: $second_color1;
+        width: 100vw;
+        div {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            width: fit-content;
+            margin-left: 0;
+            img{
+                width: 60px;
+                height: 50px;
+                object-fit: cover;
+            }
+            div.input_and_laber_for_files {
+                position: relative;
+                margin-left: 20px;
+                input {
+                    cursor: pointer;
+                    height: 32px;
+                    width: 250px;
+                    border-radius: 20px;
+                    outline: none;
+                    border: none;
+                    font-size: $font_20;
+                    padding: 0 16px;
+                    color: $font_color;
+                    box-shadow: 5px 5px 5px lightgrey;
+                }
+                input::placeholder {
+                    color: $font_color;
+                    font-size: 16px;
+                }
+            }
+            input[type = 'file'] {
+                position: absolute;
+                right: 200%;
+            }
+        }
+    }
+    div.message_and_comment_container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 50px auto;
+   
+        div.message_container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 15px;
+            div.message_setting_container {
+                display: flex;
+                justify-content: flex-end;
+                width: 90%;
+                margin-top: 16px;
+                img {
+                    cursor: pointer;
+                    width: 30px;
+                    height: 30px;
+                    object-fit: cover;
+                }
+            }
+            div.message_user_and_time_and_like {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                width: 90%;
+                margin-bottom: 16px;
+                margin-top: 16px;
+                div.message_img_and_user_and_time {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    width: 100%;
+                    height: 5%;
+                    img {
+                        width: 80px;
+                        height: 54px;
+                        object-fit: cover;
+                    }
+                }
+                
+                div.message_user_and_time {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 5px;
+                    p {
+                        font-size: 16px;
+                        color: $font_color;
+                        margin: 0;
+                    }
+                }
+                div.message_like_container {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 0;
+                    background-color: $second_color2;
+                    color: $font_color;
+                    padding: 0 8px;
+                    border-radius: 15px;
+                    border: 1px solid ;
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        // object-fit: cover;
+                    }
+                    p {
+                        font-size: 16px;
+                        margin: 10px 8px;
+                    }
+                }
+            }
+            div.message_content_and_comment {
+                display: flex;
+                flex-direction: column;
+                width: 70%;
+                border-radius: 15px;
+                background-color: $second_color2;
+                // padding: 20px 40px;
+                margin-bottom: 30px;   
+                div.message_content_text {
+                    p {
+                        color: $font_color;
+                        font-size: 16px;
+                    }
+                }
+                img.message_content_img {
+                    width: 100%;
+                    height: 100%;
+
+                    margin-bottom: 30px;
+                    // object-fit: cover;
+                }
+                input {
+                    padding: 8px 16px;
+                    font-size: 16px;
+                    color: $font_color;
+                    border-radius: 20px;
+                    outline: none;
+                    border: none;
+                }
+                input::placeholder {
+                    color: $font_color;
+                }
+  
+            }
+        }
+    }
+    div.message_comment_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 16px 0;
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 0px 5px !important;
+        img {
+            width: 40px !important;
+            height: 40px !important;
+            margin-right: 5px;
+        }
+        p {
+            font-size: 16px;
+            color: $font_color;
+        }
+        
+        
     }
 }

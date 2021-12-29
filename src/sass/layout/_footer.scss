@@ -11,10 +11,10 @@ div.footer_container > div.footer_up {
     background-color: $second_color3;
     height: 120px;
     color: $font_color;
-    @include w900() {
-        height: auto;
-        padding: 32px 0;
+    @include w700() {
         flex-direction: column;
+        height: fit-content;
+        padding: 20px 0px 20px 0px;
     }
 }
 
@@ -27,7 +27,8 @@ div.footer_container > div.footer_up > div.footer_up_item {
 }
 
 div.footer_container > div.footer_up > div.footer_up_item > button {
-    width: 54%;
+    width: fit-content;
+    padding: 5px 20px 5px 20px;
     font-size: 24px;
     border-radius: 15px;
     outline: none;
@@ -35,22 +36,36 @@ div.footer_container > div.footer_up > div.footer_up_item > button {
     background-color: $important_color;
     border: 1px solid $font_color;
     @include w900() {
-        width: 280px;
+        margin-bottom: 10px;
+        width: fit-content;
+    }
+}
+@include w900(){
+    div.footer_up_item_title{
+        position: relative;
+        left: -50px;
+    }
+}
+@include w700(){
+    div.footer_up_item_title{
+        position: relative;
+        left: 0;
     }
 }
 
+
 div.footer_container > div.footer_up > div.footer_up_item > div.footer_up_item_title > p {
     font-size: $font_20;
-    margin-top: 0;
-    @include w900() {
-        margin: 36px 0 9px;
-    }
+    margin-top: 10px;
 }
 
 div.footer_container > div.footer_up > div.footer_up_item > button:hover {
     cursor: pointer;
 }
-
+div.footer_up_item_icon{
+    width: fit-content;
+    margin: 0 auto;
+}
 div.footer_container > div.footer_up > div.footer_up_item > div.footer_up_item_icon > a > img {
     width: 40px;
     height: 40px;
@@ -67,7 +82,7 @@ div.footer_container > div.footer_down {
     font-size: 12px;
     background-color: $font_color;
     padding: 20px;
-    @include w900() {
-        text-align: center;
+    @include w700() {
+        text-align: left;
     }
 }
