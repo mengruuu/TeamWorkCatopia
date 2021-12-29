@@ -15,6 +15,12 @@ div.register_first_container > div.register_first_title {
     border: 1px solid $font_color;
     font-weight: bold;
     font-size: $font_24;
+    @include w900() {
+        font-size: $font_22;
+    }
+    @include w700() {
+        font-size: $font_20;
+    }
 }
 
 div.register_first_container > div.register_first_process {
@@ -37,11 +43,26 @@ div.register_first_container > div.register_first_process > div.register_first_p
 div.register_first_container > div.register_first_process > div.register_first_process_item > p {
     color: $font_color;
     font-size: $font_24;
+    @include w900() {
+        font-size: $font_22;
+    }
+    @include w700() {
+        font-size: $font_20;
+    }
 }
 
 div.register_first_container > form {
     width: 100%;
     font-size: $font_24;
+    @include w900() {
+        font-size: $font_22;
+    }
+    @include w700() {
+        font-size: 16px;
+    }
+    @include w500() {
+        font-size: 12px;
+    }
 }
 
 div.register_first_container > form > div.register_first_circle {
@@ -91,21 +112,29 @@ div.register_first_container > form > div.register_first_input > div:last-child 
     margin-top: 0;
 }
 
-div.register_first_container > form > div.register_first_input > div:last-child > div {
+div.register_first_container > form > div.register_first_input > div:last-child > div > #show_and_hide_icon {
     margin-top: 32px;
     color: $font_color;
     font-weight: bold;
 } 
 
-div.register_first_container > form > div.register_first_input > div:last-child > div > i {
+div.register_first_container > form > div.register_first_input > div:last-child > div > div > i {
     cursor: pointer;
 }
 
-div.register_first_container > form > div.register_first_input > div:last-child > div > i.register_first_icon_hide {
+div.register_first_container > form > div.register_first_input > div:last-child > div > div > i.register_first_icon_hide {
     display: none;
 }
 
-div.register_first_container > form > div.register_first_input > div:last-child > input {
+div.register_first_container > form > div.register_first_input > div:last-child > div > div > i.hide_close {
+    display: none;
+}
+
+div.register_first_container > form > div.register_first_input > div:last-child > div > div > i.show_open {
+    display: inline-block;
+}
+
+div.register_first_container > form > div.register_first_input > div:last-child > div > input {
     width: 80%;
     line-height: 2;
     outline: none;
@@ -130,6 +159,15 @@ div.register_first_container > form > button[type = 'button'] {
     margin: 100px auto;
     width: 386px;
     height: 90px;
+    @include w900() {
+        width: 350px;
+    }
+    @include w700() {
+        width: 320px;
+    }
+    @include w600() {
+        width: 300px;
+    }
 }
 
 div.register_first_container > form > button[type = 'button']:hover {
