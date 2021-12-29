@@ -80,9 +80,25 @@
 </div>
 
 <script>
-    var hamburger = document.getElementsByClassName('hamburger_-off')[0];
-    var hamburger_close = document.getElementsByClassName('hamburger_close')[0];
-    // hamburger_close.addEventListener('click',function(){
-    //     hamburger.classList.remove('hamburger_-on');
-    // });
+    let hamburger_paw = document.getElementsByClassName('hamburger_icon')[0].querySelector('img');
+    console.log(hamburger_paw);
+    let hamburger = document.getElementsByClassName('hamburger_-off')[0];
+    console.log(hamburger);
+
+
+  
+    hamburger_paw.addEventListener('click',function(){
+        if(hamburger.classList.contains('hamburger_-on')){
+            hamburger_paw.src = './images/hamburger/hamburger_icon.png';
+            hamburger_paw.style.transform = 'scale(1)';
+            hamburger.classList.remove('hamburger_-on');
+        }else{
+            hamburger_paw.src = './images/hamburger/hamburger_close.png';
+        hamburger_paw.style.transform = 'scale(0.8)';
+        hamburger.classList.add('hamburger_-on');
+        }
+    })
+
+
+  
 </script>
