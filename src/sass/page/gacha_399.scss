@@ -8,11 +8,12 @@
         // border: 1px solid black;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
+        @include w800() {
+            justify-content: center;
+        }
         :first-child{
-            margin: 0 50px;
             margin-top: 20px;
-            margin-left: 60px;
         }
         :nth-child(3){
             margin-top: 10px;
@@ -21,26 +22,23 @@
         .title_left{
             // border: 1px solid black;
             text-align: center;
-            // white-space: nowrap;
+            @include w800() {
+                display: none;
+            }
             .left_context{
                 // border: 1px solid green;
                 background-color: $second_color3;
                 font-size: $font_20;
                 color: $font_color;
-                // padding: 5px 10px;
                 margin: 0 auto;
                 margin-top: 15px;
-                // cursor: pointer;
-                // text-decoration:underline;
                 .btn_pop{
                     // border: 1px solid maroon;
                     margin: 0 auto;
                     padding: 5px 10px;
-                    // border-radius: 10px;
                     cursor: pointer;
                 }
                 img{
-                    // float:left;
                     margin: 0;
                     vertical-align: text-bottom;
                 }
@@ -78,19 +76,23 @@
             text-align: center;
             margin: 0 50px;
             position: relative;
-            // margin-bottom: 0;
-            .right_context{
-                // border: 1px solid green;
-                background-color: $second_color3;
-                font-size: $font_20;
-                color: $font_color;
-                padding: 5px 10px;
-                margin: 0 auto;
-                cursor: pointer;
-                // text-decoration:underline;
-                img{
-                    margin: 0;
-                    // vertical-align: text-bottom;
+            @include w800() {
+                display: none;
+            }
+            .a_right_context{
+                // border: 1px solid red;
+                width: 170px;
+                .right_context{
+                    // border: 1px solid green;
+                    background-color: $second_color3;
+                    font-size: $font_20;
+                    color: $font_color;
+                    padding: 5px 10px;
+                    margin: 0 auto;
+                    cursor: pointer;
+                    img{
+                        margin: 0;
+                    }
                 }
             }
             .pillar_right{
@@ -101,6 +103,71 @@
             }
         }
     }
+
+    .rwd_btn{
+        // border: 1px solid green;
+        display: none;
+        font-size: $font_22;
+        color: $font_color;
+        @include w800() {
+            display: flex;
+            justify-content: center;
+        }
+        @include w700() {
+            font-size: $font_20;
+        }
+        .rwd_btn_block{
+            // border: 1px solid yellow;
+            margin: 5px auto;
+            text-align: center;
+            .rwd_a{
+                text-decoration: none;
+                color: $font_color;
+            }
+            .rwd_small_block{
+                // border: 1px solid green;
+                display: inline-block;
+                background-color: $main_color;
+                border-radius: 10px;
+                margin: 0 5px;
+                padding: 8px;
+                width: 120px;
+                text-align: center;
+                @include w500() {
+                    font-size: 16px;
+                    padding: 2px;
+                    width: 100px;
+                }
+                @include w400() {
+                    // display: block;
+                    margin: 0 20px;
+                }
+            }
+            .rwd_small_block_buy{
+                // border: 1px solid red;
+                display: inline-block;
+                background-color: $important_color;
+                border-radius: 10px;
+                margin: 0 5px;
+                padding: 8px;
+                width: 120px;
+                &:hover{
+                    transform:scale(1.2,1.2);
+                }
+                @include w500() {
+                    font-size: 16px;
+                    padding: 2px;
+                    width: 100px;
+                }
+                @include w400() {
+                    display: block;
+                    margin: 0 20px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
     .box{
         // border: 1px solid green;
         margin: 0 auto;
@@ -111,6 +178,21 @@
         margin-bottom: 10px;
         display: flex;
         justify-content: space-around;
+        @include w800() {
+            height: 450px;
+        }
+        @include w700() {
+            height: 430px;
+        }
+        @include w600() {
+            height: 390px;
+        }
+        @include w500() {
+            height: 350px;
+        }
+        @include w400() {
+            height: 270px;
+        }
         .dark_box{
             // border: 1px solid yellow;
             background-color: $font_color;
@@ -122,6 +204,23 @@
             width: 70vw;
             height: 440px;
             border-radius: 10px;
+            @include w800() {
+                width: 90vw;
+                text-align: center;
+                height: 420px;
+            }
+            @include w700() {
+                height: 400px;
+            }
+            @include w600() {
+                height: 360px;
+            }
+            @include w500() {
+                height: 320px;
+            }
+            @include w400() {
+                height: 240px;
+            }
             .left{
                 // border: 1px solid yellow;
                 display: inline-block;
@@ -135,6 +234,9 @@
                     padding: 10px;
                     border-radius: 10px;
                 }
+                @include w800() {
+                    display: none;
+                }
             }
             .gacha{
                 // border: 1px solid blue;
@@ -142,9 +244,15 @@
                 display: grid;
                 grid-template-columns: auto auto auto;
                 margin: 0;
+                @include w800() {
+                    margin: 0 auto;
+                }
                 .choose_box{
                     margin: 5px auto;
                     // border: 1px solid yellow;
+                    @include w800() {
+                        margin: 5px;
+                    }
                     .color_image{
                         width: 150px;
                         cursor: pointer;
@@ -158,6 +266,9 @@
                 margin-left: 5px;
                 cursor: pointer;
                 color: $font_color;
+                @include w800() {
+                    display: none;
+                }
                 .right_text{
                     font-size: $font_32;
                     background-color: $main_color;
@@ -165,15 +276,13 @@
                     border-radius: 10px;
                 }
             }
-            
         }
         .right_box{
             // border: 1px solid green;
-            // margin-right: 20px;
             text-align: center;
-            // font-size: $font_20;
-            // text-align: center;
-            // vertical-align: middle;
+            @include w800() {
+                display: none;
+            }
             .buy{
                 // border: 1px solid black;
                 border-radius: 20px;
@@ -181,20 +290,13 @@
                 background-color: $important_color;
                 box-shadow: $shadow;
                 width: 80%;
-                // width: 150px;
                 height: 150px;
                 line-height: 150px;
                 font-size: $font_20;
                 text-align: center;
                 margin: 60px auto;
-                // a:hover{
-                //     background-color: $font_color;
-                //     color: $main_color;
-                //     transform:scale(1.2,1.2);
-                // }
                 .buy_text{
                     // border: 1px solid maroon;
-                    // margin: 60px auto;
                     margin: 0px auto;
                     color: $font_color;
                 }
@@ -202,11 +304,7 @@
             .buy:hover{
                   // border: 1px solid maroon;
                   background-color: $main_color;
-                  // color: $main_color;
                   transform:scale(1.2,1.2);
-                  // .buy_text{
-                  //     // color: $important_color;
-                  // }
               }
             .store{
                 // border: 1px solid black;
@@ -216,23 +314,15 @@
                 box-shadow: $shadow;
                 width: 80%;
                 height: 150px;
-                // line-height: 150px;
                 font-size: $font_20;
                 color: $font_color;
                 text-align: center;
                 margin: 10px auto;
-                a
                 .store_text{
-                    display: block;
                     // border: 1px solid maroon;
+                    display: block;
                     margin: 45px auto;
                     color: $font_color;
-                    // .store_text_top{
-                    //     // display: inline-box;
-                    // }
-                    // .store_text_down{
-                    //     // display: inline-box;
-                    // }
                 }
             }
         }
@@ -255,7 +345,6 @@
             height: 90vh;
             z-index: 1;
             margin: 5vh auto;
-            /* overflow: auto; */
             text-align: center;
             .div_top{
                 /* border: 1px solid blue; */
@@ -277,38 +366,48 @@
                 // border: 1px solid red;
                 width: 100%;
                 margin: 0 auto;
+                margin-top: 5vh;
                 overflow: auto;
                 font-size: 20px;
                 .big_content{
                     // border: 1px solid green;
                     height: auto;
-                    // display: inline-block;
                     display: grid;
                     grid-template-columns: auto auto auto;
                     vertical-align: middle;
                     margin: 0;
-                    // padding: 50px;
-                    // margin: 5px auto;
                     align-items: center; 
                     justify-content: center;
                     .cat_399{
                         // border: 1px solid blue;
-                        // align-items: center; 
-                        // margin: 0 50px;
                         margin: 2px 5vw;
                         text-align: center;
+                        @include w700() {
+                            margin: 2px 2vw;
+                        }
+                        @include w500() {
+                            margin: 2px 1vw;
+                        }
                         .dec_image{
+                            // border: 1px solid green;
                             display: block;
                             width: 100px;
                             margin: 0 auto;
+                            @include w500() {
+                                width: 80px;
+                            }
+                            @include w400() {
+                                width: 50px;
+                            }
                         }
                         .cat_text{
                             font-size: 18px;
                             background-color: $main_color;
                             border-radius: 10px;
                             padding: 5px;
-                            width: 180px;
-                            // display: block;
+                            @include w500() {
+                                font-size: 14px;
+                            }
                         }
                     }
                     .cat_399:nth-child(3n+1){

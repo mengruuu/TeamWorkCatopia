@@ -12,11 +12,15 @@ div.game_choose_backgroung_content{
         right: 0%;
         top:50%;
         opacity: 0.8;
+        @include w900() {
+            display: none
+        }
     }
     div.black_cat_bottom{
         display: inline-block;
         position: absolute;
-        right: 35%;
+        left: 50%;
+        transform: translateX(-50%);
         bottom:-.5%;
         opacity: 0.8;
         z-index: -1;
@@ -28,6 +32,9 @@ div.game_choose_backgroung_content{
         left: 0;
         top:50%;
         opacity: 0.8;
+        @include w900() {
+            display: none
+        }
     }
 }
 div.game_choose_content{
@@ -40,10 +47,29 @@ div.game_choose_content{
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 160px;
+    @include w700() {
+        margin-bottom: 130px;
+    }
+    @include w600() {
+        margin-bottom: 110px;
+    }
+    @include w500() {
+        margin-bottom: 95px;
+    }
+    @include w400() {
+        margin-bottom: 80px;
+    }
     div.stage{
         // border:1px solid purple;
         width: 40%;
         margin-right: 50px;
+        @include w900() {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 5px;
+            text-align: center;
+        }
         p{
             font-size: $font_24;
             color: $font_color;
@@ -52,12 +78,22 @@ div.game_choose_content{
             // border:1px solid black;
             width: 65%;
             aspect-ratio: 1/1;
+            @include w900() {
+                width: 40%;
+            }
         }
 
     }
     div.cat{
         // border:1px solid purple;
         width: 40%;
+        @include w900() {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 5px;
+            text-align: center;
+        }
         p{
             font-size: $font_24;
             color:$font_color;
@@ -68,6 +104,10 @@ div.game_choose_content{
             border-radius: 15px;
             width: 65%;
             aspect-ratio: 1/1;
+            @include w900() {
+                margin: 0 auto;
+                width: 40%;
+            }
             img{
                 padding-top: 12%;
             }
@@ -77,17 +117,35 @@ div.game_choose_content{
         // border:1px solid purple;
         width: 40%;
         margin-right: 50px;
+        @include w900() {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 5px;
+            text-align: center;
+        }
         p{
             font-size: $font_24;
             color:$font_color;
         }
         div.star_text{
             border:1px solid $font_color;
-            width: 60%;
+            width: 65%;
             border-radius: 5px;
             background-color: $second_color1;
             padding: 15px;
             padding-right: 30px;
+            @include w900() {
+                margin: 0 auto;
+                margin-top: 5px;
+                width: 40%;
+            }
+            @include w600() {
+                width: 60%;
+            }
+            @include w400() {
+                width: 80%;
+            }
             p{
                 font-size: 18px;
                 // border:1px solid red;
@@ -101,6 +159,13 @@ div.game_choose_content{
     div.item{
         // border:1px solid purple;
         width: 40%;
+        @include w900() {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 5px;
+            text-align: center;
+        }
         p{
             font-size: $font_24;
             color:$font_color;
@@ -109,6 +174,17 @@ div.game_choose_content{
             // border:1px solid black;
             display: flex;
             justify-content: left;
+            @include w900() {
+                margin: 0 auto;
+                width: 80%;
+                justify-content: center;
+            }
+            // @include w600() {
+            //     width: 60%;
+            // }
+            // @include w600() {
+            //     width: 60%;
+            // }
             div.item_pic{
                 border:1px solid $font_color;
                 width: 25%;
@@ -117,18 +193,36 @@ div.game_choose_content{
                 text-align: center;
                 padding-top: 10px;
                 margin-right: 20px;
-            }
-            div.item_pic:first-child{
-                padding-top: 0px;
+                @include w900() {
+                    margin-right: 10px;
+                }
+                @include w600() {
+                    padding: 2px;
+                }
+                &:first-child{
+                    @include w900() {
+                        padding-top: 5px;
+                    } 
+                }
+                &:last-child{
+                    @include w900() {
+                        margin-right: 0;
+                    } 
+                }
             }
         }
     }
-    button{
-        border:1px solid blue;
-        width: 25%;
-        @include button();
-        height: 80px;
-        margin-top: 40px;
-        cursor: pointer;
+    .bottom{
+        // border:1px solid black;
+        width: 100%;
+        text-align: center;
+        button{
+            // width: 25%;
+            @include button();
+            // border:1px solid blue;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
     }
 }

@@ -8,26 +8,46 @@
     font-size: 18px;
     color: $font_color;
     text-align: center;
+    @include w500() {
+        width: 90%;
+        margin: 0 auto;
+    }
+    @include w400() {
+        font-size: 16px;
+    }
     .personal{
         // border: 1px solid black;
         margin-bottom: 20px;
         display: flex;
         align-items: flex-start;
         justify-content: center;
+        @include w1100() {
+            display: block;
+        }
         .left{
             // border: 1px solid green;
             // display: inline-flex;
-            height: 100%;
+            // height: 100%;
             background-color: $main_color;
             padding: 15px;
             text-align: center;
             margin-right: 20px;
             border-radius: 20px;
+            // height: inherit;
+            @include w1100() {
+                margin: 20px;
+            }
+            @include w600() {
+                margin: 0px;
+            }
+            @include w500() {
+                padding: 5px;
+            }
             .block_left{
                 // border: 1px solid blue;
                 display: inline-block;
                 background-color: $second_color2;
-                padding: 30px 20px;
+                padding: 20px 10px;
                 border-radius: 20px;
                 img{
                     width: 380px;
@@ -41,53 +61,89 @@
                     cursor: pointer;
                     font-size: 18px;
                 }
+                @include w1100() {
+                    margin-bottom: 5px;
+                }
             }
         }
 
         .right{
             // border: 1px solid green;
             background-color: $main_color;
-            height: inherit;
-            // display: inline-flex;
             padding: 10px;
             border-radius: 20px;
+            @include w1100() {
+                margin: 20px;
+            }
+            @include w600() {
+                margin: 0px;
+                margin-top: 20px;
+            }
+            @include w400() {
+                padding: 5px;
+            }
             .block_right{
                 // border: 1px solid blue;
-                // display: inline-block;
                 padding: 10px;
-                // align-items: center;
+                @include w500() {
+                    padding: 5px;
+                }
+                @include w400() {
+                    padding: 0;
+                }
                 .top{
                     // border: 1px solid maroon;
                     background-color: $second_color5;
                     border-radius: 20px;
                     margin: 10px auto;
                     padding: 10px;
+                    @include w1100() {
+                        margin-bottom: 20px;
+                    }
+                    @include w500() {
+                        margin-bottom: 10px;
+                    }
                 }
                 .bottom{
                     // border: 1px solid maroon;
                     background-color: $second_color5;
                     border-radius: 20px;
-                    margin: 15px auto;
-                    padding: 10px;
+                    margin: 10px auto;
+                    padding: 5px;
+                    @include w400() {
+                        padding: 0;
+                    }
                     .bottom_text{
+                        // border: 1px solid black;
                         .adjust{
                             // border: 1px solid blue;
-                            text-align: right;
                             .customer_info{
                                 // border: 1px solid red;
-                                margin: 10px;
-                                .line{
+                                margin: 12px 2px;
+                                display: inline-block;
+                                @include w400() {
+                                    margin: 5px 0;
+                                }
+                                .line_left{
                                     // border: 1px solid black;
-                                    display: inline-block;
+                                    display: block;
+                                    text-align: right;
+                                    line-height: 28px;
                                 }
-                                span{
-                                    display: inline-block;
-                                    // border: 1px solid maroon;
-                                    width: 250px;
-                                    // overflow-wrap: break-word;
+                                .line_right{
+                                    // border: 1px solid black;
+                                    display: block;
                                     text-align: left;
-                                    text-decoration: underline
+                                    line-height: 28px;
                                 }
+                                // span{
+                                //     display: inline-block;
+                                //     // border: 1px solid maroon;
+                                //     width: 250px;
+                                //     // overflow-wrap: break-word;
+                                //     text-align: left;
+                                //     text-decoration: underline;
+                                // }
                             }
                         }
                         button{
@@ -96,6 +152,9 @@
                             cursor: pointer;
                             margin: 10px;
                             font-size: 18px;
+                            @include w1100() {
+                                margin-bottom: 5px;
+                            }
                         }
                     }
                 }
@@ -108,6 +167,9 @@
                             margin-bottom: 15px;
                             display: inline-block;
                             font-size: 18px;
+                            @include w500() {
+                                margin: 5px;
+                            }
                         }
                     }
                 }
@@ -126,22 +188,22 @@
         background-color: rgba(0,0,0,0.5);
         z-index: 100;
         #div_pop{
-            /* border: 1px solid black; */
+            // border: 1px solid black;
             background:#E6EECE;
             color: #774F40;
             width: 80vw;
-            height: 80vh;
+            height: 90vh;
             // z-index: 1;
-            margin: 10vh auto;
+            margin: 5vh auto;
             /* overflow: auto; */
             text-align: center;
             .div_top{
-                /* border: 1px solid blue; */
+                // border: 1px solid blue;
                 width: 100%;
                 height: auto;
                 font-size: 24px;
                 .div_title{
-                    /* border: 1px solid black; */
+                    // border: 1px solid black;
                     justify-content: center;
                     padding: 10px;
                     padding-bottom: 0;
@@ -155,41 +217,74 @@
             .div_content{
                 // border: 1px solid red;
                 width: 100%;
+                height: 65vh;
                 margin: 30px auto;
                 overflow: auto;
                 font-size: 20px;
+                margin-bottom: 0;
                 .big_content{
-                    /* border: 1px solid green; */
-                    height: auto;
+                    // border: 1px solid green;
+                    height: 50vh;
                     display: inline-block;
                     vertical-align: middle;
-                    // padding: 50px;
 
                     // 彈窗主要內容
                     .portrait{
                         // border: 1px solid blue;
                         display: flex;
+                        height: 50vh;
+                        vertical-align: middle;
+                        @include w800() {
+                            display: block;
+                            height: 50vh;
+                        }
                         .portrait_left{
                             // border: 1px solid red;
                             background-color: $main_color;
                             padding: 10px 50px;
+                            height: auto;
                             border-radius: 20px;
                             margin-right: 10px;
+                            vertical-align: middle;
+                            @include w800() {
+                                height:auto;
+                                margin-right: 0;
+                                padding: 10px 40px;
+                            }
+                            @include w600() {
+                                padding: 10px 30px;
+                            }
+                            @include w400() {
+                                padding: 10px 20px;
+                            }
                             .portrait_left_top{
                                 // border: 1px solid black;
+                                width: 100%;
+                                display: block;
                                 img{
-                                    width: 220px;
+                                    width: 180px;
+                                    margin-top: 2vh;
+                                    @include w800() {
+                                        width: 150px;
+                                        margin-top: 0;
+                                    }
                                 }
                             }
                             .portrait_left_bottom{
-                                // border: 1px solid black;
                                 border: 1px solid $second_color6;
+                                // border: 1px solid black;
                                 background-color: $second_color5;
                                 border-radius: 20px;
                                 font-size: $font_20;
                                 text-align: left;
                                 padding: 10px 20px;
-                                margin-top: 10px;
+                                margin-top: 1vh;
+                                @include w800() {
+                                    margin: 0 10px;
+                                    margin-top: 1vh;
+                                    padding: 5px;
+                                    // width: inherit;
+                                }                                
                                 .wearon{
                                     // border: 1px solid red;
                                     text-align: center;
@@ -199,21 +294,31 @@
                                         background-color: $second_color6;
                                         img{
                                             width: 50px;
+                                            @include w800() {
+                                                width: 40px;
+                                            }   
                                         }
                                     }
                                 }
                             }
                         }
                         .portrait_right{
-                            // border: 1px solid red;
+                            // border: 1px solid purple;
                             background-color: $main_color;
                             padding: 10px;
                             border-radius: 20px;
                             text-align: center;
-                            // height: inherit;
+                            height: auto;
+                            @include w800() {
+                                height:auto;
+                                margin-top: 1vh;
+                            }
                             .right_btn{
                                 // border: 1px solid black;
-                                // display: block;
+                                margin-top: 1vh;
+                                @include w800() {
+                                    margin-top: 0;
+                                }
                                 .right_btn_category{
                                     // border: 1px solid green;
                                     display: inline-block;
@@ -223,39 +328,47 @@
                                 }
                             }
                             .page{
-                                // border: 1px solid blue;
                                 border: 1px solid $second_color6;
+                                // border: 1px solid blue;
                                 background-color: $second_color5;
                                 border-radius: 20px;
-                                margin-top: 10px;
+                                margin: 0 10px;
+                                margin-top: 2vh;
                                 text-align: center;
-                                padding: 5px;
+                                padding: 5px 10px;
+                                @include w800() {
+                                    margin-top: 1vh;
+                                    padding: 5px;
+                                    // display: block;
+                                }
                                 .page_category{
                                     // border: 1px solid black;
-                                    width: 50px;
-                                    height: 50px;
+                                    width: 40px;
+                                    height: 40px;
                                     background-color: $second_color6;
                                     margin: 5px auto;
                                     cursor: pointer;
+                                    @include w800() {
+                                        // margin-top: 1vh;
+                                        // padding: 5px;
+                                        display: inline-block;
+                                        width: 40px;
+                                        height: 40px;
+                                    }
                                 }
                             }
                         }
                     }
                 }
-                .back_button{
-                    /* border: 1px solid blue; */
-                    padding: 10px;
-                    .btn_next{
-                        /* border: 1px solid red; */
-                        margin: 10px;
-                        background-color: $important_color;
-                        font-size: $font_22;
-                        color: $font_color;
-                        border-radius: 10px;
-                        border:0px;
-                        padding: 5px 10px;
-                        text-decoration: none;
-                    }
+            }
+            .back_button{
+                // border: 1px solid blue;
+                padding: 10px;
+                .btn_next{
+                    // border: 1px solid red;
+                    @include button(); 
+                    margin: 0 auto;
+                    cursor: pointer;
                 }
             }
         }
