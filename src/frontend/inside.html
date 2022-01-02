@@ -2,15 +2,13 @@
 <html lang="zh-tw">
     @@include('./layout/meta.html', { "title" : "商品詳細資訊" })
     <link href="./css/inside.css" rel="stylesheet" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
   </head>
+  <script src="../js/tools/vue.js"></script>
 <body>
     <div class="inside_content">
     @@include('./layout/header.html')
@@ -20,7 +18,7 @@
       </p>
   </div>
     <main>
-      <article class="inside_first_block_commodity">
+      <article class="inside_first_block_commodity" id="inside_first_block_commodity">
         <div class="inside_first_block_img">
           <div class="inside_first_block_img_big">
             <img id="big_img" src="./images/inside_page/images/inside_first_block_p1.png" alt="">
