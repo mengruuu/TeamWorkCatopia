@@ -45,7 +45,7 @@ header{
 }
 
 div.header_catopia{
-  border:1px solid blue;
+  // border:1px solid blue;
   width: fit-content;
   height: 100%;
   display: flex;
@@ -62,7 +62,7 @@ div.header_catopia{
     width: 150px;
   }
   div.logo_catopia{
-    border: 1px solid purple;
+    // border: 1px solid purple;
     width: 150px;
     height: 90%;
     position: relative;
@@ -110,7 +110,7 @@ div.header_catopia{
 }
 
 div.header_option{
-  border:1px solid black;
+  // border:1px solid black;
   height: 100%;
   display: inline-block;
   width: 90%;
@@ -142,13 +142,13 @@ ul.header_titles{
   // }
 }
 li.title{
-  border:1px solid aqua;
+  // border:1px solid aqua;
   width: 120px;
   height: 100%;
   text-align: center;
   position: relative;
   .title_icon{
-    border:1px solid red;
+    // border:1px solid red;
     height: 45%;
     width: fit-content;
     margin: 0 auto;
@@ -165,14 +165,14 @@ li.title{
     }
   }
   .title_text_frame{
-    border:1px solid black;
+    // border:1px solid black;
     width: 100%;
     margin: 0 auto;
     @include w1100{
       width: 80%;
     }
     div.title_text{
-      border:1px solid red;
+      // border:1px solid red;
       background-color: $important_color;
       font-size: $font_22;
       text-align: center;
@@ -206,7 +206,7 @@ li.title{
 }
 
 div.header_icons{
-  border:1px solid red;
+  // border:1px solid red;
   height: 100%;
   display: inline-block;
   display: flex;
@@ -240,7 +240,7 @@ div.header_icons{
   }
   }
     a.member_icon{
-      border:1px solid blue;
+      // border:1px solid blue;
       height: 100%;
       margin-right: 15px;
       @include w1100{
@@ -248,7 +248,7 @@ div.header_icons{
       }
     }
     div.shopping_cart{
-      border:1px solid green;
+      // border:1px solid green;
       height: 100%;
       cursor: pointer;
       @include w1100{
@@ -264,7 +264,7 @@ ul.header_second_titles{
   list-style: none;
   padding: 0;
   padding: 5px 0;
-  // display: flex;
+  display: flex;
   display: none;
   position: absolute;
   bottom:0;
@@ -278,7 +278,7 @@ ul.header_second_titles{
     bottom:0;
     left: -50vw;
     z-index: 0;
-    height: 34px;
+    height: 100%;
   }
   &:hover{
     display: flex;
@@ -302,7 +302,8 @@ ul.header_second_titles{
 }
 
 div.hamburger_icon{
-  border: 1px solid blue;
+  // border: 1px solid blue;
+  cursor: pointer;
   height: 80%;
   margin-top: 5px;
   display: none;
