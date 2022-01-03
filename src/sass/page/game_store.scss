@@ -18,13 +18,12 @@ div.game_store_content{
             vertical-align: top;
         }
         div.first_content_option{
-            // border:1px solid green;
             border:1px solid transparent;
+            // border:1px solid green;
             width: 22%;
             background-color: $main_color;
             box-shadow: $shadow;
             border-radius: 15px;
-            cursor: pointer;
             @include w700() {
                 width: 100%;
                 vertical-align: top;
@@ -45,6 +44,10 @@ div.game_store_content{
                 li{
                     // border:1px solid green; 
                     margin: 0 auto;
+                    cursor: pointer;
+                    &:first-child{
+                        cursor: auto;
+                    }
                     @include w700() {
                         display: inline-block;
                     }
