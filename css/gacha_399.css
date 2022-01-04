@@ -553,4 +553,86 @@
 .gacha_399_main #background_pop #div_pop .div_content .big_content .cat_399:nth-child(3n+3) {
   margin-right: 0;
 }
+
+.gacha_399_main #background_pop1 {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gacha_399_main #background_pop1 #div_pop1 {
+  /* border: 1px solid black; */
+  background: #E6EECE;
+  color: #774F40;
+  width: 80vw;
+  height: 75vh;
+  z-index: 1;
+  margin: 10vh auto;
+  margin-top: 20vh;
+  /* overflow: auto; */
+  text-align: center;
+}
+
+.gacha_399_main #background_pop1 #div_pop1 .div_top1 {
+  /* border: 1px solid blue; */
+  width: 100%;
+  height: auto;
+  font-size: 24px;
+}
+
+.gacha_399_main #background_pop1 #div_pop1 .div_top1 .div_title1 {
+  /* border: 1px solid black; */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+.gacha_399_main #background_pop1 #div_pop1 .div_top1 .div_title1 #close_btn1 {
+  cursor: pointer;
+  margin-top: -5px;
+  float: right;
+}
+
+.gacha_399_main #background_pop1 #div_pop1 .div_content1 {
+  /* border: 1px solid red; */
+  width: 100%;
+  margin: 10px auto;
+  overflow: auto;
+  font-size: 20px;
+}
+
+.gacha_399_main #background_pop1 #div_pop1 .div_content1 #A {
+  /* border: 1px solid green; */
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 20px;
+}
+
+.gacha_399_main #background_pop1 #div_pop1 .div_content1 .back_button1 {
+  /* border: 1px solid blue; */
+  padding: 10px;
+}
+
+.gacha_399_main #background_pop1 #div_pop1 .div_content1 .back_button1 .btn_next1 {
+  /* border: 1px solid red; */
+  margin: 20px;
+  background-color: #FED67E;
+  font-size: 24px;
+  color: #774F40;
+  border-radius: 10px;
+  border: 0px;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+.gacha_399_main #background_pop1 #div_pop1 .div_content1 .last_word1 {
+  /* border: 1px solid red; */
+  margin: 10px;
+}
 /*# sourceMappingURL=gacha_399.css.map */
