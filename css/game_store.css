@@ -1,0 +1,542 @@
+div.game_store_content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media all and (max-width: 500px) {
+  div.game_store_content {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+div.game_store_content div.game_store_first_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_first_content {
+    display: block;
+    vertical-align: top;
+  }
+}
+
+div.game_store_content div.game_store_first_content div.first_content_option {
+  border: 1px solid transparent;
+  width: 22%;
+  background-color: #FFF2CC;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_first_content div.first_content_option {
+    width: 100%;
+    vertical-align: top;
+    margin-right: 5%;
+    height: 100%;
+    margin-bottom: 5px;
+  }
+}
+
+div.game_store_content div.game_store_first_content div.first_content_option nav ul {
+  padding: 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_first_content div.first_content_option nav ul {
+    display: block;
+    margin-top: 2%;
+  }
+}
+
+div.game_store_content div.game_store_first_content div.first_content_option nav ul li {
+  margin: 0 auto;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_first_content div.first_content_option nav ul li {
+    display: inline-block;
+  }
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_first_content div.first_content_option nav ul li:first-child {
+    display: block;
+  }
+}
+
+div.game_store_content div.game_store_first_content div.first_content_option nav ul li p {
+  font-size: 22px;
+  color: #774F40;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_first_content div.first_content_option nav ul li p {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  div.game_store_content div.game_store_first_content div.first_content_option nav ul li p {
+    font-size: 18px;
+  }
+}
+
+div.game_store_content div.game_store_first_content div.first_content_option nav ul li div {
+  margin: 0 auto;
+  background-color: #EAE4D2;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  margin-bottom: 20px;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_first_content div.first_content_option nav ul li div {
+    width: 80%;
+    margin: 20px 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+}
+
+@media all and (max-width: 500px) {
+  div.game_store_content div.game_store_first_content div.first_content_option nav ul li div {
+    margin: 5px 10px;
+  }
+}
+
+div.game_store_content div.game_store_first_content div.first_content_option nav ul li div p {
+  font-size: 20px;
+  color: #774F40;
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 2px;
+  padding: 5px 15px;
+}
+
+@media all and (max-width: 500px) {
+  div.game_store_content div.game_store_first_content div.first_content_option nav ul li div p {
+    font-size: 16px;
+    padding: 2px 5px;
+  }
+}
+
+div.game_store_content div.game_store_first_content div.first_content_option nav ul li div:hover {
+  background-color: #E6EECE;
+}
+
+div.game_store_content div.game_store_first_content div.first_content_cat {
+  width: 50%;
+  background-color: #FFF2CC;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  border-radius: 15px;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_first_content div.first_content_cat {
+    width: 100%;
+    display: block;
+  }
+}
+
+div.game_store_content div.game_store_first_content div.first_content_cat div.try_on p {
+  font-size: 22px;
+  color: #774F40;
+  text-align: center;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_first_content div.first_content_cat div.try_on p {
+    margin: 5px auto;
+  }
+}
+
+@media all and (max-width: 500px) {
+  div.game_store_content div.game_store_first_content div.first_content_cat div.try_on p {
+    font-size: 18px;
+  }
+}
+
+div.game_store_content div.game_store_first_content div.first_content_cat div.cat {
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_first_content div.first_content_cat div.cat {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_first_content div.first_content_cat div.cat img {
+    width: 200px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  div.game_store_content div.game_store_first_content div.first_content_cat div.cat img {
+    width: 180px;
+  }
+}
+
+div.game_store_content div.game_store_first_content div.first_content_cat div.take_off {
+  text-align: right;
+}
+
+div.game_store_content div.game_store_first_content div.first_content_cat div.take_off button.take_off_btn {
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+  background-color: #FED67E;
+  color: #774F40;
+  border: 0px;
+  margin-right: 55px;
+  margin-top: -20px;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 1px lightgray;
+  cursor: pointer;
+}
+
+@media all and (max-width: 800px) {
+  div.game_store_content div.game_store_first_content div.first_content_cat div.take_off button.take_off_btn {
+    margin-right: 10%;
+  }
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_first_content div.first_content_cat div.take_off button.take_off_btn {
+    margin-top: -10px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  div.game_store_content div.game_store_first_content div.first_content_cat div.take_off button.take_off_btn {
+    font-size: 18px;
+  }
+}
+
+div.game_store_content div.game_store_first_content div.first_content_text {
+  height: auto;
+  width: 22%;
+  background-color: #FFF2CC;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  border-radius: 15px;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_first_content div.first_content_text {
+    display: inline-block;
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+div.game_store_content div.game_store_first_content div.first_content_text div.product_text p {
+  font-size: 22px;
+  color: #774F40;
+  text-align: center;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_first_content div.first_content_text div.product_text p {
+    margin: 5px auto;
+  }
+}
+
+@media all and (max-width: 500px) {
+  div.game_store_content div.game_store_first_content div.first_content_text div.product_text p {
+    font-size: 18px;
+  }
+}
+
+div.game_store_content div.game_store_first_content div.first_content_text div.text {
+  padding-left: 10px;
+  margin-top: 35px;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_first_content div.first_content_text div.text {
+    margin-top: 10px;
+  }
+}
+
+div.game_store_content div.game_store_first_content div.first_content_text div.text p {
+  font-size: 20px;
+  color: #774F40;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_first_content div.first_content_text div.text p {
+    margin: 5px auto;
+  }
+}
+
+@media all and (max-width: 500px) {
+  div.game_store_content div.game_store_first_content div.first_content_text div.text p {
+    font-size: 16px;
+  }
+}
+
+div.game_store_content div.game_store_second_content {
+  width: 100%;
+  background-color: #FFF2CC;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  border-radius: 15px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_second_content {
+    margin-top: 20px;
+  }
+}
+
+div.game_store_content div.game_store_second_content div.all_product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.game_store_content div.game_store_second_content div.all_product div.product {
+  background-color: #EAE4D2;
+  height: 120px;
+  width: 140px;
+  text-align: center;
+  padding-left: 10px;
+  padding-top: 20px;
+  border-radius: 15px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+@media all and (max-width: 800px) {
+  div.game_store_content div.game_store_second_content div.all_product div.product {
+    height: 100px;
+    width: 120px;
+    margin: 20px 10px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  div.game_store_content div.game_store_second_content div.all_product div.product {
+    height: 80px;
+    width: 100px;
+    margin: 20px 5px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  div.game_store_content div.game_store_second_content div.all_product div.product {
+    height: 65px;
+    width: 80px;
+    margin: 10px 2px;
+  }
+}
+
+div.game_store_content div.game_store_second_content div.all_product div.product img {
+  width: 80%;
+}
+
+div.game_store_content div.game_store_second_content div.all_product div.-on {
+  border: 3px solid #774F40;
+}
+
+div.game_store_content div.game_store_second_content button {
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+  background-color: #FED67E;
+  color: #774F40;
+  border: 0px;
+  margin-bottom: 15px;
+}
+
+@media all and (max-width: 500px) {
+  div.game_store_content div.game_store_second_content button {
+    font-size: 18px;
+  }
+}
+
+div.game_store_content div.game_store_last_content {
+  width: 100%;
+  background-color: #FFF2CC;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  border-radius: 15px;
+  margin-top: 30px;
+  margin-bottom: 150px;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_last_content {
+    margin-top: 20px;
+  }
+}
+
+div.game_store_content div.game_store_last_content div.shopping_chart {
+  text-align: center;
+}
+
+div.game_store_content div.game_store_last_content div.shopping_chart img {
+  position: relative;
+  top: 5px;
+}
+
+div.game_store_content div.game_store_last_content div.shopping_chart p {
+  font-size: 22px;
+  color: #774F40;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_last_content div.shopping_chart p {
+    margin: 10px auto;
+    padding: 5px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  div.game_store_content div.game_store_last_content div.shopping_chart p {
+    font-size: 18px;
+  }
+}
+
+div.game_store_content div.game_store_last_content div.chart_all_product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+div.game_store_content div.game_store_last_content div.chart_all_product div.shopping_product {
+  background-color: #EAE4D2;
+  text-align: center;
+  margin: 20px;
+  margin-top: 0;
+  border-radius: 15px;
+  padding-top: 20px;
+  height: 120px;
+  width: 140px;
+}
+
+@media all and (max-width: 800px) {
+  div.game_store_content div.game_store_last_content div.chart_all_product div.shopping_product {
+    height: 100px;
+    width: 120px;
+    margin: 0 10px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  div.game_store_content div.game_store_last_content div.chart_all_product div.shopping_product {
+    height: 80px;
+    width: 100px;
+    margin: 0 5px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  div.game_store_content div.game_store_last_content div.chart_all_product div.shopping_product {
+    height: 65px;
+    width: 80px;
+    margin: 0 2px;
+  }
+}
+
+div.game_store_content div.game_store_last_content div.chart_all_product div.shopping_product img {
+  width: 80%;
+}
+
+div.game_store_content div.game_store_last_content div.pay {
+  text-align: center;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_last_content div.pay {
+    text-align: center;
+  }
+}
+
+div.game_store_content div.game_store_last_content div.pay div.point {
+  display: inline-block;
+  margin-left: 20%;
+  margin-right: 50px;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_last_content div.pay div.point {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+div.game_store_content div.game_store_last_content div.pay div.point p {
+  font-size: 18px;
+  color: #774F40;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_last_content div.pay div.point p {
+    display: block;
+    margin: 5px auto;
+  }
+}
+
+div.game_store_content div.game_store_last_content div.pay button {
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+  background-color: #FED67E;
+  color: #774F40;
+  border: 0px;
+}
+
+@media all and (max-width: 700px) {
+  div.game_store_content div.game_store_last_content div.pay button {
+    margin: 10px auto;
+  }
+}
+/*# sourceMappingURL=game_store.css.map */

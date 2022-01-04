@@ -1,7 +1,9 @@
 <header>
     <div class="header_catopia">
         <div class="logo_catopia">
-            <img src="./images/header/header_logo_text.png" alt="">
+            <a href="./index.html">
+                <img src="./images/header/header_logo_text.png" alt="">
+            </a>
         </div>
 
         <div class="logo_cat">
@@ -99,13 +101,63 @@
         <a href="" class="member_icon">
             <img src="./images/header/header_icon_member.png" alt="">
         </a>
-        <div class="shopping_cart">
+        <div class="shopping_cart" id="hd_popup_click">
             <img src="./images/header/header_icon_shopping_chart.png" alt="">
         </div>
     </div>
     <div class="hamburger_icon">
         <img src="./images/hamburger/hamburger_icon.png" alt="">
     </div>
+
+    <!-- 彈窗 -->
+    <div id="hd_background_pop">
+        <div id="hd_div_pop">
+            <div class="hd_div_top">
+                <div class="hd_div_title">
+                    <!-- 可放標題內容 -->
+                    <span id="hd_close_btn"><img src="./images/header/header_shopping_cart_popup_cancel1.png"></span>
+                </div>
+            </div>
+            <div class="hd_div_content">
+                <div class="hd_big_content">
+                    <!-- 彈窗主要內容 -->
+                    <div class="hd_choose_cart">
+                        <div class="hd_left">
+                            <a href="cart_step1.html">
+                                <img src="./images/header/header_shopping_cart_popup_cat.png">
+                                <div class="hd_cart_btn">一般購物車</div>
+                            </a>
+                        </div>
+                        <div class="hd_right">
+                            <a href="gacha_cart_step1.html">
+                                <img src="./images/header/header_shopping_cart_popup_box_yellow.png">
+                                <div class="hd_gacha_cart_btn">盲抽購物車</div>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
 </header>
 @@include('./hamburger.html')
+
+<script>
+    var hd_popupBtn = document.getElementById('hd_background_pop');
+    var hd_popupClick = document.getElementById('hd_popup_click');
+    var hd_close = document.getElementById('hd_close_btn');
+    hd_popupClick.addEventListener('click', function(){
+        hd_popupBtn.style.display = "block";
+        // console.log('test');
+    })
+    hd_close.onclick = function close() {
+        hd_popupBtn.style.display = "none";
+    }
+    window.onclick = function close(e) {
+        if (e.target == hd_popupBtn) {
+            hd_popupBtn.style.display = "none";
+        }
+    }
+</script>
 
