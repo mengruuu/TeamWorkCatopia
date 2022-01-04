@@ -254,3 +254,81 @@ PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PROD
 value('喵咪造型頭套','裝飾品','頭套','./images/products/cloth/head/product_cloth_head4_1.jpg','./images/products/cloth/head/product_cloth_head4_2.jpg','./images/products/cloth/head/product_cloth_head4_3.jpg','./images/products/cloth/head/product_cloth_head4_4.jpg','可愛造型頭套，兼具溫暖功能，好看又保暖', 500);
 
 
+-- 商品(盲抽)
+
+-- 商品(299)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('萬聖巫師','盲抽','299','./images/products/gacha/299/product_gacha_299_1.png','盲抽商品', 299);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('萬聖南瓜','盲抽','299','./images/products/gacha/299/product_gacha_299_2.png','盲抽商品', 299);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('萬聖幽靈','盲抽','299','./images/products/gacha/299/product_gacha_299_3.png','盲抽商品', 299);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('萬聖蝙蝠','盲抽','299','./images/products/gacha/299/product_gacha_299_4.png','盲抽商品', 299);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('聖誕樹','盲抽','299','./images/products/gacha/299/product_gacha_299_5.png','盲抽商品', 299);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('聖誕蛋糕','盲抽','299','./images/products/gacha/299/product_gacha_299_6.png','盲抽商品', 299);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('聖誕麋鹿','盲抽','299','./images/products/gacha/299/product_gacha_299_7.png','盲抽商品', 299);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('聖誕帽','盲抽','299','./images/products/gacha/299/product_gacha_299_8.png','盲抽商品', 299);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('聖誕雪人','盲抽','299','./images/products/gacha/299/product_gacha_299_9.png','盲抽商品', 299);
+
+
+-- 商品(盲抽)
+
+-- 商品(399)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('Elmo','盲抽','399','./images/products/gacha/399/product_gacha_399_1.png','盲抽商品', 399);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('Cookie Monster','盲抽','399','./images/products/gacha/399/product_gacha_399_2.png','盲抽商品', 399);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('Big Bird','盲抽','399','./images/products/gacha/399/product_gacha_399_3.png','盲抽商品', 399);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('Bert','盲抽','399','./images/products/gacha/399/product_gacha_399_4.png','盲抽商品', 399);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('Ernie','盲抽','399','./images/products/gacha/399/product_gacha_399_5.png','盲抽商品', 399);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('Oscar','盲抽','399','./images/products/gacha/399/product_gacha_399_6.png','盲抽商品', 399);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('浣熊','盲抽','399','./images/products/gacha/399/product_gacha_399_7.png','盲抽商品', 399);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('狐狸','盲抽','399','./images/products/gacha/399/product_gacha_399_8.png','盲抽商品', 399);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('胖丁','盲抽','399','./images/products/gacha/399/product_gacha_399_9.png','盲抽商品', 399);
