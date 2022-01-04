@@ -1,0 +1,34 @@
+.cart_step4_container {
+  max-width: 100%;
+  margin: 0 auto;
+  color: #774F40;
+  text-align: center;
+  margin: 50px 0 0 0;
+  padding: 100px;
+  background-image: url(../images/shopping_cart/background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.cart_step4_next_step button {
+  margin: 50px 0;
+}
+
+@media all and (max-width: 900px) {
+  .cart_step4_next_step button {
+    font-size: 18px;
+    padding: 10px 70px;
+  }
+}
+
+.cart_step4_container p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+@media all and (max-width: 900px) {
+  .cart_step4_container p {
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=cart_step4.css.map */
