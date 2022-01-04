@@ -6,11 +6,13 @@ var man_drawing = true;
 var glass = [];
 var heart_point = 3;
 var cool_down = true;
+var stop_game = false;
 
-function doFirst(){   
+
+// function doFirst(){   
     let myGameArea = document.getElementById("canvas");
     context = myGameArea.getContext("2d");
-    myGameArea.width = 1200;
+    myGameArea.width = 1000;
     myGameArea.height = 450;
     myGameArea.interval = setInterval(updateGameArea,20);//每秒50次執行updateGameArea函式
     setInterval(splice_broken_glass,2500);
@@ -44,6 +46,8 @@ function doFirst(){
     //鍵盤左右移動
     document.addEventListener("keydown", function(e){
         console.log(e.which);
+
+        //移動------------------------------------------
         if(man.x > -20){    //限制範圍
             if(e.keyCode == 37 ){
                 // myGamePiecePerson.x -= 5;
@@ -56,15 +60,20 @@ function doFirst(){
                 // myGamePiecePerson.x += 5;
                 man_drawing = true;
                 man.x += 8;
+
+                
             }
         }
+        //-------------------------------------------------
+
+        //瞬移技能-----------------------------------
         if(man_drawing && e.keyCode == 67 && cool_down){
             man.x += 150;
-            if(man.x > (canvas.width-man.width + 20)){
+            if(man.x > (canvas.width-man.width + 20)){  //限制不能超出範圍
                 man.x = canvas.width-man.width + 20;
             }
             cool_down = false;
-            console.log(cool_down);
+            // console.log(cool_down);
             setTimeout(cool , 10000);
         }   
         if(!man_drawing && e.keyCode == 67 && cool_down){
@@ -74,10 +83,18 @@ function doFirst(){
             }
             cool_down = false;
             setTimeout(cool , 10000);
-        }   
+        }  
+        //----------------------------------------------
+
+        //加速------------------------------------------
+        // if(e.keyCode == 86){
+            
+        // }
+
+
     });
 
-}
+// }
 
 function drawText(text,x,y,color){
     context.font = '20px Calibri';
@@ -218,10 +235,10 @@ function splice_glass(){
 }
 function splice_broken_glass(){
     for(i=0; i < glass.length; i++){
-        if(glass[i].y == (canvas.height-50)){
+        if(glass[i].y > (canvas.height-50)){
             glass.splice(i,1);
             heart_point -- ;
-            console.log(heart_point);
+            // console.log(heart_point);
         }
     }
 }
@@ -247,9 +264,10 @@ function updateGameArea(){
     //玻璃杯重畫函式執行 並且往下掉
     for(i=0; i < glass.length; i++){
         // console.log(glass[i]);
-        if(glass[i].y == (canvas.height - 50)){
+        if(glass[i].y > (canvas.height - 50)){
             glass[i].broken_update(broken_glass,60,60);
-            // console.log(heart);
+
+            // console.log(glass[i].y);
         }else{
             if(score < 5){
                 glass[i].y +=1;
@@ -285,7 +303,7 @@ function updateGameArea(){
     //碰撞執行
     for(i=0 ; i< glass.length; i++){
         if(man.catched(glass[i]) && (glass[i].y < canvas.height-50)){
-            console.log("test");
+            // console.log("test");
             splice_glass();
             score ++ ;
             // console.log(score);
@@ -322,12 +340,12 @@ function updateGameArea(){
             break;
 
         case 0:
-            console.log("gameover");
+            // console.log("gameover");
+            clearInterval(myGameArea.interval);
             break;
     }
     
-
-
+    
 
     // if(myGamePiecePerson.catched(myGamePiece1)){
     //     score++;
@@ -357,4 +375,5 @@ function updateGameArea(){
 }
 
 
-window.addEventListener('load', doFirst);
+// window.addEventListener('load', doFirst);
+// doFirst();
