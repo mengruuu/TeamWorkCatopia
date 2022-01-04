@@ -17,11 +17,20 @@ div.hamburger_-on,div.hamburger_-off{
     //     bottom: 100px;
     // }
     // border:1px solid blue;
-    width: 25%;
+    width: 30%;
     background-color: $second_color3;
     text-align: center;
     // display: flex;
     // flex-direction: column;
+    @include w800{
+        width: 40%;
+    }
+    @include w600{
+        width: 45%;
+    }
+    @include w500{
+        width: 50%;
+    }
     >div.hamburger{
         @include button();
         position: relative;
@@ -32,6 +41,12 @@ div.hamburger_-on,div.hamburger_-off{
         display: inline-block;
         margin: 0 auto;
         cursor: pointer;
+        @include w600{
+            width: 45%;
+        }
+        @include w500{
+            width: 50%;
+        }
     }
     div.hamburger_product{
         margin-top: 10px;
@@ -51,6 +66,12 @@ div.hamburger_-on,div.hamburger_-off{
         font-size: $font_20;    
         display: inline-block;
         cursor: pointer;
+        @include w600{
+            width: 45%;
+        }
+        @include w500{
+            width: 50%;
+        }
     
     }
     >a:hover{

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layout/meta.html', {
+      "title" : "遊戲"
+    })
+    <link rel="stylesheet" href="./css/game.css">
+    <script src="./js/frontend/game.js" async></script>
+</head>
+<body>
+    @@include('./layout/header.html')
+
+
+    <canvas id="canvas" style="border: 1px solid #ccc;"></canvas>
+    <div class="game_images">
+        <img id="glass_pic"src="./images/game/glass.png" alt="">
+        <img  id="man_right" src="./images/game/man_right.png" alt="">
+        <img  id="man_left" src="./images/game/man_left.png" alt="">
+        <img  id="heart" src="./images/game/heart.png" alt="">
+        <img  id="broken_heart"  src="./images/game/broken-heart.png" alt="">
+        <img id="broken_glass" src="./images/game/broken-glass.png" alt="">
+    </div>
+
+    @@include('./layout/footer.html')
+</body>
+</html>

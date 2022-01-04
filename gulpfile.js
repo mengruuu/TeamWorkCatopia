@@ -37,6 +37,8 @@ function Bsassstyle() {
     .pipe(dest("dist/css/backend")); // 目的地路徑
 }
 exports.Bstyle = Bsassstyle;
+
+
 // html template
 
 const fileinclude = require("gulp-file-include");
@@ -135,7 +137,15 @@ function browser(done) {
     reload
   );
   watch(["src/js/*/*.*", "src/js/**/*.*"], jsmini).on("change", reload);
+
+  watch("src/frontend/API/*.php", move_php).on("change", reload);
+
+  watch("src/backend/API/*.php", move_backend_php).on("change", reload);
+
+  watch("src/library/*.*", move_Lib).on("change", reload);
+
   done();
+
 }
 
 exports.default = series(browser, img_copy);
@@ -160,3 +170,26 @@ exports.c = clear;
 // }
 
 // exports.all  = concatcss;
+
+
+//php搬運
+
+function move_php(){
+  return src("src/frontend/API/*.php").pipe(dest("dist/API"));
+}
+
+exports.movephp = move_php;
+
+function move_backend_php(){
+  return src("src/backend/API/*.php").pipe(dest("dist/backend/API"));
+}
+
+exports.move_backend_php = move_backend_php;
+
+
+//函式庫搬運
+function move_Lib(){
+  return src("src/library/*.*").pipe(dest("dist/library"));
+}
+
+exports.move_library = move_Lib;
