@@ -24,9 +24,14 @@ main {
 
     .inside_first_block_img {
         margin: 0 auto;
-
         .inside_first_block_img_big {
-            margin-bottom: 55px;
+            img{
+                margin-bottom: 55px;
+                width: 486px;
+                height: 450px;
+                object-fit: fill;
+                border-radius: 15px;
+            }
         }
 
         .inside_first_block_img_small {
@@ -37,6 +42,13 @@ main {
 
             img {
                 cursor: pointer;
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                border-radius: 5px;
+                &:hover{
+                    transform: scale(1.1);
+                }
             }
         }
 
@@ -84,6 +96,7 @@ main {
                 appearance: none;
                 outline: none;
                 background-color: $main_color;
+                font-size: $font_20;
             }
         }
 
@@ -105,7 +118,7 @@ main {
                 text-align: center;
                 margin-bottom: 10px;
                 color: $font_color;
-
+                font-size: $font_20;
             }
         }
 
@@ -122,7 +135,7 @@ main {
 
             :nth-child(2) {
                 margin: 0;
-                font-size: $font_32;
+                font-size: $font_24;
                 font-weight: bold;
             }
         }
@@ -148,17 +161,12 @@ main {
 
 
 .inside_sec_block {
-    width: fit-content;
-    margin: 0 auto;
-    margin-top: 120px;
-    border-radius: 15px;
-
-    :nth-child(2) {
-        position: absolute;
-        right: 0;
-        top: 3500px;
-        z-index: -1;
-    }
+    width: 100%;
+    position: absolute;
+    top: 150px;
+    right: -75%;
+    z-index: -1;
+    opacity: 0.8;
 }
 
 .inside_three_block {
@@ -218,11 +226,19 @@ main {
 
         .inside_first_block_img {
             margin: 0 auto;
-
             .inside_first_block_img_big {
-                margin-bottom: 55px;
-                padding: 0px 5px 0px 5px;
+                img{
+                    margin-bottom: 55px;
+                    width: 486px;
+                    height: 450px;
+                    object-fit: fill;
+                    border-radius: 15px;
+                }
             }
+            // .inside_first_block_img_big {
+            //     margin-bottom: 55px;
+            //     padding: 0px 5px 0px 5px;
+            // }
 
             .inside_first_block_img_small {
                 padding: 0px 5px 0px 5px;
@@ -262,7 +278,6 @@ main {
         .inside_first_block_choose {
             position: relative;
             margin-top: 26px;
-            
             .inside_first_block_choose_1 {
                 padding-left: 5%;
                 :nth-child(1) {
@@ -282,9 +297,10 @@ main {
                     appearance: none;
                     outline: none;
                     background-color: $main_color;
+                    font-size: $font_20;
                 }
             }
-
+            
             .inside_first_block_choose_2 {
                 padding-left: 5%;
                 :nth-child(1) {
@@ -293,17 +309,17 @@ main {
                     margin-bottom: 10px;
                     color: $font_color;
                 }
-
+                
                 :nth-child(2) {
                     background-color: $main_color;
                     height: 45px;
                     border-radius: 5px;
                     border: 1px solid;
-                    padding: 0px 55px 0px 60px;
+                    padding: 0px 55px 0px 40px;
                     text-align: center;
                     margin-bottom: 10px;
                     color: $font_color;
-
+                    font-size: $font_20;
                 }
             }
 
@@ -319,7 +335,7 @@ main {
 
                 :nth-child(2) {
                     margin: 0;
-                    font-size: $font_32;
+                    font-size: $font_24;
                     font-weight: bold;
                 }
             }
@@ -345,10 +361,10 @@ main {
 
     }
     .inside_sec_block {
-        width: 80%;
-        margin: 0 auto;
-        margin-top: 80px;
-        border-radius: 15px;
+        // width: 80%;
+        // margin: 0 auto;
+        // margin-top: 80px;
+        // border-radius: 15px;
 
         :nth-child(2) {
            display: none;
@@ -414,6 +430,15 @@ main {
             .inside_first_block_img_big {
                 margin-bottom: 55px;
                 padding: 0px 5px 0px 5px;
+                width: 406px;
+                img{
+                    margin-bottom: 55px;
+                    width: 486px;
+                    height: 370px;
+                    object-fit: fill;
+                    border-radius: 15px;
+                    
+                }
             }
 
             .inside_first_block_img_small {
@@ -491,7 +516,7 @@ main {
                     height: 45px;
                     border-radius: 5px;
                     border: 1px solid;
-                    padding: 0px 55px 0px 60px;
+                    padding: 0px 55px 0px 40px;
                     text-align: center;
                     margin-bottom: 10px;
                     color: $font_color;
@@ -511,7 +536,7 @@ main {
 
                 :nth-child(2) {
                     margin: 0;
-                    font-size: $font_32;
+                    font-size: $font_24;
                     font-weight: bold;
                 }
             }
@@ -684,7 +709,7 @@ main {
                     height: 45px;
                     border-radius: 5px;
                     border: 1px solid;
-                    padding: 0px 55px 0px 60px;
+                    padding: 0px 55px 0px 40px;
                     text-align: center;
                     margin-bottom: 10px;
                     color: $font_color;
@@ -704,7 +729,7 @@ main {
 
                 :nth-child(2) {
                     margin: 0;
-                    font-size: $font_32;
+                    font-size: $font_24;
                     font-weight: bold;
                 }
             }
@@ -800,6 +825,8 @@ main {
             .inside_first_block_img_big {
                 margin-bottom: 55px;
                 padding: 0px 5px 0px 5px;
+                width: 386px;
+                height: 350px;
             }
 
             .inside_first_block_img_small {
@@ -897,7 +924,7 @@ main {
 
                 :nth-child(2) {
                     margin: 0;
-                    font-size: $font_32;
+                    font-size: $font_24;
                     font-weight: bold;
                 }
             }

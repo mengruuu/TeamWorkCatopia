@@ -8,7 +8,7 @@
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
   </head>
-  <script src="../js/tools/vue.js"></script>
+  <script src="./js/tools/vue.js"></script>
 <body>
     <div class="inside_content">
     @@include('./layout/header.html')
@@ -21,13 +21,13 @@
       <article class="inside_first_block_commodity" id="inside_first_block_commodity">
         <div class="inside_first_block_img">
           <div class="inside_first_block_img_big">
-            <img id="big_img" src="./images/inside_page/images/inside_first_block_p1.png" alt="">
+            <img id="big_img" class="big_img" src="./images/inside_page/images/inside_first_block_p1.png" alt="">
           </div>
           <div class="inside_first_block_img_small">
-            <img id="small_1" src="./images/inside_page/images/inside_first_block_p2.png" alt="">
-            <img id="small_2" src="./images/inside_page/images/inside_first_block_p3.png" alt="">
-            <img id="small_3" src="./images/inside_page/images/inside_first_block_p4.png" alt="">
-            <img id="small_4" src="./images/inside_page/images/inside_first_block_p5.png" alt="">
+            <img id="small_1" class="small_img" src="./images/use/images/product_use_catnest1_1.jpeg" alt="">
+            <img id="small_2" class="small_img" src="./images/use/images/product_use_catnest1_2.jpeg" alt="">
+            <img id="small_3" class="small_img" src="./images/use/images/product_use_catnest1_3.jpeg" alt="">
+            <img id="small_4" class="small_img" src="./images/use/images/product_use_catnest1_4.jpeg" alt="">
           </div>
         </div>
         <div class="inside_first_block_text">
@@ -66,7 +66,7 @@
         </div>
       </article>
       <article class="inside_sec_block">
-        <img src="./images/inside_page/images/inside_sec_block_p1_product.png" alt="">
+        <!-- <img src="./images/inside_page/images/inside_sec_block_p1_product.png" alt=""> -->
         <img src="./images/inside_page/images/inside_sec_block_p2_foot.png" alt="">
       </article>
       <article class="inside_three_block">
@@ -83,5 +83,20 @@
     </main>
     @@include('./layout/footer.html')
     </div>
+    <script>
+      let big_img = document.getElementsByClassName("big_img");
+      let small_img = document.getElementsByClassName("small_img");
+
+      small_img[0].style = 'transform: scale(1.1);border:1px solid;border-radius: 5px;';
+      for( let i=0; i < small_img.length; i++){
+      small_img[i].addEventListener("click", function(){
+        big_img[0].src = small_img[i].src;
+        for(let i=0; i < small_img.length; i++){
+          small_img[i].style='';
+        }
+        this.style = 'transform: scale(1.1);border:1px solid;border-radius: 5px;';
+      });
+      }
+    </script>
 </body>
 </html>
