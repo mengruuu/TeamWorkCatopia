@@ -48,6 +48,9 @@ function doFirst(){
     window.onclick = function close(e) {
         if (e.target == popupBtn) {
             popupBtn.style.display = "none";
+        };
+        if (e.target == popupBtn1) {
+            popupBtn1.style.display = "none";
         }
     }
 
@@ -84,11 +87,6 @@ function doFirst(){
         return index_number;
     }
 
-    //不知道要幹嘛的function
-    function every_check(value){
-        value == index_number;
-    }
-
     //抽中商品彈窗相關變數
     let popupBtn1 = document.getElementById('background_pop1');
     let popupClick1 = document.getElementsByClassName('choose_box');
@@ -120,14 +118,14 @@ function doFirst(){
         })
     };
 
-    close1.onclick = function close() {
+    close1.onclick = function close1() {
         popupBtn1.style.display = "none";
     }
-    window.onclick = function close(e) {
-        if (e.target == popupBtn1) {
-            popupBtn1.style.display = "none";
-        }
-    }
+    // window.onclick = function close1(e) {
+    //     if (e.target == popupBtn1) {
+    //         popupBtn1.style.display = "none";
+    //     }
+    // }
     
 
 }
