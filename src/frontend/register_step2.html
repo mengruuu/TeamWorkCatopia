@@ -6,6 +6,7 @@
     })
     <link rel="stylesheet" href="./css/register_second.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="./library/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     @@include('./layout/header.html')
@@ -31,13 +32,13 @@
                 </div>
                 <div>
                     <label>帳號 / Email</label>
-                    <p class = "register_second_confirm_account">123@gmail.com</p>
+                    <p class = "register_second_confirm_account register_confirm"></p>
                     <div>
-                        <label>重新輸入密碼</label>
+                        <label>密碼</label>
                         <!-- <i class="far fa-eye-slash"></i>
                         <i class="far fa-eye register_second_icon_hide"></i> -->
                     </div>
-                    <p class = "register_second_confirm_password">*************************</p>
+                    <p class = "register_second_confirm_password register_confirm">*************************</p>
                 </div>
             </div>
             <div class = "register_second_circle"></div>
@@ -48,13 +49,13 @@
                 </div>
                 <div>
                     <label>姓名</label>
-                    <p>陳陳陳</p>
-                    <label>生日</label>
-                    <p>2000 年 1 月 1 日</p>
+                    <p class="register_confirm"></p>
+                    <!-- <label>生日</label>
+                    <p>2000 年 1 月 1 日</p> -->
                     <label>聯絡電話</label>
-                    <p>0932000000</p>
+                    <p class="register_confirm"></p>
                     <label>聯絡地址</label>
-                    <p>台北市中山區南京東路三段219號5樓</p>
+                    <p class="register_confirm"></p>
                 </div>
             </div>
             <input type = "checkbox" name = "subscription" id = "subscription" required checked>
@@ -65,7 +66,7 @@
             <br>
             <div class = "register_second_button_collection">
                 <button type = "button" class = "register_step2_pre_step_button">上一步　修改資料</button>
-                <button type = "button" class = "register_step2_next_step_button">下一步　完成註冊</button>
+                <button type = "button" class = "register_step2_next_step_button" onclick="register()">下一步　完成註冊</button>
             </div>
         </form>
     </div>
@@ -77,13 +78,55 @@
 
 
             register_step2_pre_step_button.addEventListener("click", function() {
-                window.location.href = "/dist/register_step1.html";
+                window.location.href = "./register_step1.html";
             });
 
-            register_step2_pre_step_button.nextElementSibling.addEventListener("click", function() {
-                window.location.href = "/dist/register_step3.html";
-            });
+            // register_step2_pre_step_button.nextElementSibling.addEventListener("click", function() {
+            //     window.location.href = "./register_step3.php";
+            // });
         })()
+    </script>
+
+    <script>
+    function confirm_member(){
+        $.ajax({
+             method:'POST',
+             url:'./API/register_step2.php',
+             data:{},
+             dataType:'json',
+             success:function(response){
+                 console.log(response);
+                 for(i=0; i < $(".register_confirm").length; i++){
+                    $(".register_confirm")[i].append(response[i]);
+                 }
+             },
+             error: function(exception) {
+                 alert("發生錯誤: " + exception.status);  //網路出錯的部分
+             }
+        });
+    }
+    confirm_member();
+
+
+    function register(){
+            $.ajax({
+            method:'POST',
+            url:'./API/register_step3.php',
+            data:{
+            },
+            dataType:'text',
+            success:function(response){
+                if(response){
+                    // console.log(response);
+                    window.location.href = "./register_step3.html";
+                }
+            },error: function(exception) {
+                alert("發生錯誤: " + exception.status);  //網路出錯的部分
+            }
+        });
+    }
+
+
     </script>
     @@include('./layout/footer.html')
 </body>

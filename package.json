@@ -14,7 +14,8 @@
     "後台sass打包": "gulp Bstyle",
     "清除舊檔案": "gulp c",
     "壓圖": "gulp img",
-    "函式庫搬家": "gulp libarymove"
+    "函式庫搬家": "gulp libarymove",
+    "php搬家": "gulp movephp"
   },
   "keywords": [],
   "author": "",
