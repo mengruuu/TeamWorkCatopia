@@ -25,6 +25,7 @@
     if($check){
         session_start();
         $_SESSION['temp_member_info'] = [$member_mail,$member_password,$member_name,$member_phone,$member_address];
+        
         echo "check成功";
     }
 ?>
