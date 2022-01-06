@@ -6,6 +6,8 @@
     })
     <link rel="stylesheet" href="./css/food.css">
     <script src="./js/frontend/food.js" async></script>
+    <script src="./js/frontend/allProductsSearch.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
 </head>
 <body>
     @@include('./layout/header.html')
@@ -29,8 +31,7 @@
         title1: '主子用品',
         title2: '食品'
     })
-    
-    <div class = "food_filter_container_and_food_product_overview">
+    <!-- <div class = "food_filter_container_and_food_product_overview">
         <ul class = "food_filter_container">
             <li>
                 <p>食品</p>
@@ -44,7 +45,7 @@
                 </ul>
             </li>
         </ul>
-        <div class = "food_product_overview">
+        <div class = "food_product_overview"> -->
             <!-- <div class = "food_product_overview_item">
                 <img class = "food_product_overview_item_img" src = "./images/food/food_overview_RAINCOAST_1.png">
                 <div class = "food_product_title_and_price_and_button">
@@ -55,13 +56,14 @@
                     <div class = "food_product_content_button" style = "background-image: url(./images/food/food_go_to_products_content_button.png);"></div>
                 </div>
             </div> -->
-        </div>
+        <!-- </div>
     </div>
-    <ul class = "food_product_page_chose_container">
+    <ul class = "food_product_page_chose_container"> -->
         <!-- <li class = "food_product_pre_page_button">&lt;</li>
             <li class = "food_product_next_page">&gt;</li> -->
-    </ul>
+    <!-- </ul> -->
     <!-- 下面是假資料 -->
+    <div id = "products_app"></div>
     <article class=" food_product_history">
         <div class=" food_product_history_text">
             <p>你剛剛看過的</p>
@@ -73,7 +75,6 @@
             <img src="./images/inside_page/images/inside_three_block_p4.png" alt="">
         </div>
     </article>
-    @@include('./layout/hamburger.html')
     @@include('./layout/footer.html')
 </body>
 </html>
