@@ -2,7 +2,9 @@
 <html lang="zh-tw">
     @@include('./layout/meta.html', { "title" : "商品詳細資訊" })
     <link href="./css/inside.css" rel="stylesheet" />
-    
+    <script src="./js/frontend/inside.js" async></script>
+    <script src="./library/jquery-3.6.0.min.js"></script>
+    <script src="./library/vue.min.js"></script>
   </head>
 <body>
     <div class="inside_content">
@@ -16,13 +18,13 @@
       <article class="inside_first_block_commodity" id="inside_first_block_commodity">
         <div class="inside_first_block_img">
           <div class="inside_first_block_img_big">
-            <img id="big_img" class="big_img" src="./images/inside_page/images/inside_first_block_p1.png" alt="">
+            <img class="big_img" src="./images/inside_page/images/inside_first_block_p1.png" alt="">
           </div>
           <div class="inside_first_block_img_small">
-            <img id="small_1" class="small_img" src="./images/use/images/product_use_catnest1_1.jpeg" alt="">
-            <img id="small_2" class="small_img" src="./images/use/images/product_use_catnest1_2.jpeg" alt="">
-            <img id="small_3" class="small_img" src="./images/use/images/product_use_catnest1_3.jpeg" alt="">
-            <img id="small_4" class="small_img" src="./images/use/images/product_use_catnest1_4.jpeg" alt="">
+            <img  class="small_img" src="./images/use/images/product_use_catnest1_1.jpeg" alt="">
+            <img  class="small_img" src="./images/use/images/product_use_catnest1_2.jpeg" alt="">
+            <img  class="small_img" src="./images/use/images/product_use_catnest1_3.jpeg" alt="">
+            <img  class="small_img" src="./images/use/images/product_use_catnest1_4.jpeg" alt="">
           </div>
         </div>
         <div class="inside_first_block_text">
@@ -78,9 +80,6 @@
     </main>
     @@include('./layout/footer.html')
     </div>
-    <script src="./library/jquery-3.6.0.min.js"></script>
-    <script src="./library/vue.min.js"></script>
-    <script src="./js/frontend/inside.js"></script>
     <script>
       new Vue({
         el:"#inside_first_block_commodity",
@@ -99,5 +98,6 @@
         },
       })
     </script>
+    <script></script>
 </body>
 </html>
