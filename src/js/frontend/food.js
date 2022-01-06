@@ -1,6 +1,4 @@
 window.addEventListener("load", function () {
-    // const food_product_page_chose_container = document.querySelector("ul.food_product_page_chose_container");
-    // const food_filter_container = document.querySelector("ul.food_filter_container");
     // const food_filter_condition_item = document.querySelectorAll("li.food_filter_condition_item");
     // const foodProducts = [];
     // const food_product_overview = document.querySelector("div.food_product_overview");
@@ -12,18 +10,24 @@ window.addEventListener("load", function () {
     const food_search_content = document.querySelector("ul.food_search_content");
     const food_search_button = document.querySelector("div.food_search_button");
 
-    // function foodFilterContainerAnimate() {
-    //     //判斷瀏覽器目前的高度是否到pageChoseOffsetTop
-    //     window.addEventListener("scroll", function () {
-    //         if (window.scrollY > food_product_page_chose_container.offsetTop - 380) {
-    //             food_filter_container.classList.add("food_filter_container_hide");
-    //         } else {
-    //             if (food_filter_container.classList.contains("food_filter_container_hide")) {
-    //                 food_filter_container.classList.remove("food_filter_container_hide");
-    //             };
-    //         }
-    //     });
-    // }
+    function foodFilterContainerAnimate() {
+        //判斷瀏覽器目前的高度是否到pageChoseOffsetTop
+        const food_product_page_chose_container = document.querySelector("ul.food_product_page_chose_container");
+        const food_filter_container = document.querySelector("ul.food_filter_container");
+
+
+
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > food_product_page_chose_container.offsetTop - 380) {
+                food_filter_container.classList.add("food_filter_container_hide");
+            } else {
+                if (food_filter_container.classList.contains("food_filter_container_hide")) {
+                    food_filter_container.classList.remove("food_filter_container_hide");
+                };
+            }
+        });
+    }
 
     // function foodFilterConditionItemAnimate() {
     //     for (let i = 0; i < food_filter_condition_item.length; i = i + 1) {
@@ -225,34 +229,34 @@ window.addEventListener("load", function () {
 
         Vue.component('foodFilterContainerAndFoodProductOverview', {
             template: `
-            <div class = "food_filter_container_and_food_product_overview">
-                <ul class = "food_filter_container">
-                    <li>
-                        <p>{{ productData[0].PRODUCT_TYPE_NAME }}</p>
-                    </li>
-                    <li>
-                        <p>年齡</p>
-                        <hr>
-                        <ul class = "food_filter_condition_container">
-                            <li :class = "{food_filter_condition_item: true, food_filter_condition_item_clicked: isSix}" @click = "clickedCondition('0~6個月')">0~6個月</li>
-                            <li :class = "{food_filter_condition_item: true, food_filter_condition_item_clicked: isEighteen}" @click = "clickedCondition('7~18個月')">7~18個月</li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class = "food_product_overview">
-                    <div class = "food_product_overview_item" v-for = "(item, index) in productData">
-                        <img class = "food_product_overview_item_img" :src = item.PRODUCT_PICTURE1>
-                        <div class = "food_product_title_and_price_and_button">
-                            <div class = "food_product_title_and_price">
-                                <p>{{ item.PRODUCT_NAME }}</p>
-                                <p>{{ item.PRODUCT_PRICE }}</p>
+                <div class = "food_filter_container_and_food_product_overview">
+                    <ul class = "food_filter_container">
+                        <li>
+                            <p>{{ productData[0].PRODUCT_TYPE_NAME }}</p>
+                        </li>
+                        <li>
+                            <p>部位</p>
+                            <hr>
+                            <ul class = "food_filter_condition_container">
+                                <li :class = "{food_filter_condition_item: true, food_filter_condition_item_clicked: isSix}" @click = "clickedCondition('骨骼')">骨骼</li>
+                                <li :class = "{food_filter_condition_item: true, food_filter_condition_item_clicked: isEighteen}" @click = "clickedCondition('毛髮')">毛髮</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class = "food_product_overview">
+                        <div class = "food_product_overview_item" v-for = "(item, index) in productData">
+                            <img class = "food_product_overview_item_img" :src = item.PRODUCT_PICTURE1>
+                            <div class = "food_product_title_and_price_and_button">
+                                <div class = "food_product_title_and_price">
+                                    <p>{{ item.PRODUCT_NAME }}</p>
+                                    <p>{{ item.PRODUCT_PRICE }}</p>
+                                </div>
+                                <div class = "food_product_content_button" @click = toProductContent(index) style = "background-image: url(./images/food/food_go_to_products_content_button.png)"></div>
                             </div>
-                            <div class = "food_product_content_button" @click = toProductContent(index)></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        `,
+            `,
             props: {
                 productData: {
                     type: Array
@@ -275,14 +279,14 @@ window.addEventListener("load", function () {
             methods: {
                 toProductContent(index) {
                     localStorage.setItem("productContent", JSON.stringify(this.productData[index]));
-                    location.href = "./product_contact.html";
+                    location.href = `./inside.html?id=${this.productData[index].PRODUCT_ID}`;
                 },
                 clickedCondition(condition) {
                     //先reset
                     // this.isSix = false;
                     // this.isEighteen = false;
 
-                    if (condition === '0~6個月') {
+                    if (condition === '骨骼') {
                         this.countSix = this.countSix + 1;
 
                         if (this.isSix) {
@@ -294,7 +298,7 @@ window.addEventListener("load", function () {
 
                             this.isEighteen = false;
                         }
-                    } else if (condition === '7~18個月') {
+                    } else if (condition === '毛髮') {
                         this.countEighteen = this.countEighteen + 1;
 
                         if (this.isEighteen) {
@@ -314,10 +318,10 @@ window.addEventListener("load", function () {
 
         Vue.component('foodPage', {
             template: `
-        <ul class = "food_product_page_chose_container">
-            <li class = "food_page_item" v-for = "(page, index) in pages" @click = "changePage(index)">{{ index+1 }}</li>
-        </ul>
-        `,
+                <ul class = "food_product_page_chose_container">
+                    <li class = "food_page_item" v-for = "(page, index) in pages" @click = "changePage(index)">{{ index+1 }}</li>
+                </ul>
+            `,
             props: {
                 pages: {
                     type: Number
@@ -378,7 +382,7 @@ window.addEventListener("load", function () {
 
                     totalPage = [];
 
-                    if (condition === "0~6個月" && this.isSix === true) {
+                    if (condition === "骨骼" && this.isSix === true) {
                         this.pages = Math.ceil(data.length / 8);
 
                         for (let i = 1; i <= pages; i = i + 1) {
@@ -387,8 +391,8 @@ window.addEventListener("load", function () {
 
                         this.isSix = false;
 
-                        this.productData = totalPage[0];
-                    } else if (condition === "7~18個月" && this.isEighteen === true) {
+                        this.productData = totalPage[0]; 
+                    } else if (condition === "毛髮" && this.isEighteen === true) {
                         this.pages = Math.ceil(data.length / 8);
 
                         for (let i = 1; i <= pages; i = i + 1) {
@@ -411,7 +415,7 @@ window.addEventListener("load", function () {
                             totalPage.push(matchData.slice((i - 1) * 8, i * 8));
                         }
 
-                        if (condition === "0~6個月") {
+                        if (condition === "骨骼") {
                             this.isSix = true;
                             this.isEighteen = false;
                         } else {
@@ -420,20 +424,30 @@ window.addEventListener("load", function () {
                         }
                         this.productData = totalPage[0];
                     }
+                    window.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: 'smooth'
+                    });
                 },
                 changePage(page) {
                     this.productData = totalPage[page];
+                    window.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: 'smooth'
+                    });
                 }
             }
         });
 
         document.querySelector("ul.food_product_page_chose_container").children[0].classList.add("food_page_item_clicked");
-        searchSth();
+        foodFilterContainerAnimate();
     }
 
 
 
 
-
+    
     loadData();
 });
