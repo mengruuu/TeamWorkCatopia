@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,GAAG,AAAA,YAAY,CAAA;EACX,OAAO,EAAE,IAAI;CAChB;;AACD,AAAA,IAAI,CAAA;EACA,UAAU,EAAE,MAAM;CACrB;;AACD,AAAA,MAAM,CAAA;EACF,MAAM,EAAE,MAAM;EACd,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,yCAAyC;EAC3D,eAAe,EAAE,KAAK;EACtB,mBAAmB,EAAE,MAAM;EAC3B,iBAAiB,EAAE,SAAS;CAC/B",
-    "sources": [
-        "../src/sass/page/game.scss"
-    ],
-    "names": [],
-    "file": "game.css"
-}

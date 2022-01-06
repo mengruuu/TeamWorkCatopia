@@ -28,7 +28,7 @@ value('【開一朵貓咪小花】花朵深層睡眠窩 貓窩','用品','小窩
 -- 商品6(造型小窩)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('日式壽司椅貓窩凳窩','用品','小窩','./images/products/use/catnest/product_use_catnest2_1.jpeg','./images/products/use/catnest/product_use_catnest2_2.jpeg','./images/products/use/catnest/product_use_catnest2_3.jpeg','./images/products/use/catnest/product_use_catnest2_4.jpeg','大飯糰滿滿的安全感，獨特設計的跟寵物共用椅凳+小窩，封閉式設計，營造貓咪獨立小空間', 1580);
+value('日式壽司椅貓窩凳窩','用品','小窩','./images/products/use/catnest/product_use_catnest2_1.png','./images/products/use/catnest/product_use_catnest2_2.png','./images/products/use/catnest/product_use_catnest2_3.png','./images/products/use/catnest/product_use_catnest2_4.png','大飯糰滿滿的安全感，獨特設計的跟寵物共用椅凳+小窩，封閉式設計，營造貓咪獨立小空間', 1580);
 
 -- 商品7(造型小窩)
 insert into 

@@ -40,9 +40,9 @@ const vm = new Vue({
 
 
 
-register_step1_next_step_button.addEventListener("click", function () {
-    window.location.href = "/dist/register_step2.html";
-});
+// register_step1_next_step_button.addEventListener("click", function () {
+//     window.location.href = "./register_step2.html";
+// });
 
 // show_and_hide_icon.addEventListener("click", function() {
 //     hide.classList.toggle("hide_close");
@@ -54,3 +54,27 @@ register_step1_next_step_button.addEventListener("click", function () {
 //         show_and_hide_icon.nextElementSibling.type = "password";
 //     }
 // });
+
+function member_email_check(){
+    $.ajax({
+        method:'POST',
+        url:'./API/register_step1.php',
+        data:{
+            email:$('#email').val(),
+            password:$('#pwd').val(),
+            name:$('#name').val(),
+            phone:$('#phone').val(),
+            address:$('#address').val()
+        },
+        dataType:'text',
+        success:function(response){
+            if(response){
+                window.location.href = "./register_step2.html";
+            }else{
+                alert('此信箱已註冊過');
+            }
+        },error: function(exception) {
+            alert("發生錯誤: " + exception.status);  //網路出錯的部分
+        }
+    });
+}

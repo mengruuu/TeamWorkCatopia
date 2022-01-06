@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/register_first.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+    <script src="./library/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     @@include('./layout/header.html')
@@ -23,7 +24,7 @@
                 <p>註冊完成</p>
             </div>
         </div>
-        <form method = "post" action = "">
+        <form>
             <div class = "register_first_circle"></div>
             <label>請輸入帳號 / 密碼</label>
             <div class = "register_first_input">
@@ -32,11 +33,11 @@
                 </div>
                 <div>
                     <label>請輸入Email</label>
-                    <input type = "text">
+                    <input type = "text" id="email">
                     <label>重新輸入Email</label>
                     <input type = "text">
                     <label>請輸入密碼</label>
-                    <input type = "password">
+                    <input type = "password" id="pwd">
                     <div id = "register_step1_app"></div>
                 </div>
             </div>
@@ -48,13 +49,13 @@
                 </div>
                 <div>
                     <label>請輸入姓名</label>
-                    <input type = "text">
-                    <label>請輸入生日</label>
-                    <input type = "date">
+                    <input type = "text" id="name">
+                    <!-- <label>請輸入生日</label>
+                    <input type = "date"> -->
                     <label>請輸入電話</label>
-                    <input type = "tel">
+                    <input type = "tel" id="phone">
                     <label>請輸入地址</label>
-                    <input type = "text">
+                    <input type = "text" id="address">
                 </div>
             </div>
             <input type = "checkbox" name = "subscription" id = "subscription" required>
@@ -63,10 +64,13 @@
             <input type = "checkbox" name = "Agree to terms" id = "Agree to terms" required>
             <label for = "Agree to terms" style = "font-size: 16px;">我同意會員條款</label>
             <br>
-            <button type = "button" class = "register_step1_next_step_button">下一步　確認資料</button>
+            <button type = "button" class = "register_step1_next_step_button" onclick="member_email_check()">下一步　確認資料</button>
         </form>
     </div>
     @@include('./layout/footer.html')
     <script src = "./js/frontend/register_step1.js"></script>
+    <script>
+
+    </script>
 </body>
 </html>
