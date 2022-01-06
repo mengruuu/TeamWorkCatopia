@@ -101,8 +101,8 @@
         </ul>
     </div>
     <div class="header_icons">
-        <a href="./login.html" class="member_icon">
-            <img src="./images/header/header_icon_member.png" alt="">
+        <a class="member_icon" onclick="member_or_login()">
+            <img id="member_icon" src="./images/header/header_icon_member.png" alt="">
         </a>
         <div class="shopping_cart" id="hd_popup_click">
             <img src="./images/header/header_icon_shopping_chart.png" alt="">
@@ -162,5 +162,50 @@
             hd_popupBtn.style.display = "none";
         }
     }
+
+
+
+    //會員中心OR登入
+    function member_or_login(){
+        $.ajax({
+        method:'POST',
+        url:'./API/login_check.php',
+        data:{
+        },
+        dataType:'json',
+        success:function(response){
+            if(response == ''){
+                window.location.href = './login.html';
+            }else{
+                window.location.href = `./vip.html?${response}`;
+            }
+        },
+        error: function(exception) {
+         alert("發生錯誤: " + exception.status); 
+     }
+    })
+    }
+
+    function change_member_icon(){
+        $.ajax({
+        method:'POST',
+        url:'./API/login_check.php',
+        data:{
+        },
+        dataType:'json',
+        success:function(response){
+            if(response == ''){
+                // console.log("test");
+            }else{
+                $('#member_icon')[0].src = './images/header/header_black_cat.png';
+                // console.log($('#member_icon')[0].src);
+            }
+        },
+        error: function(exception) {
+         alert("發生錯誤: " + exception.status); 
+     }
+    })
+    }
+    change_member_icon();
 </script>
 

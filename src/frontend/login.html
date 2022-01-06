@@ -11,18 +11,18 @@
     @@include('./layout/header.html')
     <div class = "login_container">
         <div class = "login_item">
-            <form method = "post" action = "">
+            <form>
                 <div class = "login_input_and_icon">
                     <!-- <i class="fa fa-user"></i> -->
                     <img src = "./images/login/login_account_input.png">
-                    <input type = "text" placeholder = "Username">
+                    <input type = "text" placeholder = "Username" id="member_mail">
                 </div>
                 <div class = "login_input_and_icon">
                     <!-- <i class="fa fa-lock"></i> -->
                     <img src = "./images/login/login_password_input.png">
-                    <input type = "password" placeholder = "Password">
+                    <input type = "password" placeholder = "Password" id="member_password">
                 </div>
-                <button type = "submit">Login</button>
+                <button type = "button" onclick="member_login()">Login</button>
             </form>
             <div class = "login_register_button_and_icon">
                 <a href = "./register_step1.html">還沒有帳號？註冊</a>
@@ -51,5 +51,28 @@
         </div>
     </div>
     @@include('./layout/footer.html')
+    <script>
+        function member_login(){
+            $.ajax({
+                method:'POST',
+                url:'./API/login.php',
+                data:{
+                    email:$('#member_mail').val(),
+                    password:$('#member_password').val(),
+                },
+                dataType:'json',
+                success:function(response){
+                    if(response == 'false'){
+                        alert('帳號或密碼錯誤');
+                    }else{
+                        window.location.href = `./vip.html?ID_${response[0][0]}`;
+                    }
+                },
+                error: function(exception) {
+                 alert("發生錯誤: " + exception.status); 
+             }
+            })
+        }
+    </script>
 </body>
 </html>
