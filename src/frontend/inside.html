@@ -29,10 +29,10 @@
         </div>
         <div class="inside_first_block_text">
           <div class="inside_first_block_text_content">
-            <p class="inside_first_block_text_content_title">花朵深層睡眠窩 貓窩</p>
+            <p class="inside_first_block_text_content_title">{{ title }}</p>
             <div class="inside_first_block_text_content_text">
-              <p>【開一朵貓咪小花】</p>
-              <p>給主子一朵暖暖的花朵貓窩吧，特殊饋頭設計讓貓貓從此愛上，再也不用擔心紙箱搶了風采</p>
+              <p>【{{ title }}】</p>
+              <p>{{ content }}</p>
             </div>
           </div>
           <div class="inside_first_block_choose">
@@ -55,7 +55,7 @@
               </div>
               <div class="inside_first_block_button">
                 <button type="button">直接購買</button>
-                <button type="button">加入購物車</button>
+                <button type="button" @click = "addCart">加入購物車</button>
               </div>
             </form>
             </div>
@@ -81,22 +81,6 @@
     @@include('./layout/footer.html')
     </div>
     <script>
-      new Vue({
-        el:"#inside_first_block_commodity",
-        data:{
-            quantity:1,
-            money: 2450,
-            select:"藍色",
-        },
-        methods: {
-            
-        },
-        computed: {
-            numSquare(){
-                return (this.quantity * this.money);
-            },
-        },
-      })
     </script>
     <script></script>
 </body>

@@ -24,12 +24,15 @@ div.index_block1{
     background-image: url('../images/index_page/block/index_block1.png');
     // height: 160px;
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: 100% auto;
     padding: 50px 20%;
     // @include w1200up(){
     //     border: 1px solid green;
     //     background-size: 100% auto;
     // }
+    @include w1380(){
+    background-size: auto 100%;
+    }
     @include w1000(){
         padding: 30px 10%;
     }
@@ -52,10 +55,12 @@ div.index_block2{
     background-image: url('../images/index_page/block/index_block2.png');
     // height: 160px;
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: 100% auto;
     padding: 40px 20%;
+    padding-top: 80px;
     @include w1000(){
         padding: 30px 10%;
+        background-size: auto 100%;
     }
     @include w400(){
         padding: 30px 2%;
@@ -529,7 +534,10 @@ article.sec_block{
         // width: 80%;
         position: absolute;
         right: 10%;
-        top:0px;
+        top:3%;
+        @include w1380(){
+            top:0px;
+        }
         @include w1200(){
             top:-1%;
         }
@@ -955,9 +963,12 @@ article.sec_block{
     
 article.index_last_block{
     // border:1px solid red;
-    height: 500px;
+    height: 700px;
     margin-top: 80px;
     margin-bottom: 120px;
+    @include w1380(){
+        height: 500px;
+    }
     @include w900(){
         height: 400px;
         margin-bottom: 30px;
@@ -977,6 +988,7 @@ article.index_last_block{
         div{
             display: inline-block;
             width: 40%;
+            // float: left;
             &:nth-child(2){
                 // border:1px solid green;
                 position: relative;
@@ -985,15 +997,17 @@ article.index_last_block{
         }
     }
     .last_sec_block{
-        // border:1px solid blue;
+        // border:1px solid black;
         
         div{
+            // border:1px solid blue;
             display: inline-block;
             width: 40%;
+            margin-left: 5%;
             &:nth-child(1){
                 width: 30%;
                 position: relative;
-                transform: translate(25%, -50%);
+                transform: translate(40%, -50%);
             }
         }
     }
