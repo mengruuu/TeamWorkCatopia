@@ -410,8 +410,13 @@ div.food_filter_container_and_food_product_overview {
                 }
 
                 div.food_product_content_button {
+                    cursor: pointer;
                     width: 40px;
                     height: 40px;
+                    border-radius: 50%;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    margin-right: 20px;
                 }
             }
         }
@@ -427,7 +432,7 @@ ul.food_product_page_chose_container {
     flex-wrap: wrap;
     padding: 0;
     width: fit-content;
-    justify-content: space-between;
+    justify-content: center;
     width: 600px;
     @media  (min-width:1000px) and (max-width:1440px) {
         width: 550px;
