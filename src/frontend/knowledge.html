@@ -6,8 +6,8 @@
 <body>
     <div class="knowledge_content">
     @@include('./layout/header.html')
-    <main>
-        <article class="knowledge_banner_block" style="">
+    <main id="knowledge_content">
+        <article class="knowledge_banner_block" >
         </article>
         <div class="knowledge_first_block_title" >
             <div class="knowledge_first_block_title_block">
@@ -24,31 +24,13 @@
                 就跟著Catopia一探究竟吧！
             </p>
             <div class="knowledge_first_block_contentbhox">
-                <div class="knowledge_first_block_contentbhox_in">
-                    <img src="./images/knowledge/knowledge_first_block_p1.png" alt="">
-                    <div class="knowledge_first_block_contentbhox_in_text">
-                        <p>大幅左右搖擺——焦慮</p>
-                        <p>與狗狗不同，當喵咪感覺焦慮的時候就會大幅度的搖擺尾巴，它們也許正在視機攻擊或者反抗，這時應該找出喵咪焦慮的原因並努力排除，否者它們很可能會做出一些不尋常的事情喲。</p>
-                    </div>
-                </div>
+                <knowledge_first_block_contentbhox_in_1_1></knowledge_first_block_contentbhox_in_1_1>
             </div>
             <div class="knowledge_first_block_contentbhox">
-                <div class="knowledge_first_block_contentbhox_in">
-                    <img src="./images/knowledge/knowledge_first_block_p2.png" alt="">
-                    <div class="knowledge_first_block_contentbhox_in_text">
-                        <p>尾巴緩慢擺動——關注</p>
-                        <p>當你的喵咪對某件物品感興趣的時候它們興奮的使尾巴尖端輕微搖擺，當它們盯緊獵物的時候也會表現出這樣的狀態。</p>
-                    </div>
-                </div>
+                <knowledge_first_block_contentbhox_in_1_2></knowledge_first_block_contentbhox_in_1_2>
             </div>
             <div class="knowledge_first_block_contentbhox">
-                <div class="knowledge_first_block_contentbhox_in" >
-                    <img src="./images/knowledge/knowledge_first_block_p3.png" alt="">
-                    <div class="knowledge_first_block_contentbhox_in_text">
-                        <p>大幅左右搖擺——焦慮</p>
-                        <p>與狗狗不同，當喵咪感覺焦慮的時候就會大幅度的搖擺尾巴，它們也許正在視機攻擊或者反抗，這時應該找出喵咪焦慮的原因並努力排除，否者它們很可能會做出一些不尋常的事情喲。</p>
-                    </div>
-                </div>
+                <knowledge_first_block_contentbhox_in_1_3></knowledge_first_block_contentbhox_in_1_3>
             </div>
         </article>
         <div class="knowledge_sec_block_title" >
@@ -65,36 +47,20 @@
                 會改變方向，也會擺出特殊姿勢來反映情緒。
             </p>
             <div class="knowledge_sec_block_contentbhox">
-                <div class="knowledge_sec_block_contentbhox_in">
-                    <img src="./images/knowledge/knowledge_sec_block_p1.png" alt="">
-                    <div class="knowledge_sec_block_contentbhox_in_text">
-                        <p>耳朵正常立起——安心、感興趣</p>
-                        <p>貓主子如果耳朵立起，雙眼興致盎然地盯著某樣東西，
-                            代表貓咪安心又感興趣喔！若同時沒有發現其他異常訊號，這時正是友好地與貓咪互動的好時機！</p>
-                    </div>
-                </div>
+                <knowledge_first_block_contentbhox_in_2_1></knowledge_first_block_contentbhox_in_2_1>
             </div>
             <div class="knowledge_sec_block_contentbhox">
-                <div class="knowledge_sec_block_contentbhox_in">
-                    <img src="./images/knowledge/knowledge_sec_block_p2.png" alt="">
-                    <div class="knowledge_sec_block_contentbhox_in_text">
-                        <p>耳朵平貼——警戒、不耐煩</p>
-                        <p>耳朵平貼也就是俗稱的飛機耳，這時候，貓咪處於警戒或不耐煩的狀態，再繼續逗弄貓咪的話，極有可能被怒吼，甚至慘遭貓爪攻擊喔</p>
-                    </div>
-                </div>
+                <knowledge_first_block_contentbhox_in_2_2></knowledge_first_block_contentbhox_in_2_2>
             </div>
             <div class="knowledge_sec_block_contentbhox">
-                <div class="knowledge_sec_block_contentbhox_in">
-                    <img src="./images/knowledge/knowledge_sec_block_p3.png" alt="">
-                    <div class="knowledge_sec_block_contentbhox_in_text">
-                        <p>耳朵向後面垂垂貼近頭——害怕</p>
-                        <p>貓咪耳朵向後垂並緊貼頭的時候，代表貓咪十分害怕，這時候如果執意接近貓咪，貓咪會立刻「跑沒貓影」。而若是把嚇貓當有趣，也會大大降低貓咪的信任感</p>
-                    </div>
-                </div>
+                <knowledge_first_block_contentbhox_in_2_3></knowledge_first_block_contentbhox_in_2_3>
             </div>
         </article>
     </main>
     @@include('./layout/footer.html')
     </div>
+    <script src="./library/jquery-3.6.0.min.js"></script>
+    <script src="./library/vue.min.js"></script>
+    <script src="./js/frontend/knowledge.js"></script>
 </body>
 </html>

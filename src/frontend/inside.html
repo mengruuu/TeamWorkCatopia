@@ -2,13 +2,10 @@
 <html lang="zh-tw">
     @@include('./layout/meta.html', { "title" : "商品詳細資訊" })
     <link href="./css/inside.css" rel="stylesheet" />
-    
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+    <script src="./js/frontend/inside.js" async></script>
+    <script src="./library/jquery-3.6.0.min.js"></script>
+    <script src="./library/vue.min.js"></script>
   </head>
-  <script src="./js/tools/vue.js"></script>
 <body>
     <div class="inside_content">
     @@include('./layout/header.html')
@@ -21,13 +18,13 @@
       <article class="inside_first_block_commodity" id="inside_first_block_commodity">
         <div class="inside_first_block_img">
           <div class="inside_first_block_img_big">
-            <img id="big_img" class="big_img" src="./images/inside_page/images/inside_first_block_p1.png" alt="">
+            <img class="big_img" src="./images/inside_page/images/inside_first_block_p1.png" alt="">
           </div>
           <div class="inside_first_block_img_small">
-            <img id="small_1" class="small_img" src="./images/use/images/product_use_catnest1_1.jpeg" alt="">
-            <img id="small_2" class="small_img" src="./images/use/images/product_use_catnest1_2.jpeg" alt="">
-            <img id="small_3" class="small_img" src="./images/use/images/product_use_catnest1_3.jpeg" alt="">
-            <img id="small_4" class="small_img" src="./images/use/images/product_use_catnest1_4.jpeg" alt="">
+            <img  class="small_img" src="./images/use/images/product_use_catnest1_1.jpeg" alt="">
+            <img  class="small_img" src="./images/use/images/product_use_catnest1_2.jpeg" alt="">
+            <img  class="small_img" src="./images/use/images/product_use_catnest1_3.jpeg" alt="">
+            <img  class="small_img" src="./images/use/images/product_use_catnest1_4.jpeg" alt="">
           </div>
         </div>
         <div class="inside_first_block_text">
@@ -50,11 +47,11 @@
               </div>
               <div class="inside_first_block_choose_2">
                 <p>數量</p>
-                <input type="number" value="1" min="1" max="50">
+                <input type="number" value="1" min="1" max="50" @click="numSquare" v-model="quantity">
               </div>
               <div class="inside_first_block_total">
                 <p>總價</p>
-                <p id="ntd">2420<span>元</span></p>
+                <p id="ntd"><span>{{numSquare}}元</span></p>
               </div>
               <div class="inside_first_block_button">
                 <button type="button">直接購買</button>
@@ -84,19 +81,23 @@
     @@include('./layout/footer.html')
     </div>
     <script>
-      let big_img = document.getElementsByClassName("big_img");
-      let small_img = document.getElementsByClassName("small_img");
-
-      small_img[0].style = 'transform: scale(1.1);border:1px solid;border-radius: 5px;';
-      for( let i=0; i < small_img.length; i++){
-      small_img[i].addEventListener("click", function(){
-        big_img[0].src = small_img[i].src;
-        for(let i=0; i < small_img.length; i++){
-          small_img[i].style='';
-        }
-        this.style = 'transform: scale(1.1);border:1px solid;border-radius: 5px;';
-      });
-      }
+      new Vue({
+        el:"#inside_first_block_commodity",
+        data:{
+            quantity:1,
+            money: 2450,
+            select:"藍色",
+        },
+        methods: {
+            
+        },
+        computed: {
+            numSquare(){
+                return (this.quantity * this.money);
+            },
+        },
+      })
     </script>
+    <script></script>
 </body>
 </html>

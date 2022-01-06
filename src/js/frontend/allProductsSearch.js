@@ -81,7 +81,7 @@ async function searchSth() {
                     for (let j = 0; j < data.length; j = j + 1) {
                         if (data[j].PRODUCT_PICTURE1.match(matchData[i].img) || data[j].PRODUCT_PICTURE2.match(matchData[i].img) || data[j].PRODUCT_PICTURE3.match(matchData[i].img) || data[j].PRODUCT_PICTURE4.match(matchData[i].img)) {
                             localStorage.setItem("productContent", JSON.stringify(data[j]));
-                            location.href = "./inside.html";
+                            location.href = `./inside.html?id=${data[j].PRODUCT_ID}`;
                         }
                     }
                 });
