@@ -51,8 +51,7 @@
         }
 
         //有登入session->回傳ID，無登入session->回傳空字串""
-        return isset($_SESSION["MemberID"]) ? $_SESSION["MemberID"] : ""; 
-
+        return isset($_SESSION["MEMBER_ID"]) ? $_SESSION["MEMBER_ID"] : ""; 
     }
 
     //取得會員帳號(前台專用)
@@ -64,23 +63,23 @@
         }
 
         //有登入session->回傳Name，無登入session->回傳空字串""
-        return isset($_SESSION["MemberName"]) ? $_SESSION["MemberName"] : ""; 
+        return isset($_SESSION["MEMBERName"]) ? $_SESSION["MEMBERName"] : ""; 
 
     }
 
     //寫入Session(前台專用)
-    function setMemberInfo($MemberID, $MemberName){
+    function setMemberInfo($MEMBERID, $MEMBERName){
 
         //先判斷session是否存在
         if(!isset($_SESSION)){
             session_start(); 
         }
 
-        //Table 'ec_member'裡的ID欄位值
-        $_SESSION["MemberID"] = $MemberID; 
+        //Table 'ec_MEMBER'裡的ID欄位值
+        $_SESSION["MEMBERID"] = $MEMBERID; 
 
-        //Table 'ec_member'裡的Account欄位值
-        $_SESSION["MemberName"] = $MemberName; 
+        //Table 'ec_MEMBER'裡的Account欄位值
+        $_SESSION["MEMBERName"] = $MEMBERName; 
         
     }
 

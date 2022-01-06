@@ -242,6 +242,7 @@ div.header_icons{
     a.member_icon{
       // border:1px solid blue;
       height: 100%;
+      cursor: pointer;
       margin-right: 15px;
       @include w1100{
         width: 50px;
