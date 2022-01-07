@@ -1,4 +1,5 @@
 login_check();
+
 function go_to_vip_personal(){
     $.ajax({
         method:'POST',

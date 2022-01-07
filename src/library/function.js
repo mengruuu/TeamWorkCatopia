@@ -10,9 +10,10 @@ function login_check(){
         success:function(res){
             if(res == ''){
                 alert(res);
-                window.location.href('./login.html');
+                window.location.href = './login.html';
             }else{
-                alert("ttt");
+                response = res;
+                console.log(response);
             }
         },
         error: function(exception) {
@@ -40,6 +41,7 @@ function change_member_icon(){
      }
     })
 }
+// console.log("ttttttt");
 function member_or_login(){
     $.ajax({
         method:'POST',
@@ -49,6 +51,7 @@ function member_or_login(){
         dataType:'json',
         success:function(response){
             if(response == ''){
+                
                 window.location.href ='./login.html';
             }else{
                 window.location.href = `./vip.html?ID_${response}`;

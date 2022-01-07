@@ -36,7 +36,6 @@ function get_member_info(){
             $('#member_name').html(response[0]['MEMBER_NAME']);
             $('#member_mail').html(response[0]['MEMBER_MAIL']);
             $('#member_id').html(response[0]['MEMBER_ID']);
-
         },
         error: function(exception) {
          alert("發生錯誤: " + exception.status); 
