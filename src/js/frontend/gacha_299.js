@@ -1,19 +1,17 @@
-new Vue({
+var vm = new Vue({
     el: '#app',
     data: {
         count: 3,
     },
     methods: {
-        action(e){
-            if(count = 0){
-                alert("無抽盒次數");
-            }else{
-                this.count -= 1;
-            }
-        }
+        // action(e){
+        //     this.count -= 1;
+        // }
     },
 });
 
+// console.log(vm.$data.count);  //3
+// console.log(vm.count);  //3
 
 // 設定圖片存取陣列
 // let img_299 = new Array(); 
@@ -138,7 +136,7 @@ function doFirst(){
                 break;
             }
         }
-        console.log(index_number); //印出抽中圖片的index
+        // console.log(index_number); //印出抽中圖片的index
         return index_number;
     }
 
@@ -152,6 +150,7 @@ function doFirst(){
     // console.log(imgA);
 
     // console.log(`${count}`);
+    // console.log(vm.count);
 
     //點箱子移除彩色圖片 增加灰色圖片 同時跳出抽選的商品彈窗
     for(let i = 0; i < color_image.length; i++){
@@ -161,10 +160,18 @@ function doFirst(){
             let gray_image = './images/gacha_299/gacha_299_box_gray.png';
             let img = gacha_box_c.firstElementChild;
 
+
+            // console.log(vm.count);
+
             //判斷若為灰色箱子 只會alert 不會做動作
             if(e.target.classList.contains("-off")){
                 alert('無法抽取灰色箱子');
+            }else if(vm.count == 0){
+                alert('請購買抽盒次數');
             }else{
+                // console.log(vm.count);
+                vm.count --;
+                // console.log("test");
                 e.target.classList.add("-off");
                 img.src = gray_image;
                 popupBtn1.style.display = "block";
@@ -173,6 +180,7 @@ function doFirst(){
                 imgA.src = img_299[index_number];
                 // A.firstElementChild.src = img_299[index_number];
             };
+
         })
     };
 
