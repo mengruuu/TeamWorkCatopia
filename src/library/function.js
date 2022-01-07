@@ -1,3 +1,5 @@
+
+response = "";
 function login_check(){
     $.ajax({
         method:'POST',
@@ -5,11 +7,12 @@ function login_check(){
         data:{
         },
         dataType:'json',
-        success:function(response){
-            if(response == ''){
+        success:function(res){
+            if(res == ''){
+                alert(res);
                 window.location.href('./login.html');
             }else{
-                return response;
+                alert("ttt");
             }
         },
         error: function(exception) {

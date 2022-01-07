@@ -25,10 +25,10 @@ function get_member_info(){
         },
         dataType:'json',
         success:function(response){
-            console.log(response);
-            console.log($('#member_name'));
-            console.log($('#vip_personal_icon'));
-            console.log($('#game_score'));
+            // console.log(response);
+            // console.log($('#member_name'));
+            // console.log($('#vip_personal_icon'));
+            // console.log($('#game_score'));
 
             $('#title_name').html(response[0]['MEMBER_NAME'] + "的個人頁面" + "<span></span>");
             $('#vip_personal_icon')[0].src = response[0]['MEMBER_PICTURE'];
