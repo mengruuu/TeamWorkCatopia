@@ -342,6 +342,14 @@ function updateGameArea(){
         case 0:
             // console.log("gameover");
             clearInterval(myGameArea.interval);
+
+            let popup_game_score = document.getElementById('popup_game_score');
+            popup_game_score.innerHTML = (score * 10);
+            let popup_game_coin = document.getElementById('popup_game_coin');
+            popup_game_coin.innerHTML = score;
+            let gameover_popupBtn = document.getElementById('gameover_background_pop');
+            gameover_popupBtn.style.display = "block";
+
             break;
     }
     
