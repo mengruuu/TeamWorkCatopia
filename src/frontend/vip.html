@@ -19,7 +19,7 @@
     
             <div class="galaxy">
                 <div class="leftgalaxy">
-                    <a href="vip_personal.html">
+                    <a  onclick="go_to_vip_personal()">
                         <img src="./images/vip/vip_galaxy_left.png" alt="">
                         <div class="leftgalaxy_text">個人資料</div>
                     </a>
@@ -28,7 +28,7 @@
                     <img src="./images/vip/vip_logo_white.png" alt="">
                 </div>
                 <div class="rightgalaxy">
-                    <a href="vip_order.html">
+                    <a class="vip_order" onclick="go_to_vip_order()">
                         <img src="./images/vip/vip_galaxy_right.png" alt="">
                         <div class="rightgalaxy_text">訂單查詢</div>
                     </a>
@@ -41,5 +41,6 @@
 
 
     @@include('./layout/footer.html')
+    <script src="./js/frontend/vip.js"></script>
 </body>
 </html>
