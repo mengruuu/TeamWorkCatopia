@@ -1,3 +1,20 @@
+new Vue({
+    el: '#app',
+    data: {
+        count: 3,
+    },
+    methods: {
+        action(e){
+            if(count = 0){
+                alert("無抽盒次數");
+            }else{
+                this.count -= 1;
+            }
+        }
+    },
+});
+
+
 // 設定圖片存取陣列
 // let img_299 = new Array(); 
 // img_299[0] = "./images/gacha_299/gacha_299_a.png"; 
@@ -10,9 +27,9 @@
 // img_299[7] = "./images/gacha_299/gacha_299_h.png"; 
 // img_299[8] = "./images/gacha_299/gacha_299_i.png"; 
 
+let img_299 = [];
 
 //先把資料抓出來
-title = "";
 function doQuery() {
     $.ajax({
         method: "GET",
@@ -22,11 +39,11 @@ function doQuery() {
         },
         dataType: "json",
         success: function (response) {
-            let img_299 = [];
             for(let i = 0; i < response.length; i++){
                 img_299.push(response[i].PRODUCT_PICTURE1);
             }
-            console.log(img_299);
+            // img_299 = response;
+            // console.log(img_299);
         },
         error: function (exception) {
             alert("發生錯誤: " + exception.status);
@@ -34,8 +51,6 @@ function doQuery() {
     });
 }
 document.addEventListener('load', doQuery());
-
-
 
 
 // alert(`
@@ -136,9 +151,12 @@ function doFirst(){
     let imgA = A.firstElementChild;
     // console.log(imgA);
 
+    // console.log(`${count}`);
+
     //點箱子移除彩色圖片 增加灰色圖片 同時跳出抽選的商品彈窗
     for(let i = 0; i < color_image.length; i++){
         color_image[i].addEventListener("click", function(e){
+            // imgA.src = '';
             let gacha_box_c = document.getElementsByClassName('choose_box')[i];
             let gray_image = './images/gacha_299/gacha_299_box_gray.png';
             let img = gacha_box_c.firstElementChild;
