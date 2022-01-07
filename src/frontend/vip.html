@@ -5,6 +5,7 @@
       "title" : "會員中心"
     })
     <link rel="stylesheet" href="./css/vip.css">
+    <script src="./js/frontend/vip.js" async></script>
 </head>
 <body>
     @@include('./layout/header.html')
@@ -26,6 +27,7 @@
                 </div>
                 <div class="middlelogo">
                     <img src="./images/vip/vip_logo_white.png" alt="">
+                    <div class="logout" onclick="logout()">會員登出</div>
                 </div>
                 <div class="rightgalaxy">
                     <a href="vip_order.html">
@@ -41,5 +43,23 @@
 
 
     @@include('./layout/footer.html')
+
+    <script>
+        function logout(){
+            $.ajax({
+                method:'POST',
+                url:'./API/logout.php',
+                data:{
+                },
+                dataType:'json',
+                success:function(response){
+                    console.log('success');
+                },
+                error: function(exception) {
+                    console.log('error');
+                }
+            })
+        }
+    </script>
 </body>
 </html>

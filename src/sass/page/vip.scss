@@ -76,8 +76,10 @@
                     @include w900() {
                         font-size: $font_20;
                     }
-                    @include w600() {
+                    @include w700() {
                         font-size: 16px;
+                    }
+                    @include w600() {
                         top: 40%;
                         left: 40%;
                         transform: translate(-40%);
@@ -86,6 +88,7 @@
                         top: 80%;
                         left: 25%;
                         transform: translate(-15%);
+                        background-color: $important_color;
                     }
                     @include w400() {
                         top: 80%;
@@ -101,7 +104,31 @@
     
             .middlelogo{
                 // border: 1px solid maroon;
-                margin-top: 10%;
+                margin-top: 5%;
+                text-align: center;
+                .logout{
+                    @include button();
+                    color: $font_color;
+                    width: 60%;
+                    margin: 0 auto;
+                    margin-top: 5%;
+                    cursor: pointer;
+                    font-size: 24px;
+                    @include w900() {
+                        font-size: $font_20;
+                    }
+                    @include w700() {
+                        font-size: 16px;
+                    }
+                    @include w600() {
+                        width: 80%;
+                    }
+                    @include w400() {
+                        width: 100%;
+                        padding: 2px 2px;
+                        // transform: translate(-1%);
+                    }
+                }
             }
     
             .rightgalaxy{
@@ -130,8 +157,10 @@
                     @include w900() {
                         font-size: $font_20;
                     }
-                    @include w600() {
+                    @include w700() {
                         font-size: 16px;
+                    }
+                    @include w600() {
                         top: 40%;
                         left: 40%;
                         transform: translate(-40%);
@@ -140,6 +169,7 @@
                         top: 80%;
                         left: 25%;
                         transform: translate(-15%);
+                        background-color: $important_color;
                     }
                     @include w400() {
                         top: 80%;
