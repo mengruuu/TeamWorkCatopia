@@ -27,22 +27,21 @@
                         <div class="name">
                             帳號
                             <br>
-                            tonight_nightmare@gmail.com
                         </div>
                         <div class="old_pwd">
                             輸入舊密碼
                             <br>
-                            <input type="password">
+                            <input type="password" id="old_pwd">
                         </div>
                         <div class="new_pwd">
                             設定新密碼
                             <br>
-                            <input type="password">
+                            <input type="password" id="new_pwd">
                         </div>
                         <div class="new_pwd_again">
                             重新輸入新密碼
                             <br>
-                            <input type="password">
+                            <input type="password" id="new_pwd_again">
                         </div>
                     </div>
                 </div>
@@ -63,22 +62,17 @@
                         <div class="name">
                             姓名
                             <br>
-                            <input type="text">
-                        </div>
-                        <div class="birthday">
-                            生日
-                            <br>
-                            2000 年 11 月 30 日
+                            <input type="text" placeholder="" id="member_name">
                         </div>
                         <div class="phone">
                             聯絡電話
                             <br>
-                            <input type="text">
+                            <input type="text" placeholder="" id="member_phone">
                         </div>
                         <div class="address">
                             聯絡地址
                             <br>
-                            <input type="text">
+                            <input type="text" placeholder="" id="member_address">
                         </div>
                     </div>
                 </div>
@@ -92,7 +86,7 @@
 
         <div class="bottom">
             <a href="vip_personal.html"><button class="bottom_btn">取消</button></a>
-            <button class="bottom_btn">確定修改</button>
+            <button class="bottom_btn" onclick="check_old_password()">確定修改</button>
         </div>
 
 
@@ -101,5 +95,6 @@
 
 
     @@include('./layout/footer.html')
+    <script src="./js/frontend/vip_edit.js"></script>
 </body>
 </html>
