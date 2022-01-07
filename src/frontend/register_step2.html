@@ -95,7 +95,9 @@
                 .then(data => data);
 
             for(i=0; i < $(".register_confirm").length; i++){
-                $(".register_confirm")[i].append(data[i]);
+                if(i !== 1) {
+                    $(".register_confirm")[i].append(data[i]);
+                }
             }
             // {
         //         method:'GET',
