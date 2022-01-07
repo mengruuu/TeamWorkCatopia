@@ -98,9 +98,14 @@
   }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 700px) {
   .vip_main .except_bkgimg .galaxy .leftgalaxy .leftgalaxy_text {
     font-size: 16px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .vip_main .except_bkgimg .galaxy .leftgalaxy .leftgalaxy_text {
     top: 40%;
     left: 40%;
     -webkit-transform: translate(-40%);
@@ -114,6 +119,7 @@
     left: 25%;
     -webkit-transform: translate(-15%);
             transform: translate(-15%);
+    background-color: #FED67E;
   }
 }
 
@@ -133,7 +139,51 @@
 }
 
 .vip_main .except_bkgimg .galaxy .middlelogo {
-  margin-top: 10%;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.vip_main .except_bkgimg .galaxy .middlelogo .logout {
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+  background-color: #FED67E;
+  color: #774F40;
+  border: 0px;
+  color: #774F40;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 5%;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+@media all and (max-width: 900px) {
+  .vip_main .except_bkgimg .galaxy .middlelogo .logout {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .vip_main .except_bkgimg .galaxy .middlelogo .logout {
+    font-size: 16px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .vip_main .except_bkgimg .galaxy .middlelogo .logout {
+    width: 80%;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .vip_main .except_bkgimg .galaxy .middlelogo .logout {
+    width: 100%;
+    padding: 2px 2px;
+  }
 }
 
 .vip_main .except_bkgimg .galaxy .rightgalaxy {
@@ -169,9 +219,14 @@
   }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 700px) {
   .vip_main .except_bkgimg .galaxy .rightgalaxy .rightgalaxy_text {
     font-size: 16px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .vip_main .except_bkgimg .galaxy .rightgalaxy .rightgalaxy_text {
     top: 40%;
     left: 40%;
     -webkit-transform: translate(-40%);
@@ -185,6 +240,7 @@
     left: 25%;
     -webkit-transform: translate(-15%);
             transform: translate(-15%);
+    background-color: #FED67E;
   }
 }
 

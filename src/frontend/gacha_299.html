@@ -10,7 +10,7 @@
 <body>
     @@include('./layout/header.html')
 
-    <main class="gacha_299_main">
+    <main class="gacha_299_main"  id="app">
         <div class="title">
             <div class="title_left">
                 <img src="./images/gacha_299/gacha_299_leftcat_icon.png" alt="">
@@ -26,6 +26,9 @@
             <div class="title_image">
                 <img src="./images/gacha_299/gacha_299_titleicon.png" alt="" class="title_icon">
                 <div class="title_text">299專區</div>
+                <div class="chance">
+                    您還有 {{count}} 次抽盒機會  
+                </div>
             </div>
             <div class="title_right">
                 <img src="./images/gacha_299/gacha_299_rightcat_icon.png" alt="">
@@ -60,15 +63,15 @@
                     </div>
                 </div>
                 <div class="gacha">
-                    <div class="choose_box flex-1"><img class="color_image" src="./images/gacha_299/gacha_299_box_green.png">1</div>
-                    <div class="choose_box flex-2"><img class="color_image" src="./images/gacha_299/gacha_299_box_green.png">2</div>
-                    <div class="choose_box flex-3"><img class="color_image" src="./images/gacha_299/gacha_299_box_green.png">3</div>
-                    <div class="choose_box flex-4"><img class="color_image" src="./images/gacha_299/gacha_299_box_green.png">4</div>
-                    <div class="choose_box flex-5"><img class="color_image" src="./images/gacha_299/gacha_299_box_green.png">5</div>
-                    <div class="choose_box flex-6"><img class="color_image" src="./images/gacha_299/gacha_299_box_green.png">6</div>
-                    <div class="choose_box flex-7"><img class="color_image" src="./images/gacha_299/gacha_299_box_green.png">7</div>
-                    <div class="choose_box flex-8"><img class="color_image" src="./images/gacha_299/gacha_299_box_green.png">8</div>
-                    <div class="choose_box flex-9"><img class="color_image" src="./images/gacha_299/gacha_299_box_green.png">9</div>
+                    <div class="choose_box flex-1" @click="action"><img class="color_image" src="./images/gacha_299/gacha_299_box_green.png">1</div>
+                    <div class="choose_box flex-2" @click="action"><img class="color_image" src="./images/gacha_299/gacha_299_box_green.png">2</div>
+                    <div class="choose_box flex-3" @click="action"><img class="color_image" src="./images/gacha_299/gacha_299_box_green.png">3</div>
+                    <div class="choose_box flex-4" @click="action"><img class="color_image" src="./images/gacha_299/gacha_299_box_green.png">4</div>
+                    <div class="choose_box flex-5" @click="action"><img class="color_image" src="./images/gacha_299/gacha_299_box_green.png">5</div>
+                    <div class="choose_box flex-6" @click="action"><img class="color_image" src="./images/gacha_299/gacha_299_box_green.png">6</div>
+                    <div class="choose_box flex-7" @click="action"><img class="color_image" src="./images/gacha_299/gacha_299_box_green.png">7</div>
+                    <div class="choose_box flex-8" @click="action"><img class="color_image" src="./images/gacha_299/gacha_299_box_green.png">8</div>
+                    <div class="choose_box flex-9" @click="action"><img class="color_image" src="./images/gacha_299/gacha_299_box_green.png">9</div>
                 </div>
                 <div class="right">
                     <div class="right_text">
@@ -159,8 +162,8 @@
                 <div class="div_content1">
 
                     <!-- 要動態換圖片 -->
-                    <div class="A" id="A">
-                        <img src="./images/gacha_299/gacha_299_a.png" width= 150 >
+                    <div id="A" class="A">
+                        <img src="" width= 150 >
                         <!-- <div class="img_name1">
                             萬聖節-巫師
                         </div> -->
@@ -171,7 +174,7 @@
                         <!-- <a href="login.html" class="btn_next">第二個按鈕</a> -->
                     </div>  
                     <div class="last_word1">
-                        您還有 3 次抽盒機會            
+                        您還有 {{count}} 次抽盒機會            
                     </div>
                 </div>
             </div>

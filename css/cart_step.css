@@ -429,15 +429,6 @@ p.cart_step2_this_step {
   }
 }
 
-.cart_step2_container {
-  max-width: 80%;
-  margin: 0 auto;
-  font-size: 20px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  color: #774F40;
-}
-
 .cart_step2_check_step {
   max-width: 80%;
   display: -webkit-box;
