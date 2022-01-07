@@ -30,6 +30,7 @@ div.more_question_question_container {
         border-radius: 30px;
         background-color: $second_color3;
         padding: 30px;
+        
         div.more_question_question_and_answer {
             border: 1px solid $font_color;
             width: 100%;
@@ -187,7 +188,7 @@ div.ai_container {
         cursor: default;
         @include w700() {
             width: 220px;
-            transform: translate(-40%, calc(100% + 16px));
+            // transform: translate(-40%, calc(100% + 16px));
             padding: 16px;
         }
         p {
@@ -231,5 +232,12 @@ div.ai_container {
 
     div.ai_answer_open {
         display: block;
+    }
+    .ai_answe_button{
+        @include button();
+        cursor: pointer;
+        font-size: 18px;
+        padding: 5px;
+        margin-left: 10px;
     }
 }
