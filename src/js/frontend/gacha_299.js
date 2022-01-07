@@ -1,3 +1,58 @@
+new Vue({
+    el: '#app',
+    data: {
+        count: 3,
+    },
+    methods: {
+        action(e){
+            if(count = 0){
+                alert("無抽盒次數");
+            }else{
+                this.count -= 1;
+            }
+        }
+    },
+});
+
+
+// 設定圖片存取陣列
+// let img_299 = new Array(); 
+// img_299[0] = "./images/gacha_299/gacha_299_a.png"; 
+// img_299[1] = "./images/gacha_299/gacha_299_b.png"; 
+// img_299[2] = "./images/gacha_299/gacha_299_c.png"; 
+// img_299[3] = "./images/gacha_299/gacha_299_d.png"; 
+// img_299[4] = "./images/gacha_299/gacha_299_e.png"; 
+// img_299[5] = "./images/gacha_299/gacha_299_f.png"; 
+// img_299[6] = "./images/gacha_299/gacha_299_g.png"; 
+// img_299[7] = "./images/gacha_299/gacha_299_h.png"; 
+// img_299[8] = "./images/gacha_299/gacha_299_i.png"; 
+
+let img_299 = [];
+
+//先把資料抓出來
+function doQuery() {
+    $.ajax({
+        method: "GET",
+        url: "API/gacha_299.php",
+        data: {
+            
+        },
+        dataType: "json",
+        success: function (response) {
+            for(let i = 0; i < response.length; i++){
+                img_299.push(response[i].PRODUCT_PICTURE1);
+            }
+            // img_299 = response;
+            // console.log(img_299);
+        },
+        error: function (exception) {
+            alert("發生錯誤: " + exception.status);
+        },
+    });
+}
+document.addEventListener('load', doQuery());
+
+
 // alert(`
 //     盲盒抽選步驟:
 //     1.選擇299/399盲盒
@@ -55,17 +110,17 @@ function doFirst(){
     }
 
     //========================點箱子換圖片+彈窗============================
-    // 設定圖片存取陣列
-    let img_299 = new Array(); 
-    img_299[0] = "./images/gacha_299/gacha_299_a.png"; 
-    img_299[1] = "./images/gacha_299/gacha_299_b.png"; 
-    img_299[2] = "./images/gacha_299/gacha_299_c.png"; 
-    img_299[3] = "./images/gacha_299/gacha_299_d.png"; 
-    img_299[4] = "./images/gacha_299/gacha_299_e.png"; 
-    img_299[5] = "./images/gacha_299/gacha_299_f.png"; 
-    img_299[6] = "./images/gacha_299/gacha_299_g.png"; 
-    img_299[7] = "./images/gacha_299/gacha_299_h.png"; 
-    img_299[8] = "./images/gacha_299/gacha_299_i.png"; 
+    // // 設定圖片存取陣列
+    // let img_299 = new Array(); 
+    // img_299[0] = "./images/gacha_299/gacha_299_a.png"; 
+    // img_299[1] = "./images/gacha_299/gacha_299_b.png"; 
+    // img_299[2] = "./images/gacha_299/gacha_299_c.png"; 
+    // img_299[3] = "./images/gacha_299/gacha_299_d.png"; 
+    // img_299[4] = "./images/gacha_299/gacha_299_e.png"; 
+    // img_299[5] = "./images/gacha_299/gacha_299_f.png"; 
+    // img_299[6] = "./images/gacha_299/gacha_299_g.png"; 
+    // img_299[7] = "./images/gacha_299/gacha_299_h.png"; 
+    // img_299[8] = "./images/gacha_299/gacha_299_i.png"; 
 
     let clickedImg = [];
     let color_image = document.getElementsByClassName('color_image');
@@ -96,9 +151,12 @@ function doFirst(){
     let imgA = A.firstElementChild;
     // console.log(imgA);
 
+    // console.log(`${count}`);
+
     //點箱子移除彩色圖片 增加灰色圖片 同時跳出抽選的商品彈窗
     for(let i = 0; i < color_image.length; i++){
         color_image[i].addEventListener("click", function(e){
+            // imgA.src = '';
             let gacha_box_c = document.getElementsByClassName('choose_box')[i];
             let gray_image = './images/gacha_299/gacha_299_box_gray.png';
             let img = gacha_box_c.firstElementChild;
