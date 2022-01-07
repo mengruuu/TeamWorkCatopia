@@ -88,45 +88,52 @@
     </script>
 
     <script>
-    function confirm_member(){
-        $.ajax({
-             method:'POST',
-             url:'./API/register_step2.php',
-             data:{},
-             dataType:'json',
-             success:function(response){
-                //  console.log(response);
-                 for(i=0; i < $(".register_confirm").length; i++){
-                    $(".register_confirm")[i].append(response[i]);
-                 }
-             },
-             error: function(exception) {
-                 alert("發生錯誤: " + exception.status);  //網路出錯的部分
-             }
-        });
-    }
-    confirm_member();
+        async function confirm_member(){
+            const data = 
+                await fetch('./API/register_step2.php')
+                .then(res => res.json())
+                .then(data => data);
 
-
-    function register(){
-            $.ajax({
-            method:'POST',
-            url:'./API/register_step3.php',
-            data:{
-            },
-            dataType:'text',
-            success:function(response){
-                if(response){
-                    // console.log(response);
-                    window.location.href = "./register_step3.html";
-                }
-            },error: function(exception) {
-                alert("發生錯誤: " + exception.status);  //網路出錯的部分
+            for(i=0; i < $(".register_confirm").length; i++){
+                $(".register_confirm")[i].append(data[i]);
             }
-        });
-    }
+            // {
+        //         method:'GET',
+        //         url:'./API/register_step2.php',
+        //         // data:{},
+        //         // dataType:'json',
+        //         success:function(response){
+        //             // response.split
+        //             console.log(response);
+        //             for(i=0; i < $(".register_confirm").length; i++){
+        //                 $(".register_confirm")[i].append(response[i]);
+        //             }
+        //         },
+        //         error: function(exception) {
+        //             alert("發生錯誤: " + exception.status);  //網路出錯的部分
+        //         }
+        //     });
+        }
+        confirm_member();
 
 
+        function register(){
+                $.ajax({
+                method:'POST',
+                url:'./API/register_step3.php',
+                data:{
+                },
+                dataType:'text',
+                success:function(response){
+                    if(response){
+                        // console.log(response);
+                        window.location.href = "./register_step3.html";
+                    }
+                },error: function(exception) {
+                    alert("發生錯誤: " + exception.status);  //網路出錯的部分
+                }
+            });
+        }
     </script>
     @@include('./layout/footer.html')
 </body>
