@@ -225,7 +225,7 @@ div.register_first_container > form > button[type='button'] {
   }
 }
 
-div.register_first_container > form > button[type='button']:hover {
+div.register_first_container > form > button:hover {
   cursor: pointer;
 }
 /*# sourceMappingURL=register_first.css.map */

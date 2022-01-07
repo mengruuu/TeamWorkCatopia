@@ -374,8 +374,13 @@ div.food_filter_container_and_food_product_overview div.food_product_overview di
 }
 
 div.food_filter_container_and_food_product_overview div.food_product_overview div.food_product_overview_item div.food_product_title_and_price_and_button div.food_product_content_button {
+  cursor: pointer;
   width: 40px;
   height: 40px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 20px;
 }
 
 ul.food_product_page_chose_container {
@@ -392,9 +397,9 @@ ul.food_product_page_chose_container {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 600px;
 }
 
