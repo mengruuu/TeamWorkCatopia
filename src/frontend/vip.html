@@ -51,9 +51,11 @@
                 url:'./API/logout.php',
                 data:{
                 },
-                dataType:'json',
+                // dataType:'json',
+                dataType: "text",
                 success:function(response){
-                    console.log('success');
+                    // console.log('success');
+                    window.location.href = "./index.html";
                 },
                 error: function(exception) {
                     console.log('error');

@@ -3,6 +3,8 @@
 session_start();
 session_unset();
 session_destroy();
-header("location: index.html");
+
+// echo json_encode('登出成功');
+echo ('登出成功');
 
 ?>
