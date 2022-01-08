@@ -1,3 +1,4 @@
+import "../../library/function.js";
 const message_write_message_img_file_container = document.querySelector("label.message_write_message_img_file_container");
 const message_write_img_container = document.querySelector("div.message_write_img_container");
 const click_to_message_input_container = document.querySelector("input.click_to_message_input_container");
@@ -68,6 +69,8 @@ function droppedImg(srcEl, message_write_img_container) {
 
 
 
+//檢查會員是否登入
+// login_check();
 // 上傳圖片
 upLoadImg(inputFile, message_write_img_container);
 dragOverImg(message_write_img_container.parentElement, message_write_img_container.children[0], "message_write_img_container_open");
@@ -111,3 +114,12 @@ message_write_img_container.children[0].addEventListener("click", function () {
         }
     }
 });
+
+async function uploadMessageData() {
+    const messageInfo = 
+        await fetch("./API/messageGetInfo.php")
+        .then(res =>res.json())
+        .then(data=> data); //獲取留言版的資訊
+    
+    
+}
