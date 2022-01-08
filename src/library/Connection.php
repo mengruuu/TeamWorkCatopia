@@ -4,7 +4,11 @@
        $db_host = "127.0.0.1";
        $db_user = "root";
 <<<<<<< HEAD
+<<<<<<< HEAD
        $db_pass = "gl4su06T";
+=======
+       $db_pass = "gtr123456";
+>>>>>>> 039b5256dcc6a8676d7a793818932f151f2e8b7b
 =======
        $db_pass = "gtr123456";
 >>>>>>> 039b5256dcc6a8676d7a793818932f151f2e8b7b
