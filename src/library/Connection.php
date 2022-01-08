@@ -3,15 +3,7 @@
        //MySQL相關資訊
        $db_host = "127.0.0.1";
        $db_user = "root";
-<<<<<<< HEAD
-<<<<<<< HEAD
        $db_pass = "gl4su06T";
-=======
-       $db_pass = "gtr123456";
->>>>>>> 039b5256dcc6a8676d7a793818932f151f2e8b7b
-=======
-       $db_pass = "gtr123456";
->>>>>>> 039b5256dcc6a8676d7a793818932f151f2e8b7b
        $db_select = "CATOPIA";
 
        //建立資料庫連線物件 (dsn=data source name 包含一些連線資訊，不同的資料庫系統其所需的資訊不一)
