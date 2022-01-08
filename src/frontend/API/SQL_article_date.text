@@ -1,0 +1,20 @@
+
+-- 尾巴的訊號
+insert into ARTICLE(ARTICLE_TITLE, ARTICLE_CONTENT,ARTICLE_PICTURE)
+value('大幅左右搖擺——焦慮', '與狗狗不同，當喵咪感覺焦慮的時候就會大幅度的搖擺尾巴，它們也許正在視機攻擊或者反抗，這時應該找出喵咪焦慮的原因並努力排除，否者它們很可能會做出一些不尋常的事情喲。','./images/knowledge/knowledge_first_block_p1.png');
+
+insert into ARTICLE(ARTICLE_TITLE, ARTICLE_CONTENT,ARTICLE_PICTURE)
+value('尾尖輕微擺動——感興趣', '當你的喵咪對某件物品感興趣的時候它們興奮的使尾巴尖端輕微搖擺，當它們盯緊獵物的時候也會表現出這樣的狀態。','./images/knowledge/knowledge_first_block_p2.png');
+
+insert into ARTICLE(ARTICLE_TITLE, ARTICLE_CONTENT,ARTICLE_PICTURE)
+value('尾巴緩慢擺動——關注', '如果喵咪發現了自己在意的東西，雖然還沒有採取行動，但是它們會緩慢的搖動尾巴，表現出暫時關注的狀態。','./images/knowledge/knowledge_first_block_p3.png');
+
+-- 貓咪耳朵的訊號
+insert into ARTICLE(ARTICLE_TITLE, ARTICLE_CONTENT,ARTICLE_PICTURE)
+value('貓貓耳朵正常立起——安心', '貓主子如果耳朵立起，雙眼興致盎然地盯著某樣東西， 代表貓咪安心又感興趣喔！若同時沒有發現其他異常訊號，這時正是友好地與貓咪互動的好時機！','./images/knowledge/knowledge_sec_block_p1.png');
+
+insert into ARTICLE(ARTICLE_TITLE, ARTICLE_CONTENT,ARTICLE_PICTURE)
+value('貓貓耳朵平貼——警戒、不耐煩', '耳朵平貼也就是俗稱的飛機耳，這時候，貓咪處於警戒或不耐煩的狀態，再繼續逗弄貓咪的話，極有可能被怒吼，甚至慘遭貓爪攻擊喔 !','./images/knowledge/knowledge_sec_block_p2.png');
+
+insert into ARTICLE(ARTICLE_TITLE, ARTICLE_CONTENT,ARTICLE_PICTURE)
+value('耳朵向後面垂垂貼近頭——害怕', '貓咪耳朵向後垂並緊貼頭的時候，代表貓咪十分害怕，這時候如果執意接近貓咪，貓咪會立刻「跑沒貓影」。而若是把嚇貓當有趣，也會大大降低貓咪的信任感','./images/knowledge/knowledge_sec_block_p3.png');

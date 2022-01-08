@@ -1,118 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    @@include('./layout/meta.html', {
-      "title" : "更多問題"
-    })
-    <link rel="stylesheet" href="./css/more_question.css">
-</head>
-<body>
+  <head>
+    @@include('./layout/meta.html', { "title" : "更多問題" })
+    <link rel="stylesheet" href="./css/more_question.css" />
+    <script src="./library/jquery-3.6.0.min.js"></script>
+    <script src="./library/vue.min.js"></script>
+  </head>
+  <body>
     @@include('./layout/header.html')
-    <div class = "more_question_background"></div>
-    <div class = "more_question_question_container">
-        <p>常見問題</p>
-        <div class = "more_question_question_and_answer_container">
-            <div class = "more_question_question_and_answer">
-                <div class = "more_question_question_and_answer_title">
-                    <p>Q1 只要在10天鑑賞期內就都可以退貨嗎？</p>
-                </div>
-                <div class = "more_question_question_and_answer_content">
-                    <p>
-                        A1 依《消費者保護法》第19條第二項規定所訂定的『通訊交易解除權合理例 外情事適用準則』
-                        ，若您購買的為下方所列商品一經拆封，非因無內容或無法使用之狀況即無法退換貨。
-                        請務必詳閱商品說明並再次確認確有購買該項商品之需求及意願時始下單購買，有任何疑問並請先聯繫博客來客服詢問：
-                        1.易於腐敗、保存期限較短、新鮮冷凍食材或解約時即將逾期。2.客製化之商品。
-                    </p>
-                </div>
-                <div class = "more_question_question_and_answer_title">
-                    <p>Q2 退換貨處理原則</p>
-                </div>
-                <div class = "more_question_question_and_answer_content">
-                    <p>
-                        A2 catopai提供10天的猶豫期(含例假日，以您至7-ELEVEN取貨或宅配送達商品 當天起算)。
-                        若要辦理退換貨，請務必在收到商品10日內，至會員專區線上申請退換貨，並將商品連同勾選完成的出貨明細表一併包裝妥善，
-                        憑退貨便代碼在48小時內，至7-ELEVEN ibon列印單據後，於櫃檯完成寄件。於收到商品後，會立即為您辦理。轉廠商出貨商品：
-                        目前僅提供線上申請退貨，您可參考如何退貨說明，若因商品瑕疵等因素欲辦理換貨，請洽詢客服人員。
-                        您所退回的商品必須保持商品本體、附件、內外包裝、配件、贈品、保證書、原廠包裝及所有隨附文件或資料的完整性，
-                        切勿缺漏任何配件或損毀原廠外盒，退回商品無法回復原狀者，恐將影響退貨權益或需負擔部分費用。(請注意！猶豫期非試用期)。
-                        因商品封條為一次性包裝，商品退貨時必須回復原狀，亦即必須回復至您收到商品時的原始狀態，且會視回收的商品狀態另外酌收額外的整新費用，
-                        請您務必確認有購買需求後再行拆封。※海外訂單目前僅能線上申請瑕疵退貨，若個人因素辦理退貨，自行寄回郵資將不退還，
-                        若因商品瑕疵欲辦理換貨，請先洽詢客服人員。(請勿自行將商品寄回，若自行寄回請自行負擔寄回運費)
-                    </p>
-                </div>
-                <div class = "more_question_question_and_answer_title">
-                    <p>Q3 什麼情況下會影響退換貨權利？</p>
-                </div>
-                <div class = "more_question_question_and_answer_content">
-                    <p>
-                        A3 辦理退換貨時，某些情況可能會被認定為已逾越檢查商品之必要程度，而將影響您退貨權利的行使或需負擔毀壞之費用，
-                        因此，訂購前請先詳讀您所購買商品之商品頁下方退換貨說明。
-                    </p>
-                </div>
-            </div>
+    <div class="more_question_background"></div>
+    <div class="more_question_question_container">
+      <p>常見問題</p>
+      <div class="more_question_question_and_answer_container">
+        <div class="more_question_question_and_answer">
+          <div class="more_question_question_and_answer_title">
+            <p>Q1 只要在10天鑑賞期內就都可以退貨嗎？</p>
+          </div>
+          <div class="more_question_question_and_answer_content">
+            <p>
+              A1
+              依《消費者保護法》第19條第二項規定所訂定的『通訊交易解除權合理例
+              外情事適用準則』
+              ，若您購買的為下方所列商品一經拆封，非因無內容或無法使用之狀況即無法退換貨。
+              請務必詳閱商品說明並再次確認確有購買該項商品之需求及意願時始下單購買，有任何疑問並請先聯繫博客來客服詢問：
+              1.易於腐敗、保存期限較短、新鮮冷凍食材或解約時即將逾期。2.客製化之商品。
+            </p>
+          </div>
+          <div class="more_question_question_and_answer_title">
+            <p>Q2 退換貨處理原則</p>
+          </div>
+          <div class="more_question_question_and_answer_content">
+            <p>
+              A2
+              catopai提供10天的猶豫期(含例假日，以您至7-ELEVEN取貨或宅配送達商品
+              當天起算)。
+              若要辦理退換貨，請務必在收到商品10日內，至會員專區線上申請退換貨，並將商品連同勾選完成的出貨明細表一併包裝妥善，
+              憑退貨便代碼在48小時內，至7-ELEVEN
+              ibon列印單據後，於櫃檯完成寄件。於收到商品後，會立即為您辦理。轉廠商出貨商品：
+              目前僅提供線上申請退貨，您可參考如何退貨說明，若因商品瑕疵等因素欲辦理換貨，請洽詢客服人員。
+              您所退回的商品必須保持商品本體、附件、內外包裝、配件、贈品、保證書、原廠包裝及所有隨附文件或資料的完整性，
+              切勿缺漏任何配件或損毀原廠外盒，退回商品無法回復原狀者，恐將影響退貨權益或需負擔部分費用。(請注意！猶豫期非試用期)。
+              因商品封條為一次性包裝，商品退貨時必須回復原狀，亦即必須回復至您收到商品時的原始狀態，且會視回收的商品狀態另外酌收額外的整新費用，
+              請您務必確認有購買需求後再行拆封。※海外訂單目前僅能線上申請瑕疵退貨，若個人因素辦理退貨，自行寄回郵資將不退還，
+              若因商品瑕疵欲辦理換貨，請先洽詢客服人員。(請勿自行將商品寄回，若自行寄回請自行負擔寄回運費)
+            </p>
+          </div>
+          <div class="more_question_question_and_answer_title">
+            <p>Q3 什麼情況下會影響退換貨權利？</p>
+          </div>
+          <div class="more_question_question_and_answer_content">
+            <p>
+              A3
+              辦理退換貨時，某些情況可能會被認定為已逾越檢查商品之必要程度，而將影響您退貨權利的行使或需負擔毀壞之費用，
+              因此，訂購前請先詳讀您所購買商品之商品頁下方退換貨說明。
+            </p>
+          </div>
         </div>
+      </div>
     </div>
-    <div class = "more_question_contact_container">
-        <p>沒得到解答嗎？也可以直接與我們聯繫！</p>
-        <button class = "more_question_contact_button">聯絡我們</button>
+    <div class="more_question_contact_container">
+      <p>沒得到解答嗎？也可以直接與我們聯繫！</p>
+      <button class="more_question_contact_button">聯絡我們</button>
     </div>
-    <div class = "ai_container">
-        <img src = "./images/question/question_ai.png">
-        <div class = "ai_answer">
-            <p>您有什麼問題呢？</p>
-            <input type = "text" placeholder = "輸入您的問題..">
-        </div>
+    <div class="ai_container">
+      <img src="./images/question/question_ai.png" />
+      <div class="ai_answer">
+        <p id="ai_answer">您有什麼問題呢？</p>
+        <input id="get_question" type="text" placeholder="輸入您的問題.." />
+        <button class="ai_answe_button">送出</button>
+      </div>
     </div>
     @@include('./layout/footer.html')
 
     <script>
-        ;(function() {
-            const title = document.querySelectorAll("div.more_question_question_and_answer_title");
-            const content = document.querySelector("div.more_question_question_and_answer_content > p");
-            const ai_container = document.querySelector("div.ai_container");
-            const ai_answer = document.querySelector("div.ai_answer");
-            const more_question_contact_button = document.querySelector("button.more_question_contact_button");
-            const more_question_background =document.querySelector("div.more_question_background");
-
-
-
-
-            for(let i = 0; i < title.length; i = i + 1) {
-                const height = title[i].nextElementSibling.children[0].offsetHeight;
-                title[i].addEventListener("click", function() {
-                    this.classList.toggle("more_question_question_and_answer_title_open");
-
-                    this.nextElementSibling.classList.toggle("more_question_question_and_answer_content_open");
-                    if(this.nextElementSibling.classList.contains("more_question_question_and_answer_content_open")) {
-                        this.nextElementSibling.style.height = `${height}px`;
-                    }else{
-                        this.nextElementSibling.style.height = `0px`;
-                    }
-                });
+      //點擊時呼叫ajax
+        $(".ai_answe_button").click(function(){
+          $.ajax({
+          method: "GET",
+          url: "API/question.php",
+          data: {
+            question: $("#get_question").val(),
+          },
+          dataType: "json",
+          success: function (response) {
+            console.log(response[0]);
+            console.log(response[0].ANSWER_CONTENT);
+            // let ans = response.ANSWER_CONTENT;
+            $("#ai_answer").html(response[0].ANSWER_CONTENT);
+          },
+          error: function (exception) {
+            alert("發生錯誤: " + exception.status);
+          },
+        });
+        });
+      
+      //機器人回答
+      $(':text').focus(function(){
+        $(this).attr('placeholder', '');
+        })
+      .blur(function(){
+        if($(this).val() == ''){
+           $(this).attr('placeholder','輸入您的問題..');
             }
+          });
+      // document.querySelector(".ai_answe_button").addEventListener(
+      //   "click", function(){
+      //     let text = document.querySelector("input").value;
+      //     console.log(question.indexOf(text));
+      //     if(question.indexOf(text) == -1){
+      //       document.querySelector(".ai_answer p").innerHTML = '請再詳細描述';
+      //     }else{
+      //       for(let i = 0; i < question.length; i++){
+      //         var answer_number = question.indexOf(text);
+      //         document.querySelector(".ai_answer p").innerHTML = answer[answer_number];
+      //           // answer[answer_number]
+      //       }
+      //     }
+          
+      //   }
+      // )
+       
+      //手風琴
+      ;
+      (function () {
+        const title = document.querySelectorAll(
+          "div.more_question_question_and_answer_title"
+        );
+        const content = document.querySelector(
+          "div.more_question_question_and_answer_content > p"
+        );
+        const ai_container = document.querySelector("div.ai_container");
+        const ai_answer = document.querySelector("div.ai_answer");
+        const more_question_contact_button = document.querySelector(
+          "button.more_question_contact_button"
+        );
+        const more_question_background = document.querySelector(
+          "div.more_question_background"
+        );
 
-            ai_container.addEventListener("click", function() {
-                ai_answer.classList.toggle("ai_answer_open");
-                more_question_background.classList.toggle("more_question_background_open");
-            });
+        for (let i = 0; i < title.length; i = i + 1) {
+          const height = title[i].nextElementSibling.children[0].offsetHeight;
+          title[i].addEventListener("click", function () {
+            this.classList.toggle(
+              "more_question_question_and_answer_title_open"
+            );
 
-            ai_answer.addEventListener("click", function(event) {
-                event.stopImmediatePropagation();
-            });
+            this.nextElementSibling.classList.toggle(
+              "more_question_question_and_answer_content_open"
+            );
+            if (
+              this.nextElementSibling.classList.contains(
+                "more_question_question_and_answer_content_open"
+              )
+            ) {
+              this.nextElementSibling.style.height = `${height}px`;
+            } else {
+              this.nextElementSibling.style.height = `0px`;
+            }
+          });
+        }
 
-            // 點擊more_question_contact_button前往聯絡頁面
-            more_question_contact_button.addEventListener("click", function() {
-                window.location.href = "/dist/contact.html";
-            });
+        ai_container.addEventListener("click", function () {
+          ai_answer.classList.toggle("ai_answer_open");
+          more_question_background.classList.toggle(
+            "more_question_background_open"
+          );
+        });
 
-            // 點擊空白處來關閉ai_answer對話框
-            document.querySelector("body").addEventListener("click", function(event){
-                if(ai_answer.classList.contains("ai_answer_open") && event.target === more_question_background) {
-                    ai_answer.classList.remove("ai_answer_open");
-                    more_question_background.classList.remove("more_question_background_open");
-                }
-            }, true);
-        })()
+        ai_answer.addEventListener("click", function (event) {
+          event.stopImmediatePropagation();
+        });
+
+        // 點擊more_question_contact_button前往聯絡頁面
+        more_question_contact_button.addEventListener("click", function () {
+          window.location.href = "/dist/contact.html";
+        });
+
+        // 點擊空白處來關閉ai_answer對話框
+        document.querySelector("body").addEventListener(
+          "click",
+          function (event) {
+            if (
+              ai_answer.classList.contains("ai_answer_open") &&
+              event.target === more_question_background
+            ) {
+              ai_answer.classList.remove("ai_answer_open");
+              more_question_background.classList.remove(
+                "more_question_background_open"
+              );
+              document.querySelector(".ai_answer p").innerHTML = '您有什麼問題呢？';
+              let question =  document.querySelector("input");
+              question.value = "";
+                question.setAttribute('placeholder','輸入您的問題..');
+            }
+          },
+          true
+        );
+      })();
     </script>
-</body>
+  </body>
 </html>

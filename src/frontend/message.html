@@ -6,6 +6,7 @@
     })
     <link rel="stylesheet" href="./css/message.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="./library/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class = "message_write_background"></div>
@@ -53,39 +54,50 @@
             <span></span>
         </p>
     </div>
-    <div class = "message_and_comment_container">
-        <div class = "message_container" style = "background-image: url(./images/message/message_background_img.png);">
-            <div class = "message_setting_container">
-                <img src = "./images/message/message_setting_photo.svg">
-            </div>
-            <div class = "message_user_and_time_and_like">
-                <div class = "message_img_and_user_and_time">
-                    <img class = "message_user_img" src = "./images/message/message_personal_example_photo.png">
-                    <div class = "message_user_and_time">
-                        <p>ID:DEVIL_CATMAN</p>
-                        <p>2021/ 11/27</p>
+    <!-- vue instance range -->
+    <div id = "message_app">
+        <div class = "message_and_comment_container">
+            <div class = "message_container" style = "background-image: url(./images/message/message_background_img.png);">
+                <div class = "message_setting_container">
+                    <div class = "message_setting_container_content">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <ul class = "message_setting_container_content_list">
+                            <li class = "message_setting_container_content_delete">刪除貼文</li>
+                        </ul>
                     </div>
                 </div>
-                <div class = "message_like_container">
-                    <img src = "./images/message/message_like.svg">
-                    <p>+58</p>
+                <div class = "message_user_and_time_and_like">
+                    <div class = "message_img_and_user_and_time">
+                        <img class = "message_user_img" src = "./images/message/message_personal_example_photo.png">
+                        <div class = "message_user_and_time">
+                            <p>ID:DEVIL_CATMAN</p>
+                            <p>2021/ 11/27</p>
+                        </div>
+                    </div>
+                    <div class = "message_like_container">
+                        <img src = "./images/message/message_like.png">
+                        <p>+58</p>
+                    </div>
                 </div>
-            </div>
-            <div class = "message_content_and_comment">
-                <div class = "message_content_text">
-                    <p>Canon拍貓第三彈，相機好真的拍甚麼都好看，貓咪們都好上相</p>
-                </div>
-                <img class = "message_content_img" src = "./images/message/message_example_post_photo.png">
-                <input class = "comment_input" placeholder = "回應貼文...">
-                <div class = "message_comment_container">
-                    <img class = "message_comment_user_img" src = "./images/message/message_comment_photo.svg">
-                    <p class = "message_comment_item">Devil catman, your tonight’s nightmare</p>
+                <div class = "message_content_and_comment">
+                    <div class = "message_content_text">
+                        <p>Canon拍貓第三彈，相機好真的拍甚麼都好看，貓咪們都好上相</p>
+                    </div>
+                    <img class = "message_content_img" src = "./images/message/message_example_post_photo.png">
+                    <input class = "comment_input" placeholder = "回應貼文...">
+                    <div class = "message_comment_container">
+                        <img class = "message_comment_user_img" src = "./images/message/message_comment_photo.svg">
+                        <p class = "message_comment_item">Devil catman, your tonight’s nightmare</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- vue instance range -->
     @@include('./layout/footer.html')
 
-    <script src = "./js/frontend/message.js"></script>
+    <script src = "./js/frontend/message.js" type="module"></script>
 </body>
 </html>
