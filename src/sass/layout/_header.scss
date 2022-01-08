@@ -243,9 +243,15 @@ div.header_icons{
       // border:1px solid blue;
       height: 100%;
       cursor: pointer;
+      position: relative;
       margin-right: 15px;
       @include w1100{
         width: 50px;
+      }
+      div.member_icon_text{
+        font-size: $font_20;
+        position: absolute;
+        top: 0%;
       }
     }
     div.shopping_cart{
