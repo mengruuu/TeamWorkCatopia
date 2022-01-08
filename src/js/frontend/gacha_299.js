@@ -1,3 +1,5 @@
+login_check();
+
 var vm = new Vue({
     el: '#app',
     data: {
@@ -38,7 +40,7 @@ function doQuery() {
         dataType: "json",
         success: function (response) {
             for(let i = 0; i < response.length; i++){
-                img_299.push(response[i].PRODUCT_PICTURE1);
+                img_299.push(response[i]);
             }
             // img_299 = response;
             // console.log(img_299);
@@ -61,27 +63,95 @@ document.addEventListener('load', doQuery());
 // `);
 
 function doFirst(){
+    let clickedImg = [];
+    let color_image = document.getElementsByClassName('color_image');
+    let index_number;
+    let new_img_299 = [];
 
-    //=========================以下舊JS===================================
-    // //點箱子移除彩色圖片 增加灰色圖片
-    // let color_image = document.getElementsByClassName('color_image');
-    // // console.log(gacha_box_c);
-    // for(let i = 0; i < color_image.length; i++){
-    //     color_image[i].addEventListener("click", function(e){
+    //抽中商品彈窗相關變數
+    let popupBtn1 = document.getElementById('background_pop1');
+    let popupClick1 = document.getElementsByClassName('choose_box');
+    let close1 = document.getElementById('close_btn1');
+    let continue_btn1 = document.getElementById('continue_btn1');
+    let A = document.getElementById('A');
+    let imgA = A.firstElementChild;
+    let gacha_box = document.getElementsByClassName('choose_box');
+    // console.log(gacha_box);
+
+    // console.log(vm.count);
+
+    // console.log(img_299);
+    //一進入頁面就會random好每個箱子對應到的數字
+    // randomindex();
+    for( i = 0; i < 9; i++){
+        randomindex()
+        new_img_299.push(img_299[index_number]);
+        console.log(new_img_299[i]['PRODUCT_PICTURE1']);
+    };
+    console.log(new_img_299);
+
+    // imgA.src = new_img_299.PRODUCT_PICTURE1;
+
+
+
+    //randomindex()會隨機抽出index數字 判斷數字有無重複
+    function randomindex() {
+        while(1){
+            index_number = parseInt(Math.random() * 9);
     
-    //         e.target.remove();
-    
-    //         //跳出彈窗
+            if(clickedImg.every(function(num,index){
+                return num != index_number;
+            })){
+                clickedImg.push(index_number);
+                break;
+            }
+        }
+        // console.log(index_number); //印出抽中圖片的index
+        // return index_number;
+    }
+
+    //點箱子移除彩色圖片 增加灰色圖片 同時跳出抽選的商品彈窗
+    for(let i = 0; i < color_image.length; i++){
+        color_image[i].addEventListener("click", function(e){
+            let gacha_box_c = gacha_box[i];
+            let gray_image = './images/gacha_299/gacha_299_box_gray.png';
+            let img = gacha_box_c.firstElementChild;
+            // imgA.src = '';
+
+            // console.log(gacha_box_c);
+            console.log(img);
             
-    //         let gacha_box_c = document.getElementsByClassName('choose_box')[i];
-    //         let gray_image = "<img src='./images/gacha_299/gacha_299_box_gray.png' width= 150>";
-    //         gacha_box_c.insertAdjacentHTML("afterbegin", gray_image);
-    
-    
-    //     })
+            //判斷若為灰色箱子 只會alert 不會做動作
+            if(e.target.classList.contains("-off")){
+                alert('無法抽取灰色箱子');
+            }else if(vm.count == 0){
+                alert('請購買抽盒次數');
+                window.location.href='./gacha_cart_step1.html';
+            }else{
+                vm.count --;
+                // console.log("test");
+                e.target.classList.add("-off");
+                img.src = gray_image;
+                popupBtn1.style.display = "block";
+                // randomindex();
+                // imgA.src = img_299[index_number];
+            };
+        })
+    };
+
+    close1.onclick = function close1() {
+        popupBtn1.style.display = "none";
+    }
+    continue_btn1.onclick = function continue_btn1() {
+        popupBtn1.style.display = "none";
+    }
+    // window.onclick = function close1(e) {
+    //     if (e.target == popupBtn1) {
+    //         popupBtn1.style.display = "none";
+    //     }
     // }
-    //=========================以上舊JS===================================
-    
+
+
     //查看抽選清單 彈窗
     let popupBtn = document.getElementById('background_pop');
     let popupClick = document.getElementById('popup_click');
@@ -107,91 +177,6 @@ function doFirst(){
         }
     }
 
-    //========================點箱子換圖片+彈窗============================
-    // // 設定圖片存取陣列
-    // let img_299 = new Array(); 
-    // img_299[0] = "./images/gacha_299/gacha_299_a.png"; 
-    // img_299[1] = "./images/gacha_299/gacha_299_b.png"; 
-    // img_299[2] = "./images/gacha_299/gacha_299_c.png"; 
-    // img_299[3] = "./images/gacha_299/gacha_299_d.png"; 
-    // img_299[4] = "./images/gacha_299/gacha_299_e.png"; 
-    // img_299[5] = "./images/gacha_299/gacha_299_f.png"; 
-    // img_299[6] = "./images/gacha_299/gacha_299_g.png"; 
-    // img_299[7] = "./images/gacha_299/gacha_299_h.png"; 
-    // img_299[8] = "./images/gacha_299/gacha_299_i.png"; 
-
-    let clickedImg = [];
-    let color_image = document.getElementsByClassName('color_image');
-    let index_number;
-
-    //randomindex()會隨機抽出index數字 判斷數字有無重複
-    function randomindex() {
-        while(1){
-            index_number = parseInt(Math.random() * 9);
-    
-            if(clickedImg.every(function(num,index){
-                return num != index_number;
-            })){
-                clickedImg.push(index_number);
-                break;
-            }
-        }
-        // console.log(index_number); //印出抽中圖片的index
-        return index_number;
-    }
-
-    //抽中商品彈窗相關變數
-    let popupBtn1 = document.getElementById('background_pop1');
-    let popupClick1 = document.getElementsByClassName('choose_box');
-    let close1 = document.getElementById('close_btn1');
-    let A = document.getElementById('A');
-    // let A = document.getElementsByClassName('A')[0];
-    let imgA = A.firstElementChild;
-    // console.log(imgA);
-
-    // console.log(`${count}`);
-    // console.log(vm.count);
-
-    //點箱子移除彩色圖片 增加灰色圖片 同時跳出抽選的商品彈窗
-    for(let i = 0; i < color_image.length; i++){
-        color_image[i].addEventListener("click", function(e){
-            // imgA.src = '';
-            let gacha_box_c = document.getElementsByClassName('choose_box')[i];
-            let gray_image = './images/gacha_299/gacha_299_box_gray.png';
-            let img = gacha_box_c.firstElementChild;
-
-
-            // console.log(vm.count);
-
-            //判斷若為灰色箱子 只會alert 不會做動作
-            if(e.target.classList.contains("-off")){
-                alert('無法抽取灰色箱子');
-            }else if(vm.count == 0){
-                alert('請購買抽盒次數');
-            }else{
-                // console.log(vm.count);
-                vm.count --;
-                // console.log("test");
-                e.target.classList.add("-off");
-                img.src = gray_image;
-                popupBtn1.style.display = "block";
-                randomindex();
-                // console.log(img_number);
-                imgA.src = img_299[index_number];
-                // A.firstElementChild.src = img_299[index_number];
-            };
-
-        })
-    };
-
-    close1.onclick = function close1() {
-        popupBtn1.style.display = "none";
-    }
-    // window.onclick = function close1(e) {
-    //     if (e.target == popupBtn1) {
-    //         popupBtn1.style.display = "none";
-    //     }
-    // }
     
 
 }
