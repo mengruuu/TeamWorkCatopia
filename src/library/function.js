@@ -9,7 +9,7 @@ function login_check(){
         dataType:'json',
         success:function(res){
             if(res == ''){
-                alert(res);
+                // alert(res);
                 window.location.href = './login.html';
             }else{
                 response = res;
@@ -18,7 +18,7 @@ function login_check(){
         },
         error: function(exception) {
          alert("發生錯誤: " + exception.status); 
-     }
+        }
     })
 }
 function change_member_icon(){
