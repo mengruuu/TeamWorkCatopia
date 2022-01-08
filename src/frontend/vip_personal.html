@@ -5,19 +5,20 @@
       "title" : "個人資料"
     })
     <link rel="stylesheet" href="./css/vip_personal.css">
-    <script src="./js/frontend/vip_personal.js" async></script>
 </head>
 <body>
     @@include('./layout/header.html')
-    @@include('./layout/title.html',{
-        "title" : "DEVIL_CATMAN 的個人頁面"
-    })
-
+    <div class="pages_title">
+        <p id="title_name">
+            
+            
+        </p>
+    </div>
     <main class="vip_personal_main">
         <div class="personal">
             <div class="left">
                 <div class="block_left">
-                    <img src="./images/vip_personal/vip_personal_catman.png">
+                    <img id="vip_personal_icon">
                 </div>
                 <div class="left_button">
                     <button class="btn_pop" id="popup_click">頭像設定</button>
@@ -28,7 +29,7 @@
                 <div class="block_right">
                     <div class="top">
                         <div class="top_text">遊戲最高得分</div>
-                        <span>180分</span>
+                        <span id="game_score"></span>
                     </div>
                     <div class="bottom">
                         <div class="bottom_text">
@@ -39,9 +40,9 @@
                                     <div class="line_left">會員ID：</div>
                                 </div>
                                 <div class="customer_info">
-                                    <div class="line_right">DEVIL_CATMAN</div>
-                                    <div class="line_right">tonight_nightmare@gmail.com</div>
-                                    <div class="line_right">001</div>
+                                    <div class="line_right" id="member_name"></div>
+                                    <div class="line_right" id="member_mail"></div>
+                                    <div class="line_right" id="member_id"></div>
                                 </div>
 
                                 <!-- <div class="customer_info">
@@ -134,5 +135,6 @@
 
 
     @@include('./layout/footer.html')
+    <script src="./js/frontend/vip_personal.js" async></script>
 </body>
 </html>

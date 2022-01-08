@@ -55,26 +55,39 @@ const vm = new Vue({
 //     }
 // });
 
-function member_email_check(){
-    $.ajax({
-        method:'POST',
-        url:'./API/register_step1.php',
-        data:{
-            email:$('#email').val(),
-            password:$('#pwd').val(),
-            name:$('#name').val(),
-            phone:$('#phone').val(),
-            address:$('#address').val()
-        },
-        dataType:'text',
-        success:function(response){
-            if(response){
-                window.location.href = "./register_step2.html";
-            }else{
-                alert('此信箱已註冊過');
-            }
-        },error: function(exception) {
-            alert("發生錯誤: " + exception.status);  //網路出錯的部分
+function member_email_check() {
+    const emailReg = new RegExp(/@/, 'g');
+    const passwordReg = new RegExp(/[A-Z]{2}\d{8,}/,'g');
+    const name = new RegExp(/^[\u4E00-\u9FA5A-Za-z]{2,5}$/, "g");
+    const phoneReg = new RegExp(/\d{9}/, 'g');
+    if($('#email').val() && $('#pwd').val() && $('#name').val() && $('#phone').val() && $('#address').val()) {
+        if(emailReg.test($('#email').val()) && phoneReg.test($('#phone').val()) && passwordReg.test($('#pwd').val()) && name.test($('#name').val())) {
+            $.ajax({
+                method:'POST',
+                url:'./API/register_step1.php',
+                data:{
+                    email:$('#email').val(),
+                    password:$('#pwd').val(),
+                    name:$('#name').val(),
+                    phone:$('#phone').val(),
+                    address:$('#address').val()
+                },
+                dataType:'text',
+                success:function(response){
+                    if(response){console.log(response);
+                        localStorage.setItem("sessionTest", JSON.stringify(response));
+                        window.location.href = "./register_step2.html";
+                    }else{
+                        alert('此信箱已註冊過');
+                    }
+                },error: function(exception) {
+                    alert("發生錯誤: " + exception.status);  //網路出錯的部分
+                }
+            });
+        }else {
+            window.alert("帳號或密碼或電話號碼格式有誤");
         }
-    });
+    }else {
+        window.alert("有欄位未填寫完成！");
+    }
 }
