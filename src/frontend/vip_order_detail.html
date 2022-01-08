@@ -8,9 +8,11 @@
 </head>
 <body>
     @@include('./layout/header.html')
-    @@include('./layout/title.html',{
-        "title" : "訂單明細-訂單編號：O0001"
-    })
+    <div class="pages_title">
+        <p id="title_name">
+            
+        </p>
+    </div>
     <!-- @@include('./layout/title.html',{
         "title" : "訂單編號：O0001"
     }) -->
@@ -214,5 +216,6 @@
 
 
     @@include('./layout/footer.html')
+    <script src="./js/frontend/vip_order_detail.js"></script>
 </body>
 </html>
