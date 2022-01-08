@@ -88,8 +88,9 @@
     </script>
 
     <script>
+        let data;
         async function confirm_member(){
-            const data = 
+            data = 
                 await fetch('./API/register_step2.php')
                 .then(res => res.json())
                 .then(data => data);
@@ -118,24 +119,29 @@
         }
         confirm_member();
 
-
         function register(){
                 $.ajax({
-                method:'POST',
-                url:'./API/register_step3.php',
-                data:{
-                },
-                dataType:'text',
-                success:function(response){
-                    if(response){
-                        // console.log(response);
-                        window.location.href = "./register_step3.html";
+                    method:'POST',
+                    url:'./API/register_step3.php',
+                    data:{
+                        email: data[0],
+                        password:data[1],
+                        name: data[2],
+                        phone: data[3],
+                        address: data[4]
+                    },
+                    dataType:'text',
+                    success:function(response){
+                        if(response){
+                            // console.log(response);
+                            alert(response);
+                            window.location.href = "./register_step3.html";
+                        }
+                    },error: function(exception) {
+                        alert("發生錯誤: " + exception.status);  //網路出錯的部分
                     }
-                },error: function(exception) {
-                    alert("發生錯誤: " + exception.status);  //網路出錯的部分
-                }
-            });
-        }
+                });
+            }
     </script>
     @@include('./layout/footer.html')
 </body>
