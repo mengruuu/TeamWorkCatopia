@@ -65,33 +65,34 @@
     <div class="ai_container">
       <img src="./images/question/question_ai.png" />
       <div class="ai_answer">
-        <p>您有什麼問題呢？</p>
-        <input type="text" placeholder="輸入您的問題.." />
+        <p id="ai_answer">您有什麼問題呢？</p>
+        <input id="get_question" type="text" placeholder="輸入您的問題.." />
         <button class="ai_answe_button">送出</button>
       </div>
     </div>
     @@include('./layout/footer.html')
 
     <script>
-      //先把資料抓出來
-      async function doQuery() {
-        await $.ajax({
+      //點擊時呼叫ajax
+        $(".ai_answe_button").click(function(){
+          $.ajax({
           method: "GET",
           url: "API/question.php",
           data: {
-              
+            question: $("#get_question").val(),
           },
           dataType: "json",
           success: function (response) {
-            console.log(response);
-        },
+            console.log(response[0]);
+            console.log(response[0].ANSWER_CONTENT);
+            // let ans = response.ANSWER_CONTENT;
+            $("#ai_answer").html(response[0].ANSWER_CONTENT);
+          },
           error: function (exception) {
             alert("發生錯誤: " + exception.status);
           },
         });
-      }
-      document.addEventListener("load", doQuery())
-      
+        });
       
       //機器人回答
       $(':text').focus(function(){
@@ -102,30 +103,23 @@
            $(this).attr('placeholder','輸入您的問題..');
             }
           });
-
-    let qu = ['貓砂種類','商品配送時間','退換貨規則','購物流程']
-    //參考問題集
-    let input_text = /貓砂+/
-    let input_text_time = /配送+/
-    let input_text_rule = /退換貨+/
-    let input_text_goods = /購物+/
-  
-    $('.ai_answe_button').click(function(){
-      let text = $(':text').val();
-        console.log('ok');
-      if(input_text.test(text)){
-        $('.ai_answer p').text('豆腐沙.淨味貓砂.礦砂');
-      }else if(input_text_time.test(text)){
-        $('.ai_answer p').text('早上9點到下午五點會到達');
-      }else if(input_text_rule.test(text)){
-        $('.ai_answer p').text('7天未拆可退');
-      }else if(input_text_goods.test(text)){
-        $('.ai_answer p').html(`詳見<a href="#">購物流程說明</a>`);
-      }else{
-        $('.ai_answer p').text('請在描述一次您的問題');
-      }
-    });
-
+      // document.querySelector(".ai_answe_button").addEventListener(
+      //   "click", function(){
+      //     let text = document.querySelector("input").value;
+      //     console.log(question.indexOf(text));
+      //     if(question.indexOf(text) == -1){
+      //       document.querySelector(".ai_answer p").innerHTML = '請再詳細描述';
+      //     }else{
+      //       for(let i = 0; i < question.length; i++){
+      //         var answer_number = question.indexOf(text);
+      //         document.querySelector(".ai_answer p").innerHTML = answer[answer_number];
+      //           // answer[answer_number]
+      //       }
+      //     }
+          
+      //   }
+      // )
+       
       //手風琴
       ;
       (function () {
