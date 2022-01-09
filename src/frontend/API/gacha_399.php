@@ -14,7 +14,7 @@
     $statement = $pdo->prepare($sql);
 
     $statement->bindValue(1, "盲抽");
-    $statement->bindValue(2, "299");    
+    $statement->bindValue(2, "399");    
 
     $statement->execute();
     //抓出全部且依照順序封裝成一個二維陣列

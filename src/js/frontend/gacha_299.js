@@ -3,11 +3,11 @@ login_check();
 var vm = new Vue({
     el: '#app',
     data: {
-        count: 3,
+        count: 9,
     },
     methods: {
         // action(e){
-        //     this.count -= 1;
+        //     this.count -= 1;  //拿去click事件做事
         // }
     },
 });
@@ -76,23 +76,13 @@ function doFirst(){
     let A = document.getElementById('A');
     let imgA = A.firstElementChild;
     let gacha_box = document.getElementsByClassName('choose_box');
-    // console.log(gacha_box);
 
-    // console.log(vm.count);
-
-    // console.log(img_299);
-    //一進入頁面就會random好每個箱子對應到的數字
-    // randomindex();
+    //一進入頁面就會random好圖片順序
     for( i = 0; i < 9; i++){
         randomindex()
         new_img_299.push(img_299[index_number]);
         console.log(new_img_299[i]['PRODUCT_PICTURE1']);
     };
-    console.log(new_img_299);
-
-    // imgA.src = new_img_299.PRODUCT_PICTURE1;
-
-
 
     //randomindex()會隨機抽出index數字 判斷數字有無重複
     function randomindex() {
@@ -116,42 +106,59 @@ function doFirst(){
             let gacha_box_c = gacha_box[i];
             let gray_image = './images/gacha_299/gacha_299_box_gray.png';
             let img = gacha_box_c.firstElementChild;
-            // imgA.src = '';
-
-            // console.log(gacha_box_c);
-            console.log(img);
             
-            //判斷若為灰色箱子 只會alert 不會做動作
-            if(e.target.classList.contains("-off")){
+            if(e.target.classList.contains("-off")){  //判斷若為灰色箱子 只會alert 不會做動作
                 alert('無法抽取灰色箱子');
-            }else if(vm.count == 0){
+            }else if(vm.count == 0){   //判斷抽取次數為零 只會alert 不會做動作
                 alert('請購買抽盒次數');
                 window.location.href='./gacha_cart_step1.html';
             }else{
                 vm.count --;
-                // console.log("test");
                 e.target.classList.add("-off");
                 img.src = gray_image;
                 popupBtn1.style.display = "block";
-                // randomindex();
-                // imgA.src = img_299[index_number];
+
+                // let put_data = new_img_299['PRODUCT_ID'];
+                // console.log(put_data);
+                // console.log("test");
+                // console.log(new_img_299);
+                console.log(new_img_299);
+
+                // 抽到的商品寫進資料庫
+                $.ajax({
+                    method:'POST',
+                    url:'./API/gacha_299_insert.php',
+                    data:{
+                        PRODUCT_ID:$(`${new_img_299['PRODUCT_ID']}`).val(),
+                        // PRODUCT_ID:$(put_data).val(),
+                    },
+                    dataType:'text',
+                    success:function(response){
+                        console.log('success');
+                    },
+                    error: function(exception) {
+                        console.log('error');
+                    }
+                });
+
+
             };
         })
     };
 
-    close1.onclick = function close1() {
+    //點箱子前先塞好random出來的第一張彈窗圖片 每關掉一次彈窗 就換下一張圖
+    let ology = 0;
+    console.log(ology);
+    imgA.src = new_img_299[ology]['PRODUCT_PICTURE1'];
+    // console.log(imgA.src);
+    //關掉抽中彈窗      //每關掉一次彈窗 就換下一張圖
+    continue_btn1.addEventListener("click", function(){
         popupBtn1.style.display = "none";
-    }
-    continue_btn1.onclick = function continue_btn1() {
-        popupBtn1.style.display = "none";
-    }
-    // window.onclick = function close1(e) {
-    //     if (e.target == popupBtn1) {
-    //         popupBtn1.style.display = "none";
-    //     }
-    // }
-
-
+        ology = ology + 1;
+        imgA.src = new_img_299[ology]['PRODUCT_PICTURE1'];
+        // console.log(imgA.src);
+    })
+    
     //查看抽選清單 彈窗
     let popupBtn = document.getElementById('background_pop');
     let popupClick = document.getElementById('popup_click');
@@ -172,13 +179,7 @@ function doFirst(){
         if (e.target == popupBtn) {
             popupBtn.style.display = "none";
         };
-        if (e.target == popupBtn1) {
-            popupBtn1.style.display = "none";
-        }
     }
-
-    
-
 }
 
 
