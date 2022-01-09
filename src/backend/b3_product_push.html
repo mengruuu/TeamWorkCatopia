@@ -40,10 +40,10 @@
                 <p class="product_push_block_title">商品種類:</p>
                 <p class="product_push_block_text">
                     <select name="" id="product_type">
-                        <option value="1">食品</option>
-                        <option value="2">生活用品</option>
-                        <option value="3">玩具</option>
-                        <option value="4">裝飾品</option>
+                        <option value="food">食品</option>
+                        <option value="use">生活用品</option>
+                        <option value="toy">玩具</option>
+                        <option value="cloth">裝飾品</option>
                     </select>
                 </p>
             </div>
@@ -68,10 +68,13 @@
             <div class="product_push_block">
                 <p class="product_push_block_title">商品圖片:</p>
                 <div class="product_push_block_text">
-                    <button>上傳圖片</button>
-                    <!-- <ul>
-                            <li><img src="" alt=""></li>
-                        </ul> -->
+                    <input type="file" multiple="multiple" @change="previewMultiImage" id="product_picture">
+                    <div v-if="preview_list.length" class="uploadImages">
+                        <div v-for="item, index in preview_list" :key="index">
+                            <img :src="item" class="img_fluid" />
+                            <p class="mb-0">{{ image_list[index].name }}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 

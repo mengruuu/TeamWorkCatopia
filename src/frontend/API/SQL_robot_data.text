@@ -1,15 +1,21 @@
 -- 1
 insert into ROBOT(QUESTION_CONTENT, ANSWER_CONTENT)
 value('購物流程', 'CATOPIA，不需加入會員即可進行訂購，親切易懂的指引式流程畫面，讓您充分享受便利的購物樂趣。
-第一次購物：選擇商品＞＞加入購物車＞＞訂單結帳＞＞填寫資料＞＞ 完成購物 ');
+<br>
+第一次購物：
+<br>選擇商品＞＞
+<br>加入購物車＞＞
+<br>訂單結帳＞＞
+<br>填寫資料＞＞ 
+<br>完成購物 ');
 -- 2
 insert into ROBOT(QUESTION_CONTENT, ANSWER_CONTENT)
-value('目前提供哪些付款方式', '目前提供付款方式有四種：
-1. 『超商取貨』付款
-2. 『信用卡』付款。
-3. 『ATM』付款。
-4. 『超商代碼』付款。
-5. 『貨到』付款。
+value('目前提供哪些付款方式', '目前提供付款方式有四種：<br>
+1. 『超商取貨』付款<br>
+2. 『信用卡』付款。<br>
+3. 『ATM』付款。<br>
+4. 『超商代碼』付款。<br>
+5. 『貨到』付款。<br>
 6. 『LINE Pay』付款。');
 -- 3
 insert into ROBOT(QUESTION_CONTENT, ANSWER_CONTENT)
