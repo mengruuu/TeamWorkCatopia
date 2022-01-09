@@ -13,6 +13,7 @@ body {
 
 main {
     color: $font_color;
+    position: relative;
 }
 
 .inside_first_block_commodity {
@@ -21,7 +22,12 @@ main {
     display: flex;
     justify-content: space-evenly;
     // margin-top: 100px;
-
+    #pages_title{
+        position: absolute;
+        width: 100px;
+        top: -120px;
+        left: 50px;
+    }
     .inside_first_block_img {
         margin: 0 auto;
         .inside_first_block_img_big {
@@ -29,7 +35,7 @@ main {
                 margin-bottom: 55px;
                 width: 486px;
                 height: 450px;
-                object-fit: fill;
+                object-fit: cover;
                 border-radius: 15px;
             }
         }
@@ -231,7 +237,7 @@ main {
                     margin-bottom: 55px;
                     width: 486px;
                     height: 450px;
-                    object-fit: fill;
+                    object-fit: cover;
                     border-radius: 15px;
                 }
             }
@@ -435,7 +441,7 @@ main {
                     margin-bottom: 55px;
                     width: 486px;
                     height: 370px;
-                    object-fit: fill;
+                    object-fit: cover;
                     border-radius: 15px;
                     
                 }

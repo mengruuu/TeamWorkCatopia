@@ -6,6 +6,9 @@
     "title" : "Catopia B3商品管理"
     })
     <link rel="stylesheet" href="../css/backend/b3_product.css">
+    <script src="../js/tools/vue.js"></script>
+    <script src="../js/backend/b3_product.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
 
 </head>
 
@@ -77,109 +80,116 @@
                 </ul>
             </div>
 
-            <div class="backend_table">
-                <table>
-                    <tr class="table_title">
-                        <td>商品編號</td>
-                        <td>商品名稱</td>
-                        <td>商品分類</td>
-                        <td>商品篩選</td>
-                        <td>商品單價</td>
-                        <td>販售狀態</td>
-                        <td>編輯/備註</td>
-                    </tr>
 
-                    <tr>
-                        <td>PD0001</td>
-                        <td>軟軟萌萌主子睡枕</td>
-                        <td>生活用品</td>
-                        <td>N</td>
-                        <td>500</td>
-                        <td>上架中</td>
-                        <td><a href="./b3_product_edit.html"><img src="../images/backend/edit.png"></a></td>
-                    </tr>
+            <div id="backend_product_app">
 
-                    <tr>
-                        <td>PD0002</td>
-                        <td>香香罐頭</td>
-                        <td>食物</td>
-                        <td>毛髮</td>
-                        <td>500</td>
-                        <td>上架中</td>
-                        <td><a href="./b3_product_edit.html"><img src="../images/backend/edit.png"></a></td>
-                    </tr>
+                <backend-product></backend-product>
 
-                    <tr>
-                        <td>PD0003</td>
-                        <td>聖誕節頭套</td>
-                        <td>裝飾品</td>
-                        <td>N</td>
-                        <td>200</td>
-                        <td>上架中</td>
-                        <td><a href="./b3_product_edit.html"><img src="../images/backend/edit.png"></a></td>
-                    </tr>
-
-                    <tr>
-                        <td>PD0004</td>
-                        <td>日式貓跳台</td>
-                        <td>生活用品</td>
-                        <td>N</td>
-                        <td>2000</td>
-                        <td>上架中</td>
-                        <td><a href="./b3_product_edit.html"><img src="../images/backend/edit.png"></a></td>
-                    </tr>
-
-                    <tr>
-                        <td>PD0005</td>
-                        <td>軟軟萌萌主子睡枕</td>
-                        <td>生活用品</td>
-                        <td>N</td>
-                        <td>500</td>
-                        <td>上架中</td>
-                        <td><a href="./b3_product_edit.html"><img src="../images/backend/edit.png"></a></td>
-                    </tr>
-
-                    <tr>
-                        <td>PD0006</td>
-                        <td>香香罐頭</td>
-                        <td>食物</td>
-                        <td>毛髮</td>
-                        <td>500</td>
-                        <td>上架中</td>
-                        <td><a href="./b3_product_edit.html"><img src="../images/backend/edit.png"></a></td>
-                    </tr>
-                    <tr>
-                        <td>PD0007</td>
-                        <td>聖誕節頭套</td>
-                        <td>裝飾品</td>
-                        <td>N</td>
-                        <td>200</td>
-                        <td>上架中</td>
-                        <td><a href="./b3_product_edit.html"><img src="../images/backend/edit.png"></a></td>
-                    </tr>
-
-                    <tr>
-                        <td>PD0008</td>
-                        <td>日式貓跳台</td>
-                        <td>生活用品</td>
-                        <td>N</td>
-                        <td>2000</td>
-                        <td>上架中</td>
-                        <td><a href="./b3_product_edit.html"><img src="../images/backend/edit.png"></a></td>
-                    </tr>
-
-                    <tr>
-                        <td>PD0009</td>
-                        <td>日式貓跳台</td>
-                        <td>生活用品</td>
-                        <td>N</td>
-                        <td>2000</td>
-                        <td>上架中</td>
-                        <td><a href="./b3_product_edit.html"><img src="../images/backend/edit.png"></a></td>
-                    </tr>
-
-                </table>
+                <!-- <div class="backend_table">
+                    <table>
+                        <tr class="table_title">
+                            <td>商品編號</td>
+                            <td>商品名稱</td>
+                            <td>商品分類</td>
+                            <td>商品篩選</td>
+                            <td>商品單價</td>
+                            <td>販售狀態</td>
+                            <td>編輯/備註</td>
+                        </tr>
+    
+                        <tr>
+                            <td>PD0001</td>
+                            <td>軟軟萌萌主子睡枕</td>
+                            <td>生活用品</td>
+                            <td>N</td>
+                            <td>500</td>
+                            <td>上架中</td>
+                            <td><a href="./b3_product_edit.html"><img src="../images/backend/edit.png"></a></td>
+                        </tr>
+    
+                        <tr>
+                            <td>PD0002</td>
+                            <td>香香罐頭</td>
+                            <td>食物</td>
+                            <td>毛髮</td>
+                            <td>500</td>
+                            <td>上架中</td>
+                            <td><a href="./b3_product_edit.html"><img src="../images/backend/edit.png"></a></td>
+                        </tr>
+    
+                        <tr>
+                            <td>PD0003</td>
+                            <td>聖誕節頭套</td>
+                            <td>裝飾品</td>
+                            <td>N</td>
+                            <td>200</td>
+                            <td>上架中</td>
+                            <td><a href="./b3_product_edit.html"><img src="../images/backend/edit.png"></a></td>
+                        </tr>
+    
+                        <tr>
+                            <td>PD0004</td>
+                            <td>日式貓跳台</td>
+                            <td>生活用品</td>
+                            <td>N</td>
+                            <td>2000</td>
+                            <td>上架中</td>
+                            <td><a href="./b3_product_edit.html"><img src="../images/backend/edit.png"></a></td>
+                        </tr>
+    
+                        <tr>
+                            <td>PD0005</td>
+                            <td>軟軟萌萌主子睡枕</td>
+                            <td>生活用品</td>
+                            <td>N</td>
+                            <td>500</td>
+                            <td>上架中</td>
+                            <td><a href="./b3_product_edit.html"><img src="../images/backend/edit.png"></a></td>
+                        </tr>
+    
+                        <tr>
+                            <td>PD0006</td>
+                            <td>香香罐頭</td>
+                            <td>食物</td>
+                            <td>毛髮</td>
+                            <td>500</td>
+                            <td>上架中</td>
+                            <td><a href="./b3_product_edit.html"><img src="../images/backend/edit.png"></a></td>
+                        </tr>
+                        <tr>
+                            <td>PD0007</td>
+                            <td>聖誕節頭套</td>
+                            <td>裝飾品</td>
+                            <td>N</td>
+                            <td>200</td>
+                            <td>上架中</td>
+                            <td><a href="./b3_product_edit.html"><img src="../images/backend/edit.png"></a></td>
+                        </tr>
+    
+                        <tr>
+                            <td>PD0008</td>
+                            <td>日式貓跳台</td>
+                            <td>生活用品</td>
+                            <td>N</td>
+                            <td>2000</td>
+                            <td>上架中</td>
+                            <td><a href="./b3_product_edit.html"><img src="../images/backend/edit.png"></a></td>
+                        </tr>
+    
+                        <tr>
+                            <td>PD0009</td>
+                            <td>日式貓跳台</td>
+                            <td>生活用品</td>
+                            <td>N</td>
+                            <td>2000</td>
+                            <td>上架中</td>
+                            <td><a href="./b3_product_edit.html"><img src="../images/backend/edit.png"></a></td>
+                        </tr>
+    
+                    </table>
+                </div> -->
             </div>
+
         </main>
     </div>
 </body>
