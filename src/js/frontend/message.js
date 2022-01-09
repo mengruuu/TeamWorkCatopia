@@ -10,7 +10,7 @@ const message_write_img_container_content = document.querySelector("div.message_
 
 function upLoadImg(srcEl, distEl) {
     srcEl.addEventListener("change", function () {
-        const file = document.querySelector("input[type = 'file").files[0];
+        const file = document.querySelector("input[type = 'file']").files[0];console.log(file.type);
         const readFile = new FileReader();
 
 
@@ -125,15 +125,22 @@ async function uploadMessageData() {
     console.log(messageInfo);
 
     const Feature = Vue.component('messageContent', {
+        data() {
+            return{
+                isListShow: false,
+                isPostHide: false
+            }
+        },
         template:`
-            <div :class = "{message_container: true}">
+            <div :data_postId = "postId" :class = "{message_container: true, message_container_hide: isPostHide}" style = "background-image: url(./images/message/message_background_img.png);">
                 <div :class = "{message_setting_container: true, message_setting_container_hide: settingIsHide}">
-                    <div :class = "{message_setting_container_content: true}">
+                    <div :class = "{message_setting_container_content: true}" @click = "listOpenOrClose">
                         <div></div>
                         <div></div>
                         <div></div>
-                        <ul :class = "{message_setting_container_content_list: true}">
-                            <li :class = "{message_setting_container_content_delete: true}">刪除貼文</li>
+                        <ul :class = "{message_setting_container_content_list: true, message_setting_container_content_list_show: isListShow}">
+                            <li :class = "{message_setting_container_content_delete: true}" @click = "deletePost">刪除貼文</li>
+                            <li :class = "{message_setting_container_content_delete: true}">編輯貼文</li>
                         </ul>
                     </div>
                 </div>
@@ -154,21 +161,21 @@ async function uploadMessageData() {
                     <div :class = "{message_content_text: true}">
                         <p>{{ postContent }}</p>
                     </div>
-                    <img class = "message_content_img" :src = postPicture>
-                    <input class = "comment_input" placeholder = "回應貼文...">
-                    <div class = "message_comment_container">
-                        <img class = "message_comment_user_img" src = "./images/message/message_comment_photo.svg">
-                        <p class = "message_comment_item">Devil catman, your tonight’s nightmare</p>
+                    <img :class = "{message_content_img: true}" :src = postPicture>
+                    <input :class = "{comment_input" placeholder: true}" placeholder = "回應貼文...">
+                    <div :class = "{message_comment_container: true}">
+                        <img :class = "{message_comment_user_img: true}" src = "./images/message/message_comment_photo.svg">
+                        <p :class = "{message_comment_item: true}">Devil catman, your tonight’s nightmare</p>
                     </div>
                 </div>
             </div>
         `, 
         props: {
             memberId: {
-                type: Number
+                type: String
             },
             postLike: {
-                type: Number
+                type: String
             },
             postPicture: {
                 type: String
@@ -178,6 +185,12 @@ async function uploadMessageData() {
             },
             postContent: {
                 type: String
+            },
+            postId: {
+                type: String
+            },
+            index: {
+                type: Number
             }
         },
         computed: {
@@ -189,24 +202,61 @@ async function uploadMessageData() {
                 }
             }
         },
+        methods: {
+            listOpenOrClose() {
+                if(this.isListShow) {
+                    this.isListShow = false;
+                }else {
+                    this.isListShow = true;
+                }
+            },
+            deletePost() {
+                if(confirm("確定要刪除貼文？")) {
+                    this.$emit('deletepost', this.postId);
+                    this.isPostHide = true;
+                }else {
+                    return;
+                }
+            }
+        },
     });
     
     const vm = new Vue({
         el: "#message_app",
         template: `
-            <div :class = "{message_and_comment_container: true}" style = "background-image: url(./images/message/message_background_img.png);">
-                <message-content v-for = "message in messageInfo" 
-                :memberId = "message.MEMBER_ID"
-                :postLike = "message.POST_LIKE"
-                :postPicture = "message.POST_PICTURE"
-                :postTime = "message.POST_TIME"
-                :postContent = "message.POST_CONTENT"
+            <div :class = "{message_and_comment_container: true}">
+                <message-content v-for = "(message, index) in messageInfo" 
+                    :memberId = "message.MEMBER_ID"
+                    :postLike = "message.POST_LIKE"
+                    :postPicture = "message.POST_PICTURE"
+                    :postTime = "message.POST_TIME"
+                    :postContent = "message.POST_CONTENT"
+                    :postId = "message.POST_ID"
+                    :index = "index"
+                    @deletepost = "deletePost"
                 />
             </div>
         `,
         data() {
             return {
                 messageInfo: messageInfo
+            }
+        },
+        methods: {
+            deletePost(postID) {
+                setTimeout(function() {
+                    fetch("./API/deleteMessage.php", {
+                        method: "POST",
+                        headers: {
+                            "content-type": "application/json"
+                        },
+                        body: JSON.stringify(postID)
+                    })
+                    .then(res => res.json())
+                    .then(data => {console.log(data);
+                        vm.messageInfo = data;
+                    });
+                }, 1000);
             }
         }
     });
