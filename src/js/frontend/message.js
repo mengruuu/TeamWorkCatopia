@@ -70,7 +70,9 @@ function droppedImg(srcEl, message_write_img_container) {
 
 
 //檢查會員是否登入
-// login_check();
+login_check();
+let response = 1; //先假設會員為1
+
 // 上傳圖片
 upLoadImg(inputFile, message_write_img_container);
 dragOverImg(message_write_img_container.parentElement, message_write_img_container.children[0], "message_write_img_container_open");
@@ -120,6 +122,94 @@ async function uploadMessageData() {
         await fetch("./API/messageGetInfo.php")
         .then(res =>res.json())
         .then(data=> data); //獲取留言版的資訊
+    console.log(messageInfo);
+
+    const Feature = Vue.component('messageContent', {
+        template:`
+            <div :class = "{message_container: true}">
+                <div :class = "{message_setting_container: true, message_setting_container_hide: settingIsHide}">
+                    <div :class = "{message_setting_container_content: true}">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <ul :class = "{message_setting_container_content_list: true}">
+                            <li :class = "{message_setting_container_content_delete: true}">刪除貼文</li>
+                        </ul>
+                    </div>
+                </div>
+                <div :class = "{message_user_and_time_and_like: true}">
+                    <div :class = "{message_img_and_user_and_time: true}">
+                        <img :class = "{message_user_img: true}" src = "./images/message/message_personal_example_photo.png">
+                        <div :class = "{message_user_and_time: true}">
+                            <p>{{ memberId }}</p>
+                            <p>{{ postTime }}</p>
+                        </div>
+                    </div>
+                    <div :class = "{message_like_container: true}">
+                        <img src = "./images/message/message_like.png">
+                        <p>+{{ postLike }}</p>
+                    </div>
+                </div>
+                <div :class = "{message_content_and_comment: true}">
+                    <div :class = "{message_content_text: true}">
+                        <p>{{ postContent }}</p>
+                    </div>
+                    <img class = "message_content_img" :src = postPicture>
+                    <input class = "comment_input" placeholder = "回應貼文...">
+                    <div class = "message_comment_container">
+                        <img class = "message_comment_user_img" src = "./images/message/message_comment_photo.svg">
+                        <p class = "message_comment_item">Devil catman, your tonight’s nightmare</p>
+                    </div>
+                </div>
+            </div>
+        `, 
+        props: {
+            memberId: {
+                type: Number
+            },
+            postLike: {
+                type: Number
+            },
+            postPicture: {
+                type: String
+            },
+            postTime: {
+                type: String
+            },
+            postContent: {
+                type: String
+            }
+        },
+        computed: {
+            settingIsHide() {console.log(typeof(this.memberId), typeof(response));
+                if(Number(this.memberId) === response) {console.log("y");
+                    return false;
+                }else {console.log("n");
+                    return true;
+                }
+            }
+        },
+    });
     
-    
+    const vm = new Vue({
+        el: "#message_app",
+        template: `
+            <div :class = "{message_and_comment_container: true}" style = "background-image: url(./images/message/message_background_img.png);">
+                <message-content v-for = "message in messageInfo" 
+                :memberId = "message.MEMBER_ID"
+                :postLike = "message.POST_LIKE"
+                :postPicture = "message.POST_PICTURE"
+                :postTime = "message.POST_TIME"
+                :postContent = "message.POST_CONTENT"
+                />
+            </div>
+        `,
+        data() {
+            return {
+                messageInfo: messageInfo
+            }
+        }
+    });
 }
+
+uploadMessageData();
