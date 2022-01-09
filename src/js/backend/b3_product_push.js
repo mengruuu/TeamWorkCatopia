@@ -1,7 +1,9 @@
+addProduct();
+
 function addProduct(){
     $.ajax({            
-        method: "POST",
-        url: "./API/b3_product_push.php",
+        method: "GET",
+        url: "./API/b3_product.php",
         data:{
             productName:$('#product_name').val(),
             productType: $('#product_type').val(),
@@ -15,7 +17,7 @@ function addProduct(){
 
             // console.log( $('#product_name').val() )
         },            
-        dataType: "text",
+        dataType: "json",
         success: function (response) {   
             console.log("新增成功");      
             // showCate(response);                
