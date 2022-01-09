@@ -1,0 +1,26 @@
+-- 1
+insert into ROBOT(QUESTION_CONTENT, ANSWER_CONTENT)
+value('購物流程', 'CATOPIA，不需加入會員即可進行訂購，親切易懂的指引式流程畫面，讓您充分享受便利的購物樂趣。
+第一次購物：選擇商品＞＞加入購物車＞＞訂單結帳＞＞填寫資料＞＞ 完成購物 ');
+-- 2
+insert into ROBOT(QUESTION_CONTENT, ANSWER_CONTENT)
+value('目前提供哪些付款方式', '目前提供付款方式有四種：
+1. 『超商取貨』付款
+2. 『信用卡』付款。
+3. 『ATM』付款。
+4. 『超商代碼』付款。
+5. 『貨到』付款。
+6. 『LINE Pay』付款。');
+-- 3
+insert into ROBOT(QUESTION_CONTENT, ANSWER_CONTENT)
+value('如何查詢目前訂單的處理情況', '請點選「登入會員」，輸入您的E-mail及密碼登入後，點選「我的帳戶」＞＞「訂單」即可查詢該訂單的處理狀態。');
+-- 4
+insert into ROBOT(QUESTION_CONTENT, ANSWER_CONTENT)
+value('收到商品與圖片顏色不太一樣', '網購商品會因螢幕以及解析度不同，產生螢幕與實體商品顏色色差，請以收到商品實際顏色為準。');
+-- 5
+insert into ROBOT(QUESTION_CONTENT, ANSWER_CONTENT)
+value('如何保固或維修', '若商品超過七天猶豫期，有保固或維修之需求，請聯絡客服人員，客服人員會提供您保固或維修之相關資訊，保固或維修之寄送運費需自行負擔。');
+-- 6
+insert into ROBOT(QUESTION_CONTENT, ANSWER_CONTENT)
+value('購物流程', 'CATOPIA，不需加入會員即可進行訂購，親切易懂的指引式流程畫面，讓您充分享受便利的購物樂趣。
+第一次購物：選擇商品＞＞加入購物車＞＞訂單結帳＞＞填寫資料＞＞ 完成購物 ');
