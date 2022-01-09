@@ -8,6 +8,9 @@
     <title>購物車Step1</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/cart_step.css">
+    <script src="./library/vue.js"></script>
+    <script src="./js/frontend/cart_step1.js" async></script>
+
 </head>
 
 <body>
@@ -29,8 +32,11 @@
         </div>
     </div>
 
-    <div class="cart_step1_container">
-        <div class="cart_step1_title">
+    <div class="cart_step1_container" id="cart_app">
+        <cart-title></cart-title>
+        <cart-product></cart-product>
+        <cart-total></cart-total>
+        <!-- <div class="cart_step1_title">
             <div class="cart_step1_item">
                 <p>商品</p>
             </div>
@@ -108,7 +114,11 @@
                 <p>訂單總額</p>
                 <p>600　元</p>
             </div>
-        </div>
+        </div> -->
+
+
+
+
     </div>
 
     <div class="cart_step1_next_step">
