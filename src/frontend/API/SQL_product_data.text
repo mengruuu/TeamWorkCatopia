@@ -105,38 +105,22 @@ value('原木貓砂盆櫃','用品','貓砂盆','./images/products/use/toilet/pr
 -- 商品21(胸背帶)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-<<<<<<< HEAD
-value('貓兒專用胸背帶','用品','胸背帶','./images/products/use/strap/product_use_strap1_1.jpeg','./images/products/use/strap/product_use_strap1_2.jpeg','./images/products/use/strap/product_use_strap1_3.jpeg','./images/products/use/strap/product_use_strap1_4.jpeg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 6000);
-=======
 value('貓兒專用胸背帶1','用品','胸背帶','./images/products/use/strap/product_use_strap1_1.jpg','./images/products/use/strap/product_use_strap1_2.jpg','./images/products/use/strap/product_use_strap1_3.jpg','./images/products/use/strap/product_use_strap1_4.jpg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 6000);
->>>>>>> 5eceeff596c91b60120e482f9d9ffaf07b2254b3
 
 -- 商品22(胸背帶)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-<<<<<<< HEAD
-value('貓兒專用胸背帶','用品','胸背帶','./images/products/use/strap/product_use_strap2_1.jpeg','./images/products/use/strap/product_use_strap2_2.jpeg','./images/products/use/strap/product_use_strap2_3.jpeg','./images/products/use/strap/product_use_strap2_4.jpeg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 1599);
-=======
 value('貓兒專用胸背帶2','用品','胸背帶','./images/products/use/strap/product_use_strap2_1.jpg','./images/products/use/strap/product_use_strap2_2.jpg','./images/products/use/strap/product_use_strap2_3.jpg','./images/products/use/strap/product_use_strap2_4.jpg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 1599);
->>>>>>> 5eceeff596c91b60120e482f9d9ffaf07b2254b3
 
 -- 商品23(胸背帶)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-<<<<<<< HEAD
-value('貓兒專用胸背帶','用品','胸背帶','./images/products/use/strap/product_use_strap3_1.jpeg','./images/products/use/strap/product_use_strap3_2.jpeg','./images/products/use/strap/product_use_strap3_3.jpeg','./images/products/use/strap/product_use_strap3_4.jpeg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 1200);
-=======
 value('貓兒專用胸背帶3','用品','胸背帶','./images/products/use/strap/product_use_strap3_1.jpg','./images/products/use/strap/product_use_strap3_2.jpg','./images/products/use/strap/product_use_strap3_3.jpg','./images/products/use/strap/product_use_strap3_4.jpg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 1200);
->>>>>>> 5eceeff596c91b60120e482f9d9ffaf07b2254b3
 
 -- 商品24(胸背帶)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-<<<<<<< HEAD
-value('貓兒專用胸背帶','用品','胸背帶','./images/products/use/strap/product_use_strap4_1.jpeg','./images/products/use/strap/product_use_strap4_2.jpeg','./images/products/use/strap/product_use_strap4_3.jpeg','./images/products/use/strap/product_use_strap4_4.jpeg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 365);
-=======
 value('貓兒專用胸背帶4','用品','胸背帶','./images/products/use/strap/product_use_strap4_1.jpg','./images/products/use/strap/product_use_strap4_2.jpg','./images/products/use/strap/product_use_strap4_3.jpg','./images/products/use/strap/product_use_strap4_4.jpg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 365);
->>>>>>> 5eceeff596c91b60120e482f9d9ffaf07b2254b3
 
 -- 商品(食品)
 

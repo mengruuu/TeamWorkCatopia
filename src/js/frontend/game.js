@@ -350,6 +350,25 @@ function updateGameArea(){
             let gameover_popupBtn = document.getElementById('gameover_background_pop');
             gameover_popupBtn.style.display = "block";
 
+            // console.log(score);
+
+            // 遊戲賺到的奴幣寫進資料庫
+            $.ajax({
+                method:'POST',
+                url:'./API/game.php',
+                data:{
+                    addCOIN:score,
+                },
+                dataType:'text',
+                // dataType:'json',
+                success:function(response){
+                    console.log(response);
+                },
+                error: function(exception) {
+                    alert("發生錯誤: " + exception.status);  //網路出錯的部分
+                }
+            });
+
             break;
     }
     
