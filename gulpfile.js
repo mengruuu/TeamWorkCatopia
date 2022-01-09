@@ -189,7 +189,7 @@ exports.move_backend_php = move_backend_php;
 
 //函式庫搬運
 function move_Lib(){
-  return src("src/library/*.*").pipe(dest("dist/library"));
+  return src("src/library/*.js").pipe(dest("dist/library"));
 }
 
 exports.move_library = move_Lib;
