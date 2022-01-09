@@ -17,7 +17,8 @@ async function doQuery() {
       money: data[0].PRODUCT_PRICE,
       select: "藍色",
       title: data[0].PRODUCT_NAME,
-      content: data[0].PRODUCT_CONTENT
+      content: data[0].PRODUCT_CONTENT,
+      page_title: data[0].PRODUCT_TYPE_NAME
     },
     methods: {
       addCart() {
@@ -66,7 +67,7 @@ async function doQuery() {
       },
     }
   })
-
+  
   let big_img = document.getElementsByClassName("big_img")[0];
   let small_img = document.getElementsByClassName("small_img");
 

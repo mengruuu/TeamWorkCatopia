@@ -5,14 +5,14 @@
     $db_select = "CATOPIA";
     $dsn = "mysql:host=".$db_host.";dbname=".$db_select;
     $pdo = new PDO($dsn, $db_user, $db_pass);
-    $sql = "SELECT * FROM PRODUCT WHERE PRODUCT_ID = ?";
+    $sql = "SELECT * FROM PRODUCT WHERE PRODUCT_TYPE_NAME = ?";
     $data = [];
     // $name = isset($_POST["Name"])?$_POST["Name"]:$_POST["Name"];
-    $id = json_decode(file_get_contents('php://input'));//獲取非表單資料
+    // $products = file_get_contents('php://input');//獲取非表單資料
     
     $statment = $pdo->prepare($sql);
     // $statment->bindValue(1, "%".json_decode($name)."%");
-    $statment->bindValue(1, $id);
+    $statment->bindValue(1, "裝飾品");
     $statment->execute();
     $data = $statment->fetchAll();
 

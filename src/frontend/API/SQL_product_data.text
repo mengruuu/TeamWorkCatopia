@@ -3,27 +3,27 @@
 -- 商品1 (外出包包)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('180度透氣網格環繞【未來感時尚喵喵包】寵物外出包','用品','外出包包','./images/products/use/outside_bag/product_use_cage1_1.jpeg','./images/products/use/outside_bag/product_use_cage1_2.jpeg','./images/products/use/outside_bag/product_use_cage1_3.jpeg','./images/products/use/outside_bag/product_use_cage1_4.jpeg','透氣又好看的時尚外出包，高達45%透氣面積，讓貓貓可以大口呼吸，外觀與質感兼具的好選擇', 1350);
+value('180度透氣網格寵物外出包','用品','外出包包','./images/products/use/outside_bag/product_use_cage1_1.jpeg','./images/products/use/outside_bag/product_use_cage1_2.jpeg','./images/products/use/outside_bag/product_use_cage1_3.jpeg','./images/products/use/outside_bag/product_use_cage1_4.jpeg','透氣又好看的時尚外出包，高達45%透氣面積，讓貓貓可以大口呼吸，外觀與質感兼具的好選擇', 1350);
 
 -- 商品2 (外出包包)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('【主子華麗出巡】文青款外出包 雙肩包','用品','外出包包','./images/products/use/outside_bag/product_use_cage2_1.jpeg','./images/products/use/outside_bag/product_use_cage2_2.jpeg','./images/products/use/outside_bag/product_use_cage2_3.jpeg','./images/products/use/outside_bag/product_use_cage2_4.jpeg','一登場就是全場焦點，透氣好看又能跟衣服做搭配的包包，雙面透氣貓貓不怕悶熱', 600);
+value('文青款外出包 雙肩包','用品','外出包包','./images/products/use/outside_bag/product_use_cage2_1.jpeg','./images/products/use/outside_bag/product_use_cage2_2.jpeg','./images/products/use/outside_bag/product_use_cage2_3.jpeg','./images/products/use/outside_bag/product_use_cage2_4.jpeg','一登場就是全場焦點，透氣好看又能跟衣服做搭配的包包，雙面透氣貓貓不怕悶熱', 600);
 
 -- 商品3 (外出包包)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('[喵喵不再怕出門】正廠出品 高透氣摺疊外出包 呼吸包','用品','外出包包','./images/products/use/outside_bag/product_use_cage3_1.jpeg','./images/products/use/outside_bag/product_use_cage3_2.jpeg','./images/products/use/outside_bag/product_use_cage3_3.jpeg','./images/products/use/outside_bag/product_use_cage3_4.jpeg','高透氣折疊包，外出收納都方便，三面透氣，主子出門好舒適，多種背負方法，怎麼背都方便', 1200);
+value('高透氣摺疊外出包','用品','外出包包','./images/products/use/outside_bag/product_use_cage3_1.jpeg','./images/products/use/outside_bag/product_use_cage3_2.jpeg','./images/products/use/outside_bag/product_use_cage3_3.jpeg','./images/products/use/outside_bag/product_use_cage3_4.jpeg','高透氣折疊包，外出收納都方便，三面透氣，主子出門好舒適，多種背負方法，怎麼背都方便', 1200);
 
 -- 商品4 (外出包包)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('【從此出門好方便】可折疊拉桿外出包 寵物推車','用品','外出包包','./images/products/use/outside_bag/product_use_cage4_1.jpeg','./images/products/use/outside_bag/product_use_cage4_2.jpeg','./images/products/use/outside_bag/product_use_cage4_3.jpeg','./images/products/use/outside_bag/product_use_cage4_4.jpeg','從此擺脫出門回來總是腰痠背痛的困擾，單手拉輕鬆出門，超穩四輪輕鬆滑拉，一路順暢回到家', 1680);
+value('可折疊拉桿外出包 寵物推車','用品','外出包包','./images/products/use/outside_bag/product_use_cage4_1.jpeg','./images/products/use/outside_bag/product_use_cage4_2.jpeg','./images/products/use/outside_bag/product_use_cage4_3.jpeg','./images/products/use/outside_bag/product_use_cage4_4.jpeg','從此擺脫出門回來總是腰痠背痛的困擾，單手拉輕鬆出門，超穩四輪輕鬆滑拉，一路順暢回到家', 1680);
 
 -- 商品5(造型小窩)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('【開一朵貓咪小花】花朵深層睡眠窩 貓窩','用品','小窩','./images/products/use/catnest/product_use_catnest1_1.jpeg','./images/products/use/catnest/product_use_catnest1_2.jpeg','./images/products/use/catnest/product_use_catnest1_3.jpeg','./images/products/use/catnest/product_use_catnest1_4.jpeg','給主子一朵暖暖的花朵貓窩吧，特殊饋頭設計讓貓貓從此愛上，再也不用擔心紙箱搶了風采', 550);
+value('花朵深層睡眠窩','用品','小窩','./images/products/use/catnest/product_use_catnest1_1.jpeg','./images/products/use/catnest/product_use_catnest1_2.jpeg','./images/products/use/catnest/product_use_catnest1_3.jpeg','./images/products/use/catnest/product_use_catnest1_4.jpeg','給主子一朵暖暖的花朵貓窩吧，特殊饋頭設計讓貓貓從此愛上，再也不用擔心紙箱搶了風采', 550);
 
 -- 商品6(造型小窩)
 insert into 
@@ -44,22 +44,22 @@ value('龍神杉貓屋','用品','小窩','./images/products/use/catnest/product
 -- 商品9(貓抓板)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('【貓兒賴在沙發上】貓抓板','用品','抓板','./images/products/use/scratcher/product_use_scratcher1_1.jpeg','./images/products/use/scratcher/product_use_scratcher1_2.jpeg','./images/products/use/scratcher/product_use_scratcher1_3.jpeg','./images/products/use/scratcher/product_use_scratcher1_4.jpeg','使用天然木材質製作，擁有出色的質感及沈穩的重量，因此也可以放在家裏當擺飾', 6000);
+value('貓抓板','用品','抓板','./images/products/use/scratcher/product_use_scratcher1_1.jpeg','./images/products/use/scratcher/product_use_scratcher1_2.jpeg','./images/products/use/scratcher/product_use_scratcher1_3.jpeg','./images/products/use/scratcher/product_use_scratcher1_4.jpeg','使用天然木材質製作，擁有出色的質感及沈穩的重量，因此也可以放在家裏當擺飾', 6000);
 
 -- 商品10(貓抓板)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('【多功能隨喵抓】電視機雙層公寓貓抓屋','用品','抓板','./images/products/use/scratcher/product_use_scratcher2_1.jpeg','./images/products/use/scratcher/product_use_scratcher2_2.jpeg','./images/products/use/scratcher/product_use_scratcher2_3.jpeg','./images/products/use/scratcher/product_use_scratcher2_4.jpeg','可愛電視機造型貓抓屋，萌到你不想轉台，三合一功能：抓板、跳台、貓窩一次滿足', 1599);
+value('電視機雙層公寓貓抓屋','用品','抓板','./images/products/use/scratcher/product_use_scratcher2_1.jpeg','./images/products/use/scratcher/product_use_scratcher2_2.jpeg','./images/products/use/scratcher/product_use_scratcher2_3.jpeg','./images/products/use/scratcher/product_use_scratcher2_4.jpeg','可愛電視機造型貓抓屋，萌到你不想轉台，三合一功能：抓板、跳台、貓窩一次滿足', 1599);
 
 -- 商品11(貓抓板)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('【忍不住一直抓】蘿蔔蘑菇麻繩貓抓板','用品','抓板','./images/products/use/scratcher/product_use_scratcher3_1.jpeg','./images/products/use/scratcher/product_use_scratcher3_2.jpeg','./images/products/use/scratcher/product_use_scratcher3_3.jpeg','./images/products/use/scratcher/product_use_scratcher3_4.jpeg','忍不住一直抓，可愛麻繩造型貓抓板，耐磨耐用居家好用品，輕鬆安裝不費力', 1200);
+value('蘿蔔蘑菇麻繩貓抓板','用品','抓板','./images/products/use/scratcher/product_use_scratcher3_1.jpeg','./images/products/use/scratcher/product_use_scratcher3_2.jpeg','./images/products/use/scratcher/product_use_scratcher3_3.jpeg','./images/products/use/scratcher/product_use_scratcher3_4.jpeg','忍不住一直抓，可愛麻繩造型貓抓板，耐磨耐用居家好用品，輕鬆安裝不費力', 1200);
 
 -- 商品12(貓抓板)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('【能躲能抓主子好開心】貓臉造型紙盒貓抓板','用品','抓板','./images/products/use/scratcher/product_use_scratcher4_1.jpeg','./images/products/use/scratcher/product_use_scratcher4_2.jpeg','./images/products/use/scratcher/product_use_scratcher4_3.jpeg','./images/products/use/scratcher/product_use_scratcher4_4.jpeg','能抓能躲安全感滿分', 365);
+value('貓臉造型紙盒貓抓板','用品','抓板','./images/products/use/scratcher/product_use_scratcher4_1.jpeg','./images/products/use/scratcher/product_use_scratcher4_2.jpeg','./images/products/use/scratcher/product_use_scratcher4_3.jpeg','./images/products/use/scratcher/product_use_scratcher4_4.jpeg','能抓能躲安全感滿分', 365);
 
 
 -- 商品13(食器)
@@ -105,22 +105,22 @@ value('貓兒可愛專用貓砂盆','用品','貓砂盆','./images/products/use/
 -- 商品21(胸背帶)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('貓兒專用胸背帶','用品','胸背帶','./images/products/use/strap/product_use_strap1_1.jpg','./images/products/use/strap/product_use_strap1_2.jpg','./images/products/use/strap/product_use_strap1_3.jpg','./images/products/use/strap/product_use_strap1_4.jpg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 6000);
+value('貓兒專用胸背帶','用品','胸背帶','./images/products/use/strap/product_use_strap1_1.jpeg','./images/products/use/strap/product_use_strap1_2.jpeg','./images/products/use/strap/product_use_strap1_3.jpeg','./images/products/use/strap/product_use_strap1_4.jpeg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 6000);
 
 -- 商品22(胸背帶)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('貓兒專用胸背帶','用品','胸背帶','./images/products/use/strap/product_use_strap2_1.jpg','./images/products/use/strap/product_use_strap2_2.jpg','./images/products/use/strap/product_use_strap2_3.jpg','./images/products/use/strap/product_use_strap2_4.jpg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 1599);
+value('貓兒專用胸背帶','用品','胸背帶','./images/products/use/strap/product_use_strap2_1.jpeg','./images/products/use/strap/product_use_strap2_2.jpeg','./images/products/use/strap/product_use_strap2_3.jpeg','./images/products/use/strap/product_use_strap2_4.jpeg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 1599);
 
 -- 商品23(胸背帶)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('貓兒專用胸背帶','用品','胸背帶','./images/products/use/strap/product_use_strap3_1.jpg','./images/products/use/strap/product_use_strap3_2.jpg','./images/products/use/strap/product_use_strap3_3.jpg','./images/products/use/strap/product_use_strap3_4.jpg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 1200);
+value('貓兒專用胸背帶','用品','胸背帶','./images/products/use/strap/product_use_strap3_1.jpeg','./images/products/use/strap/product_use_strap3_2.jpeg','./images/products/use/strap/product_use_strap3_3.jpeg','./images/products/use/strap/product_use_strap3_4.jpeg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 1200);
 
 -- 商品24(胸背帶)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('貓兒專用胸背帶','用品','胸背帶','./images/products/use/strap/product_use_strap4_1.jpg','./images/products/use/strap/product_use_strap4_2.jpg','./images/products/use/strap/product_use_strap4_3.jpg','./images/products/use/strap/product_use_strap4_4.jpg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 365);
+value('貓兒專用胸背帶','用品','胸背帶','./images/products/use/strap/product_use_strap4_1.jpeg','./images/products/use/strap/product_use_strap4_2.jpeg','./images/products/use/strap/product_use_strap4_3.jpeg','./images/products/use/strap/product_use_strap4_4.jpeg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 365);
 
 -- 商品(食品)
 
