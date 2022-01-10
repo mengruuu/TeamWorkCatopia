@@ -2,7 +2,6 @@
     $db_host = "127.0.0.1";
     $db_user = "root";
     $db_pass = "gtr123456";
-
     $db_select = "CATOPIA";
     $dsn = "mysql:host=".$db_host.";dbname=".$db_select;
     $pdo = new PDO($dsn, $db_user, $db_pass);
