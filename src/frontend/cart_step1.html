@@ -2,13 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>購物車Step1</title>
-    <link rel="stylesheet" href="./css/style.css">
+    @@include('./layout/meta.html', {
+        "title" : "購物車Step1"
+      })
     <link rel="stylesheet" href="./css/cart_step.css">
-    <script src="./library/vue.js"></script>
     <script src="./js/frontend/cart_step1.js" async></script>
 
 </head>
@@ -35,7 +32,6 @@
     <div class="cart_step1_container" id="cart_app">
         <cart-title></cart-title>
         <cart-product></cart-product>
-        <cart-total></cart-total>
         <!-- <div class="cart_step1_title">
             <div class="cart_step1_item">
                 <p>商品</p>
@@ -120,13 +116,13 @@
 
 
     </div>
-
-    <div class="cart_step1_next_step">
-        <a href="./cart_step2.html"><button type="submit">STEP2<br>聯絡人資料</button></a>
+    
+    <div class="cart_step1_next_step" id="cart_step1_next_step">
+        <a href="./cart_step2.html"><button type="button">STEP2<br>聯絡人資料</button></a>
     </div>
 
     <div class="cart_step1_next_step bottom_img">
-        <img src="../dist/images/shopping_cart/paper_bag.jpg">
+        <img src="./images/shopping_cart/paper_bag.jpg">
     </div>
 
     <footer>
