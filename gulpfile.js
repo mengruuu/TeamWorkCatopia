@@ -184,7 +184,7 @@ function move_backend_php(){
   return src("src/backend/API/*.php").pipe(dest("dist/backend/API"));
 }
 
-exports.move_backend_php = move_backend_php;
+exports.moveBackend_php = move_backend_php;
 
 
 //函式庫搬運

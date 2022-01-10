@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./layout/meta.html', {
+    "title" : "Catopia B2訂單管理"
+    })
+    <link rel="stylesheet" href="../css/backend/b2_order_detail.css">
+    
+</head>
+
+<body>
+    @@include('./layout/backend_header.html')
+    
+    <div class="back_management_container">
+        <aside class="back_management_list">
+            <div>
+                <p>B1　會員管理</p>
+                <ul>
+                    <li><a href="./b1_vip.html">B1-1　會員資料總覽</a></li>
+                    <li><a href="./b1_black_list.html">B1-2　黑名單管理</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p>B2　訂單管理</p>
+                <ul>
+                    <li><a href="./b2_order.html">B2-1　訂單總覽</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p>B3　商品管理</p>
+                <ul>
+                    <li><a href="./b3_product.html">B3-1　商品總覽</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p>B4　留言板管理</p>
+                <ul>
+                    <li><a href="./b4_message.html">B4-1　留言板總覽</a></li>
+                    <li><a href="./b4_report.html">B4-2　檢舉管理</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p>B5　專欄管理</p>
+                <ul>
+                    <li><a href="./b5_knowledge.html">B5-1　專欄推播管理</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p>B6　虛擬商城消費管理</p>
+                <ul>
+                    <li><a href="./b6_game.html">B6-1　虛擬商城消費管理</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p>B7　智能機器人管理</p>
+                <ul>
+                    <li><a href="./b7_question.html">B7-1　智能問題集管理</a></li>
+                </ul>
+            </div>
+        </aside>
+
+
+        <main class="back_order_management">
+            <div class="b2_title">
+                <p>B2-2　訂單編號</p>
+            </div>
+            <div class="backend_table">
+                <table>
+                    <tr class="table_title">
+                        <td>會員編號</td>
+                        <td>會員信箱</td>
+                        <td>下單時間</td>
+                        <td>訂單狀態</td>
+                        <td>付款方式</td>
+                        <td>付款狀態</td>
+                        <td>訂單金額</td>
+                        <td>奴幣回饋</td>
+                        <td>奴幣折抵</td>
+                    </tr>
+                    <tr>
+                        <td>MB0001</td>
+                        <td>qqq123@gmail.com</td>
+                        <td>2021/10/1</td>
+                        <td>備貨中</td>
+                        <td>信用卡</td>
+                        <td>已付款</td>
+                        <td>1200</td>
+                        <td>1200</td>
+                        <td>200</td>
+                    </tr>
+                </table>
+            </div>
+            <hr/>
+            <div class="backend_table">
+                <table>
+                    <tr class="table_title">
+                        <td>購買清單</td>
+                        <td>數量</td>
+                        <td>價格</td>
+                        <td>配送方式</td>
+                        <td>配送地址</td>
+                        <td>收件人</td>
+                        <td>收件人電話</td>                       
+                    </tr>
+                    <tr>
+                        <td>花朵深層睡眠窩</td>
+                        <td>1</td>
+                        <td>550</td>
+                        <td>貨到付款</td>
+                        <td>新北市汐止區</td>
+                        <td>帥哥</td>
+                        <td>0966222444</td>
+                    </tr>
+                    <tr>
+                        <td>花朵深層睡眠窩</td>
+                        <td>1</td>
+                        <td>550</td>
+                        <td>貨到付款</td>
+                        <td>新北市汐止區</td>
+                        <td>帥哥</td>
+                        <td>0966222444</td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

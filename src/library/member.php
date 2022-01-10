@@ -1,4 +1,5 @@
 <?php
+	// include("./Connection.php");
 
     //清除Session
     function clearSession(){
@@ -67,5 +68,29 @@
         
         
     }
+
+
+    //取得訂單 orderID(前台專用)
+    // function getOrderID(){
+
+    //     //抓取資料
+    //     session_start(); 
+    //     $MEMBER_ID = ($_SESSION["MEMBER_ID"]); 
+    //     $check;
+       
+    //     $sql = "SELECT ORDER_ID FROM ORDER WHERE MEMBER_ID = ?";
+
+    //     //執行並查詢，會回傳查詢結果的物件，必須使用fetch、fetchAll...等方式取得資料
+    //     $statement = $pdo ->prepare($sql);
+
+    //     $statement->bindValue(1, $MEMBER_ID);   
+
+    //     $statement->execute();
+    //     //抓出全部且依照順序封裝成一個二維陣列
+    //     $data = $statement->fetchAll();
+
+    //     return $data; 
+
+    // }
 
 ?>

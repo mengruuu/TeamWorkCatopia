@@ -6,53 +6,16 @@
     })
     <link rel="stylesheet" href="./css/toy.css">
     <script src="./js/frontend/toy.js" async></script>
+    <script src="./js/frontend/allProductsSearch.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
 </head>
 <body>
     @@include('./layout/header.html')
-    <!-- <div class = "toy_banner_container">
-        <img src = "./images/toy/toy_banner.png">
-    </div> -->
-    <div class = "toy_search_container">
-        <div class = "toy_search_and_index_container">
-            <div class = "toy_index">
-                <p>首頁/主子用品/玩具</p>
-            </div>
-            <div class = "toy_search_and_search_button">
-                <input type = "text" placeholder = "請輸入搜尋商品..." class = "input_search_product">
-                <ul class = "toy_search_content">
-                </ul>
-                <div class = "toy_search_button" style = "background-image: url(./images/food/food_search_button.png);"></div>
-            </div>
-        </div>
-    </div>
-    <div class = "toy_filter_container_and_toy_product_overview">
-        <ul class = "toy_filter_container">
-            <li>
-                <p>玩具</p>
-                <ul>
-                    <li class = "toy_filter_condition_item" data-toyCondition = "toy_filter_condition_six">一隻貓</li>
-                    <li class = "toy_filter_condition_item" data-toyCondition = "toy_filter_condition_eighteen">多隻貓</li>
-                    <li class = "toy_filter_condition_item" data-toyCondition = "toy_filter_condition_eighteen">人與貓</li>
-                </ul>
-            </li>
-        </ul>
-        <div class = "toy_product_overview">
-            <!-- <div class = "toy_product_overview_item">
-                <img class = "toy_product_overview_item_img" src = "./images/toy/toy_overview_RAINCOAST_1.png">
-                <div class = "toy_product_title_and_price_and_button">
-                    <div class = "toy_product_title_and_price">
-                        <p>商品名稱</p>
-                        <p>$300</p>
-                    </div>
-                    <div class = "toy_product_content_button" style = "background-image: url(./images/toy/toy_go_to_products_content_button.png);"></div>
-                </div>
-            </div> -->
-        </div>
-    </div>
-    <ul class = "toy_product_page_chose_container">
-        <!-- <li class = "toy_product_pre_page_button">&lt;</li>
-            <li class = "toy_product_next_page">&gt;</li> -->
-    </ul>
+    @@include('./layout/breadcrumb.html',{
+        title1: '主子用品',
+        title2: '玩具'
+    })
+    <div id = "products_app"></div>
     <!-- 下面是假資料 -->
     <article class=" toy_product_history">
         <div class=" toy_product_history_text">
@@ -65,7 +28,6 @@
             <img src="./images/inside_page/images/inside_three_block_p4.png" alt="">
         </div>
     </article>
-    @@include('./layout/hamburger.html')
     @@include('./layout/footer.html')
 </body>
 </html>
