@@ -1,0 +1,344 @@
+-- 商品(用品)
+
+-- 商品1 (外出包包)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('180度透氣網格寵物外出包','用品','外出包包','./images/products/use/outside_bag/product_use_cage1_1.jpeg','./images/products/use/outside_bag/product_use_cage1_2.jpeg','./images/products/use/outside_bag/product_use_cage1_3.jpeg','./images/products/use/outside_bag/product_use_cage1_4.jpeg','透氣又好看的時尚外出包，高達45%透氣面積，讓貓貓可以大口呼吸，外觀與質感兼具的好選擇', 1350);
+
+-- 商品2 (外出包包)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('文青款外出包 雙肩包','用品','外出包包','./images/products/use/outside_bag/product_use_cage2_1.jpeg','./images/products/use/outside_bag/product_use_cage2_2.jpeg','./images/products/use/outside_bag/product_use_cage2_3.jpeg','./images/products/use/outside_bag/product_use_cage2_4.jpeg','一登場就是全場焦點，透氣好看又能跟衣服做搭配的包包，雙面透氣貓貓不怕悶熱', 600);
+
+-- 商品3 (外出包包)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('高透氣摺疊外出包','用品','外出包包','./images/products/use/outside_bag/product_use_cage3_1.jpeg','./images/products/use/outside_bag/product_use_cage3_2.jpeg','./images/products/use/outside_bag/product_use_cage3_3.jpeg','./images/products/use/outside_bag/product_use_cage3_4.jpeg','高透氣折疊包，外出收納都方便，三面透氣，主子出門好舒適，多種背負方法，怎麼背都方便', 1200);
+
+-- 商品4 (外出包包)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('可折疊拉桿外出包 寵物推車','用品','外出包包','./images/products/use/outside_bag/product_use_cage4_1.jpeg','./images/products/use/outside_bag/product_use_cage4_2.jpeg','./images/products/use/outside_bag/product_use_cage4_3.jpeg','./images/products/use/outside_bag/product_use_cage4_4.jpeg','從此擺脫出門回來總是腰痠背痛的困擾，單手拉輕鬆出門，超穩四輪輕鬆滑拉，一路順暢回到家', 1680);
+
+-- 商品5(造型小窩)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('花朵深層睡眠窩','用品','小窩','./images/products/use/catnest/product_use_catnest1_1.jpeg','./images/products/use/catnest/product_use_catnest1_2.jpeg','./images/products/use/catnest/product_use_catnest1_3.jpeg','./images/products/use/catnest/product_use_catnest1_4.jpeg','給主子一朵暖暖的花朵貓窩吧，特殊饋頭設計讓貓貓從此愛上，再也不用擔心紙箱搶了風采', 550);
+
+-- 商品6(造型小窩)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('日式壽司椅貓窩凳窩','用品','小窩','./images/products/use/catnest/product_use_catnest2_1.png','./images/products/use/catnest/product_use_catnest2_2.png','./images/products/use/catnest/product_use_catnest2_3.png','./images/products/use/catnest/product_use_catnest2_4.png','大飯糰滿滿的安全感，獨特設計的跟寵物共用椅凳+小窩，封閉式設計，營造貓咪獨立小空間', 1580);
+
+-- 商品7(造型小窩)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('貓貓專用沙發','用品','小窩','./images/products/use/catnest/product_use_catnest3_1.jpeg','./images/products/use/catnest/product_use_catnest3_2.jpeg','./images/products/use/catnest/product_use_catnest3_3.jpeg','./images/products/use/catnest/product_use_catnest3_4.jpeg','放鬆，寬敞，優雅的睡眠舒適度，提供貓貓最優質的體驗，做工精細、經久耐用', 2380);
+
+-- 商品8(造型小窩)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('龍神杉貓屋','用品','小窩','./images/products/use/catnest/product_use_catnest4_1.jpeg','./images/products/use/catnest/product_use_catnest4_2.jpeg','./images/products/use/catnest/product_use_catnest4_3.jpeg','./images/products/use/catnest/product_use_catnest4_4.jpeg','使用天然木材質製作，擁有出色的質感及沈穩的重量，因此也可以放在家裏當擺飾', 6000);
+
+
+-- 商品9(貓抓板)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('貓抓板','用品','抓板','./images/products/use/scratcher/product_use_scratcher1_1.jpeg','./images/products/use/scratcher/product_use_scratcher1_2.jpeg','./images/products/use/scratcher/product_use_scratcher1_3.jpeg','./images/products/use/scratcher/product_use_scratcher1_4.jpeg','使用天然木材質製作，擁有出色的質感及沈穩的重量，因此也可以放在家裏當擺飾', 6000);
+
+-- 商品10(貓抓板)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('電視機雙層公寓貓抓屋','用品','抓板','./images/products/use/scratcher/product_use_scratcher2_1.jpeg','./images/products/use/scratcher/product_use_scratcher2_2.jpeg','./images/products/use/scratcher/product_use_scratcher2_3.jpeg','./images/products/use/scratcher/product_use_scratcher2_4.jpeg','可愛電視機造型貓抓屋，萌到你不想轉台，三合一功能：抓板、跳台、貓窩一次滿足', 1599);
+
+-- 商品11(貓抓板)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('蘿蔔蘑菇麻繩貓抓板','用品','抓板','./images/products/use/scratcher/product_use_scratcher3_1.jpeg','./images/products/use/scratcher/product_use_scratcher3_2.jpeg','./images/products/use/scratcher/product_use_scratcher3_3.jpeg','./images/products/use/scratcher/product_use_scratcher3_4.jpeg','忍不住一直抓，可愛麻繩造型貓抓板，耐磨耐用居家好用品，輕鬆安裝不費力', 1200);
+
+-- 商品12(貓抓板)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('貓臉造型紙盒貓抓板','用品','抓板','./images/products/use/scratcher/product_use_scratcher4_1.jpeg','./images/products/use/scratcher/product_use_scratcher4_2.jpeg','./images/products/use/scratcher/product_use_scratcher4_3.jpeg','./images/products/use/scratcher/product_use_scratcher4_4.jpeg','能抓能躲安全感滿分', 365);
+
+
+-- 商品13(食器)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('莫蘭迪色食器','用品','食器','./images/products/use/bowl/product_use_bowl1_1.jpg','./images/products/use/bowl/product_use_bowl1_2.jpg','./images/products/use/bowl/product_use_bowl1_3.jpg','./images/products/use/bowl/product_use_bowl1_4.jpg','可愛造型食器，符合貓體工學，讓你的貓咪吃法無壓力', 6000);
+
+-- 商品14(食器)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('富士山造型食器','用品','食器','./images/products/use/bowl/product_use_bowl2_1.jpg','./images/products/use/bowl/product_use_bowl2_2.jpg','./images/products/use/bowl/product_use_bowl2_3.jpg','./images/products/use/bowl/product_use_bowl2_4.jpg','可愛造型食器，符合貓體工學，讓你的貓咪吃法無壓力', 1599);
+
+-- 商品15(食器)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('質感原木食器','用品','食器','./images/products/use/bowl/product_use_bowl3_1.jpg','./images/products/use/bowl/product_use_bowl3_2.jpg','./images/products/use/bowl/product_use_bowl3_3.jpg','./images/products/use/bowl/product_use_bowl3_4.jpg','可愛造型食器，符合貓體工學，讓你的貓咪吃法無壓力', 1200);
+
+-- 商品16(食器)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('貓腳造型食器','用品','食器','./images/products/use/bowl/product_use_bowl4_1.jpg','./images/products/use/bowl/product_use_bowl4_2.jpg','./images/products/use/bowl/product_use_bowl4_3.jpg','./images/products/use/bowl/product_use_bowl4_4.jpg','可愛造型食器，符合貓體工學，讓你的貓咪吃法無壓力', 365);
+
+-- 商品17(貓砂盆)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('直立貓砂盆櫃','用品','貓砂盆','./images/products/use/toilet/product_use_toilet1_1.jpg','./images/products/use/toilet/product_use_toilet1_2.jpg','./images/products/use/toilet/product_use_toilet1_3.jpg','./images/products/use/toilet/product_use_toilet1_4.jpg','大型貓砂盆，清潔方便，不必擔心異味，覺得是您的主子廁所最佳選擇', 6000);
+
+-- 商品18(貓砂盆)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('雙門貓砂盆櫃','用品','貓砂盆','./images/products/use/toilet/product_use_toilet2_1.jpg','./images/products/use/toilet/product_use_toilet2_2.jpg','./images/products/use/toilet/product_use_toilet2_3.jpg','./images/products/use/toilet/product_use_toilet2_4.jpg','大型貓砂盆，清潔方便，不必擔心異味，覺得是您的主子廁所最佳選擇', 1599);
+
+-- 商品19(貓砂盆)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('貓兒可愛專用貓砂盆','用品','貓砂盆','./images/products/use/toilet/product_use_toilet3_1.jpg','./images/products/use/toilet/product_use_toilet3_2.jpg','./images/products/use/toilet/product_use_toilet3_3.jpg','./images/products/use/toilet/product_use_toilet3_4.jpg','大型貓砂盆，清潔方便，不必擔心異味，覺得是您的主子廁所最佳選擇', 1200);
+
+-- 商品20(貓砂盆)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('原木貓砂盆櫃','用品','貓砂盆','./images/products/use/toilet/product_use_toilet4_1.jpg','./images/products/use/toilet/product_use_toilet4_2.jpg','./images/products/use/toilet/product_use_toilet4_3.jpg','./images/products/use/toilet/product_use_toilet4_4.jpg','大型貓砂盆，清潔方便，不必擔心異味，覺得是您的主子廁所最佳選擇', 365);
+
+-- 商品21(胸背帶)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+
+value('貓兒專用胸背帶1','用品','胸背帶','./images/products/use/strap/product_use_strap1_1.jpeg','./images/products/use/strap/product_use_strap1_2.jpeg','./images/products/use/strap/product_use_strap1_3.jpeg','./images/products/use/strap/product_use_strap1_4.jpeg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 6000);
+
+
+-- 商品22(胸背帶)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+
+value('貓兒專用胸背帶2','用品','胸背帶','./images/products/use/strap/product_use_strap2_1.jpeg','./images/products/use/strap/product_use_strap2_2.jpeg','./images/products/use/strap/product_use_strap2_3.jpeg','./images/products/use/strap/product_use_strap2_4.jpeg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 1599);
+
+
+
+-- 商品23(胸背帶)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+
+value('貓兒專用胸背帶3','用品','胸背帶','./images/products/use/strap/product_use_strap3_1.jpeg','./images/products/use/strap/product_use_strap3_2.jpeg','./images/products/use/strap/product_use_strap3_3.jpeg','./images/products/use/strap/product_use_strap3_4.jpeg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 1200);
+
+
+-- 商品24(胸背帶)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+
+value('貓兒專用胸背帶4','用品','胸背帶','./images/products/use/strap/product_use_strap4_1.jpeg','./images/products/use/strap/product_use_strap4_2.jpeg','./images/products/use/strap/product_use_strap4_3.jpeg','./images/products/use/strap/product_use_strap4_4.jpeg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 365);
+
+
+
+-- 商品(食品)
+
+-- 商品1(骨骼)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('骨骼強化貓咪罐頭1','食品','骨骼','./images/products/food/bone/product_food_can1_1.png','./images/products/food/bone/product_food_can1_2.png','./images/products/food/bone/product_food_can1_3.png','./images/products/food/bone/product_food_can1_4.png','照顧貓咪的骨骼，可強健骨頭，跳上跳下都沒煩惱', 300);
+
+-- 商品2(骨骼)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('骨骼強化貓咪罐頭2','食品','骨骼','./images/products/food/bone/product_food_can2_1.png','./images/products/food/bone/product_food_can2_2.png','./images/products/food/bone/product_food_can2_3.png','./images/products/food/bone/product_food_can2_4.png','照顧貓咪的骨骼，可強健骨頭，跳上跳下都沒煩惱', 300);
+
+-- 商品3(骨骼)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('骨骼強化貓咪罐頭3','食品','骨骼','./images/products/food/bone/product_food_can3_1.png','./images/products/food/bone/product_food_can3_2.png','./images/products/food/bone/product_food_can3_3.png','./images/products/food/bone/product_food_can3_4.png','照顧貓咪的骨骼，可強健骨頭，跳上跳下都沒煩惱', 300);
+
+-- 商品4(骨骼)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('骨骼強化貓咪罐頭4','食品','骨骼','./images/products/food/bone/product_food_can4_1.png','./images/products/food/bone/product_food_can4_2.png','./images/products/food/bone/product_food_can4_3.png','./images/products/food/bone/product_food_can4_4.png','照顧貓咪的骨骼，可強健骨頭，跳上跳下都沒煩惱', 300);
+
+-- 商品5(毛髮)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('毛色亮麗貓咪罐頭1','食品','毛髮','./images/products/food/hair/product_food_can5_1.png','./images/products/food/hair/product_food_can5_2.png','./images/products/food/hair/product_food_can5_3.png','./images/products/food/hair/product_food_can5_4.png','照顧貓咪的毛髮，毛色亮麗，絕對會變成全場焦點', 300);
+
+-- 商品6(毛髮)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('毛色亮麗貓咪罐頭2','食品','毛髮','./images/products/food/hair/product_food_can6_1.png','./images/products/food/hair/product_food_can6_2.png','./images/products/food/hair/product_food_can6_3.png','./images/products/food/hair/product_food_can6_4.png','照顧貓咪的毛髮，毛色亮麗，絕對會變成全場焦點', 300);
+
+-- 商品7(毛髮)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('毛色亮麗貓咪罐頭3','食品','毛髮','./images/products/food/hair/product_food_can7_1.png','./images/products/food/hair/product_food_can7_2.png','./images/products/food/hair/product_food_can7_3.png','./images/products/food/hair/product_food_can7_4.png','照顧貓咪的毛髮，毛色亮麗，絕對會變成全場焦點', 300);
+
+-- 商品8(毛髮)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('毛色亮麗貓咪罐頭4','食品','毛髮','./images/products/food/hair/product_food_can8_1.png','./images/products/food/hair/product_food_can8_2.png','./images/products/food/hair/product_food_can8_3.png','./images/products/food/hair/product_food_can8_4.png','照顧貓咪的毛髮，毛色亮麗，絕對會變成全場焦點', 300);
+
+
+-- 商品(玩具)
+
+-- 商品1(單貓)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('魚玩具','玩具','單貓','./images/products/toys/one/product_toys_one1_1.jpg','./images/products/toys/one/product_toys_one1_2.jpg','./images/products/toys/one/product_toys_one1_3.jpg','./images/products/toys/one/product_toys_one1_4.jpg','貓咪的咬咬玩具，讓您的貓咪可以隨時自得其樂', 300);
+
+-- 商品2(單貓)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('毛線球玩具','玩具','單貓','./images/products/toys/one/product_toys_one2_1.jpg','./images/products/toys/one/product_toys_one2_2.jpg','./images/products/toys/one/product_toys_one2_3.jpg','./images/products/toys/one/product_toys_one2_4.jpg','貓咪的咬咬玩具，讓您的貓咪可以隨時自得其樂', 300);
+
+-- 商品3(單貓)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('蛇玩具','玩具','單貓','./images/products/toys/one/product_toys_one3_1.jpg','./images/products/toys/one/product_toys_one3_2.jpg','./images/products/toys/one/product_toys_one3_3.jpg','./images/products/toys/one/product_toys_one3_4.jpg','貓咪的咬咬玩具，讓您的貓咪可以隨時自得其樂', 300);
+
+-- 商品4(單貓)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('自動逗貓玩具','玩具','單貓','./images/products/toys/one/product_toys_one4_1.jpg','./images/products/toys/one/product_toys_one4_2.jpg','./images/products/toys/one/product_toys_one4_3.jpg','./images/products/toys/one/product_toys_one4_4.jpg','貓咪的咬咬玩具，讓您的貓咪可以隨時自得其樂', 300);
+
+-- 商品5(人貓)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('特殊羽毛逗喵棒','玩具','人貓','./images/products/toys/human/product_toys_human1_1.jpeg','./images/products/toys/human/product_toys_human1_2.jpeg','./images/products/toys/human/product_toys_human1_3.jpeg','./images/products/toys/human/product_toys_human1_4.jpeg','想跟貓主子互動嗎? 耐用有趣的造型逗喵棒在此', 300);
+
+-- 商品6(人貓)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('特殊造型逗喵棒','玩具','人貓','./images/products/toys/human/product_toys_human2_1.jpeg','./images/products/toys/human/product_toys_human2_2.jpeg','./images/products/toys/human/product_toys_human2_3.jpeg','./images/products/toys/human/product_toys_human2_4.jpeg','想跟貓主子互動嗎? 耐用有趣的造型逗喵棒在此', 300);
+
+-- 商品7(人貓)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('一般羽毛逗喵棒','玩具','人貓','./images/products/toys/human/product_toys_human3_1.jpeg','./images/products/toys/human/product_toys_human3_2.jpeg','./images/products/toys/human/product_toys_human3_3.jpeg','./images/products/toys/human/product_toys_human3_4.jpeg','想跟貓主子互動嗎? 耐用有趣的造型逗喵棒在此', 300);
+
+-- 商品8(人貓)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('蛇造型逗喵棒','玩具','人貓','./images/products/toys/human/product_toys_human4_1.jpeg','./images/products/toys/human/product_toys_human4_2.jpeg','./images/products/toys/human/product_toys_human4_3.jpeg','./images/products/toys/human/product_toys_human4_4.jpeg','想跟貓主子互動嗎? 耐用有趣的造型逗喵棒在此', 300);
+
+
+
+
+-- 商品(裝飾品)
+
+-- 商品1(衣服)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('忍者喵咪造型cosplay','裝飾品','衣服','./images/products/cloth/clothes/product_cloth_clothes1_1.jpg','./images/products/cloth/clothes/product_cloth_clothes1_2.jpg','./images/products/cloth/clothes/product_cloth_clothes1_3.jpg','./images/products/cloth/clothes/product_cloth_clothes1_4.jpg','幫你的主子打扮一下吧，過新年穿新衣~', 500);
+
+-- 商品2(衣服)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('喵咪造型cosplay','裝飾品','衣服','./images/products/cloth/clothes/product_cloth_clothes2_1.jpg','./images/products/cloth/clothes/product_cloth_clothes2_2.jpg','./images/products/cloth/clothes/product_cloth_clothes2_3.jpg','./images/products/cloth/clothes/product_cloth_clothes2_4.jpg','幫你的主子打扮一下吧，過新年穿新衣~', 500);
+
+-- 商品3(衣服)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('喜氣洋洋喵咪造型cosplay','裝飾品','衣服','./images/products/cloth/clothes/product_cloth_clothes3_1.jpg','./images/products/cloth/clothes/product_cloth_clothes3_2.jpg','./images/products/cloth/clothes/product_cloth_clothes3_3.jpg','./images/products/cloth/clothes/product_cloth_clothes3_4.jpg','幫你的主子打扮一下吧，過新年穿新衣~', 500);
+
+-- 商品4(衣服)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('特殊喵咪造型cosplay','裝飾品','衣服','./images/products/cloth/clothes/product_cloth_clothes4_1.jpg','./images/products/cloth/clothes/product_cloth_clothes4_2.jpg','./images/products/cloth/clothes/product_cloth_clothes4_3.jpg','./images/products/cloth/clothes/product_cloth_clothes4_4.jpg','幫你的主子打扮一下吧，過新年穿新衣~', 500);
+
+
+-- 商品5(頭套)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('水生動物喵咪造型頭套','裝飾品','頭套','./images/products/cloth/head/product_cloth_head1_1.jpg','./images/products/cloth/head/product_cloth_head1_2.jpg','./images/products/cloth/head/product_cloth_head1_3.jpg','./images/products/cloth/head/product_cloth_head1_4.jpg','可愛造型頭套，兼具溫暖功能，好看又保暖', 500);
+
+-- 商品6(頭套)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('毛茸茸喵咪造型頭套','裝飾品','頭套','./images/products/cloth/head/product_cloth_head2_1.jpg','./images/products/cloth/head/product_cloth_head2_2.jpg','./images/products/cloth/head/product_cloth_head2_3.jpg','./images/products/cloth/head/product_cloth_head2_4.jpg','可愛造型頭套，兼具溫暖功能，好看又保暖', 500);
+
+-- 商品7(頭套)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('迪士尼喵咪造型頭套','裝飾品','頭套','./images/products/cloth/head/product_cloth_head3_1.jpg','./images/products/cloth/head/product_cloth_head3_2.jpg','./images/products/cloth/head/product_cloth_head3_3.jpg','./images/products/cloth/head/product_cloth_head3_4.jpg','可愛造型頭套，兼具溫暖功能，好看又保暖', 500);
+
+-- 商品8(頭套)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('蔬菜喵咪造型頭套','裝飾品','頭套','./images/products/cloth/head/product_cloth_head4_1.jpg','./images/products/cloth/head/product_cloth_head4_2.jpg','./images/products/cloth/head/product_cloth_head4_3.jpg','./images/products/cloth/head/product_cloth_head4_4.jpg','可愛造型頭套，兼具溫暖功能，好看又保暖', 500);
+
+
+-- 商品(盲抽)
+
+-- 商品(299)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('萬聖巫師','盲抽','299','./images/products/gacha/299/product_gacha_299_1.png','盲抽商品', 299);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('萬聖南瓜','盲抽','299','./images/products/gacha/299/product_gacha_299_2.png','盲抽商品', 299);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('萬聖幽靈','盲抽','299','./images/products/gacha/299/product_gacha_299_3.png','盲抽商品', 299);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('萬聖蝙蝠','盲抽','299','./images/products/gacha/299/product_gacha_299_4.png','盲抽商品', 299);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('聖誕樹','盲抽','299','./images/products/gacha/299/product_gacha_299_5.png','盲抽商品', 299);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('聖誕蛋糕','盲抽','299','./images/products/gacha/299/product_gacha_299_6.png','盲抽商品', 299);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('聖誕麋鹿','盲抽','299','./images/products/gacha/299/product_gacha_299_7.png','盲抽商品', 299);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('聖誕帽','盲抽','299','./images/products/gacha/299/product_gacha_299_8.png','盲抽商品', 299);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('聖誕雪人','盲抽','299','./images/products/gacha/299/product_gacha_299_9.png','盲抽商品', 299);
+
+
+-- 商品(盲抽)
+
+-- 商品(399)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('Elmo','盲抽','399','./images/products/gacha/399/product_gacha_399_1.png','盲抽商品', 399);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('Cookie Monster','盲抽','399','./images/products/gacha/399/product_gacha_399_2.png','盲抽商品', 399);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('Big Bird','盲抽','399','./images/products/gacha/399/product_gacha_399_3.png','盲抽商品', 399);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('Bert','盲抽','399','./images/products/gacha/399/product_gacha_399_4.png','盲抽商品', 399);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('Ernie','盲抽','399','./images/products/gacha/399/product_gacha_399_5.png','盲抽商品', 399);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('Oscar','盲抽','399','./images/products/gacha/399/product_gacha_399_6.png','盲抽商品', 399);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('浣熊','盲抽','399','./images/products/gacha/399/product_gacha_399_7.png','盲抽商品', 399);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('狐狸','盲抽','399','./images/products/gacha/399/product_gacha_399_8.png','盲抽商品', 399);
+
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('胖丁','盲抽','399','./images/products/gacha/399/product_gacha_399_9.png','盲抽商品', 399);
