@@ -218,7 +218,9 @@ let vm2 = new Vue({
 
     },
     template:`
-    
+        <div class="cart_step1_next_step">
+            <a href="./cart_step2.html"><button type="button">STEP2<br>聯絡人資料</button></a>
+        </div>
     `
 
 })
