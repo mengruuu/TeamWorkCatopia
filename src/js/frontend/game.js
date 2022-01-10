@@ -7,6 +7,9 @@ var glass = [];
 var heart_point = 3;
 var cool_down = true;
 var stop_game = false;
+//每天寫三次
+var today = new Date();
+// var everyday_add_point_times = 3;
 
 
 // function doFirst(){   
@@ -318,7 +321,7 @@ function updateGameArea(){
     flash.update("閃現",canvas.width-50,300);
     
 
-
+    
 
     switch(heart_point){
         case 3:
@@ -350,7 +353,51 @@ function updateGameArea(){
             let gameover_popupBtn = document.getElementById('gameover_background_pop');
             gameover_popupBtn.style.display = "block";
 
+        
+            //遊戲結束當下時間的時間
+            // 寫一個變數再storage 每玩一次+1 最多加兩次就不能玩
+            // new Date(); //抓系統時間 開始遊戲和結束遊戲時比對時間ㄘ
+
+            let add_point_btn = document.getElementById('add_point_btn');
+            let add_point_time = 1;
+            // console.log(add_point_time);
+
+            add_point_btn.addEventListener('click' , function(){
+                // console.log("test");
+                if(add_point_time == 0){                    
+                    alert('本次遊戲已兌換')
+                }else{
+                    addPoint();
+                    alert('兌換成功')
+                    add_point_time --;
+                }
+            })
+
             break;
+    }
+
+    
+
+
+    
+
+    // 遊戲賺到的奴幣寫進資料庫
+    function addPoint() {
+        $.ajax({
+            method:'POST',
+            url:'./API/game.php',
+            data:{
+                addCOIN:score,
+            },
+            dataType:'text',
+            // dataType:'json',
+            success:function(response){
+                console.log(response);
+            },
+            error: function(exception) {
+                alert("發生錯誤: " + exception.status);  //網路出錯的部分
+            }
+        });
     }
     
     

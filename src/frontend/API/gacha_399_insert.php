@@ -29,21 +29,21 @@
     // echo $ORDER_ID[0][0];
 
     //建立SQL 找到gacha訂單明細中 PRODUCT_NAME是空值 再依序推進去
-    $sql_gacha299 = "UPDATE CATOPIA.`ORDER_DETAIL(ORDER- PRODUCT)`
+    $sql_gacha399 = "UPDATE CATOPIA.`ORDER_DETAIL(ORDER- PRODUCT)`
     set
         PRODUCT_NAME = ?
     where
         ORDER_ID = ? and PRODUCT_NAME is null
     limit 1";
 
-    $statement_gacha299 = $pdo ->prepare($sql_gacha299);
+    $statement_gacha399 = $pdo ->prepare($sql_gacha399);
 
-    $statement_gacha299->bindValue(1, $PRODUCT_NAME);
-    $statement_gacha299->bindValue(2, $ORDER_ID);
+    $statement_gacha399->bindValue(1, $PRODUCT_NAME);
+    $statement_gacha399->bindValue(2, $ORDER_ID);
 
     //執行
-    $statement_gacha299->execute();
-    $data_gacha299_insert = $statement_gacha299 -> fetchAll();
+    $statement_gacha399->execute();
+    $data_gacha399_insert = $statement_gacha399 -> fetchAll();
     // $pdo->query($sql);
 
     echo "新增成功!"
