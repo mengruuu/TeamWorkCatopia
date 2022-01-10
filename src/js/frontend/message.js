@@ -25,7 +25,19 @@ async function uploadMessageData() {
               await fetch("./API/get_member_info.php")
                     .then(res => res.json())
                     .then(data => data); //取得會員資料
-    console.log(response);
+                    console.log("memberID: ", response[0].MEMBER_ID);
+
+    const personalLikes = 
+        await fetch("./API/getMessageLikesAndComments.php",{
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(response[0].MEMBER_ID)
+        })
+        .then(res => res.json())
+        .then(data => data);
+        console.log("likeHistory: ", personalLikes);
 
     // 顯示留言板的部分，使用Vue寫--------------------------------------------------------------------------------------
     const Feature = Vue.component('messageContent', {
@@ -55,8 +67,8 @@ async function uploadMessageData() {
                             <p>{{ postTime }}</p>
                         </div>
                     </div>
-                    <div :class = "{message_like_container: true}">
-                        <img src = "./images/message/message_like.png">
+                    <div :class = "{message_like_container: true}" @click = changeLikeImg>
+                        <div :class="{message_like: true, message_liked: personalLikes}"></div>
                         <p>+{{ postLike }}</p>
                     </div>
                 </div>
@@ -65,14 +77,15 @@ async function uploadMessageData() {
                         <p>{{ postContent }}</p>
                     </div>
                     <img :class = "{message_content_img: true}" :src = postPicture>
-                    <input :class = "{comment_input" placeholder: true}" placeholder = "回應貼文...">
-                    <div :class = "{message_comment_container: true}">
-                        <img :class = "{message_comment_user_img: true}" src = "./images/message/message_comment_photo.svg">
-                        <p :class = "{message_comment_item: true}">Devil catman, your tonight’s nightmare</p>
-                    </div>
                 </div>
             </div>
         `, 
+        // <input :class = "{comment_input" placeholder: true}" placeholder = "回應貼文...">
+        // <div :class = "{message_comment_container: true}">
+        // <img :class = "{message_comment_user_img: true}" src = "./images/message/message_comment_photo.svg">
+        // <p :class = "{message_comment_item: true}">Devil catman, your tonight’s nightmare</p>
+        // </div>
+        // 回應功能先註解掉，等最後再來處理
         props: {
             memberId: {
                 type: String
@@ -96,6 +109,9 @@ async function uploadMessageData() {
                 type: Number
             },
             isPostHide: {
+                type: Boolean
+            },
+            personalLikes: {
                 type: Boolean
             }
         },
@@ -122,6 +138,13 @@ async function uploadMessageData() {
                 }else {
                     return;
                 }
+            },
+            changeLikeImg() {
+                if(this.personalLikes) {
+                    this.$emit("changeLikeCounts", this.postId, Number(this.postLike) - 1, this.index);
+                }else {
+                    this.$emit("changeLikeCounts", this.postId, Number(this.postLike) + 1, this.index);
+                }
             }
         },
     });
@@ -139,13 +162,16 @@ async function uploadMessageData() {
                     :postId = "message.POST_ID"
                     :index = "index"
                     :isPostHide = "isPostHide"
+                    :personalLikes = "isLiked(index)"
                     @deletepost = "deletePost"
+                    @changeLikeCounts = "changelikecounts"
                 />
             </div>
         `,
         data() {
             return {
                 messageInfo: messageInfo,
+                personalLikes: personalLikes,
                 isPostHide: false
             }
         },
@@ -165,6 +191,52 @@ async function uploadMessageData() {
                         vm.messageInfo = data;
                     });
                 }, 1000);
+            },
+            changelikecounts(postID, updateLikeCounts, index) {console.log(response[0].MEMBER_ID);
+                const postIdAndUpdateLikeCounts = {
+                    postID: postID,
+                    updateLikeCounts: updateLikeCounts,
+                    memberId: response[0].MEMBER_ID
+                }
+
+                fetch("./API/getMessageLikesAndComments.php",{
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(response[0].MEMBER_ID)
+                })
+                .then(res => res.json())
+                .then(data => {
+                    vm.personalLikes = data;
+                    vm.isLiked(index);
+                });
+
+                fetch("./API/updateLikeCounts.php", {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(postIdAndUpdateLikeCounts)
+                })
+                .then(res => res.json())
+                .then(data => {console.log(data);
+                    vm.messageInfo = data;
+                    vm.isLiked(index);
+                    vm.messageInfo = data;
+                });
+            },
+            isLiked(index) {
+                let isLiked = false;console.log("sssssss");
+
+                for(let i = 0; i < this.personalLikes.length; i = i + 1) {
+                    if(this.personalLikes[i].POST_ID === this.messageInfo[index].POST_ID && this.personalLikes[i].LIKE_MODE === "1") {
+                        isLiked = true;
+                        break;
+                    }
+                }
+
+                return isLiked;
             }
         }
     });

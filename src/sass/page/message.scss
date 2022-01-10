@@ -361,10 +361,93 @@ div.message_and_comment_container {
                 border-radius: 15px;
                 box-shadow: $shadow;
                 cursor: pointer;
-                img {
-                    width: 20px;
-                    height: 20px;
+                div.message_like {
+                    position: relative;
+                    width: 50px;
+                    height: 50px;
                     // object-fit: cover;
+                }
+                div.message_like::before {
+                    content: "";
+                    position: absolute;
+                    left: 62%;
+                    top: 30%;
+                    transform: translate(-50%, -50%);
+                    width: 12px;
+                    height: 20px;
+                    background: lightgray;
+                    border-radius: 50px 50px 0 0;
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                    -webkit-transform-origin: left bottom;
+                    -moz-transform-origin: left bottom;
+                    -o-transform-origin: left bottom;
+                    transform-origin: left bottom;
+                }
+                div.message_like::after {
+                    content: "";
+                    position: absolute;
+                    left: 40%;
+                    top: 30%;
+                    transform: translate(-50%, -50%);
+                    width: 12px;
+                    height: 20px;
+                    background: lightgray;
+                    border-radius: 50px 50px 0 0;
+                    -webkit-transform: rotate(45deg);
+                    -moz-transform: rotate(45deg);
+                    -o-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    -webkit-transform-origin: right bottom;
+                    -moz-transform-origin: right bottom;
+                    -o-transform-origin: right bottom;
+                    transform-origin: right bottom;
+                }
+                div.message_liked {
+                    position: relative;
+                    width: 50px;
+                    height: 50px;
+                    // object-fit: cover;
+                }
+                div.message_liked::before {
+                    content: "";
+                    position: absolute;
+                    left: 62%;
+                    top: 30%;
+                    transform: translate(-50%, -50%);
+                    width: 12px;
+                    height: 20px;
+                    background: $font_color;
+                    border-radius: 50px 50px 0 0;
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                    -webkit-transform-origin: left bottom;
+                    -moz-transform-origin: left bottom;
+                    -o-transform-origin: left bottom;
+                    transform-origin: left bottom;
+                }
+                div.message_liked::after {
+                    content: "";
+                    position: absolute;
+                    left: 40%;
+                    top: 30%;
+                    transform: translate(-50%, -50%);
+                    width: 12px;
+                    height: 20px;
+                    background: $font_color;
+                    border-radius: 50px 50px 0 0;
+                    -webkit-transform: rotate(45deg);
+                    -moz-transform: rotate(45deg);
+                    -o-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    -webkit-transform-origin: right bottom;
+                    -moz-transform-origin: right bottom;
+                    -o-transform-origin: right bottom;
+                    transform-origin: right bottom;
                 }
                 p {
                     font-size: $font_20;
@@ -579,10 +662,9 @@ div.message_and_comment_container {
                 }
                 img.message_content_img {
                     width: 100%;
-                    height: 100%;
-
+                    height: 200px;
                     margin-bottom: 30px;
-                    // object-fit: cover;
+                    object-fit: cover;
                 }
                 input {
                     padding: 8px 16px;
@@ -777,7 +859,7 @@ div.message_and_comment_container {
                 }
                 img.message_content_img {
                     width: 100%;
-                    height: 100%;
+                    height: 200px;
 
                     margin-bottom: 30px;
                     // object-fit: cover;
