@@ -115,10 +115,10 @@ function doFirst(){
                 img.src = gray_image;
                 popupBtn1.style.display = "block";
                 click_times = click_times + 1;
-                console.log(click_times);
+                // console.log(click_times);
                 // console.log("test");
                 // console.log(new_img_299);
-                console.log(new_img_299[click_times]['PRODUCT_NAME']);
+                // console.log(new_img_299[click_times]['PRODUCT_NAME']);
 
                 // 抽到的商品寫進資料庫
                 $.ajax({
