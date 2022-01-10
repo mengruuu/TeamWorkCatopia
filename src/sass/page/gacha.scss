@@ -2,8 +2,8 @@
 @import '../mixin/mixin';
 
 .gacha_main{
-    // border: 1px solid blue;
-    height: auto;
+    border: 1px solid blue;
+    height: 70vh;
     // text-align: center;      
     background-color: $important_color;
     background-image: url("../images/gacha/gacha_egg_bgimg.png");
@@ -12,7 +12,12 @@
     .except_bkgimg{
         // border: 1px solid blue;
         width: 80%;
-        margin: 0 auto;
+        max-width: 1200px;
+        margin: 10vh auto;
+        @include w1380() {
+            width: 80%;
+            margin: 0 auto;
+        }
         .title{
             // border: 1px solid brown;
             display: flex;

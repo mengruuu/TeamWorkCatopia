@@ -3,12 +3,7 @@ login_check();
 var vm = new Vue({
     el: '#app',
     data: {
-        count: 9,
-    },
-    methods: {
-        // action(e){
-        //     this.count -= 1;  //拿去click事件做事
-        // }
+        count: 6,
     },
 });
 
@@ -100,12 +95,14 @@ function doFirst(){
         // return index_number;
     }
 
+    let click_times = -1;
     //點箱子移除彩色圖片 增加灰色圖片 同時跳出抽選的商品彈窗
     for(let i = 0; i < color_image.length; i++){
         color_image[i].addEventListener("click", function(e){
             let gacha_box_c = gacha_box[i];
             let gray_image = './images/gacha_299/gacha_299_box_gray.png';
             let img = gacha_box_c.firstElementChild;
+            
             
             if(e.target.classList.contains("-off")){  //判斷若為灰色箱子 只會alert 不會做動作
                 alert('無法抽取灰色箱子');
@@ -117,31 +114,30 @@ function doFirst(){
                 e.target.classList.add("-off");
                 img.src = gray_image;
                 popupBtn1.style.display = "block";
-
-                // let put_data = new_img_299['PRODUCT_ID'];
-                // console.log(put_data);
+                click_times = click_times + 1;
+                // console.log(click_times);
                 // console.log("test");
                 // console.log(new_img_299);
-                console.log(new_img_299);
+                // console.log(new_img_299[click_times]['PRODUCT_NAME']);
 
                 // 抽到的商品寫進資料庫
                 $.ajax({
                     method:'POST',
                     url:'./API/gacha_299_insert.php',
                     data:{
-                        PRODUCT_ID:$(`${new_img_299['PRODUCT_ID']}`).val(),
-                        // PRODUCT_ID:$(put_data).val(),
+                        PRODUCT_NAME:new_img_299[click_times]['PRODUCT_NAME'],
                     },
                     dataType:'text',
+                    // dataType:'json',
+                    // processData: false,
+                    // contentType: false,
                     success:function(response){
-                        console.log('success');
+                        console.log(response);
                     },
                     error: function(exception) {
-                        console.log('error');
+                        alert("發生錯誤: " + exception.status);  //網路出錯的部分
                     }
                 });
-
-
             };
         })
     };

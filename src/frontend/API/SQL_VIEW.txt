@@ -1,0 +1,29 @@
+create view `V_ORDER_ORDER_DETAIL`
+AS
+select * 
+from 
+	CATOPIA.ORDER
+	natural join CATOPIA.`ORDER_DETAIL(ORDER- PRODUCT)`;
+    
+
+create view `V_PRODUCT_ORDER_DETAIL`
+AS
+select * 
+from 
+	CATOPIA.PRODUCT
+	natural join CATOPIA.`ORDER_DETAIL(ORDER- PRODUCT)`;
+
+
+create view `V_PRODUCT_SHOPPING_CART`
+AS
+select *
+from 
+	CATOPIA.PRODUCT
+	natural join CATOPIA.`SHOPPING_CART`;
+    
+create view `V_MESSAGE_POST_RESPONSE&LIKE`
+AS
+select *
+from
+	CATOPIA.MESSAGE
+    natural join CATOPIA.`POST_RESPONSE&LIKE`;
