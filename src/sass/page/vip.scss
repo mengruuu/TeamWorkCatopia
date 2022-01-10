@@ -57,6 +57,7 @@
             .leftgalaxy{
                 // border: 1px solid blue;
                 position: relative;
+                cursor: pointer;
                 img{
                     // border: 1px solid black;
                     @include w600() {
@@ -139,6 +140,7 @@
             .rightgalaxy{
                 // border: 1px solid blue;
                 position: relative;
+                cursor: pointer;
                 img{
                     // border: 1px solid black;
                     @include w600() {
