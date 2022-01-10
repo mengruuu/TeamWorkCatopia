@@ -13,6 +13,7 @@ function login_check(){
                 window.location.href = './login.html';
             }else{
                 response = res;
+                // alert(response);
                 console.log(response);
             }
         },
@@ -21,6 +22,8 @@ function login_check(){
         }
     })
 }
+// console.log(response);
+// console.log("test");
 function change_member_icon(){
     $.ajax({
         method:'POST',
