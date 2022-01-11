@@ -1,53 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    @@include('./layout/meta.html', {
-    "title" : "Catopia B7問題集管理"
-    })
-    <link rel="stylesheet" href="../css/backend/b7_question_push.css">
-</head>
-
-<body>
+  <head>
+    @@include('./layout/meta.html', { "title" : "Catopia B7問題集管理" })
+    <link rel="stylesheet" href="../css/backend/b7_question_push.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+    <script src="../js/backend/b7_quenstion_push.js" async></script>
+  </head>
+  <body>
     @@include('./layout/backend_header.html')
-
-    <div class="question_push_title
-                question_push_block">
-        <div class="product_push_title">
-            <p>B7-1-1新增問題集</p>
-        </div>
+    <div class="question_push_title question_push_block">
+      <div class="product_push_title">
+        <p>B7-1-1新增問題集</p>
+      </div>
     </div>
-
-    <div class="question_push_container">
-        <div class="question_push_block">
-            <p class="question_push_block_title">問題序號:</p>
-            <p class="question_push_block_text">Q0001</p>
+    <div class="question_push_container" id="question_push_container_app">
+      <div class="question_push_block">
+        <p class="question_push_block_title"></p>
+        <p class="question_push_block_text"></p>
+      </div>
+      <div class="question_push_block text_area">
+        <p class="question_push_block_title">問題:</p>
+        <div class="question_push_block_text vip_edit_block_remark">
+          <textarea
+            cols="60"
+            rows="10"
+            v-model="quenstion"
+            style="resize: none; border-radius: 5px"
+          ></textarea>
         </div>
-
-
-        <div class="question_push_block 
-                    text_area">
-            <p class="question_push_block_title">問題:</p>
-            <div class="question_push_block_text  
-                        vip_edit_block_remark">
-                <textarea cols="60" rows="10"></textarea>
-            </div>
+      </div>
+      <div class="question_push_block text_area">
+        <p class="question_push_block_title">回答:</p>
+        <div class="question_push_block_text vip_edit_block_remark">
+          <textarea
+            cols="60"
+            rows="10"
+            v-model="ans"
+            style="resize: none; border-radius: 5px"
+          ></textarea>
         </div>
-
-        <div class="question_push_block 
-                    text_area">
-            <p class="question_push_block_title">回答:</p>
-            <div class="question_push_block_text  
-                        vip_edit_block_remark">
-                <textarea cols="60" rows="10"></textarea>
-            </div>
-        </div>
-
-        <div class="back_edit_button">
-            <a href="./b7_question.html"><button type="submit">取消</button></a>
-            <a href="./b7_question.html"><button type="submit">上架</button></a>
-        </div>
+      </div>
+      <div class="back_edit_button">
+        <a href="./b7_question.html"><button type="submit">取消</button></a>
+        <a href="#"><button @click="submit">上架</button></a>
+      </div>
     </div>
-</body>
-
+    <script>
+      const vm = new Vue({
+        el: "#question_push_container_app",
+        data() {
+          return {
+            quenstion: "",
+            ans: "",
+          };
+        },
+        methods: {
+          submit() {
+            confirm("確認新增嗎？");
+            $.ajax({
+              method: "POST",
+              url: "./API/b7_question_push.php",
+              data: {
+                question: this.quenstion,
+                answer: this.ans,
+              },
+              dataType: "text",
+              success: function (response) {
+                //  console.log(question);
+                alert("新增成功");
+                location.href="./b7_question.html";
+              },
+              error: function (exception) {
+                alert("發生錯誤: " + exception.status);
+              },
+            });
+          },
+        },
+      });
+    </script>
+  </body>
 </html>

@@ -3,7 +3,7 @@
 -- 商品1 (外出包包)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('180度透氣網格寵物外出包','用品','外出包包','./images/products/use/outside_bag/product_use_cage1_1.jpeg','./images/products/use/outside_bag/product_use_cage1_2.jpeg','./images/products/use/outside_bag/product_use_cage1_3.jpeg','./images/products/use/outside_bag/product_use_cage1_4.jpeg','透氣又好看的時尚外出包，高達45%透氣面積，讓貓貓可以大口呼吸，外觀與質感兼具的好選擇', 1350);
+value('透氣網格寵物外出包','用品','外出包包','./images/products/use/outside_bag/product_use_cage1_1.jpeg','./images/products/use/outside_bag/product_use_cage1_2.jpeg','./images/products/use/outside_bag/product_use_cage1_3.jpeg','./images/products/use/outside_bag/product_use_cage1_4.jpeg','透氣又好看的時尚外出包，高達45%透氣面積，讓貓貓可以大口呼吸，外觀與質感兼具的好選擇', 1350);
 
 -- 商品2 (外出包包)
 insert into 
@@ -49,7 +49,7 @@ value('貓抓板','用品','抓板','./images/products/use/scratcher/product_use
 -- 商品10(貓抓板)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('電視機雙層公寓貓抓屋','用品','抓板','./images/products/use/scratcher/product_use_scratcher2_1.jpeg','./images/products/use/scratcher/product_use_scratcher2_2.jpeg','./images/products/use/scratcher/product_use_scratcher2_3.jpeg','./images/products/use/scratcher/product_use_scratcher2_4.jpeg','可愛電視機造型貓抓屋，萌到你不想轉台，三合一功能：抓板、跳台、貓窩一次滿足', 1599);
+value('雙層公寓貓抓屋','用品','抓板','./images/products/use/scratcher/product_use_scratcher2_1.jpeg','./images/products/use/scratcher/product_use_scratcher2_2.jpeg','./images/products/use/scratcher/product_use_scratcher2_3.jpeg','./images/products/use/scratcher/product_use_scratcher2_4.jpeg','可愛電視機造型貓抓屋，萌到你不想轉台，三合一功能：抓板、跳台、貓窩一次滿足', 1599);
 
 -- 商品11(貓抓板)
 insert into 
@@ -225,7 +225,7 @@ value('蛇造型逗喵棒','玩具','人貓','./images/products/toys/human/produ
 -- 商品1(衣服)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('忍者喵咪造型cosplay','裝飾品','衣服','./images/products/cloth/clothes/product_cloth_clothes1_1.jpg','./images/products/cloth/clothes/product_cloth_clothes1_2.jpg','./images/products/cloth/clothes/product_cloth_clothes1_3.jpg','./images/products/cloth/clothes/product_cloth_clothes1_4.jpg','幫你的主子打扮一下吧，過新年穿新衣~', 500);
+value('忍者喵咪造型','裝飾品','衣服','./images/products/cloth/clothes/product_cloth_clothes1_1.jpg','./images/products/cloth/clothes/product_cloth_clothes1_2.jpg','./images/products/cloth/clothes/product_cloth_clothes1_3.jpg','./images/products/cloth/clothes/product_cloth_clothes1_4.jpg','幫你的主子打扮一下吧，過新年穿新衣~', 500);
 
 -- 商品2(衣服)
 insert into 
@@ -235,12 +235,12 @@ value('喵咪造型cosplay','裝飾品','衣服','./images/products/cloth/clothe
 -- 商品3(衣服)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('喜氣洋洋喵咪造型cosplay','裝飾品','衣服','./images/products/cloth/clothes/product_cloth_clothes3_1.jpg','./images/products/cloth/clothes/product_cloth_clothes3_2.jpg','./images/products/cloth/clothes/product_cloth_clothes3_3.jpg','./images/products/cloth/clothes/product_cloth_clothes3_4.jpg','幫你的主子打扮一下吧，過新年穿新衣~', 500);
+value('喜氣洋洋喵咪造型','裝飾品','衣服','./images/products/cloth/clothes/product_cloth_clothes3_1.jpg','./images/products/cloth/clothes/product_cloth_clothes3_2.jpg','./images/products/cloth/clothes/product_cloth_clothes3_3.jpg','./images/products/cloth/clothes/product_cloth_clothes3_4.jpg','幫你的主子打扮一下吧，過新年穿新衣~', 500);
 
 -- 商品4(衣服)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('特殊喵咪造型cosplay','裝飾品','衣服','./images/products/cloth/clothes/product_cloth_clothes4_1.jpg','./images/products/cloth/clothes/product_cloth_clothes4_2.jpg','./images/products/cloth/clothes/product_cloth_clothes4_3.jpg','./images/products/cloth/clothes/product_cloth_clothes4_4.jpg','幫你的主子打扮一下吧，過新年穿新衣~', 500);
+value('特殊喵咪造型','裝飾品','衣服','./images/products/cloth/clothes/product_cloth_clothes4_1.jpg','./images/products/cloth/clothes/product_cloth_clothes4_2.jpg','./images/products/cloth/clothes/product_cloth_clothes4_3.jpg','./images/products/cloth/clothes/product_cloth_clothes4_4.jpg','幫你的主子打扮一下吧，過新年穿新衣~', 500);
 
 
 -- 商品5(頭套)
