@@ -1,10 +1,5 @@
 <?php
-    $db_host = "127.0.0.1";
-    $db_user = "root";
-    $db_pass = "password";
-    $db_select = "CATOPIA";
-    $dsn = "mysql:host=".$db_host.";dbname=".$db_select;
-    $pdo = new PDO($dsn, $db_user, $db_pass);
+    include("../library/Connection.php");
     // 刪除對應的貼文
     $sql = "DELETE FROM MESSAGE WHERE POST_ID = ?";
     // $name = isset($_POST["Name"])?$_POST["Name"]:$_POST["Name"];
