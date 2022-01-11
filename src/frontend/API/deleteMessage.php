@@ -1,13 +1,22 @@
 <?php
     include("../library/Connection.php");
     // 刪除對應的貼文
-    $sql = "DELETE FROM MESSAGE WHERE POST_ID = ?";
-    // $name = isset($_POST["Name"])?$_POST["Name"]:$_POST["Name"];
-    $memberId = json_decode(file_get_contents('php://input'));//獲取非表單資料
-    
+    $postID = json_decode(file_get_contents('php://input'));//獲取非表單資料
+
+    // -----------------------------------------------------------------------
+    // 先刪除按過此篇貼文的讚紀錄
+    $sql = "DELETE FROM `POST_RESPONSE&LIKE` WHERE POST_ID = ?";
     $statment = $pdo->prepare($sql);
     // $statment->bindValue(1, "%".json_decode($name)."%");
-    $statment->bindValue(1, $memberId);
+    $statment->bindValue(1, $postID);
+    $statment->execute();
+
+    // -----------------------------------------------------------------------
+    // 再刪除此篇貼文
+    $sql = "DELETE FROM MESSAGE WHERE POST_ID = ?";
+    
+    $statment = $pdo->prepare($sql);
+    $statment->bindValue(1, $postID);
     $statment->execute();
 
     // -----------------------------------------------------------------------

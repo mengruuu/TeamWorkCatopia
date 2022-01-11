@@ -1,0 +1,271 @@
+.vip_main {
+  overflow-x: hidden;
+  height: auto;
+  background-image: url("../images/vip/vip_starrysky.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #774F40;
+}
+
+.vip_main .except_bkgimg {
+  width: 80%;
+  max-width: 1200px;
+  margin: 10vh auto;
+}
+
+@media all and (max-width: 1380px) {
+  .vip_main .except_bkgimg {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.vip_main .except_bkgimg .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+.vip_main .except_bkgimg .title .titletext {
+  height: auto;
+  font-size: 30px;
+  margin: 30px auto;
+  margin-top: 50px;
+  background-color: #EDDAB8;
+  border-radius: 15px;
+  padding: 5px 20px;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+}
+
+@media all and (max-width: 600px) {
+  .vip_main .except_bkgimg .title .titletext {
+    font-size: 22px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .vip_main .except_bkgimg .title .titletext {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+.vip_main .except_bkgimg .galaxy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.vip_main .except_bkgimg .galaxy .leftgalaxy {
+  position: relative;
+  cursor: pointer;
+}
+
+@media all and (max-width: 600px) {
+  .vip_main .except_bkgimg .galaxy .leftgalaxy img {
+    width: 400px;
+  }
+}
+
+.vip_main .except_bkgimg .galaxy .leftgalaxy .leftgalaxy_text {
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-55%);
+          transform: translate(-55%);
+  font-size: 24px;
+  background-color: #EDDAB8;
+  color: #774F40;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-align: center;
+  opacity: .8;
+}
+
+@media all and (max-width: 900px) {
+  .vip_main .except_bkgimg .galaxy .leftgalaxy .leftgalaxy_text {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .vip_main .except_bkgimg .galaxy .leftgalaxy .leftgalaxy_text {
+    font-size: 16px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .vip_main .except_bkgimg .galaxy .leftgalaxy .leftgalaxy_text {
+    top: 40%;
+    left: 40%;
+    -webkit-transform: translate(-40%);
+            transform: translate(-40%);
+  }
+}
+
+@media all and (max-width: 500px) {
+  .vip_main .except_bkgimg .galaxy .leftgalaxy .leftgalaxy_text {
+    top: 80%;
+    left: 25%;
+    -webkit-transform: translate(-15%);
+            transform: translate(-15%);
+    background-color: #FED67E;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .vip_main .except_bkgimg .galaxy .leftgalaxy .leftgalaxy_text {
+    top: 80%;
+    left: 15%;
+    -webkit-transform: translate(-5%);
+            transform: translate(-5%);
+    padding: 2px 2px;
+  }
+}
+
+.vip_main .except_bkgimg .galaxy .leftgalaxy:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+.vip_main .except_bkgimg .galaxy .middlelogo {
+  margin-top: 5%;
+  text-align: center;
+}
+
+.vip_main .except_bkgimg .galaxy .middlelogo .logout {
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+  background-color: #FED67E;
+  color: #774F40;
+  border: 0px;
+  color: #774F40;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 5%;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+@media all and (max-width: 900px) {
+  .vip_main .except_bkgimg .galaxy .middlelogo .logout {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .vip_main .except_bkgimg .galaxy .middlelogo .logout {
+    font-size: 16px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .vip_main .except_bkgimg .galaxy .middlelogo .logout {
+    width: 80%;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .vip_main .except_bkgimg .galaxy .middlelogo .logout {
+    width: 100%;
+    padding: 2px 2px;
+  }
+}
+
+.vip_main .except_bkgimg .galaxy .rightgalaxy {
+  position: relative;
+  cursor: pointer;
+}
+
+@media all and (max-width: 600px) {
+  .vip_main .except_bkgimg .galaxy .rightgalaxy img {
+    width: 400px;
+  }
+}
+
+.vip_main .except_bkgimg .galaxy .rightgalaxy .rightgalaxy_text {
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-55%);
+          transform: translate(-55%);
+  font-size: 24px;
+  background-color: #EDDAB8;
+  color: #774F40;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-align: center;
+  opacity: .8;
+}
+
+@media all and (max-width: 900px) {
+  .vip_main .except_bkgimg .galaxy .rightgalaxy .rightgalaxy_text {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .vip_main .except_bkgimg .galaxy .rightgalaxy .rightgalaxy_text {
+    font-size: 16px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .vip_main .except_bkgimg .galaxy .rightgalaxy .rightgalaxy_text {
+    top: 40%;
+    left: 40%;
+    -webkit-transform: translate(-40%);
+            transform: translate(-40%);
+  }
+}
+
+@media all and (max-width: 500px) {
+  .vip_main .except_bkgimg .galaxy .rightgalaxy .rightgalaxy_text {
+    top: 80%;
+    left: 25%;
+    -webkit-transform: translate(-15%);
+            transform: translate(-15%);
+    background-color: #FED67E;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .vip_main .except_bkgimg .galaxy .rightgalaxy .rightgalaxy_text {
+    top: 80%;
+    left: 15%;
+    -webkit-transform: translate(5%);
+            transform: translate(5%);
+    padding: 2px 2px;
+  }
+}
+
+.vip_main .except_bkgimg .galaxy .rightgalaxy:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+/*# sourceMappingURL=vip.css.map */
