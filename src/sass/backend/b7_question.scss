@@ -114,17 +114,23 @@ table td {
 
 .backend_table {
     display: flex;
-    text-align: center;
+    text-align: left;
     align-items: center;
+    .number{
+        text-align: center;
+        width: 80px;
+    }
 }
 
 .table_title {
     font-weight: bold;
+    
 }
 
 .backend_table img {
     width: 50px;
     margin: 0;
+    cursor: pointer;
 }
 
 img.vip_icon {

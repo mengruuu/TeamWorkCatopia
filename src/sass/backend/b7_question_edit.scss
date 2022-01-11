@@ -60,6 +60,7 @@
                 border: 1px solid $main_color;
                 color: $font_color;
                 font-size: 16px;
+                border-radius: 5px;
             }
         }
         input {
@@ -95,9 +96,11 @@
 }
 
 .back_edit_button {
-    // border: 1px solid blue;
     text-align: center;
-    padding: 30px;
+    width: fit-content;
+    margin: 0 auto;
+    transform: translateX(130px);
+    padding-bottom: 30px;
     
     button {
         @include button();
