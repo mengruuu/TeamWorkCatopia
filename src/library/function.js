@@ -36,7 +36,18 @@ function change_member_icon(){
             }else{
                 // console.log($('#member_icon')[0]);
                 $('#member_icon')[0].src = response[0]['MEMBER_PICTURE'];
-                // console.log(response);
+                // console.log(($('#member_icon')[0].src));
+                let pic_name_num = $('#member_icon')[0].src.lastIndexOf('/');
+                // console.log(pic_name_num);
+                let pic_name = $('#member_icon')[0].src.substring(pic_name_num + 1);
+                // console.log(pic_name);
+                if(pic_name != 'login_header_icon_member.png'){
+                    $('#member_icon').css("transform","scale(1.5)");
+                    // $('#member_icon')[0].width(60);
+                    // console.log($('#member_icon')[0]);
+                }else{
+                    console.log("test");
+                }
             }
         },
         error: function(exception) {
