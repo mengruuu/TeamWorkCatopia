@@ -209,7 +209,6 @@ async function uploadMessageData() {
                 .then(res => res.json())
                 .then(data => {
                     vm.personalLikes = data;
-                    vm.isLiked(index);
                 });
 
                 fetch("./API/updateLikeCounts.php", {

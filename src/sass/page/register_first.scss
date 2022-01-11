@@ -32,12 +32,14 @@ div.register_first_container > div.register_first_process {
 div.register_first_container > div.register_first_process > div.register_first_process_item {
     width: 285px;
     text-align: center;
-    background-color: $main_color;
-    border-radius: 10px;
+    // background-color: $main_color;
+    // border-radius: 10px;
 }
 
 div.register_first_container > div.register_first_process > div.register_first_process_item_current {
-    background-color: $important_color;
+    // background-color: $important_color;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 div.register_first_container > div.register_first_process > div.register_first_process_item > p {
