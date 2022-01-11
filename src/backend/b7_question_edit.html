@@ -1,53 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    @@include('./layout/meta.html', {
-    "title" : "Catopia B7問題集管理"
-    })
-    <link rel="stylesheet" href="../css/backend/b7_question_edit.css">
-</head>
-
-<body>
+  <head>
+    @@include('./layout/meta.html', { "title" : "Catopia B7問題集管理" })
+    <link rel="stylesheet" href="../css/backend/b7_question_edit.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+    <script src="../js/backend/b7_quenstion_edit.js" async></script>
+  </head>
+  <body>
     @@include('./layout/backend_header.html')
-
-    <div class="question_edit_title
-                question_edit_block">
-        <div class="product_push_title">
-            <p>B7-1-2編輯問題集</p>
-        </div>
+    <div class="question_edit_title question_edit_block">
+      <div class="product_push_title">
+        <p>B7-1-2編輯問題集</p>
+      </div>
     </div>
-
-    <div class="question_edit_container">
-        <div class="question_edit_block">
-            <p class="question_edit_block_title">問題序號:</p>
-            <p class="question_edit_block_text">Q0001</p>
+    <div class="question_edit_container" id="question_edit_container_app">
+      <div class="question_edit_block">
+        <p class="question_edit_block_title">問題序號:</p>
+        <p class="question_edit_block_text">{{idNumber}}</p>
+      </div>
+      <div class="question_edit_block text_area">
+        <p class="question_edit_block_title">問題:</p>
+        <div class="question_edit_block_text vip_edit_block_remark">
+          <textarea
+            cols="60"
+            rows="10"
+            v-model="quenstion"
+            style="resize: none"
+          ></textarea>
         </div>
-
-
-        <div class="question_edit_block 
-                    text_area">
-            <p class="question_edit_block_title">問題:</p>
-            <div class="question_edit_block_text  
-                        vip_edit_block_remark">
-                <textarea cols="60" rows="10"></textarea>
-            </div>
+      </div>
+      <div class="question_edit_block text_area">
+        <p class="question_edit_block_title">回答:</p>
+        <div class="question_edit_block_text vip_edit_block_remark">
+          <textarea
+            cols="60"
+            rows="10"
+            v-model="ans"
+            style="resize: none"
+          ></textarea>
         </div>
-
-        <div class="question_edit_block 
-                    text_area">
-            <p class="question_edit_block_title">回答:</p>
-            <div class="question_edit_block_text  
-                        vip_edit_block_remark">
-                <textarea cols="60" rows="10"></textarea>
-            </div>
-        </div>
-
-        <div class="back_edit_button">
-            <a href="./b7_question.html"><button type="submit">取消</button></a>
-            <a href="./b7_question.html"><button type="submit">確定</button></a>
-        </div>
+      </div>
+      <div class="back_edit_button">
+        <a href="./b7_question.html"><button type="submit">取消</button></a>
+        <a ><button @click="submit">確定</button></a>
+        <button @click="drop">刪除問題</button>
+        <!-- href="./b7_question.html" -->
+      </div>
     </div>
-</body>
-
+    </script>
+  </body>
 </html>

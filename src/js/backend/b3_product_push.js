@@ -1,4 +1,16 @@
-function addProduct(){
+function addProduct(){ 
+    
+    // console.log($('.img_fluid').attr("src"));
+    // console.log( $('.img_fluid')[2].src );
+    // console.log($('.img_fluid'))
+    // if(!$('.img_fluid')[1].src){
+    //     $('.img_fluid')[1].src = ""
+    // }
+    let pic = []
+    $('.img_fluid').each(function(index,element){
+            pic.push(element.src);
+    });
+    
     $.ajax({            
         method: "POST",
         url: "./API/b3_product_push.php",
@@ -6,23 +18,26 @@ function addProduct(){
             productName:$('#product_name').val(),
             productType: $('#product_type').val(),
             productFeature: $('#product_feature').val(),
-            productPicture1: $('#product_picture').val(),
-            // productPicture2: $().val(),
-            // productPicture3: $().val(),
-            // productPicture4: $().val(),
+            // productPicture1: $('.img_fluid').attr("src"),
+            productPicture1: pic[0],
+            productPicture2: pic[1],
+            productPicture3: pic[2],
+            productPicture4: pic[3],
+            // productPicture4: $('.img_fluid')[3].src,
             productContent: $('#product_content').val(),
             productPrice: $('#product_price').val(),
         },            
-        dataType: "text",
+        dataType: "json",
         success: function (response) {   
-            console.log("新增成功");
-            // showCate(response);                
+            console.log(response);
+            alert("新增成功");
+            // showCate(response);
         },
         error: function(exception) {
             alert("數據載入失敗: " + exception.status);
         }
     });
-}
+ }
 
 
 //上傳圖片
@@ -41,22 +56,29 @@ new Vue({
             let input = event.target;
             let count = input.files.length;
             let index = 0;
-            if(input.files[0].type == 'image/jpeg' || input.files[0].type =='image/png'){
+            // if(input.files[0].type == 'image/jpeg' || input.files[0].type =='image/png'){
+            if(count <= 4) {
                 // console.log("y");
                 if (input.files) {
-                    while (count--) {
-                        var reader = new FileReader();
-                        reader.onload = (e) => {
-                            this.preview_list.push(e.target.result);
+                    while (index < count) {
+                        if(input.files[index].type == 'image/jpeg' || input.files[index].type =='image/png'){
+                            var reader = new FileReader();
+                            reader.onload = (e) => {
+                                this.preview_list.push(e.target.result);
+                                // console.log(e.target.result)
+                            }
+                            this.image_list.push(input.files[index]);
+                            reader.readAsDataURL(input.files[index]);
+                            // console.log(input.files[index].type)
+                            index++;
+                        } else {
+                            alert("只支援jpg");
+                            break;
                         }
-                        this.image_list.push(input.files[index]);
-                        reader.readAsDataURL(input.files[index]);
-                        // console.log(input.files[index].type)
-                        index++;
                     }
                 }
             }else{console.log("n");
-                alert('僅支援jpg及png')
+                alert('超過4張圖片')
             }
         },
     },
@@ -179,7 +201,6 @@ new Vue({
     el: '#which_product_type_app',
     data: {
         theTypeIndex: 0,
-        // theTypeIndex: ['food', 'use', 'toy', 'cloth', 'gacha'],
         theFeatureIndex: 0,
     },
     watch: {
