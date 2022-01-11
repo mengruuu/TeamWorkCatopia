@@ -271,9 +271,7 @@ window.addEventListener("load", function () {
             data() {
                 return {
                     isSix: this.six,
-                    isEighteen: this.eighteen,
-                    countSix: 0,
-                    countEighteen: 0
+                    isEighteen: this.eighteen
                 }
             },
             methods: {
@@ -287,7 +285,6 @@ window.addEventListener("load", function () {
                     // this.isEighteen = false;
 
                     if (condition === '骨骼') {
-                        this.countSix = this.countSix + 1;
 
                         if (this.isSix) {
                             this.isSix = false;
@@ -299,7 +296,6 @@ window.addEventListener("load", function () {
                             this.isEighteen = false;
                         }
                     } else if (condition === '毛髮') {
-                        this.countEighteen = this.countEighteen + 1;
 
                         if (this.isEighteen) {
                             this.isEighteen = false;
