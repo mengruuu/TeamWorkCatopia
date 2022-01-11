@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/message.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <script src="./library/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
 </head>
 <body>
     <div class = "message_write_background"></div>
@@ -23,6 +24,8 @@
             <textarea class = "message_write_message_content" placeholder = "請輸入訊息..."></textarea>
             <div class = "message_write_img_container">
                 <div class = "message_write_img_container_content">
+                    <!-- <img src = "./images/message/message_upload_img.png">
+                    <p>圖片拖曳處</p> -->
                     <div class = "message_write_img_container_closed">
                         <img src = "./images/message/message_message_write_img_container_closed.png">
                     </div>
@@ -33,7 +36,7 @@
             <label class = "message_write_message_img_file_container" for = "file_upload">
                 <img src = "./images/message/message_upload_file.png">
             </label>
-            <button>確定送出</button>
+            <button id = "confirmPost">確定送出</button>
         </div>
     </div>
     <div class = "message_input_container">
@@ -56,7 +59,7 @@
     </div>
     <!-- vue instance range -->
     <div id = "message_app">
-        <div class = "message_and_comment_container">
+        <!-- <div class = "message_and_comment_container">
             <div class = "message_container" style = "background-image: url(./images/message/message_background_img.png);">
                 <div class = "message_setting_container">
                     <div class = "message_setting_container_content">
@@ -93,7 +96,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <!-- vue instance range -->
     @@include('./layout/footer.html')

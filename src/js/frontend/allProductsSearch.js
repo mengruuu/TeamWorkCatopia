@@ -1,11 +1,15 @@
 async function searchSth() {
-    const input_search_product = document.querySelector("input.input_search_product");
-    const food_search_content = document.querySelector("ul.food_search_content");
-    const food_search_button = document.querySelector("div.food_search_button");
     const data = await fetch("./API/allProducts.php")
                         .then(res => res.json())
                         .then(data => data);
-    input_search_product.addEventListener("input", function () {
+    const input_search_product = document.querySelector("input.input_search_product");
+    const food_search_content = document.querySelector("ul.food_search_content");
+    const food_search_button = document.querySelector("div.food_search_button");
+
+
+
+    
+input_search_product.addEventListener("input", function () {
         const matchData = [];
         const searchValue = input_search_product.value;
         const re = new RegExp(searchValue, `gi`);
