@@ -71,10 +71,27 @@ article.sec_block {
             position: relative;
             height: 500px;
 
-            img {
-                margin: 0 auto;
+            #change_cake_img {
+                // border: 1px solid red;
                 display: block;
-                width: fit-content;
+                width: 70%;
+                margin: 0 auto;
+            }
+            #change_nutrition_img{
+                // border: 1px solid blue;
+                display: none;
+                width: 30%;
+                position: absolute;
+                top: 8%;
+                left: 35%;
+            }
+            #change_food_img{
+                // border: 1px solid blue;
+                display: none;
+                width: 60px;
+                position: absolute;
+                top: 8%;
+                left: 40%;
             }
 
             .reset {
@@ -135,6 +152,9 @@ article.sec_block {
             box-shadow: $shadow_box;
             color: $font_color;
             cursor: pointer;
+            &:hover{
+                background-color: $second_color6;
+            }
         }
     }
 
@@ -199,7 +219,7 @@ article.sec_block {
                     }
                 }
 
-                #next {
+                p {
                     font-size: $font_24;
                     text-align: center;
                     color: $font_color;
@@ -242,10 +262,11 @@ div.background_pop {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    top: 3%;
+    top: 15%;
     z-index: 100;
     width: 95%;
-    height: 70vh;
+    height: 80vh;
+    margin: auto;
     box-shadow: $shadow_box;
     display: none;
     overflow-y: scroll;
@@ -463,6 +484,10 @@ article.sec_block {
                 bottom: 50px;
                 right: 50px;
                 border-radius: 15px;
+                cursor: pointer;
+                &:hover{
+                    background-color: $second_color6;
+                }
             }
         }
     }
