@@ -266,7 +266,7 @@ async function uploadMessageData() {
                     <img class = "message_write_img_content" src = ${readFile.result}>
                 `);
 
-                postInfo.postImg = readFile.result;
+                postInfo.postImg = readFile.result; console.log(readFile.result);
             });
         });
     };
