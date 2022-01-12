@@ -1,6 +1,6 @@
 <?php
     include("../library/Connection.php");
-    
+
     $sql = "SELECT * FROM PRODUCT WHERE PRODUCT_ID = ?";
     $data = [];
     // $name = isset($_POST["Name"])?$_POST["Name"]:$_POST["Name"];

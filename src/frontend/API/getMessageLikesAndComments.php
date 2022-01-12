@@ -1,6 +1,5 @@
 <?php
     include("../library/Connection.php");
-
     $memberID = json_decode(file_get_contents('php://input'));
 
     $sql = "SELECT * FROM `POST_RESPONSE&LIKE` WHERE `RESPONSE&LIKE_MEMBER_ID` = ?";

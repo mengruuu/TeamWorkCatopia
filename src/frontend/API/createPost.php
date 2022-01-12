@@ -1,4 +1,5 @@
 <?php
+
     include("../library/Connection.php");
     // 刪除對應的貼文
     $sql = "INSERT INTO MESSAGE (MEMBER_ID, POST_TIME, POST_PICTURE, POST_CONTENT) VALUES(?, NOW(), ?, ?)";

@@ -1,4 +1,5 @@
 <?php
+
     include("../library/Connection.php");
     $sql = "SELECT * FROM PRODUCT WHERE PRODUCT_TYPE_NAME = ?";
     $data = [];
