@@ -20,6 +20,6 @@
     
 
 
-    echo json_encode($prodcuts[1]['PRODUCT_QUANTITY']);
+    echo json_encode("更新成功");
     
 ?>

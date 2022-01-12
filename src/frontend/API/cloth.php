@@ -1,10 +1,6 @@
 <?php
-    $db_host = "127.0.0.1";
-    $db_user = "root";
-    $db_pass = "gl4su06T";
-    $db_select = "CATOPIA";
-    $dsn = "mysql:host=".$db_host.";dbname=".$db_select;
-    $pdo = new PDO($dsn, $db_user, $db_pass);
+    include("../library/Connection.php");
+
     $sql = "SELECT * FROM PRODUCT WHERE PRODUCT_TYPE_NAME = ?";
     $data = [];
     // $name = isset($_POST["Name"])?$_POST["Name"]:$_POST["Name"];

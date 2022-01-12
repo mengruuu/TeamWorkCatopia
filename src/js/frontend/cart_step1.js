@@ -156,11 +156,11 @@ Vue.component('cart-total',{
                 },
                 dataType:'json',
                 success:function(response){
-                    console.log('傳送成功');
-                    console.log(Products);
+                    console.log(response);
+                    window.location.href = "./cart_step2.html";
                 },
                 error: function(exception) {
-                 alert("發生錯誤: " + exception.status); 
+                 alert("發生錯誤了: " + exception.status); 
              }
             })
         }
@@ -196,7 +196,7 @@ Vue.component('cart-total',{
         </div>
     </div>
     <div class="cart_step1_next_step">
-            <a href="./cart_step2.html"><button type="button" @click="getData">STEP2<br>聯絡人資料</button></a>
+            <a><button type="button" @click="getData">STEP2<br>聯絡人資料</button></a>
     </div>
     </div>
     `,
