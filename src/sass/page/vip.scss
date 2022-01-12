@@ -15,7 +15,12 @@
     .except_bkgimg{
         // border: 1px solid blue;
         width: 80%;
-        margin: 0 auto;
+        max-width: 1200px;
+        margin: 10vh auto;
+        @include w1380() {
+            width: 80%;
+            margin: 0 auto;
+        }
         .title{
             // border: 1px solid yellow;
             display: flex;
@@ -52,6 +57,7 @@
             .leftgalaxy{
                 // border: 1px solid blue;
                 position: relative;
+                cursor: pointer;
                 img{
                     // border: 1px solid black;
                     @include w600() {
@@ -134,6 +140,7 @@
             .rightgalaxy{
                 // border: 1px solid blue;
                 position: relative;
+                cursor: pointer;
                 img{
                     // border: 1px solid black;
                     @include w600() {

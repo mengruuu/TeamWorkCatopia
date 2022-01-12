@@ -14,13 +14,13 @@
     <div class = "register_first_container">
         <div class = "register_first_title">會員註冊</div>
         <div class = "register_first_process">
-            <div class = "register_first_process_item register_first_process_item_current">
+            <div class = "register_first_process_item register_first_process_item_current" style = "background-image: url('./images/register/register_this_step.png');">
                 <p>輸入個人資料</p>
             </div>
-            <div class = "register_first_process_item">
+            <div class = "register_first_process_item" style = "background-image: url('./images/register/register_other_step.png');">
                 <p>確認輸入內容</p>
             </div>
-            <div class = "register_first_process_item">
+            <div class = "register_first_process_item" style = "background-image: url('./images/register/register_other_step.png');">
                 <p>註冊完成</p>
             </div>
         </div>
@@ -64,7 +64,7 @@
             <input type = "checkbox" name = "Agree to terms" id = "Agree_to_terms" required>
             <label for = "Agree_to_terms" style = "font-size: 16px;">我同意會員條款</label>
             <br>
-            <button type = "button" class = "register_step1_next_step_button" onclick="member_email_check()">下一步　確認資料</button>
+            <button type = "button" class = "register_step1_next_step_button">下一步　確認資料</button>
         </form>
     </div>
     @@include('./layout/footer.html')

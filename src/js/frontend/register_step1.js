@@ -75,7 +75,7 @@ function member_email_check() {
                 dataType:'text',
                 success:function(response){
                     if(response){console.log(response);
-                        localStorage.setItem("sessionTest", JSON.stringify(response));
+                        // localStorage.setItem("sessionTest", JSON.stringify(response));
                         window.location.href = "./register_step2.html";
                     }else{
                         alert('此信箱已註冊過');
@@ -91,3 +91,7 @@ function member_email_check() {
         window.alert("有欄位未填寫完成！");
     }
 }
+
+register_step1_next_step_button.addEventListener("click", function(){
+    member_email_check();
+});

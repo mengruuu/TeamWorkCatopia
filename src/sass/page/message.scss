@@ -127,11 +127,24 @@ div.message_write_message_container {
             border: 1px solid $font_color;
             background-color: #fff;
             div.message_write_img_container_content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
                 height: 290px;
                 background-color: lightgray;
                 border: 1px dashed $font_color;
                 text-align: center;
                 transition: all 0.5s ease-in-out;
+                // p {
+                //     font-size: $font_24;
+                //     color: $font_color;
+                // }
+                // img {
+                //     width: 30px;
+                //     height: 30px;
+                //     object-fit: cover;
+                // }
                 div.message_write_img_container_closed {
                     cursor: pointer;
                     height: 30px;
@@ -244,15 +257,18 @@ div.message_and_comment_container {
     flex-direction: column;
     width: 75%;
     margin: 50px auto;
+    background-repeat: no-repeat;
+    background-size: cover;
     div.message_container {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
         padding: 20px 0;
         border-radius: 15px;
+        opacity: 1;
+        transition: opacity 1s;
+        margin: 32px 0;
         div.message_setting_container {
             display: flex;
             justify-content: flex-end;
@@ -282,10 +298,11 @@ div.message_and_comment_container {
                     top: calc(100% + 16px);
                     width: 150%;
                     padding: 0;
-                    background-color: $second_color2;
+                    background-color: $second_color4;
                     border-radius: 10px;
                     overflow: hidden;
                     box-shadow: $shadow;
+                    z-index: 40;
                     li {
                         list-style: none;
                         width: calc(100% - 16px);
@@ -295,7 +312,7 @@ div.message_and_comment_container {
                         text-align: right;
                     }
                     li:hover {
-                        background-color: $main_color;
+                        background-color: $second_color5;
                     }
                 }
                 ul.message_setting_container_content_list_show {
@@ -345,10 +362,95 @@ div.message_and_comment_container {
                 border-radius: 15px;
                 box-shadow: $shadow;
                 cursor: pointer;
-                img {
-                    width: 20px;
-                    height: 20px;
+                div.message_like {
+                    position: relative;
+                    width: 50px;
+                    height: 50px;
                     // object-fit: cover;
+                }
+                div.message_like::before {
+                    content: "";
+                    position: absolute;
+                    left: 62%;
+                    top: 30%;
+                    transform: translate(-50%, -50%);
+                    width: 12px;
+                    height: 20px;
+                    background: lightgray;
+                    border-radius: 50px 50px 0 0;
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                    -webkit-transform-origin: left bottom;
+                    -moz-transform-origin: left bottom;
+                    -o-transform-origin: left bottom;
+                    transform-origin: left bottom;
+                    z-index: 1;
+                }
+                div.message_like::after {
+                    content: "";
+                    position: absolute;
+                    left: 40%;
+                    top: 30%;
+                    transform: translate(-50%, -50%);
+                    width: 12px;
+                    height: 20px;
+                    background: lightgray;
+                    border-radius: 50px 50px 0 0;
+                    -webkit-transform: rotate(45deg);
+                    -moz-transform: rotate(45deg);
+                    -o-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    -webkit-transform-origin: right bottom;
+                    -moz-transform-origin: right bottom;
+                    -o-transform-origin: right bottom;
+                    transform-origin: right bottom;
+                    z-index: 1;
+                }
+                div.message_liked {
+                    position: relative;
+                    width: 50px;
+                    height: 50px;
+                    // object-fit: cover;
+                }
+                div.message_liked::before {
+                    content: "";
+                    position: absolute;
+                    left: 62%;
+                    top: 30%;
+                    transform: translate(-50%, -50%);
+                    width: 12px;
+                    height: 20px;
+                    background: $font_color;
+                    border-radius: 50px 50px 0 0;
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                    -webkit-transform-origin: left bottom;
+                    -moz-transform-origin: left bottom;
+                    -o-transform-origin: left bottom;
+                    transform-origin: left bottom;
+                }
+                div.message_liked::after {
+                    content: "";
+                    position: absolute;
+                    left: 40%;
+                    top: 30%;
+                    transform: translate(-50%, -50%);
+                    width: 12px;
+                    height: 20px;
+                    background: $font_color;
+                    border-radius: 50px 50px 0 0;
+                    -webkit-transform: rotate(45deg);
+                    -moz-transform: rotate(45deg);
+                    -o-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    -webkit-transform-origin: right bottom;
+                    -moz-transform-origin: right bottom;
+                    -o-transform-origin: right bottom;
+                    transform-origin: right bottom;
                 }
                 p {
                     font-size: $font_20;
@@ -374,7 +476,7 @@ div.message_and_comment_container {
                 width: 100%;
                 height: 250px;
                 margin-bottom: 30px;
-                // object-fit: cover;
+                object-fit: cover;
             }
             input {
                 padding: 8px 16px;
@@ -409,6 +511,12 @@ div.message_and_comment_container {
             }
         }
     }
+    div.message_container_hide {
+        opacity: 0;
+    }
+    // div.message_container_delete {
+    //     display: none;
+    // }
 }
 @media (min-width:576px) and (max-width: 800px){
     div.message_input_container {
@@ -481,7 +589,7 @@ div.message_and_comment_container {
             div.message_setting_container {
                 display: flex;
                 justify-content: flex-end;
-                width: 83%;
+                width: 480px;
                 margin-top: 16px;
                 img {
                     cursor: pointer;
@@ -490,11 +598,14 @@ div.message_and_comment_container {
                     object-fit: cover;
                 }
             }
+            div.message_setting_container_hide {
+                display: none;
+            }
             div.message_user_and_time_and_like {
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
-                width: 83%;
+                width: 480px;;
                 margin-bottom: 16px;
                 div.message_img_and_user_and_time {
                     display: flex;
@@ -541,7 +652,7 @@ div.message_and_comment_container {
             div.message_content_and_comment {
                 display: flex;
                 flex-direction: column;
-                width: 70%;
+                width: 400px;
                 border-radius: 15px;
                 background-color: $second_color2;
                 // padding: 20px 40px;
@@ -554,10 +665,9 @@ div.message_and_comment_container {
                 }
                 img.message_content_img {
                     width: 100%;
-                    height: 100%;
-
+                    height: 200px;
                     margin-bottom: 30px;
-                    // object-fit: cover;
+                    object-fit: cover;
                 }
                 input {
                     padding: 8px 16px;
@@ -676,7 +786,7 @@ div.message_and_comment_container {
             div.message_setting_container {
                 display: flex;
                 justify-content: flex-end;
-                width: 90%;
+                width: 280px;
                 margin-top: 16px;
                 img {
                     cursor: pointer;
@@ -685,11 +795,14 @@ div.message_and_comment_container {
                     object-fit: cover;
                 }
             }
+            div.message_setting_container_hide {
+                display: none;
+            }
             div.message_user_and_time_and_like {
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
-                width: 90%;
+                width: 280px;
                 margin-bottom: 16px;
                 div.message_img_and_user_and_time {
                     display: flex;
@@ -736,8 +849,9 @@ div.message_and_comment_container {
             div.message_content_and_comment {
                 display: flex;
                 flex-direction: column;
-                width: 70%;
+                width: 260px;
                 border-radius: 15px;
+                padding: 10px;
                 background-color: $second_color2;
                 // padding: 20px 40px;
                 margin-bottom: 30px;   
@@ -749,7 +863,7 @@ div.message_and_comment_container {
                 }
                 img.message_content_img {
                     width: 100%;
-                    height: 100%;
+                    height: 200px;
 
                     margin-bottom: 30px;
                     // object-fit: cover;
