@@ -349,91 +349,91 @@ value('胖丁','盲抽','399','./images/products/gacha/399/product_gacha_399_9.p
 -- 商品(蛋糕111)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('鮭魚藍莓蔓越莓蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake111.jpg','客製鮮食蛋糕', 666);
+value('鮭魚藍莓蔓越莓蛋糕','客製蛋糕','111','./images/products/diy/diy_cake111.jpg','客製鮮食蛋糕', 666);
 
 -- 商品(蛋糕112)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('鮭魚藍莓芝麻蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake112.jpg','客製鮮食蛋糕', 666);
+value('鮭魚藍莓芝麻蛋糕','客製蛋糕','112','./images/products/diy/diy_cake112.jpg','客製鮮食蛋糕', 666);
 
 -- 商品(蛋糕121)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('鮭魚地瓜蔓越莓蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake121.jpg','客製鮮食蛋糕', 666);
+value('鮭魚地瓜蔓越莓蛋糕','客製蛋糕','121','./images/products/diy/diy_cake121.jpg','客製鮮食蛋糕', 666);
 
 -- 商品(蛋糕122)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('鮭魚地瓜芝麻蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake122.jpg','客製鮮食蛋糕', 666);
+value('鮭魚地瓜芝麻蛋糕','客製蛋糕','122','./images/products/diy/diy_cake122.jpg','客製鮮食蛋糕', 666);
 
 -- 商品(蛋糕131)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('鮭魚貓草蔓越莓蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake131.jpg','客製鮮食蛋糕', 666);
+value('鮭魚貓草蔓越莓蛋糕','客製蛋糕','131','./images/products/diy/diy_cake131.jpg','客製鮮食蛋糕', 666);
 
 -- 商品(蛋糕132)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('鮭魚貓草芝麻蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake132.jpg','客製鮮食蛋糕', 666);
+value('鮭魚貓草芝麻蛋糕','客製蛋糕','132','./images/products/diy/diy_cake132.jpg','客製鮮食蛋糕', 666);
 
 -- 鮪魚基底
 -- 商品(蛋糕211)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('鮪魚藍莓蔓越莓蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake211.jpg','客製鮮食蛋糕', 666);
+value('鮪魚藍莓蔓越莓蛋糕','客製蛋糕','211','./images/products/diy/diy_cake211.jpg','客製鮮食蛋糕', 666);
 
 -- 商品(蛋糕212)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('鮪魚藍莓芝麻蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake212.jpg','客製鮮食蛋糕', 666);
+value('鮪魚藍莓芝麻蛋糕','客製蛋糕','212','./images/products/diy/diy_cake212.jpg','客製鮮食蛋糕', 666);
 
 -- 商品(蛋糕221)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('鮪魚地瓜蔓越莓蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake221.jpg','客製鮮食蛋糕', 666);
+value('鮪魚地瓜蔓越莓蛋糕','客製蛋糕','221','./images/products/diy/diy_cake221.jpg','客製鮮食蛋糕', 666);
 
 -- 商品(蛋糕222)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('鮪魚地瓜芝麻蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake222.jpg','客製鮮食蛋糕', 666);
+value('鮪魚地瓜芝麻蛋糕','客製蛋糕','222','./images/products/diy/diy_cake222.jpg','客製鮮食蛋糕', 666);
 
 -- 商品(蛋糕231)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('鮪魚貓草蔓越莓蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake231.jpg','客製鮮食蛋糕', 666);
+value('鮪魚貓草蔓越莓蛋糕','客製蛋糕','231','./images/products/diy/diy_cake231.jpg','客製鮮食蛋糕', 666);
 
 -- 商品(蛋糕232)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('鮪魚貓草芝麻蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake232.jpg','客製鮮食蛋糕', 666);
+value('鮪魚貓草芝麻蛋糕','客製蛋糕','232','./images/products/diy/diy_cake232.jpg','客製鮮食蛋糕', 666);
 
 -- 雞肉基底
 -- 商品(蛋糕311)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('雞肉藍莓蔓越莓蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake311.jpg','客製鮮食蛋糕', 666);
+value('雞肉藍莓蔓越莓蛋糕','客製蛋糕','311','./images/products/diy/diy_cake311.jpg','客製鮮食蛋糕', 666);
 
 -- 商品(蛋糕312)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('雞肉藍莓芝麻蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake312.jpg','客製鮮食蛋糕', 666);
+value('雞肉藍莓芝麻蛋糕','客製蛋糕','312','./images/products/diy/diy_cake312.jpg','客製鮮食蛋糕', 666);
 
 -- 商品(蛋糕321)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('雞肉地瓜蔓越莓蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake321.jpg','客製鮮食蛋糕', 666);
+value('雞肉地瓜蔓越莓蛋糕','客製蛋糕','321','./images/products/diy/diy_cake321.jpg','客製鮮食蛋糕', 666);
 
 -- 商品(蛋糕322)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('雞肉地瓜芝麻蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake322.jpg','客製鮮食蛋糕', 666);
+value('雞肉地瓜芝麻蛋糕','客製蛋糕','322','./images/products/diy/diy_cake322.jpg','客製鮮食蛋糕', 666);
 
 -- 商品(蛋糕331)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('雞肉貓草蔓越莓蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake331.jpg','客製鮮食蛋糕', 666);
+value('雞肉貓草蔓越莓蛋糕','客製蛋糕','331','./images/products/diy/diy_cake331.jpg','客製鮮食蛋糕', 666);
 
 -- 商品(蛋糕332)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('雞肉貓草芝麻蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake332.jpg','客製鮮食蛋糕', 666);
+value('雞肉貓草芝麻蛋糕','客製蛋糕','332','./images/products/diy/diy_cake332.jpg','客製鮮食蛋糕', 666);

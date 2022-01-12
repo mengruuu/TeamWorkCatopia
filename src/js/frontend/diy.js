@@ -83,6 +83,7 @@ back_btn.addEventListener('click', function(){
     judge_diy_block_number2();
     diy_step_context()
     diy_step_flavor()
+    console.log(cakeNUM + foodNUM + nutritionNUM);
     // console.log(diy_cake);
     // console.log(diy_block_number);
     // console.log(diy_flavor_block);
@@ -93,11 +94,13 @@ next_btn.addEventListener('click', function(){
     judge_diy_block_number2();
     diy_step_context()
     diy_step_flavor()
+    console.log(cakeNUM + foodNUM + nutritionNUM);
     // console.log(diy_cake);
     // console.log(diy_block_number);
     // console.log(diy_flavor_block);
 })
 
+let cakeNUM = "1" ;
 function change_cake(){
     //換蛋糕體
     let change_cake_img = document.getElementById("change_cake_img");
@@ -107,15 +110,19 @@ function change_cake(){
     
     cake_tuna.addEventListener('click', function(){
         change_cake_img.src = "./images/diy_page/images/diy_cake_tuna.png";
+        cakeNUM = "1" ;
     })
     cake_salmon.addEventListener('click', function(){
         change_cake_img.src = "./images/diy_page/images/diy_cake_salmon.png";
+        cakeNUM = "2" ;
     })
     cake_chicken.addEventListener('click', function(){
         change_cake_img.src = "./images/diy_page/images/diy_cake_chicken.png";
+        cakeNUM = "3" ;
     })
 }
 
+let foodNUM = "1" ;
 function change_food(){
     //換食物配料
     let change_food_img = document.getElementById("change_food_img");
@@ -125,18 +132,19 @@ function change_food(){
     
     food_blueberry.addEventListener('click', function(){
         change_food_img.src = "./images/diy_page/images/diy_food_blueberry.png";
-        change_food_img.style.display = "block";
+        foodNUM = "1" ;
     })
     food_sweet_potato.addEventListener('click', function(){
         change_food_img.src = "./images/diy_page/images/diy_food_sweet_potato.png";
-        change_food_img.style.display = "block";
+        foodNUM = "2" ;
     })
     food_grass.addEventListener('click', function(){
         change_food_img.src = "./images/diy_page/images/diy_food_grass.png";
-        change_food_img.style.display = "block";
+        foodNUM = "3" ;
     })
 }
 
+let nutritionNUM = "1" ;
 function change_nutrition(){
     //換營養品
     let change_nutrition_img = document.getElementById("change_nutrition_img");
@@ -145,11 +153,11 @@ function change_nutrition(){
     
     nutrition_cranberry.addEventListener('click', function(){
         change_nutrition_img.src = "./images/diy_page/images/diy_nutrition_cranberry.png";
-        change_nutrition_img.style.display = "block";
+        nutritionNUM = "1" ;
     })
     nutrition_sesame.addEventListener('click', function(){
         change_nutrition_img.src = "./images/diy_page/images/diy_nutrition_sesame.png";
-        change_nutrition_img.style.display = "block";
+        nutritionNUM = "2" ;
     })
 }
 
@@ -158,8 +166,9 @@ function add_cart(){
     let buy = document.getElementById("buy");
     
     buy.addEventListener('click', function(){
-        alert('加入成功');
-        window.location.href = "./cart_step1.html";
+        alert(cakeNUM + foodNUM + nutritionNUM);
+        window.location.href = "./diy.html";
+        // window.location.href = "./cart_step1.html";
     })
 }
 

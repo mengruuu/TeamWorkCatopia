@@ -42,7 +42,7 @@ function change_member_icon(){
                 let pic_name = $('#member_icon')[0].src.substring(pic_name_num + 1);
                 // console.log(pic_name);
                 if(pic_name != 'login_header_icon_member.png'){
-                    $('#member_icon').css("transform","scale(1.5)");
+                    $('#member_icon').css("transform","scale(1.3)");
                     // $('#member_icon')[0].width(60);
                     // console.log($('#member_icon')[0]);
                 }else{
