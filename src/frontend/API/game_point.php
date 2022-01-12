@@ -8,7 +8,7 @@
     $addCOIN = $_POST['addCOIN'];
     $check;
 
-    //建立SQL 找到gacha訂單明細中 PRODUCT_NAME是空值 再依序推進去
+    //建立SQL 遊戲賺到的奴幣寫進資料庫
     $sql_gameCoin = "UPDATE CATOPIA.MEMBER
     set
         CATOPIA_COIN = CATOPIA_COIN + ?

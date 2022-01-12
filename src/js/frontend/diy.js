@@ -170,8 +170,8 @@ let change_food_img = document.getElementById("change_food_img");
 let change_nutrition_img = document.getElementById("change_nutrition_img");
 reset.addEventListener('click', function(){
     change_cake_img.src = "./images/diy_page/images/diy_cake_salmon.png";
-    change_food_img.src = "";
-    change_nutrition_img.src = "";
+    change_food_img.src = "./images/diy_page/images/diy_food_blueberry.png";
+    change_nutrition_img.src = "./images/diy_page/images/diy_nutrition_cranberry.png";
     diy_block_number = 0 ;
     judge_diy_block_number0();
     judge_diy_block_number2();

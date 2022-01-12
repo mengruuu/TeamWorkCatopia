@@ -214,30 +214,34 @@ div.header_icons{
   transform: scale(0.8);
   @include w1100{
   transform: scale(0.9);
-  @include w1000{
-    margin-left: 55%;
-  }
-  @include w900{
-    margin-left: 50%;
-  }
-  @include w800{
-    margin-left: 45%;
-  }
-  @include w800{
-    margin-left: 40%;
-  }
-  @include w700{
-    margin-left: 35%;
-  }
-  @include w600{
-    margin-left: 25%;
-  }
-  @include w500{
-    margin-left: 10%;
-  }
-  @include w400{
-    margin-left: 2%;
-  }
+  margin-left: auto;
+  margin-right: 2%;
+  // @include w1000{
+  //   margin-left: 55%;
+  // }
+  // @include w900{
+  //   margin-left: 50%;
+  // }
+  // @include w800{
+  //   margin-left: 45%;
+  // }
+  // @include w800{
+  //   margin-left: 40%;
+  // }
+  // @include w700{
+  //   margin-left: 35%;
+  // }
+  // @include w600{
+  //   margin-left: 25%;
+  // }
+  // @include w500{
+  //   // margin-left: 15%;
+  //   margin-left: auto;
+  //   margin-right: 2%;
+  // }
+  // @include w400{
+  //   margin-left: 2%;
+  // }
   }
     a.member_icon{
       // border:1px solid blue;
