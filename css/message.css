@@ -661,22 +661,26 @@ div.message_and_comment_container div.message_container div.message_content_and_
   margin: 16px 0 0;
   background-color: #FFF2CC;
   border-radius: 15px;
-  padding: 5px 20px;
+  padding: 5px 16px;
   border: none;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 div.message_and_comment_container div.message_container div.message_content_and_comment div.message_comment_container img {
-  width: 63px;
-  height: 57px;
+  width: 50px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 24px;
 }
 
 div.message_and_comment_container div.message_container div.message_content_and_comment div.message_comment_container p {
   margin: 0;
   font-size: 18px;
   color: #774F40;
+  word-break: break-all;
 }
 
 div.message_and_comment_container div.message_container_hide {
