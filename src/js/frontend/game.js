@@ -12,6 +12,7 @@ var today = new Date();
 // var everyday_add_point_times = 3;
 
 
+
 // function doFirst(){   
     let myGameArea = document.getElementById("canvas");
     context = myGameArea.getContext("2d");
@@ -346,6 +347,11 @@ function updateGameArea(){
             // console.log("gameover");
             clearInterval(myGameArea.interval);
 
+            // 心心變0時抓歷史最高分
+            highscore = 0;
+            HISTORY_HIGHSCORE();
+            // console.log(highscore);
+
             let popup_game_score = document.getElementById('popup_game_score');
             popup_game_score.innerHTML = (score * 10);
             let popup_game_coin = document.getElementById('popup_game_coin');
@@ -353,7 +359,20 @@ function updateGameArea(){
             let gameover_popupBtn = document.getElementById('gameover_background_pop');
             gameover_popupBtn.style.display = "block";
 
-        
+            gameScore = score * 10;
+
+            // console.log(gameScore);
+            // console.log(highscore);
+            // console.log(history_highscore);
+
+            if(gameScore > highscore){
+                HIGHSCORE();
+                // console.log("分數高");
+            }
+            // else{
+                // console.log("分數低");
+            // }
+
             //遊戲結束當下時間的時間
             // 寫一個變數再storage 每玩一次+1 最多加兩次就不能玩
             // new Date(); //抓系統時間 開始遊戲和結束遊戲時比對時間ㄘ
@@ -376,16 +395,61 @@ function updateGameArea(){
             break;
     }
 
-    
+    //先把遊戲最高分抓出來
+    // function HISTORY_HIGHSCORE(){
+    //     fetch('./API/game_history_score.php').then(res => res.json()).then(res =>{
+    //         history_highscore = res;   
+    //     }).catch(function(err){
+    //         console.log('error');
+    //     })
+    // }
 
+    //先把遊戲最高分抓出來
+    function HISTORY_HIGHSCORE(){
+        let history_highscore;
+        $.ajax({
+            method: "GET",
+            url: "API/game_history_score.php",
+            data: {
+            },
+            // dataType: "json",
+            dataType: "text",
+            success: function (response) {
+                // alert(response);
+                history_highscore = response;
+                // alert(history_highscore);
+            },
+            error: function (exception) {
+                alert("HISTORY_HIGHSCORE發生錯誤: " + exception.status);
+            },
+        });
+        return history_highscore;
+    }
 
-    
+    // 遊戲最高分有更新 寫進資料庫
+    function HIGHSCORE() {
+        $.ajax({
+            method:'POST',
+            url:'./API/game_score.php',
+            data:{
+                HIGHSCORE: gameScore,
+            },
+            dataType:'text',
+            // dataType:'json',
+            success:function(response){
+                console.log(response);
+            },
+            error: function(exception) {
+                alert("HIGHSCORE發生錯誤: " + exception.status);  //網路出錯的部分
+            }
+        });
+    }    
 
     // 遊戲賺到的奴幣寫進資料庫
     function addPoint() {
         $.ajax({
             method:'POST',
-            url:'./API/game.php',
+            url:'./API/game_point.php',
             data:{
                 addCOIN:score,
             },

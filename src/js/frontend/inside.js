@@ -31,7 +31,7 @@ async function doQuery() {
         let repeat = false;
 
         let productsList = [];
-
+        login_check_no_direct(cart);
         if(!(localStorage.getItem("cartContent"))) {
           productsList.push(cart);
 
@@ -94,3 +94,46 @@ async function doQuery() {
   }
 }
 document.addEventListener("load", doQuery());
+
+
+function login_check_no_direct(cart){
+  let login;
+  fetch('./API/login_check.php').then(res => res.json()).then(res =>{
+      if(res == ""){
+          console.log('沒登入');
+          login = false;
+      }else{
+          console.log('登入中');
+          login = true;
+          login_add_cart(cart);
+      }
+  }).catch(function(err){
+      console.log('no data found');
+  })
+
+}
+
+function login_add_cart(){
+  console.log("加入購物車函式");
+  let quantity = $('#quantity').val();
+  console.log(quantity);
+  console.log(typeof(quantity));
+  let num = location.search.lastIndexOf('=');
+  let ID = location.search.substring(num + 1);
+  console.log('ID為' + ID);
+    $.ajax({
+      method:'POST',
+      url:'./API/addshopping_cart.php',
+      data:{
+        quantity:quantity,
+        product_ID:ID,
+      },
+      dataType:'json',
+      success:function(response){
+          console.log(response);
+      },
+      error: function(exception) {
+      alert("發生錯誤: " + exception.status); 
+      }
+  })
+}

@@ -25,7 +25,7 @@ function get_member_info(){
         },
         dataType:'json',
         success:function(response){
-            // console.log(response);
+            console.log(response);
             // console.log($('#member_name'));
             // console.log($('#vip_personal_icon'));
             // console.log($('#game_score'));
@@ -36,6 +36,7 @@ function get_member_info(){
             $('#member_name').html(response[0]['MEMBER_NAME']);
             $('#member_mail').html(response[0]['MEMBER_MAIL']);
             $('#member_id').html(response[0]['MEMBER_ID']);
+            $('#member_coin').html(response[0]['CATOPIA_COIN'] + "點");
         },
         error: function(exception) {
          alert("發生錯誤: " + exception.status); 

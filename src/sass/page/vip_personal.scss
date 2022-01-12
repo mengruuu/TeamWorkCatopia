@@ -135,7 +135,7 @@
                             // border: 1px solid blue;
                             .customer_info{
                                 // border: 1px solid red;
-                                margin: 12px 2px;
+                                margin: 10px 2px;
                                 display: inline-block;
                                 @include w400() {
                                     margin: 5px 0;
@@ -178,9 +178,9 @@
                     a{
                         .btn{
                             @include button();
+                            // border: 1px solid blue;
                             // cursor: pointer;
-                            margin-top: 15px;
-                            margin-bottom: 15px;
+                            margin: 5px auto;
                             display: inline-block;
                             font-size: 18px;
                             @include w500() {

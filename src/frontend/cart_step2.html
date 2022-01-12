@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>購物車Step2</title>
-    <link rel="stylesheet" href="./css/style.css">
+    @@include('./layout/meta.html', {
+        "title" : "購物車Step2"
+      })
     <link rel="stylesheet" href="./css/cart_step.css">
+    <script src="./js/frontend/cart_step2.js"></script>
+
 </head>
 
 <body>
@@ -42,19 +42,19 @@
             </div>
             <div class="cart_step2_information">
                 <p class="cart_step2_information_title">帳號</p>
-                <p>aaaaa123@gmail.com</p>
+                <p id="member_mail"></p>
                 <br>
                 <p class="cart_step2_information_title">姓名</p>
-                <p>陳陳陳</p>
+                <p id="member_name"></p>
                 <br>
-                <p class="cart_step2_information_title">生日</p>
+                <!-- <p class="cart_step2_information_title">生日</p>
                 <p>2000/1/1</p>
-                <br>
+                <br> -->
                 <p class="cart_step2_information_title">連絡電話</p>
-                <p>0932000000</p>
+                <p id="member_phone"></p>
                 <br>
                 <p class="cart_step2_information_title">聯絡地址</p>
-                <p>台北市中山區南京東路三段219號5樓</p>
+                <p id="member_address"></p>
             </div>
         </div>
 
@@ -71,18 +71,18 @@
                 <div class="cart_step2_information">
                     <div class="cart_step2_information_title cart_step2_pay">
                         <label>
-                            <input type="radio" name="pay" value="1">
+                            <input type="radio" name="pay" value="信用卡付款" id="credit" checked>
                             信用卡
                             <br>
                         </label>
-                        <input type="text">-
-                        <input type="text">-
-                        <input type="text">-
-                        <input type="text">
+                        <input type="text" id="credit1">-
+                        <input type="text" id="credit2">-
+                        <input type="text" id="credit3">-
+                        <input type="text" id="credit4">
                     </div>
                     <div class="cart_step2_information_title cart_step2_pay">
                         <label>
-                            <input type="radio" name="pay" value="2">
+                            <input type="radio" name="pay" value="貨到付款" >
                             貨到付款
                         </label>
                     </div>
@@ -100,18 +100,18 @@
                                 cart_step2_pay
                                 cart_step2_deliver">
                         <label>
-                            <input type="radio" name="receiver" value="1">
+                            <input type="radio" name="receiver" value="" id="input_order_name" checked>
                             同訂購人<br>
                         </label>
                         <label>
-                            <input type="radio" name="receiver" value="2">
-                            <input type="text">
+                            <input type="radio" name="receiver" value="不同訂購人">
+                            <input type="text" id="order_name">
                         </label>
                     </div>
 
                     <br>
                     <p class="cart_step2_information_title">收件人連絡電話</p>
-                    <input type="text" class="receiver">
+                    <input type="text" class="receiver" id="order_phone">
 
                     <br>
                     <br>
@@ -120,29 +120,29 @@
                                 cart_step2_pay
                                 cart_step2_deliver">
                         <label>
-                            <input type="radio" name="deliver" value="1">
+                            <input type="radio" name="deliver" value="宅配到府">
+                            宅配到府<br>
+                        </label>
+                        <label>
+                            <input type="radio" name="deliver" value="711店到店取貨" checked>
                             711店到店取貨<br>
                         </label>
                         <label>
-                            <input type="radio" name="deliver" value="1">
+                            <input type="radio" name="deliver" value="全家店到店取貨">
                             全家店到店取貨<br>
-                        </label>
-                        <label>
-                            <input type="radio" name="deliver" value="1">
-                            宅配到府<br>
                         </label>
                     </div>
 
                     <br>
-                    <p class="cart_step2_information_title">配送地址</p>
-                    <input type="text" class="receiver receiver_address">
+                    <p class="cart_step2_information_title">配送地址/超商店名</p>
+                    <input type="text" class="receiver receiver_address" id="receiver_address">
                 </div>
 
             </div>
     </div>
 
     <div class="cart_step2_next_step">
-        <a href="./cart_step3.html"><button type="submit">STEP3<br>確認訂購資訊</button></a>
+        <a><button type="button" id="step3" onclick="check_info()">STEP3<br>確認訂購資訊</button></a>
     </div>
 
     <div class="cart_step2_next_step bottom_img">

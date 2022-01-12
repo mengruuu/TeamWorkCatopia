@@ -8,7 +8,7 @@ value('透氣網格寵物外出包','用品','外出包包','./images/products/u
 -- 商品2 (外出包包)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('文青款外出包 雙肩包','用品','外出包包','./images/products/use/outside_bag/product_use_cage2_1.jpeg','./images/products/use/outside_bag/product_use_cage2_2.jpeg','./images/products/use/outside_bag/product_use_cage2_3.jpeg','./images/products/use/outside_bag/product_use_cage2_4.jpeg','一登場就是全場焦點，透氣好看又能跟衣服做搭配的包包，雙面透氣貓貓不怕悶熱', 600);
+value('文青款外出雙肩包','用品','外出包包','./images/products/use/outside_bag/product_use_cage2_1.jpeg','./images/products/use/outside_bag/product_use_cage2_2.jpeg','./images/products/use/outside_bag/product_use_cage2_3.jpeg','./images/products/use/outside_bag/product_use_cage2_4.jpeg','一登場就是全場焦點，透氣好看又能跟衣服做搭配的包包，雙面透氣貓貓不怕悶熱', 600);
 
 -- 商品3 (外出包包)
 insert into 
@@ -18,7 +18,7 @@ value('高透氣摺疊外出包','用品','外出包包','./images/products/use/
 -- 商品4 (外出包包)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('可折疊拉桿外出包 寵物推車','用品','外出包包','./images/products/use/outside_bag/product_use_cage4_1.jpeg','./images/products/use/outside_bag/product_use_cage4_2.jpeg','./images/products/use/outside_bag/product_use_cage4_3.jpeg','./images/products/use/outside_bag/product_use_cage4_4.jpeg','從此擺脫出門回來總是腰痠背痛的困擾，單手拉輕鬆出門，超穩四輪輕鬆滑拉，一路順暢回到家', 1680);
+value('可折疊外出推車','用品','外出包包','./images/products/use/outside_bag/product_use_cage4_1.jpeg','./images/products/use/outside_bag/product_use_cage4_2.jpeg','./images/products/use/outside_bag/product_use_cage4_3.jpeg','./images/products/use/outside_bag/product_use_cage4_4.jpeg','從此擺脫出門回來總是腰痠背痛的困擾，單手拉輕鬆出門，超穩四輪輕鬆滑拉，一路順暢回到家', 1680);
 
 -- 商品5(造型小窩)
 insert into 
@@ -28,7 +28,7 @@ value('花朵深層睡眠窩','用品','小窩','./images/products/use/catnest/p
 -- 商品6(造型小窩)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('日式壽司椅貓窩凳窩','用品','小窩','./images/products/use/catnest/product_use_catnest2_1.png','./images/products/use/catnest/product_use_catnest2_2.png','./images/products/use/catnest/product_use_catnest2_3.png','./images/products/use/catnest/product_use_catnest2_4.png','大飯糰滿滿的安全感，獨特設計的跟寵物共用椅凳+小窩，封閉式設計，營造貓咪獨立小空間', 1580);
+value('日式壽司椅貓窩凳','用品','小窩','./images/products/use/catnest/product_use_catnest2_1.png','./images/products/use/catnest/product_use_catnest2_2.png','./images/products/use/catnest/product_use_catnest2_3.png','./images/products/use/catnest/product_use_catnest2_4.png','大飯糰滿滿的安全感，獨特設計的跟寵物共用椅凳+小窩，封閉式設計，營造貓咪獨立小空間', 1580);
 
 -- 商品7(造型小窩)
 insert into 
@@ -95,7 +95,7 @@ value('雙門貓砂盆櫃','用品','貓砂盆','./images/products/use/toilet/pr
 -- 商品19(貓砂盆)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('貓兒可愛專用貓砂盆','用品','貓砂盆','./images/products/use/toilet/product_use_toilet3_1.jpg','./images/products/use/toilet/product_use_toilet3_2.jpg','./images/products/use/toilet/product_use_toilet3_3.jpg','./images/products/use/toilet/product_use_toilet3_4.jpg','大型貓砂盆，清潔方便，不必擔心異味，覺得是您的主子廁所最佳選擇', 1200);
+value('可愛貓砂盆','用品','貓砂盆','./images/products/use/toilet/product_use_toilet3_1.jpg','./images/products/use/toilet/product_use_toilet3_2.jpg','./images/products/use/toilet/product_use_toilet3_3.jpg','./images/products/use/toilet/product_use_toilet3_4.jpg','大型貓砂盆，清潔方便，不必擔心異味，覺得是您的主子廁所最佳選擇', 1200);
 
 -- 商品20(貓砂盆)
 insert into 
@@ -114,7 +114,6 @@ insert into
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
 
 value('貓兒專用胸背帶2','用品','胸背帶','./images/products/use/strap/product_use_strap2_1.jpeg','./images/products/use/strap/product_use_strap2_2.jpeg','./images/products/use/strap/product_use_strap2_3.jpeg','./images/products/use/strap/product_use_strap2_4.jpeg','符合人體工學，材質柔軟，也讓貓咪可以安心外出，不必擔心外面的事情', 1599);
-
 
 
 -- 商品23(胸背帶)
@@ -230,38 +229,38 @@ value('忍者喵咪造型','裝飾品','衣服','./images/products/cloth/clothes
 -- 商品2(衣服)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('喵咪造型cosplay','裝飾品','衣服','./images/products/cloth/clothes/product_cloth_clothes2_1.jpg','./images/products/cloth/clothes/product_cloth_clothes2_2.jpg','./images/products/cloth/clothes/product_cloth_clothes2_3.jpg','./images/products/cloth/clothes/product_cloth_clothes2_4.jpg','幫你的主子打扮一下吧，過新年穿新衣~', 500);
+value('喵咪造型裝扮衣服','裝飾品','衣服','./images/products/cloth/clothes/product_cloth_clothes2_1.jpg','./images/products/cloth/clothes/product_cloth_clothes2_2.jpg','./images/products/cloth/clothes/product_cloth_clothes2_3.jpg','./images/products/cloth/clothes/product_cloth_clothes2_4.jpg','幫你的主子打扮一下吧，過新年穿新衣~', 500);
 
 -- 商品3(衣服)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('喜氣洋洋喵咪造型','裝飾品','衣服','./images/products/cloth/clothes/product_cloth_clothes3_1.jpg','./images/products/cloth/clothes/product_cloth_clothes3_2.jpg','./images/products/cloth/clothes/product_cloth_clothes3_3.jpg','./images/products/cloth/clothes/product_cloth_clothes3_4.jpg','幫你的主子打扮一下吧，過新年穿新衣~', 500);
+value('喜氣洋洋喵咪衣服','裝飾品','衣服','./images/products/cloth/clothes/product_cloth_clothes3_1.jpg','./images/products/cloth/clothes/product_cloth_clothes3_2.jpg','./images/products/cloth/clothes/product_cloth_clothes3_3.jpg','./images/products/cloth/clothes/product_cloth_clothes3_4.jpg','幫你的主子打扮一下吧，過新年穿新衣~', 500);
 
 -- 商品4(衣服)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('特殊喵咪造型','裝飾品','衣服','./images/products/cloth/clothes/product_cloth_clothes4_1.jpg','./images/products/cloth/clothes/product_cloth_clothes4_2.jpg','./images/products/cloth/clothes/product_cloth_clothes4_3.jpg','./images/products/cloth/clothes/product_cloth_clothes4_4.jpg','幫你的主子打扮一下吧，過新年穿新衣~', 500);
+value('特殊喵咪造型衣服','裝飾品','衣服','./images/products/cloth/clothes/product_cloth_clothes4_1.jpg','./images/products/cloth/clothes/product_cloth_clothes4_2.jpg','./images/products/cloth/clothes/product_cloth_clothes4_3.jpg','./images/products/cloth/clothes/product_cloth_clothes4_4.jpg','幫你的主子打扮一下吧，過新年穿新衣~', 500);
 
 
 -- 商品5(頭套)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('水生動物喵咪造型頭套','裝飾品','頭套','./images/products/cloth/head/product_cloth_head1_1.jpg','./images/products/cloth/head/product_cloth_head1_2.jpg','./images/products/cloth/head/product_cloth_head1_3.jpg','./images/products/cloth/head/product_cloth_head1_4.jpg','可愛造型頭套，兼具溫暖功能，好看又保暖', 500);
+value('水生動物喵咪頭套','裝飾品','頭套','./images/products/cloth/head/product_cloth_head1_1.jpg','./images/products/cloth/head/product_cloth_head1_2.jpg','./images/products/cloth/head/product_cloth_head1_3.jpg','./images/products/cloth/head/product_cloth_head1_4.jpg','可愛造型頭套，兼具溫暖功能，好看又保暖', 500);
 
 -- 商品6(頭套)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('毛茸茸喵咪造型頭套','裝飾品','頭套','./images/products/cloth/head/product_cloth_head2_1.jpg','./images/products/cloth/head/product_cloth_head2_2.jpg','./images/products/cloth/head/product_cloth_head2_3.jpg','./images/products/cloth/head/product_cloth_head2_4.jpg','可愛造型頭套，兼具溫暖功能，好看又保暖', 500);
+value('毛茸茸喵咪頭套','裝飾品','頭套','./images/products/cloth/head/product_cloth_head2_1.jpg','./images/products/cloth/head/product_cloth_head2_2.jpg','./images/products/cloth/head/product_cloth_head2_3.jpg','./images/products/cloth/head/product_cloth_head2_4.jpg','可愛造型頭套，兼具溫暖功能，好看又保暖', 500);
 
 -- 商品7(頭套)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('迪士尼喵咪造型頭套','裝飾品','頭套','./images/products/cloth/head/product_cloth_head3_1.jpg','./images/products/cloth/head/product_cloth_head3_2.jpg','./images/products/cloth/head/product_cloth_head3_3.jpg','./images/products/cloth/head/product_cloth_head3_4.jpg','可愛造型頭套，兼具溫暖功能，好看又保暖', 500);
+value('迪士尼喵咪頭套','裝飾品','頭套','./images/products/cloth/head/product_cloth_head3_1.jpg','./images/products/cloth/head/product_cloth_head3_2.jpg','./images/products/cloth/head/product_cloth_head3_3.jpg','./images/products/cloth/head/product_cloth_head3_4.jpg','可愛造型頭套，兼具溫暖功能，好看又保暖', 500);
 
 -- 商品8(頭套)
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_PICTURE2, PRODUCT_PICTURE3, PRODUCT_PICTURE4, PRODUCT_CONTENT, PRODUCT_PRICE)
-value('蔬菜喵咪造型頭套','裝飾品','頭套','./images/products/cloth/head/product_cloth_head4_1.jpg','./images/products/cloth/head/product_cloth_head4_2.jpg','./images/products/cloth/head/product_cloth_head4_3.jpg','./images/products/cloth/head/product_cloth_head4_4.jpg','可愛造型頭套，兼具溫暖功能，好看又保暖', 500);
+value('蔬菜喵咪頭套','裝飾品','頭套','./images/products/cloth/head/product_cloth_head4_1.jpg','./images/products/cloth/head/product_cloth_head4_2.jpg','./images/products/cloth/head/product_cloth_head4_3.jpg','./images/products/cloth/head/product_cloth_head4_4.jpg','可愛造型頭套，兼具溫暖功能，好看又保暖', 500);
 
 
 -- 商品(盲抽)
@@ -342,3 +341,99 @@ value('狐狸','盲抽','399','./images/products/gacha/399/product_gacha_399_8.p
 insert into 
 PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
 value('胖丁','盲抽','399','./images/products/gacha/399/product_gacha_399_9.png','盲抽商品', 399);
+
+
+-- 商品(客製蛋糕)
+
+-- 鮭魚基底
+-- 商品(蛋糕111)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('鮭魚藍莓蔓越莓蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake111.jpg','客製鮮食蛋糕', 666);
+
+-- 商品(蛋糕112)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('鮭魚藍莓芝麻蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake112.jpg','客製鮮食蛋糕', 666);
+
+-- 商品(蛋糕121)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('鮭魚地瓜蔓越莓蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake121.jpg','客製鮮食蛋糕', 666);
+
+-- 商品(蛋糕122)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('鮭魚地瓜芝麻蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake122.jpg','客製鮮食蛋糕', 666);
+
+-- 商品(蛋糕131)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('鮭魚貓草蔓越莓蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake131.jpg','客製鮮食蛋糕', 666);
+
+-- 商品(蛋糕132)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('鮭魚貓草芝麻蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake132.jpg','客製鮮食蛋糕', 666);
+
+-- 鮪魚基底
+-- 商品(蛋糕211)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('鮪魚藍莓蔓越莓蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake211.jpg','客製鮮食蛋糕', 666);
+
+-- 商品(蛋糕212)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('鮪魚藍莓芝麻蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake212.jpg','客製鮮食蛋糕', 666);
+
+-- 商品(蛋糕221)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('鮪魚地瓜蔓越莓蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake221.jpg','客製鮮食蛋糕', 666);
+
+-- 商品(蛋糕222)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('鮪魚地瓜芝麻蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake222.jpg','客製鮮食蛋糕', 666);
+
+-- 商品(蛋糕231)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('鮪魚貓草蔓越莓蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake231.jpg','客製鮮食蛋糕', 666);
+
+-- 商品(蛋糕232)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('鮪魚貓草芝麻蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake232.jpg','客製鮮食蛋糕', 666);
+
+-- 雞肉基底
+-- 商品(蛋糕311)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('雞肉藍莓蔓越莓蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake311.jpg','客製鮮食蛋糕', 666);
+
+-- 商品(蛋糕312)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('雞肉藍莓芝麻蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake312.jpg','客製鮮食蛋糕', 666);
+
+-- 商品(蛋糕321)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('雞肉地瓜蔓越莓蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake321.jpg','客製鮮食蛋糕', 666);
+
+-- 商品(蛋糕322)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('雞肉地瓜芝麻蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake322.jpg','客製鮮食蛋糕', 666);
+
+-- 商品(蛋糕331)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('雞肉貓草蔓越莓蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake331.jpg','客製鮮食蛋糕', 666);
+
+-- 商品(蛋糕332)
+insert into 
+PRODUCT(PRODUCT_NAME, PRODUCT_TYPE_NAME, PRODUCT_FEATURE, PRODUCT_PICTURE1, PRODUCT_CONTENT, PRODUCT_PRICE)
+value('雞肉貓草芝麻蛋糕','客製蛋糕','客製','./images/products/diy/diy_cake332.jpg','客製鮮食蛋糕', 666);
