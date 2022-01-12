@@ -192,27 +192,14 @@ async function uploadMessageData() {
                     });
                 }, 1000);
             },
-            changelikecounts(postID, updateLikeCounts, index) {console.log(response[0].MEMBER_ID);
+            async changelikecounts(postID, updateLikeCounts, index) {console.log(response[0].MEMBER_ID);
                 const postIdAndUpdateLikeCounts = {
                     postID: postID,
                     updateLikeCounts: updateLikeCounts,
                     memberId: response[0].MEMBER_ID
                 }
 
-                fetch("./API/getMessageLikesAndComments.php",{
-                    method: "POST",
-                    headers: {
-                        "content-type": "application/json"
-                    },
-                    body: JSON.stringify(response[0].MEMBER_ID)
-                })
-                .then(res => res.json())
-                .then(data => {
-                    vm.personalLikes = data;
-                    vm.isLiked(index);
-                });
-
-                fetch("./API/updateLikeCounts.php", {
+                await fetch("./API/updateLikeCounts.php", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"
@@ -222,8 +209,22 @@ async function uploadMessageData() {
                 .then(res => res.json())
                 .then(data => {console.log(data);
                     vm.messageInfo = data;
-                    vm.isLiked(index);
-                    vm.messageInfo = data;
+                });
+
+                await fetch("./API/getMessageLikesAndComments.php",{
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(response[0].MEMBER_ID)
+                })
+                .then(res => res.json())
+                .then(data => {
+                    console.log("data: ", data);
+                    console.log("personalLikesBefore: ", vm.personalLikes);
+                    vm.personalLikes = data;
+                    console.log("data: ", data);
+                    console.log("personalLikesAfter: ", vm.personalLikes);
                 });
             },
             isLiked(index) {
@@ -267,7 +268,7 @@ async function uploadMessageData() {
                     <img class = "message_write_img_content" src = ${readFile.result}>
                 `);
 
-                postInfo.postImg = readFile.result;
+                postInfo.postImg = readFile.result; console.log(readFile.result);
             });
         });
     };

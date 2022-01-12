@@ -1,10 +1,14 @@
 <?php
+<<<<<<< HEAD
     $db_host = "127.0.0.1";
     $db_user = "root";
     $db_pass = "gtr123456";
     $db_select = "CATOPIA";
     $dsn = "mysql:host=".$db_host.";dbname=".$db_select;
     $pdo = new PDO($dsn, $db_user, $db_pass);
+=======
+    include("../library/Connection.php");
+>>>>>>> 1004d3efd199c87730418a139feb9e87ceb602e4
     // 刪除對應的貼文
     $sql = "INSERT INTO MESSAGE (MEMBER_ID, POST_TIME, POST_PICTURE, POST_CONTENT) VALUES(?, NOW(), ?, ?)";
     $postContent = json_decode(file_get_contents('php://input'));//獲取非表單資料

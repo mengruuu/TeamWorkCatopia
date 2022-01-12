@@ -30,19 +30,66 @@ div.register_third_container > div.register_third_process {
 } 
 
 div.register_third_container > div.register_third_process > div.register_third_process_item {
-    width: 285px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 248px;
+    height: 88px;
     text-align: center;
-    background-color: $main_color;
-    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include w1000() {
+        width: 228px;
+        height: 80px;
+    }
+    @include w900() {
+        width: 200px;
+        height: 70px;
+    }
+    @include w800() {
+        width: 180px;
+        height: 60px;
+    }
+    @include w700() {
+        width: 160px;
+        height: 50px;
+    }
+    @include w600(){
+        width: 140px;
+        height: 50px;
+    }
+    @include w500() {
+        width: 100px;
+        height: 35px;
+    }
+    @include w400() {
+        width: 85px;
+        height: 30px;
+    }
 }
 
-div.register_third_container > div.register_third_process > div.register_third_process_item_current {
-    background-color: $important_color;
-}
+// div.register_third_container > div.register_third_process > div.register_third_process_item_current {
+//     background-color: $important_color;
+// }
 
 div.register_third_container > div.register_third_process > div.register_third_process_item > p {
     color: $font_color;
     font-size: $font_24;
+    @include w900() {
+        font-size: $font_22;
+    }
+    @include w800() {
+        font-size: $font_20;
+    }
+    @include w700() {
+        font-size: 16px;
+    }
+    @include w600() {
+        font-size: 14px;
+    }
+    @include w500() {
+        font-size: 12px;
+    }
 }
 
 div.register_third_container > div.register_third_icon_and_continue_shop {
@@ -69,4 +116,23 @@ div.register_third_container > div.register_third_icon_and_continue_shop > butto
     width: 386px;
     height: 90px;
     cursor: pointer;
+    @include w900() {
+        width: 340px;
+        height: 75px;
+        font-size: $font_22;
+    }
+    @include w800() {
+        width: 300px;
+        height: 60px;
+        font-size: $font_20;
+    }
+    @include w500() {
+        width: 260px;
+        height: 60px;
+        font-size: 16px;
+    }
+    @include w400() {
+        width: 220px;
+        height: 55px;
+    }
 }

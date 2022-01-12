@@ -30,15 +30,47 @@ div.register_second_container > div.register_second_process {
 } 
 
 div.register_second_container > div.register_second_process > div.register_second_process_item {
-    width: 285px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 248px;
+    height: 88px;
     text-align: center;
-    background-color: $main_color;
-    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include w1000() {
+        width: 228px;
+        height: 80px;
+    }
+    @include w900() {
+        width: 200px;
+        height: 70px;
+    }
+    @include w800() {
+        width: 180px;
+        height: 60px;
+    }
+    @include w700() {
+        width: 160px;
+        height: 50px;
+    }
+    @include w600(){
+        width: 140px;
+        height: 50px;
+    }
+    @include w500() {
+        width: 100px;
+        height: 35px;
+    }
+    @include w400() {
+        width: 85px;
+        height: 30px;
+    }
 }
 
-div.register_second_container > div.register_second_process > div.register_second_process_item_current {
-    background-color: $important_color;
-}
+// div.register_second_container > div.register_second_process > div.register_second_process_item_current {
+//     background-color: $important_color;
+// }
 
 div.register_second_container > div.register_second_process > div.register_second_process_item > p {
     color: $font_color;
@@ -46,8 +78,17 @@ div.register_second_container > div.register_second_process > div.register_secon
     @include w900() {
         font-size: $font_22;
     }
-    @include w700() {
+    @include w800() {
         font-size: $font_20;
+    }
+    @include w700() {
+        font-size: 16px;
+    }
+    @include w600() {
+        font-size: 14px;
+    }
+    @include w500() {
+        font-size: 12px;
     }
 }
 
@@ -172,16 +213,40 @@ div.register_second_container > form > div.register_second_button_collection > b
     margin: 100px 0;
     width: 386px;
     height: 90px;
+    // @include w1000() {
+    //     width: 340px;
+    // }
+    // @include w900() {
+    //     width: 300px;
+    // }
+    // @include w800() {
+    //     width: 250px;
+    // }
+    // @include w700() {
+    //     margin: 16px 0;
+    // }
     @include w1000() {
-        width: 340px;
-    }
-    @include w900() {
         width: 300px;
     }
+    @include w900() {
+        width: 260px;
+        height: 75px;
+        font-size: $font_22;
+    }
     @include w800() {
-        width: 250px;
+        width: 220px;
+        height: 60px;
+        font-size: $font_20;
     }
     @include w700() {
+        width: 260px;
+        height: 60px;
+        margin: 16px 0;
+        font-size: 16px;
+    }
+    @include w400() {
+        width: 220px;
+        height: 55px;
         margin: 16px 0;
     }
 }
