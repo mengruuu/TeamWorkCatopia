@@ -31,6 +31,7 @@ function judge_diy_block_number2(){
         // next_btn.style.display = 'none';
         next_btn.innerHTML = '';
         next_btn.innerHTML = `<p id="buy">加入購物車</p>`;
+        // next_btn.innerHTML = `<p id="buy" onclick="login_check_no_direct()">加入購物車</p>`;
         add_cart()
     }
 }
@@ -83,7 +84,7 @@ back_btn.addEventListener('click', function(){
     judge_diy_block_number2();
     diy_step_context()
     diy_step_flavor()
-    console.log(cakeNUM + foodNUM + nutritionNUM);
+    // console.log(cakeNUM + foodNUM + nutritionNUM);
     // console.log(diy_cake);
     // console.log(diy_block_number);
     // console.log(diy_flavor_block);
@@ -94,7 +95,7 @@ next_btn.addEventListener('click', function(){
     judge_diy_block_number2();
     diy_step_context()
     diy_step_flavor()
-    console.log(cakeNUM + foodNUM + nutritionNUM);
+    // console.log(cakeNUM + foodNUM + nutritionNUM);
     // console.log(diy_cake);
     // console.log(diy_block_number);
     // console.log(diy_flavor_block);
@@ -166,8 +167,36 @@ function add_cart(){
     let buy = document.getElementById("buy");
     
     buy.addEventListener('click', function(){
-        alert(cakeNUM + foodNUM + nutritionNUM);
-        window.location.href = "./diy.html";
+        // alert(cakeNUM + foodNUM + nutritionNUM);
+        let cake_feature = cakeNUM + foodNUM + nutritionNUM;
+        // console.log(cake_feature);
+
+        let diy_cake_array = [];
+        //輸出客製蛋糕代號
+        $.ajax({
+            method: "POST",
+            url: "API/diy_cake_select.php",
+            data: {
+                PRODUCT_FEATURE = cake_feature,
+            },
+            dataType: "json",
+            // dataType: "text",
+            success: function (response) {
+                for(let i = 0; i < response.length; i++){
+                    diy_cake_array.push(response[i]);
+                }
+                console.log(diy_cake_array);
+                // alert(response);
+                // console.log(response);
+                // history_highscore = response;
+                // alert(history_highscore);
+            },
+            error: function (exception) {
+                alert("HISTORY_HIGHSCORE發生錯誤: " + exception.status);
+            },
+        });
+
+        // window.location.href = "./diy.html";
         // window.location.href = "./cart_step1.html";
     })
 }
@@ -187,6 +216,49 @@ reset.addEventListener('click', function(){
     diy_step_context();
     diy_step_flavor();
 })
+
+//抓出客製蛋糕的PRODUCT資料表的資料
+
+
+//加入購物車
+function login_check_no_direct(){
+    let login;
+    fetch('./API/login_check.php').then(res => res.json()).then(res =>{
+        if(res == ""){
+            console.log('沒登入');
+            login = false;
+        }else{
+            console.log('登入中');
+            login = true;
+            login_add_cart();
+        }
+    }).catch(function(err){
+        console.log('no data found');
+    })
+  
+}
+  
+function login_add_cart(){
+console.log("加入購物車函式");
+    $.ajax({
+        method:'POST',
+        url:'./API/addshopping_cart.php',
+        data:{
+          quantity:quantity,
+          product_ID:ID,
+        },
+        dataType:'json',
+        success:function(response){
+            console.log(response);
+        },
+        error: function(exception) {
+        alert("發生錯誤: " + exception.status); 
+        }
+    })
+}
+
+
+
 
 
 
