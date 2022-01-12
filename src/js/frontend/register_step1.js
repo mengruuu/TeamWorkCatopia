@@ -59,7 +59,7 @@ function member_email_check() {
     const emailReg = new RegExp(/@/, 'g');
     const passwordReg = new RegExp(/[A-Z]{2}\d{8,}/,'g');
     const name = new RegExp(/^[\u4E00-\u9FA5A-Za-z]{2,5}$/, "g");
-    const phoneReg = new RegExp(/\d{9}/, 'g');
+    const phoneReg = new RegExp(/\d{10}/, 'g');
     if($('#email').val() && $('#pwd').val() && $('#name').val() && $('#phone').val() && $('#address').val()) {
         if(emailReg.test($('#email').val()) && phoneReg.test($('#phone').val()) && passwordReg.test($('#pwd').val()) && name.test($('#name').val())) {
             $.ajax({

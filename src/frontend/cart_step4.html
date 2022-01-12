@@ -2,13 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>購物車Step4</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/cart_step.css">
+    @@include('./layout/meta.html', {
+        "title" : "購物車Step4"
+      })
 
+    <link rel="stylesheet" href="./css/cart_step.css">
+    <script src="./js/frontend/cart_step4.js" async></script>
 </head>
 
 <body>
@@ -33,7 +32,7 @@
 
     <div class="cart_step4_container">
         <p>訂購成功!!</p>
-        <p>訂單編號：O0001</p>
+        <p id="order_ID">訂單編號：</p>
         <div class="cart_step1_next_step
                     cart_step4_next_step">
             <a href="./index.html"><button type="submit">繼續逛逛</button></a>
