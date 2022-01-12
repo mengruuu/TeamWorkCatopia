@@ -160,10 +160,15 @@ table td {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
+  text-align: left;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.backend_table .number {
+  text-align: center;
+  width: 80px;
 }
 
 .table_title {
@@ -173,6 +178,7 @@ table td {
 .backend_table img {
   width: 50px;
   margin: 0;
+  cursor: pointer;
 }
 
 img.vip_icon {

@@ -22,6 +22,7 @@ async function doQuery() {
     },
     methods: {
       addCart() {
+        
         const cart = {
           dataInfo: data[0],
           count: this.quantity,
@@ -59,6 +60,7 @@ async function doQuery() {
             localStorage.setItem("cartContent", JSON.stringify(productsList));
           }
         }
+        alert('已成功加入購物車');
       }
     },
     computed: {

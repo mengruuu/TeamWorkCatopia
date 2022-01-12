@@ -77,6 +77,14 @@ p.knowledge_first_block_title_text {
           transform: translateX(-10%);
 }
 
+.knowledge_first_block_contentbhox .knowledge_first_block_contentbhox_in img {
+  width: 793px;
+  height: 509px;
+  border-radius: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .knowledge_first_block_contentbhox .knowledge_first_block_contentbhox_in .knowledge_first_block_contentbhox_in_text {
   background-color: #EAE4D2;
   width: 570px;
@@ -181,6 +189,14 @@ p.knowledge_sec_block_title_text {
 .knowledge_sec_block_contentbhox .knowledge_sec_block_contentbhox_in {
   -webkit-transform: translateX(-10%);
           transform: translateX(-10%);
+}
+
+.knowledge_sec_block_contentbhox .knowledge_sec_block_contentbhox_in img {
+  width: 793px;
+  height: 509px;
+  border-radius: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .knowledge_sec_block_contentbhox .knowledge_sec_block_contentbhox_in .knowledge_sec_block_contentbhox_in_text {

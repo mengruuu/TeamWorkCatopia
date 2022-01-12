@@ -36,7 +36,7 @@ header {
   background-color: #EAE4D2;
 }
 
-.product_push_container {
+.knowledge_push_container {
   background-color: #FFF2CC;
 }
 
@@ -55,18 +55,23 @@ header {
           align-items: start;
 }
 
-.product_push_title {
+#knowledge_edit_pic p {
+  -ms-flex-preferred-size: 23px;
+      flex-basis: 23px;
+}
+
+.knowledge_push_title {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.product_push_title {
+.knowledge_push_title {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
 }
 
-.product_push_container {
+.knowledge_push_container {
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 50px;
@@ -74,39 +79,39 @@ header {
   border-radius: 30px;
 }
 
-.product_push_container .knowledge_edit_block_title, .product_push_container .knowledge_edit_block_text {
+.knowledge_push_container .knowledge_edit_block_title, .knowledge_push_container .knowledge_edit_block_text {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   padding: 10px;
 }
 
-.product_push_container .knowledge_edit_block_title.vip_edit_block_remark, .product_push_container .knowledge_edit_block_text.vip_edit_block_remark {
+.knowledge_push_container .knowledge_edit_block_title.vip_edit_block_remark, .knowledge_push_container .knowledge_edit_block_text.vip_edit_block_remark {
   padding: 20px 10px;
 }
 
-.product_push_container .knowledge_edit_block_title.vip_edit_block_remark textarea, .product_push_container .knowledge_edit_block_text.vip_edit_block_remark textarea {
+.knowledge_push_container .knowledge_edit_block_title.vip_edit_block_remark textarea, .knowledge_push_container .knowledge_edit_block_text.vip_edit_block_remark textarea {
   background-color: #EAE4D2;
   border: 1px solid #FFF2CC;
   color: #774F40;
   font-size: 16px;
 }
 
-.product_push_container .knowledge_edit_block_title input, .product_push_container .knowledge_edit_block_text input {
+.knowledge_push_container .knowledge_edit_block_title input, .knowledge_push_container .knowledge_edit_block_text input {
   border: 1px solid #774F40;
   font-size: 16px;
   padding: 5px 10px;
   color: #774F40;
 }
 
-.product_push_container .knowledge_edit_block_title select, .product_push_container .knowledge_edit_block_text select {
+.knowledge_push_container .knowledge_edit_block_title select, .knowledge_push_container .knowledge_edit_block_text select {
   border: 1px solid #774F40;
   font-size: 16px;
   padding: 5px 10px;
   color: #774F40;
 }
 
-.product_push_container .knowledge_edit_block_title button, .product_push_container .knowledge_edit_block_text button {
+.knowledge_push_container .knowledge_edit_block_title button, .knowledge_push_container .knowledge_edit_block_text button {
   border: none;
   background-color: #EAE4D2;
   padding: 5px 10px;
@@ -115,13 +120,13 @@ header {
   cursor: pointer;
 }
 
-.product_push_container .knowledge_edit_block_text {
+.knowledge_push_container .knowledge_edit_block_text {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
 }
 
-.product_push_container .knowledge_edit_block_title {
+.knowledge_push_container .knowledge_edit_block_title {
   text-align: right;
 }
 
