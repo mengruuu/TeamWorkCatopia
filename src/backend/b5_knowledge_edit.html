@@ -1,58 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    @@include('./layout/meta.html', {
-    "title" : "Catopia B5-1-1專欄文章編輯"
-    })
-    <link rel="stylesheet" href="../css/backend/b5_knowledge_edit.css">
-</head>
-
-<body>
+  <head>
+    @@include('./layout/meta.html', { "title" : "Catopia B5-1-1專欄文章編輯" })
+    <link rel="stylesheet" href="../css/backend/b5_knowledge_edit.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+  </head>
+  <body>
     @@include('./layout/backend_header.html')
-
-    <div class="knowledge_edit_page_title
-                knowledge_edit_block">
-        <div class="product_push_title">
-            <p>B5-1-1專欄文章編輯</p>
-        </div>
+    <div class="knowledge_edit_page_title knowledge_edit_block">
+      <div class="knowledge_push_title">
+        <p>B5-1-1專欄文章編輯</p>
+      </div>
     </div>
-
-    <div class="product_push_container">
-        <div class="knowledge_edit_block">
-            <p class="knowledge_edit_block_title">文章序號:</p>
-            <p class="knowledge_edit_block_text">1</p>
+    <div class="knowledge_push_container" id="knowledge_push_container_app">
+      <div class="knowledge_edit_block">
+        <p class="knowledge_edit_block_title">文章序號:</p>
+        <p class="knowledge_edit_block_text">1</p>
+      </div>
+      <div class="knowledge_edit_block">
+        <p class="knowledge_edit_block_title">文章編號:</p>
+        <p class="knowledge_edit_block_text">PU0001</p>
+      </div>
+      <div class="knowledge_edit_block" id="knowledge_edit_pic">
+        <p class="knowledge_edit_block_title">文章圖片:</p>
+        <img :src="preview_list" class="img_fluid" />
+        <div class="knowledge_edit_block_text">
+          <input
+            id="change"
+            type="file"
+            @change="previewMultiImage"
+            id="knowledge_picture"
+          />
         </div>
-
-        <div class="knowledge_edit_block">
-            <p class="knowledge_edit_block_title">文章編號:</p>
-            <p class="knowledge_edit_block_text">PU0001</p>
+      </div>
+      <div class="knowledge_edit_block text_area">
+        <p class="knowledge_edit_block_title">文章標題:</p>
+        <div class="knowledge_edit_block_text vip_edit_block_remark">
+          <textarea
+            cols="60"
+            rows="3"
+            style="resize: none; border-radius: 5px"
+            v-model="title"
+          ></textarea>
         </div>
-
-        <div class="knowledge_edit_block">
-            <p class="knowledge_edit_block_title">文章圖片:</p>
-            <div class="knowledge_edit_block_text">
-                <button>上傳圖片</button>
-                <!-- <ul>
-                    <li><img src="" alt=""></li>
-                </ul> -->
-            </div>
+      </div>
+      <div class="knowledge_edit_block text_area">
+        <p class="knowledge_edit_block_title">文章內容:</p>
+        <div class="knowledge_edit_block_text vip_edit_block_remark">
+          <textarea
+            cols="60"
+            rows="10"
+            style="resize: none; border-radius: 5px"
+            v-model="content"
+          ></textarea>
         </div>
-
-        <div class="knowledge_edit_block 
-                    text_area">
-            <p class="knowledge_edit_block_title">文章內容:</p>
-            <div class="knowledge_edit_block_text  
-                        vip_edit_block_remark">
-                <textarea cols="60" rows="10"></textarea>
-            </div>
-        </div>
-
-        <div class="back_edit_button">
-            <a href="./b5_knowledge.html"><button type="submit">取消</button></a>
-            <a href="./b5_knowledge.html"><button type="submit">修改</button></a>
-        </div>
+      </div>
+      <div class="back_edit_button">
+        <a href="./b5_knowledge.html"><button type="submit">取消</button></a>
+        <a><button type="submit" @click="upDated">修改</button></a>
+      </div>
+      <!-- href="./b5_knowledge.html" -->
     </div>
-</body>
-
+    <script>
+      value = JSON.parse(localStorage.getItem("toKnowledgeContent"));
+      const vm = new Vue({
+        el: "#knowledge_push_container_app",
+        data() {
+          return {
+            title: value.ARTICLE_TITLE,
+            content: value.ARTICLE_CONTENT,
+            idNumber: value.ARTICLE_ID,
+            preview_list: '',
+          };
+        },
+        methods: {
+          previewMultiImage(){
+            let input = event.target;
+            if(input.files[0].type == 'image/jpeg' || input.files[0].type =='image/png'){
+              var reader = new FileReader();
+              reader.onload = (e) => {
+              this.preview_list = e.target.result;
+              }
+              reader.readAsDataURL(input.files[0]);
+            } else {
+              alert("只支援jpg");
+            }
+          },
+          upDated() {
+            $.ajax({
+              method: "POST",
+              url: "./API/b5_knowledge_edit.php",
+              data: {
+                title: this.title,
+                content: this.content,
+                img: this.preview_list,
+                idNumber: this.idNumber
+              },
+              dataType: "text",
+              success: function (response) {
+                console.log(response);
+                alert("修改成功");
+                location.href="./b5_knowledge.html";
+              },
+              error: function (exception) {
+                alert("數據載入失敗: " + exception.status);
+              },
+            });
+          },
+        },
+      });
+    </script>
+  </body>
 </html>

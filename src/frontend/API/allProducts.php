@@ -1,14 +1,5 @@
 <?php
-<<<<<<< HEAD
-    $db_host = "127.0.0.1";
-    $db_user = "root";
-    $db_pass = "gtr123456";
-    $db_select = "CATOPIA";
-    $dsn = "mysql:host=".$db_host.";dbname=".$db_select;
-    $pdo = new PDO($dsn, $db_user, $db_pass);
-=======
     include("../library/Connection.php");
->>>>>>> 1004d3efd199c87730418a139feb9e87ceb602e4
     $sql = "SELECT * FROM PRODUCT";
     $data = [];
     // $name = isset($_POST["Name"])?$_POST["Name"]:$_POST["Name"];

@@ -90,6 +90,7 @@ header {
   border: 1px solid #FFF2CC;
   color: #774F40;
   font-size: 16px;
+  border-radius: 5px;
 }
 
 .question_edit_container .question_edit_block_title input, .question_edit_container .question_edit_block_text input {
@@ -127,7 +128,13 @@ header {
 
 .back_edit_button {
   text-align: center;
-  padding: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  -webkit-transform: translateX(130px);
+          transform: translateX(130px);
+  padding-bottom: 30px;
 }
 
 .back_edit_button button {
