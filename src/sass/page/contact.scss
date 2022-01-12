@@ -1,131 +1,396 @@
 @import '../base/var';
 @import '../mixin/mixin';
+@import '../layout/header';
+@import '../layout/footer';
 
-.contact_main{
-    // border: 1px solid blue;
-    width: 80%;
-    margin: 0 auto;
-    font-size: $font_24;
-    color: $font_color;
-    text-align: center;
-    background-image: url("../images/contact/contact_background.png");
-    background-repeat: no-repeat;
-    .info{
-        // border: 1px solid maroon;
-        // display: flex;
-        display: inline-block;
-        font-size: $font_20;
-        margin: 120px auto;
-        width: 40%;
-        @include w800() {
-            width: 50%;
+$pc-media:960px;
+$pcs-media:959px;
+$pad-media:760px;
+$pads-media:759px;
+$phone-media:480px;
+$phones-media:479px;
+
+ @mixin pc-width{
+  @media all and (min-width: $pc-media) {
+               @content;
+         }
+    }
+ @mixin pcs-width{
+        @media all and (min-width:$pcs-media) and (max-width: $pad-media) {
+                        @content;
+                  }
         }
-        @include w700() {
-            width: 60%;
+           
+
+ @mixin pad-width{
+@media all and (min-width:$pad-media) and (max-width: $pcs-media) {
+                @content;
+          }
+}
+
+ @mixin small-pad-width {
+        @media all and (min-width: $phone-media) and (max-width:$pads-media) {
+                @content;
+          }
+ }
+
+ @mixin phone-width {
+        @media all and (max-width: $phones-media) {
+                @content;
+          }
+ }
+p{
+    font-size: 16px;
+}
+div.contact_main{
+    position: relative; 
+    div.contact_background img{
+        //background-image: url('../images/contact/contact_background.png');
+        //background-repeat: no-repeat;
+        //z-index: 3;
+        position: absolute;
+        @include pc-width(){
         }
-        @include w600() {
-            width: 70%;
+        @include pcs-width(){
         }
-        @include w500() {
-            width: 80%;
+        @include pad-width(){
+            display: none;
+            height: fit-content;
         }
-        @include w400() {
-            width: 100%;
+        @include small-pad-width(){
+            display: none;
         }
-        // text-align: right;
-        .left_outer{
-            // border: 1px solid green;
-            background-color: $font_color;
-            border-radius: 15px;
-            padding: 10px;
-            vertical-align: middle;
-            position: absolute;
-            margin: 70px auto;
-            margin-left: -10%;
-            @include w1200() {
-                position: relative;
-                margin: 0 auto;
-                margin-top: 70px;
+        @include phone-width(){
+            display: none;
+        }
+
+    }
+    div.contact_rwd{        
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        @include pc-width(){
+            width: 100% !important;
+        }
+        @include pcs-width(){
+            width: 100% !important;
+        }
+        @include pad-width(){
+            width: 100% !important;
+            display: block;
+        }
+        @include small-pad-width(){
+            width: 90% !important;
+            display: block;
+        }
+        @include phone-width(){
+            display: block;
+            width: 30% !important;
+        }
+        div.contact_text{
+            margin: 0 auto;
+            margin-bottom: 50px !important;
+            padding-top: 5px;
+            border: 10px solid #774f40;
+            background-color: #EDDAB8;
+            width: 400px;
+            height:430px;
+            border-radius: 10px;
+            position:relative;
+            top: 280px;
+            left: 80px;
+            justify-content: center;
+            text-align: center;
+            font-size: 1rem;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            z-index: 2;
+            transform: translate(-70%,-40%);
+            @include pc-width(){
+                top: 280px;
+                left: 80px;
             }
-            .info_left{
-                // border: 1px solid blue;
-                background-color: $second_color3;
-                border-radius: 15px;
-                padding: 10px 20px;
-                .info_bottom{
-                    // border: 1px solid maroon;
-                    background-color: $main_color;
-                    border-radius: 15px;
-                    padding: 20px;
-                    margin-top: 10px;
-                    .left_text{
-                        // border: 1px solid black;
-                        text-align: left;
-                    }
+            @include pcs-width(){
+                width: 30%;
+                height: 30%;
+            }
+            @include pad-width(){
+                display: block;
+                position: static;
+                text-align: center;
+                align-items: center;
+                width: 350px;
+                height: 430px;
+                transform: none;
+            }
+            @include small-pad-width(){
+                display: block;
+                position: static;
+                text-align: center;
+                align-items: center;
+                width: 350px;
+                height: 430px;
+                transform: none;
+            }
+            @include phone-width(){
+                display: block;
+                position: static;
+                text-align: center;
+                align-items: center;
+                width: 350px;
+                height: 430px;
+                transform: none;
+            }
+            div.contact_bg{
+                background-color: #FFF2CC;
+                font-size: 18px;
+                width: 280px;
+                height:172px;
+                text-align: left;
+                padding-left: 50px;
+                justify-content: center;
+                align-items: center;
+                margin: 0, auto;
+                color: #774f40;
+                border-radius: 10px;
+                @include pc-width(){
+                    width: 280px;
+                    height: 172px;
+                }
+                @include pcs-width(){
+                    width: 280px;
+                    height: 172px;
+                }
+                @include pad-width(){
+                    width: 180px;
+                    height: 172px;
+                    margin-left: 50px;
+                    padding-left: 50px;
+                }
+                @include small-pad-width(){
+                    width: 150px;
+                    height: 172px;
+                    margin-left: 50px;
+                    padding-left: 50px;
+                }
+                @include phone-width(){
+                    width: 150px;
+                    height: 172px;
+                    padding-left: 5px;
+                    margin-left: 50px;
                 }
             }
         }
-        .right_outer{
-            // border: 1px solid blue;
-            background-color: $font_color;
-            border-radius: 15px;
-            padding: 10px;
-            width: 80%;
-            margin-left: 40%;
-            vertical-align: middle;
-            @include w1200() {
-                width: 93%;
-                margin: 20px auto;
+        p.contact_p{
+            color:#774f40;
+            font-size: 32px;
+            text-align: center;
+        }
+        div.contact_form{
+            background-color: #EDDAB8; 
+            margin: 0 auto ;
+            margin-bottom: 50px !important;
+            text-align: center ;
+            justify-content: center;
+            display: block;
+            width: 580px;
+            height: 686px;
+            border: 10px solid #774f40;
+            border-radius: 10px;
+            font-size: 1rem;
+            z-index: 1;
+            transform: translate(30%, -70%);
+            @include pc-width(){
+                width: 580px;
+                height: 686px;
             }
-            .info_right{
-                // border: 1px solid blue;
-                background-color: $second_color3;
-                border-radius: 15px;
-                padding: 40px 10%;
-                // padding-top: 20px;
-                .right_title{
-                    // border: 1px solid blue;
-                    margin-bottom: 20px;
-                    .title_text{
-                        // border: 1px solid red;
-                        background-color: $main_color;
+            @include pcs-width(){
+                width: 580px;
+                height: 686px;
+            }
+            @include pad-width(){
+                width: 350px;
+                height: 686px;
+                display: block;
+                position: static;
+                transform: none;
+            }
+            @include small-pad-width(){
+                width: 350px;
+                height: 686px;
+                display: block;
+                position: static;
+                transform: none;
+            }
+            @include phone-width(){
+                width: 350px;
+                height: 686px;
+                display: block;
+                position: static;
+                transform: none;
+            }
+            div.contact_form_bg{
+                padding-top: 70px;
+                background-color: #EDDAB8;
+                    input.contact_form_info{
+                        color: #774f40;
+                        font-weight: bold;
+                        background-color: #FFF2CC;
+                        width: 200px;
+                        height: 42px;
                         border-radius: 10px;
-                        margin: 0 auto;
-                        padding: 5px 10px;
+                        border: #774f40 1px solid;
+                        transform: translateX(50px);
+                        @include pc-width(){
+                            width: 200px;
+                            height: 42px;
+                        }
+                        @include pcs-width(){
+                            width: 200px;
+                            height: 42px;
+                        }
+
+                        @include pad-width(){
+                            width: 200px;
+                            height: 42px;
+                            transform: none;
+                        }
+                        @include small-pad-width(){
+                            width: 180px;
+                            height: 42px;
+                            transform: none;
+                        }
+                        @include phone-width(){
+                            width: 150px;
+                            height: 42px;
+                            transform: none;
+                        }
                     }
-                }
-                .cus_info{
-                    // border: 1px solid green;
-                    text-align: center;
-                    // overflow: hidden;
-                    color: $font_color;
-                    text-align: left;
-                    input{
-                        color: $font_color;
-                        border-radius: 5px;
-                        border: 0;
-                        width: inherit;
-                        width: 100%;
+                    input.contact_form_name{
+                        font-size: 16px;
+                        background-color: #FFF;
+                        color: #774f40;
+                        width: 360px;
+                        height: 48px;
+                        border: #774f40 1px solid;
+                        border-radius: 10px;
+                        transform: translateX(50px);
+                        @include pc-width(){
+                            width: 360px;
+                        }
+                        @include pcs-width(){
+                            width: 360px;
+                        }
+                        @include pad-width(){
+                            width: 250px;
+                            transform: none;
+                        }
+                        @include small-pad-width(){
+                            width: 200px;
+                            transform: none;
+                        }
+                        @include phone-width(){
+                            width: 150px;
+                            transform: none;
+                            font-size: 10px;
+                        }
                     }
-                    textarea{
-                        color: $font_color;
-                        border-radius: 5px;
-                        border: 0;
-                        width: 100%;
+                    input.contact_form_email{
+                        font-size: 16px;
+                        background-color: #FFF;
+                        color: #774f40;
+                        width: 360px;
+                        height: 48px;
+                        border: #774f40 1px solid;
+                        border-radius: 10px;
+                        transform: translateX(50px);
+                        @include pc-width(){
+                            width: 360px;
+                        }
+                        @include pcs-width(){
+                            width: 360px;
+                        }
+                        @include pad-width(){
+                            width: 250px;
+                            transform: none;
+                        }
+                        @include small-pad-width(){
+                            width: 200px;
+                            transform: none;
+                        }
+                        @include phone-width(){
+                            width: 150px;
+                            transform: none;
+                        }
                     }
-                    
-                }
-                .info_btn{
-                    // border: 1px solid green;
-                    // padding: 0 120px;
-                    .btn_text{
-                        @include button(); 
-                        cursor: pointer;
-                        // border: 1px solid blue; 
-                        margin: 20px auto;
+                    textarea.contact_form_textarea{
+                        resize: none;
+                        background-color: #FFF;
+                        font-size: 16px;
+                        color: #774f40;
+                        width: 360px;
+                        height: 246px;
+                        border: #774f40 1px solid;
+                        border-radius: 10px;
+                        transform: translateX(50px);
+                        @include pc-width(){
+                            width: 360px;
+                        }
+                        @include pcs-width(){
+                            width: 360px;
+                        }
+                        @include pad-width(){
+                            width: 250px;
+                            transform: none;
+                        }
+                        @include small-pad-width(){
+                            width: 200px;
+                            transform: none;
+                        }
+                        @include phone-width(){
+                            width: 150px;
+                            transform: none;
+                        }
                     }
-                }
+                    button.contact_form_submit{
+                        font-size: 32px;
+                        color: #774f40;
+                        width: 190px;
+                        height: 57px;
+                        background-color:#FED67E !important;
+                        box-shadow: #CCC;
+                        border-radius: 10px;
+                        @include pc-width(){
+                            width: 190px;
+                        }
+                        @include pcs-width(){
+                            width: 190px;
+                        }
+                        @include pad-width(){
+                            width: 190px;
+                        }
+                        @include small-pad-width(){
+                            width: 100px;
+                        }
+                        @include phone-width(){
+                            width: 100px;
+                            font-size: 24px;
+                        }
+                    }
+    margin: 0 auto ;
+    margin-bottom: 50px !important;
+    justify-content: center ;
+    text-align: center ;
+    padding-top: 50px;
+    padding-left: 0;
+    max-width: 100%;
             }
         }
     }
 }
+
+
+
+

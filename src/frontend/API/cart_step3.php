@@ -3,14 +3,16 @@
     include("../library/Connection.php");
     $MEMBER_ID = getMemberID();
     // $order_info = $_POST['order_info'];
-
+    $data = json_decode(file_get_contents("php://input"));
     //找到TOTALPRICE
     $sql_shopping = "SELECT * FROM CATOPIA.v_product_shopping_cart";
     $statement_shopping = $pdo -> prepare($sql_shopping);
     $statement_shopping ->execute();
     $data_shopping = $statement_shopping ->fetchAll();
-    $give_back_coin = intval($data_shopping[0]['TOTAL_PRICE']) / 10;
+    // $give_back_coin = intval($data_shopping[0]['TOTAL_PRICE']) / 10;
 
+    $give_back_coin = ($data -> total_price) / 10;
+    $total_price = $data -> total_price;
     //INSERT INTO ORDER
     $sql_insert_order = "INSERT INTO `ORDER`(MEMBER_ID, ORDER_TIME, ORDER_MODE, TOTAL_PRICE, COIN_GIVEBACK, COIN_DISCOUNT)
     VALUE(?, NOW(), ?, ?, ?, ?);";
@@ -18,12 +20,10 @@
     $statement_insert_order->bindValue(1, $MEMBER_ID);
     // $statement_insert_order->bindValue(2, 'NOW()'); 
     $statement_insert_order->bindValue(2, "準備中");    
-    $statement_insert_order->bindValue(3, $data_shopping[0]['TOTAL_PRICE']);    
+    $statement_insert_order->bindValue(3, $total_price);    
     $statement_insert_order->bindValue(4, $give_back_coin);
     $statement_insert_order->bindValue(5, $data_shopping[0]['DISCOUNT_COIN']);    
     $statement_insert_order->execute();
-
-
 
 
     $sql_get_order_ID = "SELECT last_insert_id();";
