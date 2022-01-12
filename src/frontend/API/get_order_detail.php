@@ -12,4 +12,8 @@
         echo json_encode($data_order_detail);
     }
 
+    $delete_shopping_cart = "DELETE * from SHOPPING_CART";
+    $statement_delete_shopping = $pdo ->prepare($delete_shopping_cart);
+    $statement_delete_shopping->execute();
+
 ?>

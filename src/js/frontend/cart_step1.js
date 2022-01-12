@@ -41,19 +41,37 @@ Vue.component('cart-product',{
                 if(this.products_quantity[i] == 0){
                     this.delete = confirm("確認要刪除此商品嗎?");
                       if(this.delete){
-                          this.delete_product = false;
+                        $.ajax({
+                            method:'POST',
+                            url:'./API/shopping_cart_delete.php',
+                            data:{
+                                product_ID:this.products[i]['PRODUCT_ID'],
+                            },
+                            dataType:'json',
+                            success:function(response){
+                                console.log('傳送成功');
+                            },
+                            error: function(exception) {
+                             alert("發生錯誤: " + exception.status); 
+                         }
+                        })
+                          
+                          
+                        this.delete_product = false;
                           this.products.splice(i,1);
                           this.products_img.splice(i,1);
                           this.products_price.splice(i,1);
                           this.products_quantity.splice(i,1);
                           console.log('刪除商品');
-                          this.delete = false;
+
                       }else{
                         this.products_quantity[i] = 1;
                         this.total_price += this.products_price[i] * this.products_quantity[i];
                     }
                 }
             }
+
+
             
         }
     },
@@ -78,7 +96,7 @@ Vue.component('cart-product',{
                     </div>
                 </div>
             </div>
-            <cart-total :totalPrice= "total_price"></cart-total>
+            <cart-total :totalPrice= "total_price" :products="products" :products_quantity = "products_quantity"></cart-total>
         </div>
     `,
     
@@ -108,11 +126,12 @@ Vue.component('cart-product',{
 
 
 Vue.component('cart-total',{
-    props:['totalPrice'],
+    props:['totalPrice','products','products_quantity'],
     data(){
         return{
             catopia_coin:0,
             discount_coin:0,
+            // left_coin: ,
 
         };
     },
@@ -123,6 +142,27 @@ Vue.component('cart-total',{
                 alert('請輸入小於'+ this.catopia_coin + '的點數')
                 this.discount_coin = this.catopia_coin;
             }
+        },
+        getData(){
+            console.log(this.products);
+            $.ajax({
+                method:'POST',
+                url:'./API/shopping_cart_update.php',
+                data:{
+                    Products:this.products,
+                    Totalprice:this.totalPrice,
+                    discount_coin:this.discount_coin,
+                    products_quantity:this.products_quantity,
+                },
+                dataType:'json',
+                success:function(response){
+                    console.log('傳送成功');
+                    console.log(Products);
+                },
+                error: function(exception) {
+                 alert("發生錯誤: " + exception.status); 
+             }
+            })
         }
     },
     template:`
@@ -154,6 +194,9 @@ Vue.component('cart-total',{
             <p>訂單總額</p>
             <p>{{this.totalPrice - discount_coin}}元</p>
         </div>
+    </div>
+    <div class="cart_step1_next_step">
+            <a href="./cart_step2.html"><button type="button" @click="getData">STEP2<br>聯絡人資料</button></a>
     </div>
     </div>
     `,
@@ -212,15 +255,17 @@ let vm = new Vue({
     },
 });
 
-let vm2 = new Vue({
-    el:'#cart_step1_next_step',
-    data:{
+// let vm2 = new Vue({
+//     el:'#cart_step1_next_step',
+//     data:{
 
-    },
-    template:`
-        <div class="cart_step1_next_step">
-            <a href="./cart_step2.html"><button type="button">STEP2<br>聯絡人資料</button></a>
-        </div>
-    `
+//     },
+//     methods: {
 
-})
+//     },
+//     template:`
+//         <div class="cart_step1_next_step">
+//             <a href="./cart_step2.html"><button type="button" >STEP2<br>聯絡人資料</button></a>
+//         </div>
+//     `
+// })
