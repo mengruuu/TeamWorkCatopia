@@ -84,7 +84,7 @@ async function uploadMessageData() {
                     <img :class = "{message_content_img: true}" :src = postPicture>
                     <input :class = "{comment_input: true}" placeholder = "回應貼文..." @keyup = "inputComment">
                     <div :class = "{message_comment_container: true}" v-for = "(comment, index) in comments">
-                        <p :class = "{message_comment_item: true}">{{ comment }}</p>
+                        <p :class = "{message_comment_item: true}">{{ comment.comment }}</p>
                     </div>
                 </div>
             </div>
@@ -166,7 +166,6 @@ async function uploadMessageData() {
                     const inputValue = e.target.value;
 
                     e.target.value = "";
-                    
                     this.$emit("insertComment", inputValue, this.memberId, this.postId, this.index);
                 }
             }
@@ -190,6 +189,7 @@ async function uploadMessageData() {
                     :isPostHide = "isPostHide"
                     :personalLikes = "isLiked(index)"
                     :comments = "updateComments(index)"
+                    :commentsPic = "upDateCommentsPic"
                     @deletepost = "deletePost"
                     @changeLikeCounts = "changelikecounts"
                     @insertComment = "insertcomment"
@@ -293,13 +293,20 @@ async function uploadMessageData() {
                 for(let i = 0; i < this.personalComments.length; i = i + 1) {
                     if(this.personalComments[i].POST_ID === this.messageInfo[index].POST_ID) {
                         if(this.personalComments[i].POST_RESPONSE_CONTENT){
-                            comments.push(this.personalComments[i].POST_RESPONSE_CONTENT);
+                            const data = {
+                                id: this.personalComments[i]["RESPONSE&LIKE_MEMBER_ID"],
+                                comment: this.personalComments[i].POST_RESPONSE_CONTENT
+                            }
+                            comments.push(data);
                         }
                     }
                 }
+
+                this.upDateCommentsPic(comments);
                 
                 return comments;
-            }
+            },
+            upDateCommentsPic(comments) {}
         }
     });
 

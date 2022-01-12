@@ -485,6 +485,7 @@ div.message_and_comment_container {
                 border-radius: 20px;
                 outline: none;
                 border: none;
+                margin-bottom: 16px;
             }
             input::placeholder {
                 color: $font_color;
@@ -493,11 +494,11 @@ div.message_and_comment_container {
                 display: flex;
                 align-items: center;
                 flex-wrap: nowrap;
-                margin: 16px 0;
-                background-color: #fff;
+                margin: 16px 0 0;
+                background-color: $main_color;
                 border-radius: 15px;
                 padding: 5px 20px;
-                border: 1px solid;
+                border: none;
                 justify-content: space-between;
                 img {
                     
@@ -505,6 +506,7 @@ div.message_and_comment_container {
                     height: 57px;
                 }
                 p {
+                    margin: 0;
                     font-size: $font_20;
                     color: $font_color;
                 }
@@ -866,7 +868,7 @@ div.message_and_comment_container {
                     height: 200px;
 
                     margin-bottom: 30px;
-                    // object-fit: cover;
+                    object-fit: cover;
                 }
                 input {
                     padding: 8px 16px;
