@@ -234,7 +234,17 @@ Vue.component('button-order',{
     },
     methods: {
         submit_order_data(){
-            fetch('./API/cart_step3.php').then(res => res.json()).then(res =>{
+            let data = {
+                total_price : this.total_price,
+                discount_coin : this.discount_coin
+            };
+            fetch('./API/cart_step3.php',{
+                method: 'POST',
+                headers:{
+                    'content-type':'application/json'
+                },
+                body: JSON.stringify(data),
+            }).then(res => res.json()).then(res =>{
                 console.log(res);
                 this.order_ID = parseInt(res[0]['last_insert_id()']);
                 console.log(this.order_ID);
@@ -284,6 +294,7 @@ Vue.component('button-order',{
 
             }).catch(function(err){
                 console.log('no data found');
+                console.log(data);
             })
         },
 
@@ -303,9 +314,9 @@ Vue.component('button-order',{
                     this.products_name.push(res[i]['PRODUCT_NAME']);
                     this.products_quantity.push(res[i]['PRODUCT_QUANTITY']);
                 }
-                this.total_price = parseInt(res[0]['TOTAL_PRICE']);
+                this.total_price = parseInt(res[0]['TOTAL_PRICE']) - parseInt(res[0]['DISCOUNT_COIN']);
                 this.discount_coin = parseInt(res[0]['DISCOUNT_COIN']);
-                this.give_back_coin = parseInt(res[0]['TOTAL_PRICE']) / 10;
+                this.give_back_coin = this.total_price / 10;
                 // console.log(this.products_name);
         }).catch(function(err){
             console.log('no data found');
