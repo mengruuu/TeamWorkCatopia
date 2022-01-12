@@ -10,7 +10,7 @@
     background-color: $second_color1;
 }
 
-.product_push_container{
+.knowledge_push_container{
     background-color: $main_color;
 }
 
@@ -24,14 +24,18 @@
     }
 }
 
-
-.product_push_title {
+#knowledge_edit_pic{
+     p{
+        flex-basis: 23px;
+    }
+}
+.knowledge_push_title {
     // border: 1px solid black;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.product_push_title {
+.knowledge_push_title {
     // border: 1px solid #aaa;
     font-size: $font_20;
     font-weight: bold;
@@ -39,7 +43,7 @@
 }
 
 
-.product_push_container {
+.knowledge_push_container {
     // border: 1px solid red;
     max-width: 1200px;
     margin: 0 auto;

@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
     // $db_host = "127.0.0.1";
     // $db_user = "root";
     // $db_pass = "password";
@@ -6,6 +7,10 @@
     // $dsn = "mysql:host=".$db_host.";dbname=".$db_select;
     // $pdo = new PDO($dsn, $db_user, $db_pass);
     include("../library/Connection.php");
+=======
+include("../library/Connection.php");
+    $pdo = new PDO($dsn, $db_user, $db_pass);
+>>>>>>> 1a401a4f3548af9d742eb9c740febf9a827916f4
 
     // 寫入MESSAGE裡
     $sql = "UPDATE MESSAGE SET POST_LIKE = ? WHERE POST_ID = ?";

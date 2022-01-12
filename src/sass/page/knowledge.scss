@@ -71,7 +71,12 @@ p.knowledge_first_block_title_text {
 
     .knowledge_first_block_contentbhox_in {
         transform: translateX(-10%);
-
+        img{
+            width: 793px;
+            height: 509px;
+            border-radius: 30px;
+            object-fit: cover;
+        }
         .knowledge_first_block_contentbhox_in_text {
             background-color: $second_color1;
             width: 570px;
@@ -149,6 +154,7 @@ p.knowledge_first_block_title_text {
             top: -80px;
             right: 5%;
             z-index: -5;
+            
         }
     }
 }
@@ -170,7 +176,12 @@ p.knowledge_sec_block_title_text {
 
     .knowledge_sec_block_contentbhox_in {
         transform: translateX(-10%);
-
+        img{
+            width: 793px;
+            height: 509px;
+            border-radius: 30px;
+            object-fit: cover;
+        }
         .knowledge_sec_block_contentbhox_in_text {
             background-color: $second_color1;
             width: 570px;

@@ -86,12 +86,26 @@ article.sec_block .sec_block_content_1 .sec_block_contnent_img {
   height: 500px;
 }
 
-article.sec_block .sec_block_content_1 .sec_block_contnent_img img {
-  margin: 0 auto;
+article.sec_block .sec_block_content_1 .sec_block_contnent_img #change_cake_img {
   display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 70%;
+  margin: 0 auto;
+}
+
+article.sec_block .sec_block_content_1 .sec_block_contnent_img #change_nutrition_img {
+  display: none;
+  width: 30%;
+  position: absolute;
+  top: 8%;
+  left: 35%;
+}
+
+article.sec_block .sec_block_content_1 .sec_block_contnent_img #change_food_img {
+  display: none;
+  width: 60px;
+  position: absolute;
+  top: 8%;
+  left: 40%;
 }
 
 article.sec_block .sec_block_content_1 .sec_block_contnent_img .reset {
@@ -159,6 +173,10 @@ article.sec_block .sec_block_content_1 .sec_block_contnent_img .reset {
           box-shadow: 1px 1px 1px lightgray;
   color: #774F40;
   cursor: pointer;
+}
+
+.sec_block_content_2 .content_part_2 p:hover {
+  background-color: #B7C88E;
 }
 
 .sec_block_content_2 .btn_block {
@@ -253,7 +271,7 @@ article.sec_block .sec_block_content_1 .sec_block_contnent_img .reset {
   line-height: 100%;
 }
 
-.sec_block_content_2 .btn_block .btn_block_flex .button_2 #next {
+.sec_block_content_2 .btn_block .btn_block_flex .button_2 p {
   font-size: 22px;
   text-align: center;
   color: #774F40;
@@ -301,10 +319,11 @@ div.background_pop {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  top: 3%;
+  top: 15%;
   z-index: 100;
   width: 95%;
-  height: 70vh;
+  height: 80vh;
+  margin: auto;
   -webkit-box-shadow: 1px 1px 1px lightgray;
           box-shadow: 1px 1px 1px lightgray;
   display: none;
@@ -567,6 +586,10 @@ div.background_pop .decorate_2 {
     bottom: 50px;
     right: 50px;
     border-radius: 15px;
+    cursor: pointer;
+  }
+  article.sec_block .sec_block_content_1 .sec_block_contnent_img .reset:hover {
+    background-color: #B7C88E;
   }
   .sec_block_content_2 .content_part_1 {
     background-color: #EAE4D2;

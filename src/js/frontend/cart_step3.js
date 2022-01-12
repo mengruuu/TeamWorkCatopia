@@ -70,8 +70,8 @@ Vue.component('confirm-product',{
         fetch('./API/shopping_cart.php').then(res => res.json()).then(res =>{
             console.log(res);
             this.products = res;
-            this.total_price = res[0]['TOTAL_PRICE'];
-            this.discount_coin = res[0]['DISCOUNT_COIN'];
+            this.total_price = parseInt(res[0]['TOTAL_PRICE']);
+            this.discount_coin = parseInt(res[0]['DISCOUNT_COIN']);
         }).catch(function(err){
             console.log('no data found');
         })
@@ -113,7 +113,7 @@ Vue.component('confirm-product-total',{
         <div class="cart_step1_total_price">
             <div class="cart_step1_order_price">
                 <p>訂單總額</p>
-                <p>{{totalPrice}}元</p>
+                <p>{{totalPrice - discountCoin}}元</p>
             </div>
         </div>
     </div>
@@ -234,10 +234,37 @@ Vue.component('button-order',{
     },
     methods: {
         submit_order_data(){
-            fetch('./API/cart_step3.php').then(res => res.json()).then(res =>{
+            let data = {
+                total_price : this.total_price,
+                discount_coin : this.discount_coin
+            };
+            fetch('./API/cart_step3.php',{
+                method: 'POST',
+                headers:{
+                    'content-type':'application/json'
+                },
+                body: JSON.stringify(data),
+            }).then(res => res.json()).then(res =>{
                 console.log(res);
                 this.order_ID = parseInt(res[0]['last_insert_id()']);
                 console.log(this.order_ID);
+
+                $.ajax({
+                    method:'POST',
+                    url:'./API/cart_step3_updateCoin_deleteShopping.php',
+                    data:{
+                        discount_coin:this.discount_coin,
+                    },
+                    dataType:'json',
+                    success:function(response){
+                        console.log(response);
+                    },
+                    error: function(exception) {
+                        alert("發生錯誤: " + exception.status); 
+                        console.log(this);
+                    }
+                })
+                
                 $.ajax({
                     method:'POST',
                     url:'./API/cart_step3_order_detail.php',
@@ -251,24 +278,6 @@ Vue.component('button-order',{
                     success:function(response){
                         console.log('order_deatil新增成功')
                         console.log(response);
-
-                    },
-                    error: function(exception) {
-                        alert("發生錯誤: " + exception.status); 
-                        console.log(this);
-                    }
-                })
-
-
-                $.ajax({
-                    method:'POST',
-                    url:'./API/cart_step3_delete_shopping.php',
-                    data:{
-                        
-                    },
-                    dataType:'json',
-                    success:function(response){
-                        console.log(response);
                         window.location.href = `./cart_step4.html?orderID=${response}`;
 
                     },
@@ -279,9 +288,13 @@ Vue.component('button-order',{
                 })
 
 
+                
+
+
 
             }).catch(function(err){
                 console.log('no data found');
+                console.log(data);
             })
         },
 
@@ -295,16 +308,15 @@ Vue.component('button-order',{
     `,
     mounted() {
         fetch('./API/cart_step3_select_shopping.php').then(res => res.json()).then(res =>{
-            // console.log(res);
+            console.log(res);
 
                 for(i=0; i < res.length ; i++){
                     this.products_name.push(res[i]['PRODUCT_NAME']);
                     this.products_quantity.push(res[i]['PRODUCT_QUANTITY']);
-
                 }
-                this.total_price = res[0]['TOTAL_PRICE'];
-                this.discount_coin = res[0]['DISCOUNT_COIN'];
-                this.give_back_coin = parseInt(res[0]['TOTAL_PRICE']) / 10;
+                this.total_price = parseInt(res[0]['TOTAL_PRICE']) - parseInt(res[0]['DISCOUNT_COIN']);
+                this.discount_coin = parseInt(res[0]['DISCOUNT_COIN']);
+                this.give_back_coin = this.total_price / 10;
                 // console.log(this.products_name);
         }).catch(function(err){
             console.log('no data found');

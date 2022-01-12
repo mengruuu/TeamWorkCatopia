@@ -1,4 +1,5 @@
 <?php
+
     include("../library/Connection.php");
     // 刪除對應的貼文
     $postID = json_decode(file_get_contents('php://input'));//獲取非表單資料
