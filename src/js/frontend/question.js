@@ -79,9 +79,9 @@ $(":text")
   });
 
   // 點擊more_question_contact_button前往聯絡頁面
-  more_question_contact_button.addEventListener("click", function () {
-    window.location.href = "/dist/contact.html";
-  });
+  // more_question_contact_button.addEventListener("click", function () {
+  //   window.location.href = "./dist/contact.html";
+  // });
 
   // 點擊空白處來關閉ai_answer對話框
   document.querySelector("body").addEventListener(

@@ -8,6 +8,7 @@
     background-color: $important_color;
     color: $font_color;
     border: 0px;
+    cursor: pointer;
 }
 //網頁標題
 @mixin title(){
