@@ -1,6 +1,16 @@
 <?php
+<<<<<<< HEAD
+    // $db_host = "127.0.0.1";
+    // $db_user = "root";
+    // $db_pass = "password";
+    // $db_select = "CATOPIA";
+    // $dsn = "mysql:host=".$db_host.";dbname=".$db_select;
+    // $pdo = new PDO($dsn, $db_user, $db_pass);
+    include("../library/Connection.php");
+=======
 include("../library/Connection.php");
     $pdo = new PDO($dsn, $db_user, $db_pass);
+>>>>>>> 1a401a4f3548af9d742eb9c740febf9a827916f4
 
     // 寫入MESSAGE裡
     $sql = "UPDATE MESSAGE SET POST_LIKE = ? WHERE POST_ID = ?";
@@ -38,8 +48,8 @@ include("../library/Connection.php");
             }
         }
     }else {
-        $sql = "INSERT INTO `POST_RESPONSE&LIKE`(POST_ID, `RESPONSE&LIKE_MEMBER_ID`, POST_RESPONSE_CONTENT, LIKE_MODE)
-                VALUES(?, ?, null, 1)";
+        $sql = "INSERT INTO `POST_RESPONSE&LIKE`(POST_ID, `RESPONSE&LIKE_MEMBER_ID`, LIKE_MODE)
+                VALUES(?, ?, 1)";
         $statment = $pdo->prepare($sql);
         $statment->bindValue(1, $likeCountsAndPostId -> postID);
         $statment->bindValue(2, $likeCountsAndPostId -> memberId);
@@ -47,7 +57,7 @@ include("../library/Connection.php");
     }
     
     // 獲取更新後的message資料----------------------------------------------------------
-    $sql = "SELECT * FROM MESSAGE";
+    $sql = "SELECT * FROM `V_MESSAGE_MEMBER`";
     $statment = $pdo->prepare($sql);
     $statment->execute();
     $data = $statment->fetchAll();

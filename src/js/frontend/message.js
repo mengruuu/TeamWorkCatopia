@@ -39,6 +39,11 @@ async function uploadMessageData() {
         .then(data => data);
         console.log("likeHistory: ", personalLikes);
 
+    const personalComments = 
+        await fetch("./API/getComments.php")
+            .then(res => res.json())
+            .then(data => data);
+
     // 顯示留言板的部分，使用Vue寫--------------------------------------------------------------------------------------
     const Feature = Vue.component('messageContent', {
         data() {
@@ -63,7 +68,7 @@ async function uploadMessageData() {
                     <div :class = "{message_img_and_user_and_time: true}">
                         <img :class = "{message_user_img: true}" src = "./images/message/message_personal_example_photo.png">
                         <div :class = "{message_user_and_time: true}">
-                            <p>{{ memberId }}</p>
+                            <p>{{ memberName }}</p>
                             <p>{{ postTime }}</p>
                         </div>
                     </div>
@@ -77,6 +82,10 @@ async function uploadMessageData() {
                         <p>{{ postContent }}</p>
                     </div>
                     <img :class = "{message_content_img: true}" :src = postPicture>
+                    <input :class = "{comment_input: true}" placeholder = "回應貼文..." @keyup = "inputComment">
+                    <div :class = "{message_comment_container: true}" v-for = "(comment, index) in comments">
+                        <p :class = "{message_comment_item: true}">{{ comment }}</p>
+                    </div>
                 </div>
             </div>
         `, 
@@ -113,11 +122,17 @@ async function uploadMessageData() {
             },
             personalLikes: {
                 type: Boolean
+            },
+            memberName: {
+                type: String
+            },
+            comments: {
+                type: Array
             }
         },
         computed: {
             settingIsHide() {
-                if(this.memberId === response[0].MEMBER_ID) {console.log("y");
+                if(this.memberId === response[0].MEMBER_ID) {
                     return false;
                 }else {console.log("n");
                     return true;
@@ -145,6 +160,15 @@ async function uploadMessageData() {
                 }else {
                     this.$emit("changeLikeCounts", this.postId, Number(this.postLike) + 1, this.index);
                 }
+            },
+            inputComment(e) {
+                if(e.keyCode === 13 && e.target.value){
+                    const inputValue = e.target.value;
+
+                    e.target.value = "";
+                    
+                    this.$emit("insertComment", inputValue, this.memberId, this.postId, this.index);
+                }
             }
         },
     });
@@ -155,16 +179,20 @@ async function uploadMessageData() {
             <div :class = "{message_and_comment_container: true}">
                 <message-content v-for = "(message, index) in messageInfo" 
                     :memberId = "message.MEMBER_ID"
+                    :memberName = "message.MEMBER_NAME"
                     :postLike = "message.POST_LIKE"
                     :postPicture = "message.POST_PICTURE"
                     :postTime = "message.POST_TIME"
                     :postContent = "message.POST_CONTENT"
                     :postId = "message.POST_ID"
                     :index = "index"
+                    :key="index"
                     :isPostHide = "isPostHide"
                     :personalLikes = "isLiked(index)"
+                    :comments = "updateComments(index)"
                     @deletepost = "deletePost"
                     @changeLikeCounts = "changelikecounts"
+                    @insertComment = "insertcomment"
                 />
             </div>
         `,
@@ -172,27 +200,47 @@ async function uploadMessageData() {
             return {
                 messageInfo: messageInfo,
                 personalLikes: personalLikes,
+                personalComments: personalComments,
                 isPostHide: false
             }
         },
         methods: {
-            deletePost(postID) {
-                // this.isPostHide = true;
-                setTimeout(function() {
-                    fetch("./API/deleteMessage.php", {
-                        method: "POST",
-                        headers: {
-                            "content-type": "application/json"
-                        },
-                        body: JSON.stringify(postID)
-                    })
-                    .then(res => res.json())
-                    .then(data => {console.log(data);
-                        vm.messageInfo = data;
-                    });
-                }, 1000);
+            async insertcomment(commentContent, memberId, postId, index) {
+                const data = {
+                    content: commentContent,
+                    memberId: memberId,
+                    postId: postId
+                }
+                await fetch("./API/insertComment.php", {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(res => res.json())
+                .then(data => { 
+                    vm.personalComments = data;
+                });
+
+                this.updateComments(index);
             },
-            async changelikecounts(postID, updateLikeCounts, index) {console.log(response[0].MEMBER_ID);
+            deletePost(postID) {
+                // setTimeout(function() {
+                fetch("./API/deleteMessage.php", {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(postID)
+                })
+                .then(res => res.json())
+                .then(data => {console.log(data);
+                    vm.messageInfo = data;
+                });
+                // }, 1000);
+            },
+            async changelikecounts(postID, updateLikeCounts, index) {
                 const postIdAndUpdateLikeCounts = {
                     postID: postID,
                     updateLikeCounts: updateLikeCounts,
@@ -228,7 +276,7 @@ async function uploadMessageData() {
                 });
             },
             isLiked(index) {
-                let isLiked = false;console.log("sssssss");
+                let isLiked = false;
 
                 for(let i = 0; i < this.personalLikes.length; i = i + 1) {
                     if(this.personalLikes[i].POST_ID === this.messageInfo[index].POST_ID && this.personalLikes[i].LIKE_MODE === "1") {
@@ -238,6 +286,19 @@ async function uploadMessageData() {
                 }
 
                 return isLiked;
+            },
+            updateComments(index) {
+                let comments = [];
+
+                for(let i = 0; i < this.personalComments.length; i = i + 1) {
+                    if(this.personalComments[i].POST_ID === this.messageInfo[index].POST_ID) {
+                        if(this.personalComments[i].POST_RESPONSE_CONTENT){
+                            comments.push(this.personalComments[i].POST_RESPONSE_CONTENT);
+                        }
+                    }
+                }
+                
+                return comments;
             }
         }
     });

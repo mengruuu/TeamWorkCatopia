@@ -27,3 +27,11 @@ select *
 from
 	CATOPIA.MESSAGE
     natural join CATOPIA.`POST_RESPONSE&LIKE`;
+
+
+create view `V_MESSAGE_MEMBER`
+AS
+select * 
+from 
+	CATOPIA.MESSAGE
+	natural join CATOPIA.MEMBER;
