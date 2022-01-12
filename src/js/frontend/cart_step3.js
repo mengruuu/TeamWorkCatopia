@@ -251,6 +251,24 @@ Vue.component('button-order',{
                     success:function(response){
                         console.log('order_deatil新增成功')
                         console.log(response);
+
+                    },
+                    error: function(exception) {
+                        alert("發生錯誤: " + exception.status); 
+                        console.log(this);
+                    }
+                })
+
+
+                $.ajax({
+                    method:'POST',
+                    url:'./API/cart_step3_delete_shopping.php',
+                    data:{
+                        
+                    },
+                    dataType:'json',
+                    success:function(response){
+                        console.log(response);
                         window.location.href = `./cart_step4.html?orderID=${response}`;
 
                     },
@@ -259,6 +277,9 @@ Vue.component('button-order',{
                         console.log(this);
                     }
                 })
+
+
+
             }).catch(function(err){
                 console.log('no data found');
             })
