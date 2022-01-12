@@ -1,4 +1,3 @@
-
 response = "";
 function login_check(){
     $.ajax({
@@ -75,4 +74,20 @@ function member_or_login(){
          alert("發生錯誤: " + exception.status); 
      }
     })
+}
+
+function login_check_no_direct(){
+    let login;
+    fetch('./API/login_check.php').then(res => res.json()).then(res =>{
+        if(res == ""){
+            console.log('沒登入');
+            login = false;
+        }else{
+            console.log('登入中');
+            login = true;
+        }
+    }).catch(function(err){
+        console.log('no data found');
+    })
+    console.log(login);
 }

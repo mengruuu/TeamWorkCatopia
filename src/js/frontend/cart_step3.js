@@ -262,9 +262,6 @@ Vue.component('button-order',{
             }).catch(function(err){
                 console.log('no data found');
             })
-
-            
-
         },
 
         
