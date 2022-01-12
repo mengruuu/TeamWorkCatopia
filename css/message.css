@@ -341,8 +341,6 @@ div.message_and_comment_container {
           flex-direction: column;
   width: 75%;
   margin: 50px auto;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 div.message_and_comment_container div.message_container {
@@ -363,6 +361,8 @@ div.message_and_comment_container div.message_container {
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
   margin: 32px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 div.message_and_comment_container div.message_container div.message_setting_container {
@@ -608,6 +608,8 @@ div.message_and_comment_container div.message_container div.message_content_and_
   background-color: #F4E6CD;
   padding: 20px 40px;
   margin-bottom: 30px;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
 }
 
 div.message_and_comment_container div.message_container div.message_content_and_comment div.message_content_text p {
@@ -621,6 +623,8 @@ div.message_and_comment_container div.message_container div.message_content_and_
   margin-bottom: 30px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
 }
 
 div.message_and_comment_container div.message_container div.message_content_and_comment input {
@@ -631,6 +635,8 @@ div.message_and_comment_container div.message_container div.message_content_and_
   outline: none;
   border: none;
   margin-bottom: 16px;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
 }
 
 div.message_and_comment_container div.message_container div.message_content_and_comment input::-webkit-input-placeholder {
@@ -649,13 +655,18 @@ div.message_and_comment_container div.message_container div.message_content_and_
   color: #774F40;
 }
 
+div.message_and_comment_container div.message_container div.message_content_and_comment input.message_focus_input {
+  -webkit-box-shadow: 1px 1px 1px lightgray inset;
+          box-shadow: 1px 1px 1px lightgray inset;
+}
+
 div.message_and_comment_container div.message_container div.message_content_and_comment div.message_comment_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   margin: 16px 0 0;
@@ -666,11 +677,13 @@ div.message_and_comment_container div.message_container div.message_content_and_
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-shadow: 1px 1px 1px lightgray inset;
+          box-shadow: 1px 1px 1px lightgray inset;
 }
 
 div.message_and_comment_container div.message_container div.message_content_and_comment div.message_comment_container img {
-  width: 50px;
-  height: 70px;
+  width: 30px;
+  height: 42px;
   -o-object-fit: cover;
      object-fit: cover;
   margin-right: 24px;

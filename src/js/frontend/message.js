@@ -25,7 +25,7 @@ async function uploadMessageData() {
         await fetch("./API/get_member_info.php")
         .then(res => res.json())
         .then(data => data); //取得會員資料
-    console.log("memberID: ", response[0].MEMBER_ID);
+    // console.log("memberID: ", response[0].MEMBER_ID);
 
     const personalLikes =
         await fetch("./API/getMessageLikesAndComments.php", {
@@ -64,13 +64,14 @@ async function uploadMessageData() {
         personalCommentsPic.push(pic[0].MEMBER_PICTURE);
     }
 
-    console.log("personalCommentsPic: ", personalCommentsPic);
+    // console.log("personalCommentsPic: ", personalCommentsPic);
 
     // 顯示留言板的部分，使用Vue寫--------------------------------------------------------------------------------------
     const Feature = Vue.component('messageContent', {
         data() {
             return {
                 isListShow: false,
+                isFocus: false
             }
         },
         template: `
@@ -104,7 +105,7 @@ async function uploadMessageData() {
                         <p>{{ postContent }}</p>
                     </div>
                     <img :class = "{message_content_img: true}" :src = postPicture>
-                    <input :class = "{comment_input: true}" placeholder = "回應貼文..." @keyup = "inputComment">
+                    <input :class = "{comment_input: true, message_focus_input: isFocus}" placeholder = "回應貼文..." @keyup = "inputComment" @focus = "inputFocus" @blur = "inputBlur">
                     <div :class = "{message_comment_container: true}" v-for = "(comment, index) in comments">
                         <img :class = "{message_comment_user_img: true}" :src = "commentsPic[index]">
                         <p :class = "{message_comment_item: true}">{{ comment.comment }}</p>
@@ -194,6 +195,13 @@ async function uploadMessageData() {
                     e.target.value = "";
                     this.$emit("insertComment", inputValue, this.memberId, this.postId, this.index);
                 }
+            },
+            inputFocus() {
+                this.isFocus = true;
+            },
+            inputBlur() {
+                // console.log("blur事件被執行了");
+                this.isFocus = false;
             }
         },
     });
@@ -375,7 +383,7 @@ async function uploadMessageData() {
                 `);
 
                 postInfo.postImg = readFile.result;
-                console.log(readFile.result);
+                // console.log(readFile.result);
             });
         });
     };
