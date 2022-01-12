@@ -109,12 +109,12 @@ function change_cake(){
     let cake_salmon = document.getElementById("cake_salmon");
     let cake_chicken = document.getElementById("cake_chicken");
     
-    cake_tuna.addEventListener('click', function(){
-        change_cake_img.src = "./images/diy_page/images/diy_cake_tuna.png";
-        cakeNUM = "1" ;
-    })
     cake_salmon.addEventListener('click', function(){
         change_cake_img.src = "./images/diy_page/images/diy_cake_salmon.png";
+        cakeNUM = "1" ;
+    })
+    cake_tuna.addEventListener('click', function(){
+        change_cake_img.src = "./images/diy_page/images/diy_cake_tuna.png";
         cakeNUM = "2" ;
     })
     cake_chicken.addEventListener('click', function(){
@@ -170,10 +170,10 @@ function add_cart(){
         // alert(cakeNUM + foodNUM + nutritionNUM);
         let cake_feature = cakeNUM + foodNUM + nutritionNUM;
         // console.log(cake_feature);
-
         let diy_cake_array = [];
         //輸出客製蛋糕代號
         $.ajax({
+            // async:  false,
             method: "POST",
             url: "API/diy_cake_select.php",
             data: {
@@ -185,22 +185,28 @@ function add_cart(){
                 for(let i = 0; i < response.length; i++){
                     diy_cake_array.push(response[i]);
                 }
-                console.log(diy_cake_array);
-                // alert(response);
-                // console.log(response);
-                // history_highscore = response;
-                // alert(history_highscore);
+                // console.log(diy_cake_array[0]);
+                console.log(diy_cake_array[0].PRODUCT_NAME);
+                console.log(diy_cake_array[0].PRODUCT_FEATURE);
+
+                
+
             },
             error: function (exception) {
                 alert("HISTORY_HIGHSCORE發生錯誤: " + exception.status);
             },
         });
 
+        // console.log(diy_cake_array[0].PRODUCT_NAME);
+
+
         // window.location.href = "./diy.html";
         // window.location.href = "./cart_step1.html";
     })
 }
+function after_cart_add(){
 
+}
 //全部重選
 let reset = document.getElementById("reset");
 let change_cake_img = document.getElementById("change_cake_img");
