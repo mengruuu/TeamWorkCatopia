@@ -63,7 +63,7 @@ async function uploadMessageData() {
                     <div :class = "{message_img_and_user_and_time: true}">
                         <img :class = "{message_user_img: true}" src = "./images/message/message_personal_example_photo.png">
                         <div :class = "{message_user_and_time: true}">
-                            <p>{{ memberId }}</p>
+                            <p>{{ memberName }}</p>
                             <p>{{ postTime }}</p>
                         </div>
                     </div>
@@ -77,6 +77,11 @@ async function uploadMessageData() {
                         <p>{{ postContent }}</p>
                     </div>
                     <img :class = "{message_content_img: true}" :src = postPicture>
+                    <input :class = "{comment_input: true}" placeholder = "回應貼文...">
+                    <div :class = "{message_comment_container: true}">
+                        <img :class = "{message_comment_user_img: true}" src = "./images/message/message_comment_photo.svg">
+                        <p :class = "{message_comment_item: true}">Devil catman, your tonight’s nightmare</p>
+                    </div>
                 </div>
             </div>
         `, 
@@ -113,6 +118,9 @@ async function uploadMessageData() {
             },
             personalLikes: {
                 type: Boolean
+            },
+            memberName: {
+                type: String
             }
         },
         computed: {
@@ -155,12 +163,14 @@ async function uploadMessageData() {
             <div :class = "{message_and_comment_container: true}">
                 <message-content v-for = "(message, index) in messageInfo" 
                     :memberId = "message.MEMBER_ID"
+                    :memberName = "message.MEMBER_NAME"
                     :postLike = "message.POST_LIKE"
                     :postPicture = "message.POST_PICTURE"
                     :postTime = "message.POST_TIME"
                     :postContent = "message.POST_CONTENT"
                     :postId = "message.POST_ID"
                     :index = "index"
+                    :key="index"
                     :isPostHide = "isPostHide"
                     :personalLikes = "isLiked(index)"
                     @deletepost = "deletePost"
@@ -177,7 +187,6 @@ async function uploadMessageData() {
         },
         methods: {
             deletePost(postID) {
-                // this.isPostHide = true;
                 setTimeout(function() {
                     fetch("./API/deleteMessage.php", {
                         method: "POST",
@@ -192,7 +201,7 @@ async function uploadMessageData() {
                     });
                 }, 1000);
             },
-            async changelikecounts(postID, updateLikeCounts, index) {console.log(response[0].MEMBER_ID);
+            async changelikecounts(postID, updateLikeCounts, index) {
                 const postIdAndUpdateLikeCounts = {
                     postID: postID,
                     updateLikeCounts: updateLikeCounts,

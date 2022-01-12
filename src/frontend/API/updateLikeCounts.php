@@ -1,10 +1,11 @@
 <?php
-    $db_host = "127.0.0.1";
-    $db_user = "root";
-    $db_pass = "password";
-    $db_select = "CATOPIA";
-    $dsn = "mysql:host=".$db_host.";dbname=".$db_select;
-    $pdo = new PDO($dsn, $db_user, $db_pass);
+    // $db_host = "127.0.0.1";
+    // $db_user = "root";
+    // $db_pass = "password";
+    // $db_select = "CATOPIA";
+    // $dsn = "mysql:host=".$db_host.";dbname=".$db_select;
+    // $pdo = new PDO($dsn, $db_user, $db_pass);
+    include("../library/Connection.php");
 
     // 寫入MESSAGE裡
     $sql = "UPDATE MESSAGE SET POST_LIKE = ? WHERE POST_ID = ?";
@@ -51,7 +52,7 @@
     }
     
     // 獲取更新後的message資料----------------------------------------------------------
-    $sql = "SELECT * FROM MESSAGE";
+    $sql = "SELECT * FROM `V_MESSAGE_MEMBER`";
     $statment = $pdo->prepare($sql);
     $statment->execute();
     $data = $statment->fetchAll();
