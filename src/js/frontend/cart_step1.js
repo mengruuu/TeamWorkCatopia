@@ -137,11 +137,18 @@ Vue.component('cart-total',{
     },
     methods: {
         price_coin(){
+            this.discount_coin = this.discount_coin.replace(/[^0-9\\.]+/g, 0);
+            console.log('ooo');
+        
             console.log('test')
-            if(this.discount_coin > this.catopia_coin){
+            if(parseInt(this.discount_coin) > parseInt(this.catopia_coin)){
                 alert('請輸入小於'+ this.catopia_coin + '的點數')
                 this.discount_coin = this.catopia_coin;
+                console.log('ttt')
             }
+            if(parseInt(this.discount_coin) < 0){
+                this.discount_coin = 0;
+            } 
         },
         getData(){
             console.log(this.products);
@@ -185,7 +192,7 @@ Vue.component('cart-total',{
         </div>
         <div class="cart_step1_point">
             <p>點數折抵</p>
-            <p><input type="text" v-model="discount_coin" @change="price_coin">點</p>
+            <p><input type="text" v-model=discount_coin @change="price_coin">點</p>
         </div>
     </div>
 
