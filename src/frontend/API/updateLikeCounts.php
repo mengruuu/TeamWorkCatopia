@@ -43,8 +43,8 @@
             }
         }
     }else {
-        $sql = "INSERT INTO `POST_RESPONSE&LIKE`(POST_ID, `RESPONSE&LIKE_MEMBER_ID`, POST_RESPONSE_CONTENT, LIKE_MODE)
-                VALUES(?, ?, null, 1)";
+        $sql = "INSERT INTO `POST_RESPONSE&LIKE`(POST_ID, `RESPONSE&LIKE_MEMBER_ID`, LIKE_MODE)
+                VALUES(?, ?, 1)";
         $statment = $pdo->prepare($sql);
         $statment->bindValue(1, $likeCountsAndPostId -> postID);
         $statment->bindValue(2, $likeCountsAndPostId -> memberId);
