@@ -25,7 +25,7 @@ async function uploadMessageData() {
         await fetch("./API/get_member_info.php")
         .then(res => res.json())
         .then(data => data); //取得會員資料
-    console.log("memberID: ", response[0].MEMBER_ID);
+    // console.log("memberID: ", response[0].MEMBER_ID);
 
     const personalLikes =
         await fetch("./API/getMessageLikesAndComments.php", {
@@ -52,7 +52,7 @@ async function uploadMessageData() {
 
     for await(let id of personalCommentsId) {
         let personalId = id['RESPONSE&LIKE_MEMBER_ID']
-        console.log("personalCommentsId: ", personalId);
+        // console.log("personalCommentsId: ", personalId);
             await fetch("./API/getCommentsPic.php", {
                 method: "POST",
                 headers: {
@@ -62,15 +62,18 @@ async function uploadMessageData() {
             })
             .then(res => res.json())
             .then(data => {
-                console.log("data[0] ", data[0]);
-                console.log("data[0].MEMBER_PICTURE: ", data[0].MEMBER_PICTURE);
-                personalCommentsPic.push(data[0].MEMBER_PICTURE);
+                // console.log("data[0] ", data[0]);
+                // console.log("data[0].MEMBER_PICTURE: ", data[0].MEMBER_PICTURE);
+                personalCommentsPic.push({
+                    personalPic: data[0].MEMBER_PICTURE,
+                    postId: id.POST_ID
+                });
             });
         // console.log("pic[0].MEMBER_PICTURE: ", pic);
         // personalCommentsPic.push(pic[0].MEMBER_PICTURE);
     }
 
-    console.log("personalCommentsPic: ", personalCommentsPic);
+    // console.log("personalCommentsPic: ", personalCommentsPic);
 
     // 顯示留言板的部分，使用Vue寫--------------------------------------------------------------------------------------
     const Feature = Vue.component('messageContent', {
@@ -113,7 +116,7 @@ async function uploadMessageData() {
                     <img :class = "{message_content_img: true}" :src = postPicture>
                     <input :class = "{comment_input: true, message_focus_input: isFocus}" placeholder = "回應貼文..." @keyup = "inputComment" @focus = "inputFocus" @blur = "inputBlur">
                     <div :class = "{message_comment_container: true}" v-for = "(comment, index) in comments">
-                        <img :class = "{message_comment_user_img: true}" :src = "commentsPic[index]">
+                        <img :class = "{message_comment_user_img: true}" src = "./images/header/login_header_icon_member.png">
                         <p :class = "{message_comment_item: true}">{{ comment.comment }}</p>
                     </div>
                 </div>
@@ -164,7 +167,22 @@ async function uploadMessageData() {
                 } else {
                     return true;
                 }
+            },
+            personalPic() {
+                let personalPicc = "";
+
+                for(let i = 0; i < this.commentsPic.length; i = i + 1) {
+                    if(this.commentsPic[i].postId === this.postId) {
+                        // console.log("this.commentsPic[i].postId: ", this.personalpic[i].postId, "this.postId:", this.postId, "this.commentsPic[i].personalPic", this.personalpic[i].personalPic)
+                        personalPicc = this.commentsPic[i].personalPic;
+                        // this.personalpic.splice(i, 1);
+                        break;
+                    }
+                };
+
+                return personalPicc;
             }
+            
         },
         methods: {
             listOpenOrClose() {
@@ -208,8 +226,22 @@ async function uploadMessageData() {
             inputBlur() {
                 // console.log("blur事件被執行了");
                 this.isFocus = false;
-            }
-        },
+            },
+            // personalPic() {
+            //     let personalPicc = "";
+
+            //     for(let i = 0; i < this.personalpic.length; i = i + 1) {
+            //         if(this.personalpic[i].postId === this.postId) {
+            //             console.log("this.commentsPic[i].postId: ", this.personalpic[i].postId, "this.postId:", this.postId, "this.commentsPic[i].personalPic", this.personalpic[i].personalPic)
+            //             personalPicc = this.personalpic[i].personalPic;
+            //             this.personalpic.splice(i, 1);
+            //             break;
+            //         }
+            //     };
+
+            //     return personalPicc;
+            // }
+        }
     });
 
     const vm = new Vue({
@@ -229,7 +261,7 @@ async function uploadMessageData() {
                     :isPostHide = "isPostHide"
                     :personalLikes = "isLiked(index)"
                     :comments = "updateComments(index)"
-                    :commentsPic = "personalCommentsPic"
+                    :commentsPic = "updateCommentsPic(index)"
                     @deletepost = "deletePost"
                     @changeLikeCounts = "changelikecounts"
                     @insertComment = "insertcomment"
@@ -279,6 +311,7 @@ async function uploadMessageData() {
                     });
 
                 this.updateComments(index);
+                this.updateCommentsPic(index);
             },
             deletePost(postID) {
                 // setTimeout(function() {
@@ -360,6 +393,23 @@ async function uploadMessageData() {
                 }
 
                 return comments;
+            },
+            updateCommentsPic(index) {
+                let commentPic = [];
+
+                for (let i = 0; i < this.personalComments.length; i = i + 1) {
+                    if (this.personalComments[i].POST_ID === this.messageInfo[index].POST_ID) {
+                        if (this.personalComments[i].POST_RESPONSE_CONTENT) {
+                            const data = {
+                                id: this.personalComments[i]["RESPONSE&LIKE_MEMBER_ID"],
+                                picture: this.personalComments[i].POST_RESPONSE_CONTENT
+                            }
+                            commentPic.push(data);
+                        }
+                    }
+                }
+
+                return commentPic;
             }
         }
     });
