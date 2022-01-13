@@ -187,10 +187,12 @@ async function uploadMessageData() {
                     const inputValue = e.target.value;
 
                     e.target.value = "";
-                    window.scrollTo({
-                        top: e.target.parentElement.offsetTop + e.target.parentElement.offsetHeight - e.target.nextElementSibling.offsetHeight*2,
-                        behavior: "smooth"
-                    });
+                    if(e.target.nextElementSibling) {
+                        window.scrollTo({
+                            top: e.target.parentElement.offsetTop + e.target.parentElement.offsetHeight - e.target.nextElementSibling.offsetHeight*2,
+                            behavior: "smooth"
+                        });
+                    }
                     this.$emit("insertComment", inputValue, this.memberId, this.postId, this.index);
                 }
             },
