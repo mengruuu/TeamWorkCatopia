@@ -62,7 +62,7 @@ async function uploadMessageData() {
             })
             .then(res => res.json())
             .then(data => {
-                console.log("personalCommentsIdInFetch: ", personalId);
+                console.log("data[0] ", data[0]);
                 console.log("data[0].MEMBER_PICTURE: ", data[0].MEMBER_PICTURE);
                 personalCommentsPic.push(data[0].MEMBER_PICTURE);
             });
@@ -446,7 +446,7 @@ async function uploadMessageData() {
     droppedImg(message_write_img_container.children[0], message_write_img_container);
 
     // 點擊送出po文------------------------------------------------------------------------------------------------------
-    confirmPost.addEventListener("click", function () {
+    confirmPost.addEventListener("click", function (event) {
         postInfo.postContent = message_write_message_content.value;
         if (postInfo.postContent === "" || postInfo.postImg === "") {
             alert("未發文或上傳圖片！");
@@ -465,7 +465,35 @@ async function uploadMessageData() {
                     location.href = "/TeamWorkCatopia/dist/message.html";
                 })
         }
+
+        event.target.classList.toggle("message_post_confirm_clicked");
     });
+
+    // 按enter鍵送出po文
+    // message_write_message_content.addEventListener("keyup", function(event) {
+    //     postInfo.postContent = message_write_message_content.value;
+    //     if(event.keyCode === 13) {
+    //         if (postInfo.postContent === "" || postInfo.postImg === "") {
+    //             alert("未發文或上傳圖片！");
+    //         } else {
+    //             fetch("./API/createPost.php", {
+    //                     method: "POST",
+    //                     headers: {
+    //                         "content-type": "application/json"
+    //                     },
+    //                     body: JSON.stringify(postInfo)
+    //                 })
+    //                 .then(res => res.json())
+    //                 .then(data => {
+    //                     console.log(data);
+    //                     window.alert("上傳成功");
+    //                     location.href = "/TeamWorkCatopia/dist/message.html";
+    //                 })
+    //         }
+    
+    //         event.target.classList.toggle("message_post_confirm_clicked");
+    //     }
+    // });
 
     // 更改class以及刪除圖片等部分--------------------------------------------------------------------------------------------------------
     // 點擊上傳圖片按鈕後，顯示圖片上傳區

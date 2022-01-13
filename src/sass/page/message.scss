@@ -204,6 +204,9 @@ div.message_write_message_container {
             border-radius: 10px;
             cursor: pointer;
         }
+        button.message_post_confirm_clicked {
+            box-shadow: $shadow_box inset;
+        }
     }
 }
 div.message_write_message_container_open {
