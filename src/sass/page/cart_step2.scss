@@ -194,15 +194,16 @@ p.cart_step2_this_step {
 }
 
 .cart_step2_next_step button {
-    font-size: $font_24;
-    background-color: $important_color;
-    border: none;
-    color: $font_color;
-    padding: 20px 60px;
-    border-radius: 15px;
-    box-shadow: $shadow;
-    cursor: pointer;
+    // font-size: $font_24;
+    // background-color: $important_color;
+    // border: none;
+    // color: $font_color;
+    // padding: 20px 60px;
+    // border-radius: 15px;
+    // box-shadow: $shadow;
+    // cursor: pointer;
     margin-top: 50px;
+    @include button();
 
     @include w900(){
         font-size: $font_20;

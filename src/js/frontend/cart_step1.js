@@ -202,9 +202,9 @@ Vue.component('cart-total',{
             <p>{{this.totalPrice - discount_coin}}元</p>
         </div>
     </div>
-    <div class="cart_step1_next_step">
-            <a><button type="button" @click="getData">STEP2<br>聯絡人資料</button></a>
     </div>
+    <div class="cart_step1_next_step">
+            <a><button type="button" @click="getData">STEP2&nbsp;聯絡人資料</button></a>
     </div>
     `,
     // created(){
