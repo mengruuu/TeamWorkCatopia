@@ -241,6 +241,7 @@ div.message_write_message_container div.message_write_message_img_file_and_butto
   background-color: #FED67E;
   color: #774F40;
   border: 0px;
+  cursor: pointer;
   -webkit-box-flex: 4;
       -ms-flex: 4;
           flex: 4;
@@ -340,8 +341,6 @@ div.message_and_comment_container {
           flex-direction: column;
   width: 75%;
   margin: 50px auto;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 div.message_and_comment_container div.message_container {
@@ -362,6 +361,8 @@ div.message_and_comment_container div.message_container {
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
   margin: 32px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 div.message_and_comment_container div.message_container div.message_setting_container {
@@ -607,6 +608,8 @@ div.message_and_comment_container div.message_container div.message_content_and_
   background-color: #F4E6CD;
   padding: 20px 40px;
   margin-bottom: 30px;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
 }
 
 div.message_and_comment_container div.message_container div.message_content_and_comment div.message_content_text p {
@@ -620,6 +623,8 @@ div.message_and_comment_container div.message_container div.message_content_and_
   margin-bottom: 30px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
 }
 
 div.message_and_comment_container div.message_container div.message_content_and_comment input {
@@ -629,6 +634,9 @@ div.message_and_comment_container div.message_container div.message_content_and_
   border-radius: 20px;
   outline: none;
   border: none;
+  margin-bottom: 16px;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
 }
 
 div.message_and_comment_container div.message_container div.message_content_and_comment input::-webkit-input-placeholder {
@@ -647,33 +655,77 @@ div.message_and_comment_container div.message_container div.message_content_and_
   color: #774F40;
 }
 
+div.message_and_comment_container div.message_container div.message_content_and_comment input.message_focus_input {
+  -webkit-box-shadow: 1px 1px 1px lightgray inset;
+          box-shadow: 1px 1px 1px lightgray inset;
+}
+
 div.message_and_comment_container div.message_container div.message_content_and_comment div.message_comment_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  margin: 16px 0;
-  background-color: #fff;
+  margin: 16px 0 0;
+  background-color: #FFF2CC;
   border-radius: 15px;
-  padding: 5px 20px;
-  border: 1px solid;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  padding: 5px 16px;
+  border: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-shadow: 1px 1px 1px lightgray inset;
+          box-shadow: 1px 1px 1px lightgray inset;
+  -webkit-animation-name: commentsStyleChange;
+          animation-name: commentsStyleChange;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
 }
 
 div.message_and_comment_container div.message_container div.message_content_and_comment div.message_comment_container img {
-  width: 63px;
-  height: 57px;
+  width: 30px;
+  height: 42px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 24px;
 }
 
 div.message_and_comment_container div.message_container div.message_content_and_comment div.message_comment_container p {
+  margin: 0;
   font-size: 18px;
   color: #774F40;
+  word-break: break-all;
+}
+
+@-webkit-keyframes commentsStyleChange {
+  from {
+    -webkit-box-shadow: 1px 1px 1px lightgray;
+            box-shadow: 1px 1px 1px lightgray;
+    background-color: #B7C88E;
+  }
+  to {
+    -webkit-box-shadow: 1px 1px 1px lightgray inset;
+            box-shadow: 1px 1px 1px lightgray inset;
+    background-color: #FFF2CC;
+  }
+}
+
+@keyframes commentsStyleChange {
+  from {
+    -webkit-box-shadow: 1px 1px 1px lightgray;
+            box-shadow: 1px 1px 1px lightgray;
+    background-color: #B7C88E;
+  }
+  to {
+    -webkit-box-shadow: 1px 1px 1px lightgray inset;
+            box-shadow: 1px 1px 1px lightgray inset;
+    background-color: #FFF2CC;
+  }
 }
 
 div.message_and_comment_container div.message_container_hide {
@@ -1131,6 +1183,8 @@ div.message_and_comment_container div.message_container_hide {
     width: 100%;
     height: 200px;
     margin-bottom: 30px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   div.message_and_comment_container div.message_container div.message_content_and_comment input {
     padding: 8px 16px;

@@ -1,7 +1,11 @@
 <?php
+<<<<<<< HEAD
 include("../library/Connection.php");
     $pdo = new PDO($dsn, $db_user, $db_pass);
 
+=======
+    include("../library/Connection.php");
+>>>>>>> 17a75ae376e52dae7c6f6834a1f64d0800b43877
     // 寫入MESSAGE裡
     $sql = "UPDATE MESSAGE SET POST_LIKE = ? WHERE POST_ID = ?";
     $data = [];
