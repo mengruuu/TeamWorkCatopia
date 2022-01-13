@@ -1,4 +1,4 @@
-login_check();
+
 
 var vm = new Vue({
     el: '#app',
@@ -76,7 +76,7 @@ function doFirst(){
     for( i = 0; i < 9; i++){
         randomindex()
         new_img_299.push(img_299[index_number]);
-        console.log(new_img_299[i]['PRODUCT_PICTURE1']);
+        // console.log(new_img_299[i]['PRODUCT_PICTURE1']);
     };
 
     //randomindex()會隨機抽出index數字 判斷數字有無重複
@@ -99,6 +99,7 @@ function doFirst(){
     //點箱子移除彩色圖片 增加灰色圖片 同時跳出抽選的商品彈窗
     for(let i = 0; i < color_image.length; i++){
         color_image[i].addEventListener("click", function(e){
+            login_check();
             let gacha_box_c = gacha_box[i];
             let gray_image = './images/gacha_299/gacha_299_box_gray.png';
             let img = gacha_box_c.firstElementChild;
@@ -132,7 +133,7 @@ function doFirst(){
                     // processData: false,
                     // contentType: false,
                     success:function(response){
-                        console.log(response);
+                        // console.log(response);
                     },
                     error: function(exception) {
                         alert("發生錯誤: " + exception.status);  //網路出錯的部分
@@ -144,7 +145,7 @@ function doFirst(){
 
     //點箱子前先塞好random出來的第一張彈窗圖片 每關掉一次彈窗 就換下一張圖
     let ology = 0;
-    console.log(ology);
+    // console.log(ology);
     imgA.src = new_img_299[ology]['PRODUCT_PICTURE1'];
     // console.log(imgA.src);
     //關掉抽中彈窗      //每關掉一次彈窗 就換下一張圖
