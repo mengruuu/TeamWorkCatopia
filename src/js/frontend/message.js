@@ -42,36 +42,37 @@ async function uploadMessageData() {
         await fetch("./API/getComments.php")
         .then(res => res.json())
         .then(data => data);
+    console.log("personalComments: ", personalComments);
 
-    const personalCommentsId =
-        await fetch("./API/getCommentsId.php")
-        .then(res => res.json())
-        .then(data => data);
+    // const personalCommentsId =
+    //     await fetch("./API/getCommentsId.php")
+    //     .then(res => res.json())
+    //     .then(data => data);
 
-    let personalCommentsPic = [];
+    // let personalCommentsPic = [];
 
-    for await(let id of personalCommentsId) {
-        let personalId = id['RESPONSE&LIKE_MEMBER_ID']
-        // console.log("personalCommentsId: ", personalId);
-            await fetch("./API/getCommentsPic.php", {
-                method: "POST",
-                headers: {
-                    "content-type": "application/json"
-                },
-                body: JSON.stringify(personalId)
-            })
-            .then(res => res.json())
-            .then(data => {
-                // console.log("data[0] ", data[0]);
-                // console.log("data[0].MEMBER_PICTURE: ", data[0].MEMBER_PICTURE);
-                personalCommentsPic.push({
-                    personalPic: data[0].MEMBER_PICTURE,
-                    postId: id.POST_ID
-                });
-            });
-        // console.log("pic[0].MEMBER_PICTURE: ", pic);
-        // personalCommentsPic.push(pic[0].MEMBER_PICTURE);
-    }
+    // for await(let id of personalCommentsId) {
+    //     let personalId = id['RESPONSE&LIKE_MEMBER_ID']
+    //     // console.log("personalCommentsId: ", personalId);
+    //         await fetch("./API/getCommentsPic.php", {
+    //             method: "POST",
+    //             headers: {
+    //                 "content-type": "application/json"
+    //             },
+    //             body: JSON.stringify(personalId)
+    //         })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             // console.log("data[0] ", data[0]);
+    //             // console.log("data[0].MEMBER_PICTURE: ", data[0].MEMBER_PICTURE);
+    //             personalCommentsPic.push({
+    //                 personalPic: data[0].MEMBER_PICTURE,
+    //                 postId: id.POST_ID
+    //             });
+    //         });
+    //     // console.log("pic[0].MEMBER_PICTURE: ", pic);
+    //     // personalCommentsPic.push(pic[0].MEMBER_PICTURE);
+    // }
 
     // console.log("personalCommentsPic: ", personalCommentsPic);
 
@@ -116,7 +117,7 @@ async function uploadMessageData() {
                     <img :class = "{message_content_img: true}" :src = postPicture>
                     <input :class = "{comment_input: true, message_focus_input: isFocus}" placeholder = "回應貼文..." @keyup = "inputComment" @focus = "inputFocus" @blur = "inputBlur">
                     <div :class = "{message_comment_container: true}" v-for = "(comment, index) in comments">
-                        <img :class = "{message_comment_user_img: true}" src = "./images/header/login_header_icon_member.png">
+                        <img :class = "{message_comment_user_img: true}" :src = "comment.pic">
                         <p :class = "{message_comment_item: true}">{{ comment.comment }}</p>
                     </div>
                 </div>
@@ -154,9 +155,6 @@ async function uploadMessageData() {
                 type: String
             },
             comments: {
-                type: Array
-            },
-            commentsPic: {
                 type: Array
             }
         },
@@ -261,7 +259,6 @@ async function uploadMessageData() {
                     :isPostHide = "isPostHide"
                     :personalLikes = "isLiked(index)"
                     :comments = "updateComments(index)"
-                    :commentsPic = "updateCommentsPic(index)"
                     @deletepost = "deletePost"
                     @changeLikeCounts = "changelikecounts"
                     @insertComment = "insertcomment"
@@ -273,7 +270,6 @@ async function uploadMessageData() {
                 messageInfo: messageInfo,
                 personalLikes: personalLikes,
                 personalComments: personalComments,
-                personalCommentsPic: personalCommentsPic,
                 isPostHide: false
             }
         },
@@ -296,22 +292,21 @@ async function uploadMessageData() {
                         vm.personalComments = data;
                     });
 
-                await fetch("./API/getCommentsPic.php", {
-                        method: "POST",
-                        headers: {
-                            "content-type": "application/json"
-                        },
-                        body: JSON.stringify(memberId)
-                    })
-                    .then(res => res.json())
-                    .then(data => { console.log("personalCommentsPic: ", data[0].MEMBER_PICTURE);
-                        console.log("personalCommentsPicBefore: ", vm.personalCommentsPic);
-                        vm.personalCommentsPic.push(data[0].MEMBER_PICTURE);
-                        console.log("personalCommentsPicAfter: ", vm.personalCommentsPic);
-                    });
+                // await fetch("./API/getCommentsPic.php", {
+                //         method: "POST",
+                //         headers: {
+                //             "content-type": "application/json"
+                //         },
+                //         body: JSON.stringify(memberId)
+                //     })
+                //     .then(res => res.json())
+                //     .then(data => { console.log("personalCommentsPic: ", data[0].MEMBER_PICTURE);
+                //         console.log("personalCommentsPicBefore: ", vm.personalCommentsPic);
+                //         vm.personalCommentsPic.push(data[0].MEMBER_PICTURE);
+                //         console.log("personalCommentsPicAfter: ", vm.personalCommentsPic);
+                //     });
 
                 this.updateComments(index);
-                this.updateCommentsPic(index);
             },
             deletePost(postID) {
                 // setTimeout(function() {
@@ -385,7 +380,8 @@ async function uploadMessageData() {
                         if (this.personalComments[i].POST_RESPONSE_CONTENT) {
                             const data = {
                                 id: this.personalComments[i]["RESPONSE&LIKE_MEMBER_ID"],
-                                comment: this.personalComments[i].POST_RESPONSE_CONTENT
+                                comment: this.personalComments[i].POST_RESPONSE_CONTENT,
+                                pic: this.personalComments[i].MEMBER_PICTURE
                             }
                             comments.push(data);
                         }
@@ -393,23 +389,6 @@ async function uploadMessageData() {
                 }
 
                 return comments;
-            },
-            updateCommentsPic(index) {
-                let commentPic = [];
-
-                for (let i = 0; i < this.personalComments.length; i = i + 1) {
-                    if (this.personalComments[i].POST_ID === this.messageInfo[index].POST_ID) {
-                        if (this.personalComments[i].POST_RESPONSE_CONTENT) {
-                            const data = {
-                                id: this.personalComments[i]["RESPONSE&LIKE_MEMBER_ID"],
-                                picture: this.personalComments[i].POST_RESPONSE_CONTENT
-                            }
-                            commentPic.push(data);
-                        }
-                    }
-                }
-
-                return commentPic;
             }
         }
     });
