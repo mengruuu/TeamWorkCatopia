@@ -203,7 +203,7 @@ Vue.component('cart-total',{
         </div>
     </div>
     <div class="cart_step1_next_step">
-            <a><button type="button" @click="getData">STEP2<br>聯絡人資料</button></a>
+            <a><button type="button" @click="getData">STEP2&nbsp聯絡人資料</button></a>
     </div>
     </div>
     `,

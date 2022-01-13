@@ -66,6 +66,7 @@ function diy_step_flavor(){
         diy_flavor_block.innerHTML = `<p id="food_blueberry">酸甜藍莓</p>/
         <p id="food_sweet_potato">香甜地瓜</p>/
         <p id="food_grass">新鮮貓草</p>`;
+        let change_cake_img = document.getElementById("change_cake_img");
         change_food()
     }else{
         diy_flavor_block.innerHTML = '';
