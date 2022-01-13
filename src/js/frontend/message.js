@@ -81,14 +81,13 @@ async function uploadMessageData() {
         data() {
             return {
                 isListShow: false,
-                isFocus: false,
-                messageSettingIsClicked: false
+                isFocus: false
             }
         },
         template: `
             <div :data_postId = "postId" :class = "{message_container: true, message_container_hide: isPostHide}" style = "background-image: url(./images/message/message_background_img.png);">
                 <div :class = "{message_setting_container: true, message_setting_container_hide: settingIsHide}">
-                    <div :class = "{message_setting_container_content: true, message_setting_container_content_clicked: messageSettingIsClicked}" @click = "listOpenOrClose">
+                    <div :class = "{message_setting_container_content: true}" @click = "listOpenOrClose">
                         <div></div>
                         <div></div>
                         <div></div>
@@ -106,7 +105,7 @@ async function uploadMessageData() {
                             <p>{{ postTime }}</p>
                         </div>
                     </div>
-                    <div :class = "{message_like_container: true, message_like_container_clicked: personalLikes}" @click = changeLikeImg>
+                    <div :class = "{message_like_container: true}" @click = changeLikeImg>
                         <div :class="{message_like: true, message_liked: personalLikes}"></div>
                         <p>+{{ postLike }}</p>
                     </div>
