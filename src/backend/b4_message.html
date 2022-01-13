@@ -6,7 +6,8 @@
     "title" : "Catopia B4留言板管理"
     })
     <link rel="stylesheet" href="../css/backend/b4_message.css">
-
+    <script src="../js/tools/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
 </head>
 
 <body>
@@ -76,148 +77,151 @@
                 </ul>
             </div>
 
-            <div class="backend_table">
-                <table>
-                    <tr class="table_title">
-                        <td>貼文編號</td>
-                        <td>會員編號</td>
-                        <td>會員信箱</td>
-                        <td>貼文時間</td>
-                        <td>顯示狀態</td>
-                        <td>圖片</td>
-                        <td>讚數</td>
-                        <td>貼文內容</td>
-                    </tr>
+            <div id = "message_backend_app">
+                <!-- <div class="backend_table">
+                    <table>
+                        <tr class="table_title">
+                            <td>貼文編號</td>
+                            <td>會員編號</td>
+                            <td>會員信箱</td>
+                            <td>貼文時間</td>
+                            <td>顯示狀態</td>
+                            <td>圖片</td>
+                            <td>讚數</td>
+                            <td>貼文內容</td>
+                        </tr>
 
-                    <tr>
-                        <td>PS0001</td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>正常</td>
-                        <td><img src="https://via.placeholder.com/100x60"></td>
-                        <td>100</td>
-                        <td>這是我家ㄉ萌萌主子這是我家
-                            ㄉ萌萌主子這是我家ㄉ萌萌主
-                            子這是我家ㄉ萌萌主子這是我
-                            家ㄉ萌萌主子這是我家ㄉ</td>
-                    </tr>
+                        <tr>
+                            <td>PS0001</td>
+                            <td>MB0001</td>
+                            <td>qqq123@gmail.com</td>
+                            <td>2021/10/1</td>
+                            <td>正常</td>
+                            <td><img src="https://via.placeholder.com/100x60"></td>
+                            <td>100</td>
+                            <td>這是我家ㄉ萌萌主子這是我家
+                                ㄉ萌萌主子這是我家ㄉ萌萌主
+                                子這是我家ㄉ萌萌主子這是我
+                                家ㄉ萌萌主子這是我家ㄉ</td>
+                        </tr>
 
-                    <tr>
-                        <td>PS0001</td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>正常</td>
-                        <td><img src="https://via.placeholder.com/100x60"></td>
-                        <td>100</td>
-                        <td>這是我家ㄉ萌萌主子這是我家
-                            ㄉ萌萌主子這是我家ㄉ萌萌主
-                            子這是我家ㄉ萌萌主子這是我
-                            家ㄉ萌萌主子這是我家ㄉ</td>
-                    </tr>
+                        <tr>
+                            <td>PS0001</td>
+                            <td>MB0001</td>
+                            <td>qqq123@gmail.com</td>
+                            <td>2021/10/1</td>
+                            <td>正常</td>
+                            <td><img src="https://via.placeholder.com/100x60"></td>
+                            <td>100</td>
+                            <td>這是我家ㄉ萌萌主子這是我家
+                                ㄉ萌萌主子這是我家ㄉ萌萌主
+                                子這是我家ㄉ萌萌主子這是我
+                                家ㄉ萌萌主子這是我家ㄉ</td>
+                        </tr>
 
-                    <tr>
-                        <td>PS0001</td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>正常</td>
-                        <td><img src="https://via.placeholder.com/100x60"></td>
-                        <td>100</td>
-                        <td>這是我家ㄉ萌萌主子這是我家
-                            ㄉ萌萌主子這是我家ㄉ萌萌主
-                            子這是我家ㄉ萌萌主子這是我
-                            家ㄉ萌萌主子這是我家ㄉ</td>
-                    </tr>
+                        <tr>
+                            <td>PS0001</td>
+                            <td>MB0001</td>
+                            <td>qqq123@gmail.com</td>
+                            <td>2021/10/1</td>
+                            <td>正常</td>
+                            <td><img src="https://via.placeholder.com/100x60"></td>
+                            <td>100</td>
+                            <td>這是我家ㄉ萌萌主子這是我家
+                                ㄉ萌萌主子這是我家ㄉ萌萌主
+                                子這是我家ㄉ萌萌主子這是我
+                                家ㄉ萌萌主子這是我家ㄉ</td>
+                        </tr>
 
-                    <tr>
-                        <td>PS0001</td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>正常</td>
-                        <td><img src="https://via.placeholder.com/100x60"></td>
-                        <td>100</td>
-                        <td>這是我家ㄉ萌萌主子這是我家
-                            ㄉ萌萌主子這是我家ㄉ萌萌主
-                            子這是我家ㄉ萌萌主子這是我
-                            家ㄉ萌萌主子這是我家ㄉ</td>
-                    </tr>
+                        <tr>
+                            <td>PS0001</td>
+                            <td>MB0001</td>
+                            <td>qqq123@gmail.com</td>
+                            <td>2021/10/1</td>
+                            <td>正常</td>
+                            <td><img src="https://via.placeholder.com/100x60"></td>
+                            <td>100</td>
+                            <td>這是我家ㄉ萌萌主子這是我家
+                                ㄉ萌萌主子這是我家ㄉ萌萌主
+                                子這是我家ㄉ萌萌主子這是我
+                                家ㄉ萌萌主子這是我家ㄉ</td>
+                        </tr>
 
-                    <tr>
-                        <td>PS0001</td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>正常</td>
-                        <td><img src="https://via.placeholder.com/100x60"></td>
-                        <td>100</td>
-                        <td>這是我家ㄉ萌萌主子這是我家
-                            ㄉ萌萌主子這是我家ㄉ萌萌主
-                            子這是我家ㄉ萌萌主子這是我
-                            家ㄉ萌萌主子這是我家ㄉ</td>
-                    </tr>
+                        <tr>
+                            <td>PS0001</td>
+                            <td>MB0001</td>
+                            <td>qqq123@gmail.com</td>
+                            <td>2021/10/1</td>
+                            <td>正常</td>
+                            <td><img src="https://via.placeholder.com/100x60"></td>
+                            <td>100</td>
+                            <td>這是我家ㄉ萌萌主子這是我家
+                                ㄉ萌萌主子這是我家ㄉ萌萌主
+                                子這是我家ㄉ萌萌主子這是我
+                                家ㄉ萌萌主子這是我家ㄉ</td>
+                        </tr>
 
-                    <tr>
-                        <td>PS0001</td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>正常</td>
-                        <td><img src="https://via.placeholder.com/100x60"></td>
-                        <td>100</td>
-                        <td>這是我家ㄉ萌萌主子這是我家
-                            ㄉ萌萌主子這是我家ㄉ萌萌主
-                            子這是我家ㄉ萌萌主子這是我
-                            家ㄉ萌萌主子這是我家ㄉ</td>
-                    </tr>
-                    <tr>
-                        <td>PS0001</td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>正常</td>
-                        <td><img src="https://via.placeholder.com/100x60"></td>
-                        <td>100</td>
-                        <td>這是我家ㄉ萌萌主子這是我家
-                            ㄉ萌萌主子這是我家ㄉ萌萌主
-                            子這是我家ㄉ萌萌主子這是我
-                            家ㄉ萌萌主子這是我家ㄉ</td>
-                    </tr>
+                        <tr>
+                            <td>PS0001</td>
+                            <td>MB0001</td>
+                            <td>qqq123@gmail.com</td>
+                            <td>2021/10/1</td>
+                            <td>正常</td>
+                            <td><img src="https://via.placeholder.com/100x60"></td>
+                            <td>100</td>
+                            <td>這是我家ㄉ萌萌主子這是我家
+                                ㄉ萌萌主子這是我家ㄉ萌萌主
+                                子這是我家ㄉ萌萌主子這是我
+                                家ㄉ萌萌主子這是我家ㄉ</td>
+                        </tr>
+                        <tr>
+                            <td>PS0001</td>
+                            <td>MB0001</td>
+                            <td>qqq123@gmail.com</td>
+                            <td>2021/10/1</td>
+                            <td>正常</td>
+                            <td><img src="https://via.placeholder.com/100x60"></td>
+                            <td>100</td>
+                            <td>這是我家ㄉ萌萌主子這是我家
+                                ㄉ萌萌主子這是我家ㄉ萌萌主
+                                子這是我家ㄉ萌萌主子這是我
+                                家ㄉ萌萌主子這是我家ㄉ</td>
+                        </tr>
 
-                    <tr>
-                        <td>PS0001</td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>正常</td>
-                        <td><img src="https://via.placeholder.com/100x60"></td>
-                        <td>100</td>
-                        <td>這是我家ㄉ萌萌主子這是我家
-                            ㄉ萌萌主子這是我家ㄉ萌萌主
-                            子這是我家ㄉ萌萌主子這是我
-                            家ㄉ萌萌主子這是我家ㄉ</td>
-                    </tr>
+                        <tr>
+                            <td>PS0001</td>
+                            <td>MB0001</td>
+                            <td>qqq123@gmail.com</td>
+                            <td>2021/10/1</td>
+                            <td>正常</td>
+                            <td><img src="https://via.placeholder.com/100x60"></td>
+                            <td>100</td>
+                            <td>這是我家ㄉ萌萌主子這是我家
+                                ㄉ萌萌主子這是我家ㄉ萌萌主
+                                子這是我家ㄉ萌萌主子這是我
+                                家ㄉ萌萌主子這是我家ㄉ</td>
+                        </tr>
 
-                    <tr>
-                        <td>PS0001</td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>正常</td>
-                        <td><img src="https://via.placeholder.com/100x60"></td>
-                        <td>100</td>
-                        <td>這是我家ㄉ萌萌主子這是我家
-                            ㄉ萌萌主子這是我家ㄉ萌萌主
-                            子這是我家ㄉ萌萌主子這是我
-                            家ㄉ萌萌主子這是我家ㄉ</td>
-                    </tr>
+                        <tr>
+                            <td>PS0001</td>
+                            <td>MB0001</td>
+                            <td>qqq123@gmail.com</td>
+                            <td>2021/10/1</td>
+                            <td>正常</td>
+                            <td><img src="https://via.placeholder.com/100x60"></td>
+                            <td>100</td>
+                            <td>這是我家ㄉ萌萌主子這是我家
+                                ㄉ萌萌主子這是我家ㄉ萌萌主
+                                子這是我家ㄉ萌萌主子這是我
+                                家ㄉ萌萌主子這是我家ㄉ</td>
+                        </tr>
 
-                </table>
+                    </table>
+                </div> -->
             </div>
         </main>
     </div>
+    <script src = "../js/backend/b4_message.js"></script>
 </body>
 
 </html>

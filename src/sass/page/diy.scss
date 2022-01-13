@@ -16,7 +16,6 @@ article.first_block {
         position: relative;
         margin: 0;
         margin-left: 3%;
-        z-index: 1;
         color: $font_color;
         span {
             position: relative;
@@ -282,7 +281,7 @@ div.background_pop {
     .decorate_2 {
         position: absolute;
         left: 70px;
-        bottom: -80%;
+        bottom: -150px;
     }
 }
 
@@ -290,13 +289,14 @@ div.background_pop {
     font-size: $font_22;
     width: 100%;
     height: 70%;
+    
 }
 
 .div_top {
     font-size: $font_32;
     text-align: center;
     line-height: 100%;
-
+    
     div.color {
         width: fit-content;
         height: fit-content;

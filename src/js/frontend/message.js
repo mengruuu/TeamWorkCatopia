@@ -25,7 +25,7 @@ async function uploadMessageData() {
         await fetch("./API/get_member_info.php")
         .then(res => res.json())
         .then(data => data); //取得會員資料
-    // console.log("memberID: ", response[0].MEMBER_ID);
+    console.log("memberID: ", response[0].MEMBER_ID);
 
     const personalLikes =
         await fetch("./API/getMessageLikesAndComments.php", {
@@ -50,21 +50,27 @@ async function uploadMessageData() {
 
     let personalCommentsPic = [];
 
-    for (let i = 0; i < personalCommentsId.length; i = i + 1) {
-        let pic =
+    for await(let id of personalCommentsId) {
+        let personalId = id['RESPONSE&LIKE_MEMBER_ID']
+        console.log("personalCommentsId: ", personalId);
             await fetch("./API/getCommentsPic.php", {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"
                 },
-                body: JSON.stringify(personalCommentsId[i]['RESPONSE&LIKE_MEMBER_ID'])
+                body: JSON.stringify(personalId)
             })
             .then(res => res.json())
-            .then(data => data);
-        personalCommentsPic.push(pic[0].MEMBER_PICTURE);
+            .then(data => {
+                console.log("data[0] ", data[0]);
+                console.log("data[0].MEMBER_PICTURE: ", data[0].MEMBER_PICTURE);
+                personalCommentsPic.push(data[0].MEMBER_PICTURE);
+            });
+        // console.log("pic[0].MEMBER_PICTURE: ", pic);
+        // personalCommentsPic.push(pic[0].MEMBER_PICTURE);
     }
 
-    // console.log("personalCommentsPic: ", personalCommentsPic);
+    console.log("personalCommentsPic: ", personalCommentsPic);
 
     // 顯示留言板的部分，使用Vue寫--------------------------------------------------------------------------------------
     const Feature = Vue.component('messageContent', {
@@ -193,7 +199,7 @@ async function uploadMessageData() {
                             behavior: "smooth"
                         });
                     }
-                    this.$emit("insertComment", inputValue, this.memberId, this.postId, this.index);
+                    this.$emit("insertComment", inputValue, response[0].MEMBER_ID, this.postId, this.index);
                 }
             },
             inputFocus() {
@@ -266,8 +272,10 @@ async function uploadMessageData() {
                         body: JSON.stringify(memberId)
                     })
                     .then(res => res.json())
-                    .then(data => { console.log("personalCommentsPic: ", data);
+                    .then(data => { console.log("personalCommentsPic: ", data[0].MEMBER_PICTURE);
+                        console.log("personalCommentsPicBefore: ", vm.personalCommentsPic);
                         vm.personalCommentsPic.push(data[0].MEMBER_PICTURE);
+                        console.log("personalCommentsPicAfter: ", vm.personalCommentsPic);
                     });
 
                 this.updateComments(index);
@@ -383,7 +391,7 @@ async function uploadMessageData() {
                 `);
 
                 postInfo.postImg = readFile.result;
-                // console.log(readFile.result);
+                console.log(readFile.result);
             });
         });
     };
@@ -438,7 +446,7 @@ async function uploadMessageData() {
     droppedImg(message_write_img_container.children[0], message_write_img_container);
 
     // 點擊送出po文------------------------------------------------------------------------------------------------------
-    confirmPost.addEventListener("click", function () {
+    confirmPost.addEventListener("click", function (event) {
         postInfo.postContent = message_write_message_content.value;
         if (postInfo.postContent === "" || postInfo.postImg === "") {
             alert("未發文或上傳圖片！");
@@ -457,7 +465,35 @@ async function uploadMessageData() {
                     location.href = "/TeamWorkCatopia/dist/message.html";
                 })
         }
+
+        event.target.classList.toggle("message_post_confirm_clicked");
     });
+
+    // 按enter鍵送出po文
+    // message_write_message_content.addEventListener("keyup", function(event) {
+    //     postInfo.postContent = message_write_message_content.value;
+    //     if(event.keyCode === 13) {
+    //         if (postInfo.postContent === "" || postInfo.postImg === "") {
+    //             alert("未發文或上傳圖片！");
+    //         } else {
+    //             fetch("./API/createPost.php", {
+    //                     method: "POST",
+    //                     headers: {
+    //                         "content-type": "application/json"
+    //                     },
+    //                     body: JSON.stringify(postInfo)
+    //                 })
+    //                 .then(res => res.json())
+    //                 .then(data => {
+    //                     console.log(data);
+    //                     window.alert("上傳成功");
+    //                     location.href = "/TeamWorkCatopia/dist/message.html";
+    //                 })
+    //         }
+    
+    //         event.target.classList.toggle("message_post_confirm_clicked");
+    //     }
+    // });
 
     // 更改class以及刪除圖片等部分--------------------------------------------------------------------------------------------------------
     // 點擊上傳圖片按鈕後，顯示圖片上傳區

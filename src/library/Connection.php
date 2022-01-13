@@ -4,10 +4,10 @@
        $db_host = "127.0.0.1";
        $db_user = "root";
 <<<<<<< HEAD
-       $db_pass = "gtr123456";
-=======
        $db_pass = "password";
->>>>>>> 5fee9a8c1ba47de1abd90033a87d5c34f38d4485
+=======
+       $db_pass = "gtr123456";
+>>>>>>> 63e02758eeea23baf05565aff10fa6df13eb40a9
        $db_select = "CATOPIA";
 
        //建立資料庫連線物件 (dsn=data source name 包含一些連線資訊，不同的資料庫系統其所需的資訊不一)

@@ -2,9 +2,10 @@
 @import '../mixin/mixin';
 
 .vip_main{
+    // border: 1px solid red;
     overflow-x: hidden;
     // border: 1px solid blue;
-    height: auto;
+    height: 70vh;
     // text-align: center;
     background-image: url("../images/vip/vip_starrysky.png");
     background-repeat: no-repeat;
@@ -12,6 +13,9 @@
     background-position:center;
     color: $font_color;
     // padding: 10px;
+    @include w600() {
+        height: auto;
+    }
     .except_bkgimg{
         // border: 1px solid blue;
         width: 80%;

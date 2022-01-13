@@ -34,7 +34,6 @@ Vue.component("backendProduct", {
 
   mounted() {
     $.getJSON("./API/b7_question.php").then((res) => {
-      console.log(res);
       this.questionData = res;
     });
   },

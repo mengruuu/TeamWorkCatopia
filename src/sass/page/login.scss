@@ -90,6 +90,10 @@ div.login_container > div.login_item > form > button {
     @include button();
 }
 
+div.login_container > div.login_item > form > button.login_confirm_button_clicked {
+    box-shadow: $shadow inset;
+}
+
 div.login_container > div.login_item > form > button:hover {
     cursor: pointer;
 }

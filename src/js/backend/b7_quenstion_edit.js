@@ -20,7 +20,6 @@ const vm = new Vue({
           },
           dataType: "text",
           success: function (response) {
-          //  console.log(question);
           console.log('回傳成功');
           },
           error: function (exception) {
