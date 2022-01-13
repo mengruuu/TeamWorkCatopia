@@ -28,13 +28,14 @@ div.footer_container > div.footer_up > div.footer_up_item {
 
 div.footer_container > div.footer_up > div.footer_up_item > button {
     width: fit-content;
+    @include button();
     padding: 5px 20px 5px 20px;
     font-size: 24px;
     border-radius: 15px;
     outline: none;
     color: $font_color;
     background-color: $important_color;
-    border: 1px solid $font_color;
+    // border: 1px solid $font_color;
     @include w900() {
         margin-bottom: 10px;
         width: fit-content;
