@@ -302,8 +302,8 @@ Vue.component('button-order',{
     },
     template:`
     <div class="cart_step1_next_step cart_step3_next_step">
-        <a href="./cart_step2.html"><button type="button">上一步<br>修改資料</button></a>
-        <a><button type="button" @click="submit_order_data">下一步<br>完成訂購</button></a>
+        <a href="./cart_step2.html"><button type="button">上一步&nbsp;修改資料</button></a>
+        <a><button type="button" @click="submit_order_data">下一步&nbsp;完成訂購</button></a>
     </div>
     `,
     mounted() {

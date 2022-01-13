@@ -2,10 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catopia 後台 Login</title>
+    @@include('./layout/meta.html', {
+        "title" : "Catopia 後台 Login"
+        })
     <link rel="stylesheet" href="../css/backend/backend_style.css">
     <link rel="stylesheet" href="../css/backend/back_login.css">
 
@@ -29,21 +28,44 @@
         <form action="#">
             <div class="back_login_input">
                 <p>帳號：</p>
-                <input type="text">
+                <input type = "text" value="qaz123@gmail.com" id="member_mail">
             </div>
     
             <div class="back_login_input">
                 <p>密碼：</p>
-                <input type="password">
+                <input type = "password" value="QA12345678" id="member_password">
             </div>
             
             <div class="back_login_button">
-                <a href="./manager_center.html"><button type="submit">登入</button></a>
+                <a><button type = "button" onclick="member_login()">登入</button></a>
             </div>
         </form>
         
     </div>
 
+    <script>
+        function member_login(){
+            $.ajax({
+                method:'POST',
+                url:'./API/backend_login.php',
+                data:{
+                    email:$('#member_mail').val(),
+                    password:$('#member_password').val(),
+                },
+                dataType:'json',
+                success:function(response){
+                    if(response == 'false'){
+                        alert('帳號或密碼錯誤');
+                    }else{
+                        window.location.href = `./manager_center.html`;
+                    }
+                },
+                error: function(exception) {
+                 alert("發生錯誤: " + exception.status); 
+             }
+            })
+        }
+    </script>
 </body>
 
 </html>

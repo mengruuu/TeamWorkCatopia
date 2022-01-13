@@ -6,7 +6,9 @@
 //     font-size: 20px;
 //     color: $font_color;
 // }
-
+a{
+    display: block;
+}
 video{
     // margin: 0 auto;
     width: 100%;
@@ -122,8 +124,8 @@ article.sec_block{
     // border: 1px solid red;
     width: 90%;
     border-radius: 15px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
     margin: 0 auto;
     margin-bottom: 20px;
     box-shadow: $shadow_box;
@@ -367,6 +369,7 @@ article.sec_block{
                     padding: 2px 5px;
                 }
             }
+            
             .col-fluid{
                 // border: 1px solid red;
                 display: block;
@@ -932,6 +935,7 @@ article.sec_block{
         // border:1px solid green;
         width: 60%;
         margin: 0 auto;
+        margin-bottom: 30px;
     }
     .recommend_content{
         // border:1px solid black;
@@ -956,7 +960,7 @@ article.sec_block{
                     background-color: $main_color;
                     // border:1px solid blue;
                     border-radius: 10px;
-                    height: 200px;
+                    height: 150px;
                     margin-top: 15px;
                     text-align: center;
                     padding: 10px 2px;

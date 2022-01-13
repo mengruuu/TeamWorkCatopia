@@ -66,6 +66,7 @@ function diy_step_flavor(){
         diy_flavor_block.innerHTML = `<p id="food_blueberry">酸甜藍莓</p>/
         <p id="food_sweet_potato">香甜地瓜</p>/
         <p id="food_grass">新鮮貓草</p>`;
+        let change_cake_img = document.getElementById("change_cake_img");
         change_food()
     }else{
         diy_flavor_block.innerHTML = '';
@@ -171,7 +172,7 @@ function add_cart(){
         let cake_feature = cakeNUM + foodNUM + nutritionNUM;
         // console.log(cake_feature);
         let diy_cake_array = [];
-        //輸出客製蛋糕代號
+        //輸出客製蛋糕代號 
         $.ajax({
             // async:  false,
             method: "POST",
@@ -186,10 +187,34 @@ function add_cart(){
                     diy_cake_array.push(response[i]);
                 }
                 // console.log(diy_cake_array[0]);
-                console.log(diy_cake_array[0].PRODUCT_NAME);
-                console.log(diy_cake_array[0].PRODUCT_FEATURE);
+                console.log(diy_cake_array[0].PRODUCT_NAME);        //拿出客製蛋糕商品名字
+                console.log(diy_cake_array[0].PRODUCT_ID);        //拿出客製蛋糕商品ID
 
-                
+                let cake_product_id = diy_cake_array[0].PRODUCT_ID;
+                console.log(cake_product_id);
+                // console.log(diy_cake_array[0].PRODUCT_FEATURE);
+
+                login_check_no_direct(cake_product_id);
+                // login_add_cart();
+
+                // console.log("加入購物車函式");
+                // $.ajax({
+                //     method:'POST',
+                //     url:'./API/addshopping_cart.php',
+                //     data:{
+                //         quantity:1,
+                //         product_ID:cake_product_id,
+                //     },
+                //     dataType:'json',
+                //     success:function(response){
+                //         console.log(response);
+                //         alert("已成功加入購物車")
+                //         window.location.href = "./diy.html";
+                //     },
+                //     error: function(exception) {
+                //         alert("發生錯誤: " + exception.status); 
+                //     }
+                // })
 
             },
             error: function (exception) {
@@ -197,16 +222,11 @@ function add_cart(){
             },
         });
 
-        // console.log(diy_cake_array[0].PRODUCT_NAME);
-
-
         // window.location.href = "./diy.html";
         // window.location.href = "./cart_step1.html";
     })
 }
-function after_cart_add(){
 
-}
 //全部重選
 let reset = document.getElementById("reset");
 let change_cake_img = document.getElementById("change_cake_img");
@@ -227,7 +247,7 @@ reset.addEventListener('click', function(){
 
 
 //加入購物車
-function login_check_no_direct(){
+function login_check_no_direct(cake_product_id){
     let login;
     fetch('./API/login_check.php').then(res => res.json()).then(res =>{
         if(res == ""){
@@ -236,29 +256,30 @@ function login_check_no_direct(){
         }else{
             console.log('登入中');
             login = true;
-            login_add_cart();
+            login_add_cart(cake_product_id);
         }
     }).catch(function(err){
         console.log('no data found');
     })
-  
 }
   
-function login_add_cart(){
-console.log("加入購物車函式");
+function login_add_cart(cake_product_id){
+    console.log("加入購物車函式");
     $.ajax({
         method:'POST',
         url:'./API/addshopping_cart.php',
         data:{
-          quantity:quantity,
-          product_ID:ID,
+            quantity:1,
+            product_ID:cake_product_id,
         },
         dataType:'json',
         success:function(response){
             console.log(response);
+            alert("已成功加入購物車")
+            window.location.href = "./diy.html";
         },
         error: function(exception) {
-        alert("發生錯誤: " + exception.status); 
+            alert("發生錯誤: " + exception.status); 
         }
     })
 }
