@@ -116,7 +116,7 @@ async function uploadMessageData() {
                     <img :class = "{message_content_img: true}" :src = postPicture>
                     <input :class = "{comment_input: true, message_focus_input: isFocus}" placeholder = "回應貼文..." @keyup = "inputComment" @focus = "inputFocus" @blur = "inputBlur">
                     <div :class = "{message_comment_container: true}" v-for = "(comment, index) in comments">
-                        <img :class = "{message_comment_user_img: true}" :src = "personalPic">
+                        <img :class = "{message_comment_user_img: true}" src = "./images/header/login_header_icon_member.png">
                         <p :class = "{message_comment_item: true}">{{ comment.comment }}</p>
                     </div>
                 </div>
