@@ -22,7 +22,7 @@
                     <img src = "./images/login/login_password_input.png">
                     <input type = "password" placeholder = "Password" id="member_password">
                 </div>
-                <button type = "button" onclick="member_login()">Login</button>
+                <button type = "button" onclick="member_login()" class = "login_confirm_button">Login</button>
             </form>
             <div class = "login_register_button_and_icon">
                 <a href = "./register_step1.html">還沒有帳號？註冊</a>
@@ -52,7 +52,23 @@
     </div>
     @@include('./layout/footer.html')
     <script>
+        const inputEmail = document.querySelector("#member_mail");
+        const inputPassword = document.querySelector("#member_password");
+        const confirm_button = document.querySelector("button.login_confirm_button"); console.log(confirm_button);
+
+        inputEmail.addEventListener("keyup", function(e) {
+            if(e.keyCode === 13 && inputEmail.value && inputPassword.value) {
+                member_login();
+            }
+        });
+
+        inputPassword.addEventListener("keyup", function(e) {
+            if(e.keyCode === 13 && inputEmail.value && inputPassword.value) {
+                member_login();
+            }
+        });
         function member_login(){
+            confirm_button.classList.add("login_confirm_button_clicked");
             $.ajax({
                 method:'POST',
                 url:'./API/login.php',

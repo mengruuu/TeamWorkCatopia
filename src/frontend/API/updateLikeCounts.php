@@ -24,16 +24,18 @@ include("../library/Connection.php");
     if($data) {
         foreach($data as $key => $variableName){
             if($variableName["LIKE_MODE"]) {
-                $sql = "UPDATE `POST_RESPONSE&LIKE` SET LIKE_MODE = ? WHERE POST_ID = ?";
+                $sql = "UPDATE `POST_RESPONSE&LIKE` SET LIKE_MODE = ? WHERE POST_ID = ? AND `RESPONSE&LIKE_MEMBER_ID` = ?";
                 $statment = $pdo->prepare($sql);
                 $statment->bindValue(1, 0);
                 $statment->bindValue(2, $likeCountsAndPostId -> postID);
+                $statment->bindValue(3, $likeCountsAndPostId -> memberId);
                 $statment->execute();
             }else {
-                $sql = "UPDATE `POST_RESPONSE&LIKE` SET LIKE_MODE = ? WHERE POST_ID = ?";
+                $sql = "UPDATE `POST_RESPONSE&LIKE` SET LIKE_MODE = ? WHERE POST_ID = ? AND `RESPONSE&LIKE_MEMBER_ID` = ?";
                 $statment = $pdo->prepare($sql);
                 $statment->bindValue(1, 1);
                 $statment->bindValue(2, $likeCountsAndPostId -> postID);
+                $statment->bindValue(3, $likeCountsAndPostId -> memberId);
                 $statment->execute();
             }
         }
