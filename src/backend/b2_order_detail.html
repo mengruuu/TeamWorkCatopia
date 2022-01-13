@@ -6,12 +6,15 @@
     "title" : "Catopia B2訂單管理"
     })
     <link rel="stylesheet" href="../css/backend/b2_order_detail.css">
-    
+    <script src="../js/tools/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+    <script src="../js/backend/b2_order_detail.js" async></script>
+
 </head>
 
 <body>
     @@include('./layout/backend_header.html')
-    
+
     <div class="back_management_container">
         <aside class="back_management_list">
             <div>
@@ -71,63 +74,7 @@
             <div class="b2_title">
                 <p>B2-2　訂單編號</p>
             </div>
-            <div class="backend_table">
-                <table>
-                    <tr class="table_title">
-                        <td>會員編號</td>
-                        <td>會員信箱</td>
-                        <td>下單時間</td>
-                        <td>訂單狀態</td>
-                        <td>付款方式</td>
-                        <td>付款狀態</td>
-                        <td>訂單金額</td>
-                        <td>奴幣回饋</td>
-                        <td>奴幣折抵</td>
-                    </tr>
-                    <tr>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>備貨中</td>
-                        <td>信用卡</td>
-                        <td>已付款</td>
-                        <td>1200</td>
-                        <td>1200</td>
-                        <td>200</td>
-                    </tr>
-                </table>
-            </div>
-            <hr/>
-            <div class="backend_table">
-                <table>
-                    <tr class="table_title">
-                        <td>購買清單</td>
-                        <td>數量</td>
-                        <td>價格</td>
-                        <td>配送方式</td>
-                        <td>配送地址</td>
-                        <td>收件人</td>
-                        <td>收件人電話</td>                       
-                    </tr>
-                    <tr>
-                        <td>花朵深層睡眠窩</td>
-                        <td>1</td>
-                        <td>550</td>
-                        <td>貨到付款</td>
-                        <td>新北市汐止區</td>
-                        <td>帥哥</td>
-                        <td>0966222444</td>
-                    </tr>
-                    <tr>
-                        <td>花朵深層睡眠窩</td>
-                        <td>1</td>
-                        <td>550</td>
-                        <td>貨到付款</td>
-                        <td>新北市汐止區</td>
-                        <td>帥哥</td>
-                        <td>0966222444</td>
-                    </tr>
-                </table>
+            <div class="backend_table" id="order_detail_app">        
             </div>
         </main>
     </div>
