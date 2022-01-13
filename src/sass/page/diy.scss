@@ -17,6 +17,7 @@ article.first_block {
         margin: 0;
         margin-left: 3%;
         z-index: 1;
+        color: $font_color;
         span {
             position: relative;
             bottom: 23px;
@@ -239,6 +240,7 @@ article.sec_block {
         @include button();
         width: 100%;
         margin: 0 auto;
+        cursor: pointer;
     }
 }
 

@@ -1,70 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-hant">
 <head>
     @@include('./layout/meta.html', {
-      "title" : "聯絡我們"
-    })
+        "title" : "聯絡我們"
+      })
     <link rel="stylesheet" href="./css/contact.css">
 </head>
 <body>
-    @@include('./layout/header.html')
-    @@include('./layout/title.html',{
-        "title" : "聯絡我們"
-    })
-
-    <main class="contact_main">
-        <div class="info">
-            <div class="left_outer">
-                <div class="info_left">
-                    <img class="logo" src="./images/contact/contact_logo.png" alt="" srcset="">
-                    <div class="info_bottom">
-                        <div class="left_text">
-                            <img src="./images/contact/contact_address.png" alt="" srcset="">
-                            新北市石門區
-                        </div>
-                        <div class="left_text">
-                            <img src="./images/contact/contact_mail.png" alt="" srcset="">
-                            123@gmail.com
-                        </div>
-                        <div class="left_text">
-                            <img src="./images/contact/contact_phone.png" alt="" srcset="">
-                            02-123456789
-                        </div>
+    <!-- <div class="header_hamburger"> -->
+     @@include('./layout/header.html')
+    <div class="contact_main">
+        <div class="contact_background"><img src="./images/contact/contact_background.png"></div>
+        <div class="contact_rwd">
+            <p class="contact_p">聯絡我們</p>
+            <div class="contact_text">
+                <div class="contact_text_bg">
+                        <img src="./images/contact/contact_logo.png" alt="logo_cat" width="250px" height="125px">
+                    <div class="contact_bg">
+                        <br>
+                        <img src="./images/contact/contact_address.png" width="19px" height="19px">新北市石門區<br><br>
+                        <img src="./images/contact/contact_mail.png" width="19px" height="19px">123456@gmail.com<br><br>
+                        <img src="./images/contact/contact_phone.png" width="19px" height="19px">02-123456789<br><br>
                     </div>
                 </div>
             </div>
-            <div class="right_outer">
-                <div class="info_right">
-                    <div class="right_title">
-                        <div class="title_text">
-                            請輸入您的資訊
-                        </div>
-                    </div>
-
-                    <div class="cus_info">
-                        <!-- 請輸入姓名... -->
-                        <input type="text" value="請輸入姓名...">
-                        <br><br>
-                        <!-- 請輸入Email... -->
-                        <input type="email" value="請輸入Email...">
-                        <br><br>
-                        <!-- 請輸入訊息... -->
-                        <textarea rows="5" value="請輸入訊息..."></textarea>
-                    </div>
-
-                    <div class="info_btn">
-                        <div class="btn_text">
-                            送出
-                        </div>
-                    </div>
-    
+            <div class="contact_form">
+                <div class="contact_form_bg">
+                <!--
+                <form enctype="multipart/form-data" class="contact_fm" action="" method="post">
+                -->    
+                        <input class="contact_form_info" type="button" value="請輸入你的資訊"><br><br>
+                        <input id="name" class="contact_form_name" type="text" placeholder="請輸入姓名" name="name"><br><br>
+                        <input id="email" class="contact_form_email" type="text" placeholder="請輸入E-mail" name="email"><br><br>
+                        <textarea id="mark" class="contact_form_textarea" placeholder="請輸入訊息"></textarea><br><br>
+                        <button id="xxx" class="contact_form_submit" name="comment" onclick="alert('送出成功')">送出</button><br><br>
+               <!--
+                </form>
+            -->
                 </div>
             </div>
         </div>
+    </div>
 
-    </main>
+    <script src="../src/library/jquery-3.6.0.min.js"></script>
+<script>
+    //;(function() {
+    //    const footer_question_button = document.querySelector("button.footer_question_button");
 
 
-    @@include('./layout/footer.html')
+
+
+       // footer_question_button.addEventListener("click", function() {
+        //    window.location.href = "/dist/question.html"
+       // });
+
+        document.querySelector('#name').addEventListener('blur', function(e) {
+            const {target} = e;
+            if   (target.value.length === 0)   {  
+                // alert("請輸入您姓名！");
+                target.focus();
+                return   false;
+            }
+            return   true;
+        });
+        document.querySelector('#email').addEventListener('blur', function(e) {
+            const {target} = e;
+            var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if(!regex.test(target.value)) {
+                // alert("E-MAIL格式不符！");
+                target.focus();
+            }
+        });
+
+
+        document.querySelector('#xxx').addEventListener('click', function(){
+            const name = document.querySelector('#name').value;
+            const email = document.querySelector('#email').value;
+            const mark = document.querySelector('#mark').value;
+            fetch('./API/test.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    mark
+                })
+            })
+            .then(text => console.log(text));
+        });
+
+    //})()
+
+</script>
+
+@@include('./layout/footer.html')
 </body>
 </html>

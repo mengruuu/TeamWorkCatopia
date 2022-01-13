@@ -1,0 +1,1235 @@
+div.message_write_background {
+  position: fixed;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 998;
+}
+
+div.message_write_message_container {
+  position: fixed;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-size: cover;
+  width: 85%;
+  max-width: 500px;
+  height: 428px;
+  border-radius: 15px;
+  padding: 0 20px 20px;
+  background-color: #fff;
+  z-index: 999;
+  -webkit-box-shadow: 5px 5px 5px lightgray;
+          box-shadow: 5px 5px 5px lightgray;
+  overflow-x: hidden;
+}
+
+div.message_write_message_container div.message_write_message_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #774F40;
+}
+
+div.message_write_message_container div.message_write_message_title p {
+  font-size: 26px;
+  color: #774F40;
+}
+
+div.message_write_message_container div.message_write_message_title div.message_write_message_close {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+}
+
+div.message_write_message_container div.message_write_message_content_container {
+  height: 300px;
+  overflow: hidden;
+}
+
+div.message_write_message_container div.message_write_message_content_container textarea {
+  resize: none;
+  width: 100%;
+  height: 200px;
+  outline: none;
+  border: none;
+  color: #774F40;
+  font-size: 22px;
+  margin-top: 16px;
+}
+
+div.message_write_message_container div.message_write_message_content_container textarea::-webkit-input-placeholder {
+  color: #774F40;
+}
+
+div.message_write_message_container div.message_write_message_content_container textarea:-ms-input-placeholder {
+  color: #774F40;
+}
+
+div.message_write_message_container div.message_write_message_content_container textarea::-ms-input-placeholder {
+  color: #774F40;
+}
+
+div.message_write_message_container div.message_write_message_content_container textarea::placeholder {
+  color: #774F40;
+}
+
+div.message_write_message_container div.message_write_message_content_container textarea:hover {
+  font-size: 16px;
+  padding-right: 16px;
+}
+
+div.message_write_message_container div.message_write_message_content_container div.message_write_img_container {
+  position: relative;
+  width: calc(100% - 2px);
+  padding: 10px 0 0;
+  border-radius: 20px;
+  height: 0;
+  border: none;
+  text-align: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  margin-top: 10px;
+}
+
+div.message_write_message_container div.message_write_message_content_container div.message_write_img_container div.message_write_img_container_content {
+  position: relative;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 10px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+div.message_write_message_container div.message_write_message_content_container div.message_write_img_container div.message_write_img_container_content div.message_write_img_container_closed {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+div.message_write_message_container div.message_write_message_content_container div.message_write_img_container_overflowY {
+  border: none;
+}
+
+div.message_write_message_container div.message_write_message_content_container div.message_write_img_container_overflowY div.message_write_img_container_content img.message_write_img_content {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+div.message_write_message_container div.message_write_message_content_container div.message_write_img_container_open {
+  height: 300px;
+  border: 1px solid #774F40;
+  background-color: #fff;
+}
+
+div.message_write_message_container div.message_write_message_content_container div.message_write_img_container_open div.message_write_img_container_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 290px;
+  background-color: lightgray;
+  border: 1px dashed #774F40;
+  text-align: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+div.message_write_message_container div.message_write_message_content_container div.message_write_img_container_open div.message_write_img_container_content div.message_write_img_container_closed {
+  cursor: pointer;
+  height: 30px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+div.message_write_message_container div.message_write_message_content_container:hover {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+div.message_write_message_container div.message_write_message_content_container:hover::-webkit-scrollbar {
+  width: 16px;
+}
+
+div.message_write_message_container div.message_write_message_content_container:hover::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+div.message_write_message_container div.message_write_message_content_container:hover::-webkit-scrollbar-thumb {
+  background-color: #774F40;
+  border-radius: 10px;
+}
+
+div.message_write_message_container div.message_write_message_content_container:hover::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+div.message_write_message_container div.message_write_message_img_file_and_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 100%;
+}
+
+div.message_write_message_container div.message_write_message_img_file_and_button label.message_write_message_img_file_container {
+  background-color: #FED67E;
+  width: 40px;
+  padding: 0;
+  color: #774F40;
+  font-size: 18px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+div.message_write_message_container div.message_write_message_img_file_and_button label.message_write_message_img_file_container img {
+  width: 100%;
+  height: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 5px;
+}
+
+div.message_write_message_container div.message_write_message_img_file_and_button button {
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+  background-color: #FED67E;
+  color: #774F40;
+  border: 0px;
+  cursor: pointer;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  margin-left: 20px;
+  padding: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+div.message_write_message_container_open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.message_input_container {
+  padding: 5px 0;
+  background-color: #EAE4D2;
+  width: 100vw;
+}
+
+div.message_input_container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 10%;
+}
+
+div.message_input_container div img {
+  width: 60px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+div.message_input_container div div.input_and_laber_for_files {
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+div.message_input_container div div.input_and_laber_for_files input {
+  cursor: pointer;
+  height: 32px;
+  width: 250px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  padding: 0 16px;
+  color: #774F40;
+  -webkit-box-shadow: 5px 5px 5px lightgrey;
+          box-shadow: 5px 5px 5px lightgrey;
+}
+
+div.message_input_container div div.input_and_laber_for_files input::-webkit-input-placeholder {
+  color: #774F40;
+  font-size: 16px;
+}
+
+div.message_input_container div div.input_and_laber_for_files input:-ms-input-placeholder {
+  color: #774F40;
+  font-size: 16px;
+}
+
+div.message_input_container div div.input_and_laber_for_files input::-ms-input-placeholder {
+  color: #774F40;
+  font-size: 16px;
+}
+
+div.message_input_container div div.input_and_laber_for_files input::placeholder {
+  color: #774F40;
+  font-size: 16px;
+}
+
+div.message_input_container div input[type='file'] {
+  position: absolute;
+  right: 200%;
+}
+
+div.message_and_comment_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 75%;
+  margin: 50px auto;
+}
+
+div.message_and_comment_container div.message_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  border-radius: 15px;
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  margin: 32px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.message_and_comment_container div.message_container div.message_setting_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 515px;
+  margin-top: 16px;
+}
+
+div.message_and_comment_container div.message_container div.message_setting_container div.message_setting_container_content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #F4E6CD;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  cursor: pointer;
+}
+
+div.message_and_comment_container div.message_container div.message_setting_container div.message_setting_container_content div {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #774F40;
+}
+
+div.message_and_comment_container div.message_container div.message_setting_container div.message_setting_container_content ul.message_setting_container_content_list {
+  position: absolute;
+  display: none;
+  right: 0;
+  top: calc(100% + 16px);
+  width: 150%;
+  padding: 0;
+  background-color: #F7F8DC;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  z-index: 40;
+}
+
+div.message_and_comment_container div.message_container div.message_setting_container div.message_setting_container_content ul.message_setting_container_content_list li {
+  list-style: none;
+  width: calc(100% - 16px);
+  color: #774F40;
+  padding: 8px;
+  font-size: 16px;
+  text-align: right;
+}
+
+div.message_and_comment_container div.message_container div.message_setting_container div.message_setting_container_content ul.message_setting_container_content_list li:hover {
+  background-color: #E6EECE;
+}
+
+div.message_and_comment_container div.message_container div.message_setting_container div.message_setting_container_content ul.message_setting_container_content_list_show {
+  display: block;
+}
+
+div.message_and_comment_container div.message_container div.message_setting_container_hide {
+  display: none;
+}
+
+div.message_and_comment_container div.message_container div.message_user_and_time_and_like {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 515px;
+  margin-bottom: 16px;
+}
+
+div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_img_and_user_and_time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  height: 5%;
+}
+
+div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_img_and_user_and_time img {
+  width: 90px;
+  height: 54px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_user_and_time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 16px;
+}
+
+div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_user_and_time p {
+  font-size: 18px;
+  color: #774F40;
+  margin: 0;
+}
+
+div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_like_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 0;
+  background-color: #F4E6CD;
+  color: #774F40;
+  padding: 0 8px;
+  border-radius: 15px;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+  cursor: pointer;
+}
+
+div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_like_container div.message_like {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_like_container div.message_like::before {
+  content: "";
+  position: absolute;
+  left: 62%;
+  top: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 12px;
+  height: 20px;
+  background: lightgray;
+  border-radius: 50px 50px 0 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: left bottom;
+  transform-origin: left bottom;
+  z-index: 1;
+}
+
+div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_like_container div.message_like::after {
+  content: "";
+  position: absolute;
+  left: 40%;
+  top: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 12px;
+  height: 20px;
+  background: lightgray;
+  border-radius: 50px 50px 0 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: right bottom;
+  transform-origin: right bottom;
+  z-index: 1;
+}
+
+div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_like_container div.message_liked {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_like_container div.message_liked::before {
+  content: "";
+  position: absolute;
+  left: 62%;
+  top: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 12px;
+  height: 20px;
+  background: #774F40;
+  border-radius: 50px 50px 0 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: left bottom;
+  transform-origin: left bottom;
+}
+
+div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_like_container div.message_liked::after {
+  content: "";
+  position: absolute;
+  left: 40%;
+  top: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 12px;
+  height: 20px;
+  background: #774F40;
+  border-radius: 50px 50px 0 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: right bottom;
+  transform-origin: right bottom;
+}
+
+div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_like_container p {
+  font-size: 18px;
+  margin: 10px 8px;
+}
+
+div.message_and_comment_container div.message_container div.message_content_and_comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 435px;
+  border-radius: 15px;
+  background-color: #F4E6CD;
+  padding: 20px 40px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+}
+
+div.message_and_comment_container div.message_container div.message_content_and_comment div.message_content_text p {
+  color: #774F40;
+  font-size: 16px;
+}
+
+div.message_and_comment_container div.message_container div.message_content_and_comment img.message_content_img {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+}
+
+div.message_and_comment_container div.message_container div.message_content_and_comment input {
+  padding: 8px 16px;
+  font-size: 16px;
+  color: #774F40;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  margin-bottom: 16px;
+  -webkit-box-shadow: 1px 1px 1px lightgray;
+          box-shadow: 1px 1px 1px lightgray;
+}
+
+div.message_and_comment_container div.message_container div.message_content_and_comment input::-webkit-input-placeholder {
+  color: #774F40;
+}
+
+div.message_and_comment_container div.message_container div.message_content_and_comment input:-ms-input-placeholder {
+  color: #774F40;
+}
+
+div.message_and_comment_container div.message_container div.message_content_and_comment input::-ms-input-placeholder {
+  color: #774F40;
+}
+
+div.message_and_comment_container div.message_container div.message_content_and_comment input::placeholder {
+  color: #774F40;
+}
+
+div.message_and_comment_container div.message_container div.message_content_and_comment input.message_focus_input {
+  -webkit-box-shadow: 1px 1px 1px lightgray inset;
+          box-shadow: 1px 1px 1px lightgray inset;
+}
+
+div.message_and_comment_container div.message_container div.message_content_and_comment div.message_comment_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 16px 0 0;
+  background-color: #FFF2CC;
+  border-radius: 15px;
+  padding: 5px 16px;
+  border: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-shadow: 1px 1px 1px lightgray inset;
+          box-shadow: 1px 1px 1px lightgray inset;
+  -webkit-animation-name: commentsStyleChange;
+          animation-name: commentsStyleChange;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+}
+
+div.message_and_comment_container div.message_container div.message_content_and_comment div.message_comment_container img {
+  width: 30px;
+  height: 42px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 24px;
+}
+
+div.message_and_comment_container div.message_container div.message_content_and_comment div.message_comment_container p {
+  margin: 0;
+  font-size: 18px;
+  color: #774F40;
+  word-break: break-all;
+}
+
+@-webkit-keyframes commentsStyleChange {
+  from {
+    -webkit-box-shadow: 1px 1px 1px lightgray;
+            box-shadow: 1px 1px 1px lightgray;
+    background-color: #B7C88E;
+  }
+  to {
+    -webkit-box-shadow: 1px 1px 1px lightgray inset;
+            box-shadow: 1px 1px 1px lightgray inset;
+    background-color: #FFF2CC;
+  }
+}
+
+@keyframes commentsStyleChange {
+  from {
+    -webkit-box-shadow: 1px 1px 1px lightgray;
+            box-shadow: 1px 1px 1px lightgray;
+    background-color: #B7C88E;
+  }
+  to {
+    -webkit-box-shadow: 1px 1px 1px lightgray inset;
+            box-shadow: 1px 1px 1px lightgray inset;
+    background-color: #FFF2CC;
+  }
+}
+
+div.message_and_comment_container div.message_container_hide {
+  opacity: 0;
+}
+
+@media (min-width: 576px) and (max-width: 800px) {
+  div.message_input_container {
+    padding: 5px 0;
+    background-color: #EAE4D2;
+    width: 100vw;
+  }
+  div.message_input_container div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: 0;
+  }
+  div.message_input_container div img {
+    width: 60px;
+    height: 50px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  div.message_input_container div div.input_and_laber_for_files {
+    position: relative;
+    margin-left: 20px;
+  }
+  div.message_input_container div div.input_and_laber_for_files input {
+    cursor: pointer;
+    height: 32px;
+    width: 250px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding: 0 16px;
+    color: #774F40;
+    -webkit-box-shadow: 5px 5px 5px lightgrey;
+            box-shadow: 5px 5px 5px lightgrey;
+  }
+  div.message_input_container div div.input_and_laber_for_files input::-webkit-input-placeholder {
+    color: #774F40;
+    font-size: 16px;
+  }
+  div.message_input_container div div.input_and_laber_for_files input:-ms-input-placeholder {
+    color: #774F40;
+    font-size: 16px;
+  }
+  div.message_input_container div div.input_and_laber_for_files input::-ms-input-placeholder {
+    color: #774F40;
+    font-size: 16px;
+  }
+  div.message_input_container div div.input_and_laber_for_files input::placeholder {
+    color: #774F40;
+    font-size: 16px;
+  }
+  div.message_input_container div input[type='file'] {
+    position: absolute;
+    right: 200%;
+  }
+  div.message_and_comment_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%;
+    margin: 50px auto;
+  }
+  div.message_and_comment_container div.message_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+  }
+  div.message_and_comment_container div.message_container div.message_setting_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 480px;
+    margin-top: 16px;
+  }
+  div.message_and_comment_container div.message_container div.message_setting_container img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  div.message_and_comment_container div.message_container div.message_setting_container_hide {
+    display: none;
+  }
+  div.message_and_comment_container div.message_container div.message_user_and_time_and_like {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: 480px;
+    margin-bottom: 16px;
+  }
+  div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_img_and_user_and_time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: 100%;
+    height: 5%;
+  }
+  div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_img_and_user_and_time img {
+    width: 90px;
+    height: 54px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_user_and_time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 16px;
+  }
+  div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_user_and_time p {
+    font-size: 16px;
+    color: #774F40;
+    margin: 0;
+  }
+  div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_like_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 0;
+    background-color: #F4E6CD;
+    color: #774F40;
+    padding: 0 8px;
+    border-radius: 15px;
+  }
+  div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_like_container img {
+    width: 20px;
+    height: 20px;
+  }
+  div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_like_container p {
+    font-size: 16px;
+    margin: 10px 8px;
+  }
+  div.message_and_comment_container div.message_container div.message_content_and_comment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 400px;
+    border-radius: 15px;
+    background-color: #F4E6CD;
+    margin-bottom: 30px;
+  }
+  div.message_and_comment_container div.message_container div.message_content_and_comment div.message_content_text p {
+    color: #774F40;
+    font-size: 16px;
+  }
+  div.message_and_comment_container div.message_container div.message_content_and_comment img.message_content_img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 30px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  div.message_and_comment_container div.message_container div.message_content_and_comment input {
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #774F40;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+  }
+  div.message_and_comment_container div.message_container div.message_content_and_comment input::-webkit-input-placeholder {
+    color: #774F40;
+  }
+  div.message_and_comment_container div.message_container div.message_content_and_comment input:-ms-input-placeholder {
+    color: #774F40;
+  }
+  div.message_and_comment_container div.message_container div.message_content_and_comment input::-ms-input-placeholder {
+    color: #774F40;
+  }
+  div.message_and_comment_container div.message_container div.message_content_and_comment input::placeholder {
+    color: #774F40;
+  }
+  div.message_comment_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 16px 0;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 5px 20px;
+  }
+  div.message_comment_container img {
+    width: 100%;
+    height: 100%;
+  }
+  div.message_comment_container p {
+    font-size: 16px;
+    color: #774F40;
+  }
+}
+
+@media (max-width: 575.98px) {
+  div.message_input_container {
+    padding: 5px 0;
+    background-color: #EAE4D2;
+    width: 100vw;
+  }
+  div.message_input_container div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: 0;
+  }
+  div.message_input_container div img {
+    width: 60px;
+    height: 50px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  div.message_input_container div div.input_and_laber_for_files {
+    position: relative;
+    margin-left: 20px;
+  }
+  div.message_input_container div div.input_and_laber_for_files input {
+    cursor: pointer;
+    height: 32px;
+    width: 250px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding: 0 16px;
+    color: #774F40;
+    -webkit-box-shadow: 5px 5px 5px lightgrey;
+            box-shadow: 5px 5px 5px lightgrey;
+  }
+  div.message_input_container div div.input_and_laber_for_files input::-webkit-input-placeholder {
+    color: #774F40;
+    font-size: 16px;
+  }
+  div.message_input_container div div.input_and_laber_for_files input:-ms-input-placeholder {
+    color: #774F40;
+    font-size: 16px;
+  }
+  div.message_input_container div div.input_and_laber_for_files input::-ms-input-placeholder {
+    color: #774F40;
+    font-size: 16px;
+  }
+  div.message_input_container div div.input_and_laber_for_files input::placeholder {
+    color: #774F40;
+    font-size: 16px;
+  }
+  div.message_input_container div input[type='file'] {
+    position: absolute;
+    right: 200%;
+  }
+  div.message_and_comment_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%;
+    margin: 50px auto;
+  }
+  div.message_and_comment_container div.message_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+  }
+  div.message_and_comment_container div.message_container div.message_setting_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 280px;
+    margin-top: 16px;
+  }
+  div.message_and_comment_container div.message_container div.message_setting_container img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  div.message_and_comment_container div.message_container div.message_setting_container_hide {
+    display: none;
+  }
+  div.message_and_comment_container div.message_container div.message_user_and_time_and_like {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: 280px;
+    margin-bottom: 16px;
+  }
+  div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_img_and_user_and_time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: 100%;
+    height: 5%;
+  }
+  div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_img_and_user_and_time img {
+    width: 80px;
+    height: 54px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_user_and_time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 5px;
+  }
+  div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_user_and_time p {
+    font-size: 16px;
+    color: #774F40;
+    margin: 0;
+  }
+  div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_like_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 0;
+    background-color: #F4E6CD;
+    color: #774F40;
+    padding: 0 8px;
+    border-radius: 15px;
+  }
+  div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_like_container img {
+    width: 20px;
+    height: 20px;
+  }
+  div.message_and_comment_container div.message_container div.message_user_and_time_and_like div.message_like_container p {
+    font-size: 16px;
+    margin: 10px 8px;
+  }
+  div.message_and_comment_container div.message_container div.message_content_and_comment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 260px;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #F4E6CD;
+    margin-bottom: 30px;
+  }
+  div.message_and_comment_container div.message_container div.message_content_and_comment div.message_content_text p {
+    color: #774F40;
+    font-size: 16px;
+  }
+  div.message_and_comment_container div.message_container div.message_content_and_comment img.message_content_img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 30px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  div.message_and_comment_container div.message_container div.message_content_and_comment input {
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #774F40;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+  }
+  div.message_and_comment_container div.message_container div.message_content_and_comment input::-webkit-input-placeholder {
+    color: #774F40;
+  }
+  div.message_and_comment_container div.message_container div.message_content_and_comment input:-ms-input-placeholder {
+    color: #774F40;
+  }
+  div.message_and_comment_container div.message_container div.message_content_and_comment input::-ms-input-placeholder {
+    color: #774F40;
+  }
+  div.message_and_comment_container div.message_container div.message_content_and_comment input::placeholder {
+    color: #774F40;
+  }
+  div.message_comment_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 16px 0;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 0px 5px !important;
+  }
+  div.message_comment_container img {
+    width: 40px !important;
+    height: 40px !important;
+    margin-right: 5px;
+  }
+  div.message_comment_container p {
+    font-size: 16px;
+    color: #774F40;
+  }
+}
+/*# sourceMappingURL=message.css.map */

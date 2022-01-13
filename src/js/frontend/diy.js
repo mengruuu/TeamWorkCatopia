@@ -31,6 +31,7 @@ function judge_diy_block_number2(){
         // next_btn.style.display = 'none';
         next_btn.innerHTML = '';
         next_btn.innerHTML = `<p id="buy">加入購物車</p>`;
+        // next_btn.innerHTML = `<p id="buy" onclick="login_check_no_direct()">加入購物車</p>`;
         add_cart()
     }
 }
@@ -83,6 +84,7 @@ back_btn.addEventListener('click', function(){
     judge_diy_block_number2();
     diy_step_context()
     diy_step_flavor()
+    // console.log(cakeNUM + foodNUM + nutritionNUM);
     // console.log(diy_cake);
     // console.log(diy_block_number);
     // console.log(diy_flavor_block);
@@ -93,11 +95,13 @@ next_btn.addEventListener('click', function(){
     judge_diy_block_number2();
     diy_step_context()
     diy_step_flavor()
+    // console.log(cakeNUM + foodNUM + nutritionNUM);
     // console.log(diy_cake);
     // console.log(diy_block_number);
     // console.log(diy_flavor_block);
 })
 
+let cakeNUM = "1" ;
 function change_cake(){
     //換蛋糕體
     let change_cake_img = document.getElementById("change_cake_img");
@@ -105,17 +109,21 @@ function change_cake(){
     let cake_salmon = document.getElementById("cake_salmon");
     let cake_chicken = document.getElementById("cake_chicken");
     
-    cake_tuna.addEventListener('click', function(){
-        change_cake_img.src = "./images/diy_page/images/diy_cake_tuna.png";
-    })
     cake_salmon.addEventListener('click', function(){
         change_cake_img.src = "./images/diy_page/images/diy_cake_salmon.png";
+        cakeNUM = "1" ;
+    })
+    cake_tuna.addEventListener('click', function(){
+        change_cake_img.src = "./images/diy_page/images/diy_cake_tuna.png";
+        cakeNUM = "2" ;
     })
     cake_chicken.addEventListener('click', function(){
         change_cake_img.src = "./images/diy_page/images/diy_cake_chicken.png";
+        cakeNUM = "3" ;
     })
 }
 
+let foodNUM = "1" ;
 function change_food(){
     //換食物配料
     let change_food_img = document.getElementById("change_food_img");
@@ -125,18 +133,19 @@ function change_food(){
     
     food_blueberry.addEventListener('click', function(){
         change_food_img.src = "./images/diy_page/images/diy_food_blueberry.png";
-        change_food_img.style.display = "block";
+        foodNUM = "1" ;
     })
     food_sweet_potato.addEventListener('click', function(){
         change_food_img.src = "./images/diy_page/images/diy_food_sweet_potato.png";
-        change_food_img.style.display = "block";
+        foodNUM = "2" ;
     })
     food_grass.addEventListener('click', function(){
         change_food_img.src = "./images/diy_page/images/diy_food_grass.png";
-        change_food_img.style.display = "block";
+        foodNUM = "3" ;
     })
 }
 
+let nutritionNUM = "1" ;
 function change_nutrition(){
     //換營養品
     let change_nutrition_img = document.getElementById("change_nutrition_img");
@@ -145,11 +154,11 @@ function change_nutrition(){
     
     nutrition_cranberry.addEventListener('click', function(){
         change_nutrition_img.src = "./images/diy_page/images/diy_nutrition_cranberry.png";
-        change_nutrition_img.style.display = "block";
+        nutritionNUM = "1" ;
     })
     nutrition_sesame.addEventListener('click', function(){
         change_nutrition_img.src = "./images/diy_page/images/diy_nutrition_sesame.png";
-        change_nutrition_img.style.display = "block";
+        nutritionNUM = "2" ;
     })
 }
 
@@ -158,11 +167,46 @@ function add_cart(){
     let buy = document.getElementById("buy");
     
     buy.addEventListener('click', function(){
-        alert('加入成功');
-        window.location.href = "./cart_step1.html";
+        // alert(cakeNUM + foodNUM + nutritionNUM);
+        let cake_feature = cakeNUM + foodNUM + nutritionNUM;
+        // console.log(cake_feature);
+        let diy_cake_array = [];
+        //輸出客製蛋糕代號
+        $.ajax({
+            // async:  false,
+            method: "POST",
+            url: "API/diy_cake_select.php",
+            data: {
+                PRODUCT_FEATURE = cake_feature,
+            },
+            dataType: "json",
+            // dataType: "text",
+            success: function (response) {
+                for(let i = 0; i < response.length; i++){
+                    diy_cake_array.push(response[i]);
+                }
+                // console.log(diy_cake_array[0]);
+                console.log(diy_cake_array[0].PRODUCT_NAME);
+                console.log(diy_cake_array[0].PRODUCT_FEATURE);
+
+                
+
+            },
+            error: function (exception) {
+                alert("HISTORY_HIGHSCORE發生錯誤: " + exception.status);
+            },
+        });
+
+        // console.log(diy_cake_array[0].PRODUCT_NAME);
+
+
+        // window.location.href = "./diy.html";
+        // window.location.href = "./cart_step1.html";
     })
 }
+function after_cart_add(){
 
+}
 //全部重選
 let reset = document.getElementById("reset");
 let change_cake_img = document.getElementById("change_cake_img");
@@ -178,6 +222,49 @@ reset.addEventListener('click', function(){
     diy_step_context();
     diy_step_flavor();
 })
+
+//抓出客製蛋糕的PRODUCT資料表的資料
+
+
+//加入購物車
+function login_check_no_direct(){
+    let login;
+    fetch('./API/login_check.php').then(res => res.json()).then(res =>{
+        if(res == ""){
+            console.log('沒登入');
+            login = false;
+        }else{
+            console.log('登入中');
+            login = true;
+            login_add_cart();
+        }
+    }).catch(function(err){
+        console.log('no data found');
+    })
+  
+}
+  
+function login_add_cart(){
+console.log("加入購物車函式");
+    $.ajax({
+        method:'POST',
+        url:'./API/addshopping_cart.php',
+        data:{
+          quantity:quantity,
+          product_ID:ID,
+        },
+        dataType:'json',
+        success:function(response){
+            console.log(response);
+        },
+        error: function(exception) {
+        alert("發生錯誤: " + exception.status); 
+        }
+    })
+}
+
+
+
 
 
 

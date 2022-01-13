@@ -1,10 +1,6 @@
 <?php
-<<<<<<< HEAD
-   include("../library/Connection.php");
-=======
     include("../library/Connection.php");
 
->>>>>>> 5fee9a8c1ba47de1abd90033a87d5c34f38d4485
     $sql = "SELECT * FROM PRODUCT WHERE PRODUCT_TYPE_NAME = ?";
     $data = [];
     // $name = isset($_POST["Name"])?$_POST["Name"]:$_POST["Name"];

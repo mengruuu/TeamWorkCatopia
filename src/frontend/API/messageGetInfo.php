@@ -1,7 +1,7 @@
 <?PHP
     include("../library/Connection.php");
     // $member_id = json_decode(file_get_contents('php://input'));
-    $get_message_info = "SELECT * FROM MESSAGE";
+    $get_message_info = "SELECT * FROM `V_MESSAGE_MEMBER`";
     $statement_info = $pdo -> prepare($get_message_info);
     // $statement_info ->bindValue(1, $MEMBER_ID);
     $statement_info -> execute();
