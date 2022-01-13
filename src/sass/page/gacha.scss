@@ -9,14 +9,18 @@
     background-image: url("../images/gacha/gacha_egg_bgimg.png");
     color: $font_color;
     // padding: 10px;
+    @include w600() {
+        height: auto;
+    }
     .except_bkgimg{
         // border: 1px solid blue;
         width: 80%;
         max-width: 1200px;
-        margin: 10vh auto;
+        margin: 0 auto;
+        padding-top: 10vh;
         @include w1380() {
             width: 80%;
-            margin: 0 auto;
+            padding-top: 5vh;
         }
         .title{
             // border: 1px solid brown;
