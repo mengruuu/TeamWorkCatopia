@@ -49,7 +49,7 @@ var today = new Date();
     
     //鍵盤左右移動
     document.addEventListener("keydown", function(e){
-        console.log(e.which);
+        // console.log(e.which);
 
         //移動------------------------------------------
         if(man.x > -20){    //限制範圍
@@ -382,6 +382,7 @@ function updateGameArea(){
             // console.log(add_point_time);
 
             add_point_btn.addEventListener('click' , function(){
+                login_check();
                 // console.log("test");
                 if(add_point_time == 0){                    
                     alert('本次遊戲已兌換')
@@ -437,7 +438,7 @@ function updateGameArea(){
             dataType:'text',
             // dataType:'json',
             success:function(response){
-                console.log(response);
+                // console.log(response);
             },
             error: function(exception) {
                 alert("HIGHSCORE發生錯誤: " + exception.status);  //網路出錯的部分
@@ -456,7 +457,7 @@ function updateGameArea(){
             dataType:'text',
             // dataType:'json',
             success:function(response){
-                console.log(response);
+                // console.log(response);
             },
             error: function(exception) {
                 alert("發生錯誤: " + exception.status);  //網路出錯的部分

@@ -6,7 +6,9 @@
     "title" : "Catopia B2訂單管理"
     })
     <link rel="stylesheet" href="../css/backend/b2_order.css">
-
+    <script src="../js/tools/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+    <script src="../js/backend/b2_order.js" async></script>
 </head>
 
 <body>
@@ -89,8 +91,39 @@
                 </ul>
             </div>
 
+            <div id="backend_order_app">
+
+                <backend-product></backend-product>
+            
+            </div>
+
+        <!-- 
             <div class="backend_table">
-                <table>
+                <table id="order_info">
+                    <tr class="table_title">
+                        <td><a href="#"></a> 訂單編號</td>
+                        <td>會員編號</td>
+                        <td>會員信箱</td>
+                        <td>下單時間</td>
+                        <td>訂單狀態</td>
+                        <td>付款方式</td>
+                        <td>付款狀態</td>
+                        <td>訂單金額</td>
+                        <td>奴幣回饋</td>
+                        <td>奴幣折抵</td>
+                    </tr>
+                </table>
+            </div> 
+        -->
+
+        </main>
+    </div>
+
+    <script>
+        Vue.component("backendProduct", {
+        template: `
+            <div class="backend_table">
+                <table id="order_info">
                     <tr class="table_title">
                         <td><a href="#"></a> 訂單編號</td>
                         <td>會員編號</td>
@@ -104,179 +137,48 @@
                         <td>奴幣折抵</td>
                     </tr>
 
-                    <tr>
-                        <td><a href="#">OD0001</a></td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>備貨中</td>
-                        <td>信用卡</td>
-                        <td>已付款</td>
-                        <td>1200</td>
-                        <td>1200</td>
-                        <td>200</td>
+                    <tr class="table_title" v-for="(item, index) in backendOrder">
+                        <td><a @click=backOrder(index) href="./b2_order_detail.html">{{item.ORDER_ID}}</a></td>
+                        <td>{{item.MEMBER_ID}}</td>
+                        <td>{{item.MEMBER_MAIL}}</td>
+                        <td>{{item.ORDER_TIME}}</td>
+                        <td>{{item.ORDER_MODE}}</td>
+                        <td>{{item.PAYMENT_METHOD}}</td>
+                        <td>{{item.PAYMENT_MODE}}</td>
+                        <td>{{item.TOTAL_PRICE}}</td>
+                        <td>{{item.COIN_GIVEBACK}}</td>
+                        <td>{{item.COIN_DISCOUNT}}</td>
                     </tr>
-
-                    <tr>
-                        <td><a href="#">OD0001</a></td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>備貨中</td>
-                        <td>信用卡</td>
-                        <td>已付款</td>
-                        <td>1200</td>
-                        <td>1200</td>
-                        <td>200</td>
-                    </tr>
-
-                    <tr>
-                        <td><a href="#">OD0001</a></td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>備貨中</td>
-                        <td>信用卡</td>
-                        <td>已付款</td>
-                        <td>1200</td>
-                        <td>1200</td>
-                        <td>200</td>
-                    </tr>
-
-                    <tr>
-                        <td><a href="#">OD0001</a></td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>備貨中</td>
-                        <td>信用卡</td>
-                        <td>已付款</td>
-                        <td>1200</td>
-                        <td>1200</td>
-                        <td>200</td>
-                    </tr>
-
-                    <tr>
-                        <td><a href="#">OD0001</a></td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>備貨中</td>
-                        <td>信用卡</td>
-                        <td>已付款</td>
-                        <td>1200</td>
-                        <td>1200</td>
-                        <td>200</td>
-                    </tr>
-
-                    <tr>
-                        <td><a href="#">OD0001</a></td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>備貨中</td>
-                        <td>信用卡</td>
-                        <td>已付款</td>
-                        <td>1200</td>
-                        <td>1200</td>
-                        <td>200</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">OD0001</a></td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>備貨中</td>
-                        <td>信用卡</td>
-                        <td>已付款</td>
-                        <td>1200</td>
-                        <td>1200</td>
-                        <td>200</td>
-                    </tr>
-
-                    <tr>
-                        <td><a href="#">OD0001</a></td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>備貨中</td>
-                        <td>信用卡</td>
-                        <td>已付款</td>
-                        <td>1200</td>
-                        <td>1200</td>
-                        <td>200</td>
-                    </tr>
-
-                    <tr>
-                        <td><a href="#">OD0001</a></td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>備貨中</td>
-                        <td>信用卡</td>
-                        <td>已付款</td>
-                        <td>1200</td>
-                        <td>1200</td>
-                        <td>200</td>
-                    </tr>
-
-                    <tr>
-                        <td><a href="#">OD0001</a></td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>備貨中</td>
-                        <td>信用卡</td>
-                        <td>已付款</td>
-                        <td>1200</td>
-                        <td>1200</td>
-                        <td>200</td>
-                    </tr>
-
-                    <tr>
-                        <td><a href="#">OD0001</a></td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>備貨中</td>
-                        <td>信用卡</td>
-                        <td>已付款</td>
-                        <td>1200</td>
-                        <td>1200</td>
-                        <td>200</td>
-                    </tr>
-
-                    <tr>
-                        <td><a href="#">OD0001</a></td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>備貨中</td>
-                        <td>信用卡</td>
-                        <td>已付款</td>
-                        <td>1200</td>
-                        <td>1200</td>
-                        <td>200</td>
-                    </tr>
-
-                    <tr>
-                        <td><a href="#">OD0001</a></td>
-                        <td>MB0001</td>
-                        <td>qqq123@gmail.com</td>
-                        <td>2021/10/1</td>
-                        <td>備貨中</td>
-                        <td>信用卡</td>
-                        <td>已付款</td>
-                        <td>1200</td>
-                        <td>1200</td>
-                        <td>200</td>
-                    </tr>
-
-
                 </table>
-            </div>
-        </main>
-    </div>
+            </div> 
+            `,
+        data() {
+            return {
+            backendOrder: [],
+            };
+        },
+        methods: {
+            backOrder(index) {
+            localStorage.setItem(
+                "backendFindOrder",
+                JSON.stringify(this.backendOrder[index])
+            );
+            },
+        },
+
+        mounted() {
+            $.getJSON("./API/b2_back_get_order_info.php").then((res) => {
+            // console.log(res);
+            this.backendOrder = res;
+            });
+        },
+        });
+        new Vue({
+            el: "#backend_order_app",
+            data: {},
+        });
+
+    </script>
 </body>
 
 </html>
