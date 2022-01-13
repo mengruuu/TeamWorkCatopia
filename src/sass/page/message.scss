@@ -257,8 +257,8 @@ div.message_and_comment_container {
     flex-direction: column;
     width: 75%;
     margin: 50px auto;
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background-repeat: no-repeat;
+    // background-size: cover;
     div.message_container {
         display: flex;
         flex-direction: column;
@@ -269,6 +269,8 @@ div.message_and_comment_container {
         opacity: 1;
         transition: opacity 1s;
         margin: 32px 0;
+        background-repeat: no-repeat;
+        background-size: cover;
         div.message_setting_container {
             display: flex;
             justify-content: flex-end;
@@ -466,6 +468,7 @@ div.message_and_comment_container {
             background-color: $second_color2;
             padding: 20px 40px;
             margin-bottom: 30px;
+            box-shadow: $shadow;
             div.message_content_text {
                 p {
                     color: $font_color;
@@ -477,6 +480,7 @@ div.message_and_comment_container {
                 height: 250px;
                 margin-bottom: 30px;
                 object-fit: cover;
+                box-shadow: $shadow;
             }
             input {
                 padding: 8px 16px;
@@ -485,28 +489,50 @@ div.message_and_comment_container {
                 border-radius: 20px;
                 outline: none;
                 border: none;
+                margin-bottom: 16px;
+                box-shadow: $shadow;
             }
             input::placeholder {
                 color: $font_color;
             }
+            input.message_focus_input {
+                box-shadow: $shadow inset;
+            }
             div.message_comment_container {
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 flex-wrap: nowrap;
-                margin: 16px 0;
-                background-color: #fff;
+                margin: 16px 0 0;
+                background-color: $main_color;
                 border-radius: 15px;
-                padding: 5px 20px;
-                border: 1px solid;
-                justify-content: space-between;
+                padding: 5px 16px;
+                border: none;
+                justify-content: flex-start;
+                box-shadow: $shadow inset;
+                animation-name: commentsStyleChange;
+                animation-duration: 3s;
+                animation-fill-mode: none;
                 img {
-                    
-                    width: 63px;
-                    height: 57px;
+                    width: 30px;
+                    height: 42px;
+                    object-fit: cover;
+                    margin-right: 24px;
                 }
                 p {
+                    margin: 0;
                     font-size: $font_20;
                     color: $font_color;
+                    word-break: break-all; //文字長度超過就會換行
+                }
+            }
+            @keyframes commentsStyleChange {
+                from{
+                    box-shadow: $shadow;
+                    background-color: $second_color6;
+                }
+                to{
+                    box-shadow: $shadow inset;
+                    background-color: $main_color;
                 }
             }
         }
@@ -866,7 +892,7 @@ div.message_and_comment_container {
                     height: 200px;
 
                     margin-bottom: 30px;
-                    // object-fit: cover;
+                    object-fit: cover;
                 }
                 input {
                     padding: 8px 16px;
