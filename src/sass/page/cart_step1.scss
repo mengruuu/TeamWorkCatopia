@@ -246,14 +246,14 @@ div.cart_step1_item:first-child{
 }
 
 .cart_step1_next_step button {
-    font-size: $font_24;
-    background-color: $important_color;
-    border: none;
-    color: $font_color;
-    padding: 20px 60px;
-    border-radius: 15px;
-    box-shadow: $shadow;
-    cursor: pointer;
+    // font-size: $font_24;
+    // background-color: $important_color;
+    // border: none;
+    // color: $font_color;
+    // padding: 20px 60px;
+    // border-radius: 15px;
+    // box-shadow: $shadow;
+    @include button();
 
     @include w900(){
         font-size: $font_20;

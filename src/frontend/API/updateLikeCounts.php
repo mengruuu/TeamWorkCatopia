@@ -1,5 +1,7 @@
 <?php
-    include("../library/Connection.php");
+include("../library/Connection.php");
+    $pdo = new PDO($dsn, $db_user, $db_pass);
+
     // 寫入MESSAGE裡
     $sql = "UPDATE MESSAGE SET POST_LIKE = ? WHERE POST_ID = ?";
     $data = [];
@@ -22,16 +24,18 @@
     if($data) {
         foreach($data as $key => $variableName){
             if($variableName["LIKE_MODE"]) {
-                $sql = "UPDATE `POST_RESPONSE&LIKE` SET LIKE_MODE = ? WHERE POST_ID = ?";
+                $sql = "UPDATE `POST_RESPONSE&LIKE` SET LIKE_MODE = ? WHERE POST_ID = ? AND `RESPONSE&LIKE_MEMBER_ID` = ?";
                 $statment = $pdo->prepare($sql);
                 $statment->bindValue(1, 0);
                 $statment->bindValue(2, $likeCountsAndPostId -> postID);
+                $statment->bindValue(3, $likeCountsAndPostId -> memberId);
                 $statment->execute();
             }else {
-                $sql = "UPDATE `POST_RESPONSE&LIKE` SET LIKE_MODE = ? WHERE POST_ID = ?";
+                $sql = "UPDATE `POST_RESPONSE&LIKE` SET LIKE_MODE = ? WHERE POST_ID = ? AND `RESPONSE&LIKE_MEMBER_ID` = ?";
                 $statment = $pdo->prepare($sql);
                 $statment->bindValue(1, 1);
                 $statment->bindValue(2, $likeCountsAndPostId -> postID);
+                $statment->bindValue(3, $likeCountsAndPostId -> memberId);
                 $statment->execute();
             }
         }

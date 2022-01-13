@@ -39,33 +39,15 @@ $phones-media:479px;
                 @content;
           }
  }
+ body{
+    background-image: url('../images/contact/contact_background.png');
+    background-repeat: no-repeat;
+ }
 p{
     font-size: 16px;
 }
 div.contact_main{
-    position: relative; 
-    div.contact_background img{
-        //background-image: url('../images/contact/contact_background.png');
-        //background-repeat: no-repeat;
-        //z-index: 3;
-        position: absolute;
-        @include pc-width(){
-        }
-        @include pcs-width(){
-        }
-        @include pad-width(){
-            display: none;
-            height: fit-content;
-        }
-        @include small-pad-width(){
-            display: none;
-        }
-        @include phone-width(){
-            display: none;
-        }
-
-    }
-    div.contact_rwd{        
+    div.contact_rwd{
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -74,20 +56,21 @@ div.contact_main{
             width: 100% !important;
         }
         @include pcs-width(){
-            width: 100% !important;
+            width: 70% !important;
         }
         @include pad-width(){
-            width: 100% !important;
+            width: 70% !important;
             display: block;
         }
         @include small-pad-width(){
-            width: 90% !important;
+            width: 50% !important;
             display: block;
         }
         @include phone-width(){
             display: block;
             width: 30% !important;
         }
+
         div.contact_text{
             margin: 0 auto;
             margin-bottom: 50px !important;
@@ -130,7 +113,7 @@ div.contact_main{
                 position: static;
                 text-align: center;
                 align-items: center;
-                width: 350px;
+                width: 300px;
                 height: 430px;
                 transform: none;
             }
@@ -139,7 +122,7 @@ div.contact_main{
                 position: static;
                 text-align: center;
                 align-items: center;
-                width: 350px;
+                width: 200px;
                 height: 430px;
                 transform: none;
             }
@@ -167,30 +150,31 @@ div.contact_main{
                     width: 180px;
                     height: 172px;
                     margin-left: 50px;
-                    padding-left: 50px;
                 }
                 @include small-pad-width(){
                     width: 150px;
                     height: 172px;
                     margin-left: 50px;
-                    padding-left: 50px;
+                    font-size: 8px;
                 }
                 @include phone-width(){
-                    width: 150px;
+                    width: 100px;
                     height: 172px;
+                    font-size: 6px;
                     padding-left: 5px;
                     margin-left: 50px;
                 }
             }
         }
-        p.contact_p{
+        .contact_p{
             color:#774f40;
             font-size: 32px;
             text-align: center;
         }
-        div.contact_form{
+        .contact_form{
             background-color: #EDDAB8; 
             margin: 0 auto ;
+            margin-top: -500px !important;
             margin-bottom: 50px !important;
             text-align: center ;
             justify-content: center;
@@ -201,7 +185,8 @@ div.contact_main{
             border-radius: 10px;
             font-size: 1rem;
             z-index: 1;
-            transform: translate(30%, -70%);
+            transform: translateX(30%);
+            // transform: translate(30%, -70%);
             @include pc-width(){
                 width: 580px;
                 height: 686px;
@@ -211,6 +196,7 @@ div.contact_main{
                 height: 686px;
             }
             @include pad-width(){
+                margin-top: 0px !important;
                 width: 350px;
                 height: 686px;
                 display: block;
@@ -218,14 +204,16 @@ div.contact_main{
                 transform: none;
             }
             @include small-pad-width(){
-                width: 350px;
+                margin-top: 0px !important;
+                width: 300px;
                 height: 686px;
                 display: block;
                 position: static;
                 transform: none;
             }
             @include phone-width(){
-                width: 350px;
+                margin-top: 0px !important;
+                width: 200px;
                 height: 686px;
                 display: block;
                 position: static;
@@ -234,7 +222,8 @@ div.contact_main{
             div.contact_form_bg{
                 padding-top: 70px;
                 background-color: #EDDAB8;
-                    input.contact_form_info{
+                    span.contact_form_info{
+                        padding: 10px;
                         color: #774f40;
                         font-weight: bold;
                         background-color: #FFF2CC;
@@ -258,12 +247,12 @@ div.contact_main{
                             transform: none;
                         }
                         @include small-pad-width(){
-                            width: 180px;
+                            width: 100px;
                             height: 42px;
                             transform: none;
                         }
                         @include phone-width(){
-                            width: 150px;
+                            width: 100px;
                             height: 42px;
                             transform: none;
                         }
@@ -323,10 +312,10 @@ div.contact_main{
                         @include phone-width(){
                             width: 150px;
                             transform: none;
+                            font-size: 5px !important;
                         }
                     }
                     textarea.contact_form_textarea{
-                        resize: none;
                         background-color: #FFF;
                         font-size: 16px;
                         color: #774f40;
@@ -352,6 +341,7 @@ div.contact_main{
                         @include phone-width(){
                             width: 150px;
                             transform: none;
+                            font-size: 10px;
                         }
                     }
                     button.contact_form_submit{
@@ -375,7 +365,7 @@ div.contact_main{
                             width: 100px;
                         }
                         @include phone-width(){
-                            width: 100px;
+                            width: 70px;
                             font-size: 24px;
                         }
                     }
