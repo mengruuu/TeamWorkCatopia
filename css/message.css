@@ -679,6 +679,12 @@ div.message_and_comment_container div.message_container div.message_content_and_
           justify-content: flex-start;
   -webkit-box-shadow: 1px 1px 1px lightgray inset;
           box-shadow: 1px 1px 1px lightgray inset;
+  -webkit-animation-name: commentsStyleChange;
+          animation-name: commentsStyleChange;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
 }
 
 div.message_and_comment_container div.message_container div.message_content_and_comment div.message_comment_container img {
@@ -694,6 +700,32 @@ div.message_and_comment_container div.message_container div.message_content_and_
   font-size: 18px;
   color: #774F40;
   word-break: break-all;
+}
+
+@-webkit-keyframes commentsStyleChange {
+  from {
+    -webkit-box-shadow: 1px 1px 1px lightgray;
+            box-shadow: 1px 1px 1px lightgray;
+    background-color: #B7C88E;
+  }
+  to {
+    -webkit-box-shadow: 1px 1px 1px lightgray inset;
+            box-shadow: 1px 1px 1px lightgray inset;
+    background-color: #FFF2CC;
+  }
+}
+
+@keyframes commentsStyleChange {
+  from {
+    -webkit-box-shadow: 1px 1px 1px lightgray;
+            box-shadow: 1px 1px 1px lightgray;
+    background-color: #B7C88E;
+  }
+  to {
+    -webkit-box-shadow: 1px 1px 1px lightgray inset;
+            box-shadow: 1px 1px 1px lightgray inset;
+    background-color: #FFF2CC;
+  }
 }
 
 div.message_and_comment_container div.message_container_hide {

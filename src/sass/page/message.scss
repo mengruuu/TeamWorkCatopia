@@ -509,6 +509,9 @@ div.message_and_comment_container {
                 border: none;
                 justify-content: flex-start;
                 box-shadow: $shadow inset;
+                animation-name: commentsStyleChange;
+                animation-duration: 3s;
+                animation-fill-mode: none;
                 img {
                     width: 30px;
                     height: 42px;
@@ -520,6 +523,16 @@ div.message_and_comment_container {
                     font-size: $font_20;
                     color: $font_color;
                     word-break: break-all; //文字長度超過就會換行
+                }
+            }
+            @keyframes commentsStyleChange {
+                from{
+                    box-shadow: $shadow;
+                    background-color: $second_color6;
+                }
+                to{
+                    box-shadow: $shadow inset;
+                    background-color: $main_color;
                 }
             }
         }

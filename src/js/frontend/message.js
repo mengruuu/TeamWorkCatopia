@@ -113,12 +113,6 @@ async function uploadMessageData() {
                 </div>
             </div>
         `,
-        // <input :class = "{comment_input" placeholder: true}" placeholder = "回應貼文...">
-        // <div :class = "{message_comment_container: true}">
-        // <img :class = "{message_comment_user_img: true}" src = "./images/message/message_comment_photo.svg">
-        // <p :class = "{message_comment_item: true}">Devil catman, your tonight’s nightmare</p>
-        // </div>
-        // 回應功能先註解掉，等最後再來處理
         props: {
             memberId: {
                 type: String
@@ -193,6 +187,10 @@ async function uploadMessageData() {
                     const inputValue = e.target.value;
 
                     e.target.value = "";
+                    window.scrollTo({
+                        top: e.target.parentElement.offsetTop + e.target.parentElement.offsetHeight - e.target.nextElementSibling.offsetHeight*2,
+                        behavior: "smooth"
+                    });
                     this.$emit("insertComment", inputValue, this.memberId, this.postId, this.index);
                 }
             },
