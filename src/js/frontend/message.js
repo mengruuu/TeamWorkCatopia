@@ -81,13 +81,14 @@ async function uploadMessageData() {
         data() {
             return {
                 isListShow: false,
-                isFocus: false
+                isFocus: false,
+                messageSettingIsClicked: false
             }
         },
         template: `
             <div :data_postId = "postId" :class = "{message_container: true, message_container_hide: isPostHide}" style = "background-image: url(./images/message/message_background_img.png);">
                 <div :class = "{message_setting_container: true, message_setting_container_hide: settingIsHide}">
-                    <div :class = "{message_setting_container_content: true}" @click = "listOpenOrClose">
+                    <div :class = "{message_setting_container_content: true, message_setting_container_content_clicked: messageSettingIsClicked}" @click = "listOpenOrClose">
                         <div></div>
                         <div></div>
                         <div></div>
@@ -105,7 +106,7 @@ async function uploadMessageData() {
                             <p>{{ postTime }}</p>
                         </div>
                     </div>
-                    <div :class = "{message_like_container: true}" @click = changeLikeImg>
+                    <div :class = "{message_like_container: true, message_like_container_clicked: personalLikes}" @click = changeLikeImg>
                         <div :class="{message_like: true, message_liked: personalLikes}"></div>
                         <p>+{{ postLike }}</p>
                     </div>
@@ -186,21 +187,27 @@ async function uploadMessageData() {
             listOpenOrClose() {
                 if (this.isListShow) {
                     this.isListShow = false;
-                } else {
+                }else {
                     this.isListShow = true;
+                }
+
+                if(this.messageSettingIsClicked) {
+                    this.messageSettingIsClicked = false;
+                }else {
+                    this.messageSettingIsClicked = true;
                 }
             },
             deletePost() {
                 if (confirm("確定要刪除貼文？")) {
                     this.$emit('deletepost', this.postId);
-                } else {
+                }else {
                     return;
                 }
             },
             changeLikeImg() {
                 if (this.personalLikes) {
                     this.$emit("changeLikeCounts", this.postId, Number(this.postLike) - 1, this.index);
-                } else {
+                }else {
                     this.$emit("changeLikeCounts", this.postId, Number(this.postLike) + 1, this.index);
                 }
             },
