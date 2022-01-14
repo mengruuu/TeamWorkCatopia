@@ -1,4 +1,4 @@
-login_check();
+
 
 var vm = new Vue({
     el: '#app',
@@ -104,6 +104,7 @@ function doFirst(){
     //點箱子移除彩色圖片 增加灰色圖片 同時跳出抽選的商品彈窗
     for(let i = 0; i < color_image.length; i++){
         color_image[i].addEventListener("click", function(e){
+            login_check();
             let gacha_box_c = gacha_box[i];
             let gray_image = './images/gacha_399/gacha_399_box_gray.png';
             let img = gacha_box_c.firstElementChild;
@@ -136,7 +137,7 @@ function doFirst(){
                     // processData: false,
                     // contentType: false,
                     success:function(response){
-                        console.log(response);
+                        // console.log(response);
                     },
                     error: function(exception) {
                         alert("發生錯誤: " + exception.status);  //網路出錯的部分
