@@ -9,7 +9,7 @@
     $check;
 
     //建立SQL 遊戲最高分有更新 寫進資料庫
-    $sql_gameCoin = "UPDATE CATOPIA.MEMBER
+    $sql_gameCoin = "UPDATE MEMBER
     set
         GAME_HIGHSCORE = ?
     where

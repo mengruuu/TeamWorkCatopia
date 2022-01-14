@@ -1,5 +1,5 @@
 async function doQuery() {
-  const data = await fetch('./Api/inside.php', {
+  const data = await fetch('API/inside.php', {
       method: "POST",
       headers: {
         "content-type": "application/json"

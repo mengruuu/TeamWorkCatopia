@@ -286,13 +286,14 @@ div.message_and_comment_container {
                 align-items: center;
                 width: 50px;
                 border-radius: 10px;
-                padding: 5px;
+                padding: 10px;
                 background-color: $second_color2;
                 box-shadow: $shadow;
+                transition: all 0.5s;
                 cursor: pointer;
                 div {
-                    width: 5px;
-                    height: 5px;
+                    width: 6px;
+                    height: 6px;
                     border-radius: 50%;
                     background-color: $font_color;
                 }
@@ -323,6 +324,9 @@ div.message_and_comment_container {
                 ul.message_setting_container_content_list_show {
                     display: block;
                 }
+            }
+            div.message_setting_container_content_clicked {
+                box-shadow: $shadow inset;
             }
         }
         div.message_setting_container_hide {
@@ -366,6 +370,7 @@ div.message_and_comment_container {
                 padding: 0 8px;
                 border-radius: 15px;
                 box-shadow: $shadow;
+                transition: all 0.5s;
                 cursor: pointer;
                 div.message_like {
                     position: relative;
@@ -461,6 +466,9 @@ div.message_and_comment_container {
                     font-size: $font_20;
                     margin: 10px 8px;
                 }
+            }
+            div.message_like_container_clicked {
+                box-shadow: $shadow inset;
             }
         }
         div.message_content_and_comment {

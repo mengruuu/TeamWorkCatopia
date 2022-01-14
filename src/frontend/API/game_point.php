@@ -9,7 +9,7 @@
     $check;
 
     //建立SQL 遊戲賺到的奴幣寫進資料庫
-    $sql_gameCoin = "UPDATE CATOPIA.MEMBER
+    $sql_gameCoin = "UPDATE MEMBER
     set
         CATOPIA_COIN = CATOPIA_COIN + ?
     where

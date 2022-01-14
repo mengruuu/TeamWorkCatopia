@@ -5,7 +5,11 @@
     // $order_info = $_POST['order_info'];
     $data = json_decode(file_get_contents("php://input"));
     //找到TOTALPRICE
+<<<<<<< HEAD
     $sql_shopping = "SELECT * FROM PRODUCT JOIN SHOPPING_CART ON PRODUCT.PRODUCT_NAME = SHOPPING_CART.PRODUCT_NAME WHERE MEMBER_ID = ?";
+=======
+    $sql_shopping = "SELECT * FROM PRODUCT NATURAL JOIN SHOPPING_CART";
+>>>>>>> 3a30bfb39026344127df9cb0a1400581cde49e2b
     $statement_shopping = $pdo -> prepare($sql_shopping);
     $statement_shopping ->bindValue(1, $MEMBER_ID);
     $statement_shopping ->execute();
