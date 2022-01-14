@@ -42,7 +42,7 @@ async function uploadMessageData() {
         await fetch("./API/getComments.php")
         .then(res => res.json())
         .then(data => data);
-    console.log("personalComments: ", personalComments);
+    // console.log("personalComments: ", personalComments);
 
     // const personalCommentsId =
     //     await fetch("./API/getCommentsId.php")
@@ -325,7 +325,7 @@ async function uploadMessageData() {
                     })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data);
+                        // console.log(data);
                         vm.messageInfo = data;
                     });
                 // }, 1000);
@@ -346,7 +346,7 @@ async function uploadMessageData() {
                     })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data);
+                        // console.log(data);
                         vm.messageInfo = data;
                     });
 
@@ -359,11 +359,11 @@ async function uploadMessageData() {
                     })
                     .then(res => res.json())
                     .then(data => {
-                        console.log("data: ", data);
-                        console.log("personalLikesBefore: ", vm.personalLikes);
+                        // console.log("data: ", data);
+                        // console.log("personalLikesBefore: ", vm.personalLikes);
                         vm.personalLikes = data;
-                        console.log("data: ", data);
-                        console.log("personalLikesAfter: ", vm.personalLikes);
+                        // console.log("data: ", data);
+                        // console.log("personalLikesAfter: ", vm.personalLikes);
                     });
             },
             isLiked(index) {
@@ -426,7 +426,7 @@ async function uploadMessageData() {
                 `);
 
                 postInfo.postImg = readFile.result;
-                console.log(readFile.result);
+                // console.log(readFile.result);
             });
         });
     };
@@ -486,7 +486,7 @@ async function uploadMessageData() {
         if (postInfo.postContent === "" || postInfo.postImg === "") {
             alert("未發文或上傳圖片！");
         } else {
-            console.log("發出傳送前的圖片: ", postInfo.postImg);
+            // console.log("發出傳送前的圖片: ", postInfo.postImg);
             fetch("./API/createPost.php", {
                     method: "POST",
                     headers: {
@@ -496,9 +496,15 @@ async function uploadMessageData() {
                 })
                 .then(res => res.json())
                 .then(data => {
+<<<<<<< HEAD
                     console.log("發出傳送後的圖片: ", data);
                     // window.alert("上傳成功");
                     // location.href = "./message.html";
+=======
+                    // console.log(data);
+                    window.alert("上傳成功");
+                    location.href = "./message.html";
+>>>>>>> 8ae5ae1f44494dfac778c7b44d9d293756180956
                 })
         }
 
