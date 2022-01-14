@@ -12,7 +12,7 @@
     };
     
     for($i=0; $i < count($products_name) ;$i++){
-        $sql_insert_order_detail = "INSERT INTO CATOPIA.`ORDER_DETAIL(ORDER- PRODUCT)`(ORDER_ID, PRODUCT_NAME, PRODUCT_QUANTITY, PAYMENT_MODE, PAYMENT_METHOD, RECIPIENT_NAME, RECIPIENT_PHONE, SHIPPING_ADDRESS, SHIPPING_METHOD)
+        $sql_insert_order_detail = "INSERT INTO `ORDER_DETAIL(ORDER- PRODUCT)`(ORDER_ID, PRODUCT_NAME, PRODUCT_QUANTITY, PAYMENT_MODE, PAYMENT_METHOD, RECIPIENT_NAME, RECIPIENT_PHONE, SHIPPING_ADDRESS, SHIPPING_METHOD)
         VALUE(?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $statement_order_detail = $pdo ->prepare($sql_insert_order_detail);
         $statement_order_detail->bindValue(1, $order_ID);
