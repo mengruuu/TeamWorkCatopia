@@ -2,6 +2,9 @@
 
        //MySQL相關資訊
        $db_host = "127.0.0.1";
+       // $db_user = "root";
+       // $db_pass = "gtr123456";
+       // $db_select = "CATOPIA";
        $db_user = "tibamefe_since2021";
        $db_pass = "vwRBSb.j&K#E";
        $db_select = "tibamefe_tfd104g4";

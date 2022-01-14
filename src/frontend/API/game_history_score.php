@@ -1,9 +1,11 @@
 <?php
     include("../library/Connection.php");
+    include("../library/member.php");
 
     //抓取MEMBER_ID資料
-    session_start(); 
-    $MEMBER_ID = ($_SESSION["MEMBER_ID"]); 
+    // session_start(); 
+    // $MEMBER_ID = ($_SESSION["MEMBER_ID"]); 
+    $MEMBER_ID = getMemberID(); 
     $check;
 
     
