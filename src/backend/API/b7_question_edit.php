@@ -6,7 +6,7 @@ $question = $_GET["question"];
 $answer = $_GET["answer"];
 $question_id = $_GET["question_id"];
 // 建立SQL語法
-$sql = "UPDATE CATOPIA.ROBOT  SET QUESTION_CONTENT = ? ,ANSWER_CONTENT = ?  WHERE QUESTION_ID = ?";
+$sql = "UPDATE ROBOT  SET QUESTION_CONTENT = ? ,ANSWER_CONTENT = ?  WHERE QUESTION_ID = ?";
 
 
 // 執行

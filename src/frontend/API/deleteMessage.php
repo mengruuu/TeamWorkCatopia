@@ -22,7 +22,10 @@
 
     // -----------------------------------------------------------------------
     // 取得更新後的留言版資訊
-    $sql = "SELECT * FROM MESSAGE";
+    $sql = "SELECT * 
+    FROM 
+     MESSAGE
+     NATURAL JOIN MEMBER";
     // $name = isset($_POST["Name"])?$_POST["Name"]:$_POST["Name"];
     
     $statmentget = $pdo->prepare($sql);
