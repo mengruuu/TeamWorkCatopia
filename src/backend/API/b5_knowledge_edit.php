@@ -7,7 +7,7 @@ $content = $_POST["content"];
 $img = $_POST["img"];
 $_idNumber = $_POST["idNumber"];
 // 建立SQL語法
-$sql = "UPDATE CATOPIA.ARTICLE  SET ARTICLE_TITLE = ? ,ARTICLE_CONTENT = ?,ARTICLE_PICTURE = ?  WHERE ARTICLE_ID = ?";
+$sql = "UPDATE ARTICLE  SET ARTICLE_TITLE = ? ,ARTICLE_CONTENT = ?,ARTICLE_PICTURE = ?  WHERE ARTICLE_ID = ?";
 
 
 // 執行
