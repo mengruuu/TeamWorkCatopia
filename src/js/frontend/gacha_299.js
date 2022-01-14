@@ -1,11 +1,9 @@
-
-
-var vm = new Vue({
-    el: '#app',
-    data: {
-        count: 6,
-    },
-});
+// var vm = new Vue({
+//     el: '#app',
+//     data: {
+//         count: 6,
+//     },
+// });
 
 // console.log(vm.$data.count);  //3
 // console.log(vm.count);  //3
@@ -100,6 +98,7 @@ function doFirst(){
     for(let i = 0; i < color_image.length; i++){
         color_image[i].addEventListener("click", function(e){
             login_check();
+
             let gacha_box_c = gacha_box[i];
             let gray_image = './images/gacha_299/gacha_299_box_gray.png';
             let img = gacha_box_c.firstElementChild;

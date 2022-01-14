@@ -1,20 +1,3 @@
-
-
-var vm = new Vue({
-    el: '#app',
-    data: {
-        count: 3,
-    },
-    methods: {
-        // action(e){
-        //     this.count -= 1;  //拿去click事件做事
-        // }
-    },
-});
-
-// console.log(vm.$data.count);  //3
-// console.log(vm.count);  //3
-
 // 設定圖片存取陣列
 // let img_399 = new Array(); 
 // img_399[0] = "./images/gacha_399/gacha_399_a.png"; 
@@ -81,7 +64,7 @@ function doFirst(){
     for( i = 0; i < 9; i++){
         randomindex()
         new_img_399.push(img_399[index_number]);
-        console.log(new_img_399[i]['PRODUCT_PICTURE1']);
+        // console.log(new_img_399[i]['PRODUCT_PICTURE1']);
     };
 
     //randomindex()會隨機抽出index數字 判斷數字有無重複
