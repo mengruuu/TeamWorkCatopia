@@ -5,8 +5,9 @@
     // $order_info = $_POST['order_info'];
     $data = json_decode(file_get_contents("php://input"));
     //找到TOTALPRICE
-    $sql_shopping = "SELECT * FROM CATOPIA.v_product_shopping_cart";
+    $sql_shopping = "SELECT * FROM PRODUCT JOIN SHOPPING_CART ON PRODUCT.PRODUCT_NAME = SHOPPING_CART.PRODUCT_NAME WHERE MEMBER_ID = ?";
     $statement_shopping = $pdo -> prepare($sql_shopping);
+    $statement_shopping ->bindValue(1, $MEMBER_ID);
     $statement_shopping ->execute();
     $data_shopping = $statement_shopping ->fetchAll();
     // $give_back_coin = intval($data_shopping[0]['TOTAL_PRICE']) / 10;

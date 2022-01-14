@@ -9,6 +9,7 @@ function login_check(){
         success:function(res){
             if(res == ''){
                 // alert(res);
+                // alert('');
                 window.location.href = './login.html';
             }else{
                 response = res;

@@ -81,6 +81,7 @@
                     if(response == 'false'){
                         alert('帳號或密碼錯誤');
                     }else{
+                        console.log(response);
                         window.location.href = `./vip.html?ID_${response[0][0]}`;
                     }
                 },

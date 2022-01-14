@@ -102,7 +102,7 @@ Vue.component('cart-product',{
     
     mounted() {
         fetch('./API/shopping_cart.php').then(res => res.json()).then(res =>{
-            // console.log(res);
+            console.log(res);
             this.products = res;
             // console.log(this.products);
             // console.log(this.products[0]['PRODUCT_NAME']);
@@ -185,26 +185,26 @@ Vue.component('cart-total',{
             </div>
         </div>
 
-    <div class="cart_step1_total_price">
-        <div class="cart_step1_point">
-            <p>您的點數</p>
-            <p>{{this.catopia_coin}}點</p>
+        <div class="cart_step1_total_price">
+            <div class="cart_step1_point">
+                <p>您的點數</p>
+                <p>{{this.catopia_coin}}點</p>
+            </div>
+            <div class="cart_step1_point">
+                <p>點數折抵</p>
+                <p><input type="text" v-model=discount_coin @change="price_coin">點</p>
+            </div>
         </div>
-        <div class="cart_step1_point">
-            <p>點數折抵</p>
-            <p><input type="text" v-model=discount_coin @change="price_coin">點</p>
-        </div>
-    </div>
 
-    <div class="cart_step1_total_price">
-        <div class="cart_step1_order_price">
-            <p>訂單總額</p>
-            <p>{{this.totalPrice - discount_coin}}元</p>
+        <div class="cart_step1_total_price">
+            <div class="cart_step1_order_price">
+                <p>訂單總額</p>
+                <p>{{this.totalPrice - discount_coin}}元</p>
+            </div>
         </div>
-    </div>
-    </div>
-    <div class="cart_step1_next_step">
-            <a><button type="button" @click="getData">STEP2&nbsp;聯絡人資料</button></a>
+        <div class="cart_step1_next_step">
+                <a><button type="button" @click="getData">STEP2&nbsp;聯絡人資料</button></a>
+        </div>
     </div>
     `,
     // created(){

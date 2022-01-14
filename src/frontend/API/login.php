@@ -14,10 +14,10 @@
     $data_login = $statement_login -> fetchAll();
 
     if(count($data_login) > 0){
-        echo json_encode($data_login);
+        // echo json_encode($data_login);
         session_start();
         $_SESSION['MEMBER_ID'] = $data_login[0]['MEMBER_ID'];
-        // echo json_encode($_SESSION['MEMBER_ID']);
+        echo json_encode($_SESSION['MEMBER_ID']);
     }else{
         echo json_encode('false');
     }

@@ -18,6 +18,9 @@ if($data_check != []){
     $statement_update ->bindValue(1, (intval($product_quantity) + intval($data_check[0]['PRODUCT_QUANTITY'])));
     $statement_update ->bindValue(2, $product_ID);
     $statement_update ->execute();
+    $data_update = $statement_update ->fetchAll();
+    echo json_encode($data_update);
+
 }else{
     $sql_insert_shopping = "INSERT INTO SHOPPING_CART(MEMBER_ID, PRODUCT_ID, PRODUCT_QUANTITY)
     VALUE(?, ?, ?)";
@@ -26,8 +29,11 @@ if($data_check != []){
     $statement_insert ->bindValue(2, $product_ID);
     $statement_insert ->bindValue(3, $product_quantity);
     $statement_insert -> execute();
+    $data_insert = $statement_insert ->fetchAll();
+    echo json_encode($data_insert);
+
 }
 
-echo json_encode($data_check);
+// echo json_encode($data_check);
  
 ?>
