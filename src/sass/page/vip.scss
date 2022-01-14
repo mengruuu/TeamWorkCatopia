@@ -13,6 +13,12 @@
     background-position:center;
     color: $font_color;
     // padding: 10px;
+    @include w1380() {
+        height: auto;
+    }
+    @include w900() {
+        height: 70vh;
+    }
     @include w600() {
         height: auto;
     }
