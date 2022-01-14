@@ -3,7 +3,10 @@
     include("../../library/Connection.php");
 
     // 建立SQL語法
-    $sql = "SELECT * FROM `v_message_member`";
+    $sql = "SELECT * 
+    FROM 
+     MESSAGE
+     NATURAL JOIN MEMBER";
 
     // 執行
     $statement = $pdo->prepare($sql);
