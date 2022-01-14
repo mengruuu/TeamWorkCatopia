@@ -486,6 +486,7 @@ async function uploadMessageData() {
         if (postInfo.postContent === "" || postInfo.postImg === "") {
             alert("未發文或上傳圖片！");
         } else {
+            console.log("發出傳送前的圖片: ", postInfo.postImg);
             fetch("./API/createPost.php", {
                     method: "POST",
                     headers: {
@@ -495,9 +496,9 @@ async function uploadMessageData() {
                 })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
-                    window.alert("上傳成功");
-                    location.href = "/TeamWorkCatopia/dist/message.html";
+                    console.log("發出傳送後的圖片: ", data);
+                    // window.alert("上傳成功");
+                    // location.href = "./message.html";
                 })
         }
 
