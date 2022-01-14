@@ -49,7 +49,10 @@ include("../library/Connection.php");
     }
     
     // 獲取更新後的message資料----------------------------------------------------------
-    $sql = "SELECT * FROM `V_MESSAGE_MEMBER`";
+    $sql = "SELECT * 
+    FROM 
+     MESSAGE
+     NATURAL JOIN MEMBER";
     $statment = $pdo->prepare($sql);
     $statment->execute();
     $data = $statment->fetchAll();

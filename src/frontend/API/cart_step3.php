@@ -5,7 +5,7 @@
     // $order_info = $_POST['order_info'];
     $data = json_decode(file_get_contents("php://input"));
     //找到TOTALPRICE
-    $sql_shopping = "SELECT * FROM CATOPIA.v_product_shopping_cart";
+    $sql_shopping = "SELECT * FROM PRODUCT NATURAL JOIN SHOPPING_CART";
     $statement_shopping = $pdo -> prepare($sql_shopping);
     $statement_shopping ->execute();
     $data_shopping = $statement_shopping ->fetchAll();
