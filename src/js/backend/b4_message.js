@@ -1,6 +1,6 @@
 async function upLoadData() {
     const messageData 
-        = await fetch("../../src/backend/API/b4_message.php")
+        = await fetch("./API/b4_message.php")
                 .then(res => res.json())
                 .then(data => data);
     // console.log(messageData);

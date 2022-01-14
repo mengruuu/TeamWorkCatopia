@@ -497,7 +497,7 @@ async function uploadMessageData() {
                 .then(data => {
                     console.log(data);
                     window.alert("上傳成功");
-                    location.href = "/TeamWorkCatopia/dist/message.html";
+                    location.href = "./message.html";
                 })
         }
 

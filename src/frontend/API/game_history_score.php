@@ -8,7 +8,7 @@
 
     
     //建立SQL語法 撈出遊戲最高分
-    $sql = "SELECT GAME_HIGHSCORE FROM CATOPIA.MEMBER WHERE MEMBER_ID = ?";
+    $sql = "SELECT GAME_HIGHSCORE FROM MEMBER WHERE MEMBER_ID = ?";
 
     //執行並查詢，會回傳查詢結果的物件，必須使用fetch、fetchAll...等方式取得資料
     $statement = $pdo->prepare($sql);
