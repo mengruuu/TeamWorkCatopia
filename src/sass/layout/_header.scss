@@ -68,7 +68,8 @@ div.header_catopia{
     position: relative;
     top:5px;
     img{
-      height: 100%;
+      width: 120px;
+      height: 60px;
     }
     @include w500{
       transform: scale(0.8);
@@ -197,15 +198,15 @@ li.title{
   }
 }
 
-@keyframes title_fade_in{
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-    display: none;
-  }
-}
+// @keyframes title_fade_in{
+//   0%{
+//     opacity: 0;
+//   }
+//   100%{
+//     opacity: 1;
+//     display: none;
+//   }
+// }
 
 div.header_icons{
   // border:1px solid red;
@@ -247,7 +248,7 @@ div.header_icons{
   }
     a.member_icon{
       // border:1px solid blue;
-      height: 100%;
+      height: 100% !important;
       cursor: pointer;
       position: relative;
       margin-right: 15px;
@@ -262,7 +263,7 @@ div.header_icons{
     }
     div.shopping_cart{
       // border:1px solid green;
-      height: 100%;
+      height: 100% !important;
       cursor: pointer;
       @include w1100{
         width: 50px;
