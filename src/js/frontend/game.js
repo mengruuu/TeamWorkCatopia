@@ -10,7 +10,6 @@ var acc = false;
 var slowly = false;
 let accelerate = 0;
 let slow = 0;
-let slow_time = false;
 var stop_game = false;
 //每天寫三次
 var today = new Date();
@@ -60,7 +59,7 @@ var today = new Date();
                 // myGamePiecePerson.x -= 5;
                 man_drawing = false;
                 if(score > 20){
-                    man.x -= (11 + accelerate);
+                    man.x -= (9.5 + accelerate);
                 }else{
                     man.x -= (8 + accelerate);
                 }
@@ -73,9 +72,10 @@ var today = new Date();
                 // myGamePiecePerson.x += 5;
                 man_drawing = true;
                 if(score > 20){
-                    man.x += (11 + accelerate);
+                    man.x += (9.5 + accelerate);
+                }else{
+                    man.x += (8 + accelerate);
                 }
-                man.x += (8 + accelerate);
                 remember = false;
 
             }
@@ -136,7 +136,7 @@ var today = new Date();
         }
         //緩速
         if(e.keyCode == 66 && cool_down_slow){
-            slow_time = true;
+            slowly = true;
             cool_down_slow = false;
             if(score < 5){
                 slow = -0.5;
@@ -182,7 +182,7 @@ function drawText(text,x,y,color){
 
 function random(){ 
     // random_time = 2000 + Math.random()*500;//時間亂數
-
+    //時間
     if(score <= 5){
         random_time = 2000 + Math.random()*500;//時間亂數
     }
@@ -201,7 +201,21 @@ function random(){
     if(score > 25){
         random_time = -300 + Math.random()*500;//時間亂數
     }
-    random_x = 30 + (Math.random()*canvas.width - 50);//X位置亂數
+
+    //位置
+    if(score <= 5){
+        random_x = 180 + ((Math.random()*canvas.width)* 0.5) ;//X位置亂數
+
+    }
+    if(score > 10){
+        random_x = 110 + ((Math.random()*canvas.width)*0.8);//X位置亂數
+
+    }
+    if(score > 15){
+        random_x = 30 + (Math.random()*canvas.width - 50);//X位置亂數
+
+    }
+    // random_x = 30 + (Math.random()*canvas.width - 50);//X位置亂數
     // console.log(random_time);
 }
 
@@ -304,7 +318,7 @@ function updateGameArea(){
             // console.log(glass[i].y);
         }else{
             if(score < 5){
-                glass[i].y += (1 + slow);
+                glass[i].y += (1.3 + slow);
                 // console.log(score);
 
             }
@@ -360,7 +374,7 @@ function updateGameArea(){
     //技能重畫
     flash.update("加速請按V",canvas.width-100,200);
     flash.update("瞬移請按C",canvas.width-100,220);
-    flash.update("杯子緩速請按C",canvas.width-100,240);
+    flash.update("杯子緩速請按B",canvas.width-135.5,240);
 
 
     if(cool_down){
@@ -373,6 +387,12 @@ function updateGameArea(){
         flash.update("加速可使用",canvas.width-100,290);
     }else{
         flash.update("加速冷卻中...",canvas.width-100,290);
+    }
+
+    if(cool_down_slow){
+        flash.update("緩速可使用",canvas.width-100,310);
+    }else{
+        flash.update("緩速冷卻中...",canvas.width-100,310);
     }
 
     if(acc){
