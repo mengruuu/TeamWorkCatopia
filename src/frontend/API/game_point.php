@@ -3,8 +3,8 @@
     include("../library/member.php");
     
     //抓取MEMBER_ID資料
-    session_start(); 
-    $MEMBER_ID = ($_SESSION["MEMBER_ID"]); 
+   
+    $MEMBER_ID = getMemberID();
     $addCOIN = $_POST['addCOIN'];
     $check;
 

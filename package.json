@@ -15,7 +15,8 @@
     "清除舊檔案": "gulp c",
     "壓圖": "gulp img",
     "函式庫搬家": "gulp libarymove",
-    "php搬家": "gulp movephp"
+    "php搬家": "gulp movephp",
+    "後台php":"gulp moveBackend_php"
   },
   "keywords": [],
   "author": "",

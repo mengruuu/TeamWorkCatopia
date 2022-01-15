@@ -37,12 +37,16 @@ function get_member_info(){
             $('#member_mail').html(response[0]['MEMBER_MAIL']);
             $('#member_id').html(response[0]['MEMBER_ID']);
             $('#member_coin').html(response[0]['CATOPIA_COIN'] + "點");
+            $('#vip_personal_icon')[0].src = response[0]['MEMBER_PICTURE'];
+            $('#equipment_cat')[0].src = response[0]['MEMBER_PICTURE'];
         },
         error: function(exception) {
          alert("發生錯誤: " + exception.status); 
      }
     })
 }
+
+
 
 //更換頭貼
 var change_head = document.getElementById('change_head');
@@ -70,3 +74,22 @@ function change_cat_icon(){
      }
     })
 }
+
+
+let personal_icon_el = document.getElementsByClassName('personal_cat');
+let display_cat = document.getElementById('equipment_cat');
+// console.log(personal_icon_el[0].src);
+for(i=0; i< personal_icon_el.length ; i++){
+    personal_icon_el[i].addEventListener('click',function(e){
+        console.log(e.target);
+        display_cat.src = e.target.src;
+    })
+}
+
+let confirm_cat_icon = document.getElementById('confirm_cat');
+confirm_cat_icon.addEventListener('click',function(){
+    $('#vip_personal_icon')[0].src = display_cat.src;
+});
+// function choose_cat(){
+
+// }
