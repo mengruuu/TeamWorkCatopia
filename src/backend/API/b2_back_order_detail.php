@@ -5,7 +5,7 @@
     $ORDER_ID = $_POST['order_id'];
     $check;
 
-    $get_order_info = "SELECT * FROM CATOPIA.`v_product_order_detail`
+    $get_order_info = "SELECT * FROM `v_product_order_detail`
     WHERE `ORDER_ID` = ?";
 
     $statement_order_info = $pdo -> prepare($get_order_info);
