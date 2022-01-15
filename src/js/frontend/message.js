@@ -8,6 +8,8 @@ const message_write_background = document.querySelector("div.message_write_backg
 const inputFile = document.querySelector("input[type = 'file']");
 const message_write_message_content = document.querySelector("textarea.message_write_message_content");
 const confirmPost = document.querySelector("#confirmPost");
+const message_loading = document.querySelector("img.message_loading");
+const message_loading_background = document.querySelector("div.message_loading_background");
 const message_write_img_container_content = document.querySelector("div.message_write_img_container_content");
 
 
@@ -486,7 +488,9 @@ async function uploadMessageData() {
         if (postInfo.postContent === "" || postInfo.postImg === "") {
             alert("未發文或上傳圖片！");
         } else {
-            // console.log("發出傳送前的圖片: ", postInfo.postImg);
+            // 載入動畫
+            message_loading.style.src = "./images/message/message_loading.gif";
+            message_loading_background.style.display = "block";
             fetch("./API/createPost.php", {
                     method: "POST",
                     headers: {

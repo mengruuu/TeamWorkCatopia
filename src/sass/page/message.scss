@@ -28,6 +28,22 @@ div.message_write_message_container {
     z-index: 999;
     box-shadow: 5px 5px 5px lightgray;
     overflow-x: hidden;
+    img.message_loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 50;
+        transform: translate(-50%, -50%);
+    }
+    div.message_loading_background {
+        position: fixed;
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        opacity: 0.3;
+        z-index: 49;
+    }
     div.message_write_message_title {
         display: flex;
         justify-content: space-between;
