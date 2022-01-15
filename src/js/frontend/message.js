@@ -496,14 +496,8 @@ async function uploadMessageData() {
                 })
                 .then(res => res.json())
                 .then(data => {
-<<<<<<< HEAD
-                    console.log("發出傳送後的圖片: ", data);
-                    // window.alert("上傳成功");
-                    // location.href = "./message.html";
-=======
                     window.alert("上傳成功");
                     location.href = "./message.html";
->>>>>>> a82d834d35aa93516de8c9c2330138a26bf5bc6a
                 })
         }
 
