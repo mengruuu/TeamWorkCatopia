@@ -1,4 +1,8 @@
-const bus = new Vue();
+const bus = new Vue({
+    data:{
+        test:0,
+    }
+});
 //first content
 Vue.component('first-content',{
     template:`
@@ -34,7 +38,7 @@ Vue.component('first-content',{
 Vue.component('choose-option',{
     methods: {
         changeType(e){
-            console.log(e.target.innerHTML);
+            // console.log(e.target.innerHTML);
             let typeName = e.target.innerHTML.trim();
             // console.log(typeName);
             bus.$emit('getType',typeName);
@@ -88,11 +92,11 @@ Vue.component('second-content',{
             type:'collar',
         }
     },
-    mounted() {
-        bus.$on('getType',function(typeName){
-            console.log(typeName);
-            this.type = typeName;
-        })
+    methods: {
+        changeData(data){
+            console.log('changeData')
+            this.type = data;
+        }
     },
     template:`
     <div class="game_store_second_content">
@@ -105,6 +109,13 @@ Vue.component('second-content',{
         </button>
     </div>
     `,
+    mounted() {
+
+        bus.$on('getType',function(typeName){
+            console.log(typeName);
+            vue['second-content'];
+        })
+    },
     components:{
         heads:{
             props:['type'],
