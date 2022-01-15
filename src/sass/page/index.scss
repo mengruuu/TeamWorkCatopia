@@ -16,9 +16,10 @@ video{
 }
 main{
     // border: 1px solid blue;
-    width: 80%;
+    width: 90%;
     text-align: center;
     margin: 0 auto;
+    overflow: hidden;
     
 }
 div.index_block1{
@@ -122,6 +123,7 @@ div.index_block2{
 article.sec_block{
     background-color: $second_color5;
     // border: 1px solid red;
+    max-width: 1200px;
     width: 90%;
     border-radius: 15px;
     padding-bottom: 20px;
@@ -318,8 +320,8 @@ article.sec_block{
                 width: 100%;
                 margin-top: 30px;
             }
-            @include w400(){
-                margin-top: 10px;
+            @media (min-width:320px) and (max-width: 603px) {
+                transform: rotate(-0deg);
             }
           .col-5{
                 // border: 1px solid blue;
@@ -362,11 +364,8 @@ article.sec_block{
                 @include w600(){
                     font-size: $font_22;
                 }
-                @include w500(){
-                    padding: 5px 10px;
-                }
-                @include w400(){
-                    padding: 2px 5px;
+                @media (min-width:320px) and (max-width: 603px) {
+                    
                 }
             }
             
@@ -388,10 +387,9 @@ article.sec_block{
         .know{
             // border: 1px solid red;
             width: 50%;
-            display: inline-block;
             position: absolute;
             bottom: 0;
-            transform: translateY(20%);
+            // transform: translateY(20%);
             @include w900(){
                 display: block;
                 transform: translateY(50%);
@@ -420,12 +418,18 @@ article.sec_block{
                 border-radius: 15px;
                 box-shadow: $shadow;
                 z-index: 40;
-                @include w600(){
-                    font-size: 14px;
+                @media (min-width:603px) and (max-width: 901px) {
+                    position: absolute;
+                    top: -50px;
+                    left: -10px;
+                    width: 265px;
                 }
-                @include w400(){
-                    font-size: 12px;
-                    padding: 5px 2px;
+                @media (min-width:320px) and (max-width: 603px) {
+                    transform: rotate(0deg);
+                    position: absolute;
+                    top: -50px;
+                    left: -45%;
+                    width: 100%;
                 }
                 span{
                     font-size: $font_22;
@@ -446,6 +450,11 @@ article.sec_block{
             top:10%;
             width: 25%;
             transform: rotate(3deg);
+            @media (min-width:320px) and (max-width: 603px) {
+                transform: rotate(0deg);
+                right: 0;
+                top: 60%
+            }
         }
         
     }
@@ -466,7 +475,7 @@ article.sec_block{
         ul.round_snack{
         //   border: 1px solid blue; 
         display: flex;
-        width: 100%;
+        width: 90%;
         //   max-width: 1000px;
         height: auto;
         text-align: center;
@@ -592,11 +601,8 @@ article.sec_block{
             width: 100px;
         }
         @include w500(){
+            display: none;
             top:-3px;
-            width: 80px;
-        }
-        @include w400(){
-            top:-12px;
             width: 80px;
         }
     }
@@ -1006,7 +1012,7 @@ article.index_last_block{
     // border:1px solid red;
     height: 700px;
     margin-top: 80px;
-    margin-bottom: 120px;
+    margin-bottom: 180px;
     @include w1380(){
         height: 500px;
     }
@@ -1016,16 +1022,21 @@ article.index_last_block{
     }
     @include w700(){
         height: 300px;
+        margin-top: 10px;
+        margin-bottom: 80px;
     }
     @include w500(){
+        margin-top: 10px;
+        margin-bottom: 60px;
         height: 220px;
     }
     @include w400(){
         height: 180px;
-        margin-bottom: 20px;
+        margin-top: 10px;
+        margin-bottom: 60px;
     }
     .last_first_block{
-        // border:1px solid blue;
+        
         div{
             display: inline-block;
             width: 40%;
