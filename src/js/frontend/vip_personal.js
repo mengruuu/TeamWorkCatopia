@@ -38,6 +38,7 @@ function get_member_info(){
             $('#member_id').html(response[0]['MEMBER_ID']);
             $('#member_coin').html(response[0]['CATOPIA_COIN'] + "點");
             $('#vip_personal_icon')[0].src = response[0]['MEMBER_PICTURE'];
+            $('#equipment_cat')[0].src = response[0]['MEMBER_PICTURE'];
         },
         error: function(exception) {
          alert("發生錯誤: " + exception.status); 
