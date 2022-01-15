@@ -10,6 +10,17 @@ div.message_write_background {
     opacity: 0.3;
     z-index: 998;
 }
+img.message_delete_loading {
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    z-index: 50;
+    transform: translate(-50%, -50%);
+}
 div.message_write_message_container {
     position: fixed;
     display: none;
@@ -30,20 +41,24 @@ div.message_write_message_container {
     overflow-x: hidden;
     img.message_loading {
         position: absolute;
+        display: none;
         top: 50%;
         left: 50%;
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
         z-index: 50;
         transform: translate(-50%, -50%);
     }
-    div.message_loading_background {
-        position: fixed;
-        display: none;
-        width: 100vw;
-        height: 100vh;
-        background-color: black;
-        opacity: 0.3;
-        z-index: 49;
-    }
+    // div.message_loading_background {
+    //     position: fixed;
+    //     display: none;
+    //     width: 100vw;
+    //     height: 100vh;
+    //     background-color: black;
+    //     opacity: 0.3;
+    //     z-index: 49;
+    // }
     div.message_write_message_title {
         display: flex;
         justify-content: space-between;
@@ -227,6 +242,13 @@ div.message_write_message_container {
 }
 div.message_write_message_container_open {
     display: flex;
+}
+div.message_write_message_container_post_creating {
+    // background-color: black;
+    // opacity: 0.8;
+    button:hover {
+        cursor: not-allowed;
+    }
 }
 div.message_input_container {
     padding: 5px 0;
