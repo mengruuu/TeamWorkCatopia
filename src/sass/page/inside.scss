@@ -115,7 +115,7 @@ main {
                 color: $font_color;
             }
 
-            :nth-child(2) {
+            input[type='number'] {
                 background-color: $main_color;
                 height: 45px;
                 border-radius: 5px;
@@ -125,6 +125,7 @@ main {
                 margin-bottom: 10px;
                 color: $font_color;
                 font-size: $font_20;
+                padding-right: 0;
             }
         }
 
