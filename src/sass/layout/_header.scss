@@ -68,7 +68,7 @@ div.header_catopia{
     position: relative;
     top:5px;
     img{
-      height: 100%;
+      height: 75px;
     }
     @include w500{
       transform: scale(0.8);
@@ -79,35 +79,31 @@ div.header_catopia{
   div.logo_cat{
     // border:1px solid green;
     width: fit-content;
-    animation-name: cat_fade_out;
-    animation-duration: 1s;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
     @include w800{
       display: none;
     }
   }
 }
-@keyframes logo_move{
-  0%{
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  100%{
-    position: relative;
-    left: 0;
-    transform: translateX(0%);
-  }
-}
-@keyframes cat_fade_out{
-  0%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
-}
+// @keyframes logo_move{
+//   0%{
+//     position: relative;
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
+//   100%{
+//     position: relative;
+//     left: 0;
+//     transform: translateX(0%);
+//   }
+// }
+// @keyframes cat_fade_out{
+//   0%{
+//     opacity: 1;
+//   }
+//   100%{
+//     opacity: 0;
+//   }
+// }
 
 div.header_option{
   // border:1px solid black;
@@ -117,11 +113,6 @@ div.header_option{
   position: relative;
   right: 20px;
   opacity: 0;
-  animation-name: title_fade_in;
-  animation-duration: 2s;
-  // animation-delay: .5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in;
   @include w1100{
     width: 70%;
   }
