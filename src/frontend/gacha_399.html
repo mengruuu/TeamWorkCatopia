@@ -5,7 +5,6 @@
       "title" : "盲抽399專區"
     })
     <link rel="stylesheet" href="./css/gacha_399.css">
-    <script src="./js/frontend/gacha_399.js" async></script>
 </head>
 <body>
     @@include('./layout/header.html')
@@ -81,11 +80,13 @@
             </div>
             <div class="right_box">
                 <div class="buy">
-                    <a href="gacha_cart_step1.html">
+                    <!-- <a href="gacha_cart_step1.html"> -->
+                    <div id="buy_box">
                         <p class="buy_text">
-                            購買抽盒次數
+                            <!-- 購買抽盒次數 -->
+                            獲取1次抽盒機會
                         </p>
-                    </a>
+                    </div>
                 </div>
                 <!-- <div class="store">
                     <a href="cloth.html">
@@ -185,17 +186,6 @@
 
 
     @@include('./layout/footer.html')
-<<<<<<< HEAD
-=======
-
->>>>>>> 842da8ad4185232867953b82a6150f472e4b965f
-    <script>
-        var vm = new Vue({
-            el: '#app',
-            data: {
-                count: 3,
-            },
-        });
-    </script>
+    <script src="./js/frontend/gacha_399.js"></script>
 </body>
 </html>

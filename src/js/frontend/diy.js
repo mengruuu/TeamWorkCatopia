@@ -73,7 +73,7 @@ function diy_step_flavor(){
         diy_flavor_block.innerHTML = `<p id="cake_salmon">挪威進口鮭魚</p>/
         <p id="cake_tuna">加拿大鮪魚</p>/
         <p id="cake_chicken">台灣優質雞胸肉</p>`;
-        change_cake()
+        change_cake();
     }
 }
 
@@ -83,8 +83,8 @@ back_btn.addEventListener('click', function(){
     diy_block_number -= 1 ;
     judge_diy_block_number0();
     judge_diy_block_number2();
-    diy_step_context()
-    diy_step_flavor()
+    diy_step_context();
+    diy_step_flavor();
     // console.log(cakeNUM + foodNUM + nutritionNUM);
     // console.log(diy_cake);
     // console.log(diy_block_number);
@@ -94,8 +94,8 @@ next_btn.addEventListener('click', function(){
     diy_block_number += 1 ;
     judge_diy_block_number0();
     judge_diy_block_number2();
-    diy_step_context()
-    diy_step_flavor()
+    diy_step_context();
+    diy_step_flavor();
     // console.log(cakeNUM + foodNUM + nutritionNUM);
     // console.log(diy_cake);
     // console.log(diy_block_number);
@@ -113,14 +113,23 @@ function change_cake(){
     cake_salmon.addEventListener('click', function(){
         change_cake_img.src = "./images/diy_page/images/diy_cake_salmon.png";
         cakeNUM = "1" ;
+        cake_salmon.style.backgroundColor = "#B7C88E";
+        cake_tuna.style.backgroundColor = "#EAE4D2";
+        cake_chicken.style.backgroundColor = "#EAE4D2";
     })
     cake_tuna.addEventListener('click', function(){
         change_cake_img.src = "./images/diy_page/images/diy_cake_tuna.png";
         cakeNUM = "2" ;
+        cake_tuna.style.backgroundColor = "#B7C88E";
+        cake_salmon.style.backgroundColor = "#EAE4D2";
+        cake_chicken.style.backgroundColor = "#EAE4D2";
     })
     cake_chicken.addEventListener('click', function(){
         change_cake_img.src = "./images/diy_page/images/diy_cake_chicken.png";
         cakeNUM = "3" ;
+        cake_chicken.style.backgroundColor = "#B7C88E";
+        cake_salmon.style.backgroundColor = "#EAE4D2";
+        cake_tuna.style.backgroundColor = "#EAE4D2";
     })
 }
 
@@ -135,14 +144,23 @@ function change_food(){
     food_blueberry.addEventListener('click', function(){
         change_food_img.src = "./images/diy_page/images/diy_food_blueberry.png";
         foodNUM = "1" ;
+        food_blueberry.style.backgroundColor = "#B7C88E";
+        food_sweet_potato.style.backgroundColor = "#EAE4D2";
+        food_grass.style.backgroundColor = "#EAE4D2";
     })
     food_sweet_potato.addEventListener('click', function(){
         change_food_img.src = "./images/diy_page/images/diy_food_sweet_potato.png";
         foodNUM = "2" ;
+        food_sweet_potato.style.backgroundColor = "#B7C88E";
+        food_blueberry.style.backgroundColor = "#EAE4D2";
+        food_grass.style.backgroundColor = "#EAE4D2";
     })
     food_grass.addEventListener('click', function(){
         change_food_img.src = "./images/diy_page/images/diy_food_grass.png";
         foodNUM = "3" ;
+        food_grass.style.backgroundColor = "#B7C88E";
+        food_sweet_potato.style.backgroundColor = "#EAE4D2";
+        food_blueberry.style.backgroundColor = "#EAE4D2";
     })
 }
 
@@ -156,10 +174,14 @@ function change_nutrition(){
     nutrition_cranberry.addEventListener('click', function(){
         change_nutrition_img.src = "./images/diy_page/images/diy_nutrition_cranberry.png";
         nutritionNUM = "1" ;
+        nutrition_cranberry.style.backgroundColor = "#B7C88E";
+        nutrition_sesame.style.backgroundColor = "#EAE4D2";
     })
     nutrition_sesame.addEventListener('click', function(){
         change_nutrition_img.src = "./images/diy_page/images/diy_nutrition_sesame.png";
         nutritionNUM = "2" ;
+        nutrition_sesame.style.backgroundColor = "#B7C88E";
+        nutrition_cranberry.style.backgroundColor = "#EAE4D2";
     })
 }
 

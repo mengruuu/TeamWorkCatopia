@@ -140,6 +140,7 @@ article.sec_block {
         }
 
         p {
+            // border: 1px solid red;
             background-color: $second_color1;
             border-radius: 15px;
             width: 241px;
@@ -152,6 +153,9 @@ article.sec_block {
             box-shadow: $shadow_box;
             color: $font_color;
             cursor: pointer;
+            // &:first-child{
+            //     background-color: $second_color6;
+            // }
             &:hover{
                 background-color: $second_color6;
             }
