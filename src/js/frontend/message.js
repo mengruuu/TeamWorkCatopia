@@ -8,6 +8,9 @@ const message_write_background = document.querySelector("div.message_write_backg
 const inputFile = document.querySelector("input[type = 'file']");
 const message_write_message_content = document.querySelector("textarea.message_write_message_content");
 const confirmPost = document.querySelector("#confirmPost");
+const message_loading = document.querySelector("img.message_loading");
+const message_loading_background = document.querySelector("div.message_loading_background");
+const message_delete_loading = document.querySelector("img.message_delete_loading");
 const message_write_img_container_content = document.querySelector("div.message_write_img_container_content");
 
 
@@ -198,6 +201,9 @@ async function uploadMessageData() {
             },
             deletePost() {
                 if (confirm("確定要刪除貼文？")) {
+                    message_write_background.style.display = "block";
+
+                    message_delete_loading.style.display = "block";
                     this.$emit('deletepost', this.postId);
                 }else {
                     return;
@@ -326,6 +332,10 @@ async function uploadMessageData() {
                     .then(res => res.json())
                     .then(data => {
                         // console.log(data);
+                        message_write_background.style.display = "none";
+
+                        message_delete_loading.style.display = "none";
+
                         vm.messageInfo = data;
                     });
                 // }, 1000);
@@ -486,7 +496,10 @@ async function uploadMessageData() {
         if (postInfo.postContent === "" || postInfo.postImg === "") {
             alert("未發文或上傳圖片！");
         } else {
-            // console.log("發出傳送前的圖片: ", postInfo.postImg);
+            // 載入動畫
+            message_loading.style.display = "block";
+            // message_loading_background.style.display = "block";
+            message_write_message_container.classList.add("message_write_message_container_post_creating");
             fetch("./API/createPost.php", {
                     method: "POST",
                     headers: {

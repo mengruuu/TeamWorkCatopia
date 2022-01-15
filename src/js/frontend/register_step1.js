@@ -7,6 +7,12 @@ const vm = new Vue({
     template: `
         <div>
             <div id = "show_and_hide_icon" @click = "changeHideAndShow">
+                <label>請輸入密碼</label>
+                <i :class="{far: true, 'fa-eye-slash': true, hide_close: isShow}"></i>
+                <i :class="{far: true, 'fa-eye': true, register_first_icon_hide: true, show_open: isShow}"></i>
+            </div>
+            <input :type = "inputType" id="pwd" placeholder = "請輸入開頭為兩個大寫英文字母加八個以上的數字，ex：AB12345678">
+            <div id = "show_and_hide_icon" @click = "changeHideAndShow">
                 <label>重新輸入密碼</label>
                 <i :class="{far: true, 'fa-eye-slash': true, hide_close: isShow}"></i>
                 <i :class="{far: true, 'fa-eye': true, register_first_icon_hide: true, show_open: isShow}"></i>
