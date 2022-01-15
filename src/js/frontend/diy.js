@@ -9,6 +9,11 @@ let next_btn = document.getElementById("next_btn");  //下一步按鈕
 // console.log(back);
 let diy_block_number = 0
 
+let cakeNUM = "1" ;
+let foodNUM = "1" ;
+let nutritionNUM = "1" ;
+cake_btn_color();
+
 judge_diy_block_number0();
 change_cake();
 
@@ -85,10 +90,7 @@ back_btn.addEventListener('click', function(){
     judge_diy_block_number2();
     diy_step_context();
     diy_step_flavor();
-    // console.log(cakeNUM + foodNUM + nutritionNUM);
-    // console.log(diy_cake);
-    // console.log(diy_block_number);
-    // console.log(diy_flavor_block);
+    block_number();
 })
 next_btn.addEventListener('click', function(){
     diy_block_number += 1 ;
@@ -96,13 +98,22 @@ next_btn.addEventListener('click', function(){
     judge_diy_block_number2();
     diy_step_context();
     diy_step_flavor();
-    // console.log(cakeNUM + foodNUM + nutritionNUM);
-    // console.log(diy_cake);
-    // console.log(diy_block_number);
-    // console.log(diy_flavor_block);
+    block_number();
 })
 
-let cakeNUM = "1" ;
+function block_number(){
+    if(diy_block_number == 0){
+        cake_btn_color();
+    }
+    if(diy_block_number == 1){
+        food_btn_color();
+    }
+    if(diy_block_number == 2){
+        nutrition_btn_color();
+    }
+}
+
+
 function change_cake(){
     //換蛋糕體
     let change_cake_img = document.getElementById("change_cake_img");
@@ -113,27 +124,19 @@ function change_cake(){
     cake_salmon.addEventListener('click', function(){
         change_cake_img.src = "./images/diy_page/images/diy_cake_salmon.png";
         cakeNUM = "1" ;
-        cake_salmon.style.backgroundColor = "#B7C88E";
-        cake_tuna.style.backgroundColor = "#EAE4D2";
-        cake_chicken.style.backgroundColor = "#EAE4D2";
+        cake_btn_color();
     })
     cake_tuna.addEventListener('click', function(){
         change_cake_img.src = "./images/diy_page/images/diy_cake_tuna.png";
         cakeNUM = "2" ;
-        cake_tuna.style.backgroundColor = "#B7C88E";
-        cake_salmon.style.backgroundColor = "#EAE4D2";
-        cake_chicken.style.backgroundColor = "#EAE4D2";
+        cake_btn_color();
     })
     cake_chicken.addEventListener('click', function(){
         change_cake_img.src = "./images/diy_page/images/diy_cake_chicken.png";
-        cakeNUM = "3" ;
-        cake_chicken.style.backgroundColor = "#B7C88E";
-        cake_salmon.style.backgroundColor = "#EAE4D2";
-        cake_tuna.style.backgroundColor = "#EAE4D2";
+        cakeNUM = "3" ;    
+        cake_btn_color();    
     })
 }
-
-let foodNUM = "1" ;
 function change_food(){
     //換食物配料
     let change_food_img = document.getElementById("change_food_img");
@@ -143,28 +146,20 @@ function change_food(){
     
     food_blueberry.addEventListener('click', function(){
         change_food_img.src = "./images/diy_page/images/diy_food_blueberry.png";
-        foodNUM = "1" ;
-        food_blueberry.style.backgroundColor = "#B7C88E";
-        food_sweet_potato.style.backgroundColor = "#EAE4D2";
-        food_grass.style.backgroundColor = "#EAE4D2";
+        foodNUM = "1" ;   
+        food_btn_color();     
     })
     food_sweet_potato.addEventListener('click', function(){
         change_food_img.src = "./images/diy_page/images/diy_food_sweet_potato.png";
-        foodNUM = "2" ;
-        food_sweet_potato.style.backgroundColor = "#B7C88E";
-        food_blueberry.style.backgroundColor = "#EAE4D2";
-        food_grass.style.backgroundColor = "#EAE4D2";
+        foodNUM = "2" ;    
+        food_btn_color();    
     })
     food_grass.addEventListener('click', function(){
         change_food_img.src = "./images/diy_page/images/diy_food_grass.png";
-        foodNUM = "3" ;
-        food_grass.style.backgroundColor = "#B7C88E";
-        food_sweet_potato.style.backgroundColor = "#EAE4D2";
-        food_blueberry.style.backgroundColor = "#EAE4D2";
+        foodNUM = "3" ;     
+        food_btn_color();   
     })
 }
-
-let nutritionNUM = "1" ;
 function change_nutrition(){
     //換營養品
     let change_nutrition_img = document.getElementById("change_nutrition_img");
@@ -174,16 +169,60 @@ function change_nutrition(){
     nutrition_cranberry.addEventListener('click', function(){
         change_nutrition_img.src = "./images/diy_page/images/diy_nutrition_cranberry.png";
         nutritionNUM = "1" ;
-        nutrition_cranberry.style.backgroundColor = "#B7C88E";
-        nutrition_sesame.style.backgroundColor = "#EAE4D2";
+        nutrition_btn_color();
     })
     nutrition_sesame.addEventListener('click', function(){
         change_nutrition_img.src = "./images/diy_page/images/diy_nutrition_sesame.png";
         nutritionNUM = "2" ;
-        nutrition_sesame.style.backgroundColor = "#B7C88E";
-        nutrition_cranberry.style.backgroundColor = "#EAE4D2";
+        nutrition_btn_color();
     })
 }
+
+function cake_btn_color(){
+    if (cakeNUM == "1"){
+        cake_salmon.style.backgroundColor = "#B7C88E";
+        cake_tuna.style.backgroundColor = "#EAE4D2";
+        cake_chicken.style.backgroundColor = "#EAE4D2";
+    }
+    if(cakeNUM == "2" ){
+        cake_tuna.style.backgroundColor = "#B7C88E";
+        cake_salmon.style.backgroundColor = "#EAE4D2";
+        cake_chicken.style.backgroundColor = "#EAE4D2";
+    }
+    if(cakeNUM == "3" ){
+        cake_chicken.style.backgroundColor = "#B7C88E";
+        cake_salmon.style.backgroundColor = "#EAE4D2";
+        cake_tuna.style.backgroundColor = "#EAE4D2";
+    }
+}
+function food_btn_color(){
+    if (foodNUM == "1"){
+        food_blueberry.style.backgroundColor = "#B7C88E";
+        food_sweet_potato.style.backgroundColor = "#EAE4D2";
+        food_grass.style.backgroundColor = "#EAE4D2";
+    }
+    if(foodNUM == "2" ){
+        food_sweet_potato.style.backgroundColor = "#B7C88E";
+        food_blueberry.style.backgroundColor = "#EAE4D2";
+        food_grass.style.backgroundColor = "#EAE4D2";
+    }
+    if(foodNUM == "3" ){
+        food_grass.style.backgroundColor = "#B7C88E";
+        food_sweet_potato.style.backgroundColor = "#EAE4D2";
+        food_blueberry.style.backgroundColor = "#EAE4D2";
+    }
+}
+function nutrition_btn_color(){
+    if (nutritionNUM == "1"){
+        nutrition_cranberry.style.backgroundColor = "#B7C88E";
+        nutrition_sesame.style.backgroundColor = "#EAE4D2";
+    }
+    if(nutritionNUM == "2" ){
+        nutrition_sesame.style.backgroundColor = "#B7C88E";
+        nutrition_cranberry.style.backgroundColor = "#EAE4D2";
+    }
+}
+
 
 function add_cart(){
     //加入購物車
@@ -263,6 +302,10 @@ reset.addEventListener('click', function(){
     judge_diy_block_number2();
     diy_step_context();
     diy_step_flavor();
+    cakeNUM = "1";
+    foodNUM = "1";
+    nutritionNUM = "1";
+    block_number();
 })
 
 //抓出客製蛋糕的PRODUCT資料表的資料
