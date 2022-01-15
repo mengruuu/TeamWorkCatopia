@@ -84,7 +84,9 @@ async function uploadMessageData() {
         data() {
             return {
                 isListShow: false,
-                isFocus: false
+                isFocus: false,
+                isContentUpdated: false,
+                isTextUpdated: false
             }
         },
         template: `
@@ -96,7 +98,7 @@ async function uploadMessageData() {
                         <div></div>
                         <ul :class = "{message_setting_container_content_list: true, message_setting_container_content_list_show: isListShow}">
                             <li :class = "{message_setting_container_content_delete: true}" @click = "deletePost">刪除貼文</li>
-                            <li :class = "{message_setting_container_content_delete: true}">編輯貼文</li>
+                            <li :class = "{message_setting_container_content_delete: true}" @click = "updatePostClicked">編輯貼文</li>
                         </ul>
                     </div>
                 </div>
@@ -115,7 +117,8 @@ async function uploadMessageData() {
                 </div>
                 <div :class = "{message_content_and_comment: true}">
                     <div :class = "{message_content_text: true}">
-                        <p>{{ postContent }}</p>
+                        <p :class = "{message_text_update: isTextUpdated}">{{ postContent }}</p>
+                        <textarea :class = "{message_content_text_update: true, message_content_text_updated: isContentUpdated}" @keyup = "updatePost"/>
                     </div>
                     <img :class = "{message_content_img: true}" :src = postPicture>
                     <input :class = "{comment_input: true, message_focus_input: isFocus}" placeholder = "回應貼文..." @keyup = "inputComment" @focus = "inputFocus" @blur = "inputBlur">
@@ -202,11 +205,44 @@ async function uploadMessageData() {
             deletePost() {
                 if (confirm("確定要刪除貼文？")) {
                     message_write_background.style.display = "block";
-
                     message_delete_loading.style.display = "block";
+
                     this.$emit('deletepost', this.postId);
                 }else {
                     return;
+                }
+            },
+            updatePost(event) {
+                if(event.keyCode === 13 && document.querySelectorAll("textarea.message_content_text_update")[this.index] && document.querySelectorAll("textarea.message_content_text_update")[this.index].value) {
+                    message_write_background.style.display = "block";
+                    message_delete_loading.style.display = "block";
+                    this.isTextUpdated = false;
+                    this.isContentUpdated = false;
+
+                    this.$emit("upDatePost", this.postId, document.querySelectorAll("textarea.message_content_text_update")[this.index].value);
+                }
+                // if(document.querySelector("textarea.message_content_text_update")) {
+                //     if(!(document.querySelector("textarea.message_content_text_update").value)) {
+                //         if((confirm("目前沒有編輯任何文字，要保持原本的貼文嗎？"))) {
+                //             this.isContentUpdated = false;
+                //             this.isTextUpdated = false;
+                //         }
+                //     }else {
+                //         message_write_background.style.display = "block";
+                //         message_delete_loading.style.display = "block";
+
+                //         this.$emit("upDatePost", this.postId, document.querySelector("textarea.message_content_text_update").value);
+                //     }
+                // }
+            }
+            ,
+            updatePostClicked() {
+                if(this.isContentUpdated) {
+                    this.isTextUpdated = false;
+                    this.isContentUpdated = false;
+                }else {
+                    this.isTextUpdated = true;
+                    this.isContentUpdated = true;
                 }
             },
             changeLikeImg() {
@@ -274,6 +310,7 @@ async function uploadMessageData() {
                     @deletepost = "deletePost"
                     @changeLikeCounts = "changelikecounts"
                     @insertComment = "insertcomment"
+                    @upDatePost = "updatePost"
                 />
             </div>
         `,
@@ -321,7 +358,6 @@ async function uploadMessageData() {
                 this.updateComments(index);
             },
             deletePost(postID) {
-                // setTimeout(function() {
                 fetch("./API/deleteMessage.php", {
                         method: "POST",
                         headers: {
@@ -338,7 +374,29 @@ async function uploadMessageData() {
 
                         vm.messageInfo = data;
                     });
-                // }, 1000);
+            },
+            updatePost(postID, postValue){
+                const data = {
+                    id: postID,
+                    postValue: postValue
+                };
+
+                fetch("./API/updatePost.php", {
+                        method: "POST",
+                        headers: {
+                            "content-type": "application/json"
+                        },
+                        body: JSON.stringify(data)
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        // console.log(data);
+                        message_write_background.style.display = "none";
+
+                        message_delete_loading.style.display = "none";
+
+                        vm.messageInfo = data;
+                    });
             },
             async changelikecounts(postID, updateLikeCounts, index) {
                 const postIdAndUpdateLikeCounts = {
