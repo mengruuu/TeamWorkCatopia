@@ -1,3 +1,4 @@
+const bus = new Vue();
 //first content
 Vue.component('first-content',{
     template:`
@@ -33,7 +34,10 @@ Vue.component('first-content',{
 Vue.component('choose-option',{
     methods: {
         changeType(e){
-            console.log(e.target);
+            console.log(e.target.innerHTML);
+            let typeName = e.target.innerHTML.trim();
+            // console.log(typeName);
+            bus.$emit('getType',typeName);
         }
     },
     template:`
@@ -42,14 +46,14 @@ Vue.component('choose-option',{
             <ul>
                 <li><p>個性化商品</p></li>
                 <li>
-                    <div class="options" @click="changeType">
+                    <div class="options" @click="changeType" id="heads">
                         <p>
                             頭套
                         </p>
                     </div>
                 </li>
                 <li>
-                    <div class="options" @click="changeType">
+                    <div class="options" @click="changeType" id="collar">
                         <p>
                             項圈
                         </p>
@@ -57,7 +61,7 @@ Vue.component('choose-option',{
                 </li>
 
                 <li>
-                    <div class="options" @click="changeType">
+                    <div class="options" @click="changeType" id="clothes">
                         <p>
                             衣服
                         </p>
@@ -65,7 +69,7 @@ Vue.component('choose-option',{
                 </li>
 
                 <li>
-                    <div class="options" @click="changeType">
+                    <div class="options" @click="changeType" id="wings">
                         <p>
                             翅膀
                         </p>
@@ -81,8 +85,14 @@ Vue.component('choose-option',{
 Vue.component('second-content',{
     data() {
         return {
-            type:'heads',
+            type:'collar',
         }
+    },
+    mounted() {
+        bus.$on('getType',function(typeName){
+            console.log(typeName);
+            this.type = typeName;
+        })
     },
     template:`
     <div class="game_store_second_content">
@@ -110,7 +120,7 @@ Vue.component('second-content',{
                 </div>
             </div>
             `,
-            created() {
+            mounted() {
                 fetch('./API/game_store_get_pictures.php',{
                     method: 'POST',
                     headers:{
@@ -139,7 +149,7 @@ Vue.component('second-content',{
                 </div>
             </div>
             `,
-            created() {
+            mounted() {
                 fetch('./API/game_store_get_pictures.php',{
                     method: 'POST',
                     headers:{
@@ -168,7 +178,7 @@ Vue.component('second-content',{
                 </div>
             </div>
             `,
-            created() {
+            mounted() {
                 fetch('./API/game_store_get_pictures.php',{
                     method: 'POST',
                     headers:{
@@ -197,7 +207,7 @@ Vue.component('second-content',{
                 </div>
             </div>
             `,
-            created() {
+            mounted() {
                 fetch('./API/game_store_get_pictures.php',{
                     method: 'POST',
                     headers:{
