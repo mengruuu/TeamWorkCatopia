@@ -68,7 +68,7 @@ div.header_catopia{
     position: relative;
     top:5px;
     img{
-      height: 75px;
+      height: 100%;
     }
     @include w500{
       transform: scale(0.8);
@@ -79,6 +79,11 @@ div.header_catopia{
   div.logo_cat{
     // border:1px solid green;
     width: fit-content;
+    // animation-name: cat_fade_out;
+    // animation-duration: 1s;
+    // animation-delay: 2s;
+    // animation-fill-mode: forwards;
+    opacity: 0;
     @include w800{
       display: none;
     }
@@ -112,7 +117,12 @@ div.header_option{
   width: 90%;
   position: relative;
   right: 20px;
-  opacity: 0;
+  // opacity: 0;
+  // animation-name: title_fade_in;
+  // animation-duration: 2s;
+  // animation-delay: .5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
   @include w1100{
     width: 70%;
   }
@@ -128,6 +138,7 @@ ul.header_titles{
   list-style: none;
   padding: 0;
   justify-content: space-between;
+
   // li.title{
   //   // border:1px solid green;
   // }
