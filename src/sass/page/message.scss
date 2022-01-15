@@ -11,7 +11,7 @@ div.message_write_background {
     z-index: 998;
 }
 img.message_delete_loading {
-    position: absolute;
+    position: fixed;
     display: none;
     top: 50%;
     left: 50%;
@@ -40,7 +40,7 @@ div.message_write_message_container {
     box-shadow: 5px 5px 5px lightgray;
     overflow-x: hidden;
     img.message_loading {
-        position: absolute;
+        position: fixed;
         display: none;
         top: 50%;
         left: 50%;
