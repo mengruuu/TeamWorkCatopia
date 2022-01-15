@@ -1,11 +1,10 @@
-// var myGamePiece =[];
-// var random_x;
-// var random_time;
+
 var score = 0;
 var man_drawing = true;
 var glass = [];
 var heart_point = 3;
 var cool_down = true;
+let accelerate = 0;
 var stop_game = false;
 //每天寫三次
 var today = new Date();
@@ -28,7 +27,7 @@ var today = new Date();
     heart_pic2 = new Image(30,30,myGameArea.width-50,50);
     heart_pic3 = new Image(30,30,myGameArea.width-50,90);
 
-    flash = new drawText("閃現",myGameArea.width-50,300,'red');
+    flash = new drawText("加速",myGameArea.width-50,300,'red');
     flash.fillStyle='red';
 
 
@@ -41,8 +40,6 @@ var today = new Date();
     setInterval(create_glass,random_time);
     
 
-    //黑色方塊
-    // myGamePiecePerson = new component(50,50,'black',300,(myGameArea.height - 50));
     
     man = new man_Image(120,80,250,myGameArea.height-80);
 
@@ -50,20 +47,20 @@ var today = new Date();
     //鍵盤左右移動
     document.addEventListener("keydown", function(e){
         // console.log(e.which);
-
+        
         //移動------------------------------------------
         if(man.x > -20){    //限制範圍
             if(e.keyCode == 37 ){
                 // myGamePiecePerson.x -= 5;
                 man_drawing = false;
-                man.x -= 8;
+                man.x -= (8 + accelerate);
             }
         }
         if(man.x < (canvas.width - man.width)+20){ //限制範圍
             if(e.keyCode == 39 ){
                 // myGamePiecePerson.x += 5;
                 man_drawing = true;
-                man.x += 8;
+                man.x += (8 + accelerate);
 
                 
             }
@@ -91,14 +88,22 @@ var today = new Date();
         //----------------------------------------------
 
         //加速------------------------------------------
-        // if(e.keyCode == 86){
-            
-        // }
+        if(e.keyCode == 86 && cool_down){
+            console.log('v')
+            accelerate = 5;
+            cool_down = false;
+            setTimeout(cool, 10000);
+            setTimeout(accelerate_time,5000);
+        }
 
 
     });
 
 // }
+
+function accelerate_time(){
+    accelerate = 0;
+}
 
 function drawText(text,x,y,color){
     context.font = '20px Calibri';
@@ -110,37 +115,6 @@ function drawText(text,x,y,color){
     }
 }
 
-//建構函式 定義component的內容
-// function component (width, height, color, x, y){  //建立掉落物品
-//     this.width = width;
-//     this.height = height;
-//     this.x = x;
-//     this.y = y;
-//     context.fillStyle = color;
-//     context.fillRect(this.x, this.y, this.width, this.height);
-//     this.update = function(){ //定義更新函式內容 : 重新上色 重新放入位置,寬高
-//         context.fillStyle = color;
-//         context.fillRect(this.x, this.y, this.width, this.height);
-//     }
-    
-//     //接住方塊的定義函式
-//     this.catched = function(glass){
-//         var glass_left = glass.x;
-//         var glass_right = glass.x + (glass.width);
-//         var glass_top = glass.y;
-//         var glass_bottom = glass.y + (glass.height);
-
-//         var man_left = this.x;
-//         var man_right = this.x + (this.width);
-//         var man_top = this.y;
-//         var man_bottom = this.y + (this.height);
-//         if(  ( (man_right > glass_left && glass_left> man_left) || (man_left< glass_right && glass_right< man_right) ) && (glass_bottom === man_top) ){
-//             return true;
-//         }else{
-//            return false;
-//         }
-//     }
-// } 
 
 function random(){ 
     random_time = 2000 + Math.random()*500;//時間亂數
@@ -160,9 +134,6 @@ function random(){
     // console.log(random_time);
 }
 
-// function create_components(){
-//     myGamePiece.push(new component(30,30,'orange',random_x,0));
-// }
 
 function create_glass(){
     glass.push(new Image(30,30,random_x,0));
@@ -178,8 +149,7 @@ function Image (width, height,x, y){
     this.height = height;
     this.x = x;
     this.y = y;
-    // this.src = './glass.png';
-    // context.drawImage(glass_pic,-50,-10,30,40)
+
     this.update = function(pic,width,height){ //玻璃杯重畫
         context.drawImage(pic, this.x, this.y, width,height);
     }
@@ -192,8 +162,7 @@ function man_Image (width, height,x, y){  //建立人物
     this.height = height;
     this.x = x;
     this.y = y;
-    // this.src = './man.png';
-    // context.drawImage(man_pic,250,220,120,80)
+
     this.update = function(pic){ //人物重畫
         context.drawImage(pic, this.x, this.y, 120,80);
     }
@@ -217,14 +186,6 @@ function man_Image (width, height,x, y){  //建立人物
     }
 };
 
-
-
-//玻璃杯重畫更新函數
-// function updated_glass() {  
-//     context.drawImage(glass[0],glass[0].x,down_y,30,30);
-//     down_y += 1;
-//     ; //往下掉
-// }
 
 
 
@@ -257,12 +218,6 @@ function cool(){
 //清除+重畫 函式  
 function updateGameArea(){ 
     clear();
-
-    //橘色方塊掉落
-    // for(i=0; i < myGamePiece.length; i++){
-    //     myGamePiece[i].y +=1;
-    //     myGamePiece[i].update();
-    // }
 
 
     //玻璃杯重畫函式執行 並且往下掉
@@ -319,7 +274,7 @@ function updateGameArea(){
     score_point.update(score*10,canvas.width-40,220);
 
     //技能重畫
-    flash.update("閃現",canvas.width-50,300);
+    flash.update("加速",canvas.width-50,300);
     
 
     
