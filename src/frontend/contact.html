@@ -6,6 +6,32 @@
       })
     <link rel="stylesheet" href="./css/contact.css">
 </head>
+
+
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<script>
+    function sendmail(){
+
+       // docoument.getElementById('name').value;
+        //docoument.getElementById('email').value;
+        //docoument.getElementById('mark').value;
+
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "tfd10404@gmail.com",
+            Password : "tibame2022",
+            To : 'tfd10404@gmail.com',
+            From :document.getElementById('email').value,
+            Subject : "收到來自" + document.getElementById('name').value + "的新訊息",
+            Body :document.getElementById('mark').value
+        }).then(
+      //message => alert(message)
+      alert("送出成功！")
+    );
+    }
+</script>
+
 <body>
     <!-- <div class="header_hamburger"> -->
      @@include('./layout/header.html')
@@ -26,22 +52,18 @@
                 </div>
                 <div class="contact_form">
                     <div class="contact_form_bg">
-                    <!--
-                    <form enctype="multipart/form-data" class="contact_fm" action="" method="post">
-                    -->    
+                    <!--<form enctype="multipart/form-data" class="contact_fm" action="" method="post">  -->
                             <span class="contact_form_info">請輸入你的資訊</span><br><br>
                             <input id="name" class="contact_form_name" type="text" placeholder="請輸入姓名" name="name"><br><br>
                             <input id="email" class="contact_form_email" type="text" placeholder="請輸入E-mail" name="email"><br><br>
                             <textarea id="mark" class="contact_form_textarea" placeholder="請輸入訊息"></textarea><br><br>
-                            <button id="xxx" class="contact_form_submit" name="comment" onclick="alert('送出成功')">送出</button><br><br>
-                   <!--
-                    </form>
-                -->
+                            <button id="xxx" class="contact_form_submit" name="comment" onclick="sendmail()">送出</button><br><br>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+   
 
     <script src="../src/library/jquery-3.6.0.min.js"></script>
 <script>
@@ -54,7 +76,7 @@
        // footer_question_button.addEventListener("click", function() {
         //    window.location.href = "/dist/question.html"
        // });
-
+     
         document.querySelector('#name').addEventListener('blur', function(e) {
             const {target} = e;
             if   (target.value.length === 0)   {  
@@ -73,24 +95,24 @@
             }
         });
 
-
-        document.querySelector('#xxx').addEventListener('click', function(){
-            const name = document.querySelector('#name').value;
-            const email = document.querySelector('#email').value;
-            const mark = document.querySelector('#mark').value;
-            fetch('./API/test_1.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    name,
-                    email,
-                    mark
-                })
-            })
-            .then(text => console.log(text));
-        });
+//
+//        document.querySelector('#xxx').addEventListener('click', function(){
+//            const name = document.querySelector('#name').value;
+//            const email = document.querySelector('#email').value;
+//            const mark = document.querySelector('#mark').value;
+//            fetch('./API/test.php', {
+//                method: 'POST',
+//                headers: {
+//                    'Content-Type': 'application/json'
+//                },
+//                body: JSON.stringify({
+//                    name,
+//                    email,
+//                    mark
+//                })
+//            })
+//            .then(text => console.log(text));
+//        });
 
     //})()
 
