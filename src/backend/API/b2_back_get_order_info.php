@@ -1,6 +1,6 @@
 <?php
     include("../../library/Connection.php");
-    $get_order_info = "SELECT DISTINCT * FROM CATOPIA.v_member_order_order_detail";
+    $get_order_info = "SELECT DISTINCT * FROM v_member_order_order_detail";
 
     $statement_order_info = $pdo -> prepare($get_order_info);
 
