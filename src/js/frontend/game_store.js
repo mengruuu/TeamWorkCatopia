@@ -1,8 +1,4 @@
-const bus = new Vue({
-    data:{
-        test:0,
-    }
-});
+const bus = new Vue();
 //first content
 Vue.component('first-content',{
     template:`
@@ -39,7 +35,7 @@ Vue.component('choose-option',{
     methods: {
         changeType(e){
             // console.log(e.target.innerHTML);
-            let typeName = e.target.innerHTML.trim();
+            let typeName = e.target.id
             // console.log(typeName);
             bus.$emit('getType',typeName);
         }
@@ -50,31 +46,31 @@ Vue.component('choose-option',{
             <ul>
                 <li><p>個性化商品</p></li>
                 <li>
-                    <div class="options" @click="changeType" id="heads">
-                        <p>
+                    <div class="options" @click="changeType">
+                        <p id="heads">
                             頭套
                         </p>
                     </div>
                 </li>
                 <li>
-                    <div class="options" @click="changeType" id="collar">
-                        <p>
+                    <div class="options" @click="changeType" >
+                        <p id="collar">
                             項圈
                         </p>
                     </div>
                 </li>
 
                 <li>
-                    <div class="options" @click="changeType" id="clothes">
-                        <p>
+                    <div class="options" @click="changeType" >
+                        <p id="clothes">
                             衣服
                         </p>
                     </div>
                 </li>
 
                 <li>
-                    <div class="options" @click="changeType" id="wings">
-                        <p>
+                    <div class="options" @click="changeType" >
+                        <p id="wings">
                             翅膀
                         </p>
                     </div>
@@ -89,178 +85,231 @@ Vue.component('choose-option',{
 Vue.component('second-content',{
     data() {
         return {
-            type:'collar',
+            type:'heads',
+            pictures:[],
+            product_picture:""
         }
     },
     methods: {
-        changeData(data){
-            console.log('changeData')
-            this.type = data;
+        addCart(){
+
+        },
+        getPicture(picture){
+            this.product_picture = picture;
         }
     },
     template:`
     <div class="game_store_second_content">
 
-        <product :is="type" v-bind:type="type"></product>
+        <product :is="type" v-bind:pictures="pictures" @pictureTo="getPicture"></product>
   
 
-        <button type="button">
+        <button type="button" @click="addCart">
             加入購物車
         </button>
     </div>
     `,
-    mounted() {
 
-        bus.$on('getType',function(typeName){
-            console.log(typeName);
-            vue['second-content'];
+    mounted() {
+        bus.$on('getType',(typeName)=>{
+            this.type = typeName;
+            fetch('./API/game_store_get_pictures.php',{
+                method: 'POST',
+                headers:{
+                    'content-type':'application/json'
+                },
+                body: JSON.stringify(this.type),
+            }).then(res => res.json()).then(res =>{
+                // console.log(res);
+                this.pictures = res;
+            }).catch(function(err){
+                console.log('no dataa found');
+            })
+    
+        });
+
+        fetch('./API/game_store_get_pictures.php',{
+            method: 'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(this.type),
+        }).then(res => res.json()).then(res =>{
+            // console.log(res);
+            this.pictures = res;
+        }).catch(function(err){
+            console.log('no dataa found');
         })
+
     },
     components:{
         heads:{
-            props:['type'],
+            props:['pictures'],
             data() {
                 return {
-                    pictures:[]
+                    head_pictures:[]
                 }
+            },
+            methods: {
+                clickProduct(e){
+                    if(e.target.classList.contains('img')){
+                        let img_products = e.target.parentElement.parentElement.getElementsByClassName('product');
+                        // console.log('ttt')
+                        // console.log(img_products);
+                        for(j=0; j< img_products.length ; j++){
+                            img_products[j].classList.remove('on');
+                        }
+                        e.target.parentElement.classList.add('on');
+
+                        this.$emit('pictureTo',e.target.src);
+                        
+                    }else{
+                        // console.log(e.target.parentElement.getElementsByClassName('product'));
+                        let products = e.target.parentElement.getElementsByClassName('product');
+                        // console.log(e.target);
+                        for(i=0; i<products.length ; i++){
+                            products[i].classList.remove('on');
+                        }
+                        // console.log(e.target.className);
+                        e.target.classList.add('on');
+                    }
+
+
+                },
+          
             },
             template:`
             <div class="all_product">
-                <div class="product" v-for="(picture,index) in pictures">
-                    <img :src="pictures[index]['GAMESTORE_PRODUCT_PICTURE']">
+                <div class="product" v-for="(picture,index) in pictures" @click="clickProduct">
+                    <img :src="pictures[index]['GAMESTORE_PRODUCT_PICTURE']" class="img">
                 </div>
             </div>
             `,
-            mounted() {
-                fetch('./API/game_store_get_pictures.php',{
-                    method: 'POST',
-                    headers:{
-                        'content-type':'application/json'
-                    },
-                    body: JSON.stringify(this.type),
-                }).then(res => res.json()).then(res =>{
-                    console.log(res);
-                    this.pictures = res;
-                }).catch(function(err){
-                    console.log('no dataa found');
-                })
-            },
+      
         },
         collar:{
-            props:['type'],
+            props:['pictures'],
             data() {
                 return {
-                    pictures:[]
+                    collar_pictures:[]
                 }
+            },
+            methods: {
+                clickProduct(e){
+                    if(e.target.classList.contains('img')){
+                        let img_products = e.target.parentElement.parentElement.getElementsByClassName('product');
+                        // console.log('ttt')
+                        // console.log(img_products);
+                        for(j=0; j< img_products.length ; j++){
+                            img_products[j].classList.remove('on');
+                        }
+                        e.target.parentElement.classList.add('on');
+                        
+                    }else{
+                        // console.log(e.target.parentElement.getElementsByClassName('product'));
+                        let products = e.target.parentElement.getElementsByClassName('product');
+                        // console.log(e.target);
+                        for(i=0; i<products.length ; i++){
+                            products[i].classList.remove('on');
+                        }
+                        // console.log(e.target.className);
+                        e.target.classList.add('on');
+                    }
+                },
+             
             },
             template:`
             <div class="all_product">
-                <div class="product" v-for="(picture,index) in pictures">
-                    <img :src="pictures[index]['GAMESTORE_PRODUCT_PICTURE']">
+                <div class="product" v-for="(picture,index) in pictures" @click="clickProduct">
+                    <img :src="pictures[index]['GAMESTORE_PRODUCT_PICTURE']" class="img">
                 </div>
             </div>
             `,
-            mounted() {
-                fetch('./API/game_store_get_pictures.php',{
-                    method: 'POST',
-                    headers:{
-                        'content-type':'application/json'
-                    },
-                    body: JSON.stringify(this.type),
-                }).then(res => res.json()).then(res =>{
-                    console.log(res);
-                    this.pictures = res;
-                }).catch(function(err){
-                    console.log('no dataa found');
-                })
-            },
+
         },
         clothes:{
-            props:['type'],
+            props:['pictures'],
             data() {
                 return {
-                    pictures:[]
+                    clothes_pictures:[]
                 }
+            },
+            methods: {
+                clickProduct(e){
+                    if(e.target.classList.contains('img')){
+                        let img_products = e.target.parentElement.parentElement.getElementsByClassName('product');
+                        // console.log('ttt')
+                        // console.log(img_products);
+                        for(j=0; j< img_products.length ; j++){
+                            img_products[j].classList.remove('on');
+                        }
+                        e.target.parentElement.classList.add('on');
+                        
+                    }else{
+                        // console.log(e.target.parentElement.getElementsByClassName('product'));
+                        let products = e.target.parentElement.getElementsByClassName('product');
+                        // console.log(e.target);
+                        for(i=0; i<products.length ; i++){
+                            products[i].classList.remove('on');
+                        }
+                        // console.log(e.target.className);
+                        e.target.classList.add('on');
+                    }
+                },
+      
             },
             template:`
             <div class="all_product">
-                <div class="product" v-for="(picture,index) in pictures">
-                    <img :src="pictures[index]['GAMESTORE_PRODUCT_PICTURE']">
+                <div class="product" v-for="(picture,index) in pictures" @click="clickProduct">
+                    <img :src="pictures[index]['GAMESTORE_PRODUCT_PICTURE']" class="img">
                 </div>
             </div>
             `,
-            mounted() {
-                fetch('./API/game_store_get_pictures.php',{
-                    method: 'POST',
-                    headers:{
-                        'content-type':'application/json'
-                    },
-                    body: JSON.stringify(this.type),
-                }).then(res => res.json()).then(res =>{
-                    console.log(res);
-                    this.pictures = res;
-                }).catch(function(err){
-                    console.log('no dataa found');
-                })
-            },
+    
         },
         wings:{
-            props:['type'],
+            props:['pictures'],
             data() {
                 return {
-                    pictures:[]
+                    wings_pictures:[],
                 }
+            },
+            methods: {
+                clickProduct(e){
+                    if(e.target.classList.contains('img')){
+                        let img_products = e.target.parentElement.parentElement.getElementsByClassName('product');
+                        // console.log('ttt')
+                        // console.log(img_products);
+                        for(j=0; j< img_products.length ; j++){
+                            img_products[j].classList.remove('on');
+                        }
+                        e.target.parentElement.classList.add('on');
+                        
+                    }else{
+                        // console.log(e.target.parentElement.getElementsByClassName('product'));
+                        let products = e.target.parentElement.getElementsByClassName('product');
+                        // console.log(e.target);
+                        for(i=0; i<products.length ; i++){
+                            products[i].classList.remove('on');
+                        }
+                        // console.log(e.target.className);
+                        e.target.classList.add('on');
+                    }
+                },
+          
             },
             template:`
             <div class="all_product">
-                <div class="product" v-for="(picture,index) in pictures">
-                    <img :src="pictures[index]['GAMESTORE_PRODUCT_PICTURE']">
+                <div class="product" v-for="(picture,index) in pictures" @click="clickProduct" >
+                    <img :src="pictures[index]['GAMESTORE_PRODUCT_PICTURE']" class="img">
                 </div>
             </div>
             `,
-            mounted() {
-                fetch('./API/game_store_get_pictures.php',{
-                    method: 'POST',
-                    headers:{
-                        'content-type':'application/json'
-                    },
-                    body: JSON.stringify(this.type),
-                }).then(res => res.json()).then(res =>{
-                    console.log(res);
-                    this.pictures = res;
-                }).catch(function(err){
-                    console.log('no dataa found');
-                })
-            },
+    
         },
     }
 })
-// Vue.component('product',{
-    
-//     template:`
-//     <div class="all_product">
-//         <div class="product -on">
-//             <img src="./images/game_store/product_cat1.png" >
-//         </div>
-//         <div class="product">
-//             <img src="./images/game_store/product_cat2.png" >
-//         </div>
-//         <div class="product">
-//             <img src="./images/game_store/product_cat3.png" >
-//         </div>
-//         <div class="product">
-//             <img src="./images/game_store/product_cat4.png" >
-//         </div>
-//     </div>
-//     `,
-//     mounted() {
-//         fetch('./API/game_store_get_pictures.php').then(res => res.json()).then(res =>{
 
-//         }).catch(function(err){
-//             console.log('no dataa found');
-//         })
-//     },
-// })
 //last content
 Vue.component('last-content',{
     template:`
