@@ -263,7 +263,7 @@ async function uploadMessageData() {
                     e.target.value = "";
                     if(e.target.nextElementSibling) {
                         window.scrollTo({
-                            top: e.target.parentElement.offsetTop + e.target.parentElement.offsetHeight - e.target.nextElementSibling.offsetHeight*2,
+                            top: e.target.parentElement.offsetTop + e.target.parentElement.offsetHeight - e.target.nextElementSibling.offsetHeight*3,
                             behavior: "smooth"
                         });
                     }
