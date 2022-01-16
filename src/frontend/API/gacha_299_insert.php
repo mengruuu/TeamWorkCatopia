@@ -11,7 +11,7 @@
         $MEMBER_ID = ($_SESSION["MEMBER_ID"]); 
         $check;
         
-        $sql = "SELECT ORDER_ID FROM CATOPIA.ORDER WHERE MEMBER_ID = 1";
+        $sql = "SELECT ORDER_ID FROM `ORDER` WHERE MEMBER_ID = 1";
         
         //執行並查詢，會回傳查詢結果的物件，必須使用fetch、fetchAll...等方式取得資料
         $statement = $pdo ->prepare($sql);

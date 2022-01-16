@@ -282,10 +282,10 @@
                                 // border: 1px solid black;
                                 width: 100%;
                                 display: block;
-                                margin-top: 5vh;
-                                @include w1380() {
-                                    margin-top: auto;
-                                }
+                                margin: 8vh auto;
+                                // @include w1380() {
+                                //     margin-top: auto;
+                                // }
                                 img{
                                     width: 180px;
                                     margin-top: 2vh;
