@@ -6,7 +6,7 @@
    
     
 
-        $sql_insert_order_detail = "SELECT  * FROM CATOPIA.`ORDER` WHERE ORDER_ID =? ";
+        $sql_insert_order_detail = "SELECT  * FROM `ORDER` WHERE ORDER_ID =? ";
         $statement_order_detail = $pdo ->prepare($sql_insert_order_detail);
         $statement_order_detail->bindValue(1, $order_ID);
         
