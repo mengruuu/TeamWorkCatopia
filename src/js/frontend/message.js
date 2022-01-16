@@ -21,6 +21,7 @@ async function uploadMessageData() {
         await fetch("./API/messageGetInfo.php")
         .then(res => res.json())
         .then(data => data); //獲取留言版的資訊
+        console.log(messageInfo);
 
     //檢查會員是否登入
     login_check();
@@ -104,7 +105,7 @@ async function uploadMessageData() {
                 </div>
                 <div :class = "{message_user_and_time_and_like: true}">
                     <div :class = "{message_img_and_user_and_time: true}">
-                        <img :class = "{message_user_img: true}" src = "./images/message/message_personal_example_photo.png">
+                        <img :class = "{message_user_img: true}" :src = "memberPic">
                         <div :class = "{message_user_and_time: true}">
                             <p>{{ memberName }}</p>
                             <p>{{ postTime }}</p>
@@ -162,6 +163,9 @@ async function uploadMessageData() {
             },
             comments: {
                 type: Array
+            },
+            memberPic: {
+                type: String
             }
         },
         computed: {
@@ -297,6 +301,7 @@ async function uploadMessageData() {
                 <message-content v-for = "(message, index) in messageInfo" 
                     :memberId = "message.MEMBER_ID"
                     :memberName = "message.MEMBER_NAME"
+                    :memberPic = "message.MEMBER_PICTURE"
                     :postLike = "message.POST_LIKE"
                     :postPicture = "message.POST_PICTURE"
                     :postTime = "message.POST_TIME"
