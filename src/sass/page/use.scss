@@ -178,9 +178,10 @@ div.use_filter_container_and_use_product_overview {
             font-size: $font_20;
             list-style: none;
             text-align: center;
-
+            
             @include w700() {
                 text-align: left;
+                padding: 0px 33px;
             }
 
             hr {
