@@ -428,6 +428,7 @@ ul.food_product_page_chose_container {
     left: calc(50% - 16px);
     transform: translateX(-50%);
     // margin-left: 373px;
+    margin-left: 11%;
     display: flex;
     flex-wrap: wrap;
     padding: 0;
@@ -453,6 +454,7 @@ ul.food_product_page_chose_container {
         list-style: none;
         width: 51px;
         height: 51px;
+        margin-right: 16px;
         border-radius: 20px;
         background-color: $main_color;
         border: 1px solid $font_color;
