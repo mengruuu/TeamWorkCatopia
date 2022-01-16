@@ -64,7 +64,7 @@ function change_info(){
                 success:function(response){
                     alert('修改成功');
                     window.location.href = './login.html';
-                },o,
+                },
                 error: function(exception) {
                  alert("發生錯誤: " + exception.status); 
              }
