@@ -88,7 +88,10 @@ for(i=0; i< personal_icon_el.length ; i++){
 
 let confirm_cat_icon = document.getElementById('confirm_cat');
 confirm_cat_icon.addEventListener('click',function(){
+    // console.log('test');
+    // close();
     $('#vip_personal_icon')[0].src = display_cat.src;
+    popupBtn.style.display = "none";
 });
 // function choose_cat(){
 
