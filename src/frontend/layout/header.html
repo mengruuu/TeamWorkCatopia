@@ -148,21 +148,22 @@
 @@include('./hamburger.html')
 
 <script>
-    var hd_popupBtn = document.getElementById('hd_background_pop');
+    // var hd_popupBtn = document.getElementById('hd_background_pop');
     var hd_popupClick = document.getElementById('hd_popup_click');
-    var hd_close = document.getElementById('hd_close_btn');
+    // var hd_close = document.getElementById('hd_close_btn');
     hd_popupClick.addEventListener('click', function(){
-        hd_popupBtn.style.display = "block";
+        // hd_popupBtn.style.display = "block";
+        window.location.href='./cart_step1.html';
         // console.log('test');
     })
-    hd_close.onclick = function close() {
-        hd_popupBtn.style.display = "none";
-    }
-    window.onclick = function close(e) {
-        if (e.target == hd_popupBtn) {
-            hd_popupBtn.style.display = "none";
-        }
-    }
+    // hd_close.onclick = function close() {
+    //     hd_popupBtn.style.display = "none";
+    // }
+    // window.onclick = function close(e) {
+    //     if (e.target == hd_popupBtn) {
+    //         hd_popupBtn.style.display = "none";
+    //     }
+    // }
     change_member_icon();
 </script>
 
