@@ -276,9 +276,9 @@ Vue.component('button-order',{
                     },
                     dataType:'json',
                     success:function(response){
-                        console.log('order_deatil新增成功')
+                        // console.log('order_deatil新增成功')
                         console.log(response);
-                        window.location.href = `./cart_step4.html?orderID=${response}`;
+                        // window.location.href = `./cart_step4.html?orderID=${response}`;
 
                     },
                     error: function(exception) {

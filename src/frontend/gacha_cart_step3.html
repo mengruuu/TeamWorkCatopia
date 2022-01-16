@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>盲抽盒購物車Step3</title>
-    <link rel="stylesheet" href="./css/style.css">
+    @@include('./layout/meta.html', {
+        "title" : "盲抽盒購物車Step3"
+      })
     <link rel="stylesheet" href="./css/cart_step.css">
+    <script src="./js/frontend/gacha_cart_step3.js" async></script>
 
 </head>
 
@@ -38,7 +37,17 @@
         </div>
     </div>
 
-    <div class="cart_step1_container ">
+    <div class="cart_step1_container" id="confirmAPP">
+        <confirm-title></confirm-title>
+        <confirm-product></confirm-product>
+    </div>
+
+    <div class="cart_step2_container" id="confirmDeliver">
+        <deliver-title></deliver-title>
+        <deliver-content></deliver-content>
+    </div>
+
+    <!-- <div class="cart_step1_container ">
         <div class="cart_step1_title">
             <div class="cart_step1_item">
                 <p>商品</p>
@@ -158,7 +167,7 @@
         <a href="./gacha_cart_step2.html"><button type="submit">上一步&nbsp;修改資料</button></a>
         <a href="./gacha_cart_step4.html"><button type="submit">下一步&nbsp;完成訂購</button></a>
 
-    </div>
+    </div> -->
 
     <div class="cart_step1_next_step bottom_img">
         <img src="../dist/images/shopping_cart/paper_bag.jpg">

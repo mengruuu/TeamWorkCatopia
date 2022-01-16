@@ -7,7 +7,7 @@
 
     
     //建立SQL語法
-    $sql = "SELECT * FROM CATOPIA.PRODUCT WHERE PRODUCT_FEATURE = ?";
+    $sql = "SELECT * FROM PRODUCT WHERE PRODUCT_FEATURE = ?";
 
     //執行並查詢，會回傳查詢結果的物件，必須使用fetch、fetchAll...等方式取得資料
     $statement = $pdo->prepare($sql);

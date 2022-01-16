@@ -254,6 +254,7 @@ div.message_input_container {
     padding: 5px 0;
     background-color: $second_color1;
     width: 100vw;
+    position: fixed;
     div {
         display: flex;
         justify-content: flex-start;
@@ -1004,4 +1005,14 @@ div.message_and_comment_container {
         
         
     }
+}
+div.pages_title p {
+    font-size: 30px;
+    width: fit-content;
+    border-radius: 15px;
+    margin: 0;
+    margin-left: 3%;
+    z-index: 1;
+    color: #774F40;
+    margin-top: 90px;
 }

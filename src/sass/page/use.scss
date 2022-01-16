@@ -207,6 +207,7 @@ div.use_filter_container_and_use_product_overview {
 
                 @include w700() {
                     display: flex;
+                    flex-wrap: wrap;
                     width: 100%;
                 }
 

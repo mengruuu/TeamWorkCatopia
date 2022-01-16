@@ -1,3 +1,16 @@
+var vm = new Vue({
+    el: '#app',
+    data: {
+        count: 0,
+    },
+});
+
+let buy_box = document.getElementById('buy_box');
+buy_box.addEventListener('click',function(){
+    vm.count += 1;
+    // console.log(vm.count);
+})
+
 // 設定圖片存取陣列
 // let img_399 = new Array(); 
 // img_399[0] = "./images/gacha_399/gacha_399_a.png"; 
@@ -87,7 +100,7 @@ function doFirst(){
     //點箱子移除彩色圖片 增加灰色圖片 同時跳出抽選的商品彈窗
     for(let i = 0; i < color_image.length; i++){
         color_image[i].addEventListener("click", function(e){
-            login_check();
+            // login_check();
             let gacha_box_c = gacha_box[i];
             let gray_image = './images/gacha_399/gacha_399_box_gray.png';
             let img = gacha_box_c.firstElementChild;
@@ -96,7 +109,7 @@ function doFirst(){
                 alert('無法抽取灰色箱子');
             }else if(vm.count == 0){   //判斷抽取次數為零 只會alert 不會做動作
                 alert('請購買抽盒次數');
-                window.location.href='./gacha_cart_step1.html';
+                // window.location.href='./gacha_cart_step1.html';
             }else{
                 vm.count --;
                 e.target.classList.add("-off");

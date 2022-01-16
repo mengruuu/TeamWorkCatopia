@@ -11,8 +11,7 @@
     $statement_order_detail ->bindValue(1, $ORDER_ID);
     $statement_order_detail -> execute();
     $data_order_detail = $statement_order_detail -> fetchAll();
-    if($data_order_detail > 0){
-        echo json_encode($data_order_detail);
-    }
+    echo json_encode($data_order_detail);
+
 
 ?>
