@@ -10,7 +10,7 @@
 
 
     //建立SQL 找到gacha訂單明細中 PRODUCT_NAME是空值 再依序推進去
-    $sql_VIP_CAT_ICON = "UPDATE CATOPIA.MEMBER
+    $sql_VIP_CAT_ICON = "UPDATE MEMBER
     set
         MEMBER_PICTURE = ?
     where
