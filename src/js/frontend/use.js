@@ -293,7 +293,7 @@ window.addEventListener("load", function () {
                         this.outsidebag = false;
 
                         this.productData = totalPage[0]; 
-                    } else if (condition === "小窩" && this.catnest === true) {
+                    }else if (condition === "小窩" && this.catnest === true) {
                         this.pages = Math.ceil(data.length / 8);
 
                         for (let i = 1; i <= pages; i = i + 1) {
@@ -303,7 +303,7 @@ window.addEventListener("load", function () {
                         this.catnest = false;
 
                         this.productData = totalPage[0];
-                    } else if (condition === "抓板" && this.scratcher === true){
+                    }else if (condition === "抓板" && this.scratcher === true){
                         this.pages = Math.ceil(data.length / 8);
 
                         for (let i = 1; i <= pages; i = i + 1) {
@@ -313,7 +313,38 @@ window.addEventListener("load", function () {
                         this.scratcher = false;
 
                         this.productData = totalPage[0];
-                    } else {
+                    }else if (condition === "食器" && this.bowl === true) {
+                        this.pages = Math.ceil(data.length / 8);
+
+                        for (let i = 1; i <= pages; i = i + 1) {
+                            totalPage.push(data.slice((i - 1) * 8, i * 8));
+                        };
+
+                        this.bowl = false;
+
+                        this.productData = totalPage[0];
+                    }else if (condition === "貓砂盆" && this.toilet === true) {
+                        this.pages = Math.ceil(data.length / 8);
+
+                        for (let i = 1; i <= pages; i = i + 1) {
+                            totalPage.push(data.slice((i - 1) * 8, i * 8));
+                        };
+
+                        this.toilet = false;
+
+                        this.productData = totalPage[0];
+                    }else if (condition === '胸背帶' && this.strap === true) {
+                        this.pages = Math.ceil(data.length / 8);
+
+                        for (let i = 1; i <= pages; i = i + 1) {
+                            totalPage.push(data.slice((i - 1) * 8, i * 8));
+                        };
+
+                        this.strap = false;
+
+                        this.productData = totalPage[0];
+                    }
+                    else {
                         for (let i = 0; i < data.length; i = i + 1) {
                             if (data[i].PRODUCT_FEATURE === condition) {
                                 matchData.push(data[i]);
