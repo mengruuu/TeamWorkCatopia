@@ -9,8 +9,8 @@ const inputFile = document.querySelector("input[type = 'file']");
 const message_write_message_content = document.querySelector("textarea.message_write_message_content");
 const confirmPost = document.querySelector("#confirmPost");
 const message_loading = document.querySelector("img.message_loading");
-const message_loading_background = document.querySelector("div.message_loading_background");
 const message_delete_loading = document.querySelector("img.message_delete_loading");
+const message_loading_background = document.querySelector("div.message_loading_background");
 const message_write_img_container_content = document.querySelector("div.message_write_img_container_content");
 
 
@@ -21,7 +21,7 @@ async function uploadMessageData() {
         await fetch("./API/messageGetInfo.php")
         .then(res => res.json())
         .then(data => data); //獲取留言版的資訊
-        console.log(messageInfo);
+        // console.log(messageInfo);
 
     //檢查會員是否登入
     login_check();
@@ -111,7 +111,7 @@ async function uploadMessageData() {
                             <p>{{ postTime }}</p>
                         </div>
                     </div>
-                    <div :class = "{message_like_container: true}" @click = changeLikeImg>
+                    <div :class = "{message_like_container: true, message_like_container_clicking: isLikeClicking}" @click = changeLikeImg>
                         <div :class="{message_like: true, message_liked: personalLikes}"></div>
                         <p>+{{ postLike }}</p>
                     </div>
@@ -166,6 +166,9 @@ async function uploadMessageData() {
             },
             memberPic: {
                 type: String
+            },
+            isLikeClicking: {
+                type: Boolean
             }
         },
         computed: {
@@ -250,10 +253,15 @@ async function uploadMessageData() {
                 }
             },
             changeLikeImg() {
-                if (this.personalLikes) {
-                    this.$emit("changeLikeCounts", this.postId, Number(this.postLike) - 1, this.index);
-                }else {
-                    this.$emit("changeLikeCounts", this.postId, Number(this.postLike) + 1, this.index);
+                // 防止讚的資料更新的過程中重複點擊造成bug
+                if(!(this.isLikeClicking)) {
+                    if (this.personalLikes) {
+                        this.isLikeClicking = true;
+                        this.$emit("changeLikeCounts", this.postId, Number(this.postLike) - 1, this.index);
+                    }else {
+                        this.isLikeClicking = true;
+                        this.$emit("changeLikeCounts", this.postId, Number(this.postLike) + 1, this.index);
+                    }
                 }
             },
             inputComment(e) {
@@ -312,6 +320,7 @@ async function uploadMessageData() {
                     :isPostHide = "isPostHide"
                     :personalLikes = "isLiked(index)"
                     :comments = "updateComments(index)"
+                    :isLikeClicking = "isLikeClicking"
                     @deletepost = "deletePost"
                     @changeLikeCounts = "changelikecounts"
                     @insertComment = "insertcomment"
@@ -324,7 +333,8 @@ async function uploadMessageData() {
                 messageInfo: messageInfo,
                 personalLikes: personalLikes,
                 personalComments: personalComments,
-                isPostHide: false
+                isPostHide: false,
+                isLikeClicking: false
             }
         },
         methods: {
@@ -420,6 +430,7 @@ async function uploadMessageData() {
                     .then(res => res.json())
                     .then(data => {
                         // console.log(data);
+                        // vm.isLikeClicking = false;
                         vm.messageInfo = data;
                     });
 
@@ -434,6 +445,7 @@ async function uploadMessageData() {
                     .then(data => {
                         // console.log("data: ", data);
                         // console.log("personalLikesBefore: ", vm.personalLikes);
+                        // vm.isLikeClicking = false;
                         vm.personalLikes = data;
                         // console.log("data: ", data);
                         // console.log("personalLikesAfter: ", vm.personalLikes);

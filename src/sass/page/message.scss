@@ -403,6 +403,7 @@ div.message_and_comment_container {
             div.message_like_container {
                 display: flex;
                 align-items: center;
+                cursor: none;
                 margin-right: 0;
                 background-color: $second_color2;
                 color: $font_color;
@@ -505,6 +506,9 @@ div.message_and_comment_container {
                     font-size: $font_20;
                     margin: 10px 8px;
                 }
+            }
+            div.message_like_container_clicking {
+                cursor: not-allowed;
             }
             div.message_like_container_clicked {
                 box-shadow: $shadow inset;
