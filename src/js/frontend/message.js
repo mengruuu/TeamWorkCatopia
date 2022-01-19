@@ -21,7 +21,6 @@ async function uploadMessageData() {
         await fetch("./API/messageGetInfo.php")
         .then(res => res.json())
         .then(data => data); //獲取留言版的資訊
-        // console.log(messageInfo);
 
     //檢查會員是否登入
     login_check();
@@ -29,7 +28,6 @@ async function uploadMessageData() {
         await fetch("./API/get_member_info.php")
         .then(res => res.json())
         .then(data => data); //取得會員資料
-    // console.log("memberID: ", response[0].MEMBER_ID);
 
     const personalLikes =
         await fetch("./API/getMessageLikesAndComments.php", {
@@ -46,39 +44,6 @@ async function uploadMessageData() {
         await fetch("./API/getComments.php")
         .then(res => res.json())
         .then(data => data);
-    // console.log("personalComments: ", personalComments);
-
-    // const personalCommentsId =
-    //     await fetch("./API/getCommentsId.php")
-    //     .then(res => res.json())
-    //     .then(data => data);
-
-    // let personalCommentsPic = [];
-
-    // for await(let id of personalCommentsId) {
-    //     let personalId = id['RESPONSE&LIKE_MEMBER_ID']
-    //     // console.log("personalCommentsId: ", personalId);
-    //         await fetch("./API/getCommentsPic.php", {
-    //             method: "POST",
-    //             headers: {
-    //                 "content-type": "application/json"
-    //             },
-    //             body: JSON.stringify(personalId)
-    //         })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             // console.log("data[0] ", data[0]);
-    //             // console.log("data[0].MEMBER_PICTURE: ", data[0].MEMBER_PICTURE);
-    //             personalCommentsPic.push({
-    //                 personalPic: data[0].MEMBER_PICTURE,
-    //                 postId: id.POST_ID
-    //             });
-    //         });
-    //     // console.log("pic[0].MEMBER_PICTURE: ", pic);
-    //     // personalCommentsPic.push(pic[0].MEMBER_PICTURE);
-    // }
-
-    // console.log("personalCommentsPic: ", personalCommentsPic);
 
     // 顯示留言板的部分，使用Vue寫--------------------------------------------------------------------------------------
     const Feature = Vue.component('messageContent', {
@@ -184,9 +149,8 @@ async function uploadMessageData() {
 
                 for(let i = 0; i < this.commentsPic.length; i = i + 1) {
                     if(this.commentsPic[i].postId === this.postId) {
-                        // console.log("this.commentsPic[i].postId: ", this.personalpic[i].postId, "this.postId:", this.postId, "this.commentsPic[i].personalPic", this.personalpic[i].personalPic)
                         personalPicc = this.commentsPic[i].personalPic;
-                        // this.personalpic.splice(i, 1);
+
                         break;
                     }
                 };
@@ -228,19 +192,6 @@ async function uploadMessageData() {
 
                     this.$emit("upDatePost", this.postId, document.querySelectorAll("textarea.message_content_text_update")[this.index].value);
                 }
-                // if(document.querySelector("textarea.message_content_text_update")) {
-                //     if(!(document.querySelector("textarea.message_content_text_update").value)) {
-                //         if((confirm("目前沒有編輯任何文字，要保持原本的貼文嗎？"))) {
-                //             this.isContentUpdated = false;
-                //             this.isTextUpdated = false;
-                //         }
-                //     }else {
-                //         message_write_background.style.display = "block";
-                //         message_delete_loading.style.display = "block";
-
-                //         this.$emit("upDatePost", this.postId, document.querySelector("textarea.message_content_text_update").value);
-                //     }
-                // }
             }
             ,
             updatePostClicked() {
@@ -282,23 +233,8 @@ async function uploadMessageData() {
                 this.isFocus = true;
             },
             inputBlur() {
-                // console.log("blur事件被執行了");
                 this.isFocus = false;
-            },
-            // personalPic() {
-            //     let personalPicc = "";
-
-            //     for(let i = 0; i < this.personalpic.length; i = i + 1) {
-            //         if(this.personalpic[i].postId === this.postId) {
-            //             console.log("this.commentsPic[i].postId: ", this.personalpic[i].postId, "this.postId:", this.postId, "this.commentsPic[i].personalPic", this.personalpic[i].personalPic)
-            //             personalPicc = this.personalpic[i].personalPic;
-            //             this.personalpic.splice(i, 1);
-            //             break;
-            //         }
-            //     };
-
-            //     return personalPicc;
-            // }
+            }
         }
     });
 
@@ -356,20 +292,6 @@ async function uploadMessageData() {
                         vm.personalComments = data;
                     });
 
-                // await fetch("./API/getCommentsPic.php", {
-                //         method: "POST",
-                //         headers: {
-                //             "content-type": "application/json"
-                //         },
-                //         body: JSON.stringify(memberId)
-                //     })
-                //     .then(res => res.json())
-                //     .then(data => { console.log("personalCommentsPic: ", data[0].MEMBER_PICTURE);
-                //         console.log("personalCommentsPicBefore: ", vm.personalCommentsPic);
-                //         vm.personalCommentsPic.push(data[0].MEMBER_PICTURE);
-                //         console.log("personalCommentsPicAfter: ", vm.personalCommentsPic);
-                //     });
-
                 this.updateComments(index);
             },
             deletePost(postID) {
@@ -405,7 +327,6 @@ async function uploadMessageData() {
                     })
                     .then(res => res.json())
                     .then(data => {
-                        // console.log(data);
                         message_write_background.style.display = "none";
 
                         message_delete_loading.style.display = "none";
@@ -429,8 +350,6 @@ async function uploadMessageData() {
                     })
                     .then(res => res.json())
                     .then(data => {
-                        // console.log(data);
-                        // vm.isLikeClicking = false;
                         vm.messageInfo = data;
                     });
 
@@ -443,12 +362,7 @@ async function uploadMessageData() {
                     })
                     .then(res => res.json())
                     .then(data => {
-                        // console.log("data: ", data);
-                        // console.log("personalLikesBefore: ", vm.personalLikes);
-                        // vm.isLikeClicking = false;
                         vm.personalLikes = data;
-                        // console.log("data: ", data);
-                        // console.log("personalLikesAfter: ", vm.personalLikes);
                     });
             },
             isLiked(index) {
@@ -511,7 +425,6 @@ async function uploadMessageData() {
                 `);
 
                 postInfo.postImg = readFile.result;
-                // console.log(readFile.result);
             });
         });
     };
@@ -573,7 +486,6 @@ async function uploadMessageData() {
         } else {
             // 載入動畫
             message_loading.style.display = "block";
-            // message_loading_background.style.display = "block";
             message_write_message_container.classList.add("message_write_message_container_post_creating");
             fetch("./API/createPost.php", {
                     method: "POST",
@@ -591,32 +503,6 @@ async function uploadMessageData() {
 
         event.target.classList.toggle("message_post_confirm_clicked");
     });
-
-    // 按enter鍵送出po文
-    // message_write_message_content.addEventListener("keyup", function(event) {
-    //     postInfo.postContent = message_write_message_content.value;
-    //     if(event.keyCode === 13) {
-    //         if (postInfo.postContent === "" || postInfo.postImg === "") {
-    //             alert("未發文或上傳圖片！");
-    //         } else {
-    //             fetch("./API/createPost.php", {
-    //                     method: "POST",
-    //                     headers: {
-    //                         "content-type": "application/json"
-    //                     },
-    //                     body: JSON.stringify(postInfo)
-    //                 })
-    //                 .then(res => res.json())
-    //                 .then(data => {
-    //                     console.log(data);
-    //                     window.alert("上傳成功");
-    //                     location.href = "/TeamWorkCatopia/dist/message.html";
-    //                 })
-    //         }
-    
-    //         event.target.classList.toggle("message_post_confirm_clicked");
-    //     }
-    // });
 
     // 更改class以及刪除圖片等部分--------------------------------------------------------------------------------------------------------
     // 點擊上傳圖片按鈕後，顯示圖片上傳區
