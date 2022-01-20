@@ -4,6 +4,7 @@
 div.login_container {
     display: flex;
     padding: 50px 0;
+    height: 58vh;
     @include w900() {
         flex-direction: column;
     }
